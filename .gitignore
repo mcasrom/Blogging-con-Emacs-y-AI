@@ -1,0 +1,4 @@
+*.org
+*~
+.DS_Store
+Thumbs.db
