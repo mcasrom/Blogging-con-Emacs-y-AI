@@ -3,8 +3,8 @@
 <channel>
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
-<link>file:///home/mike/myblog/public/</link>
-<lastBuildDate>Wed, 26 Feb 2025 18:57:21 +0100</lastBuildDate>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
+<lastBuildDate>Wed, 26 Feb 2025 19:06:01 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Mi Blog con Emacs y Esteroides: Una Aventura Potenciada por Código y IA]]></title>
   <description><![CDATA[
@@ -87,8 +87,8 @@ Así que, ponte cómodo, abre tu Emacs (o instálalo si aún no lo tienes), y ac
 <div class="taglist"><a href="file:///home/mike/myblog/public/tags.html">Categoría</a>: <a href="file:///home/mike/myblog/public/tag-emacs.html">emacs</a> <a href="file:///home/mike/myblog/public/tag-blogging.html">blogging</a> </div>]]></description>
   <category><![CDATA[emacs]]></category>
   <category><![CDATA[blogging]]></category>
-  <link>file:///home/mike/myblog/public/2025-02-26-mi-blog-con-emacs-y-esteroides:-una-aventura-potenciada-por-c%C3%B3digo-y-ia.html</link>
-  <guid>file:///home/mike/myblog/public/2025-02-26-mi-blog-con-emacs-y-esteroides:-una-aventura-potenciada-por-c%C3%B3digo-y-ia.html</guid>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-mi-blog-con-emacs-y-esteroides:-una-aventura-potenciada-por-c%C3%B3digo-y-ia.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-mi-blog-con-emacs-y-esteroides:-una-aventura-potenciada-por-c%C3%B3digo-y-ia.html</guid>
   <pubDate>Wed, 26 Feb 2025 15:16:00 +0100</pubDate>
 </item>
 <item>
@@ -314,8 +314,8 @@ Explorar cómo sincronizar cada blog con un repositorio Git diferente.
 <div class="taglist"><a href="file:///home/mike/myblog/public/tags.html">Categoría</a>: <a href="file:///home/mike/myblog/public/tag-emacs.html">emacs</a> <a href="file:///home/mike/myblog/public/tag-blogging.html">blogging</a> </div>]]></description>
   <category><![CDATA[emacs]]></category>
   <category><![CDATA[blogging]]></category>
-  <link>file:///home/mike/myblog/public/2025-02-26-gestionando-dos-blogs-diferentes-con-org-static-blog-en-emacs.html</link>
-  <guid>file:///home/mike/myblog/public/2025-02-26-gestionando-dos-blogs-diferentes-con-org-static-blog-en-emacs.html</guid>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-gestionando-dos-blogs-diferentes-con-org-static-blog-en-emacs.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-gestionando-dos-blogs-diferentes-con-org-static-blog-en-emacs.html</guid>
   <pubDate>Wed, 26 Feb 2025 08:37:00 +0100</pubDate>
 </item>
 <item>
@@ -486,8 +486,8 @@ Grok 3 es un modelo de IA prometedor con un equilibrio entre funcionalidad avanz
 <div class="taglist"><a href="file:///home/mike/myblog/public/tags.html">Categoría</a>: <a href="file:///home/mike/myblog/public/tag-grok3.html">grok3</a> <a href="file:///home/mike/myblog/public/tag-ia.html">ia</a> </div>]]></description>
   <category><![CDATA[grok3]]></category>
   <category><![CDATA[ia]]></category>
-  <link>file:///home/mike/myblog/public/2025-02-26-explorando-grok-3:-una-ia-innovadora-de-xai.html</link>
-  <guid>file:///home/mike/myblog/public/2025-02-26-explorando-grok-3:-una-ia-innovadora-de-xai.html</guid>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-explorando-grok-3:-una-ia-innovadora-de-xai.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-explorando-grok-3:-una-ia-innovadora-de-xai.html</guid>
   <pubDate>Wed, 26 Feb 2025 08:30:00 +0100</pubDate>
 </item>
 </channel>
