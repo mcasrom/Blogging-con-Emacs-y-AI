@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Thu, 27 Feb 2025 10:13:41 +0100</lastBuildDate>
+<lastBuildDate>Thu, 27 Feb 2025 10:17:33 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Capacidades y Comparativa de Modelos de IA Generativa: OpenAI, DeepSeek, Gemini y Grok 3]]></title>
   <description><![CDATA[
@@ -297,24 +297,24 @@ La elección depende de tus prioridades: costo (DeepSeek), razonamiento (Grok 3/
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org6994117">1. Bienvenidos a Mi Blog con Emacs y Esteroides</a></li>
-<li><a href="#org25484e7">2. Emacs: El Corazón de mi Flujo de Trabajo</a></li>
-<li><a href="#orgbb1819b">3. Esteroides: El Poder de la IA Generativa</a></li>
-<li><a href="#org408b848">4. Un Blog con Alma y Tecnología</a></li>
-<li><a href="#org58e98e9">5. ¿Qué viene después?</a></li>
+<li><a href="#org0ed3c97">1. Bienvenidos a Mi Blog con Emacs y Esteroides</a></li>
+<li><a href="#org46fc8b1">2. Emacs: El Corazón de mi Flujo de Trabajo</a></li>
+<li><a href="#org1104bf3">3. Esteroides: El Poder de la IA Generativa</a></li>
+<li><a href="#org99db36e">4. Un Blog con Alma y Tecnología</a></li>
+<li><a href="#org6608be0">5. ¿Qué viene después?</a></li>
 </ul>
 </div>
 </nav>
-<div id="outline-container-org6994117" class="outline-2">
-<h2 id="org6994117"><span class="section-number-2">1.</span> Bienvenidos a Mi Blog con Emacs y Esteroides</h2>
+<div id="outline-container-org0ed3c97" class="outline-2">
+<h2 id="org0ed3c97"><span class="section-number-2">1.</span> Bienvenidos a Mi Blog con Emacs y Esteroides</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-¡Hola, lector! Si has llegado hasta aquí, probablemente compartas mi pasión por la tecnología, el código y la libertad creativa que ofrecen herramientas como Emacs. Este blog, titulado <b>"Mi Blog con Emacs y Esteroides"</b>, no es solo un espacio para compartir ideas, sino una declaración ebn favor a un editor legendario y una exploración de cómo la inteligencia artificial generativa lo lleva a otro nivel. ¿Listo para el viaje? ¡Sube a bordo!
+¡Hola, lector! Si has llegado hasta aquí, probablemente compartas mi pasión por la tecnología, el código y la libertad creativa que ofrecen herramientas como Emacs. Este blog, titulado <b>"Mi Blog con Emacs y Esteroides"</b>, no es solo un espacio para compartir ideas, sino una declaración en favor a un editor legendario y una exploración de cómo la inteligencia artificial generativa lo lleva a otro nivel. ¿Listo para el viaje? ¡Sube a bordo!
 </p>
 </div>
 </div>
-<div id="outline-container-org25484e7" class="outline-2">
-<h2 id="org25484e7"><span class="section-number-2">2.</span> Emacs: El Corazón de mi Flujo de Trabajo</h2>
+<div id="outline-container-org46fc8b1" class="outline-2">
+<h2 id="org46fc8b1"><span class="section-number-2">2.</span> Emacs: El Corazón de mi Flujo de Trabajo</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Cuando pienso en Emacs, no veo solo un editor de texto. Veo una navaja suiza digital, un compañero fiel que ha estado en los paquetes estándar de Linux desde tiempos inmemoriales. No es una herramienta pasajera ni una moda; es un pilar de la cultura del software libre, robusto y flexible como pocos. Lo uso para todo: desde escribir código en Python o Lisp hasta tomar notas en Org-mode (¡como este post!), gestionar mi correo con Gnus o incluso relajarme jugando un poco de Tetris cuando el día se pone duro.
@@ -325,8 +325,8 @@ Mi interés por Emacs nació de su promesa de control total. En un mundo lleno d
 </p>
 </div>
 </div>
-<div id="outline-container-orgbb1819b" class="outline-2">
-<h2 id="orgbb1819b"><span class="section-number-2">3.</span> Esteroides: El Poder de la IA Generativa</h2>
+<div id="outline-container-org1104bf3" class="outline-2">
+<h2 id="org1104bf3"><span class="section-number-2">3.</span> Esteroides: El Poder de la IA Generativa</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Pero, ¿qué pasa con lo de "Esteroides"? Aquí es donde la cosa se pone emocionante. No me conformo con un Emacs estándar (por muy poderoso que sea). He decidido inyectarle una dosis de esteroides digitales mediante la IA generativa. ¿Qué significa esto? Que uso herramientas como modelos de lenguaje avanzados para acelerar mi configuración de Emacs y generar contenido con una chispa extra.
@@ -341,8 +341,8 @@ Los "esteroides" son esa capa de potencia que transforma Emacs de un editor exce
 </p>
 </div>
 </div>
-<div id="outline-container-org408b848" class="outline-2">
-<h2 id="org408b848"><span class="section-number-2">4.</span> Un Blog con Alma y Tecnología</h2>
+<div id="outline-container-org99db36e" class="outline-2">
+<h2 id="org99db36e"><span class="section-number-2">4.</span> Un Blog con Alma y Tecnología</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Este blog es el resultado de esa combinación. Aquí encontrarás reflexiones sobre Emacs, tutoriales para sacarle el máximo provecho, y experimentos con IA generativa que dan vida a mis palabras. Uso `org-static-blog` para publicar todo desde archivos Org-mode, lo que significa que cada post empieza como un documento vivo en mi Emacs, lleno de notas, enlaces y ajustes, antes de convertirse en las páginas que ves.
@@ -353,8 +353,8 @@ Este blog es el resultado de esa combinación. Aquí encontrarás reflexiones so
 </p>
 </div>
 </div>
-<div id="outline-container-org58e98e9" class="outline-2">
-<h2 id="org58e98e9"><span class="section-number-2">5.</span> ¿Qué viene después?</h2>
+<div id="outline-container-org6608be0" class="outline-2">
+<h2 id="org6608be0"><span class="section-number-2">5.</span> ¿Qué viene después?</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Si te apasiona Emacs, Linux, o la IA, este es tu lugar. Próximamente hablaré de cómo configuro mi `init.el` con ayuda de IA, trucos de Org-mode para la productividad, y quizás alguna locura como generar poesía con Lisp y modelos de lenguaje. ¿Tienes ideas o sugerencias? Escríbeme a <a href="mailto:mybloggingnotes@gmail.com">mybloggingnotes@gmail.com</a>; este blog también es un diálogo.
