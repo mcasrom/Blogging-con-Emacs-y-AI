@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="*Explorando la IA generativa con precisión y curiosidad">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Capacidades y Comparativa de Modelos de IA Generativa: OpenAI, DeepSeek, Gemini y Grok 3</title>
+<style>
+         body {
+           font-family: 'Arial', sans-serif;
+           line-height: 1.6;
+           color: #333;
+           max-width: 800px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f5f5f5;
+         }
+         h1, h2, h3 {
+           color: #2c3e50;
+           font-family: 'Helvetica', sans-serif;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           padding: 20px 0;
+           background: linear-gradient(to right, #3498db, #2980b9);
+           color: white;
+           border-radius: 8px;
+           box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+         }
+         .blog-header img {
+           height: 50px;
+           margin-right: 20px;
+         }
+         .blog-header h1 {
+           margin: 0;
+           font-size: 2.5em;
+         }
+         .blog-header span {
+           font-size: 0.9em;
+           font-style: italic;
+           display: block;
+           margin-top: 5px;
+         }
+         .blog-header a {
+           color: #ecf0f1; /* Blanco suave para contraste */
+           text-decoration: none;
+         }
+         .blog-header a:hover {
+           color: #dfe6e9; /* Gris claro al pasar el ratón */
+           text-decoration: underline;
+         }
+         hr {
+           border: 0;
+           height: 1px;
+           background: #ddd;
+           margin: 20px 0;
+         }
+         .post {
+           background: white;
+           padding: 20px;
+           margin-bottom: 20px;
+           border-radius: 8px;
+           box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+         }
+         a {
+           color: #2980b9;
+           text-decoration: none;
+         }
+         a:hover {
+           text-decoration: underline;
+         }
+         .footer-hr {
+           border: 0;
+           height: 4px; /* Grosor grueso */
+           background: #888; /* Gris más oscuro */
+           margin: 30px 0 20px 0;
+         }
+       </style>
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div>
+           <h1>Mi Blog con Emacs y Esteroides</h1>
+           <span><a href='mailto:mybloggingnotes@gmail.com'>Blogging by M. Castillo</a></span>
+         </div>
+       </div>
+       <hr></head>
+<body>
+<div id="preamble" class="status"><p><a href='index.html'>Inicio</a> | <a href='tags.html'>Tags</a> | <a href='archive.html'>Archivo</a></p></div>
+<div id="content">
+<div class="post-date">27/02/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-27-capacidades-y-comparativa-de-modelos-de-ia-generativa:-openai,-deepseek,-gemini-y-grok-3.html">Capacidades y Comparativa de Modelos de IA Generativa: OpenAI, DeepSeek, Gemini y Grok 3</a></h1>
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org83043a7">1. Introducción</a></li>
+<li><a href="#org5b07b2d">2. Capacidades de la IA Generativa</a></li>
+<li><a href="#orgedfcc05">3. Características Comunes</a></li>
+<li><a href="#org2d87e89">4. Comparativa de Modelos</a>
+<ul>
+<li><a href="#org8f96b56">4.1. OpenAI (GPT-4o / o1)**</a></li>
+<li><a href="#org95dc669">4.2. DeepSeek (R1 / V3)**</a></li>
+<li><a href="#org8c1d727">4.3. Gemini (2.0 / Pro)**</a></li>
+<li><a href="#org101674c">4.4. Grok 3 (xAI)**</a></li>
+</ul>
+</li>
+<li><a href="#orga3be63a">5. Comparativa Resumida</a></li>
+<li><a href="#org9d1d354">6. Conclusión</a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-org83043a7" class="outline-2">
+<h2 id="org83043a7"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+La IA generativa es una categoría de inteligencia artificial que crea contenido nuevo (texto, imágenes, código, etc.) a partir de datos de entrenamiento, utilizando modelos de aprendizaje profundo como transformers o sistemas de mezcla de expertos (MoE). Este documento define sus capacidades, características y compara los modelos líderes: OpenAI (GPT-4o/o1), DeepSeek (R1/V3), Gemini (2.0/Pro) y Grok 3 de xAI, con una valoración de 1 a 10.
+</p>
+</div>
+</div>
+<div id="outline-container-org5b07b2d" class="outline-2">
+<h2 id="org5b07b2d"><span class="section-number-2">2.</span> Capacidades de la IA Generativa</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+La IA generativa tiene las siguientes capacidades generales:
+</p>
+<ul class="org-ul">
+<li><b><b>Generación de texto</b></b>: Crear textos coherentes, desde respuestas conversacionales hasta ensayos.</li>
+<li><b><b>Razonamiento</b></b>: Resolver problemas paso a paso, especialmente en modelos avanzados.</li>
+<li><b><b>Multimodalidad</b></b>: Procesar y generar texto, imágenes, y otros datos (según el modelo).</li>
+<li><b><b>Búsqueda en tiempo real</b></b>: Acceder a información actualizada vía web (si está habilitado).</li>
+<li><b><b>Código</b></b>: Escribir, depurar y optimizar código en varios lenguajes.</li>
+<li><b><b>Personalización</b></b>: Adaptarse a necesidades específicas mediante fine-tuning o prompts.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgedfcc05" class="outline-2">
+<h2 id="orgedfcc05"><span class="section-number-2">3.</span> Características Comunes</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><b><b>Arquitectura</b></b>: Basada en transformers o MoE para eficiencia y escalabilidad.</li>
+<li><b><b>Entrenamiento</b></b>: Miles de millones de parámetros ajustados con grandes datasets.</li>
+<li><b><b>Velocidad</b></b>: Depende de la potencia computacional subyacente.</li>
+<li><b><b>Seguridad</b></b>: Filtros para evitar contenido dañino, con variaciones por modelo.</li>
+<li><b><b>Accesibilidad</b></b>: Disponible vía suscripción, API o código abierto (en algunos casos).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2d87e89" class="outline-2">
+<h2 id="org2d87e89"><span class="section-number-2">4.</span> Comparativa de Modelos</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org8f96b56" class="outline-3">
+<h3 id="org8f96b56"><span class="section-number-3">4.1.</span> OpenAI (GPT-4o / o1)**</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Líder en IA conversacional, con GPT-4o como modelo multimodal y o1 especializado en razonamiento.</li>
+<li><b><b>Capacidades</b></b>:
+<ul class="org-ul">
+<li>Texto: Excelente en generación creativa y explicaciones detalladas.</li>
+<li>Razonamiento: o1 sobresale en matemática y lógica (87.5% en ARC-AGI con alto cómputo).</li>
+<li>Multimodalidad: GPT-4o procesa imágenes y texto; o1 no.</li>
+<li>Código: Muy competente, especialmente o1-mini para tareas técnicas.</li>
+</ul></li>
+<li><b><b>Características</b></b>:
+<ul class="org-ul">
+<li>Computación: Alta demanda (costosa).</li>
+<li>Velocidad: Rápida, pero razonamiento complejo puede ser lento.</li>
+<li>Seguridad: Fuerte, con filtros éticos estrictos.</li>
+<li>Costo: Alto ($20-$200/mes según plan).</li>
+</ul></li>
+<li><b><b>Valoración</b></b>: 9/10
+<ul class="org-ul">
+<li>Pros: Versatilidad, razonamiento avanzado, multimodalidad.</li>
+<li>Contras: Costo elevado, sesgo leve detectable.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org95dc669" class="outline-3">
+<h3 id="org95dc669"><span class="section-number-3">4.2.</span> DeepSeek (R1 / V3)**</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Modelo chino de bajo costo, con R1 enfocado en razonamiento y V3 como MoE de 671B parámetros.</li>
+<li><b><b>Capacidades</b></b>:
+<ul class="org-ul">
+<li>Texto: Respuestas concisas, menos creativas que competidores.</li>
+<li>Razonamiento: R1 compite con o1 en tareas técnicas, pero menos consistente (15-20% en ARC-AGI).</li>
+<li>Multimodalidad: Solo texto.</li>
+<li>Código: Muy fuerte, a veces supera a GPT-4.</li>
+</ul></li>
+<li><b><b>Características</b></b>:
+<ul class="org-ul">
+<li>Computación: Eficiente (37B parámetros activos en V3).</li>
+<li>Velocidad: Rápida para tareas simples.</li>
+<li>Seguridad: Vulnerable (exposición de datos reportada).</li>
+<li>Costo: Muy bajo (47.6x más barato que Grok-2 por token).</li>
+</ul></li>
+<li><b><b>Valoración</b></b>: 7/10
+<ul class="org-ul">
+<li>Pros: Costo-eficiencia, buen razonamiento técnico.</li>
+<li>Contras: Seguridad débil, falta multimodalidad.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8c1d727" class="outline-3">
+<h3 id="org8c1d727"><span class="section-number-3">4.3.</span> Gemini (2.0 / Pro)**</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Modelo de Google, integrado con su ecosistema, con Gemini 2.0 Pro como versión avanzada.</li>
+<li><b><b>Capacidades</b></b>:
+<ul class="org-ul">
+<li>Texto: Respuestas bien investigadas con fuentes verificables.</li>
+<li>Razonamiento: Competente, pero detrás de o1 y Grok 3 (80.5 en MMLU).</li>
+<li>Multimodalidad: Texto e imágenes, con integración en Google Workspace.</li>
+<li>Código: Bueno, pero no líder.</li>
+</ul></li>
+<li><b><b>Características</b></b>:
+<ul class="org-ul">
+<li>Computación: Eficiente, con acceso a infraestructura de Google.</li>
+<li>Velocidad: Variable según complejidad.</li>
+<li>Seguridad: Alta, alineada con políticas de Google.</li>
+<li>Costo: Moderado ($20/mes, incluye almacenamiento).</li>
+</ul></li>
+<li><b><b>Valoración</b></b>: 8/10
+<ul class="org-ul">
+<li>Pros: Integración con Google, multimodalidad sólida.</li>
+<li>Contras: Menor capacidad de razonamiento avanzado.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org101674c" class="outline-3">
+<h3 id="org101674c"><span class="section-number-3">4.4.</span> Grok 3 (xAI)**</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Último modelo de xAI, con énfasis en razonamiento y "búsqueda de la verdad".</li>
+<li><b><b>Capacidades</b></b>:
+<ul class="org-ul">
+<li>Texto: Respuestas detalladas, menos sesgadas políticamente.</li>
+<li>Razonamiento: Supera a Gemini y DeepSeek en benchmarks (52 en AIME’24, 75 en GPQA).</li>
+<li>Multimodalidad: Imagen y texto, con generación vía Aurora.</li>
+<li>Código: Excelente, competitivo con o1.</li>
+</ul></li>
+<li><b><b>Características</b></b>:
+<ul class="org-ul">
+<li>Computación: 10x más potente que Grok 2 (200,000 GPUs).</li>
+<li>Velocidad: Rápida, con modo "Big Brain" para tareas complejas.</li>
+<li>Seguridad: Moderada, prioriza respuestas sin censura.</li>
+<li>Costo: Alto ($30-$50/mes para Premium+).</li>
+</ul></li>
+<li><b><b>Valoración</b></b>: 9/10
+<ul class="org-ul">
+<li>Pros: Razonamiento líder, menos sesgo, multimodalidad.</li>
+<li>Contras: Costo elevado, acceso restringido.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga3be63a" class="outline-2">
+<h2 id="orga3be63a"><span class="section-number-2">5.</span> Comparativa Resumida</h2>
+<div class="outline-text-2" id="text-5">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Modelo</th>
+<th scope="col" class="org-right">Razonamiento</th>
+<th scope="col" class="org-right">Texto Creativo</th>
+<th scope="col" class="org-right">Multimodalidad</th>
+<th scope="col" class="org-right">Código</th>
+<th scope="col" class="org-right">Costo</th>
+<th scope="col" class="org-right">Seguridad</th>
+<th scope="col" class="org-left">Valoración</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">OpenAI</td>
+<td class="org-right">9</td>
+<td class="org-right">9</td>
+<td class="org-right">8</td>
+<td class="org-right">9</td>
+<td class="org-right">6</td>
+<td class="org-right">8</td>
+<td class="org-left">9/10</td>
+</tr>
+
+<tr>
+<td class="org-left">DeepSeek</td>
+<td class="org-right">7</td>
+<td class="org-right">6</td>
+<td class="org-right">2</td>
+<td class="org-right">8</td>
+<td class="org-right">9</td>
+<td class="org-right">4</td>
+<td class="org-left">7/10</td>
+</tr>
+
+<tr>
+<td class="org-left">Gemini</td>
+<td class="org-right">7</td>
+<td class="org-right">8</td>
+<td class="org-right">8</td>
+<td class="org-right">7</td>
+<td class="org-right">7</td>
+<td class="org-right">9</td>
+<td class="org-left">8/10</td>
+</tr>
+
+<tr>
+<td class="org-left">Grok 3</td>
+<td class="org-right">9</td>
+<td class="org-right">8</td>
+<td class="org-right">7</td>
+<td class="org-right">9</td>
+<td class="org-right">5</td>
+<td class="org-right">7</td>
+<td class="org-left">9/10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org9d1d354" class="outline-2">
+<h2 id="org9d1d354"><span class="section-number-2">6.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li><b><b>OpenAI (GPT-4o/o1)</b></b>: Ideal para usuarios que buscan versatilidad y razonamiento avanzado, aunque costoso.</li>
+<li><b><b>DeepSeek (R1/V3)</b></b>: Perfecto para tareas técnicas a bajo costo, pero con riesgos de seguridad.</li>
+<li><b><b>Gemini (2.0/Pro)</b></b>: Excelente para integración con Google y usuarios que valoran fuentes verificables.</li>
+<li><b><b>Grok 3</b></b>: Destaca en razonamiento y neutralidad, competitivo con OpenAI, pero limitado por costo y acceso.</li>
+</ul>
+
+<p>
+La elección depende de tus prioridades: costo (DeepSeek), razonamiento (Grok 3/OpenAI), o ecosistema (Gemini). Todos son líderes en sus áreas, pero Grok 3 y OpenAI sobresalen en capacidades generales al 26 de febrero de 2025.
+</p>
+
+<p style="text-align: center; font-size: 0.9em; color: #777;">
+<b>Explorando la IA generativa con precisión y curiosidad.</b>
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-openai.html">openai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gemini.html">gemini</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-grok3.html">grok3</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-deepseek.html">deepseek</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-comparativa.html">comparativa</a> </div></div>
+<div id="postamble" class="status"><hr class='footer-hr'>
+       <div style='text-align: center; color: #777; font-size: 0.9em; padding-top: 20px;'>
+         <p>© 2025 M. Castillo | Hecho con Emacs y org-static-blog</p>
+       </div></div>
+</body>
+</html>
