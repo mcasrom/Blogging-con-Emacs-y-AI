@@ -97,18 +97,12 @@
               <meta charset='UTF-8'>
               <title>Mi Blog</title>
               <link rel='stylesheet' href='/styles.css'>
-              <link rel='stylesheet' href='/_pagefind/pagefind-ui.css'>
-              <script src='/_pagefind/pagefind-ui.js'></script>
+              <link rel='stylesheet' href='/pagefind/pagefind-ui.css'>
             </head>
             <body>
               <div id='search-container' style='margin: 20px;'>
                 <h2>Buscar en los Posts</h2>
                 <div id='search'></div>
-                <script>
-                  window.addEventListener('DOMContentLoaded', (event) => {
-                    new PagefindUI({ element: '#search', showSubResults: true });
-                  });
-                </script>
               </div>
               <div style='text-align:center; font-size: small; line-height: 1.2;'>
                 <ul><div class="post-date">27/02/2025</div><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-27-listado-de-libros-y-documentos-para-introducirse-en-inteligencia-artificial.html">Listado de Libros y Documentos para Introducirse en Inteligencia Artificial</a></h2><p><a href='index.html'>Inicio</a> | <a href='tags.html'>Tags</a> | <a href='archive.html'>Archivo</a></p></div><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-27-listado-de-libros-y-documentos-para-introducirse-en-inteligencia-artificial.html">...</a>
@@ -120,6 +114,12 @@
 <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/archive.html">Otros artículos</a>
 </div>
 </div>
-<div id="postamble" class="status"></div>
+<div id="postamble" class="status"><script src='/pagefind/pagefind-ui.js'></script>
+          <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+              new PagefindUI({ element: '#search', showSubResults: true });
+            });
+          </script>
+          </body></html></div>
 </body>
 </html>
