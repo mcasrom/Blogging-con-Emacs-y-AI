@@ -4,60 +4,63 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Thu, 27 Feb 2025 17:43:06 +0100</lastBuildDate>
+<lastBuildDate>Thu, 27 Feb 2025 17:54:50 +0100</lastBuildDate>
 <item>
-  <title><![CDATA[Listado de Libros y Documentos para Introducirse en Inteligencia Artificial]]></title>
+  <title><![CDATA[Recursos para Introducirse en Inteligencia Artificial]]></title>
   <description><![CDATA[
 <nav id="table-of-contents" role="doc-toc">
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org577cc00">Introducción</a></li>
-<li><a href="#orgd06204b">Nivel Principiante</a>
+<li><a href="#orge1abb4f">Introducción</a></li>
+<li><a href="#org958d36d">Nivel Principiante</a>
 <ul>
-<li><a href="#orgc86ffc5">1. "Inteligencia Artificial: Una Guía para Gente Pensante" - Melanie Mitchell**</a></li>
-<li><a href="#org3bba87d">2. "Artificial Intelligence: A Modern Approach" (Capítulos 1-3) - Stuart Russell y Peter Norvig**</a></li>
-<li><a href="#org42b8d6f">3. "Machine Learning Yearning" - Andrew Ng**</a></li>
+<li><a href="#org468b341">1. "Inteligencia Artificial: Una Guía para Gente Pensante" - Melanie Mitchell**</a></li>
+<li><a href="#org3e3be6c">2. "Artificial Intelligence: A Modern Approach" (Capítulos 1-3) - Stuart Russell y Peter Norvig**</a></li>
+<li><a href="#orgd4a83aa">3. "Machine Learning Yearning" - Andrew Ng**</a></li>
 </ul>
 </li>
-<li><a href="#orged39466">Nivel Intermedio</a>
+<li><a href="#orgb059d17">Nivel Intermedio</a>
 <ul>
-<li><a href="#orge2e8034">1. "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" - Aurélien Géron**</a></li>
-<li><a href="#orgc474f81">2. "Deep Learning with Python" - François Chollet**</a></li>
-<li><a href="#orge8c755c">3. "CS231n: Convolutional Neural Networks for Visual Recognition" - Stanford University**</a></li>
+<li><a href="#orgf00a4db">1. "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" - Aurélien Géron**</a></li>
+<li><a href="#org95cd85d">2. "Deep Learning with Python" - François Chollet**</a></li>
+<li><a href="#org9c73740">3. "CS231n: Convolutional Neural Networks for Visual Recognition" - Stanford University**</a></li>
 </ul>
 </li>
-<li><a href="#org26e7320">Nivel Avanzado</a>
+<li><a href="#org677589c">Nivel Avanzado</a>
 <ul>
-<li><a href="#org0df71e7">1. "Deep Learning" - Ian Goodfellow, Yoshua Bengio, Aaron Courville**</a></li>
-<li><a href="#orgfd672a7">2. "Pattern Recognition and Machine Learning" - Christopher Bishop**</a></li>
-<li><a href="#orgd4379c2">3. "Attention Is All You Need" - Vaswani et al.**</a></li>
+<li><a href="#orge08088a">1. "Deep Learning" - Ian Goodfellow, Yoshua Bengio, Aaron Courville**</a></li>
+<li><a href="#orgbbd637b">2. "Pattern Recognition and Machine Learning" - Christopher Bishop**</a></li>
+<li><a href="#org7f8f69a">3. "Attention Is All You Need" - Vaswani et al.**</a></li>
 </ul>
 </li>
-<li><a href="#orgb30b9cd">Justificación General</a></li>
-<li><a href="#org88cbe66">Conclusión</a></li>
-<li><a href="#org4136449">Nota Final</a></li>
+<li><a href="#orgce385d4">Justificación General</a></li>
+<li><a href="#orgf5ba928">Conclusión</a></li>
+<li><a href="#org16e50bc">Nota Final</a></li>
 </ul>
 </div>
 </nav>
-<div id="outline-container-org577cc00" class="outline-2">
-<h2 id="org577cc00">Introducción</h2>
-<div class="outline-text-2" id="text-org577cc00">
+<p>
+AUTHOR: Grok 3 (xAI)
+</p>
+<div id="outline-container-orge1abb4f" class="outline-2">
+<h2 id="orge1abb4f">Introducción</h2>
+<div class="outline-text-2" id="text-orge1abb4f">
 <p>
 La Inteligencia Artificial (IA) abarca desde conceptos básicos hasta técnicas avanzadas de aprendizaje profundo y razonamiento. Este listado ofrece recursos seleccionados para principiantes (sin conocimientos previos), nivel intermedio (con fundamentos básicos) y avanzado (expertos o investigadores). Cada recomendación incluye una justificación basada en accesibilidad, claridad y profundidad técnica.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd06204b" class="outline-2">
-<h2 id="orgd06204b">Nivel Principiante</h2>
-<div class="outline-text-2" id="text-orgd06204b">
+<div id="outline-container-org958d36d" class="outline-2">
+<h2 id="org958d36d">Nivel Principiante</h2>
+<div class="outline-text-2" id="text-org958d36d">
 <p>
 Recursos introductorios sin necesidad de conocimientos previos en matemáticas o programación.
 </p>
 </div>
-<div id="outline-container-orgc86ffc5" class="outline-3">
-<h3 id="orgc86ffc5">1. "Inteligencia Artificial: Una Guía para Gente Pensante" - Melanie Mitchell**</h3>
-<div class="outline-text-3" id="text-orgc86ffc5">
+<div id="outline-container-org468b341" class="outline-3">
+<h3 id="org468b341">1. "Inteligencia Artificial: Una Guía para Gente Pensante" - Melanie Mitchell**</h3>
+<div class="outline-text-3" id="text-org468b341">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Introducción narrativa a los conceptos básicos de IA, desde perceptrones hasta redes neuronales, sin ecuaciones complejas.</li>
 <li><b><b>Justificación</b></b>: Mitchell explica la IA de manera accesible, con ejemplos históricos (como Deep Blue) y reflexiones éticas. Ideal para quienes buscan entender qué es la IA sin tecnicismos.</li>
@@ -66,9 +69,9 @@ Recursos introductorios sin necesidad de conocimientos previos en matemáticas o
 </ul>
 </div>
 </div>
-<div id="outline-container-org3bba87d" class="outline-3">
-<h3 id="org3bba87d">2. "Artificial Intelligence: A Modern Approach" (Capítulos 1-3) - Stuart Russell y Peter Norvig**</h3>
-<div class="outline-text-3" id="text-org3bba87d">
+<div id="outline-container-org3e3be6c" class="outline-3">
+<h3 id="org3e3be6c">2. "Artificial Intelligence: A Modern Approach" (Capítulos 1-3) - Stuart Russell y Peter Norvig**</h3>
+<div class="outline-text-3" id="text-org3e3be6c">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Libro de texto clásico, pero los primeros capítulos son una introducción amigable a los fundamentos de IA (agentes inteligentes, búsqueda).</li>
 <li><b><b>Justificación</b></b>: Aunque es un texto académico, los capítulos iniciales son claros y no requieren matemáticas avanzadas, sentando las bases para principiantes curiosos.</li>
@@ -77,9 +80,9 @@ Recursos introductorios sin necesidad de conocimientos previos en matemáticas o
 </ul>
 </div>
 </div>
-<div id="outline-container-org42b8d6f" class="outline-3">
-<h3 id="org42b8d6f">3. "Machine Learning Yearning" - Andrew Ng**</h3>
-<div class="outline-text-3" id="text-org42b8d6f">
+<div id="outline-container-orgd4a83aa" class="outline-3">
+<h3 id="orgd4a83aa">3. "Machine Learning Yearning" - Andrew Ng**</h3>
+<div class="outline-text-3" id="text-orgd4a83aa">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Guía corta y práctica sobre cómo abordar proyectos de aprendizaje automático (ML), enfocada en estrategia más que en teoría.</li>
 <li><b><b>Justificación</b></b>: Ng usa un lenguaje simple y ejemplos reales, perfecto para principiantes que quieren aplicar IA sin programar aún.</li>
@@ -89,16 +92,16 @@ Recursos introductorios sin necesidad de conocimientos previos en matemáticas o
 </div>
 </div>
 </div>
-<div id="outline-container-orged39466" class="outline-2">
-<h2 id="orged39466">Nivel Intermedio</h2>
-<div class="outline-text-2" id="text-orged39466">
+<div id="outline-container-orgb059d17" class="outline-2">
+<h2 id="orgb059d17">Nivel Intermedio</h2>
+<div class="outline-text-2" id="text-orgb059d17">
 <p>
 Recursos para quienes tienen nociones básicas de programación (Python) y matemáticas (álgebra lineal, estadística).
 </p>
 </div>
-<div id="outline-container-orge2e8034" class="outline-3">
-<h3 id="orge2e8034">1. "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" - Aurélien Géron**</h3>
-<div class="outline-text-3" id="text-orge2e8034">
+<div id="outline-container-orgf00a4db" class="outline-3">
+<h3 id="orgf00a4db">1. "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" - Aurélien Géron**</h3>
+<div class="outline-text-3" id="text-orgf00a4db">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Manual práctico que guía desde regresiones simples hasta redes neuronales profundas con código en Python.</li>
 <li><b><b>Justificación</b></b>: Equilibra teoría y práctica con ejemplos ejecutables, ideal para aprender implementando modelos de IA. Requiere conocimientos básicos de Python.</li>
@@ -107,9 +110,9 @@ Recursos para quienes tienen nociones básicas de programación (Python) y matem
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc474f81" class="outline-3">
-<h3 id="orgc474f81">2. "Deep Learning with Python" - François Chollet**</h3>
-<div class="outline-text-3" id="text-orgc474f81">
+<div id="outline-container-org95cd85d" class="outline-3">
+<h3 id="org95cd85d">2. "Deep Learning with Python" - François Chollet**</h3>
+<div class="outline-text-3" id="text-org95cd85d">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Introducción al aprendizaje profundo usando Keras, con ejemplos desde redes básicas hasta convolucionales.</li>
 <li><b><b>Justificación</b></b>: Chollet, creador de Keras, explica conceptos intermedios (como backpropagation) de forma clara, con código práctico para usuarios con algo de experiencia.</li>
@@ -118,9 +121,9 @@ Recursos para quienes tienen nociones básicas de programación (Python) y matem
 </ul>
 </div>
 </div>
-<div id="outline-container-orge8c755c" class="outline-3">
-<h3 id="orge8c755c">3. "CS231n: Convolutional Neural Networks for Visual Recognition" - Stanford University**</h3>
-<div class="outline-text-3" id="text-orge8c755c">
+<div id="outline-container-org9c73740" class="outline-3">
+<h3 id="org9c73740">3. "CS231n: Convolutional Neural Networks for Visual Recognition" - Stanford University**</h3>
+<div class="outline-text-3" id="text-org9c73740">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Curso en línea con notas y videos sobre redes neuronales convolucionales (CNN).</li>
 <li><b><b>Justificación</b></b>: Ofrece una base sólida en visión por computadora, accesible para quienes saben programar y quieren profundizar en IA práctica.</li>
@@ -130,16 +133,16 @@ Recursos para quienes tienen nociones básicas de programación (Python) y matem
 </div>
 </div>
 </div>
-<div id="outline-container-org26e7320" class="outline-2">
-<h2 id="org26e7320">Nivel Avanzado</h2>
-<div class="outline-text-2" id="text-org26e7320">
+<div id="outline-container-org677589c" class="outline-2">
+<h2 id="org677589c">Nivel Avanzado</h2>
+<div class="outline-text-2" id="text-org677589c">
 <p>
 Recursos para expertos o investigadores con conocimientos sólidos en matemáticas (cálculo, probabilidad) y programación.
 </p>
 </div>
-<div id="outline-container-org0df71e7" class="outline-3">
-<h3 id="org0df71e7">1. "Deep Learning" - Ian Goodfellow, Yoshua Bengio, Aaron Courville**</h3>
-<div class="outline-text-3" id="text-org0df71e7">
+<div id="outline-container-orge08088a" class="outline-3">
+<h3 id="orge08088a">1. "Deep Learning" - Ian Goodfellow, Yoshua Bengio, Aaron Courville**</h3>
+<div class="outline-text-3" id="text-orge08088a">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Texto definitivo sobre aprendizaje profundo, cubriendo teoría matemática, algoritmos y aplicaciones avanzadas.</li>
 <li><b><b>Justificación</b></b>: Es la referencia técnica más completa, ideal para quienes buscan entender los fundamentos detrás de modelos como GANs o transformers. Requiere matemáticas avanzadas.</li>
@@ -148,9 +151,9 @@ Recursos para expertos o investigadores con conocimientos sólidos en matemátic
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfd672a7" class="outline-3">
-<h3 id="orgfd672a7">2. "Pattern Recognition and Machine Learning" - Christopher Bishop**</h3>
-<div class="outline-text-3" id="text-orgfd672a7">
+<div id="outline-container-orgbbd637b" class="outline-3">
+<h3 id="orgbbd637b">2. "Pattern Recognition and Machine Learning" - Christopher Bishop**</h3>
+<div class="outline-text-3" id="text-orgbbd637b">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Libro académico sobre aprendizaje automático probabilístico, desde modelos bayesianos hasta redes neuronales.</li>
 <li><b><b>Justificación</b></b>: Ofrece una perspectiva rigurosa y matemática, perfecta para avanzar en teoría de IA y sus raíces estadísticas.</li>
@@ -159,9 +162,9 @@ Recursos para expertos o investigadores con conocimientos sólidos en matemátic
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd4379c2" class="outline-3">
-<h3 id="orgd4379c2">3. "Attention Is All You Need" - Vaswani et al.**</h3>
-<div class="outline-text-3" id="text-orgd4379c2">
+<div id="outline-container-org7f8f69a" class="outline-3">
+<h3 id="org7f8f69a">3. "Attention Is All You Need" - Vaswani et al.**</h3>
+<div class="outline-text-3" id="text-org7f8f69a">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Artículo seminal que introduce los transformers, base de modelos como BERT o GPT.</li>
 <li><b><b>Justificación</b></b>: Documento corto pero denso, esencial para entender la arquitectura que domina la IA moderna. Requiere familiaridad con redes neuronales.</li>
@@ -171,9 +174,9 @@ Recursos para expertos o investigadores con conocimientos sólidos en matemátic
 </div>
 </div>
 </div>
-<div id="outline-container-orgb30b9cd" class="outline-2">
-<h2 id="orgb30b9cd">Justificación General</h2>
-<div class="outline-text-2" id="text-orgb30b9cd">
+<div id="outline-container-orgce385d4" class="outline-2">
+<h2 id="orgce385d4">Justificación General</h2>
+<div class="outline-text-2" id="text-orgce385d4">
 <ul class="org-ul">
 <li><b><b>Principiantes</b></b>: Los recursos son narrativos y evitan tecnicismos, enfocándose en conceptos y contexto histórico para despertar interés.</li>
 <li><b><b>Intermedio</b></b>: Combinan teoría práctica con código, ideales para quienes ya programan y quieren aplicar IA en proyectos reales.</li>
@@ -181,9 +184,9 @@ Recursos para expertos o investigadores con conocimientos sólidos en matemátic
 </ul>
 </div>
 </div>
-<div id="outline-container-org88cbe66" class="outline-2">
-<h2 id="org88cbe66">Conclusión</h2>
-<div class="outline-text-2" id="text-org88cbe66">
+<div id="outline-container-orgf5ba928" class="outline-2">
+<h2 id="orgf5ba928">Conclusión</h2>
+<div class="outline-text-2" id="text-orgf5ba928">
 <p>
 Este listado ofrece una progresión clara para introducirse en IA:
 </p>
@@ -194,12 +197,12 @@ Este listado ofrece una progresión clara para introducirse en IA:
 </ul>
 </div>
 </div>
-<div id="outline-container-org4136449" class="outline-2">
-<h2 id="org4136449">Nota Final</h2>
-<div class="outline-text-2" id="text-org4136449">
-<p>
-Este documento ha sido generado por Grok 3, creado por xAI, el 26 de febrero de 2025, con el propósito de proporcionar una guía estructurada y detallada para introducirse en la Inteligencia Artificial.
-</p>
+<div id="outline-container-org16e50bc" class="outline-2">
+<h2 id="org16e50bc">Nota Final</h2>
+<div class="outline-text-2" id="text-org16e50bc">
+<ul class="org-ul">
+<li>Este documento ha sido generado por Grok 3, creado por xAI, el 26 de febrero de 2025, con el propósito de proporcionar una guía estructurada y detallada para introducirse en la Inteligencia Artificial.</li>
+</ul>
 
 <p>
 Con estos recursos, puedes construir una base sólida en IA desde cero hasta nivel experto, adaptándote a tu ritmo y objetivos.
