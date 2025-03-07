@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Fri, 07 Mar 2025 19:06:44 +0100</lastBuildDate>
+<lastBuildDate>Fri, 07 Mar 2025 19:08:20 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Gestión del Tiempo: Técnicas para Ser Más Eficiente]]></title>
   <description><![CDATA[
@@ -12,11 +12,11 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgdf62038">1. Método Pomodoro</a></li>
-<li><a href="#org0dcea0a">2. Matriz de Eisenhower</a></li>
-<li><a href="#org7d8f902">3. Técnica Time Blocking</a></li>
-<li><a href="#org02e3afb">4. Regla de los Dos Minutos</a></li>
-<li><a href="#org7ddaa17">5. Batching o Agrupación de Tareas</a></li>
+<li><a href="#org6679ae9">1. Método Pomodoro</a></li>
+<li><a href="#orge171e5b">2. Matriz de Eisenhower</a></li>
+<li><a href="#org23caadb">3. Técnica Time Blocking</a></li>
+<li><a href="#orgf4deae1">4. Regla de los Dos Minutos</a></li>
+<li><a href="#org91b52e1">5. Batching o Agrupación de Tareas</a></li>
 </ul>
 </div>
 </nav>
@@ -52,8 +52,8 @@ Delegación: Transferir tareas secundarias para optimizar esfuerzos.
 <p>
 Técnicas Efectivas para la Gestión del Tiempo
 </p>
-<div id="outline-container-orgdf62038" class="outline-2">
-<h2 id="orgdf62038"><span class="section-number-2">1.</span> Método Pomodoro</h2>
+<div id="outline-container-org6679ae9" class="outline-2">
+<h2 id="org6679ae9"><span class="section-number-2">1.</span> Método Pomodoro</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Dividir el trabajo en sesiones de 25 minutos (Pomodoros) con descansos de 5 minutos.
@@ -68,8 +68,8 @@ Ideal para mejorar la concentración y evitar la fatiga mental.
 </p>
 </div>
 </div>
-<div id="outline-container-org0dcea0a" class="outline-2">
-<h2 id="org0dcea0a"><span class="section-number-2">2.</span> Matriz de Eisenhower</h2>
+<div id="outline-container-orge171e5b" class="outline-2">
+<h2 id="orge171e5b"><span class="section-number-2">2.</span> Matriz de Eisenhower</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Prioriza tareas en función de su urgencia e importancia.
@@ -100,14 +100,14 @@ Ayuda a evitar la procrastinación y la sobrecarga de trabajo.
 </p>
 
 
-<figure id="orgb3fef08">
+<figure id="org4016f22">
 <img src="matriz-eisenhower.png" alt="matriz-eisenhower.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org7d8f902" class="outline-2">
-<h2 id="org7d8f902"><span class="section-number-2">3.</span> Técnica Time Blocking</h2>
+<div id="outline-container-org23caadb" class="outline-2">
+<h2 id="org23caadb"><span class="section-number-2">3.</span> Técnica Time Blocking</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Asignar bloques de tiempo específicos a cada tarea.
@@ -122,8 +122,8 @@ Compatible con herramientas como Google Calendar o Emacs Org Mode.
 </p>
 </div>
 </div>
-<div id="outline-container-org02e3afb" class="outline-2">
-<h2 id="org02e3afb"><span class="section-number-2">4.</span> Regla de los Dos Minutos</h2>
+<div id="outline-container-orgf4deae1" class="outline-2">
+<h2 id="orgf4deae1"><span class="section-number-2">4.</span> Regla de los Dos Minutos</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Si una tarea toma menos de dos minutos, hacerla de inmediato.
@@ -134,8 +134,8 @@ Reduce acumulación de pequeñas tareas y mejora el flujo de trabajo.
 </p>
 </div>
 </div>
-<div id="outline-container-org7ddaa17" class="outline-2">
-<h2 id="org7ddaa17"><span class="section-number-2">5.</span> Batching o Agrupación de Tareas</h2>
+<div id="outline-container-org91b52e1" class="outline-2">
+<h2 id="org91b52e1"><span class="section-number-2">5.</span> Batching o Agrupación de Tareas</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Agrupar tareas similares para reducir cambios de contexto.
