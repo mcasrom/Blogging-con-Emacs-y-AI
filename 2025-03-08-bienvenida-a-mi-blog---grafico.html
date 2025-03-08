@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Bienvenida a Mi Blog - Grafico">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Bienvenida a Mi Blog - Grafico</title>
+<meta charset='UTF-8'>
+       <link rel='stylesheet' href='/Blogging-con-Emacs-y-AI/pagefind/pagefind-ui.css'>
+       <style>
+         body {
+           font-family: 'Arial', sans-serif;
+           line-height: 1.6;
+           color: #333;
+           max-width: 800px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f5f5f5;
+         }
+         h1, h2, h3 {
+           color: #2c3e50;
+           font-family: 'Helvetica', sans-serif;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           padding: 20px 0;
+           background: linear-gradient(to right, #3498db, #2980b9);
+           color: white;
+           border-radius: 8px;
+           box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+         }
+         .blog-header img {
+           height: 50px;
+           margin-right: 20px;
+         }
+         .blog-header h1 {
+           margin: 0;
+           font-size: 2.5em;
+         }
+         .blog-header span {
+           font-size: 0.9em;
+           font-style: italic;
+           display: block;
+           margin-top: 5px;
+         }
+         .blog-header a {
+           color: #ecf0f1;
+           text-decoration: none;
+         }
+         .blog-header a:hover {
+           color: #dfe6e9;
+           text-decoration: underline;
+         }
+         hr {
+           border: 0;
+           height: 1px;
+           background: #ddd;
+           margin: 20px 0;
+         }
+         .post {
+           background: white;
+           padding: 20px;
+           margin-bottom: 20px;
+           border-radius: 8px;
+           box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+         }
+         a {
+           color: #2980b9;
+           text-decoration: none;
+         }
+         a:hover {
+           text-decoration: underline;
+         }
+         .footer-hr {
+           border: 0;
+           height: 4px;
+           background: #888;
+           margin: 30px 0 20px 0;
+         }
+       </style>
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div>
+           <h1>Mi Blog con Emacs y Esteroides</h1>
+           <span><a href='mailto:mybloggingnotes@gmail.com'>Blogging by M. Castillo</a></span>
+         </div>
+       </div>
+       <hr></head>
+<body>
+<div id="preamble" class="status"><div id='preamble' class='status'>
+         <p><a href='index.html'>Inicio</a> | <a href='tags.html'>Tags</a> | <a href='archive.html'>Archivo</a></p>
+         <div id='search-container' style='margin: 20px;'>
+           <h2>Buscar en los Posts</h2>
+           <div id='search'></div>
+         </div>
+       </div></div>
+<div id="content">
+<div class="post-date">08/03/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-08-bienvenida-a-mi-blog---grafico.html">Bienvenida a Mi Blog - Grafico</a></h1>
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#welcome">1. Bienvenida a Mi Blog con Emacs y Esteroides</a>
+<ul>
+<li><a href="#welcome-graphic">1.1. Creación del gráfico de bienvenida</a></li>
+<li><a href="#analysis">1.2. Análisis del gráfico</a></li>
+<li><a href="#image-config">1.3. Configuración para mostrar imágenes correctamente</a></li>
+<li><a href="#next-steps">1.4. Próximos pasos</a></li>
+</ul>
+</li>
+<li><a href="#technical-notes">2. Notas técnicas</a></li>
+<li><a href="#footer">3. Pie de página</a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-welcome" class="outline-2">
+<h2 id="welcome"><span class="section-number-2">1.</span> Bienvenida a Mi Blog con Emacs y Esteroides</h2>
+<div class="outline-text-2" id="text-welcome">
+<p>
+Bienvenidos a mi blog estático generado con Org Mode y publicado en GitHub Pages.
+Este es un ejemplo de cómo integrar gráficos en nuestros posts.
+</p>
+</div>
+<div id="outline-container-welcome-graphic" class="outline-3">
+<h3 id="welcome-graphic"><span class="section-number-3">1.1.</span> Creación del gráfico de bienvenida</h3>
+<div class="outline-text-3" id="text-welcome-graphic">
+<p>
+A continuación, crearemos un gráfico usando Org Babel con Gnuplot:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-gnuplot"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n general</span>
+<span style="color: #2f86d2;">set</span> terminal png size 800,500 enhanced font <span style="color: #a44185;">"Helvetica,14"</span>
+<span style="color: #2f86d2;">set</span> output <span style="color: #a44185;">"~/myblog/images/welcome-graph.png"</span>
+<span style="color: #2f86d2;">set</span> <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Bienvenida a Mi Blog con Emacs y Org Static"</span> font <span style="color: #a44185;">"Helvetica,18"</span>
+<span style="color: #2f86d2;">set</span> style fill solid 0.5
+<span style="color: #2f86d2;">set</span> style data histogram
+<span style="color: #2f86d2;">set</span> style histogram cluster gap 1
+<span style="color: #2f86d2;">set</span> boxwidth 0.9
+<span style="color: #2f86d2;">set</span> grid ytics
+<span style="color: #2f86d2;">set</span> xtics rotate by -45
+<span style="color: #2f86d2;">set</span> xlabel <span style="color: #a44185;">"Tecnolog&#237;as"</span> font <span style="color: #a44185;">"Helvetica,14"</span>
+<span style="color: #2f86d2;">set</span> ylabel <span style="color: #a44185;">"Nivel de Potencia"</span> font <span style="color: #a44185;">"Helvetica,14"</span>
+<span style="color: #2f86d2;">set</span> yrange [<span style="color: #2f86d2;">0:10</span>]
+<span style="color: #2f86d2;">set</span> palette <span style="color: #dc3eb7;">defined</span> (0 <span style="color: #a44185;">"skyblue"</span>, 1 <span style="color: #a44185;">"royalblue"</span>, 2 <span style="color: #a44185;">"dark-blue"</span>)
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Datos para el gr&#225;fico</span>
+$DATA &lt;&lt; EOD
+Tecnolog&#237;a Potencia Flexibilidad Productividad
+<span style="color: #a44185;">"Emacs"</span>     9.2     9.5          8.7
+<span style="color: #a44185;">"Org Mode"</span>  9.0     9.8          9.2
+<span style="color: #a44185;">"GitHub"</span>    8.5     8.0          8.8
+<span style="color: #a44185;">"Markdown"</span>  7.0     6.5          7.5
+<span style="color: #a44185;">"HTML"</span>      8.0     7.2          7.0
+EOD
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generaci&#243;n del gr&#225;fico</span>
+<span style="color: #219fd5; font-style: italic;">plot</span> $DATA <span style="color: #dc3eb7;">using</span> 2:xtic(1) <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Potencia"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#3498db"</span>, \
+     $DATA <span style="color: #dc3eb7;">using</span> 3 <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Flexibilidad"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#2980b9"</span>, \
+     $DATA <span style="color: #dc3eb7;">using</span> 4 <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Productividad"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#1f618d"</span>
+</pre>
+</div>
+
+
+<figure id="org1d77700">
+<img src="file:///home/mike/myblog/images/welcome-graph.png" alt="welcome-graph.png">
+
+</figure>
+
+<img src="/images/welcome-graph.png" alt="Gráfico de bienvenida al blog" width="800px" />
+</div>
+</div>
+<div id="outline-container-analysis" class="outline-3">
+<h3 id="analysis"><span class="section-number-3">1.2.</span> Análisis del gráfico</h3>
+<div class="outline-text-3" id="text-analysis">
+<p>
+El gráfico anterior muestra una comparativa entre diferentes tecnologías utilizadas para blogging, destacando tres dimensiones clave:
+</p>
+
+<ol class="org-ol">
+<li><b>Potencia</b>: Capacidad para realizar tareas complejas</li>
+<li><b>Flexibilidad</b>: Adaptabilidad a diferentes necesidades</li>
+<li><b>Productividad</b>: Eficiencia en el flujo de trabajo</li>
+</ol>
+
+<p>
+Como podemos observar, Emacs y Org Mode destacan en todas las dimensiones, lo que los convierte en herramientas ideales para la creación y gestión de blogs estáticos.
+</p>
+</div>
+</div>
+<div id="outline-container-image-config" class="outline-3">
+<h3 id="image-config"><span class="section-number-3">1.3.</span> Configuración para mostrar imágenes correctamente</h3>
+<div class="outline-text-3" id="text-image-config">
+<p>
+Para asegurar que las imágenes se muestran correctamente en nuestro blog:
+</p>
+
+<ol class="org-ol">
+<li>Las imágenes deben estar en el directorio <code>~/myblog/images/</code></li>
+<li>Al referenciarlas en el HTML generado, usamos la ruta <code>/images/nombre-imagen.png</code></li>
+<li>Nuestra configuración se encarga de copiarlas al directorio público durante la exportación</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Ejemplo de la configuraci&#243;n para im&#225;genes</span>
+(<span style="color: #a44185;">"blog-images"</span>
+ <span style="color: #dc3eb7;">:base-directory</span> <span style="color: #a44185;">"~/myblog/images/"</span>
+ <span style="color: #dc3eb7;">:base-extension</span> <span style="color: #a44185;">"png</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">jpg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">jpeg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">gif</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">svg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">webp"</span>
+ <span style="color: #dc3eb7;">:publishing-directory</span> <span style="color: #a44185;">"~/myblog/public/images/"</span>
+ <span style="color: #dc3eb7;">:publishing-function</span> org-publish-attachment
+ <span style="color: #dc3eb7;">:recursive</span> t)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-next-steps" class="outline-3">
+<h3 id="next-steps"><span class="section-number-3">1.4.</span> Próximos pasos</h3>
+<div class="outline-text-3" id="text-next-steps">
+<p>
+En futuros posts exploraremos:
+</p>
+
+<ul class="org-ul">
+<li>Creación de visualizaciones avanzadas con Org Babel</li>
+<li>Integración de gráficos interactivos con JavaScript</li>
+<li>Optimización de imágenes para rendimiento web</li>
+<li>Consejos para mejorar la experiencia visual del blog</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-technical-notes" class="outline-2">
+<h2 id="technical-notes"><span class="section-number-2">2.</span> Notas técnicas</h2>
+<div class="outline-text-2" id="text-technical-notes">
+<p>
+Para generar este gráfico he utilizado Gnuplot a través de Org Babel. Si quieres reproducirlo, necesitas:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #8195b0; font-style: italic;"># Requisitos:</span>
+<span style="color: #8195b0; font-style: italic;"># 1. Gnuplot instalado en tu sistema</span>
+<span style="color: #8195b0; font-style: italic;"># 2. Configuraci&#243;n de Org Babel para Gnuplot</span>
+
+(require 'ob-gnuplot)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((gnuplot . t)))
+</pre>
+</div>
+
+<p>
+Para publicar este post, simplemente guárdalo en tu directorio <code>~/myblog/posts/</code> con un nombre como <code>bienvenida-con-grafico.org</code> y ejecuta <code>org-static-blog-publish-to-github</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-footer" class="outline-2">
+<h2 id="footer"><span class="section-number-2">3.</span> Pie de página</h2>
+<div class="outline-text-2" id="text-footer">
+<div style="border-top: 1px solid #ddd; margin-top: 30px; padding-top: 10px; font-size: 0.9em; color: #777;">
+  <p>Este post fue creado con Emacs 28 y Org Mode. El gráfico fue generado con Gnuplot.</p>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bienvenida.html">bienvenida</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gráfico.html">gráfico</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-inicio.html">inicio</a> </div></div>
+<div id="postamble" class="status"><div id='postamble' class='status'>
+         <script src='/Blogging-con-Emacs-y-AI/pagefind/pagefind-ui.js'></script>
+         <script>
+           window.addEventListener('DOMContentLoaded', (event) => {
+             new PagefindUI({ element: '#search', showSubResults: true });
+           });
+         </script>
+       </div></div>
+</body>
+</html>
