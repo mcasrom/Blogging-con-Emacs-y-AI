@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Sun, 09 Mar 2025 11:23:52 +0100</lastBuildDate>
+<lastBuildDate>Sun, 09 Mar 2025 17:02:14 +0100</lastBuildDate>
 <item>
   <title><![CDATA[newpost]]></title>
   <description><![CDATA[
@@ -24,65 +24,6 @@
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-09-newpost.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-09-newpost.html</guid>
   <pubDate>Sun, 09 Mar 2025 11:21:00 +0100</pubDate>
-</item>
-<item>
-  <title><![CDATA[testagain]]></title>
-  <description><![CDATA[
-<nav id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#orga34266d">1. Test</a>
-<ul>
-<li><a href="#org86a2d8d">1.1. Test</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</nav>
-<div id="outline-container-orga34266d" class="outline-2">
-<h2 id="orga34266d"><span class="section-number-2">1.</span> Test</h2>
-<div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-org86a2d8d" class="outline-3">
-<h3 id="org86a2d8d"><span class="section-number-3">1.1.</span> Test</h3>
-</div>
-</div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-test.html">test</a> </div>]]></description>
-  <category><![CDATA[test]]></category>
-  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-09-testagain.html</link>
-  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-09-testagain.html</guid>
-  <pubDate>Sun, 09 Mar 2025 10:20:00 +0100</pubDate>
-</item>
-<item>
-  <title><![CDATA[testtesttets]]></title>
-  <description><![CDATA[
-<nav id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#org7842c4b">1. Test</a>
-<ul>
-<li><a href="#orgbeaf12e">1.1. Test</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</nav>
-<div id="outline-container-org7842c4b" class="outline-2">
-<h2 id="org7842c4b"><span class="section-number-2">1.</span> Test</h2>
-<div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-orgbeaf12e" class="outline-3">
-<h3 id="orgbeaf12e"><span class="section-number-3">1.1.</span> Test</h3>
-</div>
-</div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-test.html">test</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> </div>]]></description>
-  <category><![CDATA[test]]></category>
-  <category><![CDATA[emacs]]></category>
-  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-09-testtesttets.html</link>
-  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-09-testtesttets.html</guid>
-  <pubDate>Sun, 09 Mar 2025 10:12:00 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Bienvenida al Blog "Emacs con Esteroides"]]></title>
@@ -141,12 +82,2930 @@ A través de este espacio, espero proporcionar a la comunidad ideas, tips y truc
   <pubDate>Sun, 09 Mar 2025 08:28:00 +0100</pubDate>
 </item>
 <item>
-  <title><![CDATA[test]]></title>
+  <title><![CDATA[Bienvenida a Mi Blog - Grafico]]></title>
   <description><![CDATA[
-<div class="taglist"></div>]]></description>
-  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-09-test.html</link>
-  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-09-test.html</guid>
-  <pubDate>Sun, 09 Mar 2025 00:00:00 +0100</pubDate>
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#welcome">1. Bienvenida a Mi Blog con Emacs y Esteroides</a>
+<ul>
+<li><a href="#welcome-graphic">1.1. Creación del gráfico de bienvenida</a></li>
+<li><a href="#analysis">1.2. Análisis del gráfico</a></li>
+<li><a href="#image-config">1.3. Configuración para mostrar imágenes correctamente</a></li>
+<li><a href="#next-steps">1.4. Próximos pasos</a></li>
+</ul>
+</li>
+<li><a href="#technical-notes">2. Notas técnicas</a></li>
+<li><a href="#footer">3. Pie de página</a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-welcome" class="outline-2">
+<h2 id="welcome"><span class="section-number-2">1.</span> Bienvenida a Mi Blog con Emacs y Esteroides</h2>
+<div class="outline-text-2" id="text-welcome">
+<p>
+Bienvenidos a mi blog estático generado con Org Mode y publicado en GitHub Pages.
+Este es un ejemplo de cómo integrar gráficos en nuestros posts.
+</p>
+</div>
+<div id="outline-container-welcome-graphic" class="outline-3">
+<h3 id="welcome-graphic"><span class="section-number-3">1.1.</span> Creación del gráfico de bienvenida</h3>
+<div class="outline-text-3" id="text-welcome-graphic">
+<p>
+A continuación, crearemos un gráfico usando Org Babel con Gnuplot:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-gnuplot"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n general</span>
+<span style="color: #2f86d2;">set</span> terminal png size 800,500 enhanced font <span style="color: #a44185;">"Helvetica,14"</span>
+<span style="color: #2f86d2;">set</span> output <span style="color: #a44185;">"~/myblog/images/welcome-graph.png"</span>
+<span style="color: #2f86d2;">set</span> <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Bienvenida a Mi Blog con Emacs y Org Static"</span> font <span style="color: #a44185;">"Helvetica,18"</span>
+<span style="color: #2f86d2;">set</span> style fill solid 0.5
+<span style="color: #2f86d2;">set</span> style data histogram
+<span style="color: #2f86d2;">set</span> style histogram cluster gap 1
+<span style="color: #2f86d2;">set</span> boxwidth 0.9
+<span style="color: #2f86d2;">set</span> grid ytics
+<span style="color: #2f86d2;">set</span> xtics rotate by -45
+<span style="color: #2f86d2;">set</span> xlabel <span style="color: #a44185;">"Tecnolog&#237;as"</span> font <span style="color: #a44185;">"Helvetica,14"</span>
+<span style="color: #2f86d2;">set</span> ylabel <span style="color: #a44185;">"Nivel de Potencia"</span> font <span style="color: #a44185;">"Helvetica,14"</span>
+<span style="color: #2f86d2;">set</span> yrange [<span style="color: #2f86d2;">0:10</span>]
+<span style="color: #2f86d2;">set</span> palette <span style="color: #dc3eb7;">defined</span> (0 <span style="color: #a44185;">"skyblue"</span>, 1 <span style="color: #a44185;">"royalblue"</span>, 2 <span style="color: #a44185;">"dark-blue"</span>)
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Datos para el gr&#225;fico</span>
+$DATA &lt;&lt; EOD
+Tecnolog&#237;a Potencia Flexibilidad Productividad
+<span style="color: #a44185;">"Emacs"</span>     9.2     9.5          8.7
+<span style="color: #a44185;">"Org Mode"</span>  9.0     9.8          9.2
+<span style="color: #a44185;">"GitHub"</span>    8.5     8.0          8.8
+<span style="color: #a44185;">"Markdown"</span>  7.0     6.5          7.5
+<span style="color: #a44185;">"HTML"</span>      8.0     7.2          7.0
+EOD
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generaci&#243;n del gr&#225;fico</span>
+<span style="color: #219fd5; font-style: italic;">plot</span> $DATA <span style="color: #dc3eb7;">using</span> 2:xtic(1) <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Potencia"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#3498db"</span>, \
+     $DATA <span style="color: #dc3eb7;">using</span> 3 <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Flexibilidad"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#2980b9"</span>, \
+     $DATA <span style="color: #dc3eb7;">using</span> 4 <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Productividad"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#1f618d"</span>
+</pre>
+</div>
+
+
+<figure id="org460a11a">
+<img src="file:///home/mike/myblog/images/welcome-graph.png" alt="welcome-graph.png">
+
+</figure>
+
+<img src='/images/welcome-graph.png' alt='Welcome to my Blog' />
+
+
+<img src="/images/welcome-graph.png" alt="Gráfico de bienvenida al blog" width="800px" />
+</div>
+</div>
+<div id="outline-container-analysis" class="outline-3">
+<h3 id="analysis"><span class="section-number-3">1.2.</span> Análisis del gráfico</h3>
+<div class="outline-text-3" id="text-analysis">
+<p>
+El gráfico anterior muestra una comparativa entre diferentes tecnologías utilizadas para blogging, destacando tres dimensiones clave:
+</p>
+
+<ol class="org-ol">
+<li><b>Potencia</b>: Capacidad para realizar tareas complejas</li>
+<li><b>Flexibilidad</b>: Adaptabilidad a diferentes necesidades</li>
+<li><b>Productividad</b>: Eficiencia en el flujo de trabajo</li>
+</ol>
+
+<p>
+Como podemos observar, Emacs y Org Mode destacan en todas las dimensiones, lo que los convierte en herramientas ideales para la creación y gestión de blogs estáticos.
+</p>
+</div>
+</div>
+<div id="outline-container-image-config" class="outline-3">
+<h3 id="image-config"><span class="section-number-3">1.3.</span> Configuración para mostrar imágenes correctamente</h3>
+<div class="outline-text-3" id="text-image-config">
+<p>
+Para asegurar que las imágenes se muestran correctamente en nuestro blog:
+</p>
+
+<ol class="org-ol">
+<li>Las imágenes deben estar en el directorio <code>~/myblog/images/</code></li>
+<li>Al referenciarlas en el HTML generado, usamos la ruta <code>/images/nombre-imagen.png</code></li>
+<li>Nuestra configuración se encarga de copiarlas al directorio público durante la exportación</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Ejemplo de la configuraci&#243;n para im&#225;genes</span>
+(<span style="color: #a44185;">"blog-images"</span>
+ <span style="color: #dc3eb7;">:base-directory</span> <span style="color: #a44185;">"~/myblog/images/"</span>
+ <span style="color: #dc3eb7;">:base-extension</span> <span style="color: #a44185;">"png</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">jpg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">jpeg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">gif</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">svg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">webp"</span>
+ <span style="color: #dc3eb7;">:publishing-directory</span> <span style="color: #a44185;">"~/myblog/public/images/"</span>
+ <span style="color: #dc3eb7;">:publishing-function</span> org-publish-attachment
+ <span style="color: #dc3eb7;">:recursive</span> t)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-next-steps" class="outline-3">
+<h3 id="next-steps"><span class="section-number-3">1.4.</span> Próximos pasos</h3>
+<div class="outline-text-3" id="text-next-steps">
+<p>
+En futuros posts exploraremos:
+</p>
+
+<ul class="org-ul">
+<li>Creación de visualizaciones avanzadas con Org Babel</li>
+<li>Integración de gráficos interactivos con JavaScript</li>
+<li>Optimización de imágenes para rendimiento web</li>
+<li>Consejos para mejorar la experiencia visual del blog</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-technical-notes" class="outline-2">
+<h2 id="technical-notes"><span class="section-number-2">2.</span> Notas técnicas</h2>
+<div class="outline-text-2" id="text-technical-notes">
+<p>
+Para generar este gráfico he utilizado Gnuplot a través de Org Babel. Si quieres reproducirlo, necesitas:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #8195b0; font-style: italic;"># Requisitos:</span>
+<span style="color: #8195b0; font-style: italic;"># 1. Gnuplot instalado en tu sistema</span>
+<span style="color: #8195b0; font-style: italic;"># 2. Configuraci&#243;n de Org Babel para Gnuplot</span>
+
+(require 'ob-gnuplot)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((gnuplot . t)))
+</pre>
+</div>
+
+<p>
+Para publicar este post, simplemente guárdalo en tu directorio <code>~/myblog/posts/</code> con un nombre como <code>bienvenida-con-grafico.org</code> y ejecuta <code>org-static-blog-publish-to-github</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-footer" class="outline-2">
+<h2 id="footer"><span class="section-number-2">3.</span> Pie de página</h2>
+<div class="outline-text-2" id="text-footer">
+<div style="border-top: 1px solid #ddd; margin-top: 30px; padding-top: 10px; font-size: 0.9em; color: #777;">
+  <p>Este post fue creado con Emacs 28 y Org Mode. El gráfico fue generado con Gnuplot.</p>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bienvenida.html">bienvenida</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gráfico.html">gráfico</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-inicio.html">inicio</a> </div>]]></description>
+  <category><![CDATA[bienvenida]]></category>
+  <category><![CDATA[gráfico]]></category>
+  <category><![CDATA[inicio]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-08-bienvenida-a-mi-blog---grafico.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-08-bienvenida-a-mi-blog---grafico.html</guid>
+  <pubDate>Sat, 08 Mar 2025 15:29:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Cómo Generar un Prompt en IA: Guía Detallada, Ventajas e Inconvenientes]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org36d8c8a">1. Introducción</a></li>
+<li><a href="#org70c440c">2. ¿Qué es un Prompt en IA?</a></li>
+<li><a href="#orgb1ef039">3. ¿Cómo Generar un Prompt Efectivo?</a>
+<ul>
+<li><a href="#org3881f82">3.1. 1. Define el Objetivo</a></li>
+<li><a href="#org3a7b361">3.2. 2. Sé Específico</a></li>
+<li><a href="#orged056db">3.3. 3. Proporciona Contexto</a></li>
+<li><a href="#orgbaabb55">3.4. 4. Usa un Lenguaje Claro y Directo</a></li>
+<li><a href="#org40f96ef">3.5. 5. Itera y Ajusta</a></li>
+</ul>
+</li>
+<li><a href="#orgcfaa051">4. Ventajas de Usar Prompts en IA</a></li>
+<li><a href="#org9b8c0c9">5. Inconvenientes y Desafíos</a></li>
+<li><a href="#org67c50c9">6. Ejemplos Prácticos de Prompts</a>
+<ul>
+<li><a href="#org65f69bd">6.1. Ejemplo 1: Generación de Contenido</a></li>
+<li><a href="#org7670033">6.2. Ejemplo 2: Análisis de Datos</a></li>
+<li><a href="#org110ab62">6.3. Ejemplo 3: Creatividad</a></li>
+</ul>
+</li>
+<li><a href="#orgc11e6ab">7. Consejos Avanzados para Mejorar tus Prompts</a></li>
+<li><a href="#org3730dd8">8. Herramientas Populares para Generar Prompts</a></li>
+<li><a href="#org6a55da3">9. Conclusión</a></li>
+<li><a href="#org7dd4681">10. Gráficos Sugeridos</a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-org36d8c8a" class="outline-2">
+<h2 id="org36d8c8a"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+La inteligencia artificial (IA) ha revolucionado la forma en que interactuamos con la tecnología. Desde chatbots hasta herramientas de generación de contenido, la IA se ha convertido en una aliada indispensable para profesionales, creativos y entusiastas de la tecnología. Sin embargo, para aprovechar al máximo estas herramientas, es fundamental entender cómo <b><b>generar un prompt efectivo</b></b>. En este artículo, exploraremos en detalle qué es un prompt, cómo crearlo, sus ventajas, inconvenientes y ejemplos prácticos para que puedas dominar esta habilidad.
+</p>
+</div>
+</div>
+<div id="outline-container-org70c440c" class="outline-2">
+<h2 id="org70c440c"><span class="section-number-2">2.</span> ¿Qué es un Prompt en IA?</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Un <b><b>prompt</b></b> es una instrucción, pregunta o conjunto de indicaciones que se le proporciona a un modelo de inteligencia artificial para que genere una respuesta o realice una tarea específica. Es la forma en que nos comunicamos con la IA y le decimos qué queremos que haga.
+</p>
+
+<p>
+Por ejemplo, si le pides a ChatGPT que "escriba un poema sobre el océano", esa frase es el prompt. La calidad y claridad del prompt influyen directamente en la calidad de la respuesta generada por la IA.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb1ef039" class="outline-2">
+<h2 id="orgb1ef039"><span class="section-number-2">3.</span> ¿Cómo Generar un Prompt Efectivo?</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Crear un prompt efectivo requiere claridad, precisión y contexto. A continuación, te explicamos los pasos clave para generar un prompt que obtenga los mejores resultados:
+</p>
+</div>
+<div id="outline-container-org3881f82" class="outline-3">
+<h3 id="org3881f82"><span class="section-number-3">3.1.</span> 1. Define el Objetivo</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>Antes de escribir el prompt, pregúntate: ¿Qué quiero lograr con la IA? ¿Necesito información, un texto creativo, un análisis de datos o una solución a un problema?</li>
+<li>Ejemplo: Si quieres que la IA te ayude a redactar un correo electrónico, tu objetivo es claro: generar un mensaje profesional y efectivo.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3a7b361" class="outline-3">
+<h3 id="org3a7b361"><span class="section-number-3">3.2.</span> 2. Sé Específico</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Cuanto más específico seas, mejor será la respuesta. Incluye detalles como el tono, el estilo, la longitud o el formato que deseas.</li>
+<li>Ejemplo: En lugar de decir "escribe un correo", podrías decir: "Escribe un correo electrónico formal de 150 palabras para solicitar una reunión con un cliente potencial".</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orged056db" class="outline-3">
+<h3 id="orged056db"><span class="section-number-3">3.3.</span> 3. Proporciona Contexto</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>La IA funciona mejor cuando tiene suficiente información. Si el prompt requiere conocimientos específicos, inclúyelos.</li>
+<li>Ejemplo: Si pides un análisis de mercado, proporciona datos como el sector, la ubicación geográfica y el público objetivo.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbaabb55" class="outline-3">
+<h3 id="orgbaabb55"><span class="section-number-3">3.4.</span> 4. Usa un Lenguaje Claro y Directo</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li>Evita ambigüedades. Usa un lenguaje sencillo y evita frases confusas.</li>
+<li>Ejemplo: En lugar de "haz algo sobre marketing", di: "Genera una estrategia de marketing digital para una tienda de ropa sostenible".</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org40f96ef" class="outline-3">
+<h3 id="org40f96ef"><span class="section-number-3">3.5.</span> 5. Itera y Ajusta</h3>
+<div class="outline-text-3" id="text-3-5">
+<ul class="org-ul">
+<li>Si la respuesta no es lo que esperabas, ajusta el prompt. Prueba diferentes enfoques hasta obtener el resultado deseado.</li>
+<li>Ejemplo: Si la IA genera un texto demasiado formal, puedes pedirle: "Reescribe el texto con un tono más casual y amigable".</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcfaa051" class="outline-2">
+<h2 id="orgcfaa051"><span class="section-number-2">4.</span> Ventajas de Usar Prompts en IA</h2>
+<div class="outline-text-2" id="text-4">
+<ol class="org-ol">
+<li><b><b>Ahorro de Tiempo</b></b>: Los prompts permiten automatizar tareas repetitivas, como redactar textos, generar ideas o analizar datos.</li>
+<li><b><b>Creatividad ilimitada</b></b>: La IA puede generar ideas y soluciones innovadoras que quizás no habías considerado.</li>
+<li><b><b>Personalización</b></b>: Puedes ajustar los prompts para obtener resultados específicos según tus necesidades.</li>
+<li><b><b>Accesibilidad</b></b>: No necesitas ser un experto en programación para usar herramientas de IA basadas en prompts.</li>
+<li><b><b>Escalabilidad</b></b>: Puedes generar grandes volúmenes de contenido o análisis en poco tiempo.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org9b8c0c9" class="outline-2">
+<h2 id="org9b8c0c9"><span class="section-number-2">5.</span> Inconvenientes y Desafíos</h2>
+<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li><b><b>Dependencia de la Calidad del Prompt</b></b>: Si el prompt no está bien formulado, la respuesta puede ser irrelevante o de baja calidad.</li>
+<li><b><b>Sesgos en la IA</b></b>: Los modelos de IA pueden reflejar sesgos presentes en los datos con los que fueron entrenados.</li>
+<li><b><b>Falta de Originalidad</b></b>: A veces, la IA genera contenido que puede parecer genérico o poco original.</li>
+<li><b><b>Limitaciones Técnicas</b></b>: La IA no siempre entiende prompts complejos o ambiguos.</li>
+<li><b><b>Riesgo de Sobreconfianza</b></b>: Es importante verificar y editar las respuestas generadas por la IA, ya que pueden contener errores.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org67c50c9" class="outline-2">
+<h2 id="org67c50c9"><span class="section-number-2">6.</span> Ejemplos Prácticos de Prompts</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas generadas por IA:
+</p>
+</div>
+<div id="outline-container-org65f69bd" class="outline-3">
+<h3 id="org65f69bd"><span class="section-number-3">6.1.</span> Ejemplo 1: Generación de Contenido</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li><b><b>Prompt</b></b>: "Escribe un blog de 500 palabras sobre los beneficios del ejercicio físico para la salud mental, con un tono motivacional y dirigido a jóvenes adultos."</li>
+<li><b><b>Respuesta de la IA</b></b>: La IA generará un texto estructurado, con introducción, desarrollo y conclusión, destacando cómo el ejercicio reduce el estrés y mejora el estado de ánimo.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7670033" class="outline-3">
+<h3 id="org7670033"><span class="section-number-3">6.2.</span> Ejemplo 2: Análisis de Datos</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li><b><b>Prompt</b></b>: "Analiza los siguientes datos de ventas mensuales y sugiere estrategias para aumentar las ventas en el próximo trimestre: [datos]."</li>
+<li><b><b>Respuesta de la IA</b></b>: La IA identificará patrones, como meses con bajas ventas, y propondrá acciones como promociones o campañas publicitarias.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org110ab62" class="outline-3">
+<h3 id="org110ab62"><span class="section-number-3">6.3.</span> Ejemplo 3: Creatividad</h3>
+<div class="outline-text-3" id="text-6-3">
+<ul class="org-ul">
+<li><b><b>Prompt</b></b>: "Inventa una historia corta de ciencia ficción sobre un viajero del tiempo que intenta salvar el futuro."</li>
+<li><b><b>Respuesta de la IA</b></b>: La IA creará una narrativa con personajes, conflicto y resolución, ambientada en un futuro distópico.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc11e6ab" class="outline-2">
+<h2 id="orgc11e6ab"><span class="section-number-2">7.</span> Consejos Avanzados para Mejorar tus Prompts</h2>
+<div class="outline-text-2" id="text-7">
+<ol class="org-ol">
+<li><b><b>Usa Ejemplos</b></b>: Proporciona ejemplos de lo que buscas. Por ejemplo: "Escribe un poema como este: [ejemplo]."</li>
+<li><b><b>Divide Tareas Complejas</b></b>: Si el prompt es muy amplio, divídelo en partes. Por ejemplo: "Primero, describe el problema. Luego, sugiere soluciones."</li>
+<li><b><b>Experimenta con Diferentes Modelos</b></b>: Algunos modelos de IA son mejores para tareas específicas. Prueba varias herramientas para encontrar la que mejor se adapte a tus necesidades.</li>
+<li><b><b>Aprende de la Comunidad</b></b>: Explora cómo otros usuarios formulan sus prompts en foros o redes sociales.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org3730dd8" class="outline-2">
+<h2 id="org3730dd8"><span class="section-number-2">8.</span> Herramientas Populares para Generar Prompts</h2>
+<div class="outline-text-2" id="text-8">
+<ol class="org-ol">
+<li><b><b>ChatGPT</b></b>: Ideal para textos, ideas y conversaciones.</li>
+<li><b><b>MidJourney</b></b>: Perfecto para generar imágenes a partir de prompts visuales.</li>
+<li><b><b>Google Bard</b></b>: Útil para búsquedas y análisis de información.</li>
+<li><b><b>DALL-E</b></b>: Especializado en creación de imágenes a partir de descripciones textuales.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org6a55da3" class="outline-2">
+<h2 id="org6a55da3"><span class="section-number-2">9.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo las herramientas de IA. Con un enfoque claro, específico y contextualizado, puedes obtener respuestas de alta calidad que te ayuden a ahorrar tiempo, potenciar tu creatividad y resolver problemas complejos. Sin embargo, es importante recordar que la IA es una herramienta, no un reemplazo para el pensamiento crítico y la creatividad humana.
+</p>
+
+<p>
+¿Listo para empezar? ¡Experimenta con diferentes prompts y descubre todo lo que la IA puede hacer por ti!
+</p>
+</div>
+</div>
+<div id="outline-container-org7dd4681" class="outline-2">
+<h2 id="org7dd4681"><span class="section-number-2">10.</span> Gráficos Sugeridos</h2>
+<div class="outline-text-2" id="text-10">
+<ol class="org-ol">
+<li>Diagrama de flujo: "Pasos para crear un prompt efectivo".</li>
+</ol>
+
+<figure id="orgaaf0cc1">
+<img src="file:///home/mike/myblog/public/images/diagrama_flujo_prompt.png" alt="diagrama_flujo_prompt.png">
+
+</figure>
+
+<p width="600">
+[[
+</p>
+
+
+<ol class="org-ol">
+<li>Comparación visual: "Prompt difuso vs. Prompt específico".</li>
+</ol>
+
+
+<figure id="orgbd2060c">
+<img src="file:///home/mike/myblog/public/images/comparacion_prompt_ditaa.png" alt="comparacion_prompt_ditaa.png">
+
+</figure>
+
+
+<ol class="org-ol">
+<li>Ejemplos de prompts y respuestas generadas por IA en formato de tabla.</li>
+</ol>
+<table>
+<caption class="t-above"><span class="table-number">Table 1:</span> Ejemplos de Prompts y Respuestas Generadas por IA</caption>
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Tipo de Prompt</th>
+<th scope="col" class="org-left">Ejemplo de Prompt</th>
+<th scope="col" class="org-left">Respuesta Generada por IA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Genérico</td>
+<td class="org-left">"Escribe algo sobre el clima."</td>
+<td class="org-left">"El clima es un tema fascinante. Hoy está soleado y cálido."</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Específico</td>
+<td class="org-left">"Escribe un poema de 4 líneas</td>
+<td class="org-left">"Bajo el cielo azul,</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">sobre el mar en verano."</td>
+<td class="org-left">el mar susurra su canción,</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">las olas besan la arena,</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">y el verano es pura emoción."</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Analítico</td>
+<td class="org-left">"Analiza las ventas del último</td>
+<td class="org-left">"Las ventas del último trimestre muestran un crecimiento del</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">trimestre y sugiere mejoras."</td>
+<td class="org-left">10%. Se recomienda aumentar la inversión en publicidad y</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">mejorar la experiencia del cliente."</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Creativo</td>
+<td class="org-left">"Inventa una historia corta</td>
+<td class="org-left">"Érase una vez un robot llamado Leo que quería aprender a</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">sobre un robot que quiere</td>
+<td class="org-left">bailar. Aunque al principio tropezaba, con práctica y</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">aprender a bailar."</td>
+<td class="org-left">dedicación, logró convertirse en el mejor bailarín de la</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">galaxia."</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>
+¡Esperamos que esta guía te haya sido útil! Si tienes preguntas o quieres compartir tus experiencias con prompts, déjanos un comentario. 😊
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-prompt.html">prompt</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-inteligencia.html">inteligencia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-artificial.html">artificial</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-best.html">best</a> </div>]]></description>
+  <category><![CDATA[prompt]]></category>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[ai]]></category>
+  <category><![CDATA[inteligencia]]></category>
+  <category><![CDATA[artificial]]></category>
+  <category><![CDATA[best]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-08-c%C3%B3mo-generar-un-prompt-en-ia:-gu%C3%ADa-detallada,-ventajas-e-inconvenientes.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-08-c%C3%B3mo-generar-un-prompt-en-ia:-gu%C3%ADa-detallada,-ventajas-e-inconvenientes.html</guid>
+  <pubDate>Sat, 08 Mar 2025 08:19:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Herramientas de IA Generativa Mejor Valoradas en 2025]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orga2444b2">1. Jasper AI</a></li>
+<li><a href="#org46c88ee">2. ChatSonic</a></li>
+<li><a href="#org14e4a49">3. Copy.ai</a></li>
+<li><a href="#org88466cb">4. Grammarly</a></li>
+<li><a href="#org5576ccc">5. QuillBot</a></li>
+<li><a href="#org287ba63">6. Claude</a></li>
+<li><a href="#orgaf6f08b">7. Bing Chat</a></li>
+<li><a href="#orge2537ed">8. Google Bard</a></li>
+<li><a href="#org080229b">9. Perplexity AI</a></li>
+<li><a href="#orgb7223b0">10. LuzIA</a></li>
+<li><a href="#org40d2de1">11. Poe</a></li>
+<li><a href="#orgefb654c">12. Neuroflash</a></li>
+<li><a href="#org016ea59">13. AI Mojo</a></li>
+<li><a href="#org9ee6181">14. Copyson</a></li>
+<li><a href="#orgc7f887e">15. Expertos Software</a></li>
+<li><a href="#orge82c1e4">16. Guru</a></li>
+<li><a href="#org4669e1a">17. Redes Zone</a></li>
+<li><a href="#org9f94fcd">18. Forte Innovation</a></li>
+<li><a href="#orgb71b807">19. DataCamp</a></li>
+<li><a href="#org7edc511">20. Xataka</a></li>
+<li><a href="#org01028dc">21. La Vanguardia</a></li>
+<li><a href="#org8302062">22. Cinco Días</a></li>
+<li><a href="#org7b78920">23. El País</a></li>
+<li><a href="#org891408e">24. Cadena SER</a></li>
+</ul>
+</div>
+</nav>
+<p>
+La inteligencia artificial generativa ha revolucionado la manera en que creamos contenido, desde textos hasta imágenes y código. En este artículo, exploramos las herramientas más valoradas por los usuarios en 2025, destacando sus características principales y usos recomendados.
+</p>
+
+<p>
+Las Mejores Herramientas de IA Generativa en 2025
+</p>
+<div id="outline-container-orga2444b2" class="outline-2">
+<h2 id="orga2444b2"><span class="section-number-2">1.</span> Jasper AI</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Jasper AI es una de las plataformas de generación de contenido más avanzadas, utilizada principalmente para la redacción de textos publicitarios, blogs y contenido SEO. Su capacidad de personalización y adaptación a diferentes estilos lo hace una herramienta imprescindible para escritores y marketers.
+</p>
+</div>
+</div>
+<div id="outline-container-org46c88ee" class="outline-2">
+<h2 id="org46c88ee"><span class="section-number-2">2.</span> ChatSonic</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+ChatSonic es una IA conversacional avanzada, similar a ChatGPT, pero con acceso a información en tiempo real. Es ideal para responder preguntas complejas y generar contenido actualizado.
+</p>
+</div>
+</div>
+<div id="outline-container-org14e4a49" class="outline-2">
+<h2 id="org14e4a49"><span class="section-number-2">3.</span> Copy.ai</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Especializada en la creación de contenido para marketing y redes sociales, Copy.ai permite a los usuarios generar textos atractivos con un enfoque persuasivo. Es ampliamente utilizada por emprendedores y agencias de publicidad.
+</p>
+</div>
+</div>
+<div id="outline-container-org88466cb" class="outline-2">
+<h2 id="org88466cb"><span class="section-number-2">4.</span> Grammarly</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Aunque Grammarly no es una IA generativa en el sentido tradicional, es una de las herramientas más valoradas para mejorar la gramática, ortografía y estilo en textos escritos. Su IA avanzada ofrece sugerencias precisas y adaptadas al contexto.
+</p>
+</div>
+</div>
+<div id="outline-container-org5576ccc" class="outline-2">
+<h2 id="org5576ccc"><span class="section-number-2">5.</span> QuillBot</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+QuillBot se ha convertido en una de las herramientas de parafraseo más populares, permitiendo a los usuarios reformular textos de manera eficiente. Es ideal para escritores, estudiantes y profesionales que buscan mejorar la claridad de sus escritos.
+</p>
+</div>
+</div>
+<div id="outline-container-org287ba63" class="outline-2">
+<h2 id="org287ba63"><span class="section-number-2">6.</span> Claude</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Claude es un chatbot de IA desarrollado para ofrecer respuestas más naturales y humanas. Se distingue por su enfoque en la coherencia y la generación de diálogos más fluidos.
+</p>
+</div>
+</div>
+<div id="outline-container-orgaf6f08b" class="outline-2">
+<h2 id="orgaf6f08b"><span class="section-number-2">7.</span> Bing Chat</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Integrado en Microsoft Edge, Bing Chat combina IA conversacional con acceso en tiempo real a la web. Es una excelente opción para buscar información y obtener respuestas rápidas.
+</p>
+</div>
+</div>
+<div id="outline-container-orge2537ed" class="outline-2">
+<h2 id="orge2537ed"><span class="section-number-2">8.</span> Google Bard</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Google Bard es la apuesta de Google en el mundo de la IA conversacional. Su fortaleza radica en la integración con el ecosistema de Google, permitiendo respuestas contextualizadas y actualizadas.
+</p>
+</div>
+</div>
+<div id="outline-container-org080229b" class="outline-2">
+<h2 id="org080229b"><span class="section-number-2">9.</span> Perplexity AI</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Perplexity AI se especializa en proporcionar respuestas concisas y precisas. Es muy valorado por investigadores y usuarios que necesitan información fiable de manera inmediata.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb7223b0" class="outline-2">
+<h2 id="orgb7223b0"><span class="section-number-2">10.</span> LuzIA</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+LuzIA es una asistente de IA diseñada para la productividad y la creación de contenido. Su versatilidad la convierte en una opción interesante para profesionales y estudiantes.
+</p>
+</div>
+</div>
+<div id="outline-container-org40d2de1" class="outline-2">
+<h2 id="org40d2de1"><span class="section-number-2">11.</span> Poe</h2>
+<div class="outline-text-2" id="text-11">
+<p>
+Poe es una plataforma que permite acceder a múltiples modelos de IA en un solo lugar. Es ideal para usuarios que buscan comparar distintos enfoques de generación de texto.
+</p>
+</div>
+</div>
+<div id="outline-container-orgefb654c" class="outline-2">
+<h2 id="orgefb654c"><span class="section-number-2">12.</span> Neuroflash</h2>
+<div class="outline-text-2" id="text-12">
+<p>
+Neuroflash destaca por ofrecer más de 90 plantillas para la creación de contenido. Su enfoque está dirigido a la eficiencia en la generación de textos publicitarios y descripciones de productos.
+</p>
+</div>
+</div>
+<div id="outline-container-org016ea59" class="outline-2">
+<h2 id="org016ea59"><span class="section-number-2">13.</span> AI Mojo</h2>
+<div class="outline-text-2" id="text-13">
+<p>
+AI Mojo ofrece herramientas de IA para diferentes necesidades, desde generación de contenido hasta automatización de tareas.
+</p>
+</div>
+</div>
+<div id="outline-container-org9ee6181" class="outline-2">
+<h2 id="org9ee6181"><span class="section-number-2">14.</span> Copyson</h2>
+<div class="outline-text-2" id="text-14">
+<p>
+Similar a Copy.ai, Copyson es una IA especializada en generación de contenido para marketing y redes sociales.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc7f887e" class="outline-2">
+<h2 id="orgc7f887e"><span class="section-number-2">15.</span> Expertos Software</h2>
+<div class="outline-text-2" id="text-15">
+<p>
+Plataforma que centraliza diversas herramientas de IA para la creación de contenido y productividad.
+</p>
+</div>
+</div>
+<div id="outline-container-orge82c1e4" class="outline-2">
+<h2 id="orge82c1e4"><span class="section-number-2">16.</span> Guru</h2>
+<div class="outline-text-2" id="text-16">
+<p>
+Herramienta de IA enfocada en mejorar la productividad y la generación de contenido especializado.
+</p>
+</div>
+</div>
+<div id="outline-container-org4669e1a" class="outline-2">
+<h2 id="org4669e1a"><span class="section-number-2">17.</span> Redes Zone</h2>
+<div class="outline-text-2" id="text-17">
+<p>
+Plataforma de IA que ofrece diversas soluciones en automatización y análisis de datos.
+</p>
+</div>
+</div>
+<div id="outline-container-org9f94fcd" class="outline-2">
+<h2 id="org9f94fcd"><span class="section-number-2">18.</span> Forte Innovation</h2>
+<div class="outline-text-2" id="text-18">
+<p>
+Especializada en soluciones de IA para empresas, Forte Innovation ayuda a optimizar flujos de trabajo y estrategias digitales.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb71b807" class="outline-2">
+<h2 id="orgb71b807"><span class="section-number-2">19.</span> DataCamp</h2>
+<div class="outline-text-2" id="text-19">
+<p>
+Aunque es conocida por sus cursos de ciencia de datos, DataCamp también ha integrado herramientas de IA para la enseñanza y automatización del aprendizaje.
+</p>
+</div>
+</div>
+<div id="outline-container-org7edc511" class="outline-2">
+<h2 id="org7edc511"><span class="section-number-2">20.</span> Xataka</h2>
+<div class="outline-text-2" id="text-20">
+<p>
+Un portal de tecnología que ha comenzado a integrar IA en la generación de contenido y análisis de tendencias.
+</p>
+</div>
+</div>
+<div id="outline-container-org01028dc" class="outline-2">
+<h2 id="org01028dc"><span class="section-number-2">21.</span> La Vanguardia</h2>
+<div class="outline-text-2" id="text-21">
+<p>
+Diario digital que incorpora IA en sus procesos de redacción y generación de noticias.
+</p>
+</div>
+</div>
+<div id="outline-container-org8302062" class="outline-2">
+<h2 id="org8302062"><span class="section-number-2">22.</span> Cinco Días</h2>
+<div class="outline-text-2" id="text-22">
+<p>
+Plataforma informativa que utiliza IA para mejorar la personalización de su contenido.
+</p>
+</div>
+</div>
+<div id="outline-container-org7b78920" class="outline-2">
+<h2 id="org7b78920"><span class="section-number-2">23.</span> El País</h2>
+<div class="outline-text-2" id="text-23">
+<p>
+Medio de comunicación que ha implementado herramientas de IA para optimizar la distribución y redacción de noticias.
+</p>
+</div>
+</div>
+<div id="outline-container-org891408e" class="outline-2">
+<h2 id="org891408e"><span class="section-number-2">24.</span> Cadena SER</h2>
+<div class="outline-text-2" id="text-24">
+<p>
+Cadena de radio que ha integrado IA en la generación de contenido y automatización de noticias.
+</p>
+
+<p>
+En este ranking, hemos destacado las herramientas más valoradas por su funcionalidad y utilidad en la generación de contenido mediante IA. ¿Utilizas alguna de estas herramientas? Comparte tu experiencia en los comentarios.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-herramientas.html">herramientas</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-generativa.html">generativa</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-inteligencia.html">inteligencia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-artificial.html">artificial</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ordenado.html">ordenado</a> </div>]]></description>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[herramientas]]></category>
+  <category><![CDATA[generativa]]></category>
+  <category><![CDATA[inteligencia]]></category>
+  <category><![CDATA[artificial]]></category>
+  <category><![CDATA[ordenado]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-07-herramientas-de-ia-generativa-mejor-valoradas-en-2025.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-07-herramientas-de-ia-generativa-mejor-valoradas-en-2025.html</guid>
+  <pubDate>Fri, 07 Mar 2025 22:58:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Gestión del Tiempo: Técnicas para Ser Más Eficiente]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgaa45090">1. Método Pomodoro</a></li>
+<li><a href="#orge9c052c">2. Matriz de Eisenhower</a></li>
+<li><a href="#org36d8a98">3. Técnica Time Blocking</a></li>
+<li><a href="#org96bbd5c">4. Regla de los Dos Minutos</a></li>
+<li><a href="#org85d206f">5. Batching o Agrupación de Tareas</a></li>
+</ul>
+</div>
+</nav>
+<p>
+Introducción
+La gestión del tiempo es una habilidad esencial para mejorar la productividad y reducir el estrés. En este post, exploraremos técnicas efectivas para optimizar el uso del tiempo, priorizar tareas y mantener el enfoque en objetivos clave.
+</p>
+
+<p>
+Principios Fundamentales de la Gestión del Tiempo
+</p>
+
+<p>
+Planificación: Establecer metas claras y estructurar el día con antelación.
+</p>
+
+<p>
+Prioridad: Identificar las tareas más importantes y urgentes.
+</p>
+
+<p>
+Disciplina: Evitar distracciones y mantener la concentración en lo esencial.
+</p>
+
+<p>
+Flexibilidad: Adaptarse a cambios imprevistos sin perder eficiencia.
+</p>
+
+<p>
+Delegación: Transferir tareas secundarias para optimizar esfuerzos.
+</p>
+
+<p>
+Técnicas Efectivas para la Gestión del Tiempo
+</p>
+<div id="outline-container-orgaa45090" class="outline-2">
+<h2 id="orgaa45090"><span class="section-number-2">1.</span> Método Pomodoro</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Dividir el trabajo en sesiones de 25 minutos (Pomodoros) con descansos de 5 minutos.
+</p>
+
+<p>
+Después de cuatro Pomodoros, tomar un descanso más largo (15-30 minutos).
+</p>
+
+<p>
+Ideal para mejorar la concentración y evitar la fatiga mental.
+</p>
+</div>
+</div>
+<div id="outline-container-orge9c052c" class="outline-2">
+<h2 id="orge9c052c"><span class="section-number-2">2.</span> Matriz de Eisenhower</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Prioriza tareas en función de su urgencia e importancia.
+</p>
+
+<p>
+Se divide en cuatro cuadrantes:
+</p>
+
+<p>
+Importante y urgente → Hacer de inmediato.
+</p>
+
+<p>
+Importante pero no urgente → Planificar.
+</p>
+
+<p>
+Urgente pero no importante → Delegar.
+</p>
+
+<p>
+Ni urgente ni importante → Eliminar.
+</p>
+
+<p>
+Ayuda a evitar la procrastinación y la sobrecarga de trabajo.
+</p>
+
+
+<figure id="orgc948bc4">
+<img src="matriz-eisenhower.png" alt="matriz-eisenhower.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org36d8a98" class="outline-2">
+<h2 id="org36d8a98"><span class="section-number-2">3.</span> Técnica Time Blocking</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Asignar bloques de tiempo específicos a cada tarea.
+</p>
+
+<p>
+Evita interrupciones y mejora la productividad enfocada.
+</p>
+
+<p>
+Compatible con herramientas como Google Calendar o Emacs Org Mode.
+</p>
+</div>
+</div>
+<div id="outline-container-org96bbd5c" class="outline-2">
+<h2 id="org96bbd5c"><span class="section-number-2">4.</span> Regla de los Dos Minutos</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Si una tarea toma menos de dos minutos, hacerla de inmediato.
+</p>
+
+<p>
+Reduce acumulación de pequeñas tareas y mejora el flujo de trabajo.
+</p>
+</div>
+</div>
+<div id="outline-container-org85d206f" class="outline-2">
+<h2 id="org85d206f"><span class="section-number-2">5.</span> Batching o Agrupación de Tareas</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Agrupar tareas similares para reducir cambios de contexto.
+</p>
+
+<p>
+Ejemplo: Responder correos en un bloque de tiempo en lugar de dispersarlos durante el día.
+</p>
+
+<p>
+Herramientas y Recursos para la Gestión del Tiempo
+</p>
+
+<p>
+Emacs Org Mode: Para estructurar y gestionar tareas eficientemente.
+</p>
+
+<p>
+Notion o Trello: Para planificación visual de proyectos.
+</p>
+
+<p>
+Google Calendar: Para programar reuniones y recordatorios.
+</p>
+
+<p>
+Focus Booster: Aplicación basada en la Técnica Pomodoro.
+</p>
+
+<p>
+Conclusión
+Mejorar la gestión del tiempo requiere disciplina y práctica. Aplicando estas técnicas, se pueden alcanzar mayores niveles de productividad y equilibrio entre el trabajo y la vida personal. ¡Empieza hoy mismo a optimizar tu tiempo!
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tiempo.html">tiempo</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gestion.html">gestion</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tecnicas.html">tecnicas</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-eficiente.html">eficiente</a> </div>]]></description>
+  <category><![CDATA[tiempo]]></category>
+  <category><![CDATA[gestion]]></category>
+  <category><![CDATA[tecnicas]]></category>
+  <category><![CDATA[eficiente]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-07-gesti%C3%B3n-del-tiempo:-t%C3%A9cnicas-para-ser-m%C3%A1s-eficiente.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-07-gesti%C3%B3n-del-tiempo:-t%C3%A9cnicas-para-ser-m%C3%A1s-eficiente.html</guid>
+  <pubDate>Fri, 07 Mar 2025 19:00:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[La Ley de Parkinson: Cómo el Trabajo se Expande para Llenar el Tiempo Disponible]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org3216d58">1. Introducción</a></li>
+<li><a href="#org5bad2c9">2. ¿Qué es la Ley de Parkinson?</a></li>
+<li><a href="#orgbdfc73e">3. Ejemplos Prácticos de la Ley de Parkinson</a></li>
+<li><a href="#org7abcd79">4. Gráfico: Expansión del Trabajo vs. Tiempo Disponible</a></li>
+<li><a href="#org15ae5b5">5. Implicaciones de la Ley de Parkinson</a></li>
+<li><a href="#org6ce0e26">6. Cómo Usar la Ley de Parkinson a Tu Favor</a></li>
+<li><a href="#org7d8e051">7. Críticas y Limitaciones de la Ley de Parkinson</a></li>
+<li><a href="#org569970e">8. Bibliografía</a></li>
+<li><a href="#org612b6ab">9. Conclusión</a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-org3216d58" class="outline-2">
+<h2 id="org3216d58"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+La <b><b>Ley de Parkinson</b></b> es un principio que afirma que "el trabajo se expande hasta llenar el tiempo disponible para su realización". Este concepto, introducido por el historiador británico Cyril Northcote Parkinson en un ensayo humorístico en 1955, ha demostrado ser una observación profundamente cierta en la gestión del tiempo y la productividad.
+</p>
+
+<p>
+En este post, exploraremos en detalle la Ley de Parkinson, sus implicaciones, ejemplos prácticos y cómo podemos usarla a nuestro favor para mejorar nuestra eficiencia.
+</p>
+</div>
+</div>
+<div id="outline-container-org5bad2c9" class="outline-2">
+<h2 id="org5bad2c9"><span class="section-number-2">2.</span> ¿Qué es la Ley de Parkinson?</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Cyril Northcote Parkinson formuló esta ley basándose en sus observaciones sobre la burocracia gubernamental. En su ensayo, publicado en <b>The Economist</b> y posteriormente en su libro <b>Parkinson's Law: The Pursuit of Progress</b> (1958), Parkinson notó que los funcionarios tendían a crear trabajo innecesario para justificar su existencia, independientemente de la carga real de trabajo.
+</p>
+
+<p>
+La ley se resume en la siguiente frase:
+</p>
+<blockquote>
+<p>
+"El trabajo se expande hasta llenar el tiempo disponible para su realización."
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-orgbdfc73e" class="outline-2">
+<h2 id="orgbdfc73e"><span class="section-number-2">3.</span> Ejemplos Prácticos de la Ley de Parkinson</h2>
+<div class="outline-text-2" id="text-3">
+<ol class="org-ol">
+<li><b><b>En el Trabajo</b></b>: Si tienes una semana para completar un informe que podría hacerse en dos días, es probable que uses toda la semana, añadiendo detalles innecesarios o revisando en exceso.</li>
+<li><b><b>En la Vida Cotidiana</b></b>: Si te das dos horas para limpiar tu casa, es probable que encuentres tareas adicionales para llenar ese tiempo, incluso si la limpieza básica podría hacerse en una hora.</li>
+<li><b><b>En Proyectos de Grupo</b></b>: En equipos, la falta de plazos ajustados puede llevar a discusiones interminables y retrasos innecesarios.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org7abcd79" class="outline-2">
+<h2 id="org7abcd79"><span class="section-number-2">4.</span> Gráfico: Expansión del Trabajo vs. Tiempo Disponible</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+A continuación, se muestra un gráfico que ilustra cómo el trabajo se expande para llenar el tiempo disponible:
+</p>
+
+
+<figure id="org660769e">
+<img src="parkinson_law.png" alt="parkinson_law.png">
+
+</figure>
+
+
+<figure id="orgc49792f">
+<img src="parkinson_law.png" alt="parkinson_law.png" width="600px">
+
+<figcaption><span class="figure-number">Figure 1: </span>Expansión del Trabajo según el Tiempo Disponible</figcaption>
+</figure>
+</div>
+</div>
+<div id="outline-container-org15ae5b5" class="outline-2">
+<h2 id="org15ae5b5"><span class="section-number-2">5.</span> Implicaciones de la Ley de Parkinson</h2>
+<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li><b><b>Gestión del Tiempo</b></b>: Establecer plazos más cortos puede aumentar la eficiencia, ya que obliga a concentrarse en lo esencial.</li>
+<li><b><b>Procrastinación</b></b>: Sin plazos claros, es fácil posponer tareas y perder tiempo en actividades menos importantes.</li>
+<li><b><b>Burocracia</b></b>: En organizaciones grandes, la falta de límites de tiempo puede llevar a la creación de procesos innecesarios y redundantes.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org6ce0e26" class="outline-2">
+<h2 id="org6ce0e26"><span class="section-number-2">6.</span> Cómo Usar la Ley de Parkinson a Tu Favor</h2>
+<div class="outline-text-2" id="text-6">
+<ol class="org-ol">
+<li><b><b>Establece Plazos Ajustados</b></b>: Define tiempos más cortos para completar tareas. Por ejemplo, si normalmente tardas dos horas en escribir un correo, intenta hacerlo en 30 minutos.</li>
+<li><b><b>Prioriza Tareas</b></b>: Enfócate en lo más importante y evita caer en la tentación de añadir detalles innecesarios.</li>
+<li><b><b>Usa la Técnica Pomodoro</b></b>: Divide tu trabajo en intervalos cortos (25 minutos) para mantener la concentración y evitar la expansión del trabajo.</li>
+<li><b><b>Elimina Distracciones</b></b>: Reduce las interrupciones para completar tareas más rápido.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org7d8e051" class="outline-2">
+<h2 id="org7d8e051"><span class="section-number-2">7.</span> Críticas y Limitaciones de la Ley de Parkinson</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Aunque la Ley de Parkinson es útil, no es aplicable en todos los contextos:
+</p>
+<ol class="org-ol">
+<li><b><b>Tareas Complejas</b></b>: Algunas tareas requieren tiempo para investigación, reflexión y revisión.</li>
+<li><b><b>Calidad vs. Velocidad</b></b>: En algunos casos, la prisa puede comprometer la calidad del trabajo.</li>
+<li><b><b>Salud Mental</b></b>: Plazos demasiado ajustados pueden generar estrés y ansiedad.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org569970e" class="outline-2">
+<h2 id="org569970e"><span class="section-number-2">8.</span> Bibliografía</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>Parkinson, C. N. (1958). <b>Parkinson's Law: The Pursuit of Progress</b>. John Murray.</li>
+<li>Parkinson, C. N. (1955). "Parkinson's Law". <b>The Economist</b>.</li>
+<li>Covey, S. R. (1989). <b>The 7 Habits of Highly Effective People</b>. Free Press.</li>
+<li>Allen, D. (2001). <b>Getting Things Done: The Art of Stress-Free Productivity</b>. Penguin Books.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org612b6ab" class="outline-2">
+<h2 id="org612b6ab"><span class="section-number-2">9.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+La Ley de Parkinson es una herramienta poderosa para entender cómo gestionamos nuestro tiempo y recursos. Al establecer plazos más cortos y enfocarnos en lo esencial, podemos aumentar nuestra productividad y evitar la expansión innecesaria del trabajo. Sin embargo, es importante equilibrar la velocidad con la calidad y considerar las limitaciones de esta ley en contextos más complejos.
+</p>
+
+<p>
+¿Has experimentado la Ley de Parkinson en tu vida? ¡Comparte tus experiencias en los comentarios!
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-parkinson.html">parkinson</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ley.html">ley</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-productividad.html">productividad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tiempo.html">tiempo</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gestion.html">gestion</a> </div>]]></description>
+  <category><![CDATA[parkinson]]></category>
+  <category><![CDATA[ley]]></category>
+  <category><![CDATA[productividad]]></category>
+  <category><![CDATA[tiempo]]></category>
+  <category><![CDATA[gestion]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-07-la-ley-de-parkinson:-c%C3%B3mo-el-trabajo-se-expande-para-llenar-el-tiempo-disponible.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-07-la-ley-de-parkinson:-c%C3%B3mo-el-trabajo-se-expande-para-llenar-el-tiempo-disponible.html</guid>
+  <pubDate>Fri, 07 Mar 2025 13:27:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Comparativa de Modelos de IA Generativa en 2025 (Grok)]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org4b2a505">1. Introducción</a></li>
+<li><a href="#orgd27d53c">2. Tabla Comparativa Vertical de Modelos de IA Generativa</a></li>
+<li><a href="#orgc20e42e">3. Notas sobre la Valoración</a></li>
+<li><a href="#org7201dab">4. Metodología</a></li>
+<li><a href="#orgdfa4f9b">5. Conclusión</a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-org4b2a505" class="outline-2">
+<h2 id="org4b2a505"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Este documento presenta una tabla vertical detallada en Org-mode que compara modelos de IA generativa: DeepSeek, Grok, OpenAI (ChatGPT), GitHub Copilot y alternativas gratuitas (Claude, Gemini). Se valoran aspectos clave de 1 a 10, con justificaciones basadas en su desempeño, accesibilidad y tendencias al 2 de marzo de 2025.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd27d53c" class="outline-2">
+<h2 id="orgd27d53c"><span class="section-number-2">2.</span> Tabla Comparativa Vertical de Modelos de IA Generativa</h2>
+<div class="outline-text-2" id="text-2">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b><b>Aspecto</b></b></th>
+<th scope="col" class="org-left"><b><b>DeepSeek</b></b></th>
+<th scope="col" class="org-left"><b><b>Grok</b></b></th>
+<th scope="col" class="org-left"><b><b>OpenAI (ChatGPT)</b></b></th>
+<th scope="col" class="org-left"><b><b>GitHub Copilot</b></b></th>
+<th scope="col" class="org-left"><b><b>Claude (Gratuito)</b></b></th>
+<th scope="col" class="org-left"><b><b>Gemini (Gratuito)</b></b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b><b>Razonamiento</b></b></td>
+<td class="org-left">9</td>
+<td class="org-left">9</td>
+<td class="org-left">8</td>
+<td class="org-left">6</td>
+<td class="org-left">7</td>
+<td class="org-left">7</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Excelente en lógica y matemáticas</td>
+<td class="org-left">Superior en tareas técnicas</td>
+<td class="org-left">Versátil, pero menos técnico</td>
+<td class="org-left">Limitado a asistencia técnica</td>
+<td class="org-left">Bueno, pero sin búsqueda web</td>
+<td class="org-left">Razonable, con web limitada</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Codificación</b></b></td>
+<td class="org-left">8</td>
+<td class="org-left">9</td>
+<td class="org-left">8</td>
+<td class="org-left">10</td>
+<td class="org-left">6</td>
+<td class="org-left">7</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Rápida generación técnica</td>
+<td class="org-left">Fuerte en tareas complejas</td>
+<td class="org-left">Explicaciones detalladas</td>
+<td class="org-left">Líder en asistencia IDE</td>
+<td class="org-left">Básico, sin enfoque técnico</td>
+<td class="org-left">Aceptable, menos especializado</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Creatividad</b></b></td>
+<td class="org-left">6</td>
+<td class="org-left">7</td>
+<td class="org-left">9</td>
+<td class="org-left">5</td>
+<td class="org-left">8</td>
+<td class="org-left">7</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Menos enfocado en texto creativo</td>
+<td class="org-left">Humor y respuestas únicas</td>
+<td class="org-left">Alta versatilidad creativa</td>
+<td class="org-left">No prioriza creatividad</td>
+<td class="org-left">Conversacional, fluido</td>
+<td class="org-left">Creativo, pero menos refinado</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Acceso a Datos en Tiempo Real</b></b></td>
+<td class="org-left">8</td>
+<td class="org-left">9</td>
+<td class="org-left">9</td>
+<td class="org-left">7</td>
+<td class="org-left">5</td>
+<td class="org-left">8</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Bueno, sin integración profunda</td>
+<td class="org-left">DeepSearch con X</td>
+<td class="org-left">Búsqueda web efectiva</td>
+<td class="org-left">Limitado a contexto local</td>
+<td class="org-left">Sin búsqueda web</td>
+<td class="org-left">Búsqueda básica</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Accesibilidad</b></b></td>
+<td class="org-left">10</td>
+<td class="org-left">7</td>
+<td class="org-left">8</td>
+<td class="org-left">7</td>
+<td class="org-left">8</td>
+<td class="org-left">8</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Gratuito y open-source</td>
+<td class="org-left">Gratis en X, suscripción Premium</td>
+<td class="org-left">Gratuito con límites, $20/mes</td>
+<td class="org-left">$10/mes, integrado en GitHub</td>
+<td class="org-left">Gratuito con límites</td>
+<td class="org-left">Gratuito con límites</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Eficiencia (Velocidad)</b></b></td>
+<td class="org-left">9</td>
+<td class="org-left">8</td>
+<td class="org-left">7</td>
+<td class="org-left">8</td>
+<td class="org-left">7</td>
+<td class="org-left">8</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Respuestas rápidas y técnicas</td>
+<td class="org-left">Rápido con DeepSearch</td>
+<td class="org-left">Más lento en razonamiento</td>
+<td class="org-left">Rápido en IDE</td>
+<td class="org-left">Moderado</td>
+<td class="org-left">Rápido, pero menos optimizado</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Privacidad</b></b></td>
+<td class="org-left">6</td>
+<td class="org-left">8</td>
+<td class="org-left">8</td>
+<td class="org-left">7</td>
+<td class="org-left">9</td>
+<td class="org-left">8</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Datos no claros (China)</td>
+<td class="org-left">Opciones de privacidad</td>
+<td class="org-left">Opt-out de entrenamiento</td>
+<td class="org-left">Depende de Microsoft</td>
+<td class="org-left">Sin uso de datos por diseño</td>
+<td class="org-left">Privacidad estándar</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Interoperabilidad</b></b></td>
+<td class="org-left">7</td>
+<td class="org-left">6</td>
+<td class="org-left">8</td>
+<td class="org-left">9</td>
+<td class="org-left">6</td>
+<td class="org-left">7</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Open-source, pero especializado</td>
+<td class="org-left">Integrado en X</td>
+<td class="org-left">APIs amplias</td>
+<td class="org-left">Excelente con Microsoft</td>
+<td class="org-left">Limitado</td>
+<td class="org-left">Bueno, pero menos flexible</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Ciberseguridad</b></b></td>
+<td class="org-left">7</td>
+<td class="org-left">8</td>
+<td class="org-left">8</td>
+<td class="org-left">7</td>
+<td class="org-left">8</td>
+<td class="org-left">7</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Riesgos por origen chino</td>
+<td class="org-left">Seguridad razonable</td>
+<td class="org-left">Robustez probada</td>
+<td class="org-left">Depende de Microsoft</td>
+<td class="org-left">Enfoque en seguridad</td>
+<td class="org-left">Seguridad básica</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Sostenibilidad</b></b></td>
+<td class="org-left">8</td>
+<td class="org-left">7</td>
+<td class="org-left">6</td>
+<td class="org-left">6</td>
+<td class="org-left">7</td>
+<td class="org-left">7</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Menor uso de recursos</td>
+<td class="org-left">Uso moderado</td>
+<td class="org-left">Alta demanda energética</td>
+<td class="org-left">Depende de infraestructura</td>
+<td class="org-left">Moderada</td>
+<td class="org-left">Moderada</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Puntuación Total</b></b></td>
+<td class="org-left">78/100</td>
+<td class="org-left">78/100</td>
+<td class="org-left">79/100</td>
+<td class="org-left">72/100</td>
+<td class="org-left">71/100</td>
+<td class="org-left">74/100</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgc20e42e" class="outline-2">
+<h2 id="orgc20e42e"><span class="section-number-2">3.</span> Notas sobre la Valoración</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><b><b>DeepSeek</b></b>: Destaca en accesibilidad (10) y eficiencia (9), pero creativity (6) y privacidad (6) son débiles por su enfoque técnico y origen.</li>
+<li><b><b>Grok</b></b>: Excelente en codificación (9) y datos en tiempo real (9), limitado en interoperabilidad (6) por su dependencia de X.</li>
+<li><b><b>OpenAI (ChatGPT)</b></b>: Líder en creatividad (9) y versatilidad, con leve penalización en eficiencia (7) por tiempos de razonamiento.</li>
+<li><b><b>GitHub Copilot</b></b>: Máximo en codificación (10) e interoperabilidad (9), bajo en creatividad (5) por su especialización.</li>
+<li><b><b>Claude (Gratuito)</b></b>: Fuerte en privacidad (9) y creatividad (8), débil en datos en tiempo real (5) y codificación (6).</li>
+<li><b><b>Gemini (Gratuito)</b></b>: Equilibrado, con buenos puntajes en acceso a datos (8) y velocidad (8), pero sin destacar.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7201dab" class="outline-2">
+<h2 id="org7201dab"><span class="section-number-2">4.</span> Metodología</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li><b><b>Escala</b></b>: 1 (muy deficiente) a 10 (excelente).</li>
+<li><b><b>Criterios</b></b>: Basados en desempeño técnico, usabilidad, costo, y tendencias al 2 de marzo de 2025, extrapolados desde revisiones generales (IBM, Gartner).</li>
+<li><b><b>Fuentes</b></b>: Información sintetizada de revisiones públicas y análisis críticos.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdfa4f9b" class="outline-2">
+<h2 id="orgdfa4f9b"><span class="section-number-2">5.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+OpenAI lidera con 79/100 por su versatilidad, seguido de cerca por DeepSeek y Grok (78/100) por su eficiencia técnica y accesibilidad. Copilot (72/100) es ideal para codificación, mientras Claude (71/100) y Gemini (74/100) ofrecen opciones gratuitas sólidas pero limitadas en ciertas áreas.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-grok.html">grok</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-comparativa.html">comparativa</a> </div>]]></description>
+  <category><![CDATA[grok]]></category>
+  <category><![CDATA[ai]]></category>
+  <category><![CDATA[comparativa]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-02-comparativa-de-modelos-de-ia-generativa-en-2025-(grok).html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-02-comparativa-de-modelos-de-ia-generativa-en-2025-(grok).html</guid>
+  <pubDate>Sun, 02 Mar 2025 11:15:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Análisis IA Generativa pr DeepSeek]]></title>
+  <description><![CDATA[
+<div id="outline-container-orgb5539fd" class="outline-2">
+<h2 id="orgb5539fd">INTRODUCCIÓN</h2>
+<div class="outline-text-2" id="text-orgb5539fd">
+</div>
+<div id="outline-container-orgdde2572" class="outline-3">
+<h3 id="orgdde2572">Objetivo</h3>
+<div class="outline-text-3" id="text-orgdde2572">
+<p>
+Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gemini Ultra (Google) y Grok-3 (xAI), evaluando sus capacidades técnicas, rendimiento práctico y viabilidad comercial.  
+</p>
+</div>
+</div>
+<div id="outline-container-orgad25cd8" class="outline-3">
+<h3 id="orgad25cd8">Metodología</h3>
+<div class="outline-text-3" id="text-orgad25cd8">
+<ul class="org-ul">
+<li>Revisión de papers técnicos (2023-2024).</li>
+<li>Pruebas con prompts estandarizados (texto, código, razonamiento).</li>
+<li>Análisis de costes y escalabilidad.</li>
+<li>Comparación con benchmarks públicos (e.g., MMLU, HumanEval).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgac281d4" class="outline-2">
+<h2 id="orgac281d4">ESPECIFICACIONES TÉCNICAS</h2>
+<div class="outline-text-2" id="text-orgac281d4">
+</div>
+<div id="outline-container-org9b44577" class="outline-3">
+<h3 id="org9b44577">Parámetros Clave por Modelo</h3>
+<div class="outline-text-3" id="text-org9b44577">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Modelo</th>
+<th scope="col" class="org-left">Arquitectura</th>
+<th scope="col" class="org-left">Parámetros (aprox)</th>
+<th scope="col" class="org-left">Entrenamiento (Tokens)</th>
+<th scope="col" class="org-left">Contexto Ventana</th>
+<th scope="col" class="org-left">Multimodalidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">GPT-4</td>
+<td class="org-left">Transformer Mixto</td>
+<td class="org-left">1.8 billones</td>
+<td class="org-left">13T</td>
+<td class="org-left">128k</td>
+<td class="org-left">Texto + DALL·E</td>
+</tr>
+
+<tr>
+<td class="org-left">DeepSeek-MoE</td>
+<td class="org-left">Mixture of Experts</td>
+<td class="org-left">145 billones</td>
+<td class="org-left">8T</td>
+<td class="org-left">32k</td>
+<td class="org-left">Texto/Código</td>
+</tr>
+
+<tr>
+<td class="org-left">Gemini Ultra</td>
+<td class="org-left">Multimodal nativo</td>
+<td class="org-left">1.2 billones</td>
+<td class="org-left">10T</td>
+<td class="org-left">1M</td>
+<td class="org-left">Texto/Img/Audio</td>
+</tr>
+
+<tr>
+<td class="org-left">Grok-3</td>
+<td class="org-left">Sparse Transformer</td>
+<td class="org-left">314 billones*</td>
+<td class="org-left">6T*</td>
+<td class="org-left">64k</td>
+<td class="org-left">Texto</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<b>Notas</b>:  
+</p>
+<ul class="org-ul">
+<li>Grok-3: Datos estimados (xAI no publica detalles técnicos completos).</li>
+<li>Gemini: Mayor ventana de contexto gracias a arquitectura "Ring Attention".</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5b6b0d7" class="outline-2">
+<h2 id="org5b6b0d7">COMPARATIVA DETALLADA (1-10)</h2>
+<div class="outline-text-2" id="text-org5b6b0d7">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Criterio \ Modelo</th>
+<th scope="col" class="org-right">GPT-4</th>
+<th scope="col" class="org-right">DeepSeek</th>
+<th scope="col" class="org-right">Gemini</th>
+<th scope="col" class="org-right">Grok-3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b><b>Calidad de Texto</b></b></td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">- Coherencia</td>
+<td class="org-right">9.7</td>
+<td class="org-right">8.5</td>
+<td class="org-right">9.2</td>
+<td class="org-right">8.0</td>
+</tr>
+
+<tr>
+<td class="org-left">- Precisión factual</td>
+<td class="org-right">9.0</td>
+<td class="org-right">7.8</td>
+<td class="org-right">8.7</td>
+<td class="org-right">7.5</td>
+</tr>
+
+<tr>
+<td class="org-left">- Fluidez estilística</td>
+<td class="org-right">9.5</td>
+<td class="org-right">8.0</td>
+<td class="org-right">8.9</td>
+<td class="org-right">8.5</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Código</b></b></td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">- Funcionalidad</td>
+<td class="org-right">9.2</td>
+<td class="org-right">9.5</td>
+<td class="org-right">8.8</td>
+<td class="org-right">7.0</td>
+</tr>
+
+<tr>
+<td class="org-left">- Optimización</td>
+<td class="org-right">8.5</td>
+<td class="org-right">9.8</td>
+<td class="org-right">8.0</td>
+<td class="org-right">6.5</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Multimodalidad</b></b></td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">- Integración</td>
+<td class="org-right">8.5*</td>
+<td class="org-right">5.0</td>
+<td class="org-right">9.8</td>
+<td class="org-right">4.0</td>
+</tr>
+
+<tr>
+<td class="org-left">- Sincronización</td>
+<td class="org-right">7.0</td>
+<td class="org-right">N/A</td>
+<td class="org-right">9.5</td>
+<td class="org-right">N/A</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Eficiencia</b></b></td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">- Tokens/segundo</td>
+<td class="org-right">7.5</td>
+<td class="org-right">9.3</td>
+<td class="org-right">8.0</td>
+<td class="org-right">7.8</td>
+</tr>
+
+<tr>
+<td class="org-left">- Coste/1M tokens (USD)</td>
+<td class="org-right">30</td>
+<td class="org-right">12</td>
+<td class="org-right">25</td>
+<td class="org-right">18</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Ética</b></b></td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">- Transparencia</td>
+<td class="org-right">8.0</td>
+<td class="org-right">7.5</td>
+<td class="org-right">6.5</td>
+<td class="org-right">5.0</td>
+</tr>
+
+<tr>
+<td class="org-left">- Mitigación de sesgos</td>
+<td class="org-right">8.5</td>
+<td class="org-right">7.0</td>
+<td class="org-right">7.8</td>
+<td class="org-right">6.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgc10c780" class="outline-2">
+<h2 id="orgc10c780">ANÁLISIS POR MODELO</h2>
+<div class="outline-text-2" id="text-orgc10c780">
+</div>
+<div id="outline-container-org2eb63bb" class="outline-3">
+<h3 id="org2eb63bb">GPT-4 (OpenAI)</h3>
+<div class="outline-text-3" id="text-org2eb63bb">
+</div>
+<div id="outline-container-orgf3407ce" class="outline-4">
+<h4 id="orgf3407ce">Ventajas</h4>
+<div class="outline-text-4" id="text-orgf3407ce">
+<ul class="org-ul">
+<li>Soporta plugins para matemáticas (Wolfram), búsquedas (Bing) y código (Code Interpreter).</li>
+<li>Fine-tuning avanzado para casos empresariales.</li>
+<li>Comunidad activa y documentación detallada.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0c55deb" class="outline-4">
+<h4 id="org0c55deb">Desventajas</h4>
+<div class="outline-text-4" id="text-org0c55deb">
+<ul class="org-ul">
+<li>Coste elevado para alto volumen (~$6 por millón tokens en entrada).</li>
+<li>Sin multimodalidad nativa (depende de DALL·E 3).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6ee95a4" class="outline-3">
+<h3 id="org6ee95a4">DeepSeek-MoE</h3>
+<div class="outline-text-3" id="text-org6ee95a4">
+</div>
+<div id="outline-container-orgf011f24" class="outline-4">
+<h4 id="orgf011f24">Casos de Uso Ideales</h4>
+<div class="outline-text-4" id="text-orgf011f24">
+<ul class="org-ul">
+<li>Generación de código Python/JavaScript con bajo consumo de recursos.</li>
+<li>Automatización de scripts para DevOps.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org56b9ad2" class="outline-4">
+<h4 id="org56b9ad2">Limitaciones</h4>
+<div class="outline-text-4" id="text-org56b9ad2">
+<ul class="org-ul">
+<li>Rendimiento pobre en español (precisión ~68% vs 92% en inglés).</li>
+<li>No soporta integración con APIs multimedia.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9960b17" class="outline-3">
+<h3 id="org9960b17">Gemini Ultra</h3>
+<div class="outline-text-3" id="text-org9960b17">
+</div>
+<div id="outline-container-org6e33c92" class="outline-4">
+<h4 id="org6e33c92">Fortalezas Multimodales</h4>
+<div class="outline-text-4" id="text-org6e33c92">
+<ul class="org-ul">
+<li>Análisis de vídeo (extracción de frames + transcripción).</li>
+<li>Síntesis de audio multilingual (280+ idiomas).</li>
+<li>Integración nativa con Google Cloud (Vertex AI).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf4f7bc3" class="outline-4">
+<h4 id="orgf4f7bc3">Debilidades</h4>
+<div class="outline-text-4" id="text-orgf4f7bc3">
+<ul class="org-ul">
+<li>Inconsistencias en razonamiento lógico (ej: silogismos).</li>
+<li>Tiempos de respuesta variables en modo imagen.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcf6d865" class="outline-3">
+<h3 id="orgcf6d865">Grok-3</h3>
+<div class="outline-text-3" id="text-orgcf6d865">
+</div>
+<div id="outline-container-org0916553" class="outline-4">
+<h4 id="org0916553">Diferenciadores</h4>
+<div class="outline-text-4" id="text-org0916553">
+<ul class="org-ul">
+<li>Entrenado con datos de 𝕏 (Twitter) hasta Q1 2024.</li>
+<li>Modo "sarcasmo" configurable (único en el mercado).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2e50c4d" class="outline-4">
+<h4 id="org2e50c4d">Riesgos</h4>
+<div class="outline-text-4" id="text-org2e50c4d">
+<ul class="org-ul">
+<li>Alucinaciones frecuentes en temas técnicos (ej: código).</li>
+<li>Políticas de uso restrictivas (solo disponible en 𝕏 Premium+).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org500eace" class="outline-2">
+<h2 id="org500eace">TAREAS PENDIENTES</h2>
+<div class="outline-text-2" id="text-org500eace">
+</div>
+<div id="outline-container-orgfc2677e" class="outline-3">
+<h3 id="orgfc2677e">Prioridad Alta</h3>
+<div class="outline-text-3" id="text-orgfc2677e">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Probar Gemini Ultra en análisis de vídeos educativos (deadline: 2024-05-25).</li>
+<li class="off"><code>[&#xa0;]</code> Comparar coste/rendimiento de DeepSeek vs. CodeLlama-70B (tag: #código).</li>
+<li class="off"><code>[&#xa0;]</code> Documentar políticas de ética de Grok-3 (fuente: xAI.com).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org230ff54" class="outline-3">
+<h3 id="org230ff54">Prioridad Media</h3>
+<div class="outline-text-3" id="text-org230ff54">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Crear script Emacs para automatizar tablas comparativas (elisp).</li>
+<li class="off"><code>[&#xa0;]</code> Revisar papers sobre Mixture of Experts (MoE) vs. arquitecturas densas.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb5b4ddb" class="outline-2">
+<h2 id="orgb5b4ddb">CONCLUSIONES</h2>
+<div class="outline-text-2" id="text-orgb5b4ddb">
+<ul class="org-ul">
+<li><b><b>Mejor generalista</b></b>: GPT-4 (9.1/10) para equilibrio entre calidad y herramientas.</li>
+<li><b><b>Multimodalidad premium</b></b>: Gemini Ultra (9.4/10) si se prioriza audio/imagen.</li>
+<li><b><b>Código eficiente</b></b>: DeepSeek-MoE (8.9/10) para proyectos con restricciones presupuestarias.</li>
+<li><b><b>Nicho específico</b></b>: Grok-3 (6.8/10) solo relevante en análisis de redes sociales.</li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-deepseek.html">deepseek</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-modelo.html">modelo</a> </div>]]></description>
+  <category><![CDATA[deepseek]]></category>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[modelo]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-02-an%C3%A1lisis-ia-generativa-pr-deepseek.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-02-an%C3%A1lisis-ia-generativa-pr-deepseek.html</guid>
+  <pubDate>Sun, 02 Mar 2025 08:48:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Emacs: Historia, Evolución y Futuro]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgd32e52a">1. Introducción</a></li>
+<li><a href="#org5f14811">2. Orígenes de Emacs</a></li>
+<li><a href="#org0103f0f">3. Evolución y Desarrollo</a></li>
+<li><a href="#org0705766">4. Posibilidades y Características Clave</a></li>
+<li><a href="#orgb45b3d8">5. Emacs en el Presente</a></li>
+<li><a href="#org51fdbf1">6. Futuro de Emacs</a></li>
+<li><a href="#org5b9db9d">7. Curva de Aprendizaje</a></li>
+<li><a href="#orga52d47e">8. Pros y Contras de Emacs</a></li>
+<li><a href="#org9b78de2">9. Conclusión</a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-orgd32e52a" class="outline-2">
+<h2 id="orgd32e52a"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Emacs es más que un simple editor de texto: es un ecosistema de extensibilidad, programabilidad y personalización. Desde su creación en la década de 1970, Emacs ha evolucionado hasta convertirse en una de las herramientas más poderosas para la edición de texto, la programación, la gestión del conocimiento y muchas otras tareas.
+</p>
+</div>
+</div>
+<div id="outline-container-org5f14811" class="outline-2">
+<h2 id="org5f14811"><span class="section-number-2">2.</span> Orígenes de Emacs</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Emacs nació en el MIT en los años 70, desarrollado por Richard Stallman.</li>
+<li>Se inspiró en el editor TECO y las macros de edición.</li>
+<li>Fue el primer editor con capacidad para ser completamente extensible mediante macros.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0103f0f" class="outline-2">
+<h2 id="org0103f0f"><span class="section-number-2">3.</span> Evolución y Desarrollo</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><b><b>Emacs original (1976)</b></b>: Basado en TECO, desarrollado en MIT.</li>
+<li><b><b>GNU Emacs (1985)</b></b>: Reescrito en C y Lisp, convirtiéndose en software libre.</li>
+<li><b><b>XEmacs (1991)</b></b>: Un fork de GNU Emacs con mejoras en interfaz y rendimiento.</li>
+<li><b><b>Emacs 21+ (2001 en adelante)</b></b>: Introdujo GUI mejorada, soporte para UTF-8 y múltiples nuevas funciones.</li>
+<li><b><b>Emacs 24/25 (2012-2016)</b></b>: Paquetes, integración con Python, soporte para JSON y mejoras en la gestión de procesos.</li>
+<li><b><b>Emacs 27+ (2020 en adelante)</b></b>: Mejoras en visualización, compatibilidad con Lisp nativo y optimizaciones de rendimiento.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0705766" class="outline-2">
+<h2 id="org0705766"><span class="section-number-2">4.</span> Posibilidades y Características Clave</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li><b><b>Extensibilidad con Emacs Lisp</b></b>: Todo en Emacs puede modificarse con Emacs Lisp.</li>
+<li><b><b>Multipropósito</b></b>: Puede usarse como IDE, gestor de notas, cliente de correo, lector de RSS, agenda y más.</li>
+<li><b><b>Soporte para múltiples lenguajes</b></b>: Compatible con lenguajes como Python, C, Lisp, JavaScript, entre otros.</li>
+<li><b><b>Interfaz personalizable</b></b>: Temas, configuración de atajos y posibilidad de modificar su comportamiento.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb45b3d8" class="outline-2">
+<h2 id="orgb45b3d8"><span class="section-number-2">5.</span> Emacs en el Presente</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Sigue siendo ampliamente utilizado en entornos académicos, de programación y en la comunidad del software libre.</li>
+<li>Integraciones modernas con Git, Docker, Jupyter y herramientas de desarrollo.</li>
+<li>Opciones como Doom Emacs y Spacemacs lo han hecho más accesible para nuevos usuarios.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org51fdbf1" class="outline-2">
+<h2 id="org51fdbf1"><span class="section-number-2">6.</span> Futuro de Emacs</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Integración con inteligencia artificial y herramientas de automatización.</li>
+<li>Mayor optimización en rendimiento para aprovechar CPUs modernas.</li>
+<li>Mejoras en la compatibilidad con Wayland y nuevas tecnologías de escritorio.</li>
+<li>Mayor enfoque en mejorar la experiencia de usuario sin comprometer su poder.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5b9db9d" class="outline-2">
+<h2 id="org5b9db9d"><span class="section-number-2">7.</span> Curva de Aprendizaje</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li><b><b>Alta al inicio</b></b>, ya que requiere memorizar comandos y aprender Emacs Lisp.</li>
+<li><b><b>Ventaja a largo plazo</b></b>: Una vez dominado, permite una eficiencia extrema en edición de texto y automatización.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga52d47e" class="outline-2">
+<h2 id="orga52d47e"><span class="section-number-2">8.</span> Pros y Contras de Emacs</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+<b><b>Ventajas:</b></b>
+</p>
+<ul class="org-ul">
+<li>Extremadamente personalizable y potente.</li>
+<li>Compatible con casi cualquier flujo de trabajo.</li>
+<li>Comunidad activa y en constante desarrollo.</li>
+<li>Soporte para plugins y extensiones.</li>
+</ul>
+
+<p>
+<b><b>Desventajas:</b></b>
+</p>
+<ul class="org-ul">
+<li>Curva de aprendizaje pronunciada.</li>
+<li>Puede ser más lento que editores modernos en ciertas configuraciones.</li>
+<li>Consumo de memoria superior a editores minimalistas.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9b78de2" class="outline-2">
+<h2 id="org9b78de2"><span class="section-number-2">9.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Emacs es una herramienta impresionante que ha resistido la prueba del tiempo gracias a su extensibilidad y flexibilidad. Aunque no es el editor más accesible para principiantes, ofrece posibilidades inigualables para aquellos dispuestos a invertir tiempo en aprenderlo. Su futuro sigue siendo prometedor gracias a la constante contribución de su comunidad y a su capacidad de adaptación a nuevas tecnologías.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> </div>]]></description>
+  <category><![CDATA[emacs]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-27-emacs:-historia,-evoluci%C3%B3n-y-futuro.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-27-emacs:-historia,-evoluci%C3%B3n-y-futuro.html</guid>
+  <pubDate>Thu, 27 Feb 2025 18:04:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Recursos para Introducirse en Inteligencia Artificial]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>&Iacute;ndice</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org129fdb7">Introducción</a></li>
+<li><a href="#org63cfbce">Nivel Principiante</a>
+<ul>
+<li><a href="#org3175469">1. "Inteligencia Artificial: Una Guía para Gente Pensante" - Melanie Mitchell</a></li>
+<li><a href="#org9fdee28">2. "Artificial Intelligence: A Modern Approach" (Capítulos 1-3) - Stuart Russell y Peter Norvig</a></li>
+<li><a href="#org48fbccc">3. "Machine Learning Yearning" - Andrew Ng</a></li>
+</ul>
+</li>
+<li><a href="#orge43f1d5">Nivel Intermedio</a>
+<ul>
+<li><a href="#org4641dfa">1. "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" - Aurélien Géron</a></li>
+<li><a href="#org9278043">2. "Deep Learning with Python" - François Chollet</a></li>
+<li><a href="#org308662b">3. "CS231n: Convolutional Neural Networks for Visual Recognition" - Stanford University</a></li>
+</ul>
+</li>
+<li><a href="#org51aa7c1">Nivel Avanzado</a>
+<ul>
+<li><a href="#org194a9a2">1. "Deep Learning" - Ian Goodfellow, Yoshua Bengio, Aaron Courville</a></li>
+<li><a href="#orgfa4b3cb">2. "Pattern Recognition and Machine Learning" - Christopher Bishop</a></li>
+<li><a href="#org29c7a76">3. "Attention Is All You Need" - Vaswani et al.</a></li>
+</ul>
+</li>
+<li><a href="#orgf8a0938">Justificación General</a></li>
+<li><a href="#orgceb2965">Conclusión</a></li>
+<li><a href="#org0654f7e">Nota Final</a></li>
+</ul>
+</div>
+</nav>
+<p>
+AUTHOR: Grok 3 (xAI)
+</p>
+<div id="outline-container-org129fdb7" class="outline-2">
+<h2 id="org129fdb7">Introducción</h2>
+<div class="outline-text-2" id="text-org129fdb7">
+<p>
+La Inteligencia Artificial (IA) abarca desde conceptos básicos hasta técnicas avanzadas de aprendizaje profundo y razonamiento. Este listado ofrece recursos seleccionados para principiantes (sin conocimientos previos), nivel intermedio (con fundamentos básicos) y avanzado (expertos o investigadores). Cada recomendación incluye una justificación basada en accesibilidad, claridad y profundidad técnica.
+</p>
+</div>
+</div>
+<div id="outline-container-org63cfbce" class="outline-2">
+<h2 id="org63cfbce">Nivel Principiante</h2>
+<div class="outline-text-2" id="text-org63cfbce">
+<p>
+Recursos introductorios sin necesidad de conocimientos previos en matemáticas o programación.
+</p>
+</div>
+<div id="outline-container-org3175469" class="outline-3">
+<h3 id="org3175469">1. "Inteligencia Artificial: Una Guía para Gente Pensante" - Melanie Mitchell</h3>
+<div class="outline-text-3" id="text-org3175469">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Introducción narrativa a los conceptos básicos de IA, desde perceptrones hasta redes neuronales, sin ecuaciones complejas.</li>
+<li><b><b>Justificación</b></b>: Mitchell explica la IA de manera accesible, con ejemplos históricos (como Deep Blue) y reflexiones éticas. Ideal para quienes buscan entender qué es la IA sin tecnicismos.</li>
+<li><b><b>Formato</b></b>: Libro físico o digital (~300 páginas).</li>
+<li><b><b>Disponibilidad</b></b>: Editorial Capitán Swing (2022), ISBN: 978-84-123964-3-0.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9fdee28" class="outline-3">
+<h3 id="org9fdee28">2. "Artificial Intelligence: A Modern Approach" (Capítulos 1-3) - Stuart Russell y Peter Norvig</h3>
+<div class="outline-text-3" id="text-org9fdee28">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Libro de texto clásico, pero los primeros capítulos son una introducción amigable a los fundamentos de IA (agentes inteligentes, búsqueda).</li>
+<li><b><b>Justificación</b></b>: Aunque es un texto académico, los capítulos iniciales son claros y no requieren matemáticas avanzadas, sentando las bases para principiantes curiosos.</li>
+<li><b><b>Formato</b></b>: Libro (~1152 páginas total, solo intro recomendada).</li>
+<li><b><b>Disponibilidad</b></b>: 4ª edición, Pearson (2020), ISBN: 978-0134610993.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org48fbccc" class="outline-3">
+<h3 id="org48fbccc">3. "Machine Learning Yearning" - Andrew Ng</h3>
+<div class="outline-text-3" id="text-org48fbccc">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Guía corta y práctica sobre cómo abordar proyectos de aprendizaje automático (ML), enfocada en estrategia más que en teoría.</li>
+<li><b><b>Justificación</b></b>: Ng usa un lenguaje simple y ejemplos reales, perfecto para principiantes que quieren aplicar IA sin programar aún.</li>
+<li><b><b>Formato</b></b>: PDF gratuito (~120 páginas).</li>
+<li><b><b>Disponibilidad</b></b>: Disponible en línea en deeplearning.ai.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge43f1d5" class="outline-2">
+<h2 id="orge43f1d5">Nivel Intermedio</h2>
+<div class="outline-text-2" id="text-orge43f1d5">
+<p>
+Recursos para quienes tienen nociones básicas de programación (Python) y matemáticas (álgebra lineal, estadística).
+</p>
+</div>
+<div id="outline-container-org4641dfa" class="outline-3">
+<h3 id="org4641dfa">1. "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" - Aurélien Géron</h3>
+<div class="outline-text-3" id="text-org4641dfa">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Manual práctico que guía desde regresiones simples hasta redes neuronales profundas con código en Python.</li>
+<li><b><b>Justificación</b></b>: Equilibra teoría y práctica con ejemplos ejecutables, ideal para aprender implementando modelos de IA. Requiere conocimientos básicos de Python.</li>
+<li><b><b>Formato</b></b>: Libro (~850 páginas).</li>
+<li><b><b>Disponibilidad</b></b>: 3ª edición, O’Reilly (2022), ISBN: 978-1098125974.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9278043" class="outline-3">
+<h3 id="org9278043">2. "Deep Learning with Python" - François Chollet</h3>
+<div class="outline-text-3" id="text-org9278043">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Introducción al aprendizaje profundo usando Keras, con ejemplos desde redes básicas hasta convolucionales.</li>
+<li><b><b>Justificación</b></b>: Chollet, creador de Keras, explica conceptos intermedios (como backpropagation) de forma clara, con código práctico para usuarios con algo de experiencia.</li>
+<li><b><b>Formato</b></b>: Libro (~500 páginas).</li>
+<li><b><b>Disponibilidad</b></b>: 2ª edición, Manning (2021), ISBN: 978-1617296864.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org308662b" class="outline-3">
+<h3 id="org308662b">3. "CS231n: Convolutional Neural Networks for Visual Recognition" - Stanford University</h3>
+<div class="outline-text-3" id="text-org308662b">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Curso en línea con notas y videos sobre redes neuronales convolucionales (CNN).</li>
+<li><b><b>Justificación</b></b>: Ofrece una base sólida en visión por computadora, accesible para quienes saben programar y quieren profundizar en IA práctica.</li>
+<li><b><b>Formato</b></b>: Notas PDF y videos (~200 páginas de notas).</li>
+<li><b><b>Disponibilidad</b></b>: Gratuito en cs231n.stanford.edu.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org51aa7c1" class="outline-2">
+<h2 id="org51aa7c1">Nivel Avanzado</h2>
+<div class="outline-text-2" id="text-org51aa7c1">
+<p>
+Recursos para expertos o investigadores con conocimientos sólidos en matemáticas (cálculo, probabilidad) y programación.
+</p>
+</div>
+<div id="outline-container-org194a9a2" class="outline-3">
+<h3 id="org194a9a2">1. "Deep Learning" - Ian Goodfellow, Yoshua Bengio, Aaron Courville</h3>
+<div class="outline-text-3" id="text-org194a9a2">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Texto definitivo sobre aprendizaje profundo, cubriendo teoría matemática, algoritmos y aplicaciones avanzadas.</li>
+<li><b><b>Justificación</b></b>: Es la referencia técnica más completa, ideal para quienes buscan entender los fundamentos detrás de modelos como GANs o transformers. Requiere matemáticas avanzadas.</li>
+<li><b><b>Formato</b></b>: Libro (~800 páginas).</li>
+<li><b><b>Disponibilidad</b></b>: MIT Press (2016), ISBN: 978-0262035613, también gratuito en deeplearningbook.org.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfa4b3cb" class="outline-3">
+<h3 id="orgfa4b3cb">2. "Pattern Recognition and Machine Learning" - Christopher Bishop</h3>
+<div class="outline-text-3" id="text-orgfa4b3cb">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Libro académico sobre aprendizaje automático probabilístico, desde modelos bayesianos hasta redes neuronales.</li>
+<li><b><b>Justificación</b></b>: Ofrece una perspectiva rigurosa y matemática, perfecta para avanzar en teoría de IA y sus raíces estadísticas.</li>
+<li><b><b>Formato</b></b>: Libro (~738 páginas).</li>
+<li><b><b>Disponibilidad</b></b>: Springer (2006), ISBN: 978-0387310732.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org29c7a76" class="outline-3">
+<h3 id="org29c7a76">3. "Attention Is All You Need" - Vaswani et al.</h3>
+<div class="outline-text-3" id="text-org29c7a76">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Artículo seminal que introduce los transformers, base de modelos como BERT o GPT.</li>
+<li><b><b>Justificación</b></b>: Documento corto pero denso, esencial para entender la arquitectura que domina la IA moderna. Requiere familiaridad con redes neuronales.</li>
+<li><b><b>Formato</b></b>: Paper (~15 páginas).</li>
+<li><b><b>Disponibilidad</b></b>: Gratuito en arXiv (2017), arXiv:1706.03762.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf8a0938" class="outline-2">
+<h2 id="orgf8a0938">Justificación General</h2>
+<div class="outline-text-2" id="text-orgf8a0938">
+<ul class="org-ul">
+<li><b><b>Principiantes</b></b>: Los recursos son narrativos y evitan tecnicismos, enfocándose en conceptos y contexto histórico para despertar interés.</li>
+<li><b><b>Intermedio</b></b>: Combinan teoría práctica con código, ideales para quienes ya programan y quieren aplicar IA en proyectos reales.</li>
+<li><b><b>Avanzado</b></b>: Profundizan en matemáticas y algoritmos, dirigidos a quienes buscan dominar la base técnica o investigar.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgceb2965" class="outline-2">
+<h2 id="orgceb2965">Conclusión</h2>
+<div class="outline-text-2" id="text-orgceb2965">
+<p>
+Este listado ofrece una progresión clara para introducirse en IA:
+</p>
+<ul class="org-ul">
+<li><b><b>Principiantes</b></b>: Empieza con Mitchell para una visión general, luego explora los capítulos iniciales de Russell y Norvig.</li>
+<li><b><b>Intermedio</b></b>: Pasa a Géron para práctica y Chollet para aprendizaje profundo, complementando con CS231n.</li>
+<li><b><b>Avanzado</b></b>: Profundiza con Goodfellow et al., Bishop, y el paper de Vaswani para dominar la teoría y la vanguardia.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0654f7e" class="outline-2">
+<h2 id="org0654f7e">Nota Final</h2>
+<div class="outline-text-2" id="text-org0654f7e">
+<ul class="org-ul">
+<li>Este documento ha sido generado por Grok 3, creado por xAI, el 26 de febrero de 2025, con el propósito de proporcionar una guía estructurada y detallada para introducirse en la Inteligencia Artificial.</li>
+</ul>
+
+<p>
+Con estos recursos, puedes construir una base sólida en IA desde cero hasta nivel experto, adaptándote a tu ritmo y objetivos.
+</p>
+
+<p style="text-align: center; font-size: 0.9em; color: #777;">
+<b>Un viaje estructurado al corazón de la Inteligencia Artificial.</b>
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-libro.html">libro</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">IA</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-introducción.html">Introducción</a> </div>]]></description>
+  <category><![CDATA[libro]]></category>
+  <category><![CDATA[IA]]></category>
+  <category><![CDATA[Introducción]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-27-listado-de-libros-y-documentos-para-introducirse-en-inteligencia-artificial.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-27-listado-de-libros-y-documentos-para-introducirse-en-inteligencia-artificial.html</guid>
+  <pubDate>Thu, 27 Feb 2025 12:01:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Capacidades y Comparativa de Modelos de IA Generativa: OpenAI, DeepSeek, Gemini y Grok 3]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf840243">1. Introducción</a></li>
+<li><a href="#org7e93686">2. Capacidades de la IA Generativa</a></li>
+<li><a href="#org6702df2">3. Características Comunes</a></li>
+<li><a href="#orge017720">4. Comparativa de Modelos</a>
+<ul>
+<li><a href="#orgc0288b7">4.1. OpenAI (GPT-4o / o1)**</a></li>
+<li><a href="#orgd4fffe9">4.2. DeepSeek (R1 / V3)**</a></li>
+<li><a href="#org0e32d29">4.3. Gemini (2.0 / Pro)**</a></li>
+<li><a href="#org74046f4">4.4. Grok 3 (xAI)**</a></li>
+</ul>
+</li>
+<li><a href="#orgc4f0736">5. Comparativa Resumida</a></li>
+<li><a href="#orgf57dd0c">6. Conclusión</a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-orgf840243" class="outline-2">
+<h2 id="orgf840243"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+La IA generativa es una categoría de inteligencia artificial que crea contenido nuevo (texto, imágenes, código, etc.) a partir de datos de entrenamiento, utilizando modelos de aprendizaje profundo como transformers o sistemas de mezcla de expertos (MoE). Este documento define sus capacidades, características y compara los modelos líderes: OpenAI (GPT-4o/o1), DeepSeek (R1/V3), Gemini (2.0/Pro) y Grok 3 de xAI, con una valoración de 1 a 10.
+</p>
+</div>
+</div>
+<div id="outline-container-org7e93686" class="outline-2">
+<h2 id="org7e93686"><span class="section-number-2">2.</span> Capacidades de la IA Generativa</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+La IA generativa tiene las siguientes capacidades generales:
+</p>
+<ul class="org-ul">
+<li><b><b>Generación de texto</b></b>: Crear textos coherentes, desde respuestas conversacionales hasta ensayos.</li>
+<li><b><b>Razonamiento</b></b>: Resolver problemas paso a paso, especialmente en modelos avanzados.</li>
+<li><b><b>Multimodalidad</b></b>: Procesar y generar texto, imágenes, y otros datos (según el modelo).</li>
+<li><b><b>Búsqueda en tiempo real</b></b>: Acceder a información actualizada vía web (si está habilitado).</li>
+<li><b><b>Código</b></b>: Escribir, depurar y optimizar código en varios lenguajes.</li>
+<li><b><b>Personalización</b></b>: Adaptarse a necesidades específicas mediante fine-tuning o prompts.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6702df2" class="outline-2">
+<h2 id="org6702df2"><span class="section-number-2">3.</span> Características Comunes</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><b><b>Arquitectura</b></b>: Basada en transformers o MoE para eficiencia y escalabilidad.</li>
+<li><b><b>Entrenamiento</b></b>: Miles de millones de parámetros ajustados con grandes datasets.</li>
+<li><b><b>Velocidad</b></b>: Depende de la potencia computacional subyacente.</li>
+<li><b><b>Seguridad</b></b>: Filtros para evitar contenido dañino, con variaciones por modelo.</li>
+<li><b><b>Accesibilidad</b></b>: Disponible vía suscripción, API o código abierto (en algunos casos).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge017720" class="outline-2">
+<h2 id="orge017720"><span class="section-number-2">4.</span> Comparativa de Modelos</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgc0288b7" class="outline-3">
+<h3 id="orgc0288b7"><span class="section-number-3">4.1.</span> OpenAI (GPT-4o / o1)**</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Líder en IA conversacional, con GPT-4o como modelo multimodal y o1 especializado en razonamiento.</li>
+<li><b><b>Capacidades</b></b>:
+<ul class="org-ul">
+<li>Texto: Excelente en generación creativa y explicaciones detalladas.</li>
+<li>Razonamiento: o1 sobresale en matemática y lógica (87.5% en ARC-AGI con alto cómputo).</li>
+<li>Multimodalidad: GPT-4o procesa imágenes y texto; o1 no.</li>
+<li>Código: Muy competente, especialmente o1-mini para tareas técnicas.</li>
+</ul></li>
+<li><b><b>Características</b></b>:
+<ul class="org-ul">
+<li>Computación: Alta demanda (costosa).</li>
+<li>Velocidad: Rápida, pero razonamiento complejo puede ser lento.</li>
+<li>Seguridad: Fuerte, con filtros éticos estrictos.</li>
+<li>Costo: Alto ($20-$200/mes según plan).</li>
+</ul></li>
+<li><b><b>Valoración</b></b>: 9/10
+<ul class="org-ul">
+<li>Pros: Versatilidad, razonamiento avanzado, multimodalidad.</li>
+<li>Contras: Costo elevado, sesgo leve detectable.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd4fffe9" class="outline-3">
+<h3 id="orgd4fffe9"><span class="section-number-3">4.2.</span> DeepSeek (R1 / V3)**</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Modelo chino de bajo costo, con R1 enfocado en razonamiento y V3 como MoE de 671B parámetros.</li>
+<li><b><b>Capacidades</b></b>:
+<ul class="org-ul">
+<li>Texto: Respuestas concisas, menos creativas que competidores.</li>
+<li>Razonamiento: R1 compite con o1 en tareas técnicas, pero menos consistente (15-20% en ARC-AGI).</li>
+<li>Multimodalidad: Solo texto.</li>
+<li>Código: Muy fuerte, a veces supera a GPT-4.</li>
+</ul></li>
+<li><b><b>Características</b></b>:
+<ul class="org-ul">
+<li>Computación: Eficiente (37B parámetros activos en V3).</li>
+<li>Velocidad: Rápida para tareas simples.</li>
+<li>Seguridad: Vulnerable (exposición de datos reportada).</li>
+<li>Costo: Muy bajo (47.6x más barato que Grok-2 por token).</li>
+</ul></li>
+<li><b><b>Valoración</b></b>: 7/10
+<ul class="org-ul">
+<li>Pros: Costo-eficiencia, buen razonamiento técnico.</li>
+<li>Contras: Seguridad débil, falta multimodalidad.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0e32d29" class="outline-3">
+<h3 id="org0e32d29"><span class="section-number-3">4.3.</span> Gemini (2.0 / Pro)**</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Modelo de Google, integrado con su ecosistema, con Gemini 2.0 Pro como versión avanzada.</li>
+<li><b><b>Capacidades</b></b>:
+<ul class="org-ul">
+<li>Texto: Respuestas bien investigadas con fuentes verificables.</li>
+<li>Razonamiento: Competente, pero detrás de o1 y Grok 3 (80.5 en MMLU).</li>
+<li>Multimodalidad: Texto e imágenes, con integración en Google Workspace.</li>
+<li>Código: Bueno, pero no líder.</li>
+</ul></li>
+<li><b><b>Características</b></b>:
+<ul class="org-ul">
+<li>Computación: Eficiente, con acceso a infraestructura de Google.</li>
+<li>Velocidad: Variable según complejidad.</li>
+<li>Seguridad: Alta, alineada con políticas de Google.</li>
+<li>Costo: Moderado ($20/mes, incluye almacenamiento).</li>
+</ul></li>
+<li><b><b>Valoración</b></b>: 8/10
+<ul class="org-ul">
+<li>Pros: Integración con Google, multimodalidad sólida.</li>
+<li>Contras: Menor capacidad de razonamiento avanzado.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org74046f4" class="outline-3">
+<h3 id="org74046f4"><span class="section-number-3">4.4.</span> Grok 3 (xAI)**</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Último modelo de xAI, con énfasis en razonamiento y "búsqueda de la verdad".</li>
+<li><b><b>Capacidades</b></b>:
+<ul class="org-ul">
+<li>Texto: Respuestas detalladas, menos sesgadas políticamente.</li>
+<li>Razonamiento: Supera a Gemini y DeepSeek en benchmarks (52 en AIME’24, 75 en GPQA).</li>
+<li>Multimodalidad: Imagen y texto, con generación vía Aurora.</li>
+<li>Código: Excelente, competitivo con o1.</li>
+</ul></li>
+<li><b><b>Características</b></b>:
+<ul class="org-ul">
+<li>Computación: 10x más potente que Grok 2 (200,000 GPUs).</li>
+<li>Velocidad: Rápida, con modo "Big Brain" para tareas complejas.</li>
+<li>Seguridad: Moderada, prioriza respuestas sin censura.</li>
+<li>Costo: Alto ($30-$50/mes para Premium+).</li>
+</ul></li>
+<li><b><b>Valoración</b></b>: 9/10
+<ul class="org-ul">
+<li>Pros: Razonamiento líder, menos sesgo, multimodalidad.</li>
+<li>Contras: Costo elevado, acceso restringido.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc4f0736" class="outline-2">
+<h2 id="orgc4f0736"><span class="section-number-2">5.</span> Comparativa Resumida</h2>
+<div class="outline-text-2" id="text-5">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Modelo</th>
+<th scope="col" class="org-right">Razonamiento</th>
+<th scope="col" class="org-right">Texto Creativo</th>
+<th scope="col" class="org-right">Multimodalidad</th>
+<th scope="col" class="org-right">Código</th>
+<th scope="col" class="org-right">Costo</th>
+<th scope="col" class="org-right">Seguridad</th>
+<th scope="col" class="org-left">Valoración</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">OpenAI</td>
+<td class="org-right">9</td>
+<td class="org-right">9</td>
+<td class="org-right">8</td>
+<td class="org-right">9</td>
+<td class="org-right">6</td>
+<td class="org-right">8</td>
+<td class="org-left">9/10</td>
+</tr>
+
+<tr>
+<td class="org-left">DeepSeek</td>
+<td class="org-right">7</td>
+<td class="org-right">6</td>
+<td class="org-right">2</td>
+<td class="org-right">8</td>
+<td class="org-right">9</td>
+<td class="org-right">4</td>
+<td class="org-left">7/10</td>
+</tr>
+
+<tr>
+<td class="org-left">Gemini</td>
+<td class="org-right">7</td>
+<td class="org-right">8</td>
+<td class="org-right">8</td>
+<td class="org-right">7</td>
+<td class="org-right">7</td>
+<td class="org-right">9</td>
+<td class="org-left">8/10</td>
+</tr>
+
+<tr>
+<td class="org-left">Grok 3</td>
+<td class="org-right">9</td>
+<td class="org-right">8</td>
+<td class="org-right">7</td>
+<td class="org-right">9</td>
+<td class="org-right">5</td>
+<td class="org-right">7</td>
+<td class="org-left">9/10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgf57dd0c" class="outline-2">
+<h2 id="orgf57dd0c"><span class="section-number-2">6.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li><b><b>OpenAI (GPT-4o/o1)</b></b>: Ideal para usuarios que buscan versatilidad y razonamiento avanzado, aunque costoso.</li>
+<li><b><b>DeepSeek (R1/V3)</b></b>: Perfecto para tareas técnicas a bajo costo, pero con riesgos de seguridad.</li>
+<li><b><b>Gemini (2.0/Pro)</b></b>: Excelente para integración con Google y usuarios que valoran fuentes verificables.</li>
+<li><b><b>Grok 3</b></b>: Destaca en razonamiento y neutralidad, competitivo con OpenAI, pero limitado por costo y acceso.</li>
+</ul>
+
+<p>
+La elección depende de tus prioridades: costo (DeepSeek), razonamiento (Grok 3/OpenAI), o ecosistema (Gemini). Todos son líderes en sus áreas, pero Grok 3 y OpenAI sobresalen en capacidades generales al 26 de febrero de 2025.
+</p>
+
+<p style="text-align: center; font-size: 0.9em; color: #777;">
+<b>Explorando la IA generativa con precisión y curiosidad.</b>
+</p>
+
+<p>
+Nota: Generado por Grok
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-openai.html">openai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gemini.html">gemini</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-grok3.html">grok3</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-deepseek.html">deepseek</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-comparativa.html">comparativa</a> </div>]]></description>
+  <category><![CDATA[openai]]></category>
+  <category><![CDATA[gemini]]></category>
+  <category><![CDATA[grok3]]></category>
+  <category><![CDATA[deepseek]]></category>
+  <category><![CDATA[ai]]></category>
+  <category><![CDATA[comparativa]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-27-capacidades-y-comparativa-de-modelos-de-ia-generativa:-openai,-deepseek,-gemini-y-grok-3.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-27-capacidades-y-comparativa-de-modelos-de-ia-generativa:-openai,-deepseek,-gemini-y-grok-3.html</guid>
+  <pubDate>Thu, 27 Feb 2025 09:17:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Mi Blog con Emacs y Esteroides: Una Aventura Potenciada por Código y IA]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgd3ca18c">1. Bienvenidos a Mi Blog con Emacs y Esteroides</a></li>
+<li><a href="#org88fe291">2. Emacs: El Corazón de mi Flujo de Trabajo</a></li>
+<li><a href="#org826ec96">3. Esteroides: El Poder de la IA Generativa</a></li>
+<li><a href="#org9d52c4c">4. Un Blog con Alma y Tecnología</a></li>
+<li><a href="#orgca5e692">5. ¿Qué viene después?</a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-orgd3ca18c" class="outline-2">
+<h2 id="orgd3ca18c"><span class="section-number-2">1.</span> Bienvenidos a Mi Blog con Emacs y Esteroides</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+¡Hola, lector! Si has llegado hasta aquí, probablemente compartas mi pasión por la tecnología, el código y la libertad creativa que ofrecen herramientas como Emacs. Este blog, titulado <b>"Mi Blog con Emacs y Esteroides"</b>, no es solo un espacio para compartir ideas, sino una declaración en favor a un editor legendario y una exploración de cómo la inteligencia artificial generativa lo lleva a otro nivel. ¿Listo para el viaje? ¡Sube a bordo!
+</p>
+</div>
+</div>
+<div id="outline-container-org88fe291" class="outline-2">
+<h2 id="org88fe291"><span class="section-number-2">2.</span> Emacs: El Corazón de mi Flujo de Trabajo</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Cuando pienso en Emacs, no veo solo un editor de texto. Veo una navaja suiza digital, un compañero fiel que ha estado en los paquetes estándar de Linux desde tiempos inmemoriales. No es una herramienta pasajera ni una moda; es un pilar de la cultura del software libre, robusto y flexible como pocos. Lo uso para todo: desde escribir código en Python o Lisp hasta tomar notas en Org-mode (¡como este post!), gestionar mi correo con Gnus o incluso relajarme jugando un poco de Tetris cuando el día se pone duro.
+</p>
+
+<p>
+Mi interés por Emacs nació de su promesa de control total. En un mundo lleno de interfaces rígidas, Emacs me deja moldearlo a mi gusto. ¿Quieres un atajo nuevo? Lo configuras. ¿Una función personalizada? La escribes. ¿Un entorno de escritura que se adapte a tus rarezas? Org-mode te cubre. Y lo mejor: está ahí, listo para instalarse con un simple `sudo apt install emacs` en mi distribución Linux favorita. Es como si el universo del software libre me dijera: "Aquí tienes las llaves, conduce tú".
+</p>
+</div>
+</div>
+<div id="outline-container-org826ec96" class="outline-2">
+<h2 id="org826ec96"><span class="section-number-2">3.</span> Esteroides: El Poder de la IA Generativa</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Pero, ¿qué pasa con lo de "Esteroides"? Aquí es donde la cosa se pone emocionante. No me conformo con un Emacs estándar (por muy poderoso que sea). He decidido inyectarle una dosis de esteroides digitales mediante la IA generativa. ¿Qué significa esto? Que uso herramientas como modelos de lenguaje avanzados para acelerar mi configuración de Emacs y generar contenido con una chispa extra.
+</p>
+
+<p>
+Por ejemplo, ¿necesito un script en Emacs Lisp para crear múltiples buffers scratch? En lugar de pasar horas depurando, le pido a la IA que me dé una base sólida y luego la ajusto a mi gusto. ¿Quiero un diseño personalizado para `org-static-blog` (la magia detrás de este sitio)? La IA me ayuda a generar CSS elegante y funcional en minutos. Y cuando se trata de escribir, como este mismo post, la IA me asiste con ideas, estructuras y hasta un toque de estilo, dejándome libre para enfocarme en lo que importa: mis pensamientos.
+</p>
+
+<p>
+Los "esteroides" son esa capa de potencia que transforma Emacs de un editor excelente a un compañero creativo imparable. Es como si le pusiera un motor turbo a una bicicleta clásica: sigue siendo la misma máquina que amo, pero ahora vuela.
+</p>
+</div>
+</div>
+<div id="outline-container-org9d52c4c" class="outline-2">
+<h2 id="org9d52c4c"><span class="section-number-2">4.</span> Un Blog con Alma y Tecnología</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Este blog es el resultado de esa combinación. Aquí encontrarás reflexiones sobre Emacs, tutoriales para sacarle el máximo provecho, y experimentos con IA generativa que dan vida a mis palabras. Uso `org-static-blog` para publicar todo desde archivos Org-mode, lo que significa que cada post empieza como un documento vivo en mi Emacs, lleno de notas, enlaces y ajustes, antes de convertirse en las páginas que ves.
+</p>
+
+<p>
+¿Por qué "Mi Blog con Emacs y Esteroides"? Porque refleja mi viaje: un editor clásico que nunca envejece, potenciado por las herramientas del futuro. Es mi rincón para compartir, aprender y, con suerte, inspirar a otros a explorar este universo de posibilidades.
+</p>
+</div>
+</div>
+<div id="outline-container-orgca5e692" class="outline-2">
+<h2 id="orgca5e692"><span class="section-number-2">5.</span> ¿Qué viene después?</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Si te apasiona Emacs, Linux, o la IA, este es tu lugar. Próximamente hablaré de cómo configuro mi `init.el` con ayuda de IA, trucos de Org-mode para la productividad, y quizás alguna locura como generar poesía con Lisp y modelos de lenguaje. ¿Tienes ideas o sugerencias? Escríbeme a <a href="mailto:mybloggingnotes@gmail.com">mybloggingnotes@gmail.com</a>; este blog también es un diálogo.
+</p>
+
+<p>
+Así que, ponte cómodo, abre tu Emacs (o instálalo si aún no lo tienes), y acompáñame en esta aventura. ¡Con Emacs y un toque de esteroides, el límite es nuestra imaginación!
+</p>
+
+<p style="text-align: center; font-size: 0.9em; color: #777;">
+<b>Escrito desde Emacs, potenciado por IA, y publicado con `org-static-blog`.</b>
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-blogging.html">blogging</a> </div>]]></description>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[blogging]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-mi-blog-con-emacs-y-esteroides:-una-aventura-potenciada-por-c%C3%B3digo-y-ia.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-mi-blog-con-emacs-y-esteroides:-una-aventura-potenciada-por-c%C3%B3digo-y-ia.html</guid>
+  <pubDate>Wed, 26 Feb 2025 15:16:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Gestionando Dos Blogs Diferentes con org-static-blog en Emacs]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org08fa035">1. Introducción</a></li>
+<li><a href="#org2885900">2. Estrategia general</a></li>
+<li><a href="#org552de5a">3. Configuración inicial</a></li>
+<li><a href="#org7b7a785">4. Configurar las variables para cada blog</a>
+<ul>
+<li><a href="#orgd9d55d9">4.1. Post para el Blog Personal (~/blog-personal/posts/2025-02-25-viaje.org):</a></li>
+</ul>
+</li>
+<li><a href="#org133bd13">5. Reflexiones</a>
+<ul>
+<li><a href="#orgbd55436">5.1. Post para el Blog Profesional (~/blog-profesional/posts/2025-02-25-proyecto.org):</a></li>
+</ul>
+</li>
+<li><a href="#org0ed26af">6. Detalles</a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-org08fa035" class="outline-2">
+<h2 id="org08fa035"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+`org-static-blog` es una herramienta poderosa para crear blogs estáticos desde Emacs, pero por defecto está diseñada para manejar un solo blog. Si quieres trabajar con dos blogs diferentes (por ejemplo, uno personal y otro profesional), necesitas ajustar tu configuración en Emacs 28 para que soporte múltiples instancias. En este artículo, te guiaré paso a paso para lograrlo.
+</p>
+</div>
+</div>
+<div id="outline-container-org2885900" class="outline-2">
+<h2 id="org2885900"><span class="section-number-2">2.</span> Estrategia general</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+La clave para manejar dos blogs con `org-static-blog` es usar configuraciones separadas para cada uno, almacenadas en variables distintas, y luego alternar entre ellas según el blog que estés editando o publicando. Esto implica:
+</p>
+<ul class="org-ul">
+<li>Tener directorios separados para posts y publicaciones.</li>
+<li>Definir plantillas y parámetros específicos por blog.</li>
+<li>Usar funciones personalizadas en Emacs para cambiar entre configuraciones.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org552de5a" class="outline-2">
+<h2 id="org552de5a"><span class="section-number-2">3.</span> Configuración inicial</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Primero, asegúrate de tener `org-static-blog` instalado en Emacs 28 (instálalo con `M-x package-install RET org-static-blog` si no lo has hecho). Luego, organiza tus directorios. Por ejemplo:
+</p>
+<ul class="org-ul">
+<li>Blog 1 (personal): `~/blog-personal/`</li>
+<li>Blog 2 (profesional): `~/blog-profesional/`</li>
+</ul>
+
+<p>
+Dentro de cada directorio, crea subdirectorios para posts y publicaciones:
+</p>
+<ul class="org-ul">
+<li>`~/blog-personal/posts/` y `~/blog-personal/public/`</li>
+<li>`~/blog-profesional/posts/` y `~/blog-profesional/public/`</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7b7a785" class="outline-2">
+<h2 id="org7b7a785"><span class="section-number-2">4.</span> Configurar las variables para cada blog</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+En tu `init.el`, define las configuraciones de ambos blogs usando variables personalizadas. Aquí un ejemplo:
+</p>
+
+<p>
+```emacs-lisp
+;; Configuración para Blog Personal
+(defvar my-blog-personal-settings
+  '((org-static-blog-publish-title . "Blog Personal")
+    (org-static-blog-publish-url . "<a href="https://mi-blog-personal.com/">https://mi-blog-personal.com/</a>")
+    (org-static-blog-publish-directory . "~/blog-personal/public/")
+    (org-static-blog-posts-directory . "~/blog-personal/posts/")
+    (org-static-blog-drafts-directory . "~/blog-personal/drafts/")
+    (org-static-blog-page-header . "&lt;h1&gt;Mi Blog Personal&lt;/h1&gt;")
+    (org-static-blog-post-template . "&lt;h1&gt;%title&lt;/h1&gt;&lt;div&gt;%date&lt;/div&gt;%content")))
+</p>
+
+<p>
+;; Configuración para Blog Profesional
+(defvar my-blog-pro-settings
+  '((org-static-blog-publish-title . "Blog Profesional")
+    (org-static-blog-publish-url . "<a href="https://mi-blog-pro.com/">https://mi-blog-pro.com/</a>")
+    (org-static-blog-publish-directory . "~/blog-profesional/public/")
+    (org-static-blog-posts-directory . "~/blog-profesional/posts/")
+    (org-static-blog-drafts-directory . "~/blog-profesional/drafts/")
+    (org-static-blog-page-header . "&lt;h1&gt;Trabajo y Tecnología&lt;/h1&gt;")
+    (org-static-blog-post-template . "&lt;h1&gt;%title&lt;/h1&gt;&lt;div&gt;%date&lt;/div&gt;&lt;div&gt;Por un experto&lt;/div&gt;%content")))
+</p>
+
+<p>
+Cada lista asociativa define las variables esenciales de org-static-blog para un blog específico.
+</p>
+
+<p>
+Crear funciones para alternar configuraciones Necesitas una manera de aplicar la configuración correcta antes de trabajar en un blog. Define funciones en tu init.el para esto:
+</p>
+
+<p>
+emacs
+(defun my-set-blog-personal ()
+  "Activa la configuración del blog personal."
+  (interactive)
+  (dolist (setting my-blog-personal-settings)
+    (set (car setting) (cdr setting)))
+  (message "Configuración del Blog Personal activada"))
+</p>
+
+<p>
+(defun my-set-blog-pro ()
+  "Activa la configuración del blog profesional."
+  (interactive)
+  (dolist (setting my-blog-pro-settings)
+    (set (car setting) (cdr setting)))
+  (message "Configuración del Blog Profesional activada"))
+</p>
+
+<p>
+M-x my-set-blog-personal configura Emacs para trabajar con el blog personal.
+M-x my-set-blog-pro hace lo mismo para el blog profesional.
+</p>
+
+<p>
+Crear posts para cada blog Ahora puedes crear posts en los directorios correspondientes. Por ejemplo:
+</p>
+</div>
+<div id="outline-container-orgd9d55d9" class="outline-3">
+<h3 id="orgd9d55d9"><span class="section-number-3">4.1.</span> Post para el Blog Personal (~/blog-personal/posts/2025-02-25-viaje.org):</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+org
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org133bd13" class="outline-2">
+<h2 id="org133bd13"><span class="section-number-2">5.</span> Reflexiones</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Hoy escribo sobre un viaje reciente que hice&#x2026;
+</p>
+</div>
+<div id="outline-container-orgbd55436" class="outline-3">
+<h3 id="orgbd55436"><span class="section-number-3">5.1.</span> Post para el Blog Profesional (~/blog-profesional/posts/2025-02-25-proyecto.org):</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+org
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org0ed26af" class="outline-2">
+<h2 id="org0ed26af"><span class="section-number-2">6.</span> Detalles</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Este post detalla un proyecto técnico en el que estoy trabajando&#x2026;
+</p>
+
+<p>
+Publicar cada blog Para publicar:
+</p>
+
+<p>
+Activa la configuración del blog deseado:
+    M-x my-set-blog-personal para el personal.
+    M-x my-set-blog-pro para el profesional.
+Publica:
+    M-x org-static-blog-publish-file RET para un archivo específico.
+    M-x org-static-blog-publish para regenerar todo el blog.
+</p>
+
+<p>
+Los archivos HTML se generarán en el directorio public/ correspondiente a cada blog.
+</p>
+
+<p>
+Personalizar aún más (opcional)
+</p>
+
+<p>
+Tags por blog: Usa #+TAGS: en los posts de cada blog según tus necesidades (como expliqué en mi respuesta anterior).
+Estilos CSS: Añade un archivo CSS diferente en cada org-static-blog-page-header para distinguir visualmente los blogs.
+Atajos de teclado: Asigna las funciones a teclas para mayor rapidez, por ejemplo:
+emacs
+</p>
+
+<p>
+(global-set-key (kbd "C-c b p") 'my-set-blog-personal)
+(global-set-key (kbd "C-c b r") 'my-set-blog-pro)
+</p>
+
+<p>
+Solución de problemas
+</p>
+
+<p>
+Configuración no cambia: Verifica que las funciones my-set-blog-* estén actualizando las variables correctamente (usa C-h v org-static-blog-publish-directory para inspeccionar).
+Posts mezclados: Asegúrate de que los directorios de posts sean distintos y que actives la configuración correcta antes de publicar.
+Errores de publicación: Confirma que los directorios existen y tienen permisos adecuados.
+</p>
+
+<p>
+Conclusión Con este método, puedes gestionar dos blogs diferentes en org-static-blog desde Emacs 28 sin conflictos. Alternar entre configuraciones con funciones personalizadas te da flexibilidad y mantiene todo organizado. Es una solución práctica para quienes, como yo, queremos separar temas personales y profesionales sin abandonar nuestro flujo de trabajo en Org-mode. ¿Qué nombres le pondrías a tus dos blogs?
+TODO Próximos pasos
+</p>
+
+<p>
+Probar publicar ambos blogs en un solo comando con un script Elisp.
+Añadir un indicador visual en Emacs para saber qué blog está activo.
+Explorar cómo sincronizar cada blog con un repositorio Git diferente.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-blogging.html">blogging</a> </div>]]></description>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[blogging]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-gestionando-dos-blogs-diferentes-con-org-static-blog-en-emacs.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-gestionando-dos-blogs-diferentes-con-org-static-blog-en-emacs.html</guid>
+  <pubDate>Wed, 26 Feb 2025 08:37:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Explorando Grok 3: Una IA Innovadora de xAI]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org8aa8ae3">1. Introducción a Grok 3</a></li>
+<li><a href="#org0e3a660">2. Ventajas de Grok 3</a>
+<ul>
+<li><a href="#orgd236c64">2.1. Conocimiento actualizado y flexible</a></li>
+<li><a href="#org54530e8">2.2. Herramientas adicionales para análisis</a></li>
+<li><a href="#org0d99d56">2.3. Respuestas naturales y adaptadas</a></li>
+<li><a href="#orgee925f2">2.4. Enfoque ético en temas delicados</a></li>
+</ul>
+</li>
+<li><a href="#org44287c1">3. Inconvenientes de Grok 3</a>
+<ul>
+<li><a href="#orgcf50e42">3.1. Dependencia del contexto proporcionado</a></li>
+<li><a href="#orge0e29bb">3.2. Limitaciones en generación de imágenes</a></li>
+<li><a href="#orge41b4b9">3.3. Recursos y accesibilidad</a></li>
+</ul>
+</li>
+<li><a href="#orgad5417b">4. Detalles de interés</a>
+<ul>
+<li><a href="#org786ee96">4.1. Integración con el ecosistema xAI</a></li>
+<li><a href="#orgfcf19a2">4.2. Potencial para usuarios técnicos</a></li>
+<li><a href="#org7cb8ee2">4.3. Enfoque en la privacidad</a></li>
+</ul>
+</li>
+<li><a href="#orgf39d10e">5. Conclusión</a></li>
+<li><a href="#org0f04b52">6. <span class="todo TODO">TODO</span> Próximos pasos</a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-org8aa8ae3" class="outline-2">
+<h2 id="org8aa8ae3"><span class="section-number-2">1.</span> Introducción a Grok 3</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Grok 3 es la tercera iteración de un modelo de inteligencia artificial desarrollado por xAI, una empresa enfocada en acelerar el descubrimiento científico humano. Diseñado para ser una herramienta versátil, Grok 3 promete asistir a los usuarios en una amplia gama de tareas, desde responder preguntas complejas hasta analizar contenido en línea. En este post, exploraremos sus características, ventajas, inconvenientes y algunos detalles que podrían interesar a quienes usamos herramientas como Emacs en Linux.
+</p>
+</div>
+</div>
+<div id="outline-container-org0e3a660" class="outline-2">
+<h2 id="org0e3a660"><span class="section-number-2">2.</span> Ventajas de Grok 3</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Grok 3 destaca por varias razones que lo hacen un compañero útil tanto para usuarios casuales como para aquellos con intereses más técnicos. Aquí algunas de sus fortalezas:
+</p>
+</div>
+<div id="outline-container-orgd236c64" class="outline-3">
+<h3 id="orgd236c64"><span class="section-number-3">2.1.</span> Conocimiento actualizado y flexible</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+A diferencia de otros modelos de IA que tienen un punto de corte en su base de conocimiento, Grok 3 parece tener una capacidad notable para mantenerse al día. Esto lo hace ideal para temas que evolucionan rápidamente, como tecnología o ciencia. Por ejemplo, hoy, 25 de febrero de 2025, puedo preguntarle sobre las últimas tendencias en Linux y esperar una respuesta relevante.
+</p>
+</div>
+</div>
+<div id="outline-container-org54530e8" class="outline-3">
+<h3 id="org54530e8"><span class="section-number-3">2.2.</span> Herramientas adicionales para análisis</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Una de las características más interesantes es su capacidad para analizar perfiles de usuarios en redes sociales, publicaciones y hasta contenido multimedia como imágenes o PDFs. Esto podría ser útil para investigadores o cualquier persona que necesite desentrañar información en línea de manera rápida y precisa.
+</p>
+</div>
+</div>
+<div id="outline-container-org0d99d56" class="outline-3">
+<h3 id="org0d99d56"><span class="section-number-3">2.3.</span> Respuestas naturales y adaptadas</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Grok 3 tiene un tono conversacional que se siente menos robótico que otros modelos. Puede ajustar sus respuestas según el contexto, lo que lo hace agradable de usar. Como alguien que pasa tiempo en Emacs, aprecio que pueda formatear texto en Org-mode sin complicaciones, como este mismo post.
+</p>
+</div>
+</div>
+<div id="outline-container-orgee925f2" class="outline-3">
+<h3 id="orgee925f2"><span class="section-number-3">2.4.</span> Enfoque ético en temas delicados</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+El modelo tiene límites claros en cuestiones éticas. Por ejemplo, si le pregunto quién merece un castigo extremo, me responde que no está autorizado para tomar ese tipo de decisiones. Esto refleja un diseño responsable, algo que valoro en una IA.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org44287c1" class="outline-2">
+<h2 id="org44287c1"><span class="section-number-2">3.</span> Inconvenientes de Grok 3</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Como cualquier tecnología, Grok 3 no está exento de limitaciones. Aquí algunos puntos que podrían ser considerados desventajas:
+</p>
+</div>
+<div id="outline-container-orgcf50e42" class="outline-3">
+<h3 id="orgcf50e42"><span class="section-number-3">3.1.</span> Dependencia del contexto proporcionado</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Aunque es versátil, Grok 3 depende en gran medida de la claridad de las instrucciones del usuario. Si no especifico que quiero algo en formato Org-mode, por ejemplo, podría darme una respuesta genérica en texto plano. Esto requiere que el usuario sea preciso, lo cual no siempre es intuitivo.
+</p>
+</div>
+</div>
+<div id="outline-container-orge0e29bb" class="outline-3">
+<h3 id="orge0e29bb"><span class="section-number-3">3.2.</span> Limitaciones en generación de imágenes</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Si quiero una imagen, Grok 3 no la genera directamente; primero me pide confirmación. Además, solo puede editar imágenes que haya creado previamente, lo que limita su utilidad en comparación con otros modelos más enfocados en multimedia.
+</p>
+</div>
+</div>
+<div id="outline-container-orge41b4b9" class="outline-3">
+<h3 id="orge41b4b9"><span class="section-number-3">3.3.</span> Recursos y accesibilidad</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Aunque no tengo datos específicos sobre su infraestructura, modelos como Grok 3 suelen requerir una conexión constante a servidores potentes. Para alguien en una distro ligera de Linux con recursos limitados, esto podría ser un inconveniente si no hay una versión local disponible.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgad5417b" class="outline-2">
+<h2 id="orgad5417b"><span class="section-number-2">4.</span> Detalles de interés</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Hay algunos aspectos adicionales que hacen de Grok 3 una IA intrigante:
+</p>
+</div>
+<div id="outline-container-org786ee96" class="outline-3">
+<h3 id="org786ee96"><span class="section-number-3">4.1.</span> Integración con el ecosistema xAI</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Dado que xAI está detrás de su desarrollo, Grok 3 parece estar alineado con una misión más amplia de avanzar en el conocimiento humano. Esto podría significar futuras integraciones con herramientas científicas o plataformas de código abierto, algo que me encantaría ver en mi flujo de trabajo con Emacs.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfcf19a2" class="outline-3">
+<h3 id="orgfcf19a2"><span class="section-number-3">4.2.</span> Potencial para usuarios técnicos</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Para quienes usamos Linux y herramientas como Emacs, Grok 3 podría convertirse en un asistente valioso. Imagina pedirle que genere un script en Bash o que organice notas en Org-mode automáticamente. Aunque aún no exploro todo su potencial, las posibilidades son emocionantes.
+</p>
+</div>
+</div>
+<div id="outline-container-org7cb8ee2" class="outline-3">
+<h3 id="org7cb8ee2"><span class="section-number-3">4.3.</span> Enfoque en la privacidad</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+No está claro cómo maneja los datos de los usuarios, pero su capacidad para analizar contenido subido (como PDFs o imágenes) sugiere que xAI ha considerado la utilidad para tareas locales. Sería ideal que ofrecieran más transparencia sobre este tema.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf39d10e" class="outline-2">
+<h2 id="orgf39d10e"><span class="section-number-2">5.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Grok 3 es un modelo de IA prometedor con un equilibrio entre funcionalidad avanzada y responsabilidad ética. Sus ventajas, como el conocimiento actualizado y la capacidad de análisis, lo hacen atractivo para usuarios curiosos y técnicos por igual. Sin embargo, sus limitaciones, como la dependencia del contexto y las restricciones en la generación de imágenes, indican que aún hay espacio para mejorar. Como usuario de Linux y Emacs, veo en Grok 3 una herramienta con potencial para integrarse en mi día a día, siempre que siga evolucionando. ¿Qué opinas tú?
+</p>
+</div>
+</div>
+<div id="outline-container-org0f04b52" class="outline-2">
+<h2 id="org0f04b52"><span class="section-number-2">6.</span> <span class="todo TODO">TODO</span> Próximos pasos</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Probar Grok 3 con un script en Bash para automatizar tareas en Emacs.</li>
+<li class="off"><code>[&#xa0;]</code> Investigar más sobre las herramientas de análisis de contenido y cómo usarlas éticamente.</li>
+<li class="off"><code>[&#xa0;]</code> Preguntar a Grok 3 cómo optimizar mi configuración de Emacs 28 en Linux.</li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-grok3.html">grok3</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> </div>]]></description>
+  <category><![CDATA[grok3]]></category>
+  <category><![CDATA[ia]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-explorando-grok-3:-una-ia-innovadora-de-xai.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-explorando-grok-3:-una-ia-innovadora-de-xai.html</guid>
+  <pubDate>Wed, 26 Feb 2025 08:30:00 +0100</pubDate>
 </item>
 </channel>
 </rss>

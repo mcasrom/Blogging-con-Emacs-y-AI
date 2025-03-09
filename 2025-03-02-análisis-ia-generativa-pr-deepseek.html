@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Análisis Modelos de IA Generativa por Deepseek">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Análisis IA Generativa pr DeepSeek</title>
+<meta charset='UTF-8'>
+       <link rel='stylesheet' href='/Blogging-con-Emacs-y-AI/pagefind/pagefind-ui.css'>
+       <style>
+         body {
+           font-family: 'Arial', sans-serif;
+           line-height: 1.6;
+           color: #333;
+           max-width: 800px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f5f5f5;
+         }
+         h1, h2, h3 {
+           color: #2c3e50;
+           font-family: 'Helvetica', sans-serif;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           padding: 20px 0;
+           background: linear-gradient(to right, #3498db, #2980b9);
+           color: white;
+           border-radius: 8px;
+           box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+         }
+         .blog-header img {
+           height: 50px;
+           margin-right: 20px;
+         }
+         .blog-header h1 {
+           margin: 0;
+           font-size: 2.5em;
+         }
+         .blog-header span {
+           font-size: 0.9em;
+           font-style: italic;
+           display: block;
+           margin-top: 5px;
+         }
+         .blog-header a {
+           color: #ecf0f1;
+           text-decoration: none;
+         }
+         .blog-header a:hover {
+           color: #dfe6e9;
+           text-decoration: underline;
+         }
+         hr {
+           border: 0;
+           height: 1px;
+           background: #ddd;
+           margin: 20px 0;
+         }
+         .post {
+           background: white;
+           padding: 20px;
+           margin-bottom: 20px;
+           border-radius: 8px;
+           box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+         }
+         a {
+           color: #2980b9;
+           text-decoration: none;
+         }
+         a:hover {
+           text-decoration: underline;
+         }
+         .footer-hr {
+           border: 0;
+           height: 4px;
+           background: #888;
+           margin: 30px 0 20px 0;
+         }
+       </style>
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div>
+           <h1>Mi Blog con Emacs y Esteroides</h1>
+           <span><a href='mailto:mybloggingnotes@gmail.com'>Blogging by M. Castillo</a></span>
+         </div>
+       </div>
+       <hr></head>
+<body>
+<div id="preamble" class="status"><div id='preamble' class='status'>
+         <p><a href='index.html'>Inicio</a> | <a href='tags.html'>Tags</a> | <a href='archive.html'>Archivo</a></p>
+         <div id='search-container' style='margin: 20px;'>
+           <h2>Buscar en los Posts</h2>
+           <div id='search'></div>
+         </div>
+       </div></div>
+<div id="content">
+<div class="post-date">02/03/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-02-análisis-ia-generativa-pr-deepseek.html">Análisis IA Generativa pr DeepSeek</a></h1>
+<div id="outline-container-orgb5539fd" class="outline-2">
+<h2 id="orgb5539fd">INTRODUCCIÓN</h2>
+<div class="outline-text-2" id="text-orgb5539fd">
+</div>
+<div id="outline-container-orgdde2572" class="outline-3">
+<h3 id="orgdde2572">Objetivo</h3>
+<div class="outline-text-3" id="text-orgdde2572">
+<p>
+Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gemini Ultra (Google) y Grok-3 (xAI), evaluando sus capacidades técnicas, rendimiento práctico y viabilidad comercial.  
+</p>
+</div>
+</div>
+<div id="outline-container-orgad25cd8" class="outline-3">
+<h3 id="orgad25cd8">Metodología</h3>
+<div class="outline-text-3" id="text-orgad25cd8">
+<ul class="org-ul">
+<li>Revisión de papers técnicos (2023-2024).</li>
+<li>Pruebas con prompts estandarizados (texto, código, razonamiento).</li>
+<li>Análisis de costes y escalabilidad.</li>
+<li>Comparación con benchmarks públicos (e.g., MMLU, HumanEval).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgac281d4" class="outline-2">
+<h2 id="orgac281d4">ESPECIFICACIONES TÉCNICAS</h2>
+<div class="outline-text-2" id="text-orgac281d4">
+</div>
+<div id="outline-container-org9b44577" class="outline-3">
+<h3 id="org9b44577">Parámetros Clave por Modelo</h3>
+<div class="outline-text-3" id="text-org9b44577">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Modelo</th>
+<th scope="col" class="org-left">Arquitectura</th>
+<th scope="col" class="org-left">Parámetros (aprox)</th>
+<th scope="col" class="org-left">Entrenamiento (Tokens)</th>
+<th scope="col" class="org-left">Contexto Ventana</th>
+<th scope="col" class="org-left">Multimodalidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">GPT-4</td>
+<td class="org-left">Transformer Mixto</td>
+<td class="org-left">1.8 billones</td>
+<td class="org-left">13T</td>
+<td class="org-left">128k</td>
+<td class="org-left">Texto + DALL·E</td>
+</tr>
+
+<tr>
+<td class="org-left">DeepSeek-MoE</td>
+<td class="org-left">Mixture of Experts</td>
+<td class="org-left">145 billones</td>
+<td class="org-left">8T</td>
+<td class="org-left">32k</td>
+<td class="org-left">Texto/Código</td>
+</tr>
+
+<tr>
+<td class="org-left">Gemini Ultra</td>
+<td class="org-left">Multimodal nativo</td>
+<td class="org-left">1.2 billones</td>
+<td class="org-left">10T</td>
+<td class="org-left">1M</td>
+<td class="org-left">Texto/Img/Audio</td>
+</tr>
+
+<tr>
+<td class="org-left">Grok-3</td>
+<td class="org-left">Sparse Transformer</td>
+<td class="org-left">314 billones*</td>
+<td class="org-left">6T*</td>
+<td class="org-left">64k</td>
+<td class="org-left">Texto</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<b>Notas</b>:  
+</p>
+<ul class="org-ul">
+<li>Grok-3: Datos estimados (xAI no publica detalles técnicos completos).</li>
+<li>Gemini: Mayor ventana de contexto gracias a arquitectura "Ring Attention".</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5b6b0d7" class="outline-2">
+<h2 id="org5b6b0d7">COMPARATIVA DETALLADA (1-10)</h2>
+<div class="outline-text-2" id="text-org5b6b0d7">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Criterio \ Modelo</th>
+<th scope="col" class="org-right">GPT-4</th>
+<th scope="col" class="org-right">DeepSeek</th>
+<th scope="col" class="org-right">Gemini</th>
+<th scope="col" class="org-right">Grok-3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b><b>Calidad de Texto</b></b></td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">- Coherencia</td>
+<td class="org-right">9.7</td>
+<td class="org-right">8.5</td>
+<td class="org-right">9.2</td>
+<td class="org-right">8.0</td>
+</tr>
+
+<tr>
+<td class="org-left">- Precisión factual</td>
+<td class="org-right">9.0</td>
+<td class="org-right">7.8</td>
+<td class="org-right">8.7</td>
+<td class="org-right">7.5</td>
+</tr>
+
+<tr>
+<td class="org-left">- Fluidez estilística</td>
+<td class="org-right">9.5</td>
+<td class="org-right">8.0</td>
+<td class="org-right">8.9</td>
+<td class="org-right">8.5</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Código</b></b></td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">- Funcionalidad</td>
+<td class="org-right">9.2</td>
+<td class="org-right">9.5</td>
+<td class="org-right">8.8</td>
+<td class="org-right">7.0</td>
+</tr>
+
+<tr>
+<td class="org-left">- Optimización</td>
+<td class="org-right">8.5</td>
+<td class="org-right">9.8</td>
+<td class="org-right">8.0</td>
+<td class="org-right">6.5</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Multimodalidad</b></b></td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">- Integración</td>
+<td class="org-right">8.5*</td>
+<td class="org-right">5.0</td>
+<td class="org-right">9.8</td>
+<td class="org-right">4.0</td>
+</tr>
+
+<tr>
+<td class="org-left">- Sincronización</td>
+<td class="org-right">7.0</td>
+<td class="org-right">N/A</td>
+<td class="org-right">9.5</td>
+<td class="org-right">N/A</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Eficiencia</b></b></td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">- Tokens/segundo</td>
+<td class="org-right">7.5</td>
+<td class="org-right">9.3</td>
+<td class="org-right">8.0</td>
+<td class="org-right">7.8</td>
+</tr>
+
+<tr>
+<td class="org-left">- Coste/1M tokens (USD)</td>
+<td class="org-right">30</td>
+<td class="org-right">12</td>
+<td class="org-right">25</td>
+<td class="org-right">18</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Ética</b></b></td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">- Transparencia</td>
+<td class="org-right">8.0</td>
+<td class="org-right">7.5</td>
+<td class="org-right">6.5</td>
+<td class="org-right">5.0</td>
+</tr>
+
+<tr>
+<td class="org-left">- Mitigación de sesgos</td>
+<td class="org-right">8.5</td>
+<td class="org-right">7.0</td>
+<td class="org-right">7.8</td>
+<td class="org-right">6.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgc10c780" class="outline-2">
+<h2 id="orgc10c780">ANÁLISIS POR MODELO</h2>
+<div class="outline-text-2" id="text-orgc10c780">
+</div>
+<div id="outline-container-org2eb63bb" class="outline-3">
+<h3 id="org2eb63bb">GPT-4 (OpenAI)</h3>
+<div class="outline-text-3" id="text-org2eb63bb">
+</div>
+<div id="outline-container-orgf3407ce" class="outline-4">
+<h4 id="orgf3407ce">Ventajas</h4>
+<div class="outline-text-4" id="text-orgf3407ce">
+<ul class="org-ul">
+<li>Soporta plugins para matemáticas (Wolfram), búsquedas (Bing) y código (Code Interpreter).</li>
+<li>Fine-tuning avanzado para casos empresariales.</li>
+<li>Comunidad activa y documentación detallada.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0c55deb" class="outline-4">
+<h4 id="org0c55deb">Desventajas</h4>
+<div class="outline-text-4" id="text-org0c55deb">
+<ul class="org-ul">
+<li>Coste elevado para alto volumen (~$6 por millón tokens en entrada).</li>
+<li>Sin multimodalidad nativa (depende de DALL·E 3).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6ee95a4" class="outline-3">
+<h3 id="org6ee95a4">DeepSeek-MoE</h3>
+<div class="outline-text-3" id="text-org6ee95a4">
+</div>
+<div id="outline-container-orgf011f24" class="outline-4">
+<h4 id="orgf011f24">Casos de Uso Ideales</h4>
+<div class="outline-text-4" id="text-orgf011f24">
+<ul class="org-ul">
+<li>Generación de código Python/JavaScript con bajo consumo de recursos.</li>
+<li>Automatización de scripts para DevOps.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org56b9ad2" class="outline-4">
+<h4 id="org56b9ad2">Limitaciones</h4>
+<div class="outline-text-4" id="text-org56b9ad2">
+<ul class="org-ul">
+<li>Rendimiento pobre en español (precisión ~68% vs 92% en inglés).</li>
+<li>No soporta integración con APIs multimedia.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9960b17" class="outline-3">
+<h3 id="org9960b17">Gemini Ultra</h3>
+<div class="outline-text-3" id="text-org9960b17">
+</div>
+<div id="outline-container-org6e33c92" class="outline-4">
+<h4 id="org6e33c92">Fortalezas Multimodales</h4>
+<div class="outline-text-4" id="text-org6e33c92">
+<ul class="org-ul">
+<li>Análisis de vídeo (extracción de frames + transcripción).</li>
+<li>Síntesis de audio multilingual (280+ idiomas).</li>
+<li>Integración nativa con Google Cloud (Vertex AI).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf4f7bc3" class="outline-4">
+<h4 id="orgf4f7bc3">Debilidades</h4>
+<div class="outline-text-4" id="text-orgf4f7bc3">
+<ul class="org-ul">
+<li>Inconsistencias en razonamiento lógico (ej: silogismos).</li>
+<li>Tiempos de respuesta variables en modo imagen.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcf6d865" class="outline-3">
+<h3 id="orgcf6d865">Grok-3</h3>
+<div class="outline-text-3" id="text-orgcf6d865">
+</div>
+<div id="outline-container-org0916553" class="outline-4">
+<h4 id="org0916553">Diferenciadores</h4>
+<div class="outline-text-4" id="text-org0916553">
+<ul class="org-ul">
+<li>Entrenado con datos de 𝕏 (Twitter) hasta Q1 2024.</li>
+<li>Modo "sarcasmo" configurable (único en el mercado).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2e50c4d" class="outline-4">
+<h4 id="org2e50c4d">Riesgos</h4>
+<div class="outline-text-4" id="text-org2e50c4d">
+<ul class="org-ul">
+<li>Alucinaciones frecuentes en temas técnicos (ej: código).</li>
+<li>Políticas de uso restrictivas (solo disponible en 𝕏 Premium+).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org500eace" class="outline-2">
+<h2 id="org500eace">TAREAS PENDIENTES</h2>
+<div class="outline-text-2" id="text-org500eace">
+</div>
+<div id="outline-container-orgfc2677e" class="outline-3">
+<h3 id="orgfc2677e">Prioridad Alta</h3>
+<div class="outline-text-3" id="text-orgfc2677e">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Probar Gemini Ultra en análisis de vídeos educativos (deadline: 2024-05-25).</li>
+<li class="off"><code>[&#xa0;]</code> Comparar coste/rendimiento de DeepSeek vs. CodeLlama-70B (tag: #código).</li>
+<li class="off"><code>[&#xa0;]</code> Documentar políticas de ética de Grok-3 (fuente: xAI.com).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org230ff54" class="outline-3">
+<h3 id="org230ff54">Prioridad Media</h3>
+<div class="outline-text-3" id="text-org230ff54">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Crear script Emacs para automatizar tablas comparativas (elisp).</li>
+<li class="off"><code>[&#xa0;]</code> Revisar papers sobre Mixture of Experts (MoE) vs. arquitecturas densas.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb5b4ddb" class="outline-2">
+<h2 id="orgb5b4ddb">CONCLUSIONES</h2>
+<div class="outline-text-2" id="text-orgb5b4ddb">
+<ul class="org-ul">
+<li><b><b>Mejor generalista</b></b>: GPT-4 (9.1/10) para equilibrio entre calidad y herramientas.</li>
+<li><b><b>Multimodalidad premium</b></b>: Gemini Ultra (9.4/10) si se prioriza audio/imagen.</li>
+<li><b><b>Código eficiente</b></b>: DeepSeek-MoE (8.9/10) para proyectos con restricciones presupuestarias.</li>
+<li><b><b>Nicho específico</b></b>: Grok-3 (6.8/10) solo relevante en análisis de redes sociales.</li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-deepseek.html">deepseek</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-modelo.html">modelo</a> </div></div>
+<div id="postamble" class="status"><div id='postamble' class='status'>
+         <script src='/Blogging-con-Emacs-y-AI/pagefind/pagefind-ui.js'></script>
+         <script>
+           window.addEventListener('DOMContentLoaded', (event) => {
+             new PagefindUI({ element: '#search', showSubResults: true });
+           });
+         </script>
+       </div></div>
+</body>
+</html>
