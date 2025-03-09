@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title><![CDATA[Example.com]]></title>
+<description><![CDATA[Example.com]]></description>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
+<lastBuildDate>Sun, 09 Mar 2025 11:23:52 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[newpost]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org6f0447a">1. Test</a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-org6f0447a" class="outline-2">
+<h2 id="org6f0447a"><span class="section-number-2">1.</span> Test</h2>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> </div>]]></description>
+  <category><![CDATA[emacs]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-09-newpost.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-09-newpost.html</guid>
+  <pubDate>Sun, 09 Mar 2025 11:21:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[testagain]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orga34266d">1. Test</a>
+<ul>
+<li><a href="#org86a2d8d">1.1. Test</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-orga34266d" class="outline-2">
+<h2 id="orga34266d"><span class="section-number-2">1.</span> Test</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org86a2d8d" class="outline-3">
+<h3 id="org86a2d8d"><span class="section-number-3">1.1.</span> Test</h3>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-test.html">test</a> </div>]]></description>
+  <category><![CDATA[test]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-09-testagain.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-09-testagain.html</guid>
+  <pubDate>Sun, 09 Mar 2025 10:20:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[testtesttets]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org7842c4b">1. Test</a>
+<ul>
+<li><a href="#orgbeaf12e">1.1. Test</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-org7842c4b" class="outline-2">
+<h2 id="org7842c4b"><span class="section-number-2">1.</span> Test</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgbeaf12e" class="outline-3">
+<h3 id="orgbeaf12e"><span class="section-number-3">1.1.</span> Test</h3>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-test.html">test</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> </div>]]></description>
+  <category><![CDATA[test]]></category>
+  <category><![CDATA[emacs]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-09-testtesttets.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-09-testtesttets.html</guid>
+  <pubDate>Sun, 09 Mar 2025 10:12:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Bienvenida al Blog "Emacs con Esteroides"]]></title>
+  <description><![CDATA[
+<p>
+Bienvenidos al blog <b>Emacs con Esteroides</b>. Este espacio está dedicado a explorar las posibilidades de Emacs, integrando nuevas tecnologías, incluyendo la <b>Inteligencia Artificial</b> (AI) y la interacción del <b>usuario</b>. Si eres un entusiasta de Emacs o un usuario que busca potencializar su experiencia con herramientas modernas, este blog es para ti.
+</p>
+
+<p>
+## Aportes al Blog
+</p>
+
+<p>
+A continuación, se muestra un diagrama que representa cómo contribuyen los diferentes componentes al contenido y enfoque de este blog:
+</p>
+
+
+<figure id="org74be5f9">
+<img src="diagram.png" alt="diagram.png">
+
+</figure>
+
+<picture>
+  <img src="/Blogging-con-Emacs-y-AI/static/media/73d8b557.png" alt="diagrama" loading="lazy">
+</picture>
+
+<picture>
+  <img src="/Blogging-con-Emacs-y-AI/static/media/96c6ad19.png" alt="diagram" loading="lazy">
+</picture>
+
+
+<p>
+Este gráfico muestra que Emacs tiene un papel predominante en el contenido del blog (70%), seguido por la Inteligencia Artificial (20%) que juega un rol esencial en mejorar las interacciones y la experiencia del usuario. El <b>Usuario</b> contribuye con un 10%, interactuando y aplicando las herramientas que Emacs y AI ofrecen para mejorar su flujo de trabajo.
+</p>
+
+<p>
+A través de este espacio, espero proporcionar a la comunidad ideas, tips y trucos para sacarle el máximo provecho a <b>Emacs con Esteroides</b>.
+</p>
+
+<p>
+¡Espero que disfrutes este viaje y encuentres el contenido útil y estimulante!
+</p>
+
+<p>
+&#x2014;
+<b>¡No olvides suscribirte y compartir tus comentarios!</b>
+</p>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-esteroides.html">esteroides</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bienvenida.html">bienvenida</a> </div>]]></description>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[esteroides]]></category>
+  <category><![CDATA[ai]]></category>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[bienvenida]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-09-bienvenida-al-blog-%22emacs-con-esteroides%22.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-09-bienvenida-al-blog-%22emacs-con-esteroides%22.html</guid>
+  <pubDate>Sun, 09 Mar 2025 08:28:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[test]]></title>
+  <description><![CDATA[
+<div class="taglist"></div>]]></description>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-09-test.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-09-test.html</guid>
+  <pubDate>Sun, 09 Mar 2025 00:00:00 +0100</pubDate>
+</item>
+</channel>
+</rss>
