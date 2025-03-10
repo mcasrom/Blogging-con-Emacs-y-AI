@@ -3,8 +3,8 @@
 <channel>
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
-<link>https://tu-usuario.github.io/mi-blog/</link>
-<lastBuildDate>Mon, 10 Mar 2025 18:26:31 +0100</lastBuildDate>
+<link>https://mcasrom.github.io/mi-blog/</link>
+<lastBuildDate>Mon, 10 Mar 2025 18:38:01 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Bienvenida a Mi Blog - Grafico]]></title>
   <description><![CDATA[
@@ -180,8 +180,8 @@ Para publicar este post, simplemente guárdalo en tu directorio <code>~/myblog/p
   <category><![CDATA[bienvenida]]></category>
   <category><![CDATA[gráfico]]></category>
   <category><![CDATA[inicio]]></category>
-  <link>https://tu-usuario.github.io/mi-blog/2025-03-08-bienvenida-a-mi-blog---grafico.html</link>
-  <guid>https://tu-usuario.github.io/mi-blog/2025-03-08-bienvenida-a-mi-blog---grafico.html</guid>
+  <link>https://mcasrom.github.io/mi-blog/2025-03-08-bienvenida-a-mi-blog---grafico.html</link>
+  <guid>https://mcasrom.github.io/mi-blog/2025-03-08-bienvenida-a-mi-blog---grafico.html</guid>
   <pubDate>Sat, 08 Mar 2025 15:29:00 +0100</pubDate>
 </item>
 <item>
@@ -266,8 +266,8 @@ Así que, ponte cómodo, abre tu Emacs (o instálalo si aún no lo tienes), y ac
 <div class="taglist"><a href="https://tu-usuario.github.io/mi-blog/tags.html">Categoría</a>: <a href="https://tu-usuario.github.io/mi-blog/tag-emacs.html">emacs</a> <a href="https://tu-usuario.github.io/mi-blog/tag-blogging.html">blogging</a> </div>]]></description>
   <category><![CDATA[emacs]]></category>
   <category><![CDATA[blogging]]></category>
-  <link>https://tu-usuario.github.io/mi-blog/2025-02-26-mi-blog-con-emacs-y-esteroides:-una-aventura-potenciada-por-c%C3%B3digo-y-ia.html</link>
-  <guid>https://tu-usuario.github.io/mi-blog/2025-02-26-mi-blog-con-emacs-y-esteroides:-una-aventura-potenciada-por-c%C3%B3digo-y-ia.html</guid>
+  <link>https://mcasrom.github.io/mi-blog/2025-02-26-mi-blog-con-emacs-y-esteroides:-una-aventura-potenciada-por-c%C3%B3digo-y-ia.html</link>
+  <guid>https://mcasrom.github.io/mi-blog/2025-02-26-mi-blog-con-emacs-y-esteroides:-una-aventura-potenciada-por-c%C3%B3digo-y-ia.html</guid>
   <pubDate>Wed, 26 Feb 2025 15:16:00 +0100</pubDate>
 </item>
 </channel>
