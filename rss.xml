@@ -3,8 +3,8 @@
 <channel>
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
-<link>https://mcasrom.github.io/mi-blog/</link>
-<lastBuildDate>Mon, 10 Mar 2025 18:55:35 +0100</lastBuildDate>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
+<lastBuildDate>Mon, 10 Mar 2025 19:15:49 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Bienvenida a Mi Blog - Grafico]]></title>
   <description><![CDATA[
@@ -74,7 +74,7 @@ EOD
 </div>
 
 
-<figure id="orgf9ab385">
+<figure id="orgf212012">
 <img src="file:///home/mike/myblog/public/images/welcome-graph.png" alt="welcome-graph.png">
 
 </figure>
@@ -176,12 +176,12 @@ Para publicar este post, simplemente guárdalo en tu directorio <code>~/myblog/p
 </div>
 </div>
 </div>
-<div class="taglist"><a href="https://mcasrom.github.io/mi-blog/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/mi-blog/tag-bienvenida.html">bienvenida</a> <a href="https://mcasrom.github.io/mi-blog/tag-gráfico.html">gráfico</a> <a href="https://mcasrom.github.io/mi-blog/tag-inicio.html">inicio</a> </div>]]></description>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bienvenida.html">bienvenida</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gráfico.html">gráfico</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-inicio.html">inicio</a> </div>]]></description>
   <category><![CDATA[bienvenida]]></category>
   <category><![CDATA[gráfico]]></category>
   <category><![CDATA[inicio]]></category>
-  <link>https://mcasrom.github.io/mi-blog/2025-03-08-bienvenida-a-mi-blog---grafico.html</link>
-  <guid>https://mcasrom.github.io/mi-blog/2025-03-08-bienvenida-a-mi-blog---grafico.html</guid>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-08-bienvenida-a-mi-blog---grafico.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-08-bienvenida-a-mi-blog---grafico.html</guid>
   <pubDate>Sat, 08 Mar 2025 15:29:00 +0100</pubDate>
 </item>
 <item>
@@ -191,24 +191,24 @@ Para publicar este post, simplemente guárdalo en tu directorio <code>~/myblog/p
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5eca3a0">1. Bienvenidos a Mi Blog con Emacs y Esteroides</a></li>
-<li><a href="#org41c7c5a">2. Emacs: El Corazón de mi Flujo de Trabajo</a></li>
-<li><a href="#org457387f">3. Esteroides: El Poder de la IA Generativa</a></li>
-<li><a href="#org9b15bcf">4. Un Blog con Alma y Tecnología</a></li>
-<li><a href="#org3d3d6e4">5. ¿Qué viene después?</a></li>
+<li><a href="#orgb2ec177">1. Bienvenidos a Mi Blog con Emacs y Esteroides</a></li>
+<li><a href="#org2c122ae">2. Emacs: El Corazón de mi Flujo de Trabajo</a></li>
+<li><a href="#orged6e8da">3. Esteroides: El Poder de la IA Generativa</a></li>
+<li><a href="#org67a059c">4. Un Blog con Alma y Tecnología</a></li>
+<li><a href="#org3490d9e">5. ¿Qué viene después?</a></li>
 </ul>
 </div>
 </nav>
-<div id="outline-container-org5eca3a0" class="outline-2">
-<h2 id="org5eca3a0"><span class="section-number-2">1.</span> Bienvenidos a Mi Blog con Emacs y Esteroides</h2>
+<div id="outline-container-orgb2ec177" class="outline-2">
+<h2 id="orgb2ec177"><span class="section-number-2">1.</span> Bienvenidos a Mi Blog con Emacs y Esteroides</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 ¡Hola, lector! Si has llegado hasta aquí, probablemente compartas mi pasión por la tecnología, el código y la libertad creativa que ofrecen herramientas como Emacs. Este blog, titulado <b>"Mi Blog con Emacs y Esteroides"</b>, no es solo un espacio para compartir ideas, sino una declaración en favor a un editor legendario y una exploración de cómo la inteligencia artificial generativa lo lleva a otro nivel. ¿Listo para el viaje? ¡Sube a bordo!
 </p>
 </div>
 </div>
-<div id="outline-container-org41c7c5a" class="outline-2">
-<h2 id="org41c7c5a"><span class="section-number-2">2.</span> Emacs: El Corazón de mi Flujo de Trabajo</h2>
+<div id="outline-container-org2c122ae" class="outline-2">
+<h2 id="org2c122ae"><span class="section-number-2">2.</span> Emacs: El Corazón de mi Flujo de Trabajo</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Cuando pienso en Emacs, no veo solo un editor de texto. Veo una navaja suiza digital, un compañero fiel que ha estado en los paquetes estándar de Linux desde tiempos inmemoriales. No es una herramienta pasajera ni una moda; es un pilar de la cultura del software libre, robusto y flexible como pocos. Lo uso para todo: desde escribir código en Python o Lisp hasta tomar notas en Org-mode (¡como este post!), gestionar mi correo con Gnus o incluso relajarme jugando un poco de Tetris cuando el día se pone duro.
@@ -219,8 +219,8 @@ Mi interés por Emacs nació de su promesa de control total. En un mundo lleno d
 </p>
 </div>
 </div>
-<div id="outline-container-org457387f" class="outline-2">
-<h2 id="org457387f"><span class="section-number-2">3.</span> Esteroides: El Poder de la IA Generativa</h2>
+<div id="outline-container-orged6e8da" class="outline-2">
+<h2 id="orged6e8da"><span class="section-number-2">3.</span> Esteroides: El Poder de la IA Generativa</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Pero, ¿qué pasa con lo de "Esteroides"? Aquí es donde la cosa se pone emocionante. No me conformo con un Emacs estándar (por muy poderoso que sea). He decidido inyectarle una dosis de esteroides digitales mediante la IA generativa. ¿Qué significa esto? Que uso herramientas como modelos de lenguaje avanzados para acelerar mi configuración de Emacs y generar contenido con una chispa extra.
@@ -235,8 +235,8 @@ Los "esteroides" son esa capa de potencia que transforma Emacs de un editor exce
 </p>
 </div>
 </div>
-<div id="outline-container-org9b15bcf" class="outline-2">
-<h2 id="org9b15bcf"><span class="section-number-2">4.</span> Un Blog con Alma y Tecnología</h2>
+<div id="outline-container-org67a059c" class="outline-2">
+<h2 id="org67a059c"><span class="section-number-2">4.</span> Un Blog con Alma y Tecnología</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Este blog es el resultado de esa combinación. Aquí encontrarás reflexiones sobre Emacs, tutoriales para sacarle el máximo provecho, y experimentos con IA generativa que dan vida a mis palabras. Uso `org-static-blog` para publicar todo desde archivos Org-mode, lo que significa que cada post empieza como un documento vivo en mi Emacs, lleno de notas, enlaces y ajustes, antes de convertirse en las páginas que ves.
@@ -247,8 +247,8 @@ Este blog es el resultado de esa combinación. Aquí encontrarás reflexiones so
 </p>
 </div>
 </div>
-<div id="outline-container-org3d3d6e4" class="outline-2">
-<h2 id="org3d3d6e4"><span class="section-number-2">5.</span> ¿Qué viene después?</h2>
+<div id="outline-container-org3490d9e" class="outline-2">
+<h2 id="org3490d9e"><span class="section-number-2">5.</span> ¿Qué viene después?</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Si te apasiona Emacs, Linux, o la IA, este es tu lugar. Próximamente hablaré de cómo configuro mi `init.el` con ayuda de IA, trucos de Org-mode para la productividad, y quizás alguna locura como generar poesía con Lisp y modelos de lenguaje. ¿Tienes ideas o sugerencias? Escríbeme a <a href="mailto:mybloggingnotes@gmail.com">mybloggingnotes@gmail.com</a>; este blog también es un diálogo.
@@ -263,11 +263,11 @@ Así que, ponte cómodo, abre tu Emacs (o instálalo si aún no lo tienes), y ac
 </p>
 </div>
 </div>
-<div class="taglist"><a href="https://mcasrom.github.io/mi-blog/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/mi-blog/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/mi-blog/tag-blogging.html">blogging</a> </div>]]></description>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-blogging.html">blogging</a> </div>]]></description>
   <category><![CDATA[emacs]]></category>
   <category><![CDATA[blogging]]></category>
-  <link>https://mcasrom.github.io/mi-blog/2025-02-26-mi-blog-con-emacs-y-esteroides:-una-aventura-potenciada-por-c%C3%B3digo-y-ia.html</link>
-  <guid>https://mcasrom.github.io/mi-blog/2025-02-26-mi-blog-con-emacs-y-esteroides:-una-aventura-potenciada-por-c%C3%B3digo-y-ia.html</guid>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-mi-blog-con-emacs-y-esteroides:-una-aventura-potenciada-por-c%C3%B3digo-y-ia.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-mi-blog-con-emacs-y-esteroides:-una-aventura-potenciada-por-c%C3%B3digo-y-ia.html</guid>
   <pubDate>Wed, 26 Feb 2025 15:16:00 +0100</pubDate>
 </item>
 </channel>
