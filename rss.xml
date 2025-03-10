@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://tu-usuario.github.io/mi-blog/</link>
-<lastBuildDate>Mon, 10 Mar 2025 18:03:22 +0100</lastBuildDate>
+<lastBuildDate>Mon, 10 Mar 2025 18:19:00 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Bienvenida a Mi Blog - Grafico]]></title>
   <description><![CDATA[
@@ -41,40 +41,40 @@ A continuación, crearemos un gráfico usando Org Babel con Gnuplot:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-gnuplot"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n general</span>
-<span style="color: #2f86d2;">set</span> terminal png size 800,500 enhanced font <span style="color: #a44185;">"Helvetica,14"</span>
-<span style="color: #2f86d2;">set</span> output <span style="color: #a44185;">"~/myblog/public/images/welcome-graph.png"</span>
-<span style="color: #2f86d2;">set</span> <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Bienvenida a Mi Blog con Emacs y Org Static"</span> font <span style="color: #a44185;">"Helvetica,18"</span>
-<span style="color: #2f86d2;">set</span> style fill solid 0.5
-<span style="color: #2f86d2;">set</span> style data histogram
-<span style="color: #2f86d2;">set</span> style histogram cluster gap 1
-<span style="color: #2f86d2;">set</span> boxwidth 0.9
-<span style="color: #2f86d2;">set</span> grid yticsc
-<span style="color: #2f86d2;">set</span> xtics rotate by -45
-<span style="color: #2f86d2;">set</span> xlabel <span style="color: #a44185;">"Tecnolog&#237;as"</span> font <span style="color: #a44185;">"Helvetica,14"</span>
-<span style="color: #2f86d2;">set</span> ylabel <span style="color: #a44185;">"Nivel de Potencia"</span> font <span style="color: #a44185;">"Helvetica,14"</span>
-<span style="color: #2f86d2;">set</span> yrange [<span style="color: #2f86d2;">0:10</span>]
-<span style="color: #2f86d2;">set</span> palette <span style="color: #dc3eb7;">defined</span> (0 <span style="color: #a44185;">"skyblue"</span>, 1 <span style="color: #a44185;">"royalblue"</span>, 2 <span style="color: #a44185;">"dark-blue"</span>)
+<pre class="src src-gnuplot"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n general</span>
+<span style="color: #AF005F;">set</span> terminal png size 800,500 enhanced font <span style="color: #005F00;">"Helvetica,14"</span>
+<span style="color: #AF005F;">set</span> output <span style="color: #005F00;">"~/myblog/public/images/welcome-graph.png"</span>
+<span style="color: #AF005F;">set</span> <span style="color: #1F55A0;">title</span> <span style="color: #005F00;">"Bienvenida a Mi Blog con Emacs y Org Static"</span> font <span style="color: #005F00;">"Helvetica,18"</span>
+<span style="color: #AF005F;">set</span> style fill solid 0.5
+<span style="color: #AF005F;">set</span> style data histogram
+<span style="color: #AF005F;">set</span> style histogram cluster gap 1
+<span style="color: #AF005F;">set</span> boxwidth 0.9
+<span style="color: #AF005F;">set</span> grid yticsc
+<span style="color: #AF005F;">set</span> xtics rotate by -45
+<span style="color: #AF005F;">set</span> xlabel <span style="color: #005F00;">"Tecnolog&#237;as"</span> font <span style="color: #005F00;">"Helvetica,14"</span>
+<span style="color: #AF005F;">set</span> ylabel <span style="color: #005F00;">"Nivel de Potencia"</span> font <span style="color: #005F00;">"Helvetica,14"</span>
+<span style="color: #AF005F;">set</span> yrange [<span style="color: #AF005F;">0:10</span>]
+<span style="color: #AF005F;">set</span> palette <span style="color: #AF8700;">defined</span> (0 <span style="color: #005F00;">"skyblue"</span>, 1 <span style="color: #005F00;">"royalblue"</span>, 2 <span style="color: #005F00;">"dark-blue"</span>)
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Datos para el gr&#225;fico</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Datos para el gr&#225;fico</span>
 $DATA &lt;&lt; EOD
 Tecnolog&#237;a Potencia Flexibilidad Productividad
-<span style="color: #a44185;">"Emacs"</span>     9.2     9.5          8.7
-<span style="color: #a44185;">"Org Mode"</span>  9.0     9.8          9.2
-<span style="color: #a44185;">"GitHub"</span>    8.5     8.0          8.8
-<span style="color: #a44185;">"Markdown"</span>  7.0     6.5          7.5
-<span style="color: #a44185;">"HTML"</span>      8.0     7.2          7.0
+<span style="color: #005F00;">"Emacs"</span>     9.2     9.5          8.7
+<span style="color: #005F00;">"Org Mode"</span>  9.0     9.8          9.2
+<span style="color: #005F00;">"GitHub"</span>    8.5     8.0          8.8
+<span style="color: #005F00;">"Markdown"</span>  7.0     6.5          7.5
+<span style="color: #005F00;">"HTML"</span>      8.0     7.2          7.0
 EOD
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generaci&#243;n del gr&#225;fico</span>
-<span style="color: #219fd5; font-style: italic;">plot</span> $DATA <span style="color: #dc3eb7;">using</span> 2:xtic(1) <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Potencia"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#3498db"</span>, \
-     $DATA <span style="color: #dc3eb7;">using</span> 3 <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Flexibilidad"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#2980b9"</span>, \
-     $DATA <span style="color: #dc3eb7;">using</span> 4 <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Productividad"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#1f618d"</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Generaci&#243;n del gr&#225;fico</span>
+<span style="color: #D70000;">plot</span> $DATA <span style="color: #1F55A0;">using</span> 2:xtic(1) <span style="color: #1F55A0;">title</span> <span style="color: #005F00;">"Potencia"</span> <span style="color: #1F55A0;">linecolor</span> rgb <span style="color: #005F00;">"#3498db"</span>, \
+     $DATA <span style="color: #1F55A0;">using</span> 3 <span style="color: #1F55A0;">title</span> <span style="color: #005F00;">"Flexibilidad"</span> <span style="color: #1F55A0;">linecolor</span> rgb <span style="color: #005F00;">"#2980b9"</span>, \
+     $DATA <span style="color: #1F55A0;">using</span> 4 <span style="color: #1F55A0;">title</span> <span style="color: #005F00;">"Productividad"</span> <span style="color: #1F55A0;">linecolor</span> rgb <span style="color: #005F00;">"#1f618d"</span>
 </pre>
 </div>
 
 
-<figure id="orga6e480d">
+<figure id="orga0dedf5">
 <img src="file:///home/mike/myblog/public/images/welcome-graph.png" alt="welcome-graph.png">
 
 </figure>
@@ -117,13 +117,13 @@ Para asegurar que las imágenes se muestran correctamente en nuestro blog:
 </ol>
 
 <div class="org-src-container">
-<pre class="src src-elisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Ejemplo de la configuraci&#243;n para im&#225;genes</span>
-(<span style="color: #a44185;">"blog-images"</span>
- <span style="color: #dc3eb7;">:base-directory</span> <span style="color: #a44185;">"~/myblog/images/"</span>
- <span style="color: #dc3eb7;">:base-extension</span> <span style="color: #a44185;">"png</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">jpg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">jpeg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">gif</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">svg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">webp"</span>
- <span style="color: #dc3eb7;">:publishing-directory</span> <span style="color: #a44185;">"~/myblog/public/images/"</span>
- <span style="color: #dc3eb7;">:publishing-function</span> org-publish-attachment
- <span style="color: #dc3eb7;">:recursive</span> t)
+<pre class="src src-elisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Ejemplo de la configuraci&#243;n para im&#225;genes</span>
+(<span style="color: #005F00;">"blog-images"</span>
+ <span style="color: #1F55A0;">:base-directory</span> <span style="color: #005F00;">"~/myblog/images/"</span>
+ <span style="color: #1F55A0;">:base-extension</span> <span style="color: #005F00;">"png</span><span style="color: #1F55A0; font-weight: bold;">\\</span><span style="color: #1F55A0; font-weight: bold;">|</span><span style="color: #005F00;">jpg</span><span style="color: #1F55A0; font-weight: bold;">\\</span><span style="color: #1F55A0; font-weight: bold;">|</span><span style="color: #005F00;">jpeg</span><span style="color: #1F55A0; font-weight: bold;">\\</span><span style="color: #1F55A0; font-weight: bold;">|</span><span style="color: #005F00;">gif</span><span style="color: #1F55A0; font-weight: bold;">\\</span><span style="color: #1F55A0; font-weight: bold;">|</span><span style="color: #005F00;">svg</span><span style="color: #1F55A0; font-weight: bold;">\\</span><span style="color: #1F55A0; font-weight: bold;">|</span><span style="color: #005F00;">webp"</span>
+ <span style="color: #1F55A0;">:publishing-directory</span> <span style="color: #005F00;">"~/myblog/public/images/"</span>
+ <span style="color: #1F55A0;">:publishing-function</span> org-publish-attachment
+ <span style="color: #1F55A0;">:recursive</span> t)
 </pre>
 </div>
 </div>
@@ -152,9 +152,9 @@ Para generar este gráfico he utilizado Gnuplot a través de Org Babel. Si quier
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><span style="color: #8195b0; font-style: italic;"># Requisitos:</span>
-<span style="color: #8195b0; font-style: italic;"># 1. Gnuplot instalado en tu sistema</span>
-<span style="color: #8195b0; font-style: italic;"># 2. Configuraci&#243;n de Org Babel para Gnuplot</span>
+<pre class="src src-org"><span style="color: #4E4E4E; font-style: italic;"># Requisitos:</span>
+<span style="color: #4E4E4E; font-style: italic;"># 1. Gnuplot instalado en tu sistema</span>
+<span style="color: #4E4E4E; font-style: italic;"># 2. Configuraci&#243;n de Org Babel para Gnuplot</span>
 
 (require 'ob-gnuplot)
 (org-babel-do-load-languages
