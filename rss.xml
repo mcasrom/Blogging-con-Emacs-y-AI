@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Wed, 12 Mar 2025 22:49:01 +0100</lastBuildDate>
+<lastBuildDate>Wed, 12 Mar 2025 22:56:07 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Análisis Demográfico de los Votantes de Donald Trump en las Elecciones 2024 - Perplexity]]></title>
   <description><![CDATA[
@@ -333,12 +333,85 @@ Wang, S. (2024). Election Forecasting and Demographic Shifts. <span class="under
   <title><![CDATA[Proyectos]]></title>
   <description><![CDATA[
 <p>
+¡Bienvenidos a la página de <b>Proyectos</b>! En este espacio comparto algunos de los trabajos que he desarrollado, desde experimentos personales hasta iniciativas más ambiciosas. Esta página estática, generada con Org-mode y `org-static-blog`, es un reflejo de mi interés por la tecnología, la creatividad y el aprendizaje continuo. A continuación, encontrarás una descripción de lo que puedes explorar aquí y algunos ejemplos destacados.
+</p>
+<div id="outline-container-orgffd00ed" class="outline-2">
+<h2 id="orgffd00ed">¿Qué encontrarás en la página de Proyectos?</h2>
+<div class="outline-text-2" id="text-orgffd00ed">
+<p>
+La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pero funcional de mis esfuerzos. Aquí algunos aspectos clave:
+</p>
+
+<ul class="org-ul">
+<li><b><b>Diversidad de Temas</b></b>: Incluye proyectos relacionados con programación, escritura, diseño y más.</li>
+<li><b><b>Código Abierto</b></b>: Algunos de los proyectos están disponibles en mi <a href="https://github.com/tu-usuario">GitHub</a>, donde puedes ver el código fuente y contribuir si te interesa.</li>
+<li><b><b>Documentación</b></b>: Cada proyecto tiene una breve explicación sobre su propósito, tecnologías usadas y resultados.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2e8eecb" class="outline-2">
+<h2 id="org2e8eecb">Ejemplos de Proyectos</h2>
+<div class="outline-text-2" id="text-org2e8eecb">
+</div>
+<div id="outline-container-org737f4a2" class="outline-3">
+<h3 id="org737f4a2">1. Generador de Blog Estático con Org-mode</h3>
+<div class="outline-text-3" id="text-org737f4a2">
+<ul class="org-ul">
+<li><b>Descripción</b>: Una herramienta para convertir archivos Org en un blog HTML estático, usando `org-static-blog`.</li>
+<li><b>Tecnologías</b>: Emacs, Org-mode, Gnuplot (para gráficos), CSS.</li>
+<li><b>Resultado</b>: Este blog que estás leyendo es un ejemplo vivo del proyecto. Simplifica la publicación de contenido sin servidores dinámicos.</li>
+<li><b>Enlace</b>: <a href="https://github.com/tu-usuario/org-static-blog">Repositorio en GitHub</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge7753b1" class="outline-3">
+<h3 id="orge7753b1">3. Escritura Creativa Automatizada</h3>
+<div class="outline-text-3" id="text-orge7753b1">
+<ul class="org-ul">
+<li><b>Descripción</b>: Un experimento para generar relatos cortos usando IA y publicarlos en este blog.</li>
+<li><b>Tecnologías</b>: Emacs, GPT (simulado), Org-mode.</li>
+<li><b>Resultado</b>: Historias breves generadas y formateadas automáticamente en Org.</li>
+<li><b>Enlace</b>: Revisa la sección de <b>posts</b> para ejemplos futuros.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5d35c7e" class="outline-2">
+<h2 id="org5d35c7e">¿Cómo interactuar con los Proyectos?</h2>
+<div class="outline-text-2" id="text-org5d35c7e">
+<p>
+Me encantaría que esta página no sea solo un escaparate, sino un punto de partida para colaboración o inspiración:
+</p>
+
+<ul class="org-ul">
+<li><b><b>Explora</b></b>: Navega por los enlaces a GitHub o los <b>posts</b> relacionados para más detalles.</li>
+<li><b><b>Contribuye</b></b>: Si tienes ideas, sugerencias o quieres colaborar en algún proyecto, clona el repositorio y envía un <b>pull request</b>.</li>
+<li><b><b>Contáctame</b></b>: ¿Te interesa alguno de estos proyectos o tienes uno propio que compartir?</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org448a296" class="outline-2">
+<h2 id="org448a296">Conclusión</h2>
+<div class="outline-text-2" id="text-org448a296">
+<p>
+La página de <b>Proyectos</b> es un espacio vivo que iré actualizando con nuevas ideas y trabajos. Usar Org-mode para mantenerla me permite combinar escritura, código y datos en un formato simple y portátil. Espero que encuentres algo que te inspire o motive a experimentar por tu cuenta. ¡No dudes en dejar tus comentarios o contactarme para charlar sobre ello!
+</p>
+
+<hr>
+<p>
+Saludos,  
+M.Castillo
+</p>
+
+<p>
 Para ponerte en contacto, envíanos un email a <a href="mailto:mybloggingnotes@gmail.com">mybloggingnotes@gmail.com</a>.
 </p>
 
 <p>
 <a href="index.html">Volver al inicio</a>
 </p>
+</div>
+</div>
 <div class="taglist"></div>]]></description>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/proyectos.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/proyectos.html</guid>
@@ -403,23 +476,6 @@ Para ponerte en contacto, envía un email a <a href="mailto:mybloggingnotes@gmai
 <item>
   <title><![CDATA[Bienvenida a Mi Blog - Grafico]]></title>
   <description><![CDATA[
-<nav id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#welcome">1. Bienvenida a Mi Blog con Emacs y Esteroides</a>
-<ul>
-<li><a href="#welcome-graphic">1.1. Creación del gráfico de bienvenida</a></li>
-<li><a href="#analysis">1.2. Análisis del gráfico</a></li>
-<li><a href="#image-config">1.3. Configuración para mostrar imágenes correctamente</a></li>
-<li><a href="#next-steps">1.4. Próximos pasos</a></li>
-</ul>
-</li>
-<li><a href="#technical-notes">2. Notas técnicas</a></li>
-<li><a href="#footer">3. Pie de página</a></li>
-</ul>
-</div>
-</nav>
 <div id="outline-container-welcome" class="outline-2">
 <h2 id="welcome"><span class="section-number-2">1.</span> Bienvenida a Mi Blog con Emacs y Esteroides</h2>
 <div class="outline-text-2" id="text-welcome">
@@ -436,40 +492,40 @@ A continuación, crearemos un gráfico usando Org Babel con Gnuplot:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-gnuplot"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n general</span>
-<span style="color: #2f86d2;">set</span> terminal png size 800,500 enhanced font <span style="color: #a44185;">"Helvetica,14"</span>
-<span style="color: #2f86d2;">set</span> output <span style="color: #a44185;">"~/myblog/images/welcome-graph.png"</span>
-<span style="color: #2f86d2;">set</span> <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Bienvenida a Mi Blog con Emacs y Org Static"</span> font <span style="color: #a44185;">"Helvetica,18"</span>
-<span style="color: #2f86d2;">set</span> style fill solid 0.5
-<span style="color: #2f86d2;">set</span> style data histogram
-<span style="color: #2f86d2;">set</span> style histogram cluster gap 1
-<span style="color: #2f86d2;">set</span> boxwidth 0.9
-<span style="color: #2f86d2;">set</span> grid ytics
-<span style="color: #2f86d2;">set</span> xtics rotate by -45
-<span style="color: #2f86d2;">set</span> xlabel <span style="color: #a44185;">"Tecnolog&#237;as"</span> font <span style="color: #a44185;">"Helvetica,14"</span>
-<span style="color: #2f86d2;">set</span> ylabel <span style="color: #a44185;">"Nivel de Potencia"</span> font <span style="color: #a44185;">"Helvetica,14"</span>
-<span style="color: #2f86d2;">set</span> yrange [<span style="color: #2f86d2;">0:10</span>]
-<span style="color: #2f86d2;">set</span> palette <span style="color: #dc3eb7;">defined</span> (0 <span style="color: #a44185;">"skyblue"</span>, 1 <span style="color: #a44185;">"royalblue"</span>, 2 <span style="color: #a44185;">"dark-blue"</span>)
+<pre class="src src-gnuplot"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n general</span>
+<span style="color: #AF005F;">set</span> terminal png size 800,500 enhanced font <span style="color: #005F00;">"Helvetica,14"</span>
+<span style="color: #AF005F;">set</span> output <span style="color: #005F00;">"~/myblog/images/welcome-graph.png"</span>
+<span style="color: #AF005F;">set</span> <span style="color: #1F55A0;">title</span> <span style="color: #005F00;">"Bienvenida a Mi Blog con Emacs y Org Static"</span> font <span style="color: #005F00;">"Helvetica,18"</span>
+<span style="color: #AF005F;">set</span> style fill solid 0.5
+<span style="color: #AF005F;">set</span> style data histogram
+<span style="color: #AF005F;">set</span> style histogram cluster gap 1
+<span style="color: #AF005F;">set</span> boxwidth 0.9
+<span style="color: #AF005F;">set</span> grid ytics
+<span style="color: #AF005F;">set</span> xtics rotate by -45
+<span style="color: #AF005F;">set</span> xlabel <span style="color: #005F00;">"Tecnolog&#237;as"</span> font <span style="color: #005F00;">"Helvetica,14"</span>
+<span style="color: #AF005F;">set</span> ylabel <span style="color: #005F00;">"Nivel de Potencia"</span> font <span style="color: #005F00;">"Helvetica,14"</span>
+<span style="color: #AF005F;">set</span> yrange [<span style="color: #AF005F;">0:10</span>]
+<span style="color: #AF005F;">set</span> palette <span style="color: #AF8700;">defined</span> (0 <span style="color: #005F00;">"skyblue"</span>, 1 <span style="color: #005F00;">"royalblue"</span>, 2 <span style="color: #005F00;">"dark-blue"</span>)
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Datos para el gr&#225;fico</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Datos para el gr&#225;fico</span>
 $DATA &lt;&lt; EOD
 Tecnolog&#237;a Potencia Flexibilidad Productividad
-<span style="color: #a44185;">"Emacs"</span>     9.2     9.5          8.7
-<span style="color: #a44185;">"Org Mode"</span>  9.0     9.8          9.2
-<span style="color: #a44185;">"GitHub"</span>    8.5     8.0          8.8
-<span style="color: #a44185;">"Markdown"</span>  7.0     6.5          7.5
-<span style="color: #a44185;">"HTML"</span>      8.0     7.2          7.0
+<span style="color: #005F00;">"Emacs"</span>     9.2     9.5          8.7
+<span style="color: #005F00;">"Org Mode"</span>  9.0     9.8          9.2
+<span style="color: #005F00;">"GitHub"</span>    8.5     8.0          8.8
+<span style="color: #005F00;">"Markdown"</span>  7.0     6.5          7.5
+<span style="color: #005F00;">"HTML"</span>      8.0     7.2          7.0
 EOD
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generaci&#243;n del gr&#225;fico</span>
-<span style="color: #219fd5; font-style: italic;">plot</span> $DATA <span style="color: #dc3eb7;">using</span> 2:xtic(1) <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Potencia"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#3498db"</span>, \
-     $DATA <span style="color: #dc3eb7;">using</span> 3 <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Flexibilidad"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#2980b9"</span>, \
-     $DATA <span style="color: #dc3eb7;">using</span> 4 <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Productividad"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#1f618d"</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Generaci&#243;n del gr&#225;fico</span>
+<span style="color: #D70000;">plot</span> $DATA <span style="color: #1F55A0;">using</span> 2:xtic(1) <span style="color: #1F55A0;">title</span> <span style="color: #005F00;">"Potencia"</span> <span style="color: #1F55A0;">linecolor</span> rgb <span style="color: #005F00;">"#3498db"</span>, \
+     $DATA <span style="color: #1F55A0;">using</span> 3 <span style="color: #1F55A0;">title</span> <span style="color: #005F00;">"Flexibilidad"</span> <span style="color: #1F55A0;">linecolor</span> rgb <span style="color: #005F00;">"#2980b9"</span>, \
+     $DATA <span style="color: #1F55A0;">using</span> 4 <span style="color: #1F55A0;">title</span> <span style="color: #005F00;">"Productividad"</span> <span style="color: #1F55A0;">linecolor</span> rgb <span style="color: #005F00;">"#1f618d"</span>
 </pre>
 </div>
 
 
-<figure id="org4381dd6">
+<figure id="org2bbd7f4">
 <img src="images/welcome-graph.png" alt="welcome-graph.png">
 
 </figure>
@@ -512,13 +568,13 @@ Para asegurar que las imágenes se muestran correctamente en nuestro blog:
 </ol>
 
 <div class="org-src-container">
-<pre class="src src-elisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Ejemplo de la configuraci&#243;n para im&#225;genes</span>
-(<span style="color: #a44185;">"blog-images"</span>
- <span style="color: #dc3eb7;">:base-directory</span> <span style="color: #a44185;">"~/myblog/images/"</span>
- <span style="color: #dc3eb7;">:base-extension</span> <span style="color: #a44185;">"png</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">jpg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">jpeg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">gif</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">svg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">webp"</span>
- <span style="color: #dc3eb7;">:publishing-directory</span> <span style="color: #a44185;">"~/myblog/public/images/"</span>
- <span style="color: #dc3eb7;">:publishing-function</span> org-publish-attachment
- <span style="color: #dc3eb7;">:recursive</span> t)
+<pre class="src src-elisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Ejemplo de la configuraci&#243;n para im&#225;genes</span>
+(<span style="color: #005F00;">"blog-images"</span>
+ <span style="color: #1F55A0;">:base-directory</span> <span style="color: #005F00;">"~/myblog/images/"</span>
+ <span style="color: #1F55A0;">:base-extension</span> <span style="color: #005F00;">"png</span><span style="color: #1F55A0; font-weight: bold;">\\</span><span style="color: #1F55A0; font-weight: bold;">|</span><span style="color: #005F00;">jpg</span><span style="color: #1F55A0; font-weight: bold;">\\</span><span style="color: #1F55A0; font-weight: bold;">|</span><span style="color: #005F00;">jpeg</span><span style="color: #1F55A0; font-weight: bold;">\\</span><span style="color: #1F55A0; font-weight: bold;">|</span><span style="color: #005F00;">gif</span><span style="color: #1F55A0; font-weight: bold;">\\</span><span style="color: #1F55A0; font-weight: bold;">|</span><span style="color: #005F00;">svg</span><span style="color: #1F55A0; font-weight: bold;">\\</span><span style="color: #1F55A0; font-weight: bold;">|</span><span style="color: #005F00;">webp"</span>
+ <span style="color: #1F55A0;">:publishing-directory</span> <span style="color: #005F00;">"~/myblog/public/images/"</span>
+ <span style="color: #1F55A0;">:publishing-function</span> org-publish-attachment
+ <span style="color: #1F55A0;">:recursive</span> t)
 </pre>
 </div>
 </div>
@@ -547,9 +603,9 @@ Para generar este gráfico he utilizado Gnuplot a través de Org Babel. Si quier
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><span style="color: #8195b0; font-style: italic;"># Requisitos:</span>
-<span style="color: #8195b0; font-style: italic;"># 1. Gnuplot instalado en tu sistema</span>
-<span style="color: #8195b0; font-style: italic;"># 2. Configuraci&#243;n de Org Babel para Gnuplot</span>
+<pre class="src src-org"><span style="color: #4E4E4E; font-style: italic;"># Requisitos:</span>
+<span style="color: #4E4E4E; font-style: italic;"># 1. Gnuplot instalado en tu sistema</span>
+<span style="color: #4E4E4E; font-style: italic;"># 2. Configuraci&#243;n de Org Babel para Gnuplot</span>
 
 (require 'ob-gnuplot)
 (org-babel-do-load-languages
