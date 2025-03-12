@@ -23,13 +23,13 @@
          .blog-header {
            display: flex;
            align-items: center;
-           justify-content: center;
-           flex-direction: column;
-           text-align: center;
+           justify-content: left;
+           text-align: left;
          }
          .blog-header img {
-           max-height: 50px;
-           margin-bottom: 10px;
+           max-width: 80px;
+           height: auto;
+           margin-right: 15px;
          }
          .blog-subtitle {
            font-size: 1.2em;
@@ -48,11 +48,12 @@
        </style>
        <div class='blog-header'>
          <img src='logo.png' alt='Logo'>
-         <h1>Mi Blog con Emacs y Esteroides</h1>
-         <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
-         <p style='font-size: 0.8em;'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         <div>
+           <h1>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p style='font-size: 0.8em;'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
        </div>
-       <hr>
        <nav>
          <a href='index.html'>Inicio</a> |
          <a href='tags.html'>Tags</a> |
@@ -66,47 +67,16 @@
 <div id="preamble" class="status"></div>
 <div id="content">
 <div class="post-date">08/03/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-08-cómo-generar-un-prompt-en-ia:-guía-detallada,-ventajas-e-inconvenientes.html">Cómo Generar un Prompt en IA: Guía Detallada, Ventajas e Inconvenientes</a></h1>
-<nav id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#org74eda77">1. Introducción</a></li>
-<li><a href="#org8de9612">2. ¿Qué es un Prompt en IA?</a></li>
-<li><a href="#orgcd51e6a">3. ¿Cómo Generar un Prompt Efectivo?</a>
-<ul>
-<li><a href="#orge9f225d">3.1. 1. Define el Objetivo</a></li>
-<li><a href="#orgd432672">3.2. 2. Sé Específico</a></li>
-<li><a href="#org7e4577f">3.3. 3. Proporciona Contexto</a></li>
-<li><a href="#orgc8e3072">3.4. 4. Usa un Lenguaje Claro y Directo</a></li>
-<li><a href="#org195525c">3.5. 5. Itera y Ajusta</a></li>
-</ul>
-</li>
-<li><a href="#org5f2f0b4">4. Ventajas de Usar Prompts en IA</a></li>
-<li><a href="#orga7bed70">5. Inconvenientes y Desafíos</a></li>
-<li><a href="#orgf1a187f">6. Ejemplos Prácticos de Prompts</a>
-<ul>
-<li><a href="#org9bacbec">6.1. Ejemplo 1: Generación de Contenido</a></li>
-<li><a href="#org9d88e34">6.2. Ejemplo 2: Análisis de Datos</a></li>
-<li><a href="#orga2279b7">6.3. Ejemplo 3: Creatividad</a></li>
-</ul>
-</li>
-<li><a href="#org87a1968">7. Consejos Avanzados para Mejorar tus Prompts</a></li>
-<li><a href="#orgd161d4c">8. Herramientas Populares para Generar Prompts</a></li>
-<li><a href="#org5d93392">9. Conclusión</a></li>
-<li><a href="#orgb417dcb">10. Gráficos Sugeridos</a></li>
-</ul>
-</div>
-</nav>
-<div id="outline-container-org74eda77" class="outline-2">
-<h2 id="org74eda77"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-orgc5b7539" class="outline-2">
+<h2 id="orgc5b7539"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 La inteligencia artificial (IA) ha revolucionado la forma en que interactuamos con la tecnología. Desde chatbots hasta herramientas de generación de contenido, la IA se ha convertido en una aliada indispensable para profesionales, creativos y entusiastas de la tecnología. Sin embargo, para aprovechar al máximo estas herramientas, es fundamental entender cómo <b><b>generar un prompt efectivo</b></b>. En este artículo, exploraremos en detalle qué es un prompt, cómo crearlo, sus ventajas, inconvenientes y ejemplos prácticos para que puedas dominar esta habilidad.
 </p>
 </div>
 </div>
-<div id="outline-container-org8de9612" class="outline-2">
-<h2 id="org8de9612"><span class="section-number-2">2.</span> ¿Qué es un Prompt en IA?</h2>
+<div id="outline-container-org50be7a1" class="outline-2">
+<h2 id="org50be7a1"><span class="section-number-2">2.</span> ¿Qué es un Prompt en IA?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Un <b><b>prompt</b></b> es una instrucción, pregunta o conjunto de indicaciones que se le proporciona a un modelo de inteligencia artificial para que genere una respuesta o realice una tarea específica. Es la forma en que nos comunicamos con la IA y le decimos qué queremos que haga.
@@ -117,15 +87,15 @@ Por ejemplo, si le pides a ChatGPT que "escriba un poema sobre el océano", esa 
 </p>
 </div>
 </div>
-<div id="outline-container-orgcd51e6a" class="outline-2">
-<h2 id="orgcd51e6a"><span class="section-number-2">3.</span> ¿Cómo Generar un Prompt Efectivo?</h2>
+<div id="outline-container-org2c34abf" class="outline-2">
+<h2 id="org2c34abf"><span class="section-number-2">3.</span> ¿Cómo Generar un Prompt Efectivo?</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Crear un prompt efectivo requiere claridad, precisión y contexto. A continuación, te explicamos los pasos clave para generar un prompt que obtenga los mejores resultados:
 </p>
 </div>
-<div id="outline-container-orge9f225d" class="outline-3">
-<h3 id="orge9f225d"><span class="section-number-3">3.1.</span> 1. Define el Objetivo</h3>
+<div id="outline-container-org6cdb647" class="outline-3">
+<h3 id="org6cdb647"><span class="section-number-3">3.1.</span> 1. Define el Objetivo</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li>Antes de escribir el prompt, pregúntate: ¿Qué quiero lograr con la IA? ¿Necesito información, un texto creativo, un análisis de datos o una solución a un problema?</li>
@@ -133,8 +103,8 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd432672" class="outline-3">
-<h3 id="orgd432672"><span class="section-number-3">3.2.</span> 2. Sé Específico</h3>
+<div id="outline-container-orgfe999e9" class="outline-3">
+<h3 id="orgfe999e9"><span class="section-number-3">3.2.</span> 2. Sé Específico</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li>Cuanto más específico seas, mejor será la respuesta. Incluye detalles como el tono, el estilo, la longitud o el formato que deseas.</li>
@@ -142,8 +112,8 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </ul>
 </div>
 </div>
-<div id="outline-container-org7e4577f" class="outline-3">
-<h3 id="org7e4577f"><span class="section-number-3">3.3.</span> 3. Proporciona Contexto</h3>
+<div id="outline-container-orgb44e444" class="outline-3">
+<h3 id="orgb44e444"><span class="section-number-3">3.3.</span> 3. Proporciona Contexto</h3>
 <div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
 <li>La IA funciona mejor cuando tiene suficiente información. Si el prompt requiere conocimientos específicos, inclúyelos.</li>
@@ -151,8 +121,8 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc8e3072" class="outline-3">
-<h3 id="orgc8e3072"><span class="section-number-3">3.4.</span> 4. Usa un Lenguaje Claro y Directo</h3>
+<div id="outline-container-orga5692a2" class="outline-3">
+<h3 id="orga5692a2"><span class="section-number-3">3.4.</span> 4. Usa un Lenguaje Claro y Directo</h3>
 <div class="outline-text-3" id="text-3-4">
 <ul class="org-ul">
 <li>Evita ambigüedades. Usa un lenguaje sencillo y evita frases confusas.</li>
@@ -160,8 +130,8 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </ul>
 </div>
 </div>
-<div id="outline-container-org195525c" class="outline-3">
-<h3 id="org195525c"><span class="section-number-3">3.5.</span> 5. Itera y Ajusta</h3>
+<div id="outline-container-orgb8af412" class="outline-3">
+<h3 id="orgb8af412"><span class="section-number-3">3.5.</span> 5. Itera y Ajusta</h3>
 <div class="outline-text-3" id="text-3-5">
 <ul class="org-ul">
 <li>Si la respuesta no es lo que esperabas, ajusta el prompt. Prueba diferentes enfoques hasta obtener el resultado deseado.</li>
@@ -170,8 +140,8 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </div>
 </div>
 </div>
-<div id="outline-container-org5f2f0b4" class="outline-2">
-<h2 id="org5f2f0b4"><span class="section-number-2">4.</span> Ventajas de Usar Prompts en IA</h2>
+<div id="outline-container-org6e19710" class="outline-2">
+<h2 id="org6e19710"><span class="section-number-2">4.</span> Ventajas de Usar Prompts en IA</h2>
 <div class="outline-text-2" id="text-4">
 <ol class="org-ol">
 <li><b><b>Ahorro de Tiempo</b></b>: Los prompts permiten automatizar tareas repetitivas, como redactar textos, generar ideas o analizar datos.</li>
@@ -182,8 +152,8 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </ol>
 </div>
 </div>
-<div id="outline-container-orga7bed70" class="outline-2">
-<h2 id="orga7bed70"><span class="section-number-2">5.</span> Inconvenientes y Desafíos</h2>
+<div id="outline-container-org91f8a34" class="outline-2">
+<h2 id="org91f8a34"><span class="section-number-2">5.</span> Inconvenientes y Desafíos</h2>
 <div class="outline-text-2" id="text-5">
 <ol class="org-ol">
 <li><b><b>Dependencia de la Calidad del Prompt</b></b>: Si el prompt no está bien formulado, la respuesta puede ser irrelevante o de baja calidad.</li>
@@ -194,15 +164,15 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf1a187f" class="outline-2">
-<h2 id="orgf1a187f"><span class="section-number-2">6.</span> Ejemplos Prácticos de Prompts</h2>
+<div id="outline-container-org2e0eb7d" class="outline-2">
+<h2 id="org2e0eb7d"><span class="section-number-2">6.</span> Ejemplos Prácticos de Prompts</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas generadas por IA:
 </p>
 </div>
-<div id="outline-container-org9bacbec" class="outline-3">
-<h3 id="org9bacbec"><span class="section-number-3">6.1.</span> Ejemplo 1: Generación de Contenido</h3>
+<div id="outline-container-org24c836c" class="outline-3">
+<h3 id="org24c836c"><span class="section-number-3">6.1.</span> Ejemplo 1: Generación de Contenido</h3>
 <div class="outline-text-3" id="text-6-1">
 <ul class="org-ul">
 <li><b><b>Prompt</b></b>: "Escribe un blog de 500 palabras sobre los beneficios del ejercicio físico para la salud mental, con un tono motivacional y dirigido a jóvenes adultos."</li>
@@ -210,8 +180,8 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </ul>
 </div>
 </div>
-<div id="outline-container-org9d88e34" class="outline-3">
-<h3 id="org9d88e34"><span class="section-number-3">6.2.</span> Ejemplo 2: Análisis de Datos</h3>
+<div id="outline-container-org0f09f9b" class="outline-3">
+<h3 id="org0f09f9b"><span class="section-number-3">6.2.</span> Ejemplo 2: Análisis de Datos</h3>
 <div class="outline-text-3" id="text-6-2">
 <ul class="org-ul">
 <li><b><b>Prompt</b></b>: "Analiza los siguientes datos de ventas mensuales y sugiere estrategias para aumentar las ventas en el próximo trimestre: [datos]."</li>
@@ -219,8 +189,8 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </ul>
 </div>
 </div>
-<div id="outline-container-orga2279b7" class="outline-3">
-<h3 id="orga2279b7"><span class="section-number-3">6.3.</span> Ejemplo 3: Creatividad</h3>
+<div id="outline-container-org2063822" class="outline-3">
+<h3 id="org2063822"><span class="section-number-3">6.3.</span> Ejemplo 3: Creatividad</h3>
 <div class="outline-text-3" id="text-6-3">
 <ul class="org-ul">
 <li><b><b>Prompt</b></b>: "Inventa una historia corta de ciencia ficción sobre un viajero del tiempo que intenta salvar el futuro."</li>
@@ -229,8 +199,8 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </div>
 </div>
 </div>
-<div id="outline-container-org87a1968" class="outline-2">
-<h2 id="org87a1968"><span class="section-number-2">7.</span> Consejos Avanzados para Mejorar tus Prompts</h2>
+<div id="outline-container-org16b7108" class="outline-2">
+<h2 id="org16b7108"><span class="section-number-2">7.</span> Consejos Avanzados para Mejorar tus Prompts</h2>
 <div class="outline-text-2" id="text-7">
 <ol class="org-ol">
 <li><b><b>Usa Ejemplos</b></b>: Proporciona ejemplos de lo que buscas. Por ejemplo: "Escribe un poema como este: [ejemplo]."</li>
@@ -240,8 +210,8 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </ol>
 </div>
 </div>
-<div id="outline-container-orgd161d4c" class="outline-2">
-<h2 id="orgd161d4c"><span class="section-number-2">8.</span> Herramientas Populares para Generar Prompts</h2>
+<div id="outline-container-org487cd70" class="outline-2">
+<h2 id="org487cd70"><span class="section-number-2">8.</span> Herramientas Populares para Generar Prompts</h2>
 <div class="outline-text-2" id="text-8">
 <ol class="org-ol">
 <li><b><b>ChatGPT</b></b>: Ideal para textos, ideas y conversaciones.</li>
@@ -251,8 +221,8 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </ol>
 </div>
 </div>
-<div id="outline-container-org5d93392" class="outline-2">
-<h2 id="org5d93392"><span class="section-number-2">9.</span> Conclusión</h2>
+<div id="outline-container-orgbfec690" class="outline-2">
+<h2 id="orgbfec690"><span class="section-number-2">9.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo las herramientas de IA. Con un enfoque claro, específico y contextualizado, puedes obtener respuestas de alta calidad que te ayuden a ahorrar tiempo, potenciar tu creatividad y resolver problemas complejos. Sin embargo, es importante recordar que la IA es una herramienta, no un reemplazo para el pensamiento crítico y la creatividad humana.
@@ -263,14 +233,14 @@ Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo 
 </p>
 </div>
 </div>
-<div id="outline-container-orgb417dcb" class="outline-2">
-<h2 id="orgb417dcb"><span class="section-number-2">10.</span> Gráficos Sugeridos</h2>
+<div id="outline-container-org79efd54" class="outline-2">
+<h2 id="org79efd54"><span class="section-number-2">10.</span> Gráficos Sugeridos</h2>
 <div class="outline-text-2" id="text-10">
 <ol class="org-ol">
 <li>Diagrama de flujo: "Pasos para crear un prompt efectivo".</li>
 </ol>
 
-<figure id="org6fb31e7">
+<figure id="orgc8735f3">
 <img src="file:///home/mike/myblog/public/images/diagrama_flujo_prompt.png" alt="diagrama_flujo_prompt.png">
 
 </figure>
@@ -285,7 +255,7 @@ Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo 
 </ol>
 
 
-<figure id="org7b76b5f">
+<figure id="orgab6a944">
 <img src="file:///home/mike/myblog/public/images/comparacion_prompt_ditaa.png" alt="comparacion_prompt_ditaa.png">
 
 </figure>

@@ -23,13 +23,13 @@
          .blog-header {
            display: flex;
            align-items: center;
-           justify-content: center;
-           flex-direction: column;
-           text-align: center;
+           justify-content: left;
+           text-align: left;
          }
          .blog-header img {
-           max-height: 50px;
-           margin-bottom: 10px;
+           max-width: 80px;
+           height: auto;
+           margin-right: 15px;
          }
          .blog-subtitle {
            font-size: 1.2em;
@@ -48,11 +48,12 @@
        </style>
        <div class='blog-header'>
          <img src='logo.png' alt='Logo'>
-         <h1>Mi Blog con Emacs y Esteroides</h1>
-         <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
-         <p style='font-size: 0.8em;'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         <div>
+           <h1>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p style='font-size: 0.8em;'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
        </div>
-       <hr>
        <nav>
          <a href='index.html'>Inicio</a> |
          <a href='tags.html'>Tags</a> |
@@ -66,28 +67,16 @@
 <div id="preamble" class="status"></div>
 <div id="content">
 <div class="post-date">02/03/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-02-comparativa-de-modelos-de-ia-generativa-en-2025-(grok).html">Comparativa de Modelos de IA Generativa en 2025 (Grok)</a></h1>
-<nav id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#orgae33547">1. Introducción</a></li>
-<li><a href="#org2db06ff">2. Tabla Comparativa Vertical de Modelos de IA Generativa</a></li>
-<li><a href="#org73d1a69">3. Notas sobre la Valoración</a></li>
-<li><a href="#org3c796e9">4. Metodología</a></li>
-<li><a href="#org2603d70">5. Conclusión</a></li>
-</ul>
-</div>
-</nav>
-<div id="outline-container-orgae33547" class="outline-2">
-<h2 id="orgae33547"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-orgf9b9623" class="outline-2">
+<h2 id="orgf9b9623"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Este documento presenta una tabla vertical detallada en Org-mode que compara modelos de IA generativa: DeepSeek, Grok, OpenAI (ChatGPT), GitHub Copilot y alternativas gratuitas (Claude, Gemini). Se valoran aspectos clave de 1 a 10, con justificaciones basadas en su desempeño, accesibilidad y tendencias al 2 de marzo de 2025.
 </p>
 </div>
 </div>
-<div id="outline-container-org2db06ff" class="outline-2">
-<h2 id="org2db06ff"><span class="section-number-2">2.</span> Tabla Comparativa Vertical de Modelos de IA Generativa</h2>
+<div id="outline-container-org9d236b4" class="outline-2">
+<h2 id="org9d236b4"><span class="section-number-2">2.</span> Tabla Comparativa Vertical de Modelos de IA Generativa</h2>
 <div class="outline-text-2" id="text-2">
 <table>
 
@@ -332,8 +321,8 @@ Este documento presenta una tabla vertical detallada en Org-mode que compara mod
 </table>
 </div>
 </div>
-<div id="outline-container-org73d1a69" class="outline-2">
-<h2 id="org73d1a69"><span class="section-number-2">3.</span> Notas sobre la Valoración</h2>
+<div id="outline-container-org8e3a547" class="outline-2">
+<h2 id="org8e3a547"><span class="section-number-2">3.</span> Notas sobre la Valoración</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li><b><b>DeepSeek</b></b>: Destaca en accesibilidad (10) y eficiencia (9), pero creativity (6) y privacidad (6) son débiles por su enfoque técnico y origen.</li>
@@ -345,8 +334,8 @@ Este documento presenta una tabla vertical detallada en Org-mode que compara mod
 </ul>
 </div>
 </div>
-<div id="outline-container-org3c796e9" class="outline-2">
-<h2 id="org3c796e9"><span class="section-number-2">4.</span> Metodología</h2>
+<div id="outline-container-orgfd87354" class="outline-2">
+<h2 id="orgfd87354"><span class="section-number-2">4.</span> Metodología</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li><b><b>Escala</b></b>: 1 (muy deficiente) a 10 (excelente).</li>
@@ -355,8 +344,8 @@ Este documento presenta una tabla vertical detallada en Org-mode que compara mod
 </ul>
 </div>
 </div>
-<div id="outline-container-org2603d70" class="outline-2">
-<h2 id="org2603d70"><span class="section-number-2">5.</span> Conclusión</h2>
+<div id="outline-container-org315a6a1" class="outline-2">
+<h2 id="org315a6a1"><span class="section-number-2">5.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 OpenAI lidera con 79/100 por su versatilidad, seguido de cerca por DeepSeek y Grok (78/100) por su eficiencia técnica y accesibilidad. Copilot (72/100) es ideal para codificación, mientras Claude (71/100) y Gemini (74/100) ofrecen opciones gratuitas sólidas pero limitadas en ciertas áreas.
