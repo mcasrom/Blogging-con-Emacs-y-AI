@@ -18,83 +18,62 @@
            padding: 20px;
            background-color: #f5f5f5;
          }
-         h1, h2, h3 {
-           color: #2c3e50;
-           font-family: 'Helvetica', sans-serif;
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Helvetica', sans-serif; 
+           margin: 0;
          }
          .blog-header {
            display: flex;
-           align-items: center;
-           justify-content: center;
-           padding: 20px 0;
-           background: linear-gradient(to right, #3498db, #2980b9);
-           color: white;
-           border-radius: 8px;
-           box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+           align-items: center; /* Alinea verticalmente */
+           justify-content: flex-start; /* Alinea a la izquierda */
+           text-align: left;
          }
          .blog-header img {
-           height: 50px;
-           margin-right: 20px;
+           max-width: 80px;  /* Tamaño estándar para logos */
+           height: auto;
+           margin-right: 15px; /* Espacio entre logo y texto */
          }
-         .blog-header h1 {
-           margin: 0;
-           font-size: 2.5em;
+         .blog-header-text {
+           display: flex;
+           flex-direction: column; /* Organiza título, subtítulo y email en columna */
          }
-         .blog-header span {
-           font-size: 0.9em;
-           font-style: italic;
-           display: block;
+         .blog-subtitle {
+           font-size: 1.2em;
+           color: #555;
            margin-top: 5px;
          }
-         .blog-header a {
-           color: #ecf0f1;
-           text-decoration: none;
+         .blog-email {
+           font-size: 0.8em;
+           color: #666;
+           margin-top: 3px;
          }
-         .blog-header a:hover {
-           color: #dfe6e9;
-           text-decoration: underline;
-         }
-         hr {
-           border: 0;
-           height: 1px;
-           background: #ddd;
-           margin: 20px 0;
-         }
-         .post {
-           background: white;
-           padding: 20px;
-           margin-bottom: 20px;
-           border-radius: 8px;
-           box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-         }
-         a {
-           color: #2980b9;
-           text-decoration: none;
-         }
-         a:hover {
-           text-decoration: underline;
-         }
-         .footer-hr {
-           border: 0;
-           height: 4px;
-           background: #888;
-           margin: 30px 0 20px 0;
+         .img-standard {
+           max-width: 600px; /* Tamaño estándar para fotos y gráficos */
+           height: auto;
+           display: block;
+           margin: 10px auto;
          }
        </style>
        <div class='blog-header'>
-         <img src='/images/logo.png' alt='Logo'>
-         <div>
-           <h1>Mi Blog con Emacs</h1>
-           <span><a href='mailto:mybloggingnotes@gmail.com'>M.Castillo</a></span>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-text'>
+           <h1>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
          </div>
        </div>
        <hr></head>
 <body>
-<div id="preamble" class="status"><div id='preamble' class='status'>
-         <p><a href='/index.html'>Inicio</a> | <a href='/tags.html'>Tags</a> | <a href='/archive.html'>Archivo</a></p>
-       </div></div>
+<div id="preamble" class="status"></div>
 <div id="content">
-<h1 class="title">Artículos de la categoría "emacs":</h1><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-mi-blog-con-emacs-y-esteroides:-una-aventura-potenciada-por-código-y-ia.html">Mi Blog con Emacs y Esteroides: Una Aventura Potenciada por Código y IA</a></h2><div class="post-date">26/02/2025</div><p><a href='index.html'>Inicio</a> | <a href='tags.html'>Tags</a> | <a href='archive.html'>Archivo</a></p>(...)<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-blogging.html">blogging</a> </div><div id="archive">
+<h1 class="title">Artículos de la categoría "emacs":</h1><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-27-emacs:-historia,-evolución-y-futuro.html">Emacs: Historia, Evolución y Futuro</a></h2><div class="post-date">27/02/2025</div><p>
+Emacs es más que un simple editor de texto: es un ecosistema de extensibilidad, programabilidad y personalización. Desde su creación en la década de 1970, Emacs ha evolucionado hasta convertirse en una de las herramientas más poderosas para la edición de texto, la programación, la gestión del conocimiento y muchas otras tareas.
+</p>(...)<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> </div><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-mi-blog-con-emacs-y-esteroides:-una-aventura-potenciada-por-código-y-ia.html">Mi Blog con Emacs y Esteroides: Una Aventura Potenciada por Código y IA</a></h2><div class="post-date">26/02/2025</div><p>
+¡Hola, lector! Si has llegado hasta aquí, probablemente compartas mi pasión por la tecnología, el código y la libertad creativa que ofrecen herramientas como Emacs. Este blog, titulado <b>"Mi Blog con Emacs y Esteroides"</b>, no es solo un espacio para compartir ideas, sino una declaración en favor a un editor legendario y una exploración de cómo la inteligencia artificial generativa lo lleva a otro nivel. ¿Listo para el viaje? ¡Sube a bordo!
+</p>(...)<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-blogging.html">blogging</a> </div><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-gestionando-dos-blogs-diferentes-con-org-static-blog-en-emacs.html">Gestionando Dos Blogs Diferentes con org-static-blog en Emacs</a></h2><div class="post-date">26/02/2025</div><p>
+`org-static-blog` es una herramienta poderosa para crear blogs estáticos desde Emacs, pero por defecto está diseñada para manejar un solo blog. Si quieres trabajar con dos blogs diferentes (por ejemplo, uno personal y otro profesional), necesitas ajustar tu configuración en Emacs 28 para que soporte múltiples instancias. En este artículo, te guiaré paso a paso para lograrlo.
+</p>(...)<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-blogging.html">blogging</a> </div><div id="archive">
 <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/archive.html">Otros artículos</a>
 </div>
 </div>
