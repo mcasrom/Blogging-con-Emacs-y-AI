@@ -18,51 +18,49 @@
            padding: 20px;
            background-color: #f5f5f5;
          }
-         h1, h2, h3 { 
-           color: #2c3e50; 
-           font-family: 'Helvetica', sans-serif; 
-           margin: 0;
-         }
+         h1, h2, h3 { color: #2c3e50; font-family: 'Helvetica', sans-serif; }
          .blog-header {
            display: flex;
-           align-items: center; /* Alinea verticalmente */
-           justify-content: flex-start; /* Alinea a la izquierda */
+           align-items: center;
+           justify-content: left;
            text-align: left;
          }
          .blog-header img {
-           max-width: 80px;  /* Tamaño estándar para logos */
+           max-width: 80px;
            height: auto;
-           margin-right: 15px; /* Espacio entre logo y texto */
-         }
-         .blog-header-text {
-           display: flex;
-           flex-direction: column; /* Organiza título, subtítulo y email en columna */
+           margin-right: 15px;
          }
          .blog-subtitle {
            font-size: 1.2em;
            color: #555;
-           margin-top: 5px;
          }
-         .blog-email {
-           font-size: 0.8em;
-           color: #666;
-           margin-top: 3px;
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 10px;
          }
-         .img-standard {
-           max-width: 600px; /* Tamaño estándar para fotos y gráficos */
-           height: auto;
-           display: block;
-           margin: 10px auto;
+         nav a {
+           margin: 0 10px;
+           text-decoration: none;
+           color: #2c3e50;
          }
        </style>
        <div class='blog-header'>
          <img src='logo.png' alt='Logo'>
-         <div class='blog-header-text'>
+         <div>
            <h1>Mi Blog con Emacs y Esteroides</h1>
            <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
-           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+           <p style='font-size: 0.8em;'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
          </div>
        </div>
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='tags.html'>Tags</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a>
+       </nav>
        <hr></head>
 <body>
 <div id="preamble" class="status"></div>
