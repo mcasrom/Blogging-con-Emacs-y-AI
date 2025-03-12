@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Wed, 12 Mar 2025 16:03:27 +0100</lastBuildDate>
+<lastBuildDate>Wed, 12 Mar 2025 16:44:23 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Análisis Demográfico de los Votantes de Donald Trump en las Elecciones 2024 - Perplexity]]></title>
   <description><![CDATA[
@@ -457,13 +457,13 @@ A continuación, crearemos un gráfico usando Org Babel con Gnuplot:
 <div class="org-src-container">
 <pre class="src src-gnuplot"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n general</span>
 <span style="color: #2f86d2;">set</span> terminal png size 800,500 enhanced font <span style="color: #a44185;">"Helvetica,14"</span>
-<span style="color: #2f86d2;">set</span> output <span style="color: #a44185;">"~/myblog/public/images/welcome-graph.png"</span>
+<span style="color: #2f86d2;">set</span> output <span style="color: #a44185;">"~/myblog/images/welcome-graph.png"</span>
 <span style="color: #2f86d2;">set</span> <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Bienvenida a Mi Blog con Emacs y Org Static"</span> font <span style="color: #a44185;">"Helvetica,18"</span>
 <span style="color: #2f86d2;">set</span> style fill solid 0.5
 <span style="color: #2f86d2;">set</span> style data histogram
 <span style="color: #2f86d2;">set</span> style histogram cluster gap 1
 <span style="color: #2f86d2;">set</span> boxwidth 0.9
-<span style="color: #2f86d2;">set</span> grid yticsc
+<span style="color: #2f86d2;">set</span> grid ytics
 <span style="color: #2f86d2;">set</span> xtics rotate by -45
 <span style="color: #2f86d2;">set</span> xlabel <span style="color: #a44185;">"Tecnolog&#237;as"</span> font <span style="color: #a44185;">"Helvetica,14"</span>
 <span style="color: #2f86d2;">set</span> ylabel <span style="color: #a44185;">"Nivel de Potencia"</span> font <span style="color: #a44185;">"Helvetica,14"</span>
@@ -488,8 +488,8 @@ EOD
 </div>
 
 
-<figure id="org23d76cd">
-<img src="file:///images/welcome-graph.png" alt="welcome-graph.png">
+<figure id="org4381dd6">
+<img src="images/welcome-graph.png" alt="welcome-graph.png">
 
 </figure>
 
