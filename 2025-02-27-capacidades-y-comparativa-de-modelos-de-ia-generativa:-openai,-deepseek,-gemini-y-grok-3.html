@@ -23,13 +23,13 @@
          .blog-header {
            display: flex;
            align-items: center;
-           justify-content: center;
-           flex-direction: column;
-           text-align: center;
+           justify-content: left;
+           text-align: left;
          }
          .blog-header img {
-           max-height: 50px;
-           margin-bottom: 10px;
+           max-width: 80px;
+           height: auto;
+           margin-right: 15px;
          }
          .blog-subtitle {
            font-size: 1.2em;
@@ -48,11 +48,12 @@
        </style>
        <div class='blog-header'>
          <img src='logo.png' alt='Logo'>
-         <h1>Mi Blog con Emacs y Esteroides</h1>
-         <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
-         <p style='font-size: 0.8em;'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         <div>
+           <h1>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p style='font-size: 0.8em;'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
        </div>
-       <hr>
        <nav>
          <a href='index.html'>Inicio</a> |
          <a href='tags.html'>Tags</a> |
@@ -66,36 +67,16 @@
 <div id="preamble" class="status"></div>
 <div id="content">
 <div class="post-date">27/02/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-27-capacidades-y-comparativa-de-modelos-de-ia-generativa:-openai,-deepseek,-gemini-y-grok-3.html">Capacidades y Comparativa de Modelos de IA Generativa: OpenAI, DeepSeek, Gemini y Grok 3</a></h1>
-<nav id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#org8dc85fe">1. Introducción</a></li>
-<li><a href="#orgcbced52">2. Capacidades de la IA Generativa</a></li>
-<li><a href="#orgb4faacf">3. Características Comunes</a></li>
-<li><a href="#org5fab1b8">4. Comparativa de Modelos</a>
-<ul>
-<li><a href="#orgfe2a6e2">4.1. OpenAI (GPT-4o / o1)**</a></li>
-<li><a href="#org44b54f1">4.2. DeepSeek (R1 / V3)**</a></li>
-<li><a href="#orge5d3651">4.3. Gemini (2.0 / Pro)**</a></li>
-<li><a href="#org6701c87">4.4. Grok 3 (xAI)**</a></li>
-</ul>
-</li>
-<li><a href="#org9ac94e8">5. Comparativa Resumida</a></li>
-<li><a href="#org9bcaaec">6. Conclusión</a></li>
-</ul>
-</div>
-</nav>
-<div id="outline-container-org8dc85fe" class="outline-2">
-<h2 id="org8dc85fe"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org7c9823c" class="outline-2">
+<h2 id="org7c9823c"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 La IA generativa es una categoría de inteligencia artificial que crea contenido nuevo (texto, imágenes, código, etc.) a partir de datos de entrenamiento, utilizando modelos de aprendizaje profundo como transformers o sistemas de mezcla de expertos (MoE). Este documento define sus capacidades, características y compara los modelos líderes: OpenAI (GPT-4o/o1), DeepSeek (R1/V3), Gemini (2.0/Pro) y Grok 3 de xAI, con una valoración de 1 a 10.
 </p>
 </div>
 </div>
-<div id="outline-container-orgcbced52" class="outline-2">
-<h2 id="orgcbced52"><span class="section-number-2">2.</span> Capacidades de la IA Generativa</h2>
+<div id="outline-container-org9660652" class="outline-2">
+<h2 id="org9660652"><span class="section-number-2">2.</span> Capacidades de la IA Generativa</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 La IA generativa tiene las siguientes capacidades generales:
@@ -110,8 +91,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb4faacf" class="outline-2">
-<h2 id="orgb4faacf"><span class="section-number-2">3.</span> Características Comunes</h2>
+<div id="outline-container-orgfe14d45" class="outline-2">
+<h2 id="orgfe14d45"><span class="section-number-2">3.</span> Características Comunes</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li><b><b>Arquitectura</b></b>: Basada en transformers o MoE para eficiencia y escalabilidad.</li>
@@ -122,12 +103,12 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-org5fab1b8" class="outline-2">
-<h2 id="org5fab1b8"><span class="section-number-2">4.</span> Comparativa de Modelos</h2>
+<div id="outline-container-org5282582" class="outline-2">
+<h2 id="org5282582"><span class="section-number-2">4.</span> Comparativa de Modelos</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-orgfe2a6e2" class="outline-3">
-<h3 id="orgfe2a6e2"><span class="section-number-3">4.1.</span> OpenAI (GPT-4o / o1)**</h3>
+<div id="outline-container-org9510840" class="outline-3">
+<h3 id="org9510840"><span class="section-number-3">4.1.</span> OpenAI (GPT-4o / o1)**</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Líder en IA conversacional, con GPT-4o como modelo multimodal y o1 especializado en razonamiento.</li>
@@ -153,8 +134,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-org44b54f1" class="outline-3">
-<h3 id="org44b54f1"><span class="section-number-3">4.2.</span> DeepSeek (R1 / V3)**</h3>
+<div id="outline-container-orgaa501b2" class="outline-3">
+<h3 id="orgaa501b2"><span class="section-number-3">4.2.</span> DeepSeek (R1 / V3)**</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Modelo chino de bajo costo, con R1 enfocado en razonamiento y V3 como MoE de 671B parámetros.</li>
@@ -180,8 +161,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-orge5d3651" class="outline-3">
-<h3 id="orge5d3651"><span class="section-number-3">4.3.</span> Gemini (2.0 / Pro)**</h3>
+<div id="outline-container-org6a1e00b" class="outline-3">
+<h3 id="org6a1e00b"><span class="section-number-3">4.3.</span> Gemini (2.0 / Pro)**</h3>
 <div class="outline-text-3" id="text-4-3">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Modelo de Google, integrado con su ecosistema, con Gemini 2.0 Pro como versión avanzada.</li>
@@ -207,8 +188,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-org6701c87" class="outline-3">
-<h3 id="org6701c87"><span class="section-number-3">4.4.</span> Grok 3 (xAI)**</h3>
+<div id="outline-container-org832ade5" class="outline-3">
+<h3 id="org832ade5"><span class="section-number-3">4.4.</span> Grok 3 (xAI)**</h3>
 <div class="outline-text-3" id="text-4-4">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Último modelo de xAI, con énfasis en razonamiento y "búsqueda de la verdad".</li>
@@ -235,8 +216,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </div>
 </div>
 </div>
-<div id="outline-container-org9ac94e8" class="outline-2">
-<h2 id="org9ac94e8"><span class="section-number-2">5.</span> Comparativa Resumida</h2>
+<div id="outline-container-org820a862" class="outline-2">
+<h2 id="org820a862"><span class="section-number-2">5.</span> Comparativa Resumida</h2>
 <div class="outline-text-2" id="text-5">
 <table>
 
@@ -318,8 +299,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </table>
 </div>
 </div>
-<div id="outline-container-org9bcaaec" class="outline-2">
-<h2 id="org9bcaaec"><span class="section-number-2">6.</span> Conclusión</h2>
+<div id="outline-container-org56b43ab" class="outline-2">
+<h2 id="org56b43ab"><span class="section-number-2">6.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li><b><b>OpenAI (GPT-4o/o1)</b></b>: Ideal para usuarios que buscan versatilidad y razonamiento avanzado, aunque costoso.</li>
