@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Thu, 13 Mar 2025 12:59:52 +0100</lastBuildDate>
+<lastBuildDate>Thu, 13 Mar 2025 13:05:25 +0100</lastBuildDate>
 <item>
   <title><![CDATA["Free as Beer": Contexto y Significado en el Mundo Linux ]]></title>
   <description><![CDATA[
@@ -2273,76 +2273,22 @@ OpenAI lidera con 79/100 por su versatilidad, seguido de cerca por DeepSeek y Gr
   <pubDate>Sun, 02 Mar 2025 11:15:00 +0100</pubDate>
 </item>
 <item>
-  <title><![CDATA[Análisis IA Generativa pr DeepSeek]]></title>
+  <title><![CDATA[Análisis IA Generativa por DeepSeek]]></title>
   <description><![CDATA[
-<nav id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#orge8cf82f">1. INTRODUCCIÓN</a>
-<ul>
-<li><a href="#org4b4f676">1.1. Objetivo</a></li>
-<li><a href="#org39cf50e">1.2. Metodología</a></li>
-</ul>
-</li>
-<li><a href="#orgef0dc5f">2. ESPECIFICACIONES TÉCNICAS</a>
-<ul>
-<li><a href="#orga7eb494">2.1. Parámetros Clave por Modelo</a></li>
-</ul>
-</li>
-<li><a href="#org976c36a">3. COMPARATIVA DETALLADA (1-10)</a></li>
-<li><a href="#org4ad8cac">4. ANÁLISIS POR MODELO</a>
-<ul>
-<li><a href="#org966a354">4.1. GPT-4 (OpenAI)</a>
-<ul>
-<li><a href="#org298fea1">4.1.1. Ventajas</a></li>
-<li><a href="#org215ef31">4.1.2. Desventajas</a></li>
-</ul>
-</li>
-<li><a href="#org958ee3c">4.2. DeepSeek-MoE</a>
-<ul>
-<li><a href="#orgd6b2512">4.2.1. Casos de Uso Ideales</a></li>
-<li><a href="#org6c32141">4.2.2. Limitaciones</a></li>
-</ul>
-</li>
-<li><a href="#org171d647">4.3. Gemini Ultra</a>
-<ul>
-<li><a href="#org1b2ffc7">4.3.1. Fortalezas Multimodales</a></li>
-<li><a href="#org6076c31">4.3.2. Debilidades</a></li>
-</ul>
-</li>
-<li><a href="#org3d020ae">4.4. Grok-3</a>
-<ul>
-<li><a href="#org3e81bf4">4.4.1. Diferenciadores</a></li>
-<li><a href="#org764e0c4">4.4.2. Riesgos</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org8a53bed">5. TAREAS PENDIENTES</a>
-<ul>
-<li><a href="#org760b365">5.1. Prioridad Alta</a></li>
-<li><a href="#orgef1f015">5.2. Prioridad Media</a></li>
-</ul>
-</li>
-<li><a href="#org5a16bcd">6. CONCLUSIONES</a></li>
-</ul>
-</div>
-</nav>
-<div id="outline-container-orge8cf82f" class="outline-2">
-<h2 id="orge8cf82f"><span class="section-number-2">1.</span> INTRODUCCIÓN</h2>
+<div id="outline-container-org17ab944" class="outline-2">
+<h2 id="org17ab944"><span class="section-number-2">1.</span> INTRODUCCIÓN</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org4b4f676" class="outline-3">
-<h3 id="org4b4f676"><span class="section-number-3">1.1.</span> Objetivo</h3>
+<div id="outline-container-org8b92624" class="outline-3">
+<h3 id="org8b92624"><span class="section-number-3">1.1.</span> Objetivo</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gemini Ultra (Google) y Grok-3 (xAI), evaluando sus capacidades técnicas, rendimiento práctico y viabilidad comercial.  
 </p>
 </div>
 </div>
-<div id="outline-container-org39cf50e" class="outline-3">
-<h3 id="org39cf50e"><span class="section-number-3">1.2.</span> Metodología</h3>
+<div id="outline-container-org980b1b3" class="outline-3">
+<h3 id="org980b1b3"><span class="section-number-3">1.2.</span> Metodología</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
 <li>Revisión de papers técnicos (2023-2024).</li>
@@ -2353,12 +2299,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-orgef0dc5f" class="outline-2">
-<h2 id="orgef0dc5f"><span class="section-number-2">2.</span> ESPECIFICACIONES TÉCNICAS</h2>
+<div id="outline-container-org328d175" class="outline-2">
+<h2 id="org328d175"><span class="section-number-2">2.</span> ESPECIFICACIONES TÉCNICAS</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orga7eb494" class="outline-3">
-<h3 id="orga7eb494"><span class="section-number-3">2.1.</span> Parámetros Clave por Modelo</h3>
+<div id="outline-container-org6ab50d3" class="outline-3">
+<h3 id="org6ab50d3"><span class="section-number-3">2.1.</span> Parámetros Clave por Modelo</h3>
 <div class="outline-text-3" id="text-2-1">
 <table>
 
@@ -2435,8 +2381,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org976c36a" class="outline-2">
-<h2 id="org976c36a"><span class="section-number-2">3.</span> COMPARATIVA DETALLADA (1-10)</h2>
+<div id="outline-container-org894fe1a" class="outline-2">
+<h2 id="org894fe1a"><span class="section-number-2">3.</span> COMPARATIVA DETALLADA (1-10)</h2>
 <div class="outline-text-2" id="text-3">
 <table>
 
@@ -2593,16 +2539,16 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </table>
 </div>
 </div>
-<div id="outline-container-org4ad8cac" class="outline-2">
-<h2 id="org4ad8cac"><span class="section-number-2">4.</span> ANÁLISIS POR MODELO</h2>
+<div id="outline-container-orgafdce43" class="outline-2">
+<h2 id="orgafdce43"><span class="section-number-2">4.</span> ANÁLISIS POR MODELO</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org966a354" class="outline-3">
-<h3 id="org966a354"><span class="section-number-3">4.1.</span> GPT-4 (OpenAI)</h3>
+<div id="outline-container-orgd73294c" class="outline-3">
+<h3 id="orgd73294c"><span class="section-number-3">4.1.</span> GPT-4 (OpenAI)</h3>
 <div class="outline-text-3" id="text-4-1">
 </div>
-<div id="outline-container-org298fea1" class="outline-4">
-<h4 id="org298fea1"><span class="section-number-4">4.1.1.</span> Ventajas</h4>
+<div id="outline-container-orgfc35a65" class="outline-4">
+<h4 id="orgfc35a65"><span class="section-number-4">4.1.1.</span> Ventajas</h4>
 <div class="outline-text-4" id="text-4-1-1">
 <ul class="org-ul">
 <li>Soporta plugins para matemáticas (Wolfram), búsquedas (Bing) y código (Code Interpreter).</li>
@@ -2611,8 +2557,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-org215ef31" class="outline-4">
-<h4 id="org215ef31"><span class="section-number-4">4.1.2.</span> Desventajas</h4>
+<div id="outline-container-org9809dff" class="outline-4">
+<h4 id="org9809dff"><span class="section-number-4">4.1.2.</span> Desventajas</h4>
 <div class="outline-text-4" id="text-4-1-2">
 <ul class="org-ul">
 <li>Coste elevado para alto volumen (~$6 por millón tokens en entrada).</li>
@@ -2621,12 +2567,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org958ee3c" class="outline-3">
-<h3 id="org958ee3c"><span class="section-number-3">4.2.</span> DeepSeek-MoE</h3>
+<div id="outline-container-org9d22043" class="outline-3">
+<h3 id="org9d22043"><span class="section-number-3">4.2.</span> DeepSeek-MoE</h3>
 <div class="outline-text-3" id="text-4-2">
 </div>
-<div id="outline-container-orgd6b2512" class="outline-4">
-<h4 id="orgd6b2512"><span class="section-number-4">4.2.1.</span> Casos de Uso Ideales</h4>
+<div id="outline-container-org490c980" class="outline-4">
+<h4 id="org490c980"><span class="section-number-4">4.2.1.</span> Casos de Uso Ideales</h4>
 <div class="outline-text-4" id="text-4-2-1">
 <ul class="org-ul">
 <li>Generación de código Python/JavaScript con bajo consumo de recursos.</li>
@@ -2634,8 +2580,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-org6c32141" class="outline-4">
-<h4 id="org6c32141"><span class="section-number-4">4.2.2.</span> Limitaciones</h4>
+<div id="outline-container-org0cfe585" class="outline-4">
+<h4 id="org0cfe585"><span class="section-number-4">4.2.2.</span> Limitaciones</h4>
 <div class="outline-text-4" id="text-4-2-2">
 <ul class="org-ul">
 <li>Rendimiento pobre en español (precisión ~68% vs 92% en inglés).</li>
@@ -2644,12 +2590,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org171d647" class="outline-3">
-<h3 id="org171d647"><span class="section-number-3">4.3.</span> Gemini Ultra</h3>
+<div id="outline-container-org88df9a3" class="outline-3">
+<h3 id="org88df9a3"><span class="section-number-3">4.3.</span> Gemini Ultra</h3>
 <div class="outline-text-3" id="text-4-3">
 </div>
-<div id="outline-container-org1b2ffc7" class="outline-4">
-<h4 id="org1b2ffc7"><span class="section-number-4">4.3.1.</span> Fortalezas Multimodales</h4>
+<div id="outline-container-org3bc6c7d" class="outline-4">
+<h4 id="org3bc6c7d"><span class="section-number-4">4.3.1.</span> Fortalezas Multimodales</h4>
 <div class="outline-text-4" id="text-4-3-1">
 <ul class="org-ul">
 <li>Análisis de vídeo (extracción de frames + transcripción).</li>
@@ -2658,8 +2604,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-org6076c31" class="outline-4">
-<h4 id="org6076c31"><span class="section-number-4">4.3.2.</span> Debilidades</h4>
+<div id="outline-container-org4f5878b" class="outline-4">
+<h4 id="org4f5878b"><span class="section-number-4">4.3.2.</span> Debilidades</h4>
 <div class="outline-text-4" id="text-4-3-2">
 <ul class="org-ul">
 <li>Inconsistencias en razonamiento lógico (ej: silogismos).</li>
@@ -2668,12 +2614,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org3d020ae" class="outline-3">
-<h3 id="org3d020ae"><span class="section-number-3">4.4.</span> Grok-3</h3>
+<div id="outline-container-org8094264" class="outline-3">
+<h3 id="org8094264"><span class="section-number-3">4.4.</span> Grok-3</h3>
 <div class="outline-text-3" id="text-4-4">
 </div>
-<div id="outline-container-org3e81bf4" class="outline-4">
-<h4 id="org3e81bf4"><span class="section-number-4">4.4.1.</span> Diferenciadores</h4>
+<div id="outline-container-orgbc67366" class="outline-4">
+<h4 id="orgbc67366"><span class="section-number-4">4.4.1.</span> Diferenciadores</h4>
 <div class="outline-text-4" id="text-4-4-1">
 <ul class="org-ul">
 <li>Entrenado con datos de 𝕏 (Twitter) hasta Q1 2024.</li>
@@ -2681,8 +2627,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-org764e0c4" class="outline-4">
-<h4 id="org764e0c4"><span class="section-number-4">4.4.2.</span> Riesgos</h4>
+<div id="outline-container-orgf4459d2" class="outline-4">
+<h4 id="orgf4459d2"><span class="section-number-4">4.4.2.</span> Riesgos</h4>
 <div class="outline-text-4" id="text-4-4-2">
 <ul class="org-ul">
 <li>Alucinaciones frecuentes en temas técnicos (ej: código).</li>
@@ -2692,12 +2638,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org8a53bed" class="outline-2">
-<h2 id="org8a53bed"><span class="section-number-2">5.</span> TAREAS PENDIENTES</h2>
+<div id="outline-container-org6a001ad" class="outline-2">
+<h2 id="org6a001ad"><span class="section-number-2">5.</span> TAREAS PENDIENTES</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org760b365" class="outline-3">
-<h3 id="org760b365"><span class="section-number-3">5.1.</span> Prioridad Alta</h3>
+<div id="outline-container-org46543b6" class="outline-3">
+<h3 id="org46543b6"><span class="section-number-3">5.1.</span> Prioridad Alta</h3>
 <div class="outline-text-3" id="text-5-1">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> Probar Gemini Ultra en análisis de vídeos educativos (deadline: 2024-05-25).</li>
@@ -2706,8 +2652,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-orgef1f015" class="outline-3">
-<h3 id="orgef1f015"><span class="section-number-3">5.2.</span> Prioridad Media</h3>
+<div id="outline-container-orgbccd118" class="outline-3">
+<h3 id="orgbccd118"><span class="section-number-3">5.2.</span> Prioridad Media</h3>
 <div class="outline-text-3" id="text-5-2">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> Crear script Emacs para automatizar tablas comparativas (elisp).</li>
@@ -2716,8 +2662,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org5a16bcd" class="outline-2">
-<h2 id="org5a16bcd"><span class="section-number-2">6.</span> CONCLUSIONES</h2>
+<div id="outline-container-orgc53b6de" class="outline-2">
+<h2 id="orgc53b6de"><span class="section-number-2">6.</span> CONCLUSIONES</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li><b><b>Mejor generalista</b></b>: GPT-4 (9.1/10) para equilibrio entre calidad y herramientas.</li>
