@@ -8,51 +8,101 @@
       title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
 <title>Example.com</title>
 <meta charset='UTF-8'>
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
        <style>
          body {
-           font-family: 'Arial', sans-serif;
-           line-height: 1.6;
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
            color: #333;
-           max-width: 800px;
+           max-width: 900px;
            margin: 0 auto;
            padding: 20px;
-           background-color: #f5f5f5;
+           background-color: #f9f9f9;
          }
-         h1, h2, h3 { color: #2c3e50; font-family: 'Helvetica', sans-serif; }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
          .blog-header {
            display: flex;
            align-items: center;
-           justify-content: left;
+           justify-content: flex-start;
            text-align: left;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
          }
          .blog-header img {
-           max-width: 80px;
+           max-width: 70px;
            height: auto;
-           margin-right: 15px;
+           margin-right: 20px;
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+         }
+         .blog-title {
+           font-size: 2em;
+           margin: 0;
          }
          .blog-subtitle {
-           font-size: 1.2em;
-           color: #555;
+           font-size: 1.1em;
+           color: #666;
+           margin-top: 5px;
+         }
+         .blog-email {
+           font-size: 0.9em;
+           color: #777;
+           margin-top: 8px;
+         }
+         .blog-email a {
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
          }
          nav {
            text-align: center;
            font-size: 1em;
-           margin-top: 10px;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
          }
          nav a {
-           margin: 0 10px;
+           color: white;
+           margin: 0 15px;
            text-decoration: none;
-           color: #2c3e50;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+         }
+         .postamble {
+           text-align: center;
+           font-size: 0.85em;
+           color: #666;
          }
        </style>
+       
        <div class='blog-header'>
          <img src='logo.png' alt='Logo'>
-         <div>
-           <h1>Mi Blog con Emacs y Esteroides</h1>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
            <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
-           <p style='font-size: 0.8em;'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
          </div>
        </div>
+       
        <nav>
          <a href='index.html'>Inicio</a> |
          <a href='tags.html'>Tags</a> |
@@ -71,11 +121,9 @@ La <b><b>Ley de Parkinson</b></b> es un principio que afirma que "el trabajo se 
 <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/archive.html">Otros artículos</a>
 </div>
 </div>
-<div id="postamble" class="status"><div id='postamble' class='status'>
+<div id="postamble" class="status"><div class='postamble'>
          <hr class='footer-hr'>
-         <div style='text-align: center; color: #777; font-size: 0.9em; padding-top: 20px;'>
-           <p>© 2025 M.Castillo | Hecho con Emacs y org-static-blog</p>
-         </div>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
        </div></div>
 </body>
 </html>
