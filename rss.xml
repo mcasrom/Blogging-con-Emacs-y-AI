@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Wed, 12 Mar 2025 22:56:07 +0100</lastBuildDate>
+<lastBuildDate>Thu, 13 Mar 2025 08:54:50 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Análisis Demográfico de los Votantes de Donald Trump en las Elecciones 2024 - Perplexity]]></title>
   <description><![CDATA[
@@ -335,9 +335,9 @@ Wang, S. (2024). Election Forecasting and Demographic Shifts. <span class="under
 <p>
 ¡Bienvenidos a la página de <b>Proyectos</b>! En este espacio comparto algunos de los trabajos que he desarrollado, desde experimentos personales hasta iniciativas más ambiciosas. Esta página estática, generada con Org-mode y `org-static-blog`, es un reflejo de mi interés por la tecnología, la creatividad y el aprendizaje continuo. A continuación, encontrarás una descripción de lo que puedes explorar aquí y algunos ejemplos destacados.
 </p>
-<div id="outline-container-orgffd00ed" class="outline-2">
-<h2 id="orgffd00ed">¿Qué encontrarás en la página de Proyectos?</h2>
-<div class="outline-text-2" id="text-orgffd00ed">
+<div id="outline-container-orgfd241d1" class="outline-2">
+<h2 id="orgfd241d1">¿Qué encontrarás en la página de Proyectos?</h2>
+<div class="outline-text-2" id="text-orgfd241d1">
 <p>
 La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pero funcional de mis esfuerzos. Aquí algunos aspectos clave:
 </p>
@@ -349,13 +349,13 @@ La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pe
 </ul>
 </div>
 </div>
-<div id="outline-container-org2e8eecb" class="outline-2">
-<h2 id="org2e8eecb">Ejemplos de Proyectos</h2>
-<div class="outline-text-2" id="text-org2e8eecb">
+<div id="outline-container-org6974bd6" class="outline-2">
+<h2 id="org6974bd6">Ejemplos de Proyectos</h2>
+<div class="outline-text-2" id="text-org6974bd6">
 </div>
-<div id="outline-container-org737f4a2" class="outline-3">
-<h3 id="org737f4a2">1. Generador de Blog Estático con Org-mode</h3>
-<div class="outline-text-3" id="text-org737f4a2">
+<div id="outline-container-orgecdaa85" class="outline-3">
+<h3 id="orgecdaa85">1. Generador de Blog Estático con Org-mode</h3>
+<div class="outline-text-3" id="text-orgecdaa85">
 <ul class="org-ul">
 <li><b>Descripción</b>: Una herramienta para convertir archivos Org en un blog HTML estático, usando `org-static-blog`.</li>
 <li><b>Tecnologías</b>: Emacs, Org-mode, Gnuplot (para gráficos), CSS.</li>
@@ -364,9 +364,9 @@ La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pe
 </ul>
 </div>
 </div>
-<div id="outline-container-orge7753b1" class="outline-3">
-<h3 id="orge7753b1">3. Escritura Creativa Automatizada</h3>
-<div class="outline-text-3" id="text-orge7753b1">
+<div id="outline-container-org06c15cd" class="outline-3">
+<h3 id="org06c15cd">3. Escritura Creativa Automatizada</h3>
+<div class="outline-text-3" id="text-org06c15cd">
 <ul class="org-ul">
 <li><b>Descripción</b>: Un experimento para generar relatos cortos usando IA y publicarlos en este blog.</li>
 <li><b>Tecnologías</b>: Emacs, GPT (simulado), Org-mode.</li>
@@ -376,9 +376,9 @@ La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pe
 </div>
 </div>
 </div>
-<div id="outline-container-org5d35c7e" class="outline-2">
-<h2 id="org5d35c7e">¿Cómo interactuar con los Proyectos?</h2>
-<div class="outline-text-2" id="text-org5d35c7e">
+<div id="outline-container-orgfbe635c" class="outline-2">
+<h2 id="orgfbe635c">¿Cómo interactuar con los Proyectos?</h2>
+<div class="outline-text-2" id="text-orgfbe635c">
 <p>
 Me encantaría que esta página no sea solo un escaparate, sino un punto de partida para colaboración o inspiración:
 </p>
@@ -390,16 +390,16 @@ Me encantaría que esta página no sea solo un escaparate, sino un punto de part
 </ul>
 </div>
 </div>
-<div id="outline-container-org448a296" class="outline-2">
-<h2 id="org448a296">Conclusión</h2>
-<div class="outline-text-2" id="text-org448a296">
+<div id="outline-container-org6ecb988" class="outline-2">
+<h2 id="org6ecb988">Conclusión</h2>
+<div class="outline-text-2" id="text-org6ecb988">
 <p>
 La página de <b>Proyectos</b> es un espacio vivo que iré actualizando con nuevas ideas y trabajos. Usar Org-mode para mantenerla me permite combinar escritura, código y datos en un formato simple y portátil. Espero que encuentres algo que te inspire o motive a experimentar por tu cuenta. ¡No dudes en dejar tus comentarios o contactarme para charlar sobre ello!
 </p>
 
 <hr>
 <p>
-Saludos,  
+Saludos, 
 M.Castillo
 </p>
 
