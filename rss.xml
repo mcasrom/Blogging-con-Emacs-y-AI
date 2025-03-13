@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Thu, 13 Mar 2025 15:28:26 +0100</lastBuildDate>
+<lastBuildDate>Thu, 13 Mar 2025 22:06:10 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Free as Beer: Contexto y Significado en el Mundo Linux ]]></title>
   <description><![CDATA[
@@ -851,9 +851,9 @@ Wang, S. (2024). Election Forecasting and Demographic Shifts. <span class="under
 <p>
 ¡Bienvenidos a la página de <b>Proyectos</b>! En este espacio comparto algunos de los trabajos que he desarrollado, desde experimentos personales hasta iniciativas más ambiciosas. Esta página estática, generada con Org-mode y `org-static-blog`, es un reflejo de mi interés por la tecnología, la creatividad y el aprendizaje continuo. A continuación, encontrarás una descripción de lo que puedes explorar aquí y algunos ejemplos destacados.
 </p>
-<div id="outline-container-orgfd241d1" class="outline-2">
-<h2 id="orgfd241d1">¿Qué encontrarás en la página de Proyectos?</h2>
-<div class="outline-text-2" id="text-orgfd241d1">
+<div id="outline-container-org1e88812" class="outline-2">
+<h2 id="org1e88812">¿Qué encontrarás en la página de Proyectos?</h2>
+<div class="outline-text-2" id="text-org1e88812">
 <p>
 La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pero funcional de mis esfuerzos. Aquí algunos aspectos clave:
 </p>
@@ -865,13 +865,13 @@ La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pe
 </ul>
 </div>
 </div>
-<div id="outline-container-org6974bd6" class="outline-2">
-<h2 id="org6974bd6">Ejemplos de Proyectos</h2>
-<div class="outline-text-2" id="text-org6974bd6">
+<div id="outline-container-org9c03b32" class="outline-2">
+<h2 id="org9c03b32">Ejemplos de Proyectos</h2>
+<div class="outline-text-2" id="text-org9c03b32">
 </div>
-<div id="outline-container-orgecdaa85" class="outline-3">
-<h3 id="orgecdaa85">1. Generador de Blog Estático con Org-mode</h3>
-<div class="outline-text-3" id="text-orgecdaa85">
+<div id="outline-container-org7a363d0" class="outline-3">
+<h3 id="org7a363d0">1. Generador de Blog Estático con Org-mode</h3>
+<div class="outline-text-3" id="text-org7a363d0">
 <ul class="org-ul">
 <li><b>Descripción</b>: Una herramienta para convertir archivos Org en un blog HTML estático, usando `org-static-blog`.</li>
 <li><b>Tecnologías</b>: Emacs, Org-mode, Gnuplot (para gráficos), CSS.</li>
@@ -880,9 +880,9 @@ La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pe
 </ul>
 </div>
 </div>
-<div id="outline-container-org06c15cd" class="outline-3">
-<h3 id="org06c15cd">3. Escritura Creativa Automatizada</h3>
-<div class="outline-text-3" id="text-org06c15cd">
+<div id="outline-container-org37ba46c" class="outline-3">
+<h3 id="org37ba46c">3. Escritura Creativa Automatizada</h3>
+<div class="outline-text-3" id="text-org37ba46c">
 <ul class="org-ul">
 <li><b>Descripción</b>: Un experimento para generar relatos cortos usando IA y publicarlos en este blog.</li>
 <li><b>Tecnologías</b>: Emacs, GPT (simulado), Org-mode.</li>
@@ -892,9 +892,9 @@ La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pe
 </div>
 </div>
 </div>
-<div id="outline-container-orgfbe635c" class="outline-2">
-<h2 id="orgfbe635c">¿Cómo interactuar con los Proyectos?</h2>
-<div class="outline-text-2" id="text-orgfbe635c">
+<div id="outline-container-org3ef211e" class="outline-2">
+<h2 id="org3ef211e">¿Cómo interactuar con los Proyectos?</h2>
+<div class="outline-text-2" id="text-org3ef211e">
 <p>
 Me encantaría que esta página no sea solo un escaparate, sino un punto de partida para colaboración o inspiración:
 </p>
@@ -906,9 +906,9 @@ Me encantaría que esta página no sea solo un escaparate, sino un punto de part
 </ul>
 </div>
 </div>
-<div id="outline-container-org6ecb988" class="outline-2">
-<h2 id="org6ecb988">Conclusión</h2>
-<div class="outline-text-2" id="text-org6ecb988">
+<div id="outline-container-org96ed842" class="outline-2">
+<h2 id="org96ed842">Conclusión</h2>
+<div class="outline-text-2" id="text-org96ed842">
 <p>
 La página de <b>Proyectos</b> es un espacio vivo que iré actualizando con nuevas ideas y trabajos. Usar Org-mode para mantenerla me permite combinar escritura, código y datos en un formato simple y portátil. Espero que encuentres algo que te inspire o motive a experimentar por tu cuenta. ¡No dudes en dejar tus comentarios o contactarme para charlar sobre ello!
 </p>
@@ -958,9 +958,9 @@ Para ponerte en contacto, envíanos un email a <a href="mailto:mybloggingnotes@g
 <p>
 Puedes enviarme un correo electrónico a: <a href="mailto:tu.email@ejemplo.com">mybloggingnotes@gmail.com</a>. Trataré de responder lo antes posible.
 </p>
-<div id="outline-container-org831f331" class="outline-2">
-<h2 id="org831f331">¿Qué puedes escribir?</h2>
-<div class="outline-text-2" id="text-org831f331">
+<div id="outline-container-org212fc27" class="outline-2">
+<h2 id="org212fc27">¿Qué puedes escribir?</h2>
+<div class="outline-text-2" id="text-org212fc27">
 <ul class="org-ul">
 <li>Preguntas sobre los temas tratados en el blog.</li>
 <li>Ideas para futuros <b>posts</b> o colaboraciones.</li>
@@ -1154,16 +1154,16 @@ Para publicar este post, simplemente guárdalo en tu directorio <code>~/myblog/p
 <item>
   <title><![CDATA[Cómo Generar un Prompt en IA: Guía Detallada, Ventajas e Inconvenientes]]></title>
   <description><![CDATA[
-<div id="outline-container-orgc5b7539" class="outline-2">
-<h2 id="orgc5b7539"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org09533d4" class="outline-2">
+<h2 id="org09533d4"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 La inteligencia artificial (IA) ha revolucionado la forma en que interactuamos con la tecnología. Desde chatbots hasta herramientas de generación de contenido, la IA se ha convertido en una aliada indispensable para profesionales, creativos y entusiastas de la tecnología. Sin embargo, para aprovechar al máximo estas herramientas, es fundamental entender cómo <b><b>generar un prompt efectivo</b></b>. En este artículo, exploraremos en detalle qué es un prompt, cómo crearlo, sus ventajas, inconvenientes y ejemplos prácticos para que puedas dominar esta habilidad.
 </p>
 </div>
 </div>
-<div id="outline-container-org50be7a1" class="outline-2">
-<h2 id="org50be7a1"><span class="section-number-2">2.</span> ¿Qué es un Prompt en IA?</h2>
+<div id="outline-container-org00a74ce" class="outline-2">
+<h2 id="org00a74ce"><span class="section-number-2">2.</span> ¿Qué es un Prompt en IA?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Un <b><b>prompt</b></b> es una instrucción, pregunta o conjunto de indicaciones que se le proporciona a un modelo de inteligencia artificial para que genere una respuesta o realice una tarea específica. Es la forma en que nos comunicamos con la IA y le decimos qué queremos que haga.
@@ -1174,15 +1174,15 @@ Por ejemplo, si le pides a ChatGPT que "escriba un poema sobre el océano", esa 
 </p>
 </div>
 </div>
-<div id="outline-container-org2c34abf" class="outline-2">
-<h2 id="org2c34abf"><span class="section-number-2">3.</span> ¿Cómo Generar un Prompt Efectivo?</h2>
+<div id="outline-container-orgcc12822" class="outline-2">
+<h2 id="orgcc12822"><span class="section-number-2">3.</span> ¿Cómo Generar un Prompt Efectivo?</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Crear un prompt efectivo requiere claridad, precisión y contexto. A continuación, te explicamos los pasos clave para generar un prompt que obtenga los mejores resultados:
 </p>
 </div>
-<div id="outline-container-org6cdb647" class="outline-3">
-<h3 id="org6cdb647"><span class="section-number-3">3.1.</span> 1. Define el Objetivo</h3>
+<div id="outline-container-org683dc67" class="outline-3">
+<h3 id="org683dc67"><span class="section-number-3">3.1.</span> 1. Define el Objetivo</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li>Antes de escribir el prompt, pregúntate: ¿Qué quiero lograr con la IA? ¿Necesito información, un texto creativo, un análisis de datos o una solución a un problema?</li>
@@ -1190,8 +1190,8 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfe999e9" class="outline-3">
-<h3 id="orgfe999e9"><span class="section-number-3">3.2.</span> 2. Sé Específico</h3>
+<div id="outline-container-org89c0440" class="outline-3">
+<h3 id="org89c0440"><span class="section-number-3">3.2.</span> 2. Sé Específico</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li>Cuanto más específico seas, mejor será la respuesta. Incluye detalles como el tono, el estilo, la longitud o el formato que deseas.</li>
@@ -1199,8 +1199,8 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb44e444" class="outline-3">
-<h3 id="orgb44e444"><span class="section-number-3">3.3.</span> 3. Proporciona Contexto</h3>
+<div id="outline-container-orgbbd2116" class="outline-3">
+<h3 id="orgbbd2116"><span class="section-number-3">3.3.</span> 3. Proporciona Contexto</h3>
 <div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
 <li>La IA funciona mejor cuando tiene suficiente información. Si el prompt requiere conocimientos específicos, inclúyelos.</li>
@@ -1208,8 +1208,8 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </ul>
 </div>
 </div>
-<div id="outline-container-orga5692a2" class="outline-3">
-<h3 id="orga5692a2"><span class="section-number-3">3.4.</span> 4. Usa un Lenguaje Claro y Directo</h3>
+<div id="outline-container-org5f42730" class="outline-3">
+<h3 id="org5f42730"><span class="section-number-3">3.4.</span> 4. Usa un Lenguaje Claro y Directo</h3>
 <div class="outline-text-3" id="text-3-4">
 <ul class="org-ul">
 <li>Evita ambigüedades. Usa un lenguaje sencillo y evita frases confusas.</li>
@@ -1217,8 +1217,8 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb8af412" class="outline-3">
-<h3 id="orgb8af412"><span class="section-number-3">3.5.</span> 5. Itera y Ajusta</h3>
+<div id="outline-container-orgb9ca33a" class="outline-3">
+<h3 id="orgb9ca33a"><span class="section-number-3">3.5.</span> 5. Itera y Ajusta</h3>
 <div class="outline-text-3" id="text-3-5">
 <ul class="org-ul">
 <li>Si la respuesta no es lo que esperabas, ajusta el prompt. Prueba diferentes enfoques hasta obtener el resultado deseado.</li>
@@ -1227,8 +1227,8 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </div>
 </div>
 </div>
-<div id="outline-container-org6e19710" class="outline-2">
-<h2 id="org6e19710"><span class="section-number-2">4.</span> Ventajas de Usar Prompts en IA</h2>
+<div id="outline-container-orgd00c681" class="outline-2">
+<h2 id="orgd00c681"><span class="section-number-2">4.</span> Ventajas de Usar Prompts en IA</h2>
 <div class="outline-text-2" id="text-4">
 <ol class="org-ol">
 <li><b><b>Ahorro de Tiempo</b></b>: Los prompts permiten automatizar tareas repetitivas, como redactar textos, generar ideas o analizar datos.</li>
@@ -1239,8 +1239,8 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </ol>
 </div>
 </div>
-<div id="outline-container-org91f8a34" class="outline-2">
-<h2 id="org91f8a34"><span class="section-number-2">5.</span> Inconvenientes y Desafíos</h2>
+<div id="outline-container-org9bb0b3a" class="outline-2">
+<h2 id="org9bb0b3a"><span class="section-number-2">5.</span> Inconvenientes y Desafíos</h2>
 <div class="outline-text-2" id="text-5">
 <ol class="org-ol">
 <li><b><b>Dependencia de la Calidad del Prompt</b></b>: Si el prompt no está bien formulado, la respuesta puede ser irrelevante o de baja calidad.</li>
@@ -1251,15 +1251,15 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </ol>
 </div>
 </div>
-<div id="outline-container-org2e0eb7d" class="outline-2">
-<h2 id="org2e0eb7d"><span class="section-number-2">6.</span> Ejemplos Prácticos de Prompts</h2>
+<div id="outline-container-orgdf4c523" class="outline-2">
+<h2 id="orgdf4c523"><span class="section-number-2">6.</span> Ejemplos Prácticos de Prompts</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas generadas por IA:
 </p>
 </div>
-<div id="outline-container-org24c836c" class="outline-3">
-<h3 id="org24c836c"><span class="section-number-3">6.1.</span> Ejemplo 1: Generación de Contenido</h3>
+<div id="outline-container-orgadd9c98" class="outline-3">
+<h3 id="orgadd9c98"><span class="section-number-3">6.1.</span> Ejemplo 1: Generación de Contenido</h3>
 <div class="outline-text-3" id="text-6-1">
 <ul class="org-ul">
 <li><b><b>Prompt</b></b>: "Escribe un blog de 500 palabras sobre los beneficios del ejercicio físico para la salud mental, con un tono motivacional y dirigido a jóvenes adultos."</li>
@@ -1267,8 +1267,8 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </ul>
 </div>
 </div>
-<div id="outline-container-org0f09f9b" class="outline-3">
-<h3 id="org0f09f9b"><span class="section-number-3">6.2.</span> Ejemplo 2: Análisis de Datos</h3>
+<div id="outline-container-org7c1aafa" class="outline-3">
+<h3 id="org7c1aafa"><span class="section-number-3">6.2.</span> Ejemplo 2: Análisis de Datos</h3>
 <div class="outline-text-3" id="text-6-2">
 <ul class="org-ul">
 <li><b><b>Prompt</b></b>: "Analiza los siguientes datos de ventas mensuales y sugiere estrategias para aumentar las ventas en el próximo trimestre: [datos]."</li>
@@ -1276,8 +1276,8 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </ul>
 </div>
 </div>
-<div id="outline-container-org2063822" class="outline-3">
-<h3 id="org2063822"><span class="section-number-3">6.3.</span> Ejemplo 3: Creatividad</h3>
+<div id="outline-container-org1b1c998" class="outline-3">
+<h3 id="org1b1c998"><span class="section-number-3">6.3.</span> Ejemplo 3: Creatividad</h3>
 <div class="outline-text-3" id="text-6-3">
 <ul class="org-ul">
 <li><b><b>Prompt</b></b>: "Inventa una historia corta de ciencia ficción sobre un viajero del tiempo que intenta salvar el futuro."</li>
@@ -1286,8 +1286,8 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </div>
 </div>
 </div>
-<div id="outline-container-org16b7108" class="outline-2">
-<h2 id="org16b7108"><span class="section-number-2">7.</span> Consejos Avanzados para Mejorar tus Prompts</h2>
+<div id="outline-container-orgd13dc28" class="outline-2">
+<h2 id="orgd13dc28"><span class="section-number-2">7.</span> Consejos Avanzados para Mejorar tus Prompts</h2>
 <div class="outline-text-2" id="text-7">
 <ol class="org-ol">
 <li><b><b>Usa Ejemplos</b></b>: Proporciona ejemplos de lo que buscas. Por ejemplo: "Escribe un poema como este: [ejemplo]."</li>
@@ -1297,8 +1297,8 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </ol>
 </div>
 </div>
-<div id="outline-container-org487cd70" class="outline-2">
-<h2 id="org487cd70"><span class="section-number-2">8.</span> Herramientas Populares para Generar Prompts</h2>
+<div id="outline-container-org24f1dda" class="outline-2">
+<h2 id="org24f1dda"><span class="section-number-2">8.</span> Herramientas Populares para Generar Prompts</h2>
 <div class="outline-text-2" id="text-8">
 <ol class="org-ol">
 <li><b><b>ChatGPT</b></b>: Ideal para textos, ideas y conversaciones.</li>
@@ -1308,8 +1308,8 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </ol>
 </div>
 </div>
-<div id="outline-container-orgbfec690" class="outline-2">
-<h2 id="orgbfec690"><span class="section-number-2">9.</span> Conclusión</h2>
+<div id="outline-container-org5763055" class="outline-2">
+<h2 id="org5763055"><span class="section-number-2">9.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo las herramientas de IA. Con un enfoque claro, específico y contextualizado, puedes obtener respuestas de alta calidad que te ayuden a ahorrar tiempo, potenciar tu creatividad y resolver problemas complejos. Sin embargo, es importante recordar que la IA es una herramienta, no un reemplazo para el pensamiento crítico y la creatividad humana.
@@ -1320,21 +1320,17 @@ Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo 
 </p>
 </div>
 </div>
-<div id="outline-container-org79efd54" class="outline-2">
-<h2 id="org79efd54"><span class="section-number-2">10.</span> Gráficos Sugeridos</h2>
+<div id="outline-container-org7e3abc3" class="outline-2">
+<h2 id="org7e3abc3"><span class="section-number-2">10.</span> Gráficos Sugeridos</h2>
 <div class="outline-text-2" id="text-10">
 <ol class="org-ol">
 <li>Diagrama de flujo: "Pasos para crear un prompt efectivo".</li>
 </ol>
 
-<figure id="orgc8735f3">
-<img src="file:///home/mike/myblog/public/images/diagrama_flujo_prompt.png" alt="diagrama_flujo_prompt.png">
+<figure id="org159b314">
+<img src="images/diagrama_flujo_prompt.png" alt="diagrama_flujo_prompt.png">
 
 </figure>
-
-<p width="600">
-[[
-</p>
 
 
 <ol class="org-ol">
@@ -1342,8 +1338,8 @@ Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo 
 </ol>
 
 
-<figure id="orgab6a944">
-<img src="file:///home/mike/myblog/public/images/comparacion_prompt_ditaa.png" alt="comparacion_prompt_ditaa.png">
+<figure id="orgea57536">
+<img src="images/comparacion_prompt_ditaa.png" alt="comparacion_prompt_ditaa.png">
 
 </figure>
 
@@ -1683,8 +1679,8 @@ En este ranking, hemos destacado las herramientas más valoradas por su funciona
 <item>
   <title><![CDATA[Gestión del Tiempo: Técnicas para Ser Más Eficiente]]></title>
   <description><![CDATA[
-<div id="outline-container-orge4e078a" class="outline-2">
-<h2 id="orge4e078a"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org43edbbf" class="outline-2">
+<h2 id="org43edbbf"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 La gestión del tiempo es una habilidad esencial para mejorar la productividad y reducir el estrés. En este post, exploraremos técnicas efectivas para optimizar el uso del tiempo, priorizar tareas y mantener el enfoque en objetivos clave.
@@ -1718,8 +1714,8 @@ Delegación: Transferir tareas secundarias para optimizar esfuerzos.
 Técnicas Efectivas para la Gestión del Tiempo
 </p>
 </div>
-<div id="outline-container-orgf02905a" class="outline-3">
-<h3 id="orgf02905a"><span class="section-number-3">1.1.</span> Método Pomodoro</h3>
+<div id="outline-container-org57c261e" class="outline-3">
+<h3 id="org57c261e"><span class="section-number-3">1.1.</span> Método Pomodoro</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Dividir el trabajo en sesiones de 25 minutos (Pomodoros) con descansos de 5 minutos.
@@ -1734,8 +1730,8 @@ Ideal para mejorar la concentración y evitar la fatiga mental.
 </p>
 </div>
 </div>
-<div id="outline-container-org829184d" class="outline-3">
-<h3 id="org829184d"><span class="section-number-3">1.2.</span> Matriz de Eisenhower</h3>
+<div id="outline-container-orge283891" class="outline-3">
+<h3 id="orge283891"><span class="section-number-3">1.2.</span> Matriz de Eisenhower</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Prioriza tareas en función de su urgencia e importancia.
@@ -1766,14 +1762,14 @@ Ayuda a evitar la procrastinación y la sobrecarga de trabajo.
 </p>
 
 
-<figure id="org6b23d2d">
+<figure id="org31c0dc5">
 <img src="matriz-eisenhower.png" alt="matriz-eisenhower.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org165ca74" class="outline-3">
-<h3 id="org165ca74"><span class="section-number-3">1.3.</span> Técnica Time Blocking</h3>
+<div id="outline-container-org8aca9d3" class="outline-3">
+<h3 id="org8aca9d3"><span class="section-number-3">1.3.</span> Técnica Time Blocking</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Asignar bloques de tiempo específicos a cada tarea.
@@ -1788,8 +1784,8 @@ Compatible con herramientas como Google Calendar o Emacs Org Mode.
 </p>
 </div>
 </div>
-<div id="outline-container-orgbbfa341" class="outline-3">
-<h3 id="orgbbfa341"><span class="section-number-3">1.4.</span> Regla de los Dos Minutos</h3>
+<div id="outline-container-orgf191471" class="outline-3">
+<h3 id="orgf191471"><span class="section-number-3">1.4.</span> Regla de los Dos Minutos</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 Si una tarea toma menos de dos minutos, hacerla de inmediato.
@@ -1800,8 +1796,8 @@ Reduce acumulación de pequeñas tareas y mejora el flujo de trabajo.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc92d632" class="outline-3">
-<h3 id="orgc92d632"><span class="section-number-3">1.5.</span> Batching o Agrupación de Tareas</h3>
+<div id="outline-container-org015478f" class="outline-3">
+<h3 id="org015478f"><span class="section-number-3">1.5.</span> Batching o Agrupación de Tareas</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 Agrupar tareas similares para reducir cambios de contexto.

@@ -8,51 +8,101 @@
       title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
 <title>Proyectos</title>
 <meta charset='UTF-8'>
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
        <style>
          body {
-           font-family: 'Arial', sans-serif;
-           line-height: 1.6;
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
            color: #333;
-           max-width: 800px;
+           max-width: 900px;
            margin: 0 auto;
            padding: 20px;
-           background-color: #f5f5f5;
+           background-color: #f9f9f9;
          }
-         h1, h2, h3 { color: #2c3e50; font-family: 'Helvetica', sans-serif; }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
          .blog-header {
            display: flex;
            align-items: center;
-           justify-content: left;
+           justify-content: flex-start;
            text-align: left;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
          }
          .blog-header img {
-           max-width: 80px;
+           max-width: 70px;
            height: auto;
-           margin-right: 15px;
+           margin-right: 20px;
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+         }
+         .blog-title {
+           font-size: 2em;
+           margin: 0;
          }
          .blog-subtitle {
-           font-size: 1.2em;
-           color: #555;
+           font-size: 1.1em;
+           color: #666;
+           margin-top: 5px;
+         }
+         .blog-email {
+           font-size: 0.9em;
+           color: #777;
+           margin-top: 8px;
+         }
+         .blog-email a {
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
          }
          nav {
            text-align: center;
            font-size: 1em;
-           margin-top: 10px;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
          }
          nav a {
-           margin: 0 10px;
+           color: white;
+           margin: 0 15px;
            text-decoration: none;
-           color: #2c3e50;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+         }
+         .postamble {
+           text-align: center;
+           font-size: 0.85em;
+           color: #666;
          }
        </style>
+       
        <div class='blog-header'>
          <img src='logo.png' alt='Logo'>
-         <div>
-           <h1>Mi Blog con Emacs y Esteroides</h1>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
            <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
-           <p style='font-size: 0.8em;'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
          </div>
        </div>
+       
        <nav>
          <a href='index.html'>Inicio</a> |
          <a href='tags.html'>Tags</a> |
@@ -69,9 +119,9 @@
 <p>
 ¡Bienvenidos a la página de <b>Proyectos</b>! En este espacio comparto algunos de los trabajos que he desarrollado, desde experimentos personales hasta iniciativas más ambiciosas. Esta página estática, generada con Org-mode y `org-static-blog`, es un reflejo de mi interés por la tecnología, la creatividad y el aprendizaje continuo. A continuación, encontrarás una descripción de lo que puedes explorar aquí y algunos ejemplos destacados.
 </p>
-<div id="outline-container-orgfd241d1" class="outline-2">
-<h2 id="orgfd241d1">¿Qué encontrarás en la página de Proyectos?</h2>
-<div class="outline-text-2" id="text-orgfd241d1">
+<div id="outline-container-org1e88812" class="outline-2">
+<h2 id="org1e88812">¿Qué encontrarás en la página de Proyectos?</h2>
+<div class="outline-text-2" id="text-org1e88812">
 <p>
 La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pero funcional de mis esfuerzos. Aquí algunos aspectos clave:
 </p>
@@ -83,13 +133,13 @@ La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pe
 </ul>
 </div>
 </div>
-<div id="outline-container-org6974bd6" class="outline-2">
-<h2 id="org6974bd6">Ejemplos de Proyectos</h2>
-<div class="outline-text-2" id="text-org6974bd6">
+<div id="outline-container-org9c03b32" class="outline-2">
+<h2 id="org9c03b32">Ejemplos de Proyectos</h2>
+<div class="outline-text-2" id="text-org9c03b32">
 </div>
-<div id="outline-container-orgecdaa85" class="outline-3">
-<h3 id="orgecdaa85">1. Generador de Blog Estático con Org-mode</h3>
-<div class="outline-text-3" id="text-orgecdaa85">
+<div id="outline-container-org7a363d0" class="outline-3">
+<h3 id="org7a363d0">1. Generador de Blog Estático con Org-mode</h3>
+<div class="outline-text-3" id="text-org7a363d0">
 <ul class="org-ul">
 <li><b>Descripción</b>: Una herramienta para convertir archivos Org en un blog HTML estático, usando `org-static-blog`.</li>
 <li><b>Tecnologías</b>: Emacs, Org-mode, Gnuplot (para gráficos), CSS.</li>
@@ -98,9 +148,9 @@ La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pe
 </ul>
 </div>
 </div>
-<div id="outline-container-org06c15cd" class="outline-3">
-<h3 id="org06c15cd">3. Escritura Creativa Automatizada</h3>
-<div class="outline-text-3" id="text-org06c15cd">
+<div id="outline-container-org37ba46c" class="outline-3">
+<h3 id="org37ba46c">3. Escritura Creativa Automatizada</h3>
+<div class="outline-text-3" id="text-org37ba46c">
 <ul class="org-ul">
 <li><b>Descripción</b>: Un experimento para generar relatos cortos usando IA y publicarlos en este blog.</li>
 <li><b>Tecnologías</b>: Emacs, GPT (simulado), Org-mode.</li>
@@ -110,9 +160,9 @@ La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pe
 </div>
 </div>
 </div>
-<div id="outline-container-orgfbe635c" class="outline-2">
-<h2 id="orgfbe635c">¿Cómo interactuar con los Proyectos?</h2>
-<div class="outline-text-2" id="text-orgfbe635c">
+<div id="outline-container-org3ef211e" class="outline-2">
+<h2 id="org3ef211e">¿Cómo interactuar con los Proyectos?</h2>
+<div class="outline-text-2" id="text-org3ef211e">
 <p>
 Me encantaría que esta página no sea solo un escaparate, sino un punto de partida para colaboración o inspiración:
 </p>
@@ -124,9 +174,9 @@ Me encantaría que esta página no sea solo un escaparate, sino un punto de part
 </ul>
 </div>
 </div>
-<div id="outline-container-org6ecb988" class="outline-2">
-<h2 id="org6ecb988">Conclusión</h2>
-<div class="outline-text-2" id="text-org6ecb988">
+<div id="outline-container-org96ed842" class="outline-2">
+<h2 id="org96ed842">Conclusión</h2>
+<div class="outline-text-2" id="text-org96ed842">
 <p>
 La página de <b>Proyectos</b> es un espacio vivo que iré actualizando con nuevas ideas y trabajos. Usar Org-mode para mantenerla me permite combinar escritura, código y datos en un formato simple y portátil. Espero que encuentres algo que te inspire o motive a experimentar por tu cuenta. ¡No dudes en dejar tus comentarios o contactarme para charlar sobre ello!
 </p>
@@ -147,11 +197,9 @@ Para ponerte en contacto, envíanos un email a <a href="mailto:mybloggingnotes@g
 </div>
 </div>
 <div class="taglist"></div></div>
-<div id="postamble" class="status"><div id='postamble' class='status'>
+<div id="postamble" class="status"><div class='postamble'>
          <hr class='footer-hr'>
-         <div style='text-align: center; color: #777; font-size: 0.9em; padding-top: 20px;'>
-           <p>© 2025 M.Castillo | Hecho con Emacs y org-static-blog</p>
-         </div>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
        </div></div>
 </body>
 </html>
