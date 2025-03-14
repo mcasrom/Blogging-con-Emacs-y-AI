@@ -4,7 +4,447 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Thu, 13 Mar 2025 22:06:10 +0100</lastBuildDate>
+<lastBuildDate>Fri, 14 Mar 2025 16:18:11 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Por Qué Elegí GitHub para Publicar Mi Blog]]></title>
+  <description><![CDATA[
+<div id="outline-container-org68e016e" class="outline-2">
+<h2 id="org68e016e"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Cuando decidí lanzar mi blog, busqué una solución que fuera económica, adaptable y compatible con mi flujo de trabajo en Emacs. Tras evaluar opciones como WordPress, Medium o servidores privados, opté por GitHub, una plataforma que no solo cumple estos criterios, sino que los supera con creces. En este post, detallo por qué GitHub es mi elección para publicar un blog estático, centrándome en tres pilares: <b><b>gratuidad</b></b>, <b><b>flexibilidad</b></b> y <b><b>facilidad de integración con Emacs</b></b>. Con ejemplos prácticos, datos visuales y reflexiones personales, espero convencerte de que esta combinación es imbatible para blogueros técnicos en 2025.
+</p>
+</div>
+</div>
+<div id="outline-container-org0b9c521" class="outline-2">
+<h2 id="org0b9c521"><span class="section-number-2">2.</span> ¿Qué es GitHub y Por Qué un Blog Estático?</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+GitHub es una plataforma de alojamiento de código basada en Git, conocida por su uso en desarrollo colaborativo. Sin embargo, gracias a <b><b>GitHub Pages</b></b>, también permite alojar sitios web estáticos gratis. Un blog estático, generado con herramientas como Org Static Blog, Hugo o Jekyll, convierte archivos de texto (Markdown, Org-mode, etc.) en HTML, eliminando bases de datos y servidores dinámicos. Esta simplicidad lo hace ideal para quienes priorizan control y eficiencia.
+</p>
+</div>
+<div id="outline-container-org3b9d4dd" class="outline-3">
+<h3 id="org3b9d4dd"><span class="section-number-3">2.1.</span> Ventajas Iniciales</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>No requiere mantenimiento de servidores.</li>
+<li>Compatible con flujos de escritura en texto plano.</li>
+<li>Escalable sin costos adicionales.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge995900" class="outline-2">
+<h2 id="orge995900"><span class="section-number-2">3.</span> Razones para Elegir GitHub</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+A continuación, analizo los tres motivos clave que me llevaron a elegir GitHub, con detalles técnicos y prácticos.
+</p>
+</div>
+<div id="outline-container-org93a38db" class="outline-3">
+<h3 id="org93a38db"><span class="section-number-3">3.1.</span> Gratuidad: Publicar Sin Costo</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org4debca0" class="outline-4">
+<h4 id="org4debca0"><span class="section-number-4">3.1.1.</span> Descripción</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+GitHub Pages ofrece alojamiento gratuito para sitios estáticos públicos, sin límites estrictos de ancho de banda o almacenamiento (dentro de uso razonable). Esto contrasta con plataformas como WordPress.com ($4-$45/mes) o servidores VPS ($5-$20/mes en AWS o DigitalOcean).
+</p>
+</div>
+</div>
+<div id="outline-container-orgc9e7ba2" class="outline-4">
+<h4 id="orgc9e7ba2"><span class="section-number-4">3.1.2.</span> Beneficios</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li><b><b>Costo Cero</b></b>: Perfecto para blogueros principiantes o experimentales.</li>
+<li><b><b>Escalabilidad</b></b>: Según <b>GitHub Stats</b> (2024), soporta millones de visitas mensuales sin cargos.</li>
+<li><b><b>Dominio Personalizado</b></b>: Gratis con configuración DNS simple (ej. `tunombre.com`).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9412e33" class="outline-4">
+<h4 id="org9412e33"><span class="section-number-4">3.1.3.</span> Ejemplo Práctico</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ul class="org-ul">
+<li><b><b>Escenario</b></b>: Quiero lanzar un blog sin invertir dinero.</li>
+<li><b><b>Acción</b></b>: Creo un repositorio `username.github.io`, subo archivos HTML generados con Org-mode, y publico en minutos.</li>
+<li><b><b>Resultado</b></b>: Blog en línea sin gastar un centavo, a diferencia de $48/año en WordPress Básico.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org126fb67" class="outline-4">
+<h4 id="org126fb67"><span class="section-number-4">3.1.4.</span> Limitaciones</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<ul class="org-ul">
+<li>Solo sitios estáticos (sin PHP o bases de datos dinámicas).</li>
+<li>Repositorios privados requieren GitHub Pro ($4/mes), pero no son necesarios para blogs públicos.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org717959d" class="outline-3">
+<h3 id="org717959d"><span class="section-number-3">3.2.</span> Flexibilidad: Control Total Sobre el Contenido</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orgd5c3bde" class="outline-4">
+<h4 id="orgd5c3bde"><span class="section-number-4">3.2.1.</span> Descripción</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+GitHub permite personalizar cada aspecto del blog mediante control de versiones (Git) y compatibilidad con generadores estáticos. No impone plantillas rígidas ni anuncios, a diferencia de Medium o Blogger.
+</p>
+</div>
+</div>
+<div id="outline-container-orgae6f7fb" class="outline-4">
+<h4 id="orgae6f7fb"><span class="section-number-4">3.2.2.</span> Beneficios</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ul class="org-ul">
+<li><b><b>Control de Código</b></b>: Edito mi blog como un proyecto de software, con ramas y pull requests.</li>
+<li><b><b>Personalización</b></b>: Uso CSS propio, integro CI/CD con GitHub Actions para automatizar publicaciones.</li>
+<li><b><b>Portabilidad</b></b>: Puedo migrar mi blog a otra plataforma exportando el repositorio.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5197e8d" class="outline-4">
+<h4 id="org5197e8d"><span class="section-number-4">3.2.3.</span> Ejemplo Práctico</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<ul class="org-ul">
+<li><b><b>Escenario</b></b>: Quiero probar un nuevo diseño.</li>
+<li><b><b>Acción</b></b>: Creo una rama `nuevo-diseño`, edito el CSS en Emacs, hago commit y pruebo en un subdominio temporal (GitHub Actions despliega automáticamente).</li>
+<li><b><b>Resultado</b></b>: Cambio implementado en horas, sin restricciones de plantilla como en WordPress.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org110f44a" class="outline-4">
+<h4 id="org110f44a"><span class="section-number-4">3.2.4.</span> Comparación</h4>
+<div class="outline-text-4" id="text-3-2-4">
+<ul class="org-ul">
+<li>Medium: $5/mes, diseño limitado, contenido tras paywall.</li>
+<li>GitHub: Gratis, diseño 100% editable, contenido siempre accesible.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org396cd89" class="outline-3">
+<h3 id="org396cd89"><span class="section-number-3">3.3.</span> Facilidad de Integración con Emacs</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org0435597" class="outline-4">
+<h4 id="org0435597"><span class="section-number-4">3.3.1.</span> Descripción</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+Como usuario de Emacs, GitHub se integra perfectamente con mi flujo de escritura en Org-mode. Con paquetes como `org-static-blog`, `magit` y `ox-html`, escribo, gestiono y publico directamente desde Emacs.
+</p>
+</div>
+</div>
+<div id="outline-container-org158c106" class="outline-4">
+<h4 id="org158c106"><span class="section-number-4">3.3.2.</span> Beneficios</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<ul class="org-ul">
+<li><b><b>Escritura en Org-mode</b></b>: Formato ligero, exportable a HTML con un comando (`C-c C-e h h`).</li>
+<li><b><b>Control de Versiones con Magit</b></b>: Hago commits y pushes sin salir de Emacs (`C-x g`).</li>
+<li><b><b>Automatización</b></b>: Configuro GitHub Actions para generar y desplegar el sitio al hacer push.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org52ab819" class="outline-4">
+<h4 id="org52ab819"><span class="section-number-4">3.3.3.</span> Ejemplo Práctico</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<ul class="org-ul">
+<li><b><b>Escenario</b></b>: Escribo un post sobre gestión del tiempo.</li>
+<li><b><b>Acción</b></b>:  
+<ol class="org-ol">
+<li>Creo `post-gestion-tiempo.org` en Emacs.</li>
+<li>Escribo en Org-mode con títulos, tablas y código.</li>
+<li>Exporto a HTML con `org-static-blog-publish-file`.</li>
+<li>Uso Magit para commit (`C-c C-c`) y push (`P p`).</li>
+</ol></li>
+<li><b><b>Resultado</b></b>: Post publicado en mi blog en &lt;10 minutos, todo desde Emacs.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org38a4c52" class="outline-4">
+<h4 id="org38a4c52"><span class="section-number-4">3.3.4.</span> Flujo Técnico</h4>
+<div class="outline-text-4" id="text-3-3-4">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n b&#225;sica en .emacs</span>
+(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">org-static-blog</span>
+  <span style="color: #dc3eb7;">:ensure</span> t
+  <span style="color: #dc3eb7;">:config</span>
+  (<span style="color: #219fd5; font-style: italic;">setq</span> org-static-blog-publish-title <span style="color: #a44185;">"Mi Blog"</span>)
+  (<span style="color: #219fd5; font-style: italic;">setq</span> org-static-blog-publish-url <span style="color: #a44185;">"https://username.github.io/"</span>)
+  (<span style="color: #219fd5; font-style: italic;">setq</span> org-static-blog-publish-directory <span style="color: #a44185;">"~/blog/public/"</span>))
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orga45783e" class="outline-2">
+<h2 id="orga45783e"><span class="section-number-2">4.</span> Comparación con Otras Plataformas</h2>
+<div class="outline-text-2" id="text-4">
+<table id="org6192c5d">
+<caption class="t-above"><span class="table-number">Table 1:</span> Comparativa de Plataformas para Blogs</caption>
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Plataforma</th>
+<th scope="col" class="org-left">Costo Mensual</th>
+<th scope="col" class="org-left">Flexibilidad Diseño</th>
+<th scope="col" class="org-left">Integración Emacs</th>
+<th scope="col" class="org-left">Control Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">GitHub Pages</td>
+<td class="org-left">$0</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Excelente</td>
+<td class="org-left">Total</td>
+</tr>
+
+<tr>
+<td class="org-left">WordPress.com</td>
+<td class="org-left">$4-$45</td>
+<td class="org-left">Media</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Limitada</td>
+</tr>
+
+<tr>
+<td class="org-left">Medium</td>
+<td class="org-left">$5</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Nula</td>
+<td class="org-left">Parcial (paywall)</td>
+</tr>
+
+<tr>
+<td class="org-left">VPS (AWS)</td>
+<td class="org-left">$5-$20</td>
+<td class="org-left">Muy Alta</td>
+<td class="org-left">Media</td>
+<td class="org-left">Total</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgc6cdd32" class="outline-2">
+<h2 id="orgc6cdd32"><span class="section-number-2">5.</span> Gráfico: Costo vs Flexibilidad</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+</div>
+<div id="outline-container-org19dbe58" class="outline-2">
+<h2 id="org19dbe58"><span class="section-number-2">6.</span> Comparación de Plataformas</h2>
+<div class="outline-text-2" id="text-6">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Plataforma</th>
+<th scope="col" class="org-left">Costo Mensual</th>
+<th scope="col" class="org-left">Flexibilidad Diseño</th>
+<th scope="col" class="org-left">Integración Emacs</th>
+<th scope="col" class="org-left">Control Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">GitHub Pages</td>
+<td class="org-left">$0</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Excelente</td>
+<td class="org-left">Total</td>
+</tr>
+
+<tr>
+<td class="org-left">WordPress.com</td>
+<td class="org-left">$4-$45</td>
+<td class="org-left">Media</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Limitada</td>
+</tr>
+
+<tr>
+<td class="org-left">Medium</td>
+<td class="org-left">$5</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Nula</td>
+<td class="org-left">Parcial (paywall)</td>
+</tr>
+
+<tr>
+<td class="org-left">VPS (AWS)</td>
+<td class="org-left">$5-$20</td>
+<td class="org-left">Muy Alta</td>
+<td class="org-left">Media</td>
+<td class="org-left">Total</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<table id="orgad3c848">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Plataforma</th>
+<th scope="col" class="org-right">Costo Mensual</th>
+<th scope="col" class="org-right">Flexibilidad Diseño</th>
+<th scope="col" class="org-right">Integración Emacs</th>
+<th scope="col" class="org-right">Control Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">GitHub Pages</td>
+<td class="org-right">0</td>
+<td class="org-right">3</td>
+<td class="org-right">4</td>
+<td class="org-right">4</td>
+</tr>
+
+<tr>
+<td class="org-left">WordPress.com</td>
+<td class="org-right">4</td>
+<td class="org-right">2</td>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+</tr>
+
+<tr>
+<td class="org-left">Medium</td>
+<td class="org-right">5</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">VPS (AWS)</td>
+<td class="org-right">5</td>
+<td class="org-right">4</td>
+<td class="org-right">2</td>
+<td class="org-right">4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orga8a8e5c" class="outline-2">
+<h2 id="orga8a8e5c"><span class="section-number-2">7.</span> Gráfico de Comparación</h2>
+<div class="outline-text-2" id="text-7">
+
+<figure id="org6706dd7">
+<img src="grafico_github.png" alt="grafico_github.png">
+
+</figure>
+
+
+<figure id="orgb312e5f">
+<img src="images/grafico_github.png" alt="grafico_github.png">
+
+</figure>
+</div>
+<div id="outline-container-org41de85d" class="outline-3">
+<h3 id="org41de85d"><span class="section-number-3">7.1.</span> Análisis del Gráfico</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li><b><b>GitHub Pages</b></b>: $0, flexibilidad 9/10 (limitada solo por ser estático).</li>
+<li><b><b>WordPress</b></b>: $15 promedio, flexibilidad 5/10 (plantillas restrictivas).</li>
+<li><b><b>Medium</b></b>: $5, flexibilidad 3/10 (diseño fijo).</li>
+<li><b><b>VPS</b></b>: $12 promedio, flexibilidad 10/10 (pero requiere más configuración).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf20e4d1" class="outline-2">
+<h2 id="orgf20e4d1"><span class="section-number-2">8.</span> Desafíos y Soluciones</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li><b><b>Curva de Aprendizaje</b></b>: Git y Emacs intimidan al inicio.  
+<ul class="org-ul">
+<li><b>Solución</b>: Tutoriales básicos de Magit y GitHub Pages (5-10 horas de práctica).</li>
+</ul></li>
+<li><b><b>Limitaciones Estáticas</b></b>: No admite contenido dinámico nativo.  
+<ul class="org-ul">
+<li><b>Solución</b>: Integro comentarios con Disqus o formularios vía Netlify.</li>
+</ul></li>
+<li><b><b>Dependencia de GitHub</b></b>: Si falla, pierdo alojamiento.  
+<ul class="org-ul">
+<li><b>Solución</b>: Respaldo local y opción de migrar a GitLab Pages.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2a03d3a" class="outline-2">
+<h2 id="org2a03d3a"><span class="section-number-2">9.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Elegir GitHub para mi blog ha sido una decisión transformadora. Su <b><b>gratuidad</b></b> me permitió empezar sin riesgos financieros, su <b><b>flexibilidad</b></b> me da control creativo absoluto y su <b><b>integración con Emacs</b></b> alinea perfectamente mi pasión por el texto plano con la publicación moderna. Los datos muestran que supera a alternativas pagas en costo y adaptabilidad para proyectos estáticos. Si buscas una plataforma que combine economía, poder y sinergia con herramientas como Emacs, GitHub es la respuesta. Mi blog vive ahora en `username.github.io`, y cada post es un testimonio de esta elección.
+</p>
+</div>
+</div>
+<div id="outline-container-orgdfd013a" class="outline-2">
+<h2 id="orgdfd013a"><span class="section-number-2">10.</span> Referencias</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li>GitHub. (2024). <b>GitHub Pages Documentation</b>. <a href="https://docs.github.com/en/pages">https://docs.github.com/en/pages</a></li>
+<li>Org Static Blog. (2023). <b>Official Repository</b>. <a href="https://github.com/bastibe/org-static-blog">https://github.com/bastibe/org-static-blog</a></li>
+<li>Statista. (2024). <b>Web Hosting Market Trends</b>. <a href="https://www.statista.com">https://www.statista.com</a></li>
+<li>Emacs Magit. (2024). <b>Magit User Manual</b>. <a href="https://magit.vc/manual/magit/">https://magit.vc/manual/magit/</a></li>
+<li>Deloitte. (2023). <b>Cost Analysis of Digital Platforms</b>. <a href="https://www2.deloitte.com">https://www2.deloitte.com</a></li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-github.html">github</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-blog.html">blog</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-free.html">free</a> </div>]]></description>
+  <category><![CDATA[github]]></category>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[blog]]></category>
+  <category><![CDATA[free]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-14-por-qu%C3%A9-eleg%C3%AD-github-para-publicar-mi-blog.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-14-por-qu%C3%A9-eleg%C3%AD-github-para-publicar-mi-blog.html</guid>
+  <pubDate>Fri, 14 Mar 2025 14:21:00 +0100</pubDate>
+</item>
 <item>
   <title><![CDATA[Free as Beer: Contexto y Significado en el Mundo Linux ]]></title>
   <description><![CDATA[
@@ -524,8 +964,8 @@ La expresión <span class="underline">"free as in beer"</span> (libre como una c
 <item>
   <title><![CDATA[Análisis Demográfico de los Votantes de Donald Trump en las Elecciones 2024 - Perplexity]]></title>
   <description><![CDATA[
-<div id="outline-container-org5d1b9e4" class="outline-2">
-<h2 id="org5d1b9e4"><span class="section-number-2">1.</span> Introducción: El Fenómeno Trump en la Política Contemporánea</h2>
+<div id="outline-container-org6e4193a" class="outline-2">
+<h2 id="org6e4193a"><span class="section-number-2">1.</span> Introducción: El Fenómeno Trump en la Política Contemporánea</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el mapa político estadounidense. Este análisis examina los patrones demográficos, creencias y factores socioeconómicos de su base electoral, utilizando datos recientes de:
@@ -537,8 +977,8 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 <li>Estudios del Brookings Institution</li>
 </ul>
 </div>
-<div id="outline-container-orgd00e285" class="outline-3">
-<h3 id="orgd00e285"><span class="section-number-3">1.1.</span> Metodología:</h3>
+<div id="outline-container-org10b867c" class="outline-3">
+<h3 id="org10b867c"><span class="section-number-3">1.1.</span> Metodología:</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>Muestra: 15,000 votantes registrados en 12 estados clave</li>
@@ -548,12 +988,12 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </div>
 </div>
 </div>
-<div id="outline-container-org8ddd5b6" class="outline-2">
-<h2 id="org8ddd5b6"><span class="section-number-2">2.</span> Perfil Demográfico del Votante Trumpista</h2>
+<div id="outline-container-org260b416" class="outline-2">
+<h2 id="org260b416"><span class="section-number-2">2.</span> Perfil Demográfico del Votante Trumpista</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgc82d367" class="outline-3">
-<h3 id="orgc82d367"><span class="section-number-3">2.1.</span> Edad y Género</h3>
+<div id="outline-container-orgf82eb0c" class="outline-3">
+<h3 id="orgf82eb0c"><span class="section-number-3">2.1.</span> Edad y Género</h3>
 <div class="outline-text-3" id="text-2-1">
 <table>
 
@@ -598,8 +1038,8 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </p>
 </div>
 </div>
-<div id="outline-container-org12ff97e" class="outline-3">
-<h3 id="org12ff97e"><span class="section-number-3">2.2.</span> Distribución Geográfica</h3>
+<div id="outline-container-org260a475" class="outline-3">
+<h3 id="org260a475"><span class="section-number-3">2.2.</span> Distribución Geográfica</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li>72% proceden de áreas rurales/suburbanas</li>
@@ -609,12 +1049,12 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </div>
 </div>
 </div>
-<div id="outline-container-org95ab688" class="outline-2">
-<h2 id="org95ab688"><span class="section-number-2">3.</span> Factores Ideológicos Clave</h2>
+<div id="outline-container-org60aae92" class="outline-2">
+<h2 id="org60aae92"><span class="section-number-2">3.</span> Factores Ideológicos Clave</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org9e70ff6" class="outline-3">
-<h3 id="org9e70ff6"><span class="section-number-3">3.1.</span> Posiciones Políticas Prioritarias</h3>
+<div id="outline-container-orga70d962" class="outline-3">
+<h3 id="orga70d962"><span class="section-number-3">3.1.</span> Posiciones Políticas Prioritarias</h3>
 <div class="outline-text-3" id="text-3-1">
 <ol class="org-ol">
 <li>Control migratorio (89%)</li>
@@ -624,8 +1064,8 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf11d715" class="outline-3">
-<h3 id="orgf11d715"><span class="section-number-3">3.2.</span> Creencia en Teorías Conspirativas</h3>
+<div id="outline-container-org41a35e1" class="outline-3">
+<h3 id="org41a35e1"><span class="section-number-3">3.2.</span> Creencia en Teorías Conspirativas</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li>63% cree en fraude electoral 2020</li>
@@ -635,12 +1075,12 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </div>
 </div>
 </div>
-<div id="outline-container-org64e09a4" class="outline-2">
-<h2 id="org64e09a4"><span class="section-number-2">4.</span> Religión y Educación</h2>
+<div id="outline-container-orgfd23a81" class="outline-2">
+<h2 id="orgfd23a81"><span class="section-number-2">4.</span> Religión y Educación</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org9bed1d4" class="outline-3">
-<h3 id="org9bed1d4"><span class="section-number-3">4.1.</span> Afiliación Religiosa</h3>
+<div id="outline-container-org6105b87" class="outline-3">
+<h3 id="org6105b87"><span class="section-number-3">4.1.</span> Afiliación Religiosa</h3>
 <div class="outline-text-3" id="text-4-1">
 <table>
 
@@ -685,8 +1125,8 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </p>
 </div>
 </div>
-<div id="outline-container-orgb83c5c2" class="outline-3">
-<h3 id="orgb83c5c2"><span class="section-number-3">4.2.</span> Nivel Educativo</h3>
+<div id="outline-container-org10f4cef" class="outline-3">
+<h3 id="org10f4cef"><span class="section-number-3">4.2.</span> Nivel Educativo</h3>
 <div class="outline-text-3" id="text-4-2">
 <table>
 
@@ -728,12 +1168,12 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </div>
 </div>
 </div>
-<div id="outline-container-orgdf8d683" class="outline-2">
-<h2 id="orgdf8d683"><span class="section-number-2">5.</span> Análisis Socioeconómico</h2>
+<div id="outline-container-org1ad2925" class="outline-2">
+<h2 id="org1ad2925"><span class="section-number-2">5.</span> Análisis Socioeconómico</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org3437291" class="outline-3">
-<h3 id="org3437291"><span class="section-number-3">5.1.</span> Factores de Riesgo Económico</h3>
+<div id="outline-container-org45b36d5" class="outline-3">
+<h3 id="org45b36d5"><span class="section-number-3">5.1.</span> Factores de Riesgo Económico</h3>
 <div class="outline-text-3" id="text-5-1">
 <ul class="org-ul">
 <li>58% trabajan en sectores amenazados por automatización</li>
@@ -742,8 +1182,8 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf865a5b" class="outline-3">
-<h3 id="orgf865a5b"><span class="section-number-3">5.2.</span> Percepción de Movilidad Social</h3>
+<div id="outline-container-orgdf8259a" class="outline-3">
+<h3 id="orgdf8259a"><span class="section-number-3">5.2.</span> Percepción de Movilidad Social</h3>
 <div class="outline-text-3" id="text-5-2">
 <ul class="org-ul">
 <li>Solo 29% cree en el "sueño americano" tradicional</li>
@@ -752,12 +1192,12 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </div>
 </div>
 </div>
-<div id="outline-container-org1745621" class="outline-2">
-<h2 id="org1745621"><span class="section-number-2">6.</span> Estudio de Caso: Condado de Jefferson (Ohio)</h2>
+<div id="outline-container-orgdd098c6" class="outline-2">
+<h2 id="orgdd098c6"><span class="section-number-2">6.</span> Estudio de Caso: Condado de Jefferson (Ohio)</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-orgce5314d" class="outline-3">
-<h3 id="orgce5314d"><span class="section-number-3">6.1.</span> Características Clave</h3>
+<div id="outline-container-org1d4aafc" class="outline-3">
+<h3 id="org1d4aafc"><span class="section-number-3">6.1.</span> Características Clave</h3>
 <div class="outline-text-3" id="text-6-1">
 <ul class="org-ul">
 <li>Población: 230,000 habitantes</li>
@@ -766,8 +1206,8 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </ul>
 </div>
 </div>
-<div id="outline-container-org99ed274" class="outline-3">
-<h3 id="org99ed274"><span class="section-number-3">6.2.</span> Resultados Electorales 2024</h3>
+<div id="outline-container-org1809204" class="outline-3">
+<h3 id="org1809204"><span class="section-number-3">6.2.</span> Resultados Electorales 2024</h3>
 <div class="outline-text-3" id="text-6-2">
 <ul class="org-ul">
 <li>Trump: 64% (+7% vs 2020)</li>
@@ -776,25 +1216,18 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </div>
 </div>
 </div>
-<div id="outline-container-orgfb7b5bc" class="outline-2">
-<h2 id="orgfb7b5bc"><span class="section-number-2">7.</span> Gráfico Comparativo: Educación vs Apoyo a Trump</h2>
+<div id="outline-container-org6c50659" class="outline-2">
+<h2 id="org6c50659"><span class="section-number-2">7.</span> Gráfico Comparativo: Educación vs Apoyo a Trump</h2>
 <div class="outline-text-2" id="text-7">
 
-<figure id="org45d5dc6">
+<figure id="orgd9da3af">
 <img src="trump_voters_education.png" alt="trump_voters_education.png">
 
 </figure>
-
-
-<figure id="orgc135fd5">
-<img src="file:///images/trump_voters_education.png" alt="trump_voters_education.png">
-
-<figcaption><span class="figure-number">Figure 1: </span>Trump voters education</figcaption>
-</figure>
 </div>
 </div>
-<div id="outline-container-org717a130" class="outline-2">
-<h2 id="org717a130"><span class="section-number-2">8.</span> Conclusión: La Nueva Geografía Política</h2>
+<div id="outline-container-orgec7c1b7" class="outline-2">
+<h2 id="orgec7c1b7"><span class="section-number-2">8.</span> Conclusión: La Nueva Geografía Política</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 Los datos revelan una base electoral envejecida, menos educada y concentrada en sectores económicos tradicionales. El éxito de Trump se sustenta en:
@@ -811,8 +1244,8 @@ Sin embargo, su creciente desconexión con votantes jóvenes (&lt;30 años solo 
 </p>
 </div>
 </div>
-<div id="outline-container-org374572b" class="outline-2">
-<h2 id="org374572b"><span class="section-number-2">9.</span> Referencias</h2>
+<div id="outline-container-org88e7bd1" class="outline-2">
+<h2 id="org88e7bd1"><span class="section-number-2">9.</span> Referencias</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 Brenan, M. (2024). <span class="underline">U.S. Political Ideology Trends, 2024</span>. Gallup. <a href="https://www.gallup.com">https://www.gallup.com</a>
