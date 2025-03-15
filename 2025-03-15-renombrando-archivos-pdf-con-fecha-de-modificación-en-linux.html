@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Renombrando Archivos PDF con Fecha de Modificación en Linux">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Renombrando Archivos PDF con Fecha de Modificación en Linux</title>
+<meta charset='UTF-8'>
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: flex-start;
+           text-align: left;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+         }
+         .blog-header img {
+           max-width: 70px;
+           height: auto;
+           margin-right: 20px;
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+         }
+         .blog-title {
+           font-size: 2em;
+           margin: 0;
+         }
+         .blog-subtitle {
+           font-size: 1.1em;
+           color: #666;
+           margin-top: 5px;
+         }
+         .blog-email {
+           font-size: 0.9em;
+           color: #777;
+           margin-top: 8px;
+         }
+         .blog-email a {
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+         }
+         .postamble {
+           text-align: center;
+           font-size: 0.85em;
+           color: #666;
+         }
+       </style>
+       
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>
+       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='tags.html'>Tags</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a>
+       </nav>
+       <hr></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">15/03/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-15-renombrando-archivos-pdf-con-fecha-de-modificación-en-linux.html">Renombrando Archivos PDF con Fecha de Modificación en Linux</a></h1>
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org7036923">1. Renombrando Archivos PDF con Fecha de Modificación en Linux</a>
+<ul>
+<li><a href="#orgb33aecd">1.1. Requisitos</a></li>
+<li><a href="#orgb4452b2">1.2. Introducción</a></li>
+<li><a href="#org5203434">1.3. El Script</a></li>
+<li><a href="#orgd1e1b5c">1.4. Explicación del Script</a></li>
+<li><a href="#org5a5bc5c">1.5. Uso del Script</a></li>
+<li><a href="#org3c83b9a">1.6. Notas y Precauciones</a></li>
+<li><a href="#orgce44db8">1.7. Conclusión</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-org7036923" class="outline-2">
+<h2 id="org7036923"><span class="section-number-2">1.</span> Renombrando Archivos PDF con Fecha de Modificación en Linux</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+¿Tienes una colección de archivos PDF desorganizados y quieres renombrarlos automáticamente con un formato específico? En este post, te mostraré cómo crear un script en <b><b>Bash</b></b> que selecciona un directorio, encuentra todos los archivos `.pdf` que no tengan el prefijo `YYMMDD-nombre.pdf`, y los renombra usando la fecha de modificación del archivo. Este formato es útil para organizar documentos de manera cronológica.
+</p>
+</div>
+<div id="outline-container-orgb33aecd" class="outline-3">
+<h3 id="orgb33aecd"><span class="section-number-3">1.1.</span> Requisitos</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Un sistema Linux (Ubuntu, Debian, Fedora, etc.).</li>
+<li>Conocimientos básicos de terminal y Bash.</li>
+<li>Permisos de escritura en el directorio que deseas procesar.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb4452b2" class="outline-3">
+<h3 id="orgb4452b2"><span class="section-number-3">1.2.</span> Introducción</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+En este post, comparto un script en Bash que automatiza el renombrado de archivos PDF en un directorio específico. El objetivo es identificar aquellos archivos que no tienen el prefijo `YYMMDD-` (donde `YY` son los últimos dos dígitos del año, `MM` el mes de 01 a 12, y `DD` el día de 01 a 31) y renombrarlos usando su fecha de modificación en ese formato. Esto es útil para organizar documentos, como trabajos finales o reportes, manteniendo un estándar claro basado en metadatos del archivo.
+</p>
+</div>
+</div>
+<div id="outline-container-org5203434" class="outline-3">
+<h3 id="org5203434"><span class="section-number-3">1.3.</span> El Script</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Aquí está el script Bash que realiza esta tarea:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Script para renombrar archivos PDF con fecha de modificaci&#243;n en formato YYMMDD-nombre.pdf</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verificar si se proporcion&#243; un directorio como argumento</span>
+<span style="color: #D70000;">if</span> [ $<span style="color: #004651;">#</span> -ne 1 ]; <span style="color: #D70000;">then</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Uso: $0 &lt;directorio&gt;"</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Ejemplo: $0 /ruta/a/tus/pdfs"</span>
+    <span style="color: #D70000;">exit</span> 1
+<span style="color: #D70000;">fi</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Asignar el directorio proporcionado</span>
+<span style="color: #004651;">DIRECTORY</span>=<span style="color: #005F00;">"$1"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verificar si el directorio existe</span>
+<span style="color: #D70000;">if</span> [ <span style="color: #1F55A0; font-weight: bold;">!</span> -d <span style="color: #005F00;">"$DIRECTORY"</span> ]; <span style="color: #D70000;">then</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Error: El directorio '$DIRECTORY' no existe."</span>
+    <span style="color: #D70000;">exit</span> 1
+<span style="color: #D70000;">fi</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Cambiar al directorio especificado</span>
+<span style="color: #1F55A0;">cd</span> <span style="color: #005F00;">"$DIRECTORY"</span> || {
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Error: No se pudo acceder al directorio '$DIRECTORY'."</span>
+    <span style="color: #D70000;">exit</span> 1
+}
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Contador para archivos procesados</span>
+<span style="color: #004651;">COUNT</span>=0
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Buscar archivos PDF y procesarlos</span>
+<span style="color: #D70000;">for</span> file<span style="color: #D70000;"> in</span> *.pdf; <span style="color: #D70000;">do</span>
+    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verificar si hay archivos PDF en el directorio</span>
+    <span style="color: #D70000;">if</span> [ <span style="color: #1F55A0; font-weight: bold;">!</span> -e <span style="color: #005F00;">"$file"</span> ]; <span style="color: #D70000;">then</span>
+        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"No se encontraron archivos PDF en '$DIRECTORY'."</span>
+        <span style="color: #D70000;">exit</span> 0
+    <span style="color: #D70000;">fi</span>
+
+    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Comprobar si el nombre ya tiene el prefijo YYMMDD-</span>
+    <span style="color: #D70000;">if</span> [[ <span style="color: #005F00;">"$file"</span> =~ ^[0-9]{6}-.*<span style="color: #005F00;">\.</span>pdf$ ]]; <span style="color: #D70000;">then</span>
+        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Saltando '$file': ya tiene el formato YYMMDD-."</span>
+        <span style="color: #D70000;">continue</span>
+    <span style="color: #D70000;">fi</span>
+
+    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Obtener la fecha de modificaci&#243;n del archivo (YYMMDD)</span>
+    <span style="color: #004651;">MOD_DATE</span>=$(<span style="color: #1F55A0; font-weight: bold;">stat -c %y "$file" | cut -d' ' -f1 | sed 's/-//g' | cut -c3-8</span>)
+
+    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Construir el nuevo nombre con la fecha</span>
+    <span style="color: #004651;">NEW_NAME</span>=<span style="color: #005F00;">"${MOD_DATE}-${file}"</span>
+
+    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Renombrar el archivo</span>
+    <span style="color: #D70000;">if</span> mv -n <span style="color: #005F00;">"$file"</span> <span style="color: #005F00;">"$NEW_NAME"</span>; <span style="color: #D70000;">then</span>
+        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Renombrado: '$file' -&gt; '$NEW_NAME'"</span>
+        ((COUNT++))
+    <span style="color: #D70000;">else</span>
+        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Error al renombrar '$file'. Puede que '$NEW_NAME' ya exista."</span>
+    <span style="color: #D70000;">fi</span>
+<span style="color: #D70000;">done</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Resumen final</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Proceso completado. Archivos renombrados: $COUNT."</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd1e1b5c" class="outline-3">
+<h3 id="orgd1e1b5c"><span class="section-number-3">1.4.</span> Explicación del Script</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li><b><b>Línea inicial</b></b>: `#!/bin/bash` indica que es un script Bash.</li>
+<li><b><b>Verificación de argumentos</b></b>: Comprueba que se pase un directorio como parámetro (`$1`), mostrando un mensaje de uso si falta.</li>
+<li><b><b>Validación del directorio</b></b>: Asegura que el directorio exista y sea accesible.</li>
+<li><b><b>Bucle sobre PDFs</b></b>: Itera sobre todos los archivos `.pdf` en el directorio:
+<ul class="org-ul">
+<li>Si no hay PDFs, informa y termina.</li>
+<li>Si el archivo ya tiene el prefijo `YYMMDD-` (ej. `250315-documento.pdf`), lo salta.</li>
+<li>Usa `stat -c %y` para obtener la fecha de modificación (formato `YYYY-MM-DD`), extrae `YYMMDD` con `sed` y `cut`.</li>
+<li>Renombra con `mv -n` (sin sobrescribir si ya existe).</li>
+</ul></li>
+<li><b><b>Contador</b></b>: Lleva la cuenta de archivos renombrados y muestra un resumen.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5a5bc5c" class="outline-3">
+<h3 id="org5a5bc5c"><span class="section-number-3">1.5.</span> Uso del Script</h3>
+<div class="outline-text-3" id="text-1-5">
+<ol class="org-ol">
+<li>Guarda el script como `rename<sub>pdfs.sh</sub>`.</li>
+<li><p>
+Dale permisos de ejecución:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">chmod +x rename_pdfs.sh
+</pre>
+</div></li>
+<li><p>
+Ejecútalo especificando un directorio:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">./rename_pdfs.sh /ruta/a/tus/pdfs
+</pre>
+</div>
+<p>
+Ejemplo de salida:
+</p>
+<pre class="example" id="orgf2993cb">
+Saltando '250314-informe.pdf': ya tiene el formato YYMMDD-.
+Renombrado: 'documento.pdf' -&gt; '250315-documento.pdf'
+Proceso completado. Archivos renombrados: 1.
+</pre></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org3c83b9a" class="outline-3">
+<h3 id="org3c83b9a"><span class="section-number-3">1.6.</span> Notas y Precauciones</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li><b><b>Fecha de modificación</b></b>: Depende de la última vez que el archivo fue modificado, no de su creación. Si necesitas la fecha de creación, ajusta usando `stat -c %w` (si el sistema lo soporta).</li>
+<li><b><b>Colisiones</b></b>: Usa `-n` en `mv` para evitar sobrescribir archivos existentes; revisa manualmente si hay errores.</li>
+<li><b><b>Portabilidad</b></b>: Probado en sistemas Linux con `stat` de GNU coreutils. En macOS, cambia `stat -c %y` por `stat -f %Sm`.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgce44db8" class="outline-3">
+<h3 id="orgce44db8"><span class="section-number-3">1.7.</span> Conclusión</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+Este script es una herramienta práctica para mantener tus PDFs organizados con un estándar basado en fechas. Puedes adaptarlo para otros formatos (`.docx`, `.txt`) cambiando `*.pdf` por el patrón deseado. ¡Automatiza y simplifica tu gestión de archivos en Linux!
+</p>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">Linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-script.html">script</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-pdf.html">pdf</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-renombrar.html">renombrar</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+       </div></div>
+</body>
+</html>
