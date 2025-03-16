@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Sun, 16 Mar 2025 08:40:32 +0100</lastBuildDate>
+<lastBuildDate>Sun, 16 Mar 2025 08:46:21 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Renombrando Archivos PDF con Fecha de Modificación en Linux]]></title>
   <description><![CDATA[
@@ -863,12 +863,12 @@ La expresión <span class="underline">"free as in beer"</span> (libre como una c
 <item>
   <title><![CDATA[Generadores de IA por Relevancia y Países (2025)  Perplexity]]></title>
   <description><![CDATA[
-<div id="outline-container-orga2121c5" class="outline-2">
-<h2 id="orga2121c5"><span class="section-number-2">1.</span> Clasificación Global de Generadores de IA</h2>
+<div id="outline-container-org827e698" class="outline-2">
+<h2 id="org827e698"><span class="section-number-2">1.</span> Clasificación Global de Generadores de IA</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org04eddbe" class="outline-3">
-<h3 id="org04eddbe"><span class="section-number-3">1.1.</span> Top 10 Países Líderes en Desarrollo de IA (2025)</h3>
+<div id="outline-container-orga65d022" class="outline-3">
+<h3 id="orga65d022"><span class="section-number-3">1.1.</span> Top 10 Países Líderes en Desarrollo de IA (2025)</h3>
 <div class="outline-text-3" id="text-1-1">
 <table>
 
@@ -965,12 +965,12 @@ La expresión <span class="underline">"free as in beer"</span> (libre como una c
 </div>
 </div>
 </div>
-<div id="outline-container-orgc4004f6" class="outline-2">
-<h2 id="orgc4004f6"><span class="section-number-2">2.</span> Generadores por Categoría</h2>
+<div id="outline-container-org9db3b34" class="outline-2">
+<h2 id="org9db3b34"><span class="section-number-2">2.</span> Generadores por Categoría</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org597637d" class="outline-3">
-<h3 id="org597637d"><span class="section-number-3">2.1.</span> Texto</h3>
+<div id="outline-container-org2d8873e" class="outline-3">
+<h3 id="org2d8873e"><span class="section-number-3">2.1.</span> Texto</h3>
 <div class="outline-text-3" id="text-2-1">
 <table>
 
@@ -1017,8 +1017,8 @@ La expresión <span class="underline">"free as in beer"</span> (libre como una c
 </table>
 </div>
 </div>
-<div id="outline-container-org5ce779d" class="outline-3">
-<h3 id="org5ce779d"><span class="section-number-3">2.2.</span> Imágenes/Vídeo</h3>
+<div id="outline-container-org5cca4da" class="outline-3">
+<h3 id="org5cca4da"><span class="section-number-3">2.2.</span> Imágenes/Vídeo</h3>
 <div class="outline-text-3" id="text-2-2">
 <table>
 
@@ -1059,8 +1059,8 @@ La expresión <span class="underline">"free as in beer"</span> (libre como una c
 </table>
 </div>
 </div>
-<div id="outline-container-org4cf8aef" class="outline-3">
-<h3 id="org4cf8aef"><span class="section-number-3">2.3.</span> Código</h3>
+<div id="outline-container-orge55ef11" class="outline-3">
+<h3 id="orge55ef11"><span class="section-number-3">2.3.</span> Código</h3>
 <div class="outline-text-3" id="text-2-3">
 <table>
 
@@ -1102,12 +1102,12 @@ La expresión <span class="underline">"free as in beer"</span> (libre como una c
 </div>
 </div>
 </div>
-<div id="outline-container-org3db81a1" class="outline-2">
-<h2 id="org3db81a1"><span class="section-number-2">3.</span> Tendencias Regionales</h2>
+<div id="outline-container-orgbb898e9" class="outline-2">
+<h2 id="orgbb898e9"><span class="section-number-2">3.</span> Tendencias Regionales</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org859bb78" class="outline-3">
-<h3 id="org859bb78"><span class="section-number-3">3.1.</span> América del Norte</h3>
+<div id="outline-container-org5c1be80" class="outline-3">
+<h3 id="org5c1be80"><span class="section-number-3">3.1.</span> América del Norte</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li>Dominio de modelos lingüísticos (EE.UU: 78% inversión global en LLMs)</li>
@@ -1115,8 +1115,8 @@ La expresión <span class="underline">"free as in beer"</span> (libre como una c
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcaad671" class="outline-3">
-<h3 id="orgcaad671"><span class="section-number-3">3.2.</span> Asia-Pacífico</h3>
+<div id="outline-container-orgf3a2ec7" class="outline-3">
+<h3 id="orgf3a2ec7"><span class="section-number-3">3.2.</span> Asia-Pacífico</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li>China: 412K patentes IA registradas (2023)</li>
@@ -1125,8 +1125,8 @@ La expresión <span class="underline">"free as in beer"</span> (libre como una c
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfcd929b" class="outline-3">
-<h3 id="orgfcd929b"><span class="section-number-3">3.3.</span> Europa</h3>
+<div id="outline-container-org0b51d04" class="outline-3">
+<h3 id="org0b51d04"><span class="section-number-3">3.3.</span> Europa</h3>
 <div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
 <li>Reino Unido: 54% empresas usando IA ética</li>
@@ -1135,8 +1135,8 @@ La expresión <span class="underline">"free as in beer"</span> (libre como una c
 </div>
 </div>
 </div>
-<div id="outline-container-org64ed5ab" class="outline-2">
-<h2 id="org64ed5ab"><span class="section-number-2">4.</span> Factores Clave de Relevancia</h2>
+<div id="outline-container-org184642f" class="outline-2">
+<h2 id="org184642f"><span class="section-number-2">4.</span> Factores Clave de Relevancia</h2>
 <div class="outline-text-2" id="text-4">
 <table>
 
@@ -1189,8 +1189,8 @@ La expresión <span class="underline">"free as in beer"</span> (libre como una c
 </table>
 </div>
 </div>
-<div id="outline-container-org3eeda6a" class="outline-2">
-<h2 id="org3eeda6a"><span class="section-number-2">5.</span> Proyecciones 2025-2030</h2>
+<div id="outline-container-org114af6b" class="outline-2">
+<h2 id="org114af6b"><span class="section-number-2">5.</span> Proyecciones 2025-2030</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li>Mercado global IA generativa: $207B (CAGR 32%)</li>
@@ -1199,8 +1199,8 @@ La expresión <span class="underline">"free as in beer"</span> (libre como una c
 </ul>
 </div>
 </div>
-<div id="outline-container-org79e4a58" class="outline-2">
-<h2 id="org79e4a58"><span class="section-number-2">6.</span> Referencias [1][2][3][4][5][6][7]</h2>
+<div id="outline-container-org7a8f6b0" class="outline-2">
+<h2 id="org7a8f6b0"><span class="section-number-2">6.</span> Referencias [1][2][3][4][5][6][7]</h2>
 <div class="outline-text-2" id="text-6">
 <ol class="org-ol">
 <li>Stanford HAI (2023). Global AI Index 2024.</li>
@@ -2164,192 +2164,192 @@ La inteligencia artificial generativa ha revolucionado la manera en que creamos 
 <p>
 Las Mejores Herramientas de IA Generativa en 2025
 </p>
-<div id="outline-container-org3cf4a08" class="outline-2">
-<h2 id="org3cf4a08"><span class="section-number-2">1.</span> Jasper AI</h2>
+<div id="outline-container-orgc32eab1" class="outline-2">
+<h2 id="orgc32eab1"><span class="section-number-2">1.</span> Jasper AI</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Jasper AI es una de las plataformas de generación de contenido más avanzadas, utilizada principalmente para la redacción de textos publicitarios, blogs y contenido SEO. Su capacidad de personalización y adaptación a diferentes estilos lo hace una herramienta imprescindible para escritores y marketers.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd819aee" class="outline-2">
-<h2 id="orgd819aee"><span class="section-number-2">2.</span> ChatSonic</h2>
+<div id="outline-container-orge6950b5" class="outline-2">
+<h2 id="orge6950b5"><span class="section-number-2">2.</span> ChatSonic</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 ChatSonic es una IA conversacional avanzada, similar a ChatGPT, pero con acceso a información en tiempo real. Es ideal para responder preguntas complejas y generar contenido actualizado.
 </p>
 </div>
 </div>
-<div id="outline-container-org906adc6" class="outline-2">
-<h2 id="org906adc6"><span class="section-number-2">3.</span> Copy.ai</h2>
+<div id="outline-container-orgbf1e965" class="outline-2">
+<h2 id="orgbf1e965"><span class="section-number-2">3.</span> Copy.ai</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Especializada en la creación de contenido para marketing y redes sociales, Copy.ai permite a los usuarios generar textos atractivos con un enfoque persuasivo. Es ampliamente utilizada por emprendedores y agencias de publicidad.
 </p>
 </div>
 </div>
-<div id="outline-container-org3f67928" class="outline-2">
-<h2 id="org3f67928"><span class="section-number-2">4.</span> Grammarly</h2>
+<div id="outline-container-orgaf2e45d" class="outline-2">
+<h2 id="orgaf2e45d"><span class="section-number-2">4.</span> Grammarly</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Aunque Grammarly no es una IA generativa en el sentido tradicional, es una de las herramientas más valoradas para mejorar la gramática, ortografía y estilo en textos escritos. Su IA avanzada ofrece sugerencias precisas y adaptadas al contexto.
 </p>
 </div>
 </div>
-<div id="outline-container-org25afe85" class="outline-2">
-<h2 id="org25afe85"><span class="section-number-2">5.</span> QuillBot</h2>
+<div id="outline-container-org474f459" class="outline-2">
+<h2 id="org474f459"><span class="section-number-2">5.</span> QuillBot</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 QuillBot se ha convertido en una de las herramientas de parafraseo más populares, permitiendo a los usuarios reformular textos de manera eficiente. Es ideal para escritores, estudiantes y profesionales que buscan mejorar la claridad de sus escritos.
 </p>
 </div>
 </div>
-<div id="outline-container-org06e2e0a" class="outline-2">
-<h2 id="org06e2e0a"><span class="section-number-2">6.</span> Claude</h2>
+<div id="outline-container-orga13661f" class="outline-2">
+<h2 id="orga13661f"><span class="section-number-2">6.</span> Claude</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Claude es un chatbot de IA desarrollado para ofrecer respuestas más naturales y humanas. Se distingue por su enfoque en la coherencia y la generación de diálogos más fluidos.
 </p>
 </div>
 </div>
-<div id="outline-container-org783c70a" class="outline-2">
-<h2 id="org783c70a"><span class="section-number-2">7.</span> Bing Chat</h2>
+<div id="outline-container-org98424c8" class="outline-2">
+<h2 id="org98424c8"><span class="section-number-2">7.</span> Bing Chat</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Integrado en Microsoft Edge, Bing Chat combina IA conversacional con acceso en tiempo real a la web. Es una excelente opción para buscar información y obtener respuestas rápidas.
 </p>
 </div>
 </div>
-<div id="outline-container-orgfa8ba8d" class="outline-2">
-<h2 id="orgfa8ba8d"><span class="section-number-2">8.</span> Google Bard</h2>
+<div id="outline-container-org74093f1" class="outline-2">
+<h2 id="org74093f1"><span class="section-number-2">8.</span> Google Bard</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 Google Bard es la apuesta de Google en el mundo de la IA conversacional. Su fortaleza radica en la integración con el ecosistema de Google, permitiendo respuestas contextualizadas y actualizadas.
 </p>
 </div>
 </div>
-<div id="outline-container-org96a349d" class="outline-2">
-<h2 id="org96a349d"><span class="section-number-2">9.</span> Perplexity AI</h2>
+<div id="outline-container-orgb6ba27c" class="outline-2">
+<h2 id="orgb6ba27c"><span class="section-number-2">9.</span> Perplexity AI</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 Perplexity AI se especializa en proporcionar respuestas concisas y precisas. Es muy valorado por investigadores y usuarios que necesitan información fiable de manera inmediata.
 </p>
 </div>
 </div>
-<div id="outline-container-org6cc5d94" class="outline-2">
-<h2 id="org6cc5d94"><span class="section-number-2">10.</span> LuzIA</h2>
+<div id="outline-container-orgb878e1f" class="outline-2">
+<h2 id="orgb878e1f"><span class="section-number-2">10.</span> LuzIA</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 LuzIA es una asistente de IA diseñada para la productividad y la creación de contenido. Su versatilidad la convierte en una opción interesante para profesionales y estudiantes.
 </p>
 </div>
 </div>
-<div id="outline-container-org35f60b3" class="outline-2">
-<h2 id="org35f60b3"><span class="section-number-2">11.</span> Poe</h2>
+<div id="outline-container-orgbb7e308" class="outline-2">
+<h2 id="orgbb7e308"><span class="section-number-2">11.</span> Poe</h2>
 <div class="outline-text-2" id="text-11">
 <p>
 Poe es una plataforma que permite acceder a múltiples modelos de IA en un solo lugar. Es ideal para usuarios que buscan comparar distintos enfoques de generación de texto.
 </p>
 </div>
 </div>
-<div id="outline-container-org05bcf49" class="outline-2">
-<h2 id="org05bcf49"><span class="section-number-2">12.</span> Neuroflash</h2>
+<div id="outline-container-orgd1f9f56" class="outline-2">
+<h2 id="orgd1f9f56"><span class="section-number-2">12.</span> Neuroflash</h2>
 <div class="outline-text-2" id="text-12">
 <p>
 Neuroflash destaca por ofrecer más de 90 plantillas para la creación de contenido. Su enfoque está dirigido a la eficiencia en la generación de textos publicitarios y descripciones de productos.
 </p>
 </div>
 </div>
-<div id="outline-container-org7f68eba" class="outline-2">
-<h2 id="org7f68eba"><span class="section-number-2">13.</span> AI Mojo</h2>
+<div id="outline-container-org49f9c26" class="outline-2">
+<h2 id="org49f9c26"><span class="section-number-2">13.</span> AI Mojo</h2>
 <div class="outline-text-2" id="text-13">
 <p>
 AI Mojo ofrece herramientas de IA para diferentes necesidades, desde generación de contenido hasta automatización de tareas.
 </p>
 </div>
 </div>
-<div id="outline-container-org5a9853b" class="outline-2">
-<h2 id="org5a9853b"><span class="section-number-2">14.</span> Copyson</h2>
+<div id="outline-container-orgc77a15f" class="outline-2">
+<h2 id="orgc77a15f"><span class="section-number-2">14.</span> Copyson</h2>
 <div class="outline-text-2" id="text-14">
 <p>
 Similar a Copy.ai, Copyson es una IA especializada en generación de contenido para marketing y redes sociales.
 </p>
 </div>
 </div>
-<div id="outline-container-org3ffdc6b" class="outline-2">
-<h2 id="org3ffdc6b"><span class="section-number-2">15.</span> Expertos Software</h2>
+<div id="outline-container-org3018917" class="outline-2">
+<h2 id="org3018917"><span class="section-number-2">15.</span> Expertos Software</h2>
 <div class="outline-text-2" id="text-15">
 <p>
 Plataforma que centraliza diversas herramientas de IA para la creación de contenido y productividad.
 </p>
 </div>
 </div>
-<div id="outline-container-orgf133b4a" class="outline-2">
-<h2 id="orgf133b4a"><span class="section-number-2">16.</span> Guru</h2>
+<div id="outline-container-org9e8193b" class="outline-2">
+<h2 id="org9e8193b"><span class="section-number-2">16.</span> Guru</h2>
 <div class="outline-text-2" id="text-16">
 <p>
 Herramienta de IA enfocada en mejorar la productividad y la generación de contenido especializado.
 </p>
 </div>
 </div>
-<div id="outline-container-orgbdab120" class="outline-2">
-<h2 id="orgbdab120"><span class="section-number-2">17.</span> Redes Zone</h2>
+<div id="outline-container-org9bd7660" class="outline-2">
+<h2 id="org9bd7660"><span class="section-number-2">17.</span> Redes Zone</h2>
 <div class="outline-text-2" id="text-17">
 <p>
 Plataforma de IA que ofrece diversas soluciones en automatización y análisis de datos.
 </p>
 </div>
 </div>
-<div id="outline-container-org903a9ea" class="outline-2">
-<h2 id="org903a9ea"><span class="section-number-2">18.</span> Forte Innovation</h2>
+<div id="outline-container-org30aee5f" class="outline-2">
+<h2 id="org30aee5f"><span class="section-number-2">18.</span> Forte Innovation</h2>
 <div class="outline-text-2" id="text-18">
 <p>
 Especializada en soluciones de IA para empresas, Forte Innovation ayuda a optimizar flujos de trabajo y estrategias digitales.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc1c102f" class="outline-2">
-<h2 id="orgc1c102f"><span class="section-number-2">19.</span> DataCamp</h2>
+<div id="outline-container-org6bd6eda" class="outline-2">
+<h2 id="org6bd6eda"><span class="section-number-2">19.</span> DataCamp</h2>
 <div class="outline-text-2" id="text-19">
 <p>
 Aunque es conocida por sus cursos de ciencia de datos, DataCamp también ha integrado herramientas de IA para la enseñanza y automatización del aprendizaje.
 </p>
 </div>
 </div>
-<div id="outline-container-org7fef672" class="outline-2">
-<h2 id="org7fef672"><span class="section-number-2">20.</span> Xataka</h2>
+<div id="outline-container-org78cfd82" class="outline-2">
+<h2 id="org78cfd82"><span class="section-number-2">20.</span> Xataka</h2>
 <div class="outline-text-2" id="text-20">
 <p>
 Un portal de tecnología que ha comenzado a integrar IA en la generación de contenido y análisis de tendencias.
 </p>
 </div>
 </div>
-<div id="outline-container-org423706c" class="outline-2">
-<h2 id="org423706c"><span class="section-number-2">21.</span> La Vanguardia</h2>
+<div id="outline-container-orgc99e0a5" class="outline-2">
+<h2 id="orgc99e0a5"><span class="section-number-2">21.</span> La Vanguardia</h2>
 <div class="outline-text-2" id="text-21">
 <p>
 Diario digital que incorpora IA en sus procesos de redacción y generación de noticias.
 </p>
 </div>
 </div>
-<div id="outline-container-org4c6cc5c" class="outline-2">
-<h2 id="org4c6cc5c"><span class="section-number-2">22.</span> Cinco Días</h2>
+<div id="outline-container-orgdd08043" class="outline-2">
+<h2 id="orgdd08043"><span class="section-number-2">22.</span> Cinco Días</h2>
 <div class="outline-text-2" id="text-22">
 <p>
 Plataforma informativa que utiliza IA para mejorar la personalización de su contenido.
 </p>
 </div>
 </div>
-<div id="outline-container-orge46e36f" class="outline-2">
-<h2 id="orge46e36f"><span class="section-number-2">23.</span> El País</h2>
+<div id="outline-container-org8273603" class="outline-2">
+<h2 id="org8273603"><span class="section-number-2">23.</span> El País</h2>
 <div class="outline-text-2" id="text-23">
 <p>
 Medio de comunicación que ha implementado herramientas de IA para optimizar la distribución y redacción de noticias.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd0a713b" class="outline-2">
-<h2 id="orgd0a713b"><span class="section-number-2">24.</span> Cadena SER</h2>
+<div id="outline-container-orgd3c539e" class="outline-2">
+<h2 id="orgd3c539e"><span class="section-number-2">24.</span> Cadena SER</h2>
 <div class="outline-text-2" id="text-24">
 <p>
 Cadena de radio que ha integrado IA en la generación de contenido y automatización de noticias.
@@ -2967,20 +2967,20 @@ OpenAI lidera con 79/100 por su versatilidad, seguido de cerca por DeepSeek y Gr
 <item>
   <title><![CDATA[Análisis IA Generativa por DeepSeek]]></title>
   <description><![CDATA[
-<div id="outline-container-org17ab944" class="outline-2">
-<h2 id="org17ab944"><span class="section-number-2">1.</span> INTRODUCCIÓN</h2>
+<div id="outline-container-orge077d5f" class="outline-2">
+<h2 id="orge077d5f"><span class="section-number-2">1.</span> INTRODUCCIÓN</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org8b92624" class="outline-3">
-<h3 id="org8b92624"><span class="section-number-3">1.1.</span> Objetivo</h3>
+<div id="outline-container-orgc77378c" class="outline-3">
+<h3 id="orgc77378c"><span class="section-number-3">1.1.</span> Objetivo</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gemini Ultra (Google) y Grok-3 (xAI), evaluando sus capacidades técnicas, rendimiento práctico y viabilidad comercial.  
 </p>
 </div>
 </div>
-<div id="outline-container-org980b1b3" class="outline-3">
-<h3 id="org980b1b3"><span class="section-number-3">1.2.</span> Metodología</h3>
+<div id="outline-container-org86a3c48" class="outline-3">
+<h3 id="org86a3c48"><span class="section-number-3">1.2.</span> Metodología</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
 <li>Revisión de papers técnicos (2023-2024).</li>
@@ -2991,12 +2991,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org328d175" class="outline-2">
-<h2 id="org328d175"><span class="section-number-2">2.</span> ESPECIFICACIONES TÉCNICAS</h2>
+<div id="outline-container-orgab267be" class="outline-2">
+<h2 id="orgab267be"><span class="section-number-2">2.</span> ESPECIFICACIONES TÉCNICAS</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org6ab50d3" class="outline-3">
-<h3 id="org6ab50d3"><span class="section-number-3">2.1.</span> Parámetros Clave por Modelo</h3>
+<div id="outline-container-org71f1d6b" class="outline-3">
+<h3 id="org71f1d6b"><span class="section-number-3">2.1.</span> Parámetros Clave por Modelo</h3>
 <div class="outline-text-3" id="text-2-1">
 <table>
 
@@ -3073,8 +3073,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org894fe1a" class="outline-2">
-<h2 id="org894fe1a"><span class="section-number-2">3.</span> COMPARATIVA DETALLADA (1-10)</h2>
+<div id="outline-container-org378b98a" class="outline-2">
+<h2 id="org378b98a"><span class="section-number-2">3.</span> COMPARATIVA DETALLADA (1-10)</h2>
 <div class="outline-text-2" id="text-3">
 <table>
 
@@ -3231,16 +3231,16 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </table>
 </div>
 </div>
-<div id="outline-container-orgafdce43" class="outline-2">
-<h2 id="orgafdce43"><span class="section-number-2">4.</span> ANÁLISIS POR MODELO</h2>
+<div id="outline-container-org7f71dda" class="outline-2">
+<h2 id="org7f71dda"><span class="section-number-2">4.</span> ANÁLISIS POR MODELO</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-orgd73294c" class="outline-3">
-<h3 id="orgd73294c"><span class="section-number-3">4.1.</span> GPT-4 (OpenAI)</h3>
+<div id="outline-container-org91fabeb" class="outline-3">
+<h3 id="org91fabeb"><span class="section-number-3">4.1.</span> GPT-4 (OpenAI)</h3>
 <div class="outline-text-3" id="text-4-1">
 </div>
-<div id="outline-container-orgfc35a65" class="outline-4">
-<h4 id="orgfc35a65"><span class="section-number-4">4.1.1.</span> Ventajas</h4>
+<div id="outline-container-org6c34439" class="outline-4">
+<h4 id="org6c34439"><span class="section-number-4">4.1.1.</span> Ventajas</h4>
 <div class="outline-text-4" id="text-4-1-1">
 <ul class="org-ul">
 <li>Soporta plugins para matemáticas (Wolfram), búsquedas (Bing) y código (Code Interpreter).</li>
@@ -3249,8 +3249,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-org9809dff" class="outline-4">
-<h4 id="org9809dff"><span class="section-number-4">4.1.2.</span> Desventajas</h4>
+<div id="outline-container-org061151c" class="outline-4">
+<h4 id="org061151c"><span class="section-number-4">4.1.2.</span> Desventajas</h4>
 <div class="outline-text-4" id="text-4-1-2">
 <ul class="org-ul">
 <li>Coste elevado para alto volumen (~$6 por millón tokens en entrada).</li>
@@ -3259,12 +3259,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org9d22043" class="outline-3">
-<h3 id="org9d22043"><span class="section-number-3">4.2.</span> DeepSeek-MoE</h3>
+<div id="outline-container-org222cc2d" class="outline-3">
+<h3 id="org222cc2d"><span class="section-number-3">4.2.</span> DeepSeek-MoE</h3>
 <div class="outline-text-3" id="text-4-2">
 </div>
-<div id="outline-container-org490c980" class="outline-4">
-<h4 id="org490c980"><span class="section-number-4">4.2.1.</span> Casos de Uso Ideales</h4>
+<div id="outline-container-orgddefb9c" class="outline-4">
+<h4 id="orgddefb9c"><span class="section-number-4">4.2.1.</span> Casos de Uso Ideales</h4>
 <div class="outline-text-4" id="text-4-2-1">
 <ul class="org-ul">
 <li>Generación de código Python/JavaScript con bajo consumo de recursos.</li>
@@ -3272,8 +3272,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-org0cfe585" class="outline-4">
-<h4 id="org0cfe585"><span class="section-number-4">4.2.2.</span> Limitaciones</h4>
+<div id="outline-container-org3f11f11" class="outline-4">
+<h4 id="org3f11f11"><span class="section-number-4">4.2.2.</span> Limitaciones</h4>
 <div class="outline-text-4" id="text-4-2-2">
 <ul class="org-ul">
 <li>Rendimiento pobre en español (precisión ~68% vs 92% en inglés).</li>
@@ -3282,12 +3282,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org88df9a3" class="outline-3">
-<h3 id="org88df9a3"><span class="section-number-3">4.3.</span> Gemini Ultra</h3>
+<div id="outline-container-org53d7568" class="outline-3">
+<h3 id="org53d7568"><span class="section-number-3">4.3.</span> Gemini Ultra</h3>
 <div class="outline-text-3" id="text-4-3">
 </div>
-<div id="outline-container-org3bc6c7d" class="outline-4">
-<h4 id="org3bc6c7d"><span class="section-number-4">4.3.1.</span> Fortalezas Multimodales</h4>
+<div id="outline-container-orgfafdfb0" class="outline-4">
+<h4 id="orgfafdfb0"><span class="section-number-4">4.3.1.</span> Fortalezas Multimodales</h4>
 <div class="outline-text-4" id="text-4-3-1">
 <ul class="org-ul">
 <li>Análisis de vídeo (extracción de frames + transcripción).</li>
@@ -3296,8 +3296,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-org4f5878b" class="outline-4">
-<h4 id="org4f5878b"><span class="section-number-4">4.3.2.</span> Debilidades</h4>
+<div id="outline-container-org47d03a8" class="outline-4">
+<h4 id="org47d03a8"><span class="section-number-4">4.3.2.</span> Debilidades</h4>
 <div class="outline-text-4" id="text-4-3-2">
 <ul class="org-ul">
 <li>Inconsistencias en razonamiento lógico (ej: silogismos).</li>
@@ -3306,12 +3306,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org8094264" class="outline-3">
-<h3 id="org8094264"><span class="section-number-3">4.4.</span> Grok-3</h3>
+<div id="outline-container-orgaf93b02" class="outline-3">
+<h3 id="orgaf93b02"><span class="section-number-3">4.4.</span> Grok-3</h3>
 <div class="outline-text-3" id="text-4-4">
 </div>
-<div id="outline-container-orgbc67366" class="outline-4">
-<h4 id="orgbc67366"><span class="section-number-4">4.4.1.</span> Diferenciadores</h4>
+<div id="outline-container-org4b9e3a7" class="outline-4">
+<h4 id="org4b9e3a7"><span class="section-number-4">4.4.1.</span> Diferenciadores</h4>
 <div class="outline-text-4" id="text-4-4-1">
 <ul class="org-ul">
 <li>Entrenado con datos de 𝕏 (Twitter) hasta Q1 2024.</li>
@@ -3319,8 +3319,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf4459d2" class="outline-4">
-<h4 id="orgf4459d2"><span class="section-number-4">4.4.2.</span> Riesgos</h4>
+<div id="outline-container-org49f39f0" class="outline-4">
+<h4 id="org49f39f0"><span class="section-number-4">4.4.2.</span> Riesgos</h4>
 <div class="outline-text-4" id="text-4-4-2">
 <ul class="org-ul">
 <li>Alucinaciones frecuentes en temas técnicos (ej: código).</li>
@@ -3330,12 +3330,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org6a001ad" class="outline-2">
-<h2 id="org6a001ad"><span class="section-number-2">5.</span> TAREAS PENDIENTES</h2>
+<div id="outline-container-orga2a48ed" class="outline-2">
+<h2 id="orga2a48ed"><span class="section-number-2">5.</span> TAREAS PENDIENTES</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org46543b6" class="outline-3">
-<h3 id="org46543b6"><span class="section-number-3">5.1.</span> Prioridad Alta</h3>
+<div id="outline-container-org4931fc3" class="outline-3">
+<h3 id="org4931fc3"><span class="section-number-3">5.1.</span> Prioridad Alta</h3>
 <div class="outline-text-3" id="text-5-1">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> Probar Gemini Ultra en análisis de vídeos educativos (deadline: 2024-05-25).</li>
@@ -3344,8 +3344,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbccd118" class="outline-3">
-<h3 id="orgbccd118"><span class="section-number-3">5.2.</span> Prioridad Media</h3>
+<div id="outline-container-orgd048a05" class="outline-3">
+<h3 id="orgd048a05"><span class="section-number-3">5.2.</span> Prioridad Media</h3>
 <div class="outline-text-3" id="text-5-2">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> Crear script Emacs para automatizar tablas comparativas (elisp).</li>
@@ -3354,8 +3354,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-orgc53b6de" class="outline-2">
-<h2 id="orgc53b6de"><span class="section-number-2">6.</span> CONCLUSIONES</h2>
+<div id="outline-container-org2e77b6f" class="outline-2">
+<h2 id="org2e77b6f"><span class="section-number-2">6.</span> CONCLUSIONES</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li><b><b>Mejor generalista</b></b>: GPT-4 (9.1/10) para equilibrio entre calidad y herramientas.</li>
@@ -3376,16 +3376,16 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 <item>
   <title><![CDATA[Emacs: Historia, Evolución y Futuro]]></title>
   <description><![CDATA[
-<div id="outline-container-org826f286" class="outline-2">
-<h2 id="org826f286"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org11c3eec" class="outline-2">
+<h2 id="org11c3eec"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Emacs es más que un simple editor de texto: es un ecosistema de extensibilidad, programabilidad y personalización. Desde su creación en la década de 1970, Emacs ha evolucionado hasta convertirse en una de las herramientas más poderosas para la edición de texto, la programación, la gestión del conocimiento y muchas otras tareas.
 </p>
 </div>
 </div>
-<div id="outline-container-org9ec48d6" class="outline-2">
-<h2 id="org9ec48d6"><span class="section-number-2">2.</span> Orígenes de Emacs</h2>
+<div id="outline-container-orgc10973b" class="outline-2">
+<h2 id="orgc10973b"><span class="section-number-2">2.</span> Orígenes de Emacs</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>Emacs nació en el MIT en los años 70, desarrollado por Richard Stallman.</li>
@@ -3394,8 +3394,8 @@ Emacs es más que un simple editor de texto: es un ecosistema de extensibilidad,
 </ul>
 </div>
 </div>
-<div id="outline-container-org18698b4" class="outline-2">
-<h2 id="org18698b4"><span class="section-number-2">3.</span> Evolución y Desarrollo</h2>
+<div id="outline-container-org32d8bd4" class="outline-2">
+<h2 id="org32d8bd4"><span class="section-number-2">3.</span> Evolución y Desarrollo</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li><b><b>Emacs original (1976)</b></b>: Basado en TECO, desarrollado en MIT.</li>
@@ -3407,8 +3407,8 @@ Emacs es más que un simple editor de texto: es un ecosistema de extensibilidad,
 </ul>
 </div>
 </div>
-<div id="outline-container-org5cc1f18" class="outline-2">
-<h2 id="org5cc1f18"><span class="section-number-2">4.</span> Posibilidades y Características Clave</h2>
+<div id="outline-container-org7bd7f4b" class="outline-2">
+<h2 id="org7bd7f4b"><span class="section-number-2">4.</span> Posibilidades y Características Clave</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li><b><b>Extensibilidad con Emacs Lisp</b></b>: Todo en Emacs puede modificarse con Emacs Lisp.</li>
@@ -3418,8 +3418,8 @@ Emacs es más que un simple editor de texto: es un ecosistema de extensibilidad,
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd2d7104" class="outline-2">
-<h2 id="orgd2d7104"><span class="section-number-2">5.</span> Emacs en el Presente</h2>
+<div id="outline-container-orgec4cea5" class="outline-2">
+<h2 id="orgec4cea5"><span class="section-number-2">5.</span> Emacs en el Presente</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li>Sigue siendo ampliamente utilizado en entornos académicos, de programación y en la comunidad del software libre.</li>
@@ -3428,8 +3428,8 @@ Emacs es más que un simple editor de texto: es un ecosistema de extensibilidad,
 </ul>
 </div>
 </div>
-<div id="outline-container-org03a56b8" class="outline-2">
-<h2 id="org03a56b8"><span class="section-number-2">6.</span> Futuro de Emacs</h2>
+<div id="outline-container-org0dd5e8a" class="outline-2">
+<h2 id="org0dd5e8a"><span class="section-number-2">6.</span> Futuro de Emacs</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li>Integración con inteligencia artificial y herramientas de automatización.</li>
@@ -3439,8 +3439,8 @@ Emacs es más que un simple editor de texto: es un ecosistema de extensibilidad,
 </ul>
 </div>
 </div>
-<div id="outline-container-orgba7d5b9" class="outline-2">
-<h2 id="orgba7d5b9"><span class="section-number-2">7.</span> Curva de Aprendizaje</h2>
+<div id="outline-container-org5b6df5d" class="outline-2">
+<h2 id="org5b6df5d"><span class="section-number-2">7.</span> Curva de Aprendizaje</h2>
 <div class="outline-text-2" id="text-7">
 <ul class="org-ul">
 <li><b><b>Alta al inicio</b></b>, ya que requiere memorizar comandos y aprender Emacs Lisp.</li>
@@ -3448,8 +3448,8 @@ Emacs es más que un simple editor de texto: es un ecosistema de extensibilidad,
 </ul>
 </div>
 </div>
-<div id="outline-container-org0812127" class="outline-2">
-<h2 id="org0812127"><span class="section-number-2">8.</span> Pros y Contras de Emacs</h2>
+<div id="outline-container-orgb1549f8" class="outline-2">
+<h2 id="orgb1549f8"><span class="section-number-2">8.</span> Pros y Contras de Emacs</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 <b><b>Ventajas:</b></b>
@@ -3471,8 +3471,8 @@ Emacs es más que un simple editor de texto: es un ecosistema de extensibilidad,
 </ul>
 </div>
 </div>
-<div id="outline-container-org95cd3b5" class="outline-2">
-<h2 id="org95cd3b5"><span class="section-number-2">9.</span> Conclusión</h2>
+<div id="outline-container-orgdaf1bde" class="outline-2">
+<h2 id="orgdaf1bde"><span class="section-number-2">9.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 Emacs es una herramienta impresionante que ha resistido la prueba del tiempo gracias a su extensibilidad y flexibilidad. Aunque no es el editor más accesible para principiantes, ofrece posibilidades inigualables para aquellos dispuestos a invertir tiempo en aprenderlo. Su futuro sigue siendo prometedor gracias a la constante contribución de su comunidad y a su capacidad de adaptación a nuevas tecnologías.
