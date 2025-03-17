@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-03-17 lun 14:18 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bienvenida a Mi Blog - Grafico</title>
+<meta name="author" content="M. Castillo" />
+<meta name="description" content="Bienvenida a Mi Blog - Grafico" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Bienvenida a Mi Blog - Grafico</h1>
+<div id="outline-container-welcome" class="outline-2">
+<h2 id="welcome"><span class="section-number-2">1.</span> Bienvenida a Mi Blog con Emacs y Esteroides</h2>
+<div class="outline-text-2" id="text-welcome">
+<p>
+Bienvenidos a mi blog estático generado con Org Mode y publicado en GitHub Pages.
+Este es un ejemplo de cómo integrar gráficos en nuestros posts.
+</p>
+</div>
+<div id="outline-container-welcome-graphic" class="outline-3">
+<h3 id="welcome-graphic"><span class="section-number-3">1.1.</span> Creación del gráfico de bienvenida</h3>
+<div class="outline-text-3" id="text-welcome-graphic">
+<p>
+A continuación, crearemos un gráfico usando Org Babel con Gnuplot:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-gnuplot"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n general</span>
+<span style="color: #2f86d2;">set</span> terminal png size 800,500 enhanced font <span style="color: #a44185;">"Helvetica,14"</span>
+<span style="color: #2f86d2;">set</span> output <span style="color: #a44185;">"~/myblog/images/welcome-graph.png"</span>
+<span style="color: #2f86d2;">set</span> <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Bienvenida a Mi Blog con Emacs y Org Static"</span> font <span style="color: #a44185;">"Helvetica,18"</span>
+<span style="color: #2f86d2;">set</span> style fill solid 0.5
+<span style="color: #2f86d2;">set</span> style data histogram
+<span style="color: #2f86d2;">set</span> style histogram cluster gap 1
+<span style="color: #2f86d2;">set</span> boxwidth 0.9
+<span style="color: #2f86d2;">set</span> grid ytics
+<span style="color: #2f86d2;">set</span> xtics rotate by -45
+<span style="color: #2f86d2;">set</span> xlabel <span style="color: #a44185;">"Tecnolog&#237;as"</span> font <span style="color: #a44185;">"Helvetica,14"</span>
+<span style="color: #2f86d2;">set</span> ylabel <span style="color: #a44185;">"Nivel de Potencia"</span> font <span style="color: #a44185;">"Helvetica,14"</span>
+<span style="color: #2f86d2;">set</span> yrange [<span style="color: #2f86d2;">0:10</span>]
+<span style="color: #2f86d2;">set</span> palette <span style="color: #dc3eb7;">defined</span> (0 <span style="color: #a44185;">"skyblue"</span>, 1 <span style="color: #a44185;">"royalblue"</span>, 2 <span style="color: #a44185;">"dark-blue"</span>)
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Datos para el gr&#225;fico</span>
+$DATA &lt;&lt; EOD
+Tecnolog&#237;a Potencia Flexibilidad Productividad
+<span style="color: #a44185;">"Emacs"</span>     9.2     9.5          8.7
+<span style="color: #a44185;">"Org Mode"</span>  9.0     9.8          9.2
+<span style="color: #a44185;">"GitHub"</span>    8.5     8.0          8.8
+<span style="color: #a44185;">"Markdown"</span>  7.0     6.5          7.5
+<span style="color: #a44185;">"HTML"</span>      8.0     7.2          7.0
+EOD
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generaci&#243;n del gr&#225;fico</span>
+<span style="color: #219fd5; font-style: italic;">plot</span> $DATA <span style="color: #dc3eb7;">using</span> 2:xtic(1) <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Potencia"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#3498db"</span>, \
+     $DATA <span style="color: #dc3eb7;">using</span> 3 <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Flexibilidad"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#2980b9"</span>, \
+     $DATA <span style="color: #dc3eb7;">using</span> 4 <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Productividad"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#1f618d"</span>
+</pre>
+</div>
+
+
+<div id="org7b9be6b" class="figure">
+<p><img src="images/welcome-graph.png" alt="welcome-graph.png" />
+</p>
+</div>
+
+<img src='/images/welcome-graph.png' alt='Welcome to my Blog' />
+
+
+<img src="/images/welcome-graph.png" alt="Gráfico de bienvenida al blog" width="800px" />
+</div>
+</div>
+<div id="outline-container-analysis" class="outline-3">
+<h3 id="analysis"><span class="section-number-3">1.2.</span> Análisis del gráfico</h3>
+<div class="outline-text-3" id="text-analysis">
+<p>
+El gráfico anterior muestra una comparativa entre diferentes tecnologías utilizadas para blogging, destacando tres dimensiones clave:
+</p>
+
+<ol class="org-ol">
+<li><b>Potencia</b>: Capacidad para realizar tareas complejas</li>
+<li><b>Flexibilidad</b>: Adaptabilidad a diferentes necesidades</li>
+<li><b>Productividad</b>: Eficiencia en el flujo de trabajo</li>
+</ol>
+
+<p>
+Como podemos observar, Emacs y Org Mode destacan en todas las dimensiones, lo que los convierte en herramientas ideales para la creación y gestión de blogs estáticos.
+</p>
+</div>
+</div>
+<div id="outline-container-image-config" class="outline-3">
+<h3 id="image-config"><span class="section-number-3">1.3.</span> Configuración para mostrar imágenes correctamente</h3>
+<div class="outline-text-3" id="text-image-config">
+<p>
+Para asegurar que las imágenes se muestran correctamente en nuestro blog:
+</p>
+
+<ol class="org-ol">
+<li>Las imágenes deben estar en el directorio <code>~/myblog/images/</code></li>
+<li>Al referenciarlas en el HTML generado, usamos la ruta <code>/images/nombre-imagen.png</code></li>
+<li>Nuestra configuración se encarga de copiarlas al directorio público durante la exportación</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Ejemplo de la configuraci&#243;n para im&#225;genes</span>
+(<span style="color: #a44185;">"blog-images"</span>
+ <span style="color: #dc3eb7;">:base-directory</span> <span style="color: #a44185;">"~/myblog/images/"</span>
+ <span style="color: #dc3eb7;">:base-extension</span> <span style="color: #a44185;">"png</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">jpg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">jpeg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">gif</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">svg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">webp"</span>
+ <span style="color: #dc3eb7;">:publishing-directory</span> <span style="color: #a44185;">"~/myblog/public/images/"</span>
+ <span style="color: #dc3eb7;">:publishing-function</span> org-publish-attachment
+ <span style="color: #dc3eb7;">:recursive</span> t)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-next-steps" class="outline-3">
+<h3 id="next-steps"><span class="section-number-3">1.4.</span> Próximos pasos</h3>
+<div class="outline-text-3" id="text-next-steps">
+<p>
+En futuros posts exploraremos:
+</p>
+
+<ul class="org-ul">
+<li>Creación de visualizaciones avanzadas con Org Babel</li>
+<li>Integración de gráficos interactivos con JavaScript</li>
+<li>Optimización de imágenes para rendimiento web</li>
+<li>Consejos para mejorar la experiencia visual del blog</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-technical-notes" class="outline-2">
+<h2 id="technical-notes"><span class="section-number-2">2.</span> Notas técnicas</h2>
+<div class="outline-text-2" id="text-technical-notes">
+<p>
+Para generar este gráfico he utilizado Gnuplot a través de Org Babel. Si quieres reproducirlo, necesitas:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #8195b0; font-style: italic;"># Requisitos:</span>
+<span style="color: #8195b0; font-style: italic;"># 1. Gnuplot instalado en tu sistema</span>
+<span style="color: #8195b0; font-style: italic;"># 2. Configuraci&#243;n de Org Babel para Gnuplot</span>
+
+(require 'ob-gnuplot)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((gnuplot . t)))
+</pre>
+</div>
+
+<p>
+Para publicar este post, simplemente guárdalo en tu directorio <code>~/myblog/posts/</code> con un nombre como <code>bienvenida-con-grafico.org</code> y ejecuta <code>org-static-blog-publish-to-github</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-footer" class="outline-2">
+<h2 id="footer"><span class="section-number-2">3.</span> Pie de página</h2>
+<div class="outline-text-2" id="text-footer">
+<div style="border-top: 1px solid #ddd; margin-top: 30px; padding-top: 10px; font-size: 0.9em; color: #777;">
+  <p>Este post fue creado con Emacs 28 y Org Mode. El gráfico fue generado con Gnuplot.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2025-03-08 sáb 15:29</p>
+<p class="author">Author: M. Castillo</p>
+<p class="date">Created: 2025-03-17 lun 14:18</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

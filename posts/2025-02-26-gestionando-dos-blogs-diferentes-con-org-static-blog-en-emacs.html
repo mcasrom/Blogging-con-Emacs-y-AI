@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-03-17 lun 14:18 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gestionando Dos Blogs Diferentes con org-static-blog en Emacs Mi Último Viaje Nuevo Proyecto en Linux</title>
+<meta name="author" content="M. Castillo" />
+<meta name="description" content="How To Gestionando Dos Blogs Diferentes con org-static-blog en Emacs" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Gestionando Dos Blogs Diferentes con org-static-blog en Emacs Mi Último Viaje Nuevo Proyecto en Linux</h1>
+<div id="outline-container-orgffaec62" class="outline-2">
+<h2 id="orgffaec62"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+`org-static-blog` es una herramienta poderosa para crear blogs estáticos desde Emacs, pero por defecto está diseñada para manejar un solo blog. Si quieres trabajar con dos blogs diferentes (por ejemplo, uno personal y otro profesional), necesitas ajustar tu configuración en Emacs 28 para que soporte múltiples instancias. En este artículo, te guiaré paso a paso para lograrlo.
+</p>
+</div>
+</div>
+<div id="outline-container-org82919dc" class="outline-2">
+<h2 id="org82919dc"><span class="section-number-2">2.</span> Estrategia general</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+La clave para manejar dos blogs con `org-static-blog` es usar configuraciones separadas para cada uno, almacenadas en variables distintas, y luego alternar entre ellas según el blog que estés editando o publicando. Esto implica:
+</p>
+<ul class="org-ul">
+<li>Tener directorios separados para posts y publicaciones.</li>
+<li>Definir plantillas y parámetros específicos por blog.</li>
+<li>Usar funciones personalizadas en Emacs para cambiar entre configuraciones.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge8c2899" class="outline-2">
+<h2 id="orge8c2899"><span class="section-number-2">3.</span> Configuración inicial</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Primero, asegúrate de tener `org-static-blog` instalado en Emacs 28 (instálalo con `M-x package-install RET org-static-blog` si no lo has hecho). Luego, organiza tus directorios. Por ejemplo:
+</p>
+<ul class="org-ul">
+<li>Blog 1 (personal): `~/blog-personal/`</li>
+<li>Blog 2 (profesional): `~/blog-profesional/`</li>
+</ul>
+
+<p>
+Dentro de cada directorio, crea subdirectorios para posts y publicaciones:
+</p>
+<ul class="org-ul">
+<li>`~/blog-personal/posts/` y `~/blog-personal/public/`</li>
+<li>`~/blog-profesional/posts/` y `~/blog-profesional/public/`</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8fc4820" class="outline-2">
+<h2 id="org8fc4820"><span class="section-number-2">4.</span> Configurar las variables para cada blog</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+En tu `init.el`, define las configuraciones de ambos blogs usando variables personalizadas. Aquí un ejemplo:
+</p>
+
+<p>
+```emacs-lisp
+;; Configuración para Blog Personal
+(defvar my-blog-personal-settings
+  '((org-static-blog-publish-title . "Blog Personal")
+    (org-static-blog-publish-url . "<a href="https://mi-blog-personal.com/">https://mi-blog-personal.com/</a>")
+    (org-static-blog-publish-directory . "~/blog-personal/public/")
+    (org-static-blog-posts-directory . "~/blog-personal/posts/")
+    (org-static-blog-drafts-directory . "~/blog-personal/drafts/")
+    (org-static-blog-page-header . "&lt;h1&gt;Mi Blog Personal&lt;/h1&gt;")
+    (org-static-blog-post-template . "&lt;h1&gt;%title&lt;/h1&gt;&lt;div&gt;%date&lt;/div&gt;%content")))
+</p>
+
+<p>
+;; Configuración para Blog Profesional
+(defvar my-blog-pro-settings
+  '((org-static-blog-publish-title . "Blog Profesional")
+    (org-static-blog-publish-url . "<a href="https://mi-blog-pro.com/">https://mi-blog-pro.com/</a>")
+    (org-static-blog-publish-directory . "~/blog-profesional/public/")
+    (org-static-blog-posts-directory . "~/blog-profesional/posts/")
+    (org-static-blog-drafts-directory . "~/blog-profesional/drafts/")
+    (org-static-blog-page-header . "&lt;h1&gt;Trabajo y Tecnología&lt;/h1&gt;")
+    (org-static-blog-post-template . "&lt;h1&gt;%title&lt;/h1&gt;&lt;div&gt;%date&lt;/div&gt;&lt;div&gt;Por un experto&lt;/div&gt;%content")))
+</p>
+
+<p>
+Cada lista asociativa define las variables esenciales de org-static-blog para un blog específico.
+</p>
+
+<p>
+Crear funciones para alternar configuraciones Necesitas una manera de aplicar la configuración correcta antes de trabajar en un blog. Define funciones en tu init.el para esto:
+</p>
+
+<p>
+emacs
+(defun my-set-blog-personal ()
+  "Activa la configuración del blog personal."
+  (interactive)
+  (dolist (setting my-blog-personal-settings)
+    (set (car setting) (cdr setting)))
+  (message "Configuración del Blog Personal activada"))
+</p>
+
+<p>
+(defun my-set-blog-pro ()
+  "Activa la configuración del blog profesional."
+  (interactive)
+  (dolist (setting my-blog-pro-settings)
+    (set (car setting) (cdr setting)))
+  (message "Configuración del Blog Profesional activada"))
+</p>
+
+<p>
+M-x my-set-blog-personal configura Emacs para trabajar con el blog personal.
+M-x my-set-blog-pro hace lo mismo para el blog profesional.
+</p>
+
+<p>
+Crear posts para cada blog Ahora puedes crear posts en los directorios correspondientes. Por ejemplo:
+</p>
+</div>
+<div id="outline-container-orged06983" class="outline-3">
+<h3 id="orged06983"><span class="section-number-3">4.1.</span> Post para el Blog Personal (~/blog-personal/posts/2025-02-25-viaje.org):</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+org
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb822627" class="outline-2">
+<h2 id="orgb822627"><span class="section-number-2">5.</span> Reflexiones</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Hoy escribo sobre un viaje reciente que hice&#x2026;
+</p>
+</div>
+<div id="outline-container-org1c27661" class="outline-3">
+<h3 id="org1c27661"><span class="section-number-3">5.1.</span> Post para el Blog Profesional (~/blog-profesional/posts/2025-02-25-proyecto.org):</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+org
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8740aa9" class="outline-2">
+<h2 id="org8740aa9"><span class="section-number-2">6.</span> Detalles</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Este post detalla un proyecto técnico en el que estoy trabajando&#x2026;
+</p>
+
+<p>
+Publicar cada blog Para publicar:
+</p>
+
+<p>
+Activa la configuración del blog deseado:
+    M-x my-set-blog-personal para el personal.
+    M-x my-set-blog-pro para el profesional.
+Publica:
+    M-x org-static-blog-publish-file RET para un archivo específico.
+    M-x org-static-blog-publish para regenerar todo el blog.
+</p>
+
+<p>
+Los archivos HTML se generarán en el directorio public/ correspondiente a cada blog.
+</p>
+
+<p>
+Personalizar aún más (opcional)
+</p>
+
+<p>
+Tags por blog: Usa #+TAGS: en los posts de cada blog según tus necesidades (como expliqué en mi respuesta anterior).
+Estilos CSS: Añade un archivo CSS diferente en cada org-static-blog-page-header para distinguir visualmente los blogs.
+Atajos de teclado: Asigna las funciones a teclas para mayor rapidez, por ejemplo:
+emacs
+</p>
+
+<p>
+(global-set-key (kbd "C-c b p") 'my-set-blog-personal)
+(global-set-key (kbd "C-c b r") 'my-set-blog-pro)
+</p>
+
+<p>
+Solución de problemas
+</p>
+
+<p>
+Configuración no cambia: Verifica que las funciones my-set-blog-* estén actualizando las variables correctamente (usa C-h v org-static-blog-publish-directory para inspeccionar).
+Posts mezclados: Asegúrate de que los directorios de posts sean distintos y que actives la configuración correcta antes de publicar.
+Errores de publicación: Confirma que los directorios existen y tienen permisos adecuados.
+</p>
+
+<p>
+Conclusión Con este método, puedes gestionar dos blogs diferentes en org-static-blog desde Emacs 28 sin conflictos. Alternar entre configuraciones con funciones personalizadas te da flexibilidad y mantiene todo organizado. Es una solución práctica para quienes, como yo, queremos separar temas personales y profesionales sin abandonar nuestro flujo de trabajo en Org-mode. ¿Qué nombres le pondrías a tus dos blogs?
+TODO Próximos pasos
+</p>
+
+<p>
+Probar publicar ambos blogs en un solo comando con un script Elisp.
+Añadir un indicador visual en Emacs para saber qué blog está activo.
+Explorar cómo sincronizar cada blog con un repositorio Git diferente.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-02-26 mié 08:37&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-02-25 mar&gt;</span></span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-02-25 mar&gt;</span></span></p>
+<p class="author">Author: M. Castillo</p>
+<p class="date">Created: 2025-03-17 lun 14:18</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

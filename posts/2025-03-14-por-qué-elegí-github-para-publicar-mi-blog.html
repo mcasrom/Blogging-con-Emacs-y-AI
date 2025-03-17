@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-03-17 lun 14:18 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Por Qué Elegí GitHub para Publicar Mi Blog Comparación de Plataformas para Publicación de Contenido</title>
+<meta name="author" content="Tu Nombre" />
+<meta name="description" content="Por Qué Elegí GitHub para Publicar Mi Blog: Gratuidad, Flexibilidad e Integración con Emacs" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Por Qué Elegí GitHub para Publicar Mi Blog Comparación de Plataformas para Publicación de Contenido</h1>
+<div id="outline-container-orged255ae" class="outline-2">
+<h2 id="orged255ae"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Cuando decidí lanzar mi blog, busqué una solución que fuera económica, adaptable y compatible con mi flujo de trabajo en Emacs. Tras evaluar opciones como WordPress, Medium o servidores privados, opté por GitHub, una plataforma que no solo cumple estos criterios, sino que los supera con creces. En este post, detallo por qué GitHub es mi elección para publicar un blog estático, centrándome en tres pilares: <b><b>gratuidad</b></b>, <b><b>flexibilidad</b></b> y <b><b>facilidad de integración con Emacs</b></b>. Con ejemplos prácticos, datos visuales y reflexiones personales, espero convencerte de que esta combinación es imbatible para blogueros técnicos en 2025.
+</p>
+</div>
+</div>
+<div id="outline-container-orge8a695c" class="outline-2">
+<h2 id="orge8a695c"><span class="section-number-2">2.</span> ¿Qué es GitHub y Por Qué un Blog Estático?</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+GitHub es una plataforma de alojamiento de código basada en Git, conocida por su uso en desarrollo colaborativo. Sin embargo, gracias a <b><b>GitHub Pages</b></b>, también permite alojar sitios web estáticos gratis. Un blog estático, generado con herramientas como Org Static Blog, Hugo o Jekyll, convierte archivos de texto (Markdown, Org-mode, etc.) en HTML, eliminando bases de datos y servidores dinámicos. Esta simplicidad lo hace ideal para quienes priorizan control y eficiencia.
+</p>
+</div>
+<div id="outline-container-orge41e1ae" class="outline-3">
+<h3 id="orge41e1ae"><span class="section-number-3">2.1.</span> Ventajas Iniciales</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>No requiere mantenimiento de servidores.</li>
+<li>Compatible con flujos de escritura en texto plano.</li>
+<li>Escalable sin costos adicionales.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga2bc83b" class="outline-2">
+<h2 id="orga2bc83b"><span class="section-number-2">3.</span> Razones para Elegir GitHub</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+A continuación, analizo los tres motivos clave que me llevaron a elegir GitHub, con detalles técnicos y prácticos.
+</p>
+</div>
+<div id="outline-container-org46a5800" class="outline-3">
+<h3 id="org46a5800"><span class="section-number-3">3.1.</span> Gratuidad: Publicar Sin Costo</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org9709433" class="outline-4">
+<h4 id="org9709433"><span class="section-number-4">3.1.1.</span> Descripción</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+GitHub Pages ofrece alojamiento gratuito para sitios estáticos públicos, sin límites estrictos de ancho de banda o almacenamiento (dentro de uso razonable). Esto contrasta con plataformas como WordPress.com ($4-$45/mes) o servidores VPS ($5-$20/mes en AWS o DigitalOcean).
+</p>
+</div>
+</div>
+<div id="outline-container-org011c351" class="outline-4">
+<h4 id="org011c351"><span class="section-number-4">3.1.2.</span> Beneficios</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li><b><b>Costo Cero</b></b>: Perfecto para blogueros principiantes o experimentales.</li>
+<li><b><b>Escalabilidad</b></b>: Según <b>GitHub Stats</b> (2024), soporta millones de visitas mensuales sin cargos.</li>
+<li><b><b>Dominio Personalizado</b></b>: Gratis con configuración DNS simple (ej. `tunombre.com`).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgaa61c4e" class="outline-4">
+<h4 id="orgaa61c4e"><span class="section-number-4">3.1.3.</span> Ejemplo Práctico</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ul class="org-ul">
+<li><b><b>Escenario</b></b>: Quiero lanzar un blog sin invertir dinero.</li>
+<li><b><b>Acción</b></b>: Creo un repositorio `username.github.io`, subo archivos HTML generados con Org-mode, y publico en minutos.</li>
+<li><b><b>Resultado</b></b>: Blog en línea sin gastar un centavo, a diferencia de $48/año en WordPress Básico.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb89472c" class="outline-4">
+<h4 id="orgb89472c"><span class="section-number-4">3.1.4.</span> Limitaciones</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<ul class="org-ul">
+<li>Solo sitios estáticos (sin PHP o bases de datos dinámicas).</li>
+<li>Repositorios privados requieren GitHub Pro ($4/mes), pero no son necesarios para blogs públicos.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf33bed2" class="outline-3">
+<h3 id="orgf33bed2"><span class="section-number-3">3.2.</span> Flexibilidad: Control Total Sobre el Contenido</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orgae7a301" class="outline-4">
+<h4 id="orgae7a301"><span class="section-number-4">3.2.1.</span> Descripción</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+GitHub permite personalizar cada aspecto del blog mediante control de versiones (Git) y compatibilidad con generadores estáticos. No impone plantillas rígidas ni anuncios, a diferencia de Medium o Blogger.
+</p>
+</div>
+</div>
+<div id="outline-container-org454dd0a" class="outline-4">
+<h4 id="org454dd0a"><span class="section-number-4">3.2.2.</span> Beneficios</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ul class="org-ul">
+<li><b><b>Control de Código</b></b>: Edito mi blog como un proyecto de software, con ramas y pull requests.</li>
+<li><b><b>Personalización</b></b>: Uso CSS propio, integro CI/CD con GitHub Actions para automatizar publicaciones.</li>
+<li><b><b>Portabilidad</b></b>: Puedo migrar mi blog a otra plataforma exportando el repositorio.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org22a17c6" class="outline-4">
+<h4 id="org22a17c6"><span class="section-number-4">3.2.3.</span> Ejemplo Práctico</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<ul class="org-ul">
+<li><b><b>Escenario</b></b>: Quiero probar un nuevo diseño.</li>
+<li><b><b>Acción</b></b>: Creo una rama `nuevo-diseño`, edito el CSS en Emacs, hago commit y pruebo en un subdominio temporal (GitHub Actions despliega automáticamente).</li>
+<li><b><b>Resultado</b></b>: Cambio implementado en horas, sin restricciones de plantilla como en WordPress.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf09b644" class="outline-4">
+<h4 id="orgf09b644"><span class="section-number-4">3.2.4.</span> Comparación</h4>
+<div class="outline-text-4" id="text-3-2-4">
+<ul class="org-ul">
+<li>Medium: $5/mes, diseño limitado, contenido tras paywall.</li>
+<li>GitHub: Gratis, diseño 100% editable, contenido siempre accesible.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga23e808" class="outline-3">
+<h3 id="orga23e808"><span class="section-number-3">3.3.</span> Facilidad de Integración con Emacs</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-orgfe7a704" class="outline-4">
+<h4 id="orgfe7a704"><span class="section-number-4">3.3.1.</span> Descripción</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+Como usuario de Emacs, GitHub se integra perfectamente con mi flujo de escritura en Org-mode. Con paquetes como `org-static-blog`, `magit` y `ox-html`, escribo, gestiono y publico directamente desde Emacs.
+</p>
+</div>
+</div>
+<div id="outline-container-org832d38f" class="outline-4">
+<h4 id="org832d38f"><span class="section-number-4">3.3.2.</span> Beneficios</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<ul class="org-ul">
+<li><b><b>Escritura en Org-mode</b></b>: Formato ligero, exportable a HTML con un comando (`C-c C-e h h`).</li>
+<li><b><b>Control de Versiones con Magit</b></b>: Hago commits y pushes sin salir de Emacs (`C-x g`).</li>
+<li><b><b>Automatización</b></b>: Configuro GitHub Actions para generar y desplegar el sitio al hacer push.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc316ec9" class="outline-4">
+<h4 id="orgc316ec9"><span class="section-number-4">3.3.3.</span> Ejemplo Práctico</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<ul class="org-ul">
+<li><b><b>Escenario</b></b>: Escribo un post sobre gestión del tiempo.</li>
+<li><b><b>Acción</b></b>:  
+<ol class="org-ol">
+<li>Creo `post-gestion-tiempo.org` en Emacs.</li>
+<li>Escribo en Org-mode con títulos, tablas y código.</li>
+<li>Exporto a HTML con `org-static-blog-publish-file`.</li>
+<li>Uso Magit para commit (`C-c C-c`) y push (`P p`).</li>
+</ol></li>
+<li><b><b>Resultado</b></b>: Post publicado en mi blog en &lt;10 minutos, todo desde Emacs.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6046a8e" class="outline-4">
+<h4 id="org6046a8e"><span class="section-number-4">3.3.4.</span> Flujo Técnico</h4>
+<div class="outline-text-4" id="text-3-3-4">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n b&#225;sica en .emacs</span>
+(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">org-static-blog</span>
+  <span style="color: #dc3eb7;">:ensure</span> t
+  <span style="color: #dc3eb7;">:config</span>
+  (<span style="color: #219fd5; font-style: italic;">setq</span> org-static-blog-publish-title <span style="color: #a44185;">"Mi Blog"</span>)
+  (<span style="color: #219fd5; font-style: italic;">setq</span> org-static-blog-publish-url <span style="color: #a44185;">"https://username.github.io/"</span>)
+  (<span style="color: #219fd5; font-style: italic;">setq</span> org-static-blog-publish-directory <span style="color: #a44185;">"~/blog/public/"</span>))
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdb13cb1" class="outline-2">
+<h2 id="orgdb13cb1"><span class="section-number-2">4.</span> Comparación con Otras Plataformas</h2>
+<div class="outline-text-2" id="text-4">
+<table id="orgb8c1c18" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> Comparativa de Plataformas para Blogs</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Plataforma</th>
+<th scope="col" class="org-left">Costo Mensual</th>
+<th scope="col" class="org-left">Flexibilidad Diseño</th>
+<th scope="col" class="org-left">Integración Emacs</th>
+<th scope="col" class="org-left">Control Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">GitHub Pages</td>
+<td class="org-left">$0</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Excelente</td>
+<td class="org-left">Total</td>
+</tr>
+
+<tr>
+<td class="org-left">WordPress.com</td>
+<td class="org-left">$4-$45</td>
+<td class="org-left">Media</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Limitada</td>
+</tr>
+
+<tr>
+<td class="org-left">Medium</td>
+<td class="org-left">$5</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Nula</td>
+<td class="org-left">Parcial (paywall)</td>
+</tr>
+
+<tr>
+<td class="org-left">VPS (AWS)</td>
+<td class="org-left">$5-$20</td>
+<td class="org-left">Muy Alta</td>
+<td class="org-left">Media</td>
+<td class="org-left">Total</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgf80d677" class="outline-2">
+<h2 id="orgf80d677"><span class="section-number-2">5.</span> Gráfico: Costo vs Flexibilidad</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+</div>
+<div id="outline-container-orgf83e90a" class="outline-2">
+<h2 id="orgf83e90a"><span class="section-number-2">6.</span> Comparación de Plataformas</h2>
+<div class="outline-text-2" id="text-6">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Plataforma</th>
+<th scope="col" class="org-left">Costo Mensual</th>
+<th scope="col" class="org-left">Flexibilidad Diseño</th>
+<th scope="col" class="org-left">Integración Emacs</th>
+<th scope="col" class="org-left">Control Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">GitHub Pages</td>
+<td class="org-left">$0</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Excelente</td>
+<td class="org-left">Total</td>
+</tr>
+
+<tr>
+<td class="org-left">WordPress.com</td>
+<td class="org-left">$4-$45</td>
+<td class="org-left">Media</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Limitada</td>
+</tr>
+
+<tr>
+<td class="org-left">Medium</td>
+<td class="org-left">$5</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Nula</td>
+<td class="org-left">Parcial (paywall)</td>
+</tr>
+
+<tr>
+<td class="org-left">VPS (AWS)</td>
+<td class="org-left">$5-$20</td>
+<td class="org-left">Muy Alta</td>
+<td class="org-left">Media</td>
+<td class="org-left">Total</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<table id="org65f804f" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Plataforma</th>
+<th scope="col" class="org-right">Costo Mensual</th>
+<th scope="col" class="org-right">Flexibilidad Diseño</th>
+<th scope="col" class="org-right">Integración Emacs</th>
+<th scope="col" class="org-right">Control Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">GitHub Pages</td>
+<td class="org-right">0</td>
+<td class="org-right">3</td>
+<td class="org-right">4</td>
+<td class="org-right">4</td>
+</tr>
+
+<tr>
+<td class="org-left">WordPress.com</td>
+<td class="org-right">4</td>
+<td class="org-right">2</td>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+</tr>
+
+<tr>
+<td class="org-left">Medium</td>
+<td class="org-right">5</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">VPS (AWS)</td>
+<td class="org-right">5</td>
+<td class="org-right">4</td>
+<td class="org-right">2</td>
+<td class="org-right">4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org3a8c822" class="outline-2">
+<h2 id="org3a8c822"><span class="section-number-2">7.</span> Gráfico de Comparación</h2>
+<div class="outline-text-2" id="text-7">
+
+<div id="org511ea3a" class="figure">
+<p><img src="grafico_github.png" alt="grafico_github.png" />
+</p>
+</div>
+
+
+<div id="org274551f" class="figure">
+<p><img src="images/grafico_github.png" alt="grafico_github.png" />
+</p>
+</div>
+</div>
+<div id="outline-container-org74d93e1" class="outline-3">
+<h3 id="org74d93e1"><span class="section-number-3">7.1.</span> Análisis del Gráfico</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li><b><b>GitHub Pages</b></b>: $0, flexibilidad 9/10 (limitada solo por ser estático).</li>
+<li><b><b>WordPress</b></b>: $15 promedio, flexibilidad 5/10 (plantillas restrictivas).</li>
+<li><b><b>Medium</b></b>: $5, flexibilidad 3/10 (diseño fijo).</li>
+<li><b><b>VPS</b></b>: $12 promedio, flexibilidad 10/10 (pero requiere más configuración).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5b08ad1" class="outline-2">
+<h2 id="org5b08ad1"><span class="section-number-2">8.</span> Desafíos y Soluciones</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li><b><b>Curva de Aprendizaje</b></b>: Git y Emacs intimidan al inicio.  
+<ul class="org-ul">
+<li><b>Solución</b>: Tutoriales básicos de Magit y GitHub Pages (5-10 horas de práctica).</li>
+</ul></li>
+<li><b><b>Limitaciones Estáticas</b></b>: No admite contenido dinámico nativo.  
+<ul class="org-ul">
+<li><b>Solución</b>: Integro comentarios con Disqus o formularios vía Netlify.</li>
+</ul></li>
+<li><b><b>Dependencia de GitHub</b></b>: Si falla, pierdo alojamiento.  
+<ul class="org-ul">
+<li><b>Solución</b>: Respaldo local y opción de migrar a GitLab Pages.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org45d600a" class="outline-2">
+<h2 id="org45d600a"><span class="section-number-2">9.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Elegir GitHub para mi blog ha sido una decisión transformadora. Su <b><b>gratuidad</b></b> me permitió empezar sin riesgos financieros, su <b><b>flexibilidad</b></b> me da control creativo absoluto y su <b><b>integración con Emacs</b></b> alinea perfectamente mi pasión por el texto plano con la publicación moderna. Los datos muestran que supera a alternativas pagas en costo y adaptabilidad para proyectos estáticos. Si buscas una plataforma que combine economía, poder y sinergia con herramientas como Emacs, GitHub es la respuesta. Mi blog vive ahora en `username.github.io`, y cada post es un testimonio de esta elección.
+</p>
+</div>
+</div>
+<div id="outline-container-org05486b2" class="outline-2">
+<h2 id="org05486b2"><span class="section-number-2">10.</span> Referencias</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li>GitHub. (2024). <b>GitHub Pages Documentation</b>. <a href="https://docs.github.com/en/pages">https://docs.github.com/en/pages</a></li>
+<li>Org Static Blog. (2023). <b>Official Repository</b>. <a href="https://github.com/bastibe/org-static-blog">https://github.com/bastibe/org-static-blog</a></li>
+<li>Statista. (2024). <b>Web Hosting Market Trends</b>. <a href="https://www.statista.com">https://www.statista.com</a></li>
+<li>Emacs Magit. (2024). <b>Magit User Manual</b>. <a href="https://magit.vc/manual/magit/">https://magit.vc/manual/magit/</a></li>
+<li>Deloitte. (2023). <b>Cost Analysis of Digital Platforms</b>. <a href="https://www2.deloitte.com">https://www2.deloitte.com</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-03-14 vie 14:21&gt;</span></span> 2023-10-15</p>
+<p class="author">Author: Tu Nombre</p>
+<p class="date">Created: 2025-03-17 lun 14:18</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

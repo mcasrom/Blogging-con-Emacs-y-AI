@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang='es'>
 <head>
-<meta charset="UTF-8">
-<meta name="description" content="decripcion corta">
-<link rel="alternate"
-      type="application/rss+xml"
-      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
-      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
-<title>My Test</title>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Búsqueda - Mi Blog con Emacs y Esteroides</title>
+<link rel='stylesheet' href='/pagefind/pagefind-ui.css'>
 <meta charset='UTF-8'>
        <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
-  ;;;;;;     <script src='/pagefind/pagefind.js'></script>
+       <script src='/pagefind/pagefind.js'></script>
        <style>
          body {
            font-family: 'Inter', sans-serif;
@@ -115,24 +112,38 @@
        </nav>
         <hr></head>
 <body>
-<div id="preamble" class="status"></div>
-<div id="content">
-<div class="post-date">16/03/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-16-my-test.html">My Test</a></h1>
-<nav id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#org93c8830">1. Test</a></li>
-</ul>
-</div>
-</nav>
-<div id="outline-container-org93c8830" class="outline-2">
-<h2 id="org93c8830"><span class="section-number-2">1.</span> Test</h2>
-</div>
-<div class="taglist"></div></div>
-<div id="postamble" class="status"><div class='postamble'>
+
+       <div id='search-container' data-pagefind-ignore>
+         <h1>Búsqueda</h1>
+         <div id='pagefind-search'></div>
+       </div>
+       <script src='/pagefind/pagefind-ui.js'></script>
+       <script>
+         window.addEventListener('DOMContentLoaded', (event) => {
+           console.log('Intentando cargar PagefindUI...');
+           try {
+             new PagefindUI({
+               element: '#pagefind-search',
+               showSubResults: true,
+               excerptLength: 20,
+               language: 'es'
+             });
+             console.log('PagefindUI cargado exitosamente');
+           } catch (e) {
+             console.error('Error al inicializar PagefindUI:', e);
+           }
+         });
+       </script>
+       <style>
+         #search-container {
+           margin-top: 20px;
+           max-width: 800px;
+           margin-left: auto;
+           margin-right: auto;
+           padding: 20px;
+         }
+       </style><div class='postamble'>
          <hr class='footer-hr'>
          <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
-       </div></div>
-</body>
+       </div></body>
 </html>

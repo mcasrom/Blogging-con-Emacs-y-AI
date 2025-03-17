@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-03-17 lun 14:18 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Renombrando Archivos PDF con Fecha de Modificación en Linux</title>
+<meta name="author" content="M. Castillo" />
+<meta name="description" content="Renombrando Archivos PDF con Fecha de Modificación en Linux" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Renombrando Archivos PDF con Fecha de Modificación en Linux</h1>
+<div id="outline-container-org7eb08c8" class="outline-2">
+<h2 id="org7eb08c8"><span class="section-number-2">1.</span> Renombrando Archivos PDF con Fecha de Modificación en Linux</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+¿Tienes una colección de archivos PDF desorganizados y quieres renombrarlos automáticamente con un formato específico? En este post, te mostraré cómo crear un script en <b><b>Bash</b></b> que selecciona un directorio, encuentra todos los archivos `.pdf` que no tengan el prefijo `YYMMDD-nombre.pdf`, y los renombra usando la fecha de modificación del archivo. Este formato es útil para organizar documentos de manera cronológica.
+</p>
+</div>
+<div id="outline-container-org1beca79" class="outline-3">
+<h3 id="org1beca79"><span class="section-number-3">1.1.</span> Requisitos</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Un sistema Linux (Ubuntu, Debian, Fedora, etc.).</li>
+<li>Conocimientos básicos de terminal y Bash.</li>
+<li>Permisos de escritura en el directorio que deseas procesar.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org209ef68" class="outline-3">
+<h3 id="org209ef68"><span class="section-number-3">1.2.</span> Introducción</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+En este post, comparto un script en Bash que automatiza el renombrado de archivos PDF en un directorio específico. El objetivo es identificar aquellos archivos que no tienen el prefijo `YYMMDD-` (donde `YY` son los últimos dos dígitos del año, `MM` el mes de 01 a 12, y `DD` el día de 01 a 31) y renombrarlos usando su fecha de modificación en ese formato. Esto es útil para organizar documentos, como trabajos finales o reportes, manteniendo un estándar claro basado en metadatos del archivo.
+</p>
+</div>
+</div>
+<div id="outline-container-org5b28fde" class="outline-3">
+<h3 id="org5b28fde"><span class="section-number-3">1.3.</span> El Script</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Aquí está el script Bash que realiza esta tarea:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Script para renombrar archivos PDF con fecha de modificaci&#243;n en formato YYMMDD-nombre.pdf</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar si se proporcion&#243; un directorio como argumento</span>
+<span style="color: #219fd5; font-style: italic;">if</span> [ $<span style="color: #1857a4;">#</span> -ne 1 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Uso: $0 &lt;directorio&gt;"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Ejemplo: $0 /ruta/a/tus/pdfs"</span>
+    <span style="color: #219fd5; font-style: italic;">exit</span> 1
+<span style="color: #219fd5; font-style: italic;">fi</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Asignar el directorio proporcionado</span>
+<span style="color: #1857a4;">DIRECTORY</span>=<span style="color: #a44185;">"$1"</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar si el directorio existe</span>
+<span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #219fd5; font-weight: bold;">!</span> -d <span style="color: #a44185;">"$DIRECTORY"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Error: El directorio '$DIRECTORY' no existe."</span>
+    <span style="color: #219fd5; font-style: italic;">exit</span> 1
+<span style="color: #219fd5; font-style: italic;">fi</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Cambiar al directorio especificado</span>
+<span style="color: #dc3eb7;">cd</span> <span style="color: #a44185;">"$DIRECTORY"</span> || {
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Error: No se pudo acceder al directorio '$DIRECTORY'."</span>
+    <span style="color: #219fd5; font-style: italic;">exit</span> 1
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Contador para archivos procesados</span>
+<span style="color: #1857a4;">COUNT</span>=0
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Buscar archivos PDF y procesarlos</span>
+<span style="color: #219fd5; font-style: italic;">for</span> file<span style="color: #219fd5; font-style: italic;"> in</span> *.pdf; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar si hay archivos PDF en el directorio</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #219fd5; font-weight: bold;">!</span> -e <span style="color: #a44185;">"$file"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"No se encontraron archivos PDF en '$DIRECTORY'."</span>
+        <span style="color: #219fd5; font-style: italic;">exit</span> 0
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Comprobar si el nombre ya tiene el prefijo YYMMDD-</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [[ <span style="color: #a44185;">"$file"</span> =~ ^[0-9]{6}-.*<span style="color: #a44185;">\.</span>pdf$ ]]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Saltando '$file': ya tiene el formato YYMMDD-."</span>
+        <span style="color: #219fd5; font-style: italic;">continue</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Obtener la fecha de modificaci&#243;n del archivo (YYMMDD)</span>
+    <span style="color: #1857a4;">MOD_DATE</span>=$(<span style="color: #219fd5; font-weight: bold;">stat -c %y "$file" | cut -d' ' -f1 | sed 's/-//g' | cut -c3-8</span>)
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Construir el nuevo nombre con la fecha</span>
+    <span style="color: #1857a4;">NEW_NAME</span>=<span style="color: #a44185;">"${MOD_DATE}-${file}"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Renombrar el archivo</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> mv -n <span style="color: #a44185;">"$file"</span> <span style="color: #a44185;">"$NEW_NAME"</span>; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Renombrado: '$file' -&gt; '$NEW_NAME'"</span>
+        ((COUNT++))
+    <span style="color: #219fd5; font-style: italic;">else</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Error al renombrar '$file'. Puede que '$NEW_NAME' ya exista."</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+<span style="color: #219fd5; font-style: italic;">done</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Resumen final</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Proceso completado. Archivos renombrados: $COUNT."</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf98cc80" class="outline-3">
+<h3 id="orgf98cc80"><span class="section-number-3">1.4.</span> Explicación del Script</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li><b><b>Línea inicial</b></b>: `#!/bin/bash` indica que es un script Bash.</li>
+<li><b><b>Verificación de argumentos</b></b>: Comprueba que se pase un directorio como parámetro (`$1`), mostrando un mensaje de uso si falta.</li>
+<li><b><b>Validación del directorio</b></b>: Asegura que el directorio exista y sea accesible.</li>
+<li><b><b>Bucle sobre PDFs</b></b>: Itera sobre todos los archivos `.pdf` en el directorio:
+<ul class="org-ul">
+<li>Si no hay PDFs, informa y termina.</li>
+<li>Si el archivo ya tiene el prefijo `YYMMDD-` (ej. `250315-documento.pdf`), lo salta.</li>
+<li>Usa `stat -c %y` para obtener la fecha de modificación (formato `YYYY-MM-DD`), extrae `YYMMDD` con `sed` y `cut`.</li>
+<li>Renombra con `mv -n` (sin sobrescribir si ya existe).</li>
+</ul></li>
+<li><b><b>Contador</b></b>: Lleva la cuenta de archivos renombrados y muestra un resumen.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3421a97" class="outline-3">
+<h3 id="org3421a97"><span class="section-number-3">1.5.</span> Uso del Script</h3>
+<div class="outline-text-3" id="text-1-5">
+<ol class="org-ol">
+<li>Guarda el script como `rename<sub>pdfs.sh</sub>`.</li>
+<li><p>
+Dale permisos de ejecución:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">chmod +x rename_pdfs.sh
+</pre>
+</div></li>
+<li><p>
+Ejecútalo especificando un directorio:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">./rename_pdfs.sh /ruta/a/tus/pdfs
+</pre>
+</div>
+<p>
+Ejemplo de salida:
+</p>
+<pre class="example" id="orgecacc8b">
+Saltando '250314-informe.pdf': ya tiene el formato YYMMDD-.
+Renombrado: 'documento.pdf' -&gt; '250315-documento.pdf'
+Proceso completado. Archivos renombrados: 1.
+</pre></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org41c2438" class="outline-3">
+<h3 id="org41c2438"><span class="section-number-3">1.6.</span> Notas y Precauciones</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li><b><b>Fecha de modificación</b></b>: Depende de la última vez que el archivo fue modificado, no de su creación. Si necesitas la fecha de creación, ajusta usando `stat -c %w` (si el sistema lo soporta).</li>
+<li><b><b>Colisiones</b></b>: Usa `-n` en `mv` para evitar sobrescribir archivos existentes; revisa manualmente si hay errores.</li>
+<li><b><b>Portabilidad</b></b>: Probado en sistemas Linux con `stat` de GNU coreutils. En macOS, cambia `stat -c %y` por `stat -f %Sm`.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1cbdfb5" class="outline-3">
+<h3 id="org1cbdfb5"><span class="section-number-3">1.7.</span> Conclusión</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+Este script es una herramienta práctica para mantener tus PDFs organizados con un estándar basado en fechas. Puedes adaptarlo para otros formatos (`.docx`, `.txt`) cambiando `*.pdf` por el patrón deseado. ¡Automatiza y simplifica tu gestión de archivos en Linux!
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2025-03-15 sáb 19:35</p>
+<p class="author">Author: M. Castillo</p>
+<p class="date">Created: 2025-03-17 lun 14:18</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

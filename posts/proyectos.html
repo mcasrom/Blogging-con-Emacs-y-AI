@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-03-17 lun 14:18 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Proyectos</title>
+<meta name="author" content="M. Castillo" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Proyectos</h1>
+<p>
+¡Bienvenidos a la página de <b>Proyectos</b>! En este espacio comparto algunos de los trabajos que he desarrollado, desde experimentos personales hasta iniciativas más ambiciosas. Esta página estática, generada con Org-mode y `org-static-blog`, es un reflejo de mi interés por la tecnología, la creatividad y el aprendizaje continuo. A continuación, encontrarás una descripción de lo que puedes explorar aquí y algunos ejemplos destacados.
+</p>
+<div id="outline-container-org3334b6e" class="outline-2">
+<h2 id="org3334b6e">¿Qué encontrarás en la página de Proyectos?</h2>
+<div class="outline-text-2" id="text-org3334b6e">
+<p>
+La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pero funcional de mis esfuerzos. Aquí algunos aspectos clave:
+</p>
+
+<ul class="org-ul">
+<li><b><b>Diversidad de Temas</b></b>: Incluye proyectos relacionados con programación, escritura, diseño y más.</li>
+
+<li><b><b>Código Abierto</b></b>: Algunos de los proyectos están disponibles en mi <a href="https://github.com/tu-usuario">GitHub</a>, donde puedes ver el código fuente y contribuir si te interesa.</li>
+<li><b><b>Documentación</b></b>: Cada proyecto tiene una breve explicación sobre su propósito, tecnologías usadas y resultados.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org912cf6f" class="outline-2">
+<h2 id="org912cf6f">Ejemplos de Proyectos</h2>
+<div class="outline-text-2" id="text-org912cf6f">
+</div>
+<div id="outline-container-orga85fd5c" class="outline-3">
+<h3 id="orga85fd5c">1. Generador de Blog Estático con Org-mode</h3>
+<div class="outline-text-3" id="text-orga85fd5c">
+<ul class="org-ul">
+<li><b>Descripción</b>: Una herramienta para convertir archivos Org en un blog HTML estático, usando `org-static-blog`.</li>
+<li><b>Tecnologías</b>: Emacs, Org-mode, Gnuplot (para gráficos), CSS.</li>
+<li><b>Resultado</b>: Este blog que estás leyendo es un ejemplo vivo del proyecto. Simplifica la publicación de contenido sin servidores dinámicos.</li>
+<li><b>Enlace</b>: <a href="https://github.com/tu-usuario/org-static-blog">Repositorio en GitHub</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9960a3b" class="outline-3">
+<h3 id="org9960a3b">3. Escritura Creativa Automatizada</h3>
+<div class="outline-text-3" id="text-org9960a3b">
+<ul class="org-ul">
+<li><b>Descripción</b>: Un experimento para generar relatos cortos usando IA y publicarlos en este blog.</li>
+<li><b>Tecnologías</b>: Emacs, GPT (simulado), Org-mode.</li>
+<li><b>Resultado</b>: Historias breves generadas y formateadas automáticamente en Org.</li>
+<li><b>Enlace</b>: Revisa la sección de <b>posts</b> para ejemplos futuros.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd20aaae" class="outline-2">
+<h2 id="orgd20aaae">¿Cómo interactuar con los Proyectos?</h2>
+<div class="outline-text-2" id="text-orgd20aaae">
+<p>
+Me encantaría que esta página no sea solo un escaparate, sino un punto de partida para colaboración o inspiración:
+</p>
+
+<ul class="org-ul">
+<li><b><b>Explora</b></b>: Navega por los enlaces a GitHub o los <b>posts</b> relacionados para más detalles.</li>
+<li><b><b>Contribuye</b></b>: Si tienes ideas, sugerencias o quieres colaborar en algún proyecto, clona el repositorio y envía un <b>pull request</b>.</li>
+<li><b><b>Contáctame</b></b>: ¿Te interesa alguno de estos proyectos o tienes uno propio que compartir?</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org09c9324" class="outline-2">
+<h2 id="org09c9324">Conclusión</h2>
+<div class="outline-text-2" id="text-org09c9324">
+<p>
+La página de <b>Proyectos</b> es un espacio vivo que iré actualizando con nuevas ideas y trabajos. Usar Org-mode para mantenerla me permite combinar escritura, código y datos en un formato simple y portátil. Espero que encuentres algo que te inspire o motive a experimentar por tu cuenta. ¡No dudes en dejar tus comentarios o contactarme para charlar sobre ello!
+</p>
+
+<hr />
+<p>
+Saludos, 
+M.Castillo
+</p>
+
+<p>
+Para ponerte en contacto, envíanos un email a <a href="mailto:mybloggingnotes@gmail.com">mybloggingnotes@gmail.com</a>.
+</p>
+
+<p>
+<a href="index.html">Volver al inicio</a>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2025-03-11 mar 00:00</p>
+<p class="author">Author: M. Castillo</p>
+<p class="date">Created: 2025-03-17 lun 14:18</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
