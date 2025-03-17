@@ -1,0 +1,1244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title><![CDATA[Example.com - ai]]></title>
+<description><![CDATA[Example.com - ai]]></description>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-ai.html</link>
+<lastBuildDate>Mon, 17 Mar 2025 08:38:13 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Generadores de IA por Relevancia y Países (2025)  Perplexity]]></title>
+  <description><![CDATA[
+<div id="outline-container-org827e698" class="outline-2">
+<h2 id="org827e698"><span class="section-number-2">1.</span> Clasificación Global de Generadores de IA</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orga65d022" class="outline-3">
+<h3 id="orga65d022"><span class="section-number-3">1.1.</span> Top 10 Países Líderes en Desarrollo de IA (2025)</h3>
+<div class="outline-text-3" id="text-1-1">
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Rango</th>
+<th scope="col" class="org-left">País</th>
+<th scope="col" class="org-right">Puntaje Total</th>
+<th scope="col" class="org-left">Principales Generadores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">Estados Unidos</td>
+<td class="org-right">70.06</td>
+<td class="org-left">GPT-5 (OpenAI), Gemini (Google), Claude (Anthropic)</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">China</td>
+<td class="org-right">40.17</td>
+<td class="org-left">ERNIE 4.0 (Baidu), Tongyi Qianwen (Alibaba)</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">Reino Unido</td>
+<td class="org-right">27.21</td>
+<td class="org-left">DeepMind AlphaFold, BenevolentAI</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">India</td>
+<td class="org-right">25.54</td>
+<td class="org-left">BharatGPT, Jugalbandi (AI4Bharat)</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">Singapur</td>
+<td class="org-right">22.72</td>
+<td class="org-left">AI Singapore, PaSGEN (NUS)</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">Francia</td>
+<td class="org-right">22.54</td>
+<td class="org-left">Mistral AI, Hugging Face</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">Corea del Sur</td>
+<td class="org-right">20.48</td>
+<td class="org-left">HyperCLOVA (Naver), Exaone (KT)</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-left">Alemania</td>
+<td class="org-right">18.49</td>
+<td class="org-left">Aleph Alpha, DeepL</td>
+</tr>
+
+<tr>
+<td class="org-right">9</td>
+<td class="org-left">Japón</td>
+<td class="org-right">18.47</td>
+<td class="org-left">Rinna, Fujitsu Kozuchi</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">Emiratos Árabes</td>
+<td class="org-right">18.15</td>
+<td class="org-left">Falcon 180B (TII), Jais (MBZUAI)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-org9db3b34" class="outline-2">
+<h2 id="org9db3b34"><span class="section-number-2">2.</span> Generadores por Categoría</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org2d8873e" class="outline-3">
+<h3 id="org2d8873e"><span class="section-number-3">2.1.</span> Texto</h3>
+<div class="outline-text-3" id="text-2-1">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Herramienta</th>
+<th scope="col" class="org-left">Empresa</th>
+<th scope="col" class="org-left">Países con Mayor Uso (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">ChatGPT</td>
+<td class="org-left">OpenAI</td>
+<td class="org-left">EE.UU (17%), Alemania (7%), India</td>
+</tr>
+
+<tr>
+<td class="org-left">Claude</td>
+<td class="org-left">Anthropic</td>
+<td class="org-left">EE.UU (32%), Canadá (12%)</td>
+</tr>
+
+<tr>
+<td class="org-left">Gemini</td>
+<td class="org-left">Google</td>
+<td class="org-left">EE.UU (24%), India (8%), Brasil</td>
+</tr>
+
+<tr>
+<td class="org-left">ERNIE</td>
+<td class="org-left">Baidu</td>
+<td class="org-left">China (89%), Singapur (5%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org5cca4da" class="outline-3">
+<h3 id="org5cca4da"><span class="section-number-3">2.2.</span> Imágenes/Vídeo</h3>
+<div class="outline-text-3" id="text-2-2">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Herramienta</th>
+<th scope="col" class="org-left">Tecnología</th>
+<th scope="col" class="org-left">Países Líderes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Midjourney</td>
+<td class="org-left">Difusión Estable</td>
+<td class="org-left">Israel (21%), Singapur (18%)</td>
+</tr>
+
+<tr>
+<td class="org-left">Stable Diffusion</td>
+<td class="org-left">Stability AI</td>
+<td class="org-left">EE.UU (34%), Japón (12%)</td>
+</tr>
+
+<tr>
+<td class="org-left">Sora</td>
+<td class="org-left">OpenAI</td>
+<td class="org-left">Hong Kong (29%), EE.UU (13%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orge55ef11" class="outline-3">
+<h3 id="orge55ef11"><span class="section-number-3">2.3.</span> Código</h3>
+<div class="outline-text-3" id="text-2-3">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Herramienta</th>
+<th scope="col" class="org-left">Lenguajes</th>
+<th scope="col" class="org-left">Países con Mayor Tráfico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">GitHub Copilot</td>
+<td class="org-left">Python/JavaScript</td>
+<td class="org-left">EE.UU (22%), Alemania (6%)</td>
+</tr>
+
+<tr>
+<td class="org-left">Codeium</td>
+<td class="org-left">Java/C++</td>
+<td class="org-left">Hong Kong (8%), Japón (7%)</td>
+</tr>
+
+<tr>
+<td class="org-left">Tabnine</td>
+<td class="org-left">Multiplataforma</td>
+<td class="org-left">India (6%), Brasil (5%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbb898e9" class="outline-2">
+<h2 id="orgbb898e9"><span class="section-number-2">3.</span> Tendencias Regionales</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org5c1be80" class="outline-3">
+<h3 id="org5c1be80"><span class="section-number-3">3.1.</span> América del Norte</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>Dominio de modelos lingüísticos (EE.UU: 78% inversión global en LLMs)</li>
+<li>Canadá: Liderazgo en investigación de aprendizaje automático</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf3a2ec7" class="outline-3">
+<h3 id="orgf3a2ec7"><span class="section-number-3">3.2.</span> Asia-Pacífico</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>China: 412K patentes IA registradas (2023)</li>
+<li>India: Crecimiento del 140% en startups IA (2022-2025)</li>
+<li>Singapur: 92% adopción IA en sector financiero</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0b51d04" class="outline-3">
+<h3 id="org0b51d04"><span class="section-number-3">3.3.</span> Europa</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>Reino Unido: 54% empresas usando IA ética</li>
+<li>Francia: 1er lugar en desarrollo de IA open-source</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org184642f" class="outline-2">
+<h2 id="org184642f"><span class="section-number-2">4.</span> Factores Clave de Relevancia</h2>
+<div class="outline-text-2" id="text-4">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Criterio</th>
+<th scope="col" class="org-right">Ponderación</th>
+<th scope="col" class="org-left">Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Inversión Privada</td>
+<td class="org-right">35%</td>
+<td class="org-left">EE.UU: $58B en 2024</td>
+</tr>
+
+<tr>
+<td class="org-left">Talento</td>
+<td class="org-right">25%</td>
+<td class="org-left">India: 1.3M ingenieros IA</td>
+</tr>
+
+<tr>
+<td class="org-left">Infraestructura</td>
+<td class="org-right">20%</td>
+<td class="org-left">China: 37 supercomputadores TOP500</td>
+</tr>
+
+<tr>
+<td class="org-left">Políticas Guber.</td>
+<td class="org-right">15%</td>
+<td class="org-left">UE: AI Act 2025</td>
+</tr>
+
+<tr>
+<td class="org-left">Adopción Empresas</td>
+<td class="org-right">5%</td>
+<td class="org-left">Japón: 68% PYMEs usando IA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org114af6b" class="outline-2">
+<h2 id="org114af6b"><span class="section-number-2">5.</span> Proyecciones 2025-2030</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Mercado global IA generativa: $207B (CAGR 32%)</li>
+<li>Países emergentes: Vietnam (+210%), Nigeria (+175%)</li>
+<li>Regulaciones: 89% países tendrán marco legal IA</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7a8f6b0" class="outline-2">
+<h2 id="org7a8f6b0"><span class="section-number-2">6.</span> Referencias [1][2][3][4][5][6][7]</h2>
+<div class="outline-text-2" id="text-6">
+<ol class="org-ol">
+<li>Stanford HAI (2023). Global AI Index 2024.</li>
+<li>LinkedIn AI Report (2025). Top 35 Countries Ranking.</li>
+<li>Visual Capitalist (2024). AI Preparedness Index.</li>
+<li>Data Science Dojo (2025). AI Advancement Report.</li>
+<li>Tortoise Media (2024). Global AI Index.</li>
+<li>Cloudflare Radar (2025). Generative AI Traffic Analysis.</li>
+<li>ElectronicsHub (2023). Search Interest in Generative AI.</li>
+</ol>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-perplexity.html">perplexity</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> </div>]]></description>
+  <category><![CDATA[perplexity]]></category>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[ai]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-13-generadores-de-ia-por-relevancia-y-pa%C3%ADses-(2025)--perplexity.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-13-generadores-de-ia-por-relevancia-y-pa%C3%ADses-(2025)--perplexity.html</guid>
+  <pubDate>Thu, 13 Mar 2025 08:49:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Cómo Generar un Prompt en IA: Guía Detallada, Ventajas e Inconvenientes]]></title>
+  <description><![CDATA[
+<div id="outline-container-org09533d4" class="outline-2">
+<h2 id="org09533d4"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+La inteligencia artificial (IA) ha revolucionado la forma en que interactuamos con la tecnología. Desde chatbots hasta herramientas de generación de contenido, la IA se ha convertido en una aliada indispensable para profesionales, creativos y entusiastas de la tecnología. Sin embargo, para aprovechar al máximo estas herramientas, es fundamental entender cómo <b><b>generar un prompt efectivo</b></b>. En este artículo, exploraremos en detalle qué es un prompt, cómo crearlo, sus ventajas, inconvenientes y ejemplos prácticos para que puedas dominar esta habilidad.
+</p>
+</div>
+</div>
+<div id="outline-container-org00a74ce" class="outline-2">
+<h2 id="org00a74ce"><span class="section-number-2">2.</span> ¿Qué es un Prompt en IA?</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Un <b><b>prompt</b></b> es una instrucción, pregunta o conjunto de indicaciones que se le proporciona a un modelo de inteligencia artificial para que genere una respuesta o realice una tarea específica. Es la forma en que nos comunicamos con la IA y le decimos qué queremos que haga.
+</p>
+
+<p>
+Por ejemplo, si le pides a ChatGPT que "escriba un poema sobre el océano", esa frase es el prompt. La calidad y claridad del prompt influyen directamente en la calidad de la respuesta generada por la IA.
+</p>
+</div>
+</div>
+<div id="outline-container-orgcc12822" class="outline-2">
+<h2 id="orgcc12822"><span class="section-number-2">3.</span> ¿Cómo Generar un Prompt Efectivo?</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Crear un prompt efectivo requiere claridad, precisión y contexto. A continuación, te explicamos los pasos clave para generar un prompt que obtenga los mejores resultados:
+</p>
+</div>
+<div id="outline-container-org683dc67" class="outline-3">
+<h3 id="org683dc67"><span class="section-number-3">3.1.</span> 1. Define el Objetivo</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>Antes de escribir el prompt, pregúntate: ¿Qué quiero lograr con la IA? ¿Necesito información, un texto creativo, un análisis de datos o una solución a un problema?</li>
+<li>Ejemplo: Si quieres que la IA te ayude a redactar un correo electrónico, tu objetivo es claro: generar un mensaje profesional y efectivo.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org89c0440" class="outline-3">
+<h3 id="org89c0440"><span class="section-number-3">3.2.</span> 2. Sé Específico</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Cuanto más específico seas, mejor será la respuesta. Incluye detalles como el tono, el estilo, la longitud o el formato que deseas.</li>
+<li>Ejemplo: En lugar de decir "escribe un correo", podrías decir: "Escribe un correo electrónico formal de 150 palabras para solicitar una reunión con un cliente potencial".</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbbd2116" class="outline-3">
+<h3 id="orgbbd2116"><span class="section-number-3">3.3.</span> 3. Proporciona Contexto</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>La IA funciona mejor cuando tiene suficiente información. Si el prompt requiere conocimientos específicos, inclúyelos.</li>
+<li>Ejemplo: Si pides un análisis de mercado, proporciona datos como el sector, la ubicación geográfica y el público objetivo.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5f42730" class="outline-3">
+<h3 id="org5f42730"><span class="section-number-3">3.4.</span> 4. Usa un Lenguaje Claro y Directo</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li>Evita ambigüedades. Usa un lenguaje sencillo y evita frases confusas.</li>
+<li>Ejemplo: En lugar de "haz algo sobre marketing", di: "Genera una estrategia de marketing digital para una tienda de ropa sostenible".</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb9ca33a" class="outline-3">
+<h3 id="orgb9ca33a"><span class="section-number-3">3.5.</span> 5. Itera y Ajusta</h3>
+<div class="outline-text-3" id="text-3-5">
+<ul class="org-ul">
+<li>Si la respuesta no es lo que esperabas, ajusta el prompt. Prueba diferentes enfoques hasta obtener el resultado deseado.</li>
+<li>Ejemplo: Si la IA genera un texto demasiado formal, puedes pedirle: "Reescribe el texto con un tono más casual y amigable".</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd00c681" class="outline-2">
+<h2 id="orgd00c681"><span class="section-number-2">4.</span> Ventajas de Usar Prompts en IA</h2>
+<div class="outline-text-2" id="text-4">
+<ol class="org-ol">
+<li><b><b>Ahorro de Tiempo</b></b>: Los prompts permiten automatizar tareas repetitivas, como redactar textos, generar ideas o analizar datos.</li>
+<li><b><b>Creatividad ilimitada</b></b>: La IA puede generar ideas y soluciones innovadoras que quizás no habías considerado.</li>
+<li><b><b>Personalización</b></b>: Puedes ajustar los prompts para obtener resultados específicos según tus necesidades.</li>
+<li><b><b>Accesibilidad</b></b>: No necesitas ser un experto en programación para usar herramientas de IA basadas en prompts.</li>
+<li><b><b>Escalabilidad</b></b>: Puedes generar grandes volúmenes de contenido o análisis en poco tiempo.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org9bb0b3a" class="outline-2">
+<h2 id="org9bb0b3a"><span class="section-number-2">5.</span> Inconvenientes y Desafíos</h2>
+<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li><b><b>Dependencia de la Calidad del Prompt</b></b>: Si el prompt no está bien formulado, la respuesta puede ser irrelevante o de baja calidad.</li>
+<li><b><b>Sesgos en la IA</b></b>: Los modelos de IA pueden reflejar sesgos presentes en los datos con los que fueron entrenados.</li>
+<li><b><b>Falta de Originalidad</b></b>: A veces, la IA genera contenido que puede parecer genérico o poco original.</li>
+<li><b><b>Limitaciones Técnicas</b></b>: La IA no siempre entiende prompts complejos o ambiguos.</li>
+<li><b><b>Riesgo de Sobreconfianza</b></b>: Es importante verificar y editar las respuestas generadas por la IA, ya que pueden contener errores.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgdf4c523" class="outline-2">
+<h2 id="orgdf4c523"><span class="section-number-2">6.</span> Ejemplos Prácticos de Prompts</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas generadas por IA:
+</p>
+</div>
+<div id="outline-container-orgadd9c98" class="outline-3">
+<h3 id="orgadd9c98"><span class="section-number-3">6.1.</span> Ejemplo 1: Generación de Contenido</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li><b><b>Prompt</b></b>: "Escribe un blog de 500 palabras sobre los beneficios del ejercicio físico para la salud mental, con un tono motivacional y dirigido a jóvenes adultos."</li>
+<li><b><b>Respuesta de la IA</b></b>: La IA generará un texto estructurado, con introducción, desarrollo y conclusión, destacando cómo el ejercicio reduce el estrés y mejora el estado de ánimo.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7c1aafa" class="outline-3">
+<h3 id="org7c1aafa"><span class="section-number-3">6.2.</span> Ejemplo 2: Análisis de Datos</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li><b><b>Prompt</b></b>: "Analiza los siguientes datos de ventas mensuales y sugiere estrategias para aumentar las ventas en el próximo trimestre: [datos]."</li>
+<li><b><b>Respuesta de la IA</b></b>: La IA identificará patrones, como meses con bajas ventas, y propondrá acciones como promociones o campañas publicitarias.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1b1c998" class="outline-3">
+<h3 id="org1b1c998"><span class="section-number-3">6.3.</span> Ejemplo 3: Creatividad</h3>
+<div class="outline-text-3" id="text-6-3">
+<ul class="org-ul">
+<li><b><b>Prompt</b></b>: "Inventa una historia corta de ciencia ficción sobre un viajero del tiempo que intenta salvar el futuro."</li>
+<li><b><b>Respuesta de la IA</b></b>: La IA creará una narrativa con personajes, conflicto y resolución, ambientada en un futuro distópico.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd13dc28" class="outline-2">
+<h2 id="orgd13dc28"><span class="section-number-2">7.</span> Consejos Avanzados para Mejorar tus Prompts</h2>
+<div class="outline-text-2" id="text-7">
+<ol class="org-ol">
+<li><b><b>Usa Ejemplos</b></b>: Proporciona ejemplos de lo que buscas. Por ejemplo: "Escribe un poema como este: [ejemplo]."</li>
+<li><b><b>Divide Tareas Complejas</b></b>: Si el prompt es muy amplio, divídelo en partes. Por ejemplo: "Primero, describe el problema. Luego, sugiere soluciones."</li>
+<li><b><b>Experimenta con Diferentes Modelos</b></b>: Algunos modelos de IA son mejores para tareas específicas. Prueba varias herramientas para encontrar la que mejor se adapte a tus necesidades.</li>
+<li><b><b>Aprende de la Comunidad</b></b>: Explora cómo otros usuarios formulan sus prompts en foros o redes sociales.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org24f1dda" class="outline-2">
+<h2 id="org24f1dda"><span class="section-number-2">8.</span> Herramientas Populares para Generar Prompts</h2>
+<div class="outline-text-2" id="text-8">
+<ol class="org-ol">
+<li><b><b>ChatGPT</b></b>: Ideal para textos, ideas y conversaciones.</li>
+<li><b><b>MidJourney</b></b>: Perfecto para generar imágenes a partir de prompts visuales.</li>
+<li><b><b>Google Bard</b></b>: Útil para búsquedas y análisis de información.</li>
+<li><b><b>DALL-E</b></b>: Especializado en creación de imágenes a partir de descripciones textuales.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org5763055" class="outline-2">
+<h2 id="org5763055"><span class="section-number-2">9.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo las herramientas de IA. Con un enfoque claro, específico y contextualizado, puedes obtener respuestas de alta calidad que te ayuden a ahorrar tiempo, potenciar tu creatividad y resolver problemas complejos. Sin embargo, es importante recordar que la IA es una herramienta, no un reemplazo para el pensamiento crítico y la creatividad humana.
+</p>
+
+<p>
+¿Listo para empezar? ¡Experimenta con diferentes prompts y descubre todo lo que la IA puede hacer por ti!
+</p>
+</div>
+</div>
+<div id="outline-container-org7e3abc3" class="outline-2">
+<h2 id="org7e3abc3"><span class="section-number-2">10.</span> Gráficos Sugeridos</h2>
+<div class="outline-text-2" id="text-10">
+<ol class="org-ol">
+<li>Diagrama de flujo: "Pasos para crear un prompt efectivo".</li>
+</ol>
+
+<figure id="org159b314">
+<img src="images/diagrama_flujo_prompt.png" alt="diagrama_flujo_prompt.png">
+
+</figure>
+
+
+<ol class="org-ol">
+<li>Comparación visual: "Prompt difuso vs. Prompt específico".</li>
+</ol>
+
+
+<figure id="orgea57536">
+<img src="images/comparacion_prompt_ditaa.png" alt="comparacion_prompt_ditaa.png">
+
+</figure>
+
+
+<ol class="org-ol">
+<li>Ejemplos de prompts y respuestas generadas por IA en formato de tabla.</li>
+</ol>
+<table>
+<caption class="t-above"><span class="table-number">Table 1:</span> Ejemplos de Prompts y Respuestas Generadas por IA</caption>
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Tipo de Prompt</th>
+<th scope="col" class="org-left">Ejemplo de Prompt</th>
+<th scope="col" class="org-left">Respuesta Generada por IA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Genérico</td>
+<td class="org-left">"Escribe algo sobre el clima."</td>
+<td class="org-left">"El clima es un tema fascinante. Hoy está soleado y cálido."</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Específico</td>
+<td class="org-left">"Escribe un poema de 4 líneas</td>
+<td class="org-left">"Bajo el cielo azul,</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">sobre el mar en verano."</td>
+<td class="org-left">el mar susurra su canción,</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">las olas besan la arena,</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">y el verano es pura emoción."</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Analítico</td>
+<td class="org-left">"Analiza las ventas del último</td>
+<td class="org-left">"Las ventas del último trimestre muestran un crecimiento del</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">trimestre y sugiere mejoras."</td>
+<td class="org-left">10%. Se recomienda aumentar la inversión en publicidad y</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">mejorar la experiencia del cliente."</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Creativo</td>
+<td class="org-left">"Inventa una historia corta</td>
+<td class="org-left">"Érase una vez un robot llamado Leo que quería aprender a</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">sobre un robot que quiere</td>
+<td class="org-left">bailar. Aunque al principio tropezaba, con práctica y</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">aprender a bailar."</td>
+<td class="org-left">dedicación, logró convertirse en el mejor bailarín de la</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">galaxia."</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>
+¡Esperamos que esta guía te haya sido útil! Si tienes preguntas o quieres compartir tus experiencias con prompts, déjanos un comentario. 😊
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-prompt.html">prompt</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-inteligencia.html">inteligencia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-artificial.html">artificial</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-best.html">best</a> </div>]]></description>
+  <category><![CDATA[prompt]]></category>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[ai]]></category>
+  <category><![CDATA[inteligencia]]></category>
+  <category><![CDATA[artificial]]></category>
+  <category><![CDATA[best]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-08-c%C3%B3mo-generar-un-prompt-en-ia:-gu%C3%ADa-detallada,-ventajas-e-inconvenientes.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-08-c%C3%B3mo-generar-un-prompt-en-ia:-gu%C3%ADa-detallada,-ventajas-e-inconvenientes.html</guid>
+  <pubDate>Sat, 08 Mar 2025 08:19:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Comparativa de Modelos de IA Generativa en 2025 (Grok)]]></title>
+  <description><![CDATA[
+<div id="outline-container-orgf9b9623" class="outline-2">
+<h2 id="orgf9b9623"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Este documento presenta una tabla vertical detallada en Org-mode que compara modelos de IA generativa: DeepSeek, Grok, OpenAI (ChatGPT), GitHub Copilot y alternativas gratuitas (Claude, Gemini). Se valoran aspectos clave de 1 a 10, con justificaciones basadas en su desempeño, accesibilidad y tendencias al 2 de marzo de 2025.
+</p>
+</div>
+</div>
+<div id="outline-container-org9d236b4" class="outline-2">
+<h2 id="org9d236b4"><span class="section-number-2">2.</span> Tabla Comparativa Vertical de Modelos de IA Generativa</h2>
+<div class="outline-text-2" id="text-2">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b><b>Aspecto</b></b></th>
+<th scope="col" class="org-left"><b><b>DeepSeek</b></b></th>
+<th scope="col" class="org-left"><b><b>Grok</b></b></th>
+<th scope="col" class="org-left"><b><b>OpenAI (ChatGPT)</b></b></th>
+<th scope="col" class="org-left"><b><b>GitHub Copilot</b></b></th>
+<th scope="col" class="org-left"><b><b>Claude (Gratuito)</b></b></th>
+<th scope="col" class="org-left"><b><b>Gemini (Gratuito)</b></b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b><b>Razonamiento</b></b></td>
+<td class="org-left">9</td>
+<td class="org-left">9</td>
+<td class="org-left">8</td>
+<td class="org-left">6</td>
+<td class="org-left">7</td>
+<td class="org-left">7</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Excelente en lógica y matemáticas</td>
+<td class="org-left">Superior en tareas técnicas</td>
+<td class="org-left">Versátil, pero menos técnico</td>
+<td class="org-left">Limitado a asistencia técnica</td>
+<td class="org-left">Bueno, pero sin búsqueda web</td>
+<td class="org-left">Razonable, con web limitada</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Codificación</b></b></td>
+<td class="org-left">8</td>
+<td class="org-left">9</td>
+<td class="org-left">8</td>
+<td class="org-left">10</td>
+<td class="org-left">6</td>
+<td class="org-left">7</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Rápida generación técnica</td>
+<td class="org-left">Fuerte en tareas complejas</td>
+<td class="org-left">Explicaciones detalladas</td>
+<td class="org-left">Líder en asistencia IDE</td>
+<td class="org-left">Básico, sin enfoque técnico</td>
+<td class="org-left">Aceptable, menos especializado</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Creatividad</b></b></td>
+<td class="org-left">6</td>
+<td class="org-left">7</td>
+<td class="org-left">9</td>
+<td class="org-left">5</td>
+<td class="org-left">8</td>
+<td class="org-left">7</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Menos enfocado en texto creativo</td>
+<td class="org-left">Humor y respuestas únicas</td>
+<td class="org-left">Alta versatilidad creativa</td>
+<td class="org-left">No prioriza creatividad</td>
+<td class="org-left">Conversacional, fluido</td>
+<td class="org-left">Creativo, pero menos refinado</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Acceso a Datos en Tiempo Real</b></b></td>
+<td class="org-left">8</td>
+<td class="org-left">9</td>
+<td class="org-left">9</td>
+<td class="org-left">7</td>
+<td class="org-left">5</td>
+<td class="org-left">8</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Bueno, sin integración profunda</td>
+<td class="org-left">DeepSearch con X</td>
+<td class="org-left">Búsqueda web efectiva</td>
+<td class="org-left">Limitado a contexto local</td>
+<td class="org-left">Sin búsqueda web</td>
+<td class="org-left">Búsqueda básica</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Accesibilidad</b></b></td>
+<td class="org-left">10</td>
+<td class="org-left">7</td>
+<td class="org-left">8</td>
+<td class="org-left">7</td>
+<td class="org-left">8</td>
+<td class="org-left">8</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Gratuito y open-source</td>
+<td class="org-left">Gratis en X, suscripción Premium</td>
+<td class="org-left">Gratuito con límites, $20/mes</td>
+<td class="org-left">$10/mes, integrado en GitHub</td>
+<td class="org-left">Gratuito con límites</td>
+<td class="org-left">Gratuito con límites</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Eficiencia (Velocidad)</b></b></td>
+<td class="org-left">9</td>
+<td class="org-left">8</td>
+<td class="org-left">7</td>
+<td class="org-left">8</td>
+<td class="org-left">7</td>
+<td class="org-left">8</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Respuestas rápidas y técnicas</td>
+<td class="org-left">Rápido con DeepSearch</td>
+<td class="org-left">Más lento en razonamiento</td>
+<td class="org-left">Rápido en IDE</td>
+<td class="org-left">Moderado</td>
+<td class="org-left">Rápido, pero menos optimizado</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Privacidad</b></b></td>
+<td class="org-left">6</td>
+<td class="org-left">8</td>
+<td class="org-left">8</td>
+<td class="org-left">7</td>
+<td class="org-left">9</td>
+<td class="org-left">8</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Datos no claros (China)</td>
+<td class="org-left">Opciones de privacidad</td>
+<td class="org-left">Opt-out de entrenamiento</td>
+<td class="org-left">Depende de Microsoft</td>
+<td class="org-left">Sin uso de datos por diseño</td>
+<td class="org-left">Privacidad estándar</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Interoperabilidad</b></b></td>
+<td class="org-left">7</td>
+<td class="org-left">6</td>
+<td class="org-left">8</td>
+<td class="org-left">9</td>
+<td class="org-left">6</td>
+<td class="org-left">7</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Open-source, pero especializado</td>
+<td class="org-left">Integrado en X</td>
+<td class="org-left">APIs amplias</td>
+<td class="org-left">Excelente con Microsoft</td>
+<td class="org-left">Limitado</td>
+<td class="org-left">Bueno, pero menos flexible</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Ciberseguridad</b></b></td>
+<td class="org-left">7</td>
+<td class="org-left">8</td>
+<td class="org-left">8</td>
+<td class="org-left">7</td>
+<td class="org-left">8</td>
+<td class="org-left">7</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Riesgos por origen chino</td>
+<td class="org-left">Seguridad razonable</td>
+<td class="org-left">Robustez probada</td>
+<td class="org-left">Depende de Microsoft</td>
+<td class="org-left">Enfoque en seguridad</td>
+<td class="org-left">Seguridad básica</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Sostenibilidad</b></b></td>
+<td class="org-left">8</td>
+<td class="org-left">7</td>
+<td class="org-left">6</td>
+<td class="org-left">6</td>
+<td class="org-left">7</td>
+<td class="org-left">7</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Menor uso de recursos</td>
+<td class="org-left">Uso moderado</td>
+<td class="org-left">Alta demanda energética</td>
+<td class="org-left">Depende de infraestructura</td>
+<td class="org-left">Moderada</td>
+<td class="org-left">Moderada</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Puntuación Total</b></b></td>
+<td class="org-left">78/100</td>
+<td class="org-left">78/100</td>
+<td class="org-left">79/100</td>
+<td class="org-left">72/100</td>
+<td class="org-left">71/100</td>
+<td class="org-left">74/100</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org8e3a547" class="outline-2">
+<h2 id="org8e3a547"><span class="section-number-2">3.</span> Notas sobre la Valoración</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><b><b>DeepSeek</b></b>: Destaca en accesibilidad (10) y eficiencia (9), pero creativity (6) y privacidad (6) son débiles por su enfoque técnico y origen.</li>
+<li><b><b>Grok</b></b>: Excelente en codificación (9) y datos en tiempo real (9), limitado en interoperabilidad (6) por su dependencia de X.</li>
+<li><b><b>OpenAI (ChatGPT)</b></b>: Líder en creatividad (9) y versatilidad, con leve penalización en eficiencia (7) por tiempos de razonamiento.</li>
+<li><b><b>GitHub Copilot</b></b>: Máximo en codificación (10) e interoperabilidad (9), bajo en creatividad (5) por su especialización.</li>
+<li><b><b>Claude (Gratuito)</b></b>: Fuerte en privacidad (9) y creatividad (8), débil en datos en tiempo real (5) y codificación (6).</li>
+<li><b><b>Gemini (Gratuito)</b></b>: Equilibrado, con buenos puntajes en acceso a datos (8) y velocidad (8), pero sin destacar.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfd87354" class="outline-2">
+<h2 id="orgfd87354"><span class="section-number-2">4.</span> Metodología</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li><b><b>Escala</b></b>: 1 (muy deficiente) a 10 (excelente).</li>
+<li><b><b>Criterios</b></b>: Basados en desempeño técnico, usabilidad, costo, y tendencias al 2 de marzo de 2025, extrapolados desde revisiones generales (IBM, Gartner).</li>
+<li><b><b>Fuentes</b></b>: Información sintetizada de revisiones públicas y análisis críticos.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org315a6a1" class="outline-2">
+<h2 id="org315a6a1"><span class="section-number-2">5.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+OpenAI lidera con 79/100 por su versatilidad, seguido de cerca por DeepSeek y Grok (78/100) por su eficiencia técnica y accesibilidad. Copilot (72/100) es ideal para codificación, mientras Claude (71/100) y Gemini (74/100) ofrecen opciones gratuitas sólidas pero limitadas en ciertas áreas.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-grok.html">grok</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-comparativa.html">comparativa</a> </div>]]></description>
+  <category><![CDATA[grok]]></category>
+  <category><![CDATA[ai]]></category>
+  <category><![CDATA[comparativa]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-02-comparativa-de-modelos-de-ia-generativa-en-2025-(grok).html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-02-comparativa-de-modelos-de-ia-generativa-en-2025-(grok).html</guid>
+  <pubDate>Sun, 02 Mar 2025 11:15:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Capacidades y Comparativa de Modelos de IA Generativa: OpenAI, DeepSeek, Gemini y Grok 3]]></title>
+  <description><![CDATA[
+<div id="outline-container-org7c9823c" class="outline-2">
+<h2 id="org7c9823c"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+La IA generativa es una categoría de inteligencia artificial que crea contenido nuevo (texto, imágenes, código, etc.) a partir de datos de entrenamiento, utilizando modelos de aprendizaje profundo como transformers o sistemas de mezcla de expertos (MoE). Este documento define sus capacidades, características y compara los modelos líderes: OpenAI (GPT-4o/o1), DeepSeek (R1/V3), Gemini (2.0/Pro) y Grok 3 de xAI, con una valoración de 1 a 10.
+</p>
+</div>
+</div>
+<div id="outline-container-org9660652" class="outline-2">
+<h2 id="org9660652"><span class="section-number-2">2.</span> Capacidades de la IA Generativa</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+La IA generativa tiene las siguientes capacidades generales:
+</p>
+<ul class="org-ul">
+<li><b><b>Generación de texto</b></b>: Crear textos coherentes, desde respuestas conversacionales hasta ensayos.</li>
+<li><b><b>Razonamiento</b></b>: Resolver problemas paso a paso, especialmente en modelos avanzados.</li>
+<li><b><b>Multimodalidad</b></b>: Procesar y generar texto, imágenes, y otros datos (según el modelo).</li>
+<li><b><b>Búsqueda en tiempo real</b></b>: Acceder a información actualizada vía web (si está habilitado).</li>
+<li><b><b>Código</b></b>: Escribir, depurar y optimizar código en varios lenguajes.</li>
+<li><b><b>Personalización</b></b>: Adaptarse a necesidades específicas mediante fine-tuning o prompts.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfe14d45" class="outline-2">
+<h2 id="orgfe14d45"><span class="section-number-2">3.</span> Características Comunes</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><b><b>Arquitectura</b></b>: Basada en transformers o MoE para eficiencia y escalabilidad.</li>
+<li><b><b>Entrenamiento</b></b>: Miles de millones de parámetros ajustados con grandes datasets.</li>
+<li><b><b>Velocidad</b></b>: Depende de la potencia computacional subyacente.</li>
+<li><b><b>Seguridad</b></b>: Filtros para evitar contenido dañino, con variaciones por modelo.</li>
+<li><b><b>Accesibilidad</b></b>: Disponible vía suscripción, API o código abierto (en algunos casos).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5282582" class="outline-2">
+<h2 id="org5282582"><span class="section-number-2">4.</span> Comparativa de Modelos</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org9510840" class="outline-3">
+<h3 id="org9510840"><span class="section-number-3">4.1.</span> OpenAI (GPT-4o / o1)**</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Líder en IA conversacional, con GPT-4o como modelo multimodal y o1 especializado en razonamiento.</li>
+<li><b><b>Capacidades</b></b>:
+<ul class="org-ul">
+<li>Texto: Excelente en generación creativa y explicaciones detalladas.</li>
+<li>Razonamiento: o1 sobresale en matemática y lógica (87.5% en ARC-AGI con alto cómputo).</li>
+<li>Multimodalidad: GPT-4o procesa imágenes y texto; o1 no.</li>
+<li>Código: Muy competente, especialmente o1-mini para tareas técnicas.</li>
+</ul></li>
+<li><b><b>Características</b></b>:
+<ul class="org-ul">
+<li>Computación: Alta demanda (costosa).</li>
+<li>Velocidad: Rápida, pero razonamiento complejo puede ser lento.</li>
+<li>Seguridad: Fuerte, con filtros éticos estrictos.</li>
+<li>Costo: Alto ($20-$200/mes según plan).</li>
+</ul></li>
+<li><b><b>Valoración</b></b>: 9/10
+<ul class="org-ul">
+<li>Pros: Versatilidad, razonamiento avanzado, multimodalidad.</li>
+<li>Contras: Costo elevado, sesgo leve detectable.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgaa501b2" class="outline-3">
+<h3 id="orgaa501b2"><span class="section-number-3">4.2.</span> DeepSeek (R1 / V3)**</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Modelo chino de bajo costo, con R1 enfocado en razonamiento y V3 como MoE de 671B parámetros.</li>
+<li><b><b>Capacidades</b></b>:
+<ul class="org-ul">
+<li>Texto: Respuestas concisas, menos creativas que competidores.</li>
+<li>Razonamiento: R1 compite con o1 en tareas técnicas, pero menos consistente (15-20% en ARC-AGI).</li>
+<li>Multimodalidad: Solo texto.</li>
+<li>Código: Muy fuerte, a veces supera a GPT-4.</li>
+</ul></li>
+<li><b><b>Características</b></b>:
+<ul class="org-ul">
+<li>Computación: Eficiente (37B parámetros activos en V3).</li>
+<li>Velocidad: Rápida para tareas simples.</li>
+<li>Seguridad: Vulnerable (exposición de datos reportada).</li>
+<li>Costo: Muy bajo (47.6x más barato que Grok-2 por token).</li>
+</ul></li>
+<li><b><b>Valoración</b></b>: 7/10
+<ul class="org-ul">
+<li>Pros: Costo-eficiencia, buen razonamiento técnico.</li>
+<li>Contras: Seguridad débil, falta multimodalidad.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6a1e00b" class="outline-3">
+<h3 id="org6a1e00b"><span class="section-number-3">4.3.</span> Gemini (2.0 / Pro)**</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Modelo de Google, integrado con su ecosistema, con Gemini 2.0 Pro como versión avanzada.</li>
+<li><b><b>Capacidades</b></b>:
+<ul class="org-ul">
+<li>Texto: Respuestas bien investigadas con fuentes verificables.</li>
+<li>Razonamiento: Competente, pero detrás de o1 y Grok 3 (80.5 en MMLU).</li>
+<li>Multimodalidad: Texto e imágenes, con integración en Google Workspace.</li>
+<li>Código: Bueno, pero no líder.</li>
+</ul></li>
+<li><b><b>Características</b></b>:
+<ul class="org-ul">
+<li>Computación: Eficiente, con acceso a infraestructura de Google.</li>
+<li>Velocidad: Variable según complejidad.</li>
+<li>Seguridad: Alta, alineada con políticas de Google.</li>
+<li>Costo: Moderado ($20/mes, incluye almacenamiento).</li>
+</ul></li>
+<li><b><b>Valoración</b></b>: 8/10
+<ul class="org-ul">
+<li>Pros: Integración con Google, multimodalidad sólida.</li>
+<li>Contras: Menor capacidad de razonamiento avanzado.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org832ade5" class="outline-3">
+<h3 id="org832ade5"><span class="section-number-3">4.4.</span> Grok 3 (xAI)**</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li><b><b>Descripción</b></b>: Último modelo de xAI, con énfasis en razonamiento y "búsqueda de la verdad".</li>
+<li><b><b>Capacidades</b></b>:
+<ul class="org-ul">
+<li>Texto: Respuestas detalladas, menos sesgadas políticamente.</li>
+<li>Razonamiento: Supera a Gemini y DeepSeek en benchmarks (52 en AIME’24, 75 en GPQA).</li>
+<li>Multimodalidad: Imagen y texto, con generación vía Aurora.</li>
+<li>Código: Excelente, competitivo con o1.</li>
+</ul></li>
+<li><b><b>Características</b></b>:
+<ul class="org-ul">
+<li>Computación: 10x más potente que Grok 2 (200,000 GPUs).</li>
+<li>Velocidad: Rápida, con modo "Big Brain" para tareas complejas.</li>
+<li>Seguridad: Moderada, prioriza respuestas sin censura.</li>
+<li>Costo: Alto ($30-$50/mes para Premium+).</li>
+</ul></li>
+<li><b><b>Valoración</b></b>: 9/10
+<ul class="org-ul">
+<li>Pros: Razonamiento líder, menos sesgo, multimodalidad.</li>
+<li>Contras: Costo elevado, acceso restringido.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org820a862" class="outline-2">
+<h2 id="org820a862"><span class="section-number-2">5.</span> Comparativa Resumida</h2>
+<div class="outline-text-2" id="text-5">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Modelo</th>
+<th scope="col" class="org-right">Razonamiento</th>
+<th scope="col" class="org-right">Texto Creativo</th>
+<th scope="col" class="org-right">Multimodalidad</th>
+<th scope="col" class="org-right">Código</th>
+<th scope="col" class="org-right">Costo</th>
+<th scope="col" class="org-right">Seguridad</th>
+<th scope="col" class="org-left">Valoración</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">OpenAI</td>
+<td class="org-right">9</td>
+<td class="org-right">9</td>
+<td class="org-right">8</td>
+<td class="org-right">9</td>
+<td class="org-right">6</td>
+<td class="org-right">8</td>
+<td class="org-left">9/10</td>
+</tr>
+
+<tr>
+<td class="org-left">DeepSeek</td>
+<td class="org-right">7</td>
+<td class="org-right">6</td>
+<td class="org-right">2</td>
+<td class="org-right">8</td>
+<td class="org-right">9</td>
+<td class="org-right">4</td>
+<td class="org-left">7/10</td>
+</tr>
+
+<tr>
+<td class="org-left">Gemini</td>
+<td class="org-right">7</td>
+<td class="org-right">8</td>
+<td class="org-right">8</td>
+<td class="org-right">7</td>
+<td class="org-right">7</td>
+<td class="org-right">9</td>
+<td class="org-left">8/10</td>
+</tr>
+
+<tr>
+<td class="org-left">Grok 3</td>
+<td class="org-right">9</td>
+<td class="org-right">8</td>
+<td class="org-right">7</td>
+<td class="org-right">9</td>
+<td class="org-right">5</td>
+<td class="org-right">7</td>
+<td class="org-left">9/10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org56b43ab" class="outline-2">
+<h2 id="org56b43ab"><span class="section-number-2">6.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li><b><b>OpenAI (GPT-4o/o1)</b></b>: Ideal para usuarios que buscan versatilidad y razonamiento avanzado, aunque costoso.</li>
+<li><b><b>DeepSeek (R1/V3)</b></b>: Perfecto para tareas técnicas a bajo costo, pero con riesgos de seguridad.</li>
+<li><b><b>Gemini (2.0/Pro)</b></b>: Excelente para integración con Google y usuarios que valoran fuentes verificables.</li>
+<li><b><b>Grok 3</b></b>: Destaca en razonamiento y neutralidad, competitivo con OpenAI, pero limitado por costo y acceso.</li>
+</ul>
+
+<p>
+La elección depende de tus prioridades: costo (DeepSeek), razonamiento (Grok 3/OpenAI), o ecosistema (Gemini). Todos son líderes en sus áreas, pero Grok 3 y OpenAI sobresalen en capacidades generales al 26 de febrero de 2025.
+</p>
+
+<p style="text-align: center; font-size: 0.9em; color: #777;">
+<b>Explorando la IA generativa con precisión y curiosidad.</b>
+</p>
+
+<p>
+Nota: Generado por Grok
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-openai.html">openai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gemini.html">gemini</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-grok3.html">grok3</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-deepseek.html">deepseek</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-comparativa.html">comparativa</a> </div>]]></description>
+  <category><![CDATA[openai]]></category>
+  <category><![CDATA[gemini]]></category>
+  <category><![CDATA[grok3]]></category>
+  <category><![CDATA[deepseek]]></category>
+  <category><![CDATA[ai]]></category>
+  <category><![CDATA[comparativa]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-27-capacidades-y-comparativa-de-modelos-de-ia-generativa:-openai,-deepseek,-gemini-y-grok-3.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-27-capacidades-y-comparativa-de-modelos-de-ia-generativa:-openai,-deepseek,-gemini-y-grok-3.html</guid>
+  <pubDate>Thu, 27 Feb 2025 09:17:00 +0100</pubDate>
+</item>
+</channel>
+</rss>

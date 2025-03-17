@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title><![CDATA[Example.com - perplexity]]></title>
+<description><![CDATA[Example.com - perplexity]]></description>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-perplexity.html</link>
+<lastBuildDate>Mon, 17 Mar 2025 08:38:08 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Generadores de IA por Relevancia y Países (2025)  Perplexity]]></title>
+  <description><![CDATA[
+<div id="outline-container-org827e698" class="outline-2">
+<h2 id="org827e698"><span class="section-number-2">1.</span> Clasificación Global de Generadores de IA</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orga65d022" class="outline-3">
+<h3 id="orga65d022"><span class="section-number-3">1.1.</span> Top 10 Países Líderes en Desarrollo de IA (2025)</h3>
+<div class="outline-text-3" id="text-1-1">
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Rango</th>
+<th scope="col" class="org-left">País</th>
+<th scope="col" class="org-right">Puntaje Total</th>
+<th scope="col" class="org-left">Principales Generadores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">Estados Unidos</td>
+<td class="org-right">70.06</td>
+<td class="org-left">GPT-5 (OpenAI), Gemini (Google), Claude (Anthropic)</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">China</td>
+<td class="org-right">40.17</td>
+<td class="org-left">ERNIE 4.0 (Baidu), Tongyi Qianwen (Alibaba)</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">Reino Unido</td>
+<td class="org-right">27.21</td>
+<td class="org-left">DeepMind AlphaFold, BenevolentAI</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">India</td>
+<td class="org-right">25.54</td>
+<td class="org-left">BharatGPT, Jugalbandi (AI4Bharat)</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">Singapur</td>
+<td class="org-right">22.72</td>
+<td class="org-left">AI Singapore, PaSGEN (NUS)</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">Francia</td>
+<td class="org-right">22.54</td>
+<td class="org-left">Mistral AI, Hugging Face</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">Corea del Sur</td>
+<td class="org-right">20.48</td>
+<td class="org-left">HyperCLOVA (Naver), Exaone (KT)</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-left">Alemania</td>
+<td class="org-right">18.49</td>
+<td class="org-left">Aleph Alpha, DeepL</td>
+</tr>
+
+<tr>
+<td class="org-right">9</td>
+<td class="org-left">Japón</td>
+<td class="org-right">18.47</td>
+<td class="org-left">Rinna, Fujitsu Kozuchi</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">Emiratos Árabes</td>
+<td class="org-right">18.15</td>
+<td class="org-left">Falcon 180B (TII), Jais (MBZUAI)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-org9db3b34" class="outline-2">
+<h2 id="org9db3b34"><span class="section-number-2">2.</span> Generadores por Categoría</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org2d8873e" class="outline-3">
+<h3 id="org2d8873e"><span class="section-number-3">2.1.</span> Texto</h3>
+<div class="outline-text-3" id="text-2-1">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Herramienta</th>
+<th scope="col" class="org-left">Empresa</th>
+<th scope="col" class="org-left">Países con Mayor Uso (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">ChatGPT</td>
+<td class="org-left">OpenAI</td>
+<td class="org-left">EE.UU (17%), Alemania (7%), India</td>
+</tr>
+
+<tr>
+<td class="org-left">Claude</td>
+<td class="org-left">Anthropic</td>
+<td class="org-left">EE.UU (32%), Canadá (12%)</td>
+</tr>
+
+<tr>
+<td class="org-left">Gemini</td>
+<td class="org-left">Google</td>
+<td class="org-left">EE.UU (24%), India (8%), Brasil</td>
+</tr>
+
+<tr>
+<td class="org-left">ERNIE</td>
+<td class="org-left">Baidu</td>
+<td class="org-left">China (89%), Singapur (5%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org5cca4da" class="outline-3">
+<h3 id="org5cca4da"><span class="section-number-3">2.2.</span> Imágenes/Vídeo</h3>
+<div class="outline-text-3" id="text-2-2">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Herramienta</th>
+<th scope="col" class="org-left">Tecnología</th>
+<th scope="col" class="org-left">Países Líderes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Midjourney</td>
+<td class="org-left">Difusión Estable</td>
+<td class="org-left">Israel (21%), Singapur (18%)</td>
+</tr>
+
+<tr>
+<td class="org-left">Stable Diffusion</td>
+<td class="org-left">Stability AI</td>
+<td class="org-left">EE.UU (34%), Japón (12%)</td>
+</tr>
+
+<tr>
+<td class="org-left">Sora</td>
+<td class="org-left">OpenAI</td>
+<td class="org-left">Hong Kong (29%), EE.UU (13%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orge55ef11" class="outline-3">
+<h3 id="orge55ef11"><span class="section-number-3">2.3.</span> Código</h3>
+<div class="outline-text-3" id="text-2-3">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Herramienta</th>
+<th scope="col" class="org-left">Lenguajes</th>
+<th scope="col" class="org-left">Países con Mayor Tráfico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">GitHub Copilot</td>
+<td class="org-left">Python/JavaScript</td>
+<td class="org-left">EE.UU (22%), Alemania (6%)</td>
+</tr>
+
+<tr>
+<td class="org-left">Codeium</td>
+<td class="org-left">Java/C++</td>
+<td class="org-left">Hong Kong (8%), Japón (7%)</td>
+</tr>
+
+<tr>
+<td class="org-left">Tabnine</td>
+<td class="org-left">Multiplataforma</td>
+<td class="org-left">India (6%), Brasil (5%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbb898e9" class="outline-2">
+<h2 id="orgbb898e9"><span class="section-number-2">3.</span> Tendencias Regionales</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org5c1be80" class="outline-3">
+<h3 id="org5c1be80"><span class="section-number-3">3.1.</span> América del Norte</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>Dominio de modelos lingüísticos (EE.UU: 78% inversión global en LLMs)</li>
+<li>Canadá: Liderazgo en investigación de aprendizaje automático</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf3a2ec7" class="outline-3">
+<h3 id="orgf3a2ec7"><span class="section-number-3">3.2.</span> Asia-Pacífico</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>China: 412K patentes IA registradas (2023)</li>
+<li>India: Crecimiento del 140% en startups IA (2022-2025)</li>
+<li>Singapur: 92% adopción IA en sector financiero</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0b51d04" class="outline-3">
+<h3 id="org0b51d04"><span class="section-number-3">3.3.</span> Europa</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>Reino Unido: 54% empresas usando IA ética</li>
+<li>Francia: 1er lugar en desarrollo de IA open-source</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org184642f" class="outline-2">
+<h2 id="org184642f"><span class="section-number-2">4.</span> Factores Clave de Relevancia</h2>
+<div class="outline-text-2" id="text-4">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Criterio</th>
+<th scope="col" class="org-right">Ponderación</th>
+<th scope="col" class="org-left">Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Inversión Privada</td>
+<td class="org-right">35%</td>
+<td class="org-left">EE.UU: $58B en 2024</td>
+</tr>
+
+<tr>
+<td class="org-left">Talento</td>
+<td class="org-right">25%</td>
+<td class="org-left">India: 1.3M ingenieros IA</td>
+</tr>
+
+<tr>
+<td class="org-left">Infraestructura</td>
+<td class="org-right">20%</td>
+<td class="org-left">China: 37 supercomputadores TOP500</td>
+</tr>
+
+<tr>
+<td class="org-left">Políticas Guber.</td>
+<td class="org-right">15%</td>
+<td class="org-left">UE: AI Act 2025</td>
+</tr>
+
+<tr>
+<td class="org-left">Adopción Empresas</td>
+<td class="org-right">5%</td>
+<td class="org-left">Japón: 68% PYMEs usando IA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org114af6b" class="outline-2">
+<h2 id="org114af6b"><span class="section-number-2">5.</span> Proyecciones 2025-2030</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Mercado global IA generativa: $207B (CAGR 32%)</li>
+<li>Países emergentes: Vietnam (+210%), Nigeria (+175%)</li>
+<li>Regulaciones: 89% países tendrán marco legal IA</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7a8f6b0" class="outline-2">
+<h2 id="org7a8f6b0"><span class="section-number-2">6.</span> Referencias [1][2][3][4][5][6][7]</h2>
+<div class="outline-text-2" id="text-6">
+<ol class="org-ol">
+<li>Stanford HAI (2023). Global AI Index 2024.</li>
+<li>LinkedIn AI Report (2025). Top 35 Countries Ranking.</li>
+<li>Visual Capitalist (2024). AI Preparedness Index.</li>
+<li>Data Science Dojo (2025). AI Advancement Report.</li>
+<li>Tortoise Media (2024). Global AI Index.</li>
+<li>Cloudflare Radar (2025). Generative AI Traffic Analysis.</li>
+<li>ElectronicsHub (2023). Search Interest in Generative AI.</li>
+</ol>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-perplexity.html">perplexity</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> </div>]]></description>
+  <category><![CDATA[perplexity]]></category>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[ai]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-13-generadores-de-ia-por-relevancia-y-pa%C3%ADses-(2025)--perplexity.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-13-generadores-de-ia-por-relevancia-y-pa%C3%ADses-(2025)--perplexity.html</guid>
+  <pubDate>Thu, 13 Mar 2025 08:49:00 +0100</pubDate>
+</item>
+</channel>
+</rss>

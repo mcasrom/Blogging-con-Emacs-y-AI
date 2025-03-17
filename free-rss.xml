@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title><![CDATA[Example.com - free]]></title>
+<description><![CDATA[Example.com - free]]></description>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-free.html</link>
+<lastBuildDate>Mon, 17 Mar 2025 08:38:08 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Por Qué Elegí GitHub para Publicar Mi Blog]]></title>
+  <description><![CDATA[
+<div id="outline-container-org09cc11d" class="outline-2">
+<h2 id="org09cc11d"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Cuando decidí lanzar mi blog, busqué una solución que fuera económica, adaptable y compatible con mi flujo de trabajo en Emacs. Tras evaluar opciones como WordPress, Medium o servidores privados, opté por GitHub, una plataforma que no solo cumple estos criterios, sino que los supera con creces. En este post, detallo por qué GitHub es mi elección para publicar un blog estático, centrándome en tres pilares: <b><b>gratuidad</b></b>, <b><b>flexibilidad</b></b> y <b><b>facilidad de integración con Emacs</b></b>. Con ejemplos prácticos, datos visuales y reflexiones personales, espero convencerte de que esta combinación es imbatible para blogueros técnicos en 2025.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf221453" class="outline-2">
+<h2 id="orgf221453"><span class="section-number-2">2.</span> ¿Qué es GitHub y Por Qué un Blog Estático?</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+GitHub es una plataforma de alojamiento de código basada en Git, conocida por su uso en desarrollo colaborativo. Sin embargo, gracias a <b><b>GitHub Pages</b></b>, también permite alojar sitios web estáticos gratis. Un blog estático, generado con herramientas como Org Static Blog, Hugo o Jekyll, convierte archivos de texto (Markdown, Org-mode, etc.) en HTML, eliminando bases de datos y servidores dinámicos. Esta simplicidad lo hace ideal para quienes priorizan control y eficiencia.
+</p>
+</div>
+<div id="outline-container-org6f8f691" class="outline-3">
+<h3 id="org6f8f691"><span class="section-number-3">2.1.</span> Ventajas Iniciales</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>No requiere mantenimiento de servidores.</li>
+<li>Compatible con flujos de escritura en texto plano.</li>
+<li>Escalable sin costos adicionales.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcb2b8d0" class="outline-2">
+<h2 id="orgcb2b8d0"><span class="section-number-2">3.</span> Razones para Elegir GitHub</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+A continuación, analizo los tres motivos clave que me llevaron a elegir GitHub, con detalles técnicos y prácticos.
+</p>
+</div>
+<div id="outline-container-orgba58d1d" class="outline-3">
+<h3 id="orgba58d1d"><span class="section-number-3">3.1.</span> Gratuidad: Publicar Sin Costo</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org9eba985" class="outline-4">
+<h4 id="org9eba985"><span class="section-number-4">3.1.1.</span> Descripción</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+GitHub Pages ofrece alojamiento gratuito para sitios estáticos públicos, sin límites estrictos de ancho de banda o almacenamiento (dentro de uso razonable). Esto contrasta con plataformas como WordPress.com ($4-$45/mes) o servidores VPS ($5-$20/mes en AWS o DigitalOcean).
+</p>
+</div>
+</div>
+<div id="outline-container-org6d0662e" class="outline-4">
+<h4 id="org6d0662e"><span class="section-number-4">3.1.2.</span> Beneficios</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li><b><b>Costo Cero</b></b>: Perfecto para blogueros principiantes o experimentales.</li>
+<li><b><b>Escalabilidad</b></b>: Según <b>GitHub Stats</b> (2024), soporta millones de visitas mensuales sin cargos.</li>
+<li><b><b>Dominio Personalizado</b></b>: Gratis con configuración DNS simple (ej. `tunombre.com`).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgaaa4000" class="outline-4">
+<h4 id="orgaaa4000"><span class="section-number-4">3.1.3.</span> Ejemplo Práctico</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ul class="org-ul">
+<li><b><b>Escenario</b></b>: Quiero lanzar un blog sin invertir dinero.</li>
+<li><b><b>Acción</b></b>: Creo un repositorio `username.github.io`, subo archivos HTML generados con Org-mode, y publico en minutos.</li>
+<li><b><b>Resultado</b></b>: Blog en línea sin gastar un centavo, a diferencia de $48/año en WordPress Básico.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5dee7b4" class="outline-4">
+<h4 id="org5dee7b4"><span class="section-number-4">3.1.4.</span> Limitaciones</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<ul class="org-ul">
+<li>Solo sitios estáticos (sin PHP o bases de datos dinámicas).</li>
+<li>Repositorios privados requieren GitHub Pro ($4/mes), pero no son necesarios para blogs públicos.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd04d457" class="outline-3">
+<h3 id="orgd04d457"><span class="section-number-3">3.2.</span> Flexibilidad: Control Total Sobre el Contenido</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orgaf611bb" class="outline-4">
+<h4 id="orgaf611bb"><span class="section-number-4">3.2.1.</span> Descripción</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+GitHub permite personalizar cada aspecto del blog mediante control de versiones (Git) y compatibilidad con generadores estáticos. No impone plantillas rígidas ni anuncios, a diferencia de Medium o Blogger.
+</p>
+</div>
+</div>
+<div id="outline-container-org7e31c73" class="outline-4">
+<h4 id="org7e31c73"><span class="section-number-4">3.2.2.</span> Beneficios</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ul class="org-ul">
+<li><b><b>Control de Código</b></b>: Edito mi blog como un proyecto de software, con ramas y pull requests.</li>
+<li><b><b>Personalización</b></b>: Uso CSS propio, integro CI/CD con GitHub Actions para automatizar publicaciones.</li>
+<li><b><b>Portabilidad</b></b>: Puedo migrar mi blog a otra plataforma exportando el repositorio.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbc421cc" class="outline-4">
+<h4 id="orgbc421cc"><span class="section-number-4">3.2.3.</span> Ejemplo Práctico</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<ul class="org-ul">
+<li><b><b>Escenario</b></b>: Quiero probar un nuevo diseño.</li>
+<li><b><b>Acción</b></b>: Creo una rama `nuevo-diseño`, edito el CSS en Emacs, hago commit y pruebo en un subdominio temporal (GitHub Actions despliega automáticamente).</li>
+<li><b><b>Resultado</b></b>: Cambio implementado en horas, sin restricciones de plantilla como en WordPress.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org04ab20f" class="outline-4">
+<h4 id="org04ab20f"><span class="section-number-4">3.2.4.</span> Comparación</h4>
+<div class="outline-text-4" id="text-3-2-4">
+<ul class="org-ul">
+<li>Medium: $5/mes, diseño limitado, contenido tras paywall.</li>
+<li>GitHub: Gratis, diseño 100% editable, contenido siempre accesible.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc1e880e" class="outline-3">
+<h3 id="orgc1e880e"><span class="section-number-3">3.3.</span> Facilidad de Integración con Emacs</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org98c1667" class="outline-4">
+<h4 id="org98c1667"><span class="section-number-4">3.3.1.</span> Descripción</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+Como usuario de Emacs, GitHub se integra perfectamente con mi flujo de escritura en Org-mode. Con paquetes como `org-static-blog`, `magit` y `ox-html`, escribo, gestiono y publico directamente desde Emacs.
+</p>
+</div>
+</div>
+<div id="outline-container-org6647354" class="outline-4">
+<h4 id="org6647354"><span class="section-number-4">3.3.2.</span> Beneficios</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<ul class="org-ul">
+<li><b><b>Escritura en Org-mode</b></b>: Formato ligero, exportable a HTML con un comando (`C-c C-e h h`).</li>
+<li><b><b>Control de Versiones con Magit</b></b>: Hago commits y pushes sin salir de Emacs (`C-x g`).</li>
+<li><b><b>Automatización</b></b>: Configuro GitHub Actions para generar y desplegar el sitio al hacer push.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3bcddf2" class="outline-4">
+<h4 id="org3bcddf2"><span class="section-number-4">3.3.3.</span> Ejemplo Práctico</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<ul class="org-ul">
+<li><b><b>Escenario</b></b>: Escribo un post sobre gestión del tiempo.</li>
+<li><b><b>Acción</b></b>:  
+<ol class="org-ol">
+<li>Creo `post-gestion-tiempo.org` en Emacs.</li>
+<li>Escribo en Org-mode con títulos, tablas y código.</li>
+<li>Exporto a HTML con `org-static-blog-publish-file`.</li>
+<li>Uso Magit para commit (`C-c C-c`) y push (`P p`).</li>
+</ol></li>
+<li><b><b>Resultado</b></b>: Post publicado en mi blog en &lt;10 minutos, todo desde Emacs.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5883fbd" class="outline-4">
+<h4 id="org5883fbd"><span class="section-number-4">3.3.4.</span> Flujo Técnico</h4>
+<div class="outline-text-4" id="text-3-3-4">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n b&#225;sica en .emacs</span>
+(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">org-static-blog</span>
+  <span style="color: #dc3eb7;">:ensure</span> t
+  <span style="color: #dc3eb7;">:config</span>
+  (<span style="color: #219fd5; font-style: italic;">setq</span> org-static-blog-publish-title <span style="color: #a44185;">"Mi Blog"</span>)
+  (<span style="color: #219fd5; font-style: italic;">setq</span> org-static-blog-publish-url <span style="color: #a44185;">"https://username.github.io/"</span>)
+  (<span style="color: #219fd5; font-style: italic;">setq</span> org-static-blog-publish-directory <span style="color: #a44185;">"~/blog/public/"</span>))
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org39f7fa3" class="outline-2">
+<h2 id="org39f7fa3"><span class="section-number-2">4.</span> Comparación con Otras Plataformas</h2>
+<div class="outline-text-2" id="text-4">
+<table id="org1f0211c">
+<caption class="t-above"><span class="table-number">Table 1:</span> Comparativa de Plataformas para Blogs</caption>
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Plataforma</th>
+<th scope="col" class="org-left">Costo Mensual</th>
+<th scope="col" class="org-left">Flexibilidad Diseño</th>
+<th scope="col" class="org-left">Integración Emacs</th>
+<th scope="col" class="org-left">Control Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">GitHub Pages</td>
+<td class="org-left">$0</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Excelente</td>
+<td class="org-left">Total</td>
+</tr>
+
+<tr>
+<td class="org-left">WordPress.com</td>
+<td class="org-left">$4-$45</td>
+<td class="org-left">Media</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Limitada</td>
+</tr>
+
+<tr>
+<td class="org-left">Medium</td>
+<td class="org-left">$5</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Nula</td>
+<td class="org-left">Parcial (paywall)</td>
+</tr>
+
+<tr>
+<td class="org-left">VPS (AWS)</td>
+<td class="org-left">$5-$20</td>
+<td class="org-left">Muy Alta</td>
+<td class="org-left">Media</td>
+<td class="org-left">Total</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org0419ab3" class="outline-2">
+<h2 id="org0419ab3"><span class="section-number-2">5.</span> Gráfico: Costo vs Flexibilidad</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+</div>
+<div id="outline-container-orgdda8782" class="outline-2">
+<h2 id="orgdda8782"><span class="section-number-2">6.</span> Comparación de Plataformas</h2>
+<div class="outline-text-2" id="text-6">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Plataforma</th>
+<th scope="col" class="org-left">Costo Mensual</th>
+<th scope="col" class="org-left">Flexibilidad Diseño</th>
+<th scope="col" class="org-left">Integración Emacs</th>
+<th scope="col" class="org-left">Control Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">GitHub Pages</td>
+<td class="org-left">$0</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Excelente</td>
+<td class="org-left">Total</td>
+</tr>
+
+<tr>
+<td class="org-left">WordPress.com</td>
+<td class="org-left">$4-$45</td>
+<td class="org-left">Media</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Limitada</td>
+</tr>
+
+<tr>
+<td class="org-left">Medium</td>
+<td class="org-left">$5</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Nula</td>
+<td class="org-left">Parcial (paywall)</td>
+</tr>
+
+<tr>
+<td class="org-left">VPS (AWS)</td>
+<td class="org-left">$5-$20</td>
+<td class="org-left">Muy Alta</td>
+<td class="org-left">Media</td>
+<td class="org-left">Total</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<table id="org411e1c2">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Plataforma</th>
+<th scope="col" class="org-right">Costo Mensual</th>
+<th scope="col" class="org-right">Flexibilidad Diseño</th>
+<th scope="col" class="org-right">Integración Emacs</th>
+<th scope="col" class="org-right">Control Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">GitHub Pages</td>
+<td class="org-right">0</td>
+<td class="org-right">3</td>
+<td class="org-right">4</td>
+<td class="org-right">4</td>
+</tr>
+
+<tr>
+<td class="org-left">WordPress.com</td>
+<td class="org-right">4</td>
+<td class="org-right">2</td>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+</tr>
+
+<tr>
+<td class="org-left">Medium</td>
+<td class="org-right">5</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">VPS (AWS)</td>
+<td class="org-right">5</td>
+<td class="org-right">4</td>
+<td class="org-right">2</td>
+<td class="org-right">4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgcaaf921" class="outline-2">
+<h2 id="orgcaaf921"><span class="section-number-2">7.</span> Gráfico de Comparación</h2>
+<div class="outline-text-2" id="text-7">
+
+<figure id="org93d1ba7">
+<img src="grafico_github.png" alt="grafico_github.png">
+
+</figure>
+
+
+<figure id="org48b5b7b">
+<img src="images/grafico_github.png" alt="grafico_github.png">
+
+</figure>
+</div>
+<div id="outline-container-orgb3c28a7" class="outline-3">
+<h3 id="orgb3c28a7"><span class="section-number-3">7.1.</span> Análisis del Gráfico</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li><b><b>GitHub Pages</b></b>: $0, flexibilidad 9/10 (limitada solo por ser estático).</li>
+<li><b><b>WordPress</b></b>: $15 promedio, flexibilidad 5/10 (plantillas restrictivas).</li>
+<li><b><b>Medium</b></b>: $5, flexibilidad 3/10 (diseño fijo).</li>
+<li><b><b>VPS</b></b>: $12 promedio, flexibilidad 10/10 (pero requiere más configuración).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6f94663" class="outline-2">
+<h2 id="org6f94663"><span class="section-number-2">8.</span> Desafíos y Soluciones</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li><b><b>Curva de Aprendizaje</b></b>: Git y Emacs intimidan al inicio.  
+<ul class="org-ul">
+<li><b>Solución</b>: Tutoriales básicos de Magit y GitHub Pages (5-10 horas de práctica).</li>
+</ul></li>
+<li><b><b>Limitaciones Estáticas</b></b>: No admite contenido dinámico nativo.  
+<ul class="org-ul">
+<li><b>Solución</b>: Integro comentarios con Disqus o formularios vía Netlify.</li>
+</ul></li>
+<li><b><b>Dependencia de GitHub</b></b>: Si falla, pierdo alojamiento.  
+<ul class="org-ul">
+<li><b>Solución</b>: Respaldo local y opción de migrar a GitLab Pages.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3682db1" class="outline-2">
+<h2 id="org3682db1"><span class="section-number-2">9.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Elegir GitHub para mi blog ha sido una decisión transformadora. Su <b><b>gratuidad</b></b> me permitió empezar sin riesgos financieros, su <b><b>flexibilidad</b></b> me da control creativo absoluto y su <b><b>integración con Emacs</b></b> alinea perfectamente mi pasión por el texto plano con la publicación moderna. Los datos muestran que supera a alternativas pagas en costo y adaptabilidad para proyectos estáticos. Si buscas una plataforma que combine economía, poder y sinergia con herramientas como Emacs, GitHub es la respuesta. Mi blog vive ahora en `username.github.io`, y cada post es un testimonio de esta elección.
+</p>
+</div>
+</div>
+<div id="outline-container-orga9a99c0" class="outline-2">
+<h2 id="orga9a99c0"><span class="section-number-2">10.</span> Referencias</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li>GitHub. (2024). <b>GitHub Pages Documentation</b>. <a href="https://docs.github.com/en/pages">https://docs.github.com/en/pages</a></li>
+<li>Org Static Blog. (2023). <b>Official Repository</b>. <a href="https://github.com/bastibe/org-static-blog">https://github.com/bastibe/org-static-blog</a></li>
+<li>Statista. (2024). <b>Web Hosting Market Trends</b>. <a href="https://www.statista.com">https://www.statista.com</a></li>
+<li>Emacs Magit. (2024). <b>Magit User Manual</b>. <a href="https://magit.vc/manual/magit/">https://magit.vc/manual/magit/</a></li>
+<li>Deloitte. (2023). <b>Cost Analysis of Digital Platforms</b>. <a href="https://www2.deloitte.com">https://www2.deloitte.com</a></li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-github.html">github</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-blog.html">blog</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-free.html">free</a> </div>]]></description>
+  <category><![CDATA[github]]></category>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[blog]]></category>
+  <category><![CDATA[free]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-14-por-qu%C3%A9-eleg%C3%AD-github-para-publicar-mi-blog.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-14-por-qu%C3%A9-eleg%C3%AD-github-para-publicar-mi-blog.html</guid>
+  <pubDate>Fri, 14 Mar 2025 14:21:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Free as Beer: Contexto y Significado en el Mundo Linux ]]></title>
+  <description><![CDATA[
+<div id="outline-container-org3f4315f" class="outline-2">
+<h2 id="org3f4315f"><span class="section-number-2">1.</span> Origen del Término</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+La expresión <span class="underline">"free as in beer"</span> (libre como una cerveza) se popularizó en la comunidad de software libre para:  
+</p>
+<ul class="org-ul">
+<li>Diferenciar entre <span class="underline">gratuidad</span> (free as in price) y <span class="underline">libertad</span> (free as in freedom)</li>
+<li>Referenciar la distinción clave del movimiento FSF (Free Software Foundation)</li>
+</ul>
+</div>
+<div id="outline-container-org3fdc05a" class="outline-3">
+<h3 id="org3fdc05a"><span class="section-number-3">1.1.</span> Contexto Histórico</h3>
+<div class="outline-text-3" id="text-1-1">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Concepto</th>
+<th scope="col" class="org-right">Año</th>
+<th scope="col" class="org-left">Promotor Principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Free as in freedom</td>
+<td class="org-right">1985</td>
+<td class="org-left">Richard Stallman (GNU)</td>
+</tr>
+
+<tr>
+<td class="org-left">Free as in beer</td>
+<td class="org-right">1990</td>
+<td class="org-left">Comunidad open source</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-org824d412" class="outline-2">
+<h2 id="org824d412"><span class="section-number-2">2.</span> Relación con Linux</h2>
+<div class="outline-text-2" id="text-2">
+<ol class="org-ol">
+<li><b><b>Modelo de Licenciamiento</b></b>:  
+<ul class="org-ul">
+<li>Linux usa GPLv2 (garantiza las 4 libertades fundamentales)</li>
+<li>≠ Software "gratis" sin acceso al código (free beer ≠ free speech)</li>
+</ul></li>
+
+<li><b><b>Casos de Uso Comunes</b></b>:  
+<ul class="org-ul">
+<li>Distribuciones "free beer": Versiones empresariales con soporte pago</li>
+<li>Paquetes binarios sin código fuente accesible</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd041804" class="outline-2">
+<h2 id="orgd041804"><span class="section-number-2">3.</span> Comparativa Clave</h2>
+<div class="outline-text-2" id="text-3">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Característica</th>
+<th scope="col" class="org-left">Free as Beer</th>
+<th scope="col" class="org-left">Free as Freedom (GPL)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Coste</td>
+<td class="org-left">Gratis/Pago</td>
+<td class="org-left">Libre (cualquier precio)</td>
+</tr>
+
+<tr>
+<td class="org-left">Acceso al código</td>
+<td class="org-left">Opcional</td>
+<td class="org-left">Obligatorio</td>
+</tr>
+
+<tr>
+<td class="org-left">Modificaciones</td>
+<td class="org-left">Restringidas</td>
+<td class="org-left">Permitidas</td>
+</tr>
+
+<tr>
+<td class="org-left">Ejemplo Linux</td>
+<td class="org-left">RHEL Binarios</td>
+<td class="org-left">Arch Linux PKGBUILDs</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>
+"El software libre es una cuestión de libertad, no de precio. Para entender el concepto, debe pensar en 'libre' como en 'libertad de expresión', no como en 'barra libre'"  
+— Richard Stallman, Fundador de la FSF  
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org47f6f5c" class="outline-2">
+<h2 id="org47f6f5c"><span class="section-number-2">4.</span> Implicaciones Actuales (2025)</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li><b><b>Tendencias en Cloud Computing</b></b>:  
+<ul class="org-ul">
+<li>68% de servicios cloud usan Linux bajo modelo "free beer" (binarios cerrados)</li>
+<li>Controversias recientes por SaaS que evitan obligaciones GPL [3]</li>
+</ul></li>
+
+<li><b><b>Datos Relevantes</b></b>:
+
+<ul class="org-ul">
+<li>Referencias APA</li>
+</ul></li>
+<li>Free Software Foundation. (2024). <b>The Free Software Definition</b>. <a href="https://www.gnu.org/philosophy/free-sw.html">https://www.gnu.org/philosophy/free-sw.html</a></li>
+<li>Open Source Initiative. (2025). <b>The Difference Between Free and Open Source Software</b>.</li>
+<li>Linux Foundation Report. (2025). <b>State of Enterprise Linux</b>.</li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-copyright.html">copyright</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-filosofia_software.html">filosofia_software</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-free.html">free</a> </div>]]></description>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[copyright]]></category>
+  <category><![CDATA[filosofia_software]]></category>
+  <category><![CDATA[free]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-13-free-as-beer:-contexto-y-significado-en-el-mundo-linux-.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-13-free-as-beer:-contexto-y-significado-en-el-mundo-linux-.html</guid>
+  <pubDate>Thu, 13 Mar 2025 12:43:00 +0100</pubDate>
+</item>
+</channel>
+</rss>

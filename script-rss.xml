@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title><![CDATA[Example.com - script]]></title>
+<description><![CDATA[Example.com - script]]></description>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-script.html</link>
+<lastBuildDate>Mon, 17 Mar 2025 08:38:07 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Opciones para Ordenar Downloads en Linux OSs]]></title>
+  <description><![CDATA[
+<div id="outline-container-org9c5d022" class="outline-2">
+<h2 id="org9c5d022"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Este documento ofrece métodos para organizar la carpeta <code>~/Downloads</code> en Ubuntu, renombrando archivos con el prefijo <code>YYMMDD_nombre</code> (YY: últimos 2 dígitos del año, MM: mes 01-12, DD: día de modificación) y otras estrategias de ordenamiento. Las soluciones usan herramientas de terminal y Emacs.
+</p>
+</div>
+</div>
+<div id="outline-container-org9460b09" class="outline-2">
+<h2 id="org9460b09"><span class="section-number-2">2.</span> 1 Renombrar Archivos con YYMMDD<sub>nombre</sub></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Renombrar archivos según su fecha de modificación usando el formato solicitado.
+</p>
+</div>
+<div id="outline-container-org32aacb6" class="outline-3">
+<h3 id="org32aacb6"><span class="section-number-3">2.1.</span> 1.1 Usando `find` y `mv` en la Terminal</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li><b>Descripción</b>: Busca archivos y los renombra con la fecha de modificación.</li>
+<li><p>
+<b>Comando</b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #dc3eb7;">cd</span> ~/Downloads
+find . -type f -exec sh -c <span style="color: #a44185;">'mv "$1" "$(</span><span style="color: #219fd5; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #a44185;">)_$(</span><span style="color: #219fd5; font-weight: bold;">basename "$1"</span><span style="color: #a44185;">)"'</span> _ {} <span style="color: #a44185;">\;</span>
+</pre>
+</div></li>
+<li><b>Explicación</b>:
+<ul class="org-ul">
+<li><code>find . -type f</code>: Busca solo archivos (no directorios).</li>
+<li><code>date -r "$1" +%y%m%d</code>: Extrae la fecha de modificación (YYMMDD).</li>
+<li><code>basename "$1"</code>: Conserva el nombre original.</li>
+</ul></li>
+<li><b>Ejemplo</b>: <code>documento.pdf</code> → <code>250316_documento.pdf</code> (modificado el 16/03/2025).</li>
+<li><b>Precaución</b>: Haz una copia de seguridad antes (ej. <code>cp -r ~/Downloads ~/Downloads_backup</code>).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8bc35fa" class="outline-3">
+<h3 id="org8bc35fa"><span class="section-number-3">2.2.</span> 1.2 Script Bash para Mayor Control</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li><b>Descripción</b>: Script reutilizable con manejo de conflictos.</li>
+<li><p>
+<b>Implementación</b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #dc3eb7;">cd</span> ~/Downloads
+<span style="color: #219fd5; font-style: italic;">for</span> file<span style="color: #219fd5; font-style: italic;"> in</span> *; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [ -f <span style="color: #a44185;">"$file"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #1857a4;">prefix</span>=$(<span style="color: #219fd5; font-weight: bold;">stat -c %y "$file" | cut -d' ' -f1 | sed 's/-//g' | cut -c3-8</span>)
+        <span style="color: #1857a4;">new_name</span>=<span style="color: #a44185;">"${prefix}_$file"</span>
+        <span style="color: #219fd5; font-style: italic;">if</span> [ -e <span style="color: #a44185;">"$new_name"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+            <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Conflicto: $new_name ya existe, omitiendo..."</span>
+        <span style="color: #219fd5; font-style: italic;">else</span>
+            mv <span style="color: #a44185;">"$file"</span> <span style="color: #a44185;">"$new_name"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+<span style="color: #219fd5; font-style: italic;">done</span>
+</pre>
+</div></li>
+<li><b>Uso</b>: Guarda como <code>rename_downloads.sh</code>, da permisos con <code>chmod +x rename_downloads.sh</code>, y ejecuta con <code>./rename_downloads.sh</code>.</li>
+<li><b>Beneficio</b>: Evita sobrescribir archivos con nombres duplicados.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0c88faa" class="outline-3">
+<h3 id="org0c88faa"><span class="section-number-3">2.3.</span> 1.3 Desde Emacs con Dired</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li><b>Descripción</b>: Usa Dired para renombrar manualmente o con un script.</li>
+<li><b>Pasos</b>:
+<ol class="org-ol">
+<li>Abre Dired: <code>C-x C-f ~/Downloads RET</code>.</li>
+<li>Marca archivos con <code>m</code>.</li>
+<li>Ejecuta un comando shell en los marcados: <code>! for f in %f; do mv "$f" "$(date -r "$f" +%y%m%d)_$f"; done</code>.</li>
+</ol></li>
+<li><p>
+<b>Alternativa con Elisp</b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">rename-downloads-yymmdd</span> ()
+  (<span style="color: #219fd5; font-style: italic;">interactive</span>)
+  (dired <span style="color: #a44185;">"~/Downloads"</span>)
+  (dired-do-shell-command
+   <span style="color: #a44185;">"mv ? $(date -r ? +%y%m%d)_?"</span> nil
+   (dired-get-marked-files)))
+</pre>
+</div>
+<ul class="org-ul">
+<li>Añade a <code>init.el</code> y ejecuta con <code>M-x rename-downloads-yymmdd</code>.</li>
+</ul></li>
+<li><b>Beneficio</b>: Integración directa en Emacs.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org839d8c6" class="outline-2">
+<h2 id="org839d8c6"><span class="section-number-2">3.</span> 2 Otras Opciones de Ordenamiento</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Alternativas para organizar <code>~/Downloads</code> más allá del renombramiento.
+</p>
+</div>
+<div id="outline-container-org262dc62" class="outline-3">
+<h3 id="org262dc62"><span class="section-number-3">3.1.</span> 2.1 Clasificación por Tipo de Archivo</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li><b>Descripción</b>: Mover archivos a subcarpetas según extensión.</li>
+<li><p>
+<b>Comando</b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #dc3eb7;">cd</span> ~/Downloads
+mkdir -p Documents Images Videos Other
+find . -maxdepth 1 -type f -name <span style="color: #a44185;">"*.pdf"</span> -exec mv {} Documents/ <span style="color: #a44185;">\;</span>
+find . -maxdepth 1 -type f -name <span style="color: #a44185;">"*.jpg"</span> -o -name <span style="color: #a44185;">"*.png"</span> -exec mv {} Images/ <span style="color: #a44185;">\;</span>
+find . -maxdepth 1 -type f -name <span style="color: #a44185;">"*.mp4"</span> -o -name <span style="color: #a44185;">"*.mkv"</span> -exec mv {} Videos/ <span style="color: #a44185;">\;</span>
+find . -maxdepth 1 -type f -not -path <span style="color: #a44185;">"./*/*"</span> -exec mv {} Other/ <span style="color: #a44185;">\;</span>
+</pre>
+</div></li>
+<li><b>Beneficio</b>: Orden visual por categoría (ej. PDFs en <code>Documents/</code>).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2e6ab0d" class="outline-3">
+<h3 id="org2e6ab0d"><span class="section-number-3">3.2.</span> 2.2 Orden por Fecha en Subcarpetas</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li><b>Descripción</b>: Crear carpetas YYMMDD y mover archivos según modificación.</li>
+<li><p>
+<b>Comando</b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #dc3eb7;">cd</span> ~/Downloads
+find . -type f -exec sh -c <span style="color: #a44185;">'mkdir -p "$(</span><span style="color: #219fd5; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #a44185;">)"; mv "$1" "$(</span><span style="color: #219fd5; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #a44185;">)/"'</span> _ {} <span style="color: #a44185;">\;</span>
+</pre>
+</div></li>
+<li><b>Ejemplo</b>: Archivos del 16/03/2025 van a <code>250316/</code>.</li>
+<li><b>Beneficio</b>: Agrupación cronológica sin renombrar.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org229ba65" class="outline-3">
+<h3 id="org229ba65"><span class="section-number-3">3.3.</span> 2.3 Automatización con `inotifywait`</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li><b>Descripción</b>: Monitorear descargas nuevas y organizarlas automáticamente.</li>
+<li><b>Implementación</b>:
+<ol class="org-ol">
+<li>Instala <code>inotify-tools</code>: <code>sudo apt install inotify-tools</code>.</li>
+<li><p>
+Script:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">inotifywait -m ~/Downloads -e create -e moved_to |
+    <span style="color: #219fd5; font-style: italic;">while </span><span style="color: #dc3eb7;">read</span> path action file; <span style="color: #219fd5; font-style: italic;">do</span>
+        <span style="color: #1857a4;">prefix</span>=$(<span style="color: #219fd5; font-weight: bold;">date -r "$path$file" +%y%m%d</span>)
+        mv <span style="color: #a44185;">"$path$file"</span> <span style="color: #a44185;">"$path${prefix}_$file"</span>
+    <span style="color: #219fd5; font-style: italic;">done</span>
+</pre>
+</div></li>
+<li>Ejecuta con <code>./watch_downloads.sh &amp; disown</code> para que corra en segundo plano.</li>
+</ol></li>
+<li><b>Beneficio</b>: Orden en tiempo real.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org223d9ec" class="outline-2">
+<h2 id="org223d9ec"><span class="section-number-2">4.</span> 3 Recomendaciones Generales</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li><b>Copia de seguridad</b>: <code>tar -czf ~/downloads_backup.tar.gz ~/Downloads</code> antes de pruebas.</li>
+<li><b>Prueba primero</b>: Usa <code>echo</code> en lugar de <code>mv</code> para simular (ej. <code>echo mv "$file" "$new_name"</code>).</li>
+<li><b>Integración con Emacs</b>: Usa <code>M-x shell</code> o <code>eshell</code> para ejecutar comandos desde Emacs.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8d92ff4" class="outline-2">
+<h2 id="org8d92ff4"><span class="section-number-2">5.</span> 4 Conclusión</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+La opción 1.1 (<code>find</code> y <code>mv</code>) es la más simple y directa para renombrar con <code>YYMMDD</code>. Para automatización, usa 2.3 (<code>inotifywait</code>). Si prefieres carpetas, opta por 2.1 o 2.2. Combina según tus necesidades: renombrar + clasificar es una solución robusta.
+</p>
+
+
+
+<hr>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-script.html">script</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ordenar.html">ordenar</a> </div>]]></description>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[script]]></category>
+  <category><![CDATA[bash]]></category>
+  <category><![CDATA[ordenar]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-17-opciones-para-ordenar-downloads-en-linux-oss.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-17-opciones-para-ordenar-downloads-en-linux-oss.html</guid>
+  <pubDate>Mon, 17 Mar 2025 08:35:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Renombrando Archivos PDF con Fecha de Modificación en Linux]]></title>
+  <description><![CDATA[
+<div id="outline-container-org82a3701" class="outline-2">
+<h2 id="org82a3701"><span class="section-number-2">1.</span> Renombrando Archivos PDF con Fecha de Modificación en Linux</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+¿Tienes una colección de archivos PDF desorganizados y quieres renombrarlos automáticamente con un formato específico? En este post, te mostraré cómo crear un script en <b><b>Bash</b></b> que selecciona un directorio, encuentra todos los archivos `.pdf` que no tengan el prefijo `YYMMDD-nombre.pdf`, y los renombra usando la fecha de modificación del archivo. Este formato es útil para organizar documentos de manera cronológica.
+</p>
+</div>
+<div id="outline-container-orgc63b389" class="outline-3">
+<h3 id="orgc63b389"><span class="section-number-3">1.1.</span> Requisitos</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Un sistema Linux (Ubuntu, Debian, Fedora, etc.).</li>
+<li>Conocimientos básicos de terminal y Bash.</li>
+<li>Permisos de escritura en el directorio que deseas procesar.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2fd6b95" class="outline-3">
+<h3 id="org2fd6b95"><span class="section-number-3">1.2.</span> Introducción</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+En este post, comparto un script en Bash que automatiza el renombrado de archivos PDF en un directorio específico. El objetivo es identificar aquellos archivos que no tienen el prefijo `YYMMDD-` (donde `YY` son los últimos dos dígitos del año, `MM` el mes de 01 a 12, y `DD` el día de 01 a 31) y renombrarlos usando su fecha de modificación en ese formato. Esto es útil para organizar documentos, como trabajos finales o reportes, manteniendo un estándar claro basado en metadatos del archivo.
+</p>
+</div>
+</div>
+<div id="outline-container-org199908d" class="outline-3">
+<h3 id="org199908d"><span class="section-number-3">1.3.</span> El Script</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Aquí está el script Bash que realiza esta tarea:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Script para renombrar archivos PDF con fecha de modificaci&#243;n en formato YYMMDD-nombre.pdf</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verificar si se proporcion&#243; un directorio como argumento</span>
+<span style="color: #D70000;">if</span> [ $<span style="color: #004651;">#</span> -ne 1 ]; <span style="color: #D70000;">then</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Uso: $0 &lt;directorio&gt;"</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Ejemplo: $0 /ruta/a/tus/pdfs"</span>
+    <span style="color: #D70000;">exit</span> 1
+<span style="color: #D70000;">fi</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Asignar el directorio proporcionado</span>
+<span style="color: #004651;">DIRECTORY</span>=<span style="color: #005F00;">"$1"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verificar si el directorio existe</span>
+<span style="color: #D70000;">if</span> [ <span style="color: #1F55A0; font-weight: bold;">!</span> -d <span style="color: #005F00;">"$DIRECTORY"</span> ]; <span style="color: #D70000;">then</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Error: El directorio '$DIRECTORY' no existe."</span>
+    <span style="color: #D70000;">exit</span> 1
+<span style="color: #D70000;">fi</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Cambiar al directorio especificado</span>
+<span style="color: #1F55A0;">cd</span> <span style="color: #005F00;">"$DIRECTORY"</span> || {
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Error: No se pudo acceder al directorio '$DIRECTORY'."</span>
+    <span style="color: #D70000;">exit</span> 1
+}
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Contador para archivos procesados</span>
+<span style="color: #004651;">COUNT</span>=0
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Buscar archivos PDF y procesarlos</span>
+<span style="color: #D70000;">for</span> file<span style="color: #D70000;"> in</span> *.pdf; <span style="color: #D70000;">do</span>
+    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verificar si hay archivos PDF en el directorio</span>
+    <span style="color: #D70000;">if</span> [ <span style="color: #1F55A0; font-weight: bold;">!</span> -e <span style="color: #005F00;">"$file"</span> ]; <span style="color: #D70000;">then</span>
+        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"No se encontraron archivos PDF en '$DIRECTORY'."</span>
+        <span style="color: #D70000;">exit</span> 0
+    <span style="color: #D70000;">fi</span>
+
+    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Comprobar si el nombre ya tiene el prefijo YYMMDD-</span>
+    <span style="color: #D70000;">if</span> [[ <span style="color: #005F00;">"$file"</span> =~ ^[0-9]{6}-.*<span style="color: #005F00;">\.</span>pdf$ ]]; <span style="color: #D70000;">then</span>
+        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Saltando '$file': ya tiene el formato YYMMDD-."</span>
+        <span style="color: #D70000;">continue</span>
+    <span style="color: #D70000;">fi</span>
+
+    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Obtener la fecha de modificaci&#243;n del archivo (YYMMDD)</span>
+    <span style="color: #004651;">MOD_DATE</span>=$(<span style="color: #1F55A0; font-weight: bold;">stat -c %y "$file" | cut -d' ' -f1 | sed 's/-//g' | cut -c3-8</span>)
+
+    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Construir el nuevo nombre con la fecha</span>
+    <span style="color: #004651;">NEW_NAME</span>=<span style="color: #005F00;">"${MOD_DATE}-${file}"</span>
+
+    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Renombrar el archivo</span>
+    <span style="color: #D70000;">if</span> mv -n <span style="color: #005F00;">"$file"</span> <span style="color: #005F00;">"$NEW_NAME"</span>; <span style="color: #D70000;">then</span>
+        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Renombrado: '$file' -&gt; '$NEW_NAME'"</span>
+        ((COUNT++))
+    <span style="color: #D70000;">else</span>
+        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Error al renombrar '$file'. Puede que '$NEW_NAME' ya exista."</span>
+    <span style="color: #D70000;">fi</span>
+<span style="color: #D70000;">done</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Resumen final</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Proceso completado. Archivos renombrados: $COUNT."</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org7779b09" class="outline-3">
+<h3 id="org7779b09"><span class="section-number-3">1.4.</span> Explicación del Script</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li><b><b>Línea inicial</b></b>: `#!/bin/bash` indica que es un script Bash.</li>
+<li><b><b>Verificación de argumentos</b></b>: Comprueba que se pase un directorio como parámetro (`$1`), mostrando un mensaje de uso si falta.</li>
+<li><b><b>Validación del directorio</b></b>: Asegura que el directorio exista y sea accesible.</li>
+<li><b><b>Bucle sobre PDFs</b></b>: Itera sobre todos los archivos `.pdf` en el directorio:
+<ul class="org-ul">
+<li>Si no hay PDFs, informa y termina.</li>
+<li>Si el archivo ya tiene el prefijo `YYMMDD-` (ej. `250315-documento.pdf`), lo salta.</li>
+<li>Usa `stat -c %y` para obtener la fecha de modificación (formato `YYYY-MM-DD`), extrae `YYMMDD` con `sed` y `cut`.</li>
+<li>Renombra con `mv -n` (sin sobrescribir si ya existe).</li>
+</ul></li>
+<li><b><b>Contador</b></b>: Lleva la cuenta de archivos renombrados y muestra un resumen.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge0926be" class="outline-3">
+<h3 id="orge0926be"><span class="section-number-3">1.5.</span> Uso del Script</h3>
+<div class="outline-text-3" id="text-1-5">
+<ol class="org-ol">
+<li>Guarda el script como `rename<sub>pdfs.sh</sub>`.</li>
+<li><p>
+Dale permisos de ejecución:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">chmod +x rename_pdfs.sh
+</pre>
+</div></li>
+<li><p>
+Ejecútalo especificando un directorio:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">./rename_pdfs.sh /ruta/a/tus/pdfs
+</pre>
+</div>
+<p>
+Ejemplo de salida:
+</p>
+<pre class="example" id="orgc723859">
+Saltando '250314-informe.pdf': ya tiene el formato YYMMDD-.
+Renombrado: 'documento.pdf' -&gt; '250315-documento.pdf'
+Proceso completado. Archivos renombrados: 1.
+</pre></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd962ef1" class="outline-3">
+<h3 id="orgd962ef1"><span class="section-number-3">1.6.</span> Notas y Precauciones</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li><b><b>Fecha de modificación</b></b>: Depende de la última vez que el archivo fue modificado, no de su creación. Si necesitas la fecha de creación, ajusta usando `stat -c %w` (si el sistema lo soporta).</li>
+<li><b><b>Colisiones</b></b>: Usa `-n` en `mv` para evitar sobrescribir archivos existentes; revisa manualmente si hay errores.</li>
+<li><b><b>Portabilidad</b></b>: Probado en sistemas Linux con `stat` de GNU coreutils. En macOS, cambia `stat -c %y` por `stat -f %Sm`.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org18bf31c" class="outline-3">
+<h3 id="org18bf31c"><span class="section-number-3">1.7.</span> Conclusión</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+Este script es una herramienta práctica para mantener tus PDFs organizados con un estándar basado en fechas. Puedes adaptarlo para otros formatos (`.docx`, `.txt`) cambiando `*.pdf` por el patrón deseado. ¡Automatiza y simplifica tu gestión de archivos en Linux!
+</p>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">Linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-script.html">script</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-pdf.html">pdf</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-renombrar.html">renombrar</a> </div>]]></description>
+  <category><![CDATA[Linux]]></category>
+  <category><![CDATA[bash]]></category>
+  <category><![CDATA[script]]></category>
+  <category><![CDATA[pdf]]></category>
+  <category><![CDATA[renombrar]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-15-renombrando-archivos-pdf-con-fecha-de-modificaci%C3%B3n-en-linux.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-15-renombrando-archivos-pdf-con-fecha-de-modificaci%C3%B3n-en-linux.html</guid>
+  <pubDate>Sat, 15 Mar 2025 19:35:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Cómo limpiar archivos y carpetas vacías en Linux con un script Bash]]></title>
+  <description><![CDATA[
+<div id="outline-container-org911997b" class="outline-2">
+<h2 id="org911997b"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+¿Alguna vez te has encontrado con archivos o carpetas vacías en tu sistema que ocupan espacio innecesario? En este post, te mostraré cómo crear un script en <b><b>Bash</b></b> que te permita limpiar automáticamente todos los archivos y carpetas con 0 bytes desde ayer hacia atrás. Este script es ideal para mantener tu sistema organizado y liberar espacio en disco.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc96c5e7" class="outline-2">
+<h2 id="orgc96c5e7"><span class="section-number-2">2.</span> Requisitos</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Un sistema Linux (Ubuntu, Debian, Fedora, etc.).</li>
+<li>Conocimientos básicos de terminal y Bash.</li>
+<li>Permisos de escritura en el directorio que deseas limpiar.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb7f687f" class="outline-2">
+<h2 id="orgb7f687f"><span class="section-number-2">3.</span> El Script</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+A continuación, te presento el script en Bash que realiza la limpieza. Puedes copiarlo y pegarlo directamente en tu terminal o guardarlo en un archivo `.sh` para ejecutarlo más tarde.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Pide al usuario que ingrese el directorio a limpiar</span>
+<span style="color: #dc3eb7;">read</span> -p <span style="color: #a44185;">"Introduce la ruta del directorio que deseas limpiar: "</span> DIRECTORIO
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verifica si el directorio existe</span>
+<span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #219fd5; font-weight: bold;">!</span> -d <span style="color: #a44185;">"$DIRECTORIO"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"El directorio $DIRECTORIO no existe."</span>
+  <span style="color: #219fd5; font-style: italic;">exit</span> 1
+<span style="color: #219fd5; font-style: italic;">fi</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Busca y elimina archivos vac&#237;os (0 bytes) desde ayer hacia atr&#225;s</span>
+find <span style="color: #a44185;">"$DIRECTORIO"</span> -type f -size 0 -mtime +0 -exec rm -v {} <span style="color: #a44185;">\;</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Busca y elimina carpetas vac&#237;as desde ayer hacia atr&#225;s</span>
+find <span style="color: #a44185;">"$DIRECTORIO"</span> -type d -empty -mtime +0 -exec rmdir -v {} <span style="color: #a44185;">\;</span>
+
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Limpieza completada. Archivos y carpetas vac&#237;as eliminados."</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org2cbf2e9" class="outline-2">
+<h2 id="org2cbf2e9"><span class="section-number-2">4.</span> Explicación del Script</h2>
+<div class="outline-text-2" id="text-4">
+<ol class="org-ol">
+<li><b><b>Pide el directorio</b></b>: El script comienza solicitando al usuario que introduzca la ruta del directorio que desea limpiar.</li>
+<li><b><b>Verifica el directorio</b></b>: Se verifica si el directorio existe. Si no existe, el script termina con un mensaje de error.</li>
+<li><b><b>Busca archivos vacíos</b></b>: Usa el comando `find` para buscar archivos con 0 bytes (`-size 0`) que hayan sido modificados hace más de un día (`-mtime +0`). Luego, los elimina con `rm`.</li>
+<li><b><b>Busca carpetas vacías</b></b>: También usa `find` para buscar carpetas vacías (`-type d -empty`) que hayan sido modificadas hace más de un día (`-mtime +0`). Luego, las elimina con `rmdir`.</li>
+<li><b><b>Mensaje de finalización</b></b>: Al terminar, el script muestra un mensaje indicando que la limpieza ha sido completada.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org1984321" class="outline-2">
+<h2 id="org1984321"><span class="section-number-2">5.</span> Cómo Usar el Script</h2>
+<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li>Copia el script en un archivo, por ejemplo, `clean<sub>empty</sub><sub>files.sh</sub>`.</li>
+<li>Haz que el script sea ejecutable:
+```bash
+chmod +x clean<sub>empty</sub><sub>files.sh</sub></li>
+</ol>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-script.html">script</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bytes.html">bytes</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-deepseek.html">deepseek</a> </div>]]></description>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[script]]></category>
+  <category><![CDATA[bash]]></category>
+  <category><![CDATA[bytes]]></category>
+  <category><![CDATA[deepseek]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-15-c%C3%B3mo-limpiar-archivos-y-carpetas-vac%C3%ADas-en-linux-con-un-script-bash.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-15-c%C3%B3mo-limpiar-archivos-y-carpetas-vac%C3%ADas-en-linux-con-un-script-bash.html</guid>
+  <pubDate>Sat, 15 Mar 2025 19:05:00 +0100</pubDate>
+</item>
+</channel>
+</rss>
