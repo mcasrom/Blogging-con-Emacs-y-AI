@@ -4,27 +4,27 @@
 <title><![CDATA[Example.com - emacs]]></title>
 <description><![CDATA[Example.com - emacs]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-emacs.html</link>
-<lastBuildDate>Tue, 18 Mar 2025 08:46:34 +0100</lastBuildDate>
+<lastBuildDate>Tue, 18 Mar 2025 15:59:41 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Por Qué Elegí GitHub para Publicar Mi Blog]]></title>
   <description><![CDATA[
-<div id="outline-container-org09cc11d" class="outline-2">
-<h2 id="org09cc11d"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-orgd74d4ad" class="outline-2">
+<h2 id="orgd74d4ad"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Cuando decidí lanzar mi blog, busqué una solución que fuera económica, adaptable y compatible con mi flujo de trabajo en Emacs. Tras evaluar opciones como WordPress, Medium o servidores privados, opté por GitHub, una plataforma que no solo cumple estos criterios, sino que los supera con creces. En este post, detallo por qué GitHub es mi elección para publicar un blog estático, centrándome en tres pilares: <b><b>gratuidad</b></b>, <b><b>flexibilidad</b></b> y <b><b>facilidad de integración con Emacs</b></b>. Con ejemplos prácticos, datos visuales y reflexiones personales, espero convencerte de que esta combinación es imbatible para blogueros técnicos en 2025.
 </p>
 </div>
 </div>
-<div id="outline-container-orgf221453" class="outline-2">
-<h2 id="orgf221453"><span class="section-number-2">2.</span> ¿Qué es GitHub y Por Qué un Blog Estático?</h2>
+<div id="outline-container-org092f816" class="outline-2">
+<h2 id="org092f816"><span class="section-number-2">2.</span> ¿Qué es GitHub y Por Qué un Blog Estático?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 GitHub es una plataforma de alojamiento de código basada en Git, conocida por su uso en desarrollo colaborativo. Sin embargo, gracias a <b><b>GitHub Pages</b></b>, también permite alojar sitios web estáticos gratis. Un blog estático, generado con herramientas como Org Static Blog, Hugo o Jekyll, convierte archivos de texto (Markdown, Org-mode, etc.) en HTML, eliminando bases de datos y servidores dinámicos. Esta simplicidad lo hace ideal para quienes priorizan control y eficiencia.
 </p>
 </div>
-<div id="outline-container-org6f8f691" class="outline-3">
-<h3 id="org6f8f691"><span class="section-number-3">2.1.</span> Ventajas Iniciales</h3>
+<div id="outline-container-org6f0f91c" class="outline-3">
+<h3 id="org6f0f91c"><span class="section-number-3">2.1.</span> Ventajas Iniciales</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>No requiere mantenimiento de servidores.</li>
@@ -34,27 +34,27 @@ GitHub es una plataforma de alojamiento de código basada en Git, conocida por s
 </div>
 </div>
 </div>
-<div id="outline-container-orgcb2b8d0" class="outline-2">
-<h2 id="orgcb2b8d0"><span class="section-number-2">3.</span> Razones para Elegir GitHub</h2>
+<div id="outline-container-orgc3da0da" class="outline-2">
+<h2 id="orgc3da0da"><span class="section-number-2">3.</span> Razones para Elegir GitHub</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 A continuación, analizo los tres motivos clave que me llevaron a elegir GitHub, con detalles técnicos y prácticos.
 </p>
 </div>
-<div id="outline-container-orgba58d1d" class="outline-3">
-<h3 id="orgba58d1d"><span class="section-number-3">3.1.</span> Gratuidad: Publicar Sin Costo</h3>
+<div id="outline-container-org4e0b35a" class="outline-3">
+<h3 id="org4e0b35a"><span class="section-number-3">3.1.</span> Gratuidad: Publicar Sin Costo</h3>
 <div class="outline-text-3" id="text-3-1">
 </div>
-<div id="outline-container-org9eba985" class="outline-4">
-<h4 id="org9eba985"><span class="section-number-4">3.1.1.</span> Descripción</h4>
+<div id="outline-container-org87d79af" class="outline-4">
+<h4 id="org87d79af"><span class="section-number-4">3.1.1.</span> Descripción</h4>
 <div class="outline-text-4" id="text-3-1-1">
 <p>
 GitHub Pages ofrece alojamiento gratuito para sitios estáticos públicos, sin límites estrictos de ancho de banda o almacenamiento (dentro de uso razonable). Esto contrasta con plataformas como WordPress.com ($4-$45/mes) o servidores VPS ($5-$20/mes en AWS o DigitalOcean).
 </p>
 </div>
 </div>
-<div id="outline-container-org6d0662e" class="outline-4">
-<h4 id="org6d0662e"><span class="section-number-4">3.1.2.</span> Beneficios</h4>
+<div id="outline-container-orgd0caf99" class="outline-4">
+<h4 id="orgd0caf99"><span class="section-number-4">3.1.2.</span> Beneficios</h4>
 <div class="outline-text-4" id="text-3-1-2">
 <ul class="org-ul">
 <li><b><b>Costo Cero</b></b>: Perfecto para blogueros principiantes o experimentales.</li>
@@ -63,8 +63,8 @@ GitHub Pages ofrece alojamiento gratuito para sitios estáticos públicos, sin l
 </ul>
 </div>
 </div>
-<div id="outline-container-orgaaa4000" class="outline-4">
-<h4 id="orgaaa4000"><span class="section-number-4">3.1.3.</span> Ejemplo Práctico</h4>
+<div id="outline-container-org30f0a66" class="outline-4">
+<h4 id="org30f0a66"><span class="section-number-4">3.1.3.</span> Ejemplo Práctico</h4>
 <div class="outline-text-4" id="text-3-1-3">
 <ul class="org-ul">
 <li><b><b>Escenario</b></b>: Quiero lanzar un blog sin invertir dinero.</li>
@@ -73,8 +73,8 @@ GitHub Pages ofrece alojamiento gratuito para sitios estáticos públicos, sin l
 </ul>
 </div>
 </div>
-<div id="outline-container-org5dee7b4" class="outline-4">
-<h4 id="org5dee7b4"><span class="section-number-4">3.1.4.</span> Limitaciones</h4>
+<div id="outline-container-orgf7295d7" class="outline-4">
+<h4 id="orgf7295d7"><span class="section-number-4">3.1.4.</span> Limitaciones</h4>
 <div class="outline-text-4" id="text-3-1-4">
 <ul class="org-ul">
 <li>Solo sitios estáticos (sin PHP o bases de datos dinámicas).</li>
@@ -83,20 +83,20 @@ GitHub Pages ofrece alojamiento gratuito para sitios estáticos públicos, sin l
 </div>
 </div>
 </div>
-<div id="outline-container-orgd04d457" class="outline-3">
-<h3 id="orgd04d457"><span class="section-number-3">3.2.</span> Flexibilidad: Control Total Sobre el Contenido</h3>
+<div id="outline-container-org9ddf4a1" class="outline-3">
+<h3 id="org9ddf4a1"><span class="section-number-3">3.2.</span> Flexibilidad: Control Total Sobre el Contenido</h3>
 <div class="outline-text-3" id="text-3-2">
 </div>
-<div id="outline-container-orgaf611bb" class="outline-4">
-<h4 id="orgaf611bb"><span class="section-number-4">3.2.1.</span> Descripción</h4>
+<div id="outline-container-org8169cf4" class="outline-4">
+<h4 id="org8169cf4"><span class="section-number-4">3.2.1.</span> Descripción</h4>
 <div class="outline-text-4" id="text-3-2-1">
 <p>
 GitHub permite personalizar cada aspecto del blog mediante control de versiones (Git) y compatibilidad con generadores estáticos. No impone plantillas rígidas ni anuncios, a diferencia de Medium o Blogger.
 </p>
 </div>
 </div>
-<div id="outline-container-org7e31c73" class="outline-4">
-<h4 id="org7e31c73"><span class="section-number-4">3.2.2.</span> Beneficios</h4>
+<div id="outline-container-orgb0dc069" class="outline-4">
+<h4 id="orgb0dc069"><span class="section-number-4">3.2.2.</span> Beneficios</h4>
 <div class="outline-text-4" id="text-3-2-2">
 <ul class="org-ul">
 <li><b><b>Control de Código</b></b>: Edito mi blog como un proyecto de software, con ramas y pull requests.</li>
@@ -105,8 +105,8 @@ GitHub permite personalizar cada aspecto del blog mediante control de versiones 
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbc421cc" class="outline-4">
-<h4 id="orgbc421cc"><span class="section-number-4">3.2.3.</span> Ejemplo Práctico</h4>
+<div id="outline-container-orgd5950a3" class="outline-4">
+<h4 id="orgd5950a3"><span class="section-number-4">3.2.3.</span> Ejemplo Práctico</h4>
 <div class="outline-text-4" id="text-3-2-3">
 <ul class="org-ul">
 <li><b><b>Escenario</b></b>: Quiero probar un nuevo diseño.</li>
@@ -115,8 +115,8 @@ GitHub permite personalizar cada aspecto del blog mediante control de versiones 
 </ul>
 </div>
 </div>
-<div id="outline-container-org04ab20f" class="outline-4">
-<h4 id="org04ab20f"><span class="section-number-4">3.2.4.</span> Comparación</h4>
+<div id="outline-container-org34bf22e" class="outline-4">
+<h4 id="org34bf22e"><span class="section-number-4">3.2.4.</span> Comparación</h4>
 <div class="outline-text-4" id="text-3-2-4">
 <ul class="org-ul">
 <li>Medium: $5/mes, diseño limitado, contenido tras paywall.</li>
@@ -125,20 +125,20 @@ GitHub permite personalizar cada aspecto del blog mediante control de versiones 
 </div>
 </div>
 </div>
-<div id="outline-container-orgc1e880e" class="outline-3">
-<h3 id="orgc1e880e"><span class="section-number-3">3.3.</span> Facilidad de Integración con Emacs</h3>
+<div id="outline-container-org05df611" class="outline-3">
+<h3 id="org05df611"><span class="section-number-3">3.3.</span> Facilidad de Integración con Emacs</h3>
 <div class="outline-text-3" id="text-3-3">
 </div>
-<div id="outline-container-org98c1667" class="outline-4">
-<h4 id="org98c1667"><span class="section-number-4">3.3.1.</span> Descripción</h4>
+<div id="outline-container-orgefbf192" class="outline-4">
+<h4 id="orgefbf192"><span class="section-number-4">3.3.1.</span> Descripción</h4>
 <div class="outline-text-4" id="text-3-3-1">
 <p>
 Como usuario de Emacs, GitHub se integra perfectamente con mi flujo de escritura en Org-mode. Con paquetes como `org-static-blog`, `magit` y `ox-html`, escribo, gestiono y publico directamente desde Emacs.
 </p>
 </div>
 </div>
-<div id="outline-container-org6647354" class="outline-4">
-<h4 id="org6647354"><span class="section-number-4">3.3.2.</span> Beneficios</h4>
+<div id="outline-container-orgb2b37df" class="outline-4">
+<h4 id="orgb2b37df"><span class="section-number-4">3.3.2.</span> Beneficios</h4>
 <div class="outline-text-4" id="text-3-3-2">
 <ul class="org-ul">
 <li><b><b>Escritura en Org-mode</b></b>: Formato ligero, exportable a HTML con un comando (`C-c C-e h h`).</li>
@@ -147,8 +147,8 @@ Como usuario de Emacs, GitHub se integra perfectamente con mi flujo de escritura
 </ul>
 </div>
 </div>
-<div id="outline-container-org3bcddf2" class="outline-4">
-<h4 id="org3bcddf2"><span class="section-number-4">3.3.3.</span> Ejemplo Práctico</h4>
+<div id="outline-container-orgaa55596" class="outline-4">
+<h4 id="orgaa55596"><span class="section-number-4">3.3.3.</span> Ejemplo Práctico</h4>
 <div class="outline-text-4" id="text-3-3-3">
 <ul class="org-ul">
 <li><b><b>Escenario</b></b>: Escribo un post sobre gestión del tiempo.</li>
@@ -163,8 +163,8 @@ Como usuario de Emacs, GitHub se integra perfectamente con mi flujo de escritura
 </ul>
 </div>
 </div>
-<div id="outline-container-org5883fbd" class="outline-4">
-<h4 id="org5883fbd"><span class="section-number-4">3.3.4.</span> Flujo Técnico</h4>
+<div id="outline-container-org5cf87ab" class="outline-4">
+<h4 id="org5cf87ab"><span class="section-number-4">3.3.4.</span> Flujo Técnico</h4>
 <div class="outline-text-4" id="text-3-3-4">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n b&#225;sica en .emacs</span>
@@ -180,10 +180,10 @@ Como usuario de Emacs, GitHub se integra perfectamente con mi flujo de escritura
 </div>
 </div>
 </div>
-<div id="outline-container-org39f7fa3" class="outline-2">
-<h2 id="org39f7fa3"><span class="section-number-2">4.</span> Comparación con Otras Plataformas</h2>
+<div id="outline-container-org8776238" class="outline-2">
+<h2 id="org8776238"><span class="section-number-2">4.</span> Comparación con Otras Plataformas</h2>
 <div class="outline-text-2" id="text-4">
-<table id="org1f0211c">
+<table id="orga63f75b">
 <caption class="t-above"><span class="table-number">Table 1:</span> Comparativa de Plataformas para Blogs</caption>
 
 <colgroup>
@@ -242,13 +242,13 @@ Como usuario de Emacs, GitHub se integra perfectamente con mi flujo de escritura
 </table>
 </div>
 </div>
-<div id="outline-container-org0419ab3" class="outline-2">
-<h2 id="org0419ab3"><span class="section-number-2">5.</span> Gráfico: Costo vs Flexibilidad</h2>
+<div id="outline-container-orga6d1603" class="outline-2">
+<h2 id="orga6d1603"><span class="section-number-2">5.</span> Gráfico: Costo vs Flexibilidad</h2>
 <div class="outline-text-2" id="text-5">
 </div>
 </div>
-<div id="outline-container-orgdda8782" class="outline-2">
-<h2 id="orgdda8782"><span class="section-number-2">6.</span> Comparación de Plataformas</h2>
+<div id="outline-container-org36be90f" class="outline-2">
+<h2 id="org36be90f"><span class="section-number-2">6.</span> Comparación de Plataformas</h2>
 <div class="outline-text-2" id="text-6">
 <table>
 
@@ -310,7 +310,7 @@ Como usuario de Emacs, GitHub se integra perfectamente con mi flujo de escritura
 
 
 
-<table id="org411e1c2">
+<table id="org7314846">
 
 
 <colgroup>
@@ -369,23 +369,23 @@ Como usuario de Emacs, GitHub se integra perfectamente con mi flujo de escritura
 </table>
 </div>
 </div>
-<div id="outline-container-orgcaaf921" class="outline-2">
-<h2 id="orgcaaf921"><span class="section-number-2">7.</span> Gráfico de Comparación</h2>
+<div id="outline-container-org86b5022" class="outline-2">
+<h2 id="org86b5022"><span class="section-number-2">7.</span> Gráfico de Comparación</h2>
 <div class="outline-text-2" id="text-7">
 
-<figure id="org93d1ba7">
+<figure id="org593e75e">
 <img src="grafico_github.png" alt="grafico_github.png">
 
 </figure>
 
 
-<figure id="org48b5b7b">
+<figure id="org561d884">
 <img src="images/grafico_github.png" alt="grafico_github.png">
 
 </figure>
 </div>
-<div id="outline-container-orgb3c28a7" class="outline-3">
-<h3 id="orgb3c28a7"><span class="section-number-3">7.1.</span> Análisis del Gráfico</h3>
+<div id="outline-container-orgcc6da66" class="outline-3">
+<h3 id="orgcc6da66"><span class="section-number-3">7.1.</span> Análisis del Gráfico</h3>
 <div class="outline-text-3" id="text-7-1">
 <ul class="org-ul">
 <li><b><b>GitHub Pages</b></b>: $0, flexibilidad 9/10 (limitada solo por ser estático).</li>
@@ -396,8 +396,8 @@ Como usuario de Emacs, GitHub se integra perfectamente con mi flujo de escritura
 </div>
 </div>
 </div>
-<div id="outline-container-org6f94663" class="outline-2">
-<h2 id="org6f94663"><span class="section-number-2">8.</span> Desafíos y Soluciones</h2>
+<div id="outline-container-org32e6bed" class="outline-2">
+<h2 id="org32e6bed"><span class="section-number-2">8.</span> Desafíos y Soluciones</h2>
 <div class="outline-text-2" id="text-8">
 <ul class="org-ul">
 <li><b><b>Curva de Aprendizaje</b></b>: Git y Emacs intimidan al inicio.  
@@ -415,16 +415,16 @@ Como usuario de Emacs, GitHub se integra perfectamente con mi flujo de escritura
 </ul>
 </div>
 </div>
-<div id="outline-container-org3682db1" class="outline-2">
-<h2 id="org3682db1"><span class="section-number-2">9.</span> Conclusión</h2>
+<div id="outline-container-orgc921033" class="outline-2">
+<h2 id="orgc921033"><span class="section-number-2">9.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 Elegir GitHub para mi blog ha sido una decisión transformadora. Su <b><b>gratuidad</b></b> me permitió empezar sin riesgos financieros, su <b><b>flexibilidad</b></b> me da control creativo absoluto y su <b><b>integración con Emacs</b></b> alinea perfectamente mi pasión por el texto plano con la publicación moderna. Los datos muestran que supera a alternativas pagas en costo y adaptabilidad para proyectos estáticos. Si buscas una plataforma que combine economía, poder y sinergia con herramientas como Emacs, GitHub es la respuesta. Mi blog vive ahora en `username.github.io`, y cada post es un testimonio de esta elección.
 </p>
 </div>
 </div>
-<div id="outline-container-orga9a99c0" class="outline-2">
-<h2 id="orga9a99c0"><span class="section-number-2">10.</span> Referencias</h2>
+<div id="outline-container-orgc0ddebd" class="outline-2">
+<h2 id="orgc0ddebd"><span class="section-number-2">10.</span> Referencias</h2>
 <div class="outline-text-2" id="text-10">
 <ul class="org-ul">
 <li>GitHub. (2024). <b>GitHub Pages Documentation</b>. <a href="https://docs.github.com/en/pages">https://docs.github.com/en/pages</a></li>
@@ -810,16 +810,16 @@ Elegir GitHub para mi blog ha sido una decisión transformadora. Su <b><b>gratui
 <item>
   <title><![CDATA[Emacs: Historia, Evolución y Futuro]]></title>
   <description><![CDATA[
-<div id="outline-container-org11c3eec" class="outline-2">
-<h2 id="org11c3eec"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-orga74925e" class="outline-2">
+<h2 id="orga74925e"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Emacs es más que un simple editor de texto: es un ecosistema de extensibilidad, programabilidad y personalización. Desde su creación en la década de 1970, Emacs ha evolucionado hasta convertirse en una de las herramientas más poderosas para la edición de texto, la programación, la gestión del conocimiento y muchas otras tareas.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc10973b" class="outline-2">
-<h2 id="orgc10973b"><span class="section-number-2">2.</span> Orígenes de Emacs</h2>
+<div id="outline-container-org44e1b6b" class="outline-2">
+<h2 id="org44e1b6b"><span class="section-number-2">2.</span> Orígenes de Emacs</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>Emacs nació en el MIT en los años 70, desarrollado por Richard Stallman.</li>
@@ -828,8 +828,8 @@ Emacs es más que un simple editor de texto: es un ecosistema de extensibilidad,
 </ul>
 </div>
 </div>
-<div id="outline-container-org32d8bd4" class="outline-2">
-<h2 id="org32d8bd4"><span class="section-number-2">3.</span> Evolución y Desarrollo</h2>
+<div id="outline-container-orgc73c7cf" class="outline-2">
+<h2 id="orgc73c7cf"><span class="section-number-2">3.</span> Evolución y Desarrollo</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li><b><b>Emacs original (1976)</b></b>: Basado en TECO, desarrollado en MIT.</li>
@@ -841,8 +841,8 @@ Emacs es más que un simple editor de texto: es un ecosistema de extensibilidad,
 </ul>
 </div>
 </div>
-<div id="outline-container-org7bd7f4b" class="outline-2">
-<h2 id="org7bd7f4b"><span class="section-number-2">4.</span> Posibilidades y Características Clave</h2>
+<div id="outline-container-orgd4f537d" class="outline-2">
+<h2 id="orgd4f537d"><span class="section-number-2">4.</span> Posibilidades y Características Clave</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li><b><b>Extensibilidad con Emacs Lisp</b></b>: Todo en Emacs puede modificarse con Emacs Lisp.</li>
@@ -852,8 +852,8 @@ Emacs es más que un simple editor de texto: es un ecosistema de extensibilidad,
 </ul>
 </div>
 </div>
-<div id="outline-container-orgec4cea5" class="outline-2">
-<h2 id="orgec4cea5"><span class="section-number-2">5.</span> Emacs en el Presente</h2>
+<div id="outline-container-org1c8e8c6" class="outline-2">
+<h2 id="org1c8e8c6"><span class="section-number-2">5.</span> Emacs en el Presente</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li>Sigue siendo ampliamente utilizado en entornos académicos, de programación y en la comunidad del software libre.</li>
@@ -862,8 +862,8 @@ Emacs es más que un simple editor de texto: es un ecosistema de extensibilidad,
 </ul>
 </div>
 </div>
-<div id="outline-container-org0dd5e8a" class="outline-2">
-<h2 id="org0dd5e8a"><span class="section-number-2">6.</span> Futuro de Emacs</h2>
+<div id="outline-container-orgaf53ab5" class="outline-2">
+<h2 id="orgaf53ab5"><span class="section-number-2">6.</span> Futuro de Emacs</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li>Integración con inteligencia artificial y herramientas de automatización.</li>
@@ -873,8 +873,8 @@ Emacs es más que un simple editor de texto: es un ecosistema de extensibilidad,
 </ul>
 </div>
 </div>
-<div id="outline-container-org5b6df5d" class="outline-2">
-<h2 id="org5b6df5d"><span class="section-number-2">7.</span> Curva de Aprendizaje</h2>
+<div id="outline-container-org86a0fce" class="outline-2">
+<h2 id="org86a0fce"><span class="section-number-2">7.</span> Curva de Aprendizaje</h2>
 <div class="outline-text-2" id="text-7">
 <ul class="org-ul">
 <li><b><b>Alta al inicio</b></b>, ya que requiere memorizar comandos y aprender Emacs Lisp.</li>
@@ -882,8 +882,8 @@ Emacs es más que un simple editor de texto: es un ecosistema de extensibilidad,
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb1549f8" class="outline-2">
-<h2 id="orgb1549f8"><span class="section-number-2">8.</span> Pros y Contras de Emacs</h2>
+<div id="outline-container-org70e117d" class="outline-2">
+<h2 id="org70e117d"><span class="section-number-2">8.</span> Pros y Contras de Emacs</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 <b><b>Ventajas:</b></b>
@@ -905,8 +905,8 @@ Emacs es más que un simple editor de texto: es un ecosistema de extensibilidad,
 </ul>
 </div>
 </div>
-<div id="outline-container-orgdaf1bde" class="outline-2">
-<h2 id="orgdaf1bde"><span class="section-number-2">9.</span> Conclusión</h2>
+<div id="outline-container-org9cb63f3" class="outline-2">
+<h2 id="org9cb63f3"><span class="section-number-2">9.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 Emacs es una herramienta impresionante que ha resistido la prueba del tiempo gracias a su extensibilidad y flexibilidad. Aunque no es el editor más accesible para principiantes, ofrece posibilidades inigualables para aquellos dispuestos a invertir tiempo en aprenderlo. Su futuro sigue siendo prometedor gracias a la constante contribución de su comunidad y a su capacidad de adaptación a nuevas tecnologías.
