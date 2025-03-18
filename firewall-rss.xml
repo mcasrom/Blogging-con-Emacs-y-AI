@@ -4,16 +4,16 @@
 <title><![CDATA[Example.com - firewall]]></title>
 <description><![CDATA[Example.com - firewall]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-firewall.html</link>
-<lastBuildDate>Tue, 18 Mar 2025 20:54:51 +0100</lastBuildDate>
+<lastBuildDate>Tue, 18 Mar 2025 21:00:50 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Tutorial de Seguridad en Linux: Mínimo de Protección ante Ataques Informáticos (II)]]></title>
   <description><![CDATA[
-<div id="outline-container-org44783b6" class="outline-2">
-<h2 id="org44783b6"><span class="section-number-2">1.</span> Capítulo 2: Automatización y Análisis Avanzado</h2>
+<div id="outline-container-orgfe423c6" class="outline-2">
+<h2 id="orgfe423c6"><span class="section-number-2">1.</span> Capítulo 2: Automatización y Análisis Avanzado</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org4988226" class="outline-3">
-<h3 id="org4988226"><span class="section-number-3">1.1.</span> Objetivos</h3>
+<div id="outline-container-org0877f3b" class="outline-3">
+<h3 id="org0877f3b"><span class="section-number-3">1.1.</span> Objetivos</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>Automatizar tareas de seguridad con scripts.</li>
@@ -22,8 +22,8 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb42a0cd" class="outline-3">
-<h3 id="orgb42a0cd"><span class="section-number-3">1.2.</span> Paso 1: Automatizar Tareas con Scripts en Bash</h3>
+<div id="outline-container-orgadc7dbb" class="outline-3">
+<h3 id="orgadc7dbb"><span class="section-number-3">1.2.</span> Paso 1: Automatizar Tareas con Scripts en Bash</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Crea un script para automatizar la revisión de logs y el bloqueo de IPs sospechosas.
@@ -66,8 +66,8 @@ Añade la siguiente línea:
 </ol>
 </div>
 </div>
-<div id="outline-container-org9f3e9ca" class="outline-3">
-<h3 id="org9f3e9ca"><span class="section-number-3">1.3.</span> Paso 2: Analizar Logs con Python</h3>
+<div id="outline-container-orgb4cf443" class="outline-3">
+<h3 id="orgb4cf443"><span class="section-number-3">1.3.</span> Paso 2: Analizar Logs con Python</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Crea un script en Python para analizar logs y generar reportes.
@@ -116,8 +116,8 @@ Ejecutar el script:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf1346b5" class="outline-3">
-<h3 id="orgf1346b5"><span class="section-number-3">1.4.</span> Paso 3: Generar Reportes de Seguridad</h3>
+<div id="outline-container-org076a014" class="outline-3">
+<h3 id="org076a014"><span class="section-number-3">1.4.</span> Paso 3: Generar Reportes de Seguridad</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 Usa los scripts anteriores para generar reportes diarios.
@@ -151,8 +151,8 @@ Añade la siguiente línea:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf088192" class="outline-3">
-<h3 id="orgf088192"><span class="section-number-3">1.5.</span> Resultados Esperados</h3>
+<div id="outline-container-orgbddd265" class="outline-3">
+<h3 id="orgbddd265"><span class="section-number-3">1.5.</span> Resultados Esperados</h3>
 <div class="outline-text-3" id="text-1-5">
 <ul class="org-ul">
 <li>Tareas de seguridad automatizadas.</li>
@@ -166,16 +166,16 @@ Añade la siguiente línea:
 </div>
 </div>
 </div>
-<div id="outline-container-org318aa1e" class="outline-2">
-<h2 id="org318aa1e"><span class="section-number-2">2.</span> Conclusión</h2>
+<div id="outline-container-orgbac7489" class="outline-2">
+<h2 id="orgbac7489"><span class="section-number-2">2.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Con estos dos capítulos, has implementado un mínimo de seguridad en tu entorno Linux. Desde la configuración básica del firewall hasta la automatización de tareas y el análisis avanzado de logs, este tutorial te proporciona las herramientas necesarias para proteger tu sistema ante ataques informáticos. ¡Ahora es tu turno de adaptar y mejorar estas técnicas según tus necesidades!
 </p>
 </div>
 </div>
-<div id="outline-container-org4f87c53" class="outline-2">
-<h2 id="org4f87c53"><span class="section-number-2">3.</span> Recursos Adicionales</h2>
+<div id="outline-container-org285a04f" class="outline-2">
+<h2 id="org285a04f"><span class="section-number-2">3.</span> Recursos Adicionales</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li><a href="https://help.ubuntu.com/community/UFW">Documentación de UFW</a></li>
@@ -207,14 +207,14 @@ Con estos dos capítulos, has implementado un mínimo de seguridad en tu entorno
 </p>
 </div>
 </div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-python.html">python</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-logs.html">logs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutorial.html">tutorial</a> </div>]]></description>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-python.html">python</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-logs.html">logs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
   <category><![CDATA[seguridad]]></category>
   <category><![CDATA[linux]]></category>
   <category><![CDATA[bash]]></category>
   <category><![CDATA[python]]></category>
   <category><![CDATA[firewall]]></category>
   <category><![CDATA[logs]]></category>
-  <category><![CDATA[tutorial]]></category>
+  <category><![CDATA[tutoriales]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-tutorial-de-seguridad-en-linux:-m%C3%ADnimo-de-protecci%C3%B3n-ante-ataques-inform%C3%A1ticos-(ii).html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-tutorial-de-seguridad-en-linux:-m%C3%ADnimo-de-protecci%C3%B3n-ante-ataques-inform%C3%A1ticos-(ii).html</guid>
   <pubDate>Tue, 18 Mar 2025 20:43:00 +0100</pubDate>
@@ -222,12 +222,12 @@ Con estos dos capítulos, has implementado un mínimo de seguridad en tu entorno
 <item>
   <title><![CDATA[Tutorial de Seguridad en Linux: Mínimo de Protección ante Ataques Informáticos (I)]]></title>
   <description><![CDATA[
-<div id="outline-container-org5290ddb" class="outline-2">
-<h2 id="org5290ddb"><span class="section-number-2">1.</span> Capítulo 1: Configuración Básica de Seguridad</h2>
+<div id="outline-container-orga1dc01c" class="outline-2">
+<h2 id="orga1dc01c"><span class="section-number-2">1.</span> Capítulo 1: Configuración Básica de Seguridad</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orge4b80fa" class="outline-3">
-<h3 id="orge4b80fa"><span class="section-number-3">1.1.</span> Objetivos</h3>
+<div id="outline-container-org738d412" class="outline-3">
+<h3 id="org738d412"><span class="section-number-3">1.1.</span> Objetivos</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>Configurar un firewall básico.</li>
@@ -237,8 +237,8 @@ Con estos dos capítulos, has implementado un mínimo de seguridad en tu entorno
 </ul>
 </div>
 </div>
-<div id="outline-container-org7f6e022" class="outline-3">
-<h3 id="org7f6e022"><span class="section-number-3">1.2.</span> Paso 1: Configurar un Firewall Básico con `ufw`</h3>
+<div id="outline-container-orgf53f1b0" class="outline-3">
+<h3 id="orgf53f1b0"><span class="section-number-3">1.2.</span> Paso 1: Configurar un Firewall Básico con `ufw`</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 `ufw` (Uncomplicated Firewall) es una herramienta sencilla para gestionar reglas de firewall en Linux.
@@ -298,8 +298,8 @@ Verificar el estado del firewall:
 </ol>
 </div>
 </div>
-<div id="outline-container-org61e914d" class="outline-3">
-<h3 id="org61e914d"><span class="section-number-3">1.3.</span> Paso 2: Deshabilitar Servicios Innecesarios</h3>
+<div id="outline-container-orgc26c463" class="outline-3">
+<h3 id="orgc26c463"><span class="section-number-3">1.3.</span> Paso 2: Deshabilitar Servicios Innecesarios</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Los servicios innecesarios pueden ser un vector de ataque. Deshabilita los que no uses.
@@ -325,8 +325,8 @@ sudo systemctl disable apache2
 </ol>
 </div>
 </div>
-<div id="outline-container-orge06e34b" class="outline-3">
-<h3 id="orge06e34b"><span class="section-number-3">1.4.</span> Paso 3: Monitorear Logs del Sistema</h3>
+<div id="outline-container-org466ffa0" class="outline-3">
+<h3 id="org466ffa0"><span class="section-number-3">1.4.</span> Paso 3: Monitorear Logs del Sistema</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 Los logs son esenciales para detectar actividad sospechosa.
@@ -351,8 +351,8 @@ Ver logs del firewall:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgaa3d46b" class="outline-3">
-<h3 id="orgaa3d46b"><span class="section-number-3">1.5.</span> Paso 4: Detectar Intentos de Acceso No Autorizados</h3>
+<div id="outline-container-org52455d8" class="outline-3">
+<h3 id="org52455d8"><span class="section-number-3">1.5.</span> Paso 4: Detectar Intentos de Acceso No Autorizados</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 Usa `fail2ban` para bloquear IPs que realicen intentos de acceso fallidos.
@@ -395,8 +395,8 @@ Reiniciar `fail2ban`:
 </ol>
 </div>
 </div>
-<div id="outline-container-org0c87ada" class="outline-3">
-<h3 id="org0c87ada"><span class="section-number-3">1.6.</span> Resultados Esperados</h3>
+<div id="outline-container-org53183b3" class="outline-3">
+<h3 id="org53183b3"><span class="section-number-3">1.6.</span> Resultados Esperados</h3>
 <div class="outline-text-3" id="text-1-6">
 <ul class="org-ul">
 <li>Firewall activo y configurado.</li>
@@ -415,14 +415,14 @@ Reiniciar `fail2ban`:
 </div>
 </div>
 </div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-python.html">python</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-logs.html">logs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutorial.html">tutorial</a> </div>]]></description>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-python.html">python</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-logs.html">logs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
   <category><![CDATA[seguridad]]></category>
   <category><![CDATA[linux]]></category>
   <category><![CDATA[bash]]></category>
   <category><![CDATA[python]]></category>
   <category><![CDATA[firewall]]></category>
   <category><![CDATA[logs]]></category>
-  <category><![CDATA[tutorial]]></category>
+  <category><![CDATA[tutoriales]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18--tutorial-de-seguridad-en-linux:-m%C3%ADnimo-de-protecci%C3%B3n-ante-ataques-inform%C3%A1ticos-(i).html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18--tutorial-de-seguridad-en-linux:-m%C3%ADnimo-de-protecci%C3%B3n-ante-ataques-inform%C3%A1ticos-(i).html</guid>
   <pubDate>Tue, 18 Mar 2025 20:43:00 +0100</pubDate>

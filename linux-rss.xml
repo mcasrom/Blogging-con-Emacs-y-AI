@@ -4,16 +4,16 @@
 <title><![CDATA[Example.com - linux]]></title>
 <description><![CDATA[Example.com - linux]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-linux.html</link>
-<lastBuildDate>Tue, 18 Mar 2025 20:54:54 +0100</lastBuildDate>
+<lastBuildDate>Tue, 18 Mar 2025 21:00:52 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Tutorial de Seguridad en Linux: Mínimo de Protección ante Ataques Informáticos (II)]]></title>
   <description><![CDATA[
-<div id="outline-container-org44783b6" class="outline-2">
-<h2 id="org44783b6"><span class="section-number-2">1.</span> Capítulo 2: Automatización y Análisis Avanzado</h2>
+<div id="outline-container-orgfe423c6" class="outline-2">
+<h2 id="orgfe423c6"><span class="section-number-2">1.</span> Capítulo 2: Automatización y Análisis Avanzado</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org4988226" class="outline-3">
-<h3 id="org4988226"><span class="section-number-3">1.1.</span> Objetivos</h3>
+<div id="outline-container-org0877f3b" class="outline-3">
+<h3 id="org0877f3b"><span class="section-number-3">1.1.</span> Objetivos</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>Automatizar tareas de seguridad con scripts.</li>
@@ -22,8 +22,8 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb42a0cd" class="outline-3">
-<h3 id="orgb42a0cd"><span class="section-number-3">1.2.</span> Paso 1: Automatizar Tareas con Scripts en Bash</h3>
+<div id="outline-container-orgadc7dbb" class="outline-3">
+<h3 id="orgadc7dbb"><span class="section-number-3">1.2.</span> Paso 1: Automatizar Tareas con Scripts en Bash</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Crea un script para automatizar la revisión de logs y el bloqueo de IPs sospechosas.
@@ -66,8 +66,8 @@ Añade la siguiente línea:
 </ol>
 </div>
 </div>
-<div id="outline-container-org9f3e9ca" class="outline-3">
-<h3 id="org9f3e9ca"><span class="section-number-3">1.3.</span> Paso 2: Analizar Logs con Python</h3>
+<div id="outline-container-orgb4cf443" class="outline-3">
+<h3 id="orgb4cf443"><span class="section-number-3">1.3.</span> Paso 2: Analizar Logs con Python</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Crea un script en Python para analizar logs y generar reportes.
@@ -116,8 +116,8 @@ Ejecutar el script:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf1346b5" class="outline-3">
-<h3 id="orgf1346b5"><span class="section-number-3">1.4.</span> Paso 3: Generar Reportes de Seguridad</h3>
+<div id="outline-container-org076a014" class="outline-3">
+<h3 id="org076a014"><span class="section-number-3">1.4.</span> Paso 3: Generar Reportes de Seguridad</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 Usa los scripts anteriores para generar reportes diarios.
@@ -151,8 +151,8 @@ Añade la siguiente línea:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf088192" class="outline-3">
-<h3 id="orgf088192"><span class="section-number-3">1.5.</span> Resultados Esperados</h3>
+<div id="outline-container-orgbddd265" class="outline-3">
+<h3 id="orgbddd265"><span class="section-number-3">1.5.</span> Resultados Esperados</h3>
 <div class="outline-text-3" id="text-1-5">
 <ul class="org-ul">
 <li>Tareas de seguridad automatizadas.</li>
@@ -166,16 +166,16 @@ Añade la siguiente línea:
 </div>
 </div>
 </div>
-<div id="outline-container-org318aa1e" class="outline-2">
-<h2 id="org318aa1e"><span class="section-number-2">2.</span> Conclusión</h2>
+<div id="outline-container-orgbac7489" class="outline-2">
+<h2 id="orgbac7489"><span class="section-number-2">2.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Con estos dos capítulos, has implementado un mínimo de seguridad en tu entorno Linux. Desde la configuración básica del firewall hasta la automatización de tareas y el análisis avanzado de logs, este tutorial te proporciona las herramientas necesarias para proteger tu sistema ante ataques informáticos. ¡Ahora es tu turno de adaptar y mejorar estas técnicas según tus necesidades!
 </p>
 </div>
 </div>
-<div id="outline-container-org4f87c53" class="outline-2">
-<h2 id="org4f87c53"><span class="section-number-2">3.</span> Recursos Adicionales</h2>
+<div id="outline-container-org285a04f" class="outline-2">
+<h2 id="org285a04f"><span class="section-number-2">3.</span> Recursos Adicionales</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li><a href="https://help.ubuntu.com/community/UFW">Documentación de UFW</a></li>
@@ -207,14 +207,14 @@ Con estos dos capítulos, has implementado un mínimo de seguridad en tu entorno
 </p>
 </div>
 </div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-python.html">python</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-logs.html">logs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutorial.html">tutorial</a> </div>]]></description>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-python.html">python</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-logs.html">logs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
   <category><![CDATA[seguridad]]></category>
   <category><![CDATA[linux]]></category>
   <category><![CDATA[bash]]></category>
   <category><![CDATA[python]]></category>
   <category><![CDATA[firewall]]></category>
   <category><![CDATA[logs]]></category>
-  <category><![CDATA[tutorial]]></category>
+  <category><![CDATA[tutoriales]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-tutorial-de-seguridad-en-linux:-m%C3%ADnimo-de-protecci%C3%B3n-ante-ataques-inform%C3%A1ticos-(ii).html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-tutorial-de-seguridad-en-linux:-m%C3%ADnimo-de-protecci%C3%B3n-ante-ataques-inform%C3%A1ticos-(ii).html</guid>
   <pubDate>Tue, 18 Mar 2025 20:43:00 +0100</pubDate>
@@ -222,12 +222,12 @@ Con estos dos capítulos, has implementado un mínimo de seguridad en tu entorno
 <item>
   <title><![CDATA[Tutorial de Seguridad en Linux: Mínimo de Protección ante Ataques Informáticos (I)]]></title>
   <description><![CDATA[
-<div id="outline-container-org5290ddb" class="outline-2">
-<h2 id="org5290ddb"><span class="section-number-2">1.</span> Capítulo 1: Configuración Básica de Seguridad</h2>
+<div id="outline-container-orga1dc01c" class="outline-2">
+<h2 id="orga1dc01c"><span class="section-number-2">1.</span> Capítulo 1: Configuración Básica de Seguridad</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orge4b80fa" class="outline-3">
-<h3 id="orge4b80fa"><span class="section-number-3">1.1.</span> Objetivos</h3>
+<div id="outline-container-org738d412" class="outline-3">
+<h3 id="org738d412"><span class="section-number-3">1.1.</span> Objetivos</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>Configurar un firewall básico.</li>
@@ -237,8 +237,8 @@ Con estos dos capítulos, has implementado un mínimo de seguridad en tu entorno
 </ul>
 </div>
 </div>
-<div id="outline-container-org7f6e022" class="outline-3">
-<h3 id="org7f6e022"><span class="section-number-3">1.2.</span> Paso 1: Configurar un Firewall Básico con `ufw`</h3>
+<div id="outline-container-orgf53f1b0" class="outline-3">
+<h3 id="orgf53f1b0"><span class="section-number-3">1.2.</span> Paso 1: Configurar un Firewall Básico con `ufw`</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 `ufw` (Uncomplicated Firewall) es una herramienta sencilla para gestionar reglas de firewall en Linux.
@@ -298,8 +298,8 @@ Verificar el estado del firewall:
 </ol>
 </div>
 </div>
-<div id="outline-container-org61e914d" class="outline-3">
-<h3 id="org61e914d"><span class="section-number-3">1.3.</span> Paso 2: Deshabilitar Servicios Innecesarios</h3>
+<div id="outline-container-orgc26c463" class="outline-3">
+<h3 id="orgc26c463"><span class="section-number-3">1.3.</span> Paso 2: Deshabilitar Servicios Innecesarios</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Los servicios innecesarios pueden ser un vector de ataque. Deshabilita los que no uses.
@@ -325,8 +325,8 @@ sudo systemctl disable apache2
 </ol>
 </div>
 </div>
-<div id="outline-container-orge06e34b" class="outline-3">
-<h3 id="orge06e34b"><span class="section-number-3">1.4.</span> Paso 3: Monitorear Logs del Sistema</h3>
+<div id="outline-container-org466ffa0" class="outline-3">
+<h3 id="org466ffa0"><span class="section-number-3">1.4.</span> Paso 3: Monitorear Logs del Sistema</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 Los logs son esenciales para detectar actividad sospechosa.
@@ -351,8 +351,8 @@ Ver logs del firewall:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgaa3d46b" class="outline-3">
-<h3 id="orgaa3d46b"><span class="section-number-3">1.5.</span> Paso 4: Detectar Intentos de Acceso No Autorizados</h3>
+<div id="outline-container-org52455d8" class="outline-3">
+<h3 id="org52455d8"><span class="section-number-3">1.5.</span> Paso 4: Detectar Intentos de Acceso No Autorizados</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 Usa `fail2ban` para bloquear IPs que realicen intentos de acceso fallidos.
@@ -395,8 +395,8 @@ Reiniciar `fail2ban`:
 </ol>
 </div>
 </div>
-<div id="outline-container-org0c87ada" class="outline-3">
-<h3 id="org0c87ada"><span class="section-number-3">1.6.</span> Resultados Esperados</h3>
+<div id="outline-container-org53183b3" class="outline-3">
+<h3 id="org53183b3"><span class="section-number-3">1.6.</span> Resultados Esperados</h3>
 <div class="outline-text-3" id="text-1-6">
 <ul class="org-ul">
 <li>Firewall activo y configurado.</li>
@@ -415,14 +415,14 @@ Reiniciar `fail2ban`:
 </div>
 </div>
 </div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-python.html">python</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-logs.html">logs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutorial.html">tutorial</a> </div>]]></description>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-python.html">python</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-logs.html">logs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
   <category><![CDATA[seguridad]]></category>
   <category><![CDATA[linux]]></category>
   <category><![CDATA[bash]]></category>
   <category><![CDATA[python]]></category>
   <category><![CDATA[firewall]]></category>
   <category><![CDATA[logs]]></category>
-  <category><![CDATA[tutorial]]></category>
+  <category><![CDATA[tutoriales]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18--tutorial-de-seguridad-en-linux:-m%C3%ADnimo-de-protecci%C3%B3n-ante-ataques-inform%C3%A1ticos-(i).html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18--tutorial-de-seguridad-en-linux:-m%C3%ADnimo-de-protecci%C3%B3n-ante-ataques-inform%C3%A1ticos-(i).html</guid>
   <pubDate>Tue, 18 Mar 2025 20:43:00 +0100</pubDate>
@@ -639,8 +639,8 @@ Reiniciar `fail2ban`:
 <p>
 Por Qwen AI
 </p>
-<div id="outline-container-orgee19c0e" class="outline-2">
-<h2 id="orgee19c0e"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-orgdba67ba" class="outline-2">
+<h2 id="orgdba67ba"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Este documento describe cómo configurar una seguridad mínima en un sistema Linux utilizando scripts escritos en <b><b>Bash</b></b> y <b><b>Python</b></b>. Las medidas incluyen:
@@ -653,8 +653,8 @@ Este documento describe cómo configurar una seguridad mínima en un sistema Lin
 </ul>
 </div>
 </div>
-<div id="outline-container-org9e80e7a" class="outline-2">
-<h2 id="org9e80e7a"><span class="section-number-2">2.</span> Configuración Básica del Firewall con IPTables (Bash)</h2>
+<div id="outline-container-org4f45fda" class="outline-2">
+<h2 id="org4f45fda"><span class="section-number-2">2.</span> Configuración Básica del Firewall con IPTables (Bash)</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 El siguiente script configura un firewall básico utilizando IPTables para permitir solo el tráfico necesario.
@@ -664,36 +664,36 @@ El siguiente script configura un firewall básico utilizando IPTables para permi
 <b><b>Script Bash:</b></b>
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Limpiar todas las reglas existentes</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Limpiar todas las reglas existentes</span>
 iptables -F
 iptables -X
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Pol&#237;tica por defecto: Denegar todo el tr&#225;fico entrante y saliente</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Pol&#237;tica por defecto: Denegar todo el tr&#225;fico entrante y saliente</span>
 iptables -P INPUT DROP
 iptables -P FORWARD DROP
 iptables -P OUTPUT ACCEPT
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Permitir tr&#225;fico local (loopback)</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Permitir tr&#225;fico local (loopback)</span>
 iptables -A INPUT -i lo -j ACCEPT
 iptables -A OUTPUT -o lo -j ACCEPT
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Permitir conexiones establecidas o relacionadas</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Permitir conexiones establecidas o relacionadas</span>
 iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Permitir SSH (puerto 22) desde una IP espec&#237;fica (opcional)</span>
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Reemplaza "TU_IP" con tu direcci&#243;n IP p&#250;blica</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Permitir SSH (puerto 22) desde una IP espec&#237;fica (opcional)</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Reemplaza "TU_IP" con tu direcci&#243;n IP p&#250;blica</span>
 iptables -A INPUT -p tcp --dport 22 -s TU_IP -j ACCEPT
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Permitir HTTP (puerto 80) y HTTPS (puerto 443)</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Permitir HTTP (puerto 80) y HTTPS (puerto 443)</span>
 iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Registrar intentos de acceso no autorizados</span>
-iptables -A INPUT -j LOG --log-prefix <span style="color: #a44185;">"IPTables-Dropped: "</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Registrar intentos de acceso no autorizados</span>
+iptables -A INPUT -j LOG --log-prefix <span style="color: #005F00;">"IPTables-Dropped: "</span>
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Guardar las reglas de IPTables</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Guardar las reglas de IPTables</span>
 iptables-save &gt; /etc/iptables/rules.v4
 </pre>
 </div>
@@ -707,8 +707,8 @@ iptables-save &gt; /etc/iptables/rules.v4
 </ul>
 </div>
 </div>
-<div id="outline-container-orge5817f2" class="outline-2">
-<h2 id="orge5817f2"><span class="section-number-2">3.</span> Bloqueo de IPs Sospechosas (Anti-Botnet)</h2>
+<div id="outline-container-org414e930" class="outline-2">
+<h2 id="org414e930"><span class="section-number-2">3.</span> Bloqueo de IPs Sospechosas (Anti-Botnet)</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 El siguiente script bloquea IPs sospechosas utilizando una lista negra predefinida.
@@ -718,20 +718,20 @@ El siguiente script bloquea IPs sospechosas utilizando una lista negra predefini
 <b><b>Script Bash:</b></b>
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Descargar una lista negra de IPs conocidas (por ejemplo, Emerging Threats)</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Descargar una lista negra de IPs conocidas (por ejemplo, Emerging Threats)</span>
 wget -q https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt -O /tmp/blocked_ips.txt
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Leer el archivo y bloquear cada IP</span>
-<span style="color: #219fd5; font-style: italic;">while </span><span style="color: #dc3eb7;">read</span> -r ip; <span style="color: #219fd5; font-style: italic;">do</span>
-    <span style="color: #219fd5; font-style: italic;">if</span> [[ $<span style="color: #1857a4;">ip</span> =~ ^[0-9]+<span style="color: #a44185;">\.</span>[0-9]+<span style="color: #a44185;">\.</span>[0-9]+<span style="color: #a44185;">\.</span>[0-9]+$ ]]; <span style="color: #219fd5; font-style: italic;">then</span>
-        iptables -A INPUT -s <span style="color: #a44185;">"$ip"</span> -j DROP
-        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Bloqueada IP: $ip"</span>
-    <span style="color: #219fd5; font-style: italic;">fi</span>
-<span style="color: #219fd5; font-style: italic;">done</span> &lt; /tmp/blocked_ips.txt
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Leer el archivo y bloquear cada IP</span>
+<span style="color: #D70000;">while </span><span style="color: #1F55A0;">read</span> -r ip; <span style="color: #D70000;">do</span>
+    <span style="color: #D70000;">if</span> [[ $<span style="color: #004651;">ip</span> =~ ^[0-9]+<span style="color: #005F00;">\.</span>[0-9]+<span style="color: #005F00;">\.</span>[0-9]+<span style="color: #005F00;">\.</span>[0-9]+$ ]]; <span style="color: #D70000;">then</span>
+        iptables -A INPUT -s <span style="color: #005F00;">"$ip"</span> -j DROP
+        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Bloqueada IP: $ip"</span>
+    <span style="color: #D70000;">fi</span>
+<span style="color: #D70000;">done</span> &lt; /tmp/blocked_ips.txt
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Guardar las reglas de IPTables</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Guardar las reglas de IPTables</span>
 iptables-save &gt; /etc/iptables/rules.v4
 </pre>
 </div>
@@ -745,8 +745,8 @@ iptables-save &gt; /etc/iptables/rules.v4
 </ul>
 </div>
 </div>
-<div id="outline-container-org8b013a1" class="outline-2">
-<h2 id="org8b013a1"><span class="section-number-2">4.</span> Protección Contra Escaneos de Puertos (Python)</h2>
+<div id="outline-container-org9ef1ace" class="outline-2">
+<h2 id="org9ef1ace"><span class="section-number-2">4.</span> Protección Contra Escaneos de Puertos (Python)</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 El siguiente script utiliza Python para monitorear intentos de escaneo de puertos y bloquear IPs sospechosas.
@@ -756,40 +756,40 @@ El siguiente script utiliza Python para monitorear intentos de escaneo de puerto
 <b><b>Script Python:</b></b>
 </p>
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #219fd5; font-style: italic;">import</span> os
-<span style="color: #219fd5; font-style: italic;">import</span> time
-<span style="color: #219fd5; font-style: italic;">from</span> collections <span style="color: #219fd5; font-style: italic;">import</span> defaultdict
+<pre class="src src-python"><span style="color: #D70000;">import</span> os
+<span style="color: #D70000;">import</span> time
+<span style="color: #D70000;">from</span> collections <span style="color: #D70000;">import</span> defaultdict
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Diccionario para rastrear intentos de conexi&#243;n por IP</span>
-<span style="color: #1857a4;">connection_attempts</span> = defaultdict(<span style="color: #dc3eb7;">int</span>)
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Diccionario para rastrear intentos de conexi&#243;n por IP</span>
+<span style="color: #004651;">connection_attempts</span> = defaultdict(<span style="color: #1F55A0;">int</span>)
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Umbral de intentos sospechosos</span>
-<span style="color: #1857a4;">THRESHOLD</span> = 5
-<span style="color: #1857a4;">BLOCK_TIME</span> = 60  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Tiempo en segundos para bloquear una IP</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Umbral de intentos sospechosos</span>
+<span style="color: #004651;">THRESHOLD</span> = 5
+<span style="color: #004651;">BLOCK_TIME</span> = 60  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Tiempo en segundos para bloquear una IP</span>
 
-<span style="color: #219fd5; font-style: italic;">def</span> <span style="color: #dc3eb7;">block_ip</span>(ip):
-    <span style="color: #60a8a1; font-style: italic;">"""Bloquea una IP usando IPTables."""</span>
-    os.system(f<span style="color: #a44185;">"iptables -A INPUT -s </span>{ip}<span style="color: #a44185;"> -j DROP"</span>)
-    <span style="color: #dc3eb7;">print</span>(f<span style="color: #a44185;">"Bloqueada IP sospechosa: </span>{ip}<span style="color: #a44185;">"</span>)
+<span style="color: #D70000;">def</span> <span style="color: #AF8700;">block_ip</span>(ip):
+    <span style="color: #004700; font-style: italic;">"""Bloquea una IP usando IPTables."""</span>
+    os.system(f<span style="color: #005F00;">"iptables -A INPUT -s </span>{ip}<span style="color: #005F00;"> -j DROP"</span>)
+    <span style="color: #1F55A0;">print</span>(f<span style="color: #005F00;">"Bloqueada IP sospechosa: </span>{ip}<span style="color: #005F00;">"</span>)
 
-<span style="color: #219fd5; font-style: italic;">def</span> <span style="color: #dc3eb7;">monitor_logs</span>():
-    <span style="color: #60a8a1; font-style: italic;">"""Monitorea los logs del sistema en busca de intentos de conexi&#243;n."""</span>
-    <span style="color: #219fd5; font-style: italic;">with</span> <span style="color: #dc3eb7;">open</span>(<span style="color: #a44185;">"/var/log/auth.log"</span>, <span style="color: #a44185;">"r"</span>) <span style="color: #219fd5; font-style: italic;">as</span> log_file:
-        log_file.seek(0, 2)  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ir al final del archivo</span>
-        <span style="color: #219fd5; font-style: italic;">while</span> <span style="color: #2f86d2;">True</span>:
-            <span style="color: #1857a4;">line</span> = log_file.readline()
-            <span style="color: #219fd5; font-style: italic;">if</span> <span style="color: #a44185;">"Failed password"</span> <span style="color: #219fd5; font-style: italic;">in</span> line:
-                <span style="color: #1857a4;">ip</span> = line.split(<span style="color: #a44185;">"from "</span>)[1].split(<span style="color: #a44185;">" port"</span>)[0]
-                <span style="color: #1857a4;">connection_attempts</span>[ip] += 1
-                <span style="color: #dc3eb7;">print</span>(f<span style="color: #a44185;">"Intento de conexi&#243;n desde: </span>{ip}<span style="color: #a44185;"> (</span>{connection_attempts[ip]}<span style="color: #a44185;"> intentos)"</span>)
+<span style="color: #D70000;">def</span> <span style="color: #AF8700;">monitor_logs</span>():
+    <span style="color: #004700; font-style: italic;">"""Monitorea los logs del sistema en busca de intentos de conexi&#243;n."""</span>
+    <span style="color: #D70000;">with</span> <span style="color: #1F55A0;">open</span>(<span style="color: #005F00;">"/var/log/auth.log"</span>, <span style="color: #005F00;">"r"</span>) <span style="color: #D70000;">as</span> log_file:
+        log_file.seek(0, 2)  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Ir al final del archivo</span>
+        <span style="color: #D70000;">while</span> <span style="color: #AF005F;">True</span>:
+            <span style="color: #004651;">line</span> = log_file.readline()
+            <span style="color: #D70000;">if</span> <span style="color: #005F00;">"Failed password"</span> <span style="color: #D70000;">in</span> line:
+                <span style="color: #004651;">ip</span> = line.split(<span style="color: #005F00;">"from "</span>)[1].split(<span style="color: #005F00;">" port"</span>)[0]
+                <span style="color: #004651;">connection_attempts</span>[ip] += 1
+                <span style="color: #1F55A0;">print</span>(f<span style="color: #005F00;">"Intento de conexi&#243;n desde: </span>{ip}<span style="color: #005F00;"> (</span>{connection_attempts[ip]}<span style="color: #005F00;"> intentos)"</span>)
 
-                <span style="color: #219fd5; font-style: italic;">if</span> connection_attempts[ip] &gt;= THRESHOLD:
+                <span style="color: #D70000;">if</span> connection_attempts[ip] &gt;= THRESHOLD:
                     block_ip(ip)
                     time.sleep(BLOCK_TIME)
-                    <span style="color: #1857a4;">connection_attempts</span>[ip] = 0  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Reiniciar contador</span>
+                    <span style="color: #004651;">connection_attempts</span>[ip] = 0  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Reiniciar contador</span>
             time.sleep(1)
 
-<span style="color: #219fd5; font-style: italic;">if</span> <span style="color: #dc3eb7;">__name__</span> == <span style="color: #a44185;">"__main__"</span>:
+<span style="color: #D70000;">if</span> <span style="color: #1F55A0;">__name__</span> == <span style="color: #005F00;">"__main__"</span>:
     monitor_logs()
 </pre>
 </div>
@@ -803,8 +803,8 @@ El siguiente script utiliza Python para monitorear intentos de escaneo de puerto
 </ul>
 </div>
 </div>
-<div id="outline-container-org90d565f" class="outline-2">
-<h2 id="org90d565f"><span class="section-number-2">5.</span> Configuración de Políticas de Red Seguras (Bash)</h2>
+<div id="outline-container-org4778546" class="outline-2">
+<h2 id="org4778546"><span class="section-number-2">5.</span> Configuración de Políticas de Red Seguras (Bash)</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 El siguiente script configura políticas adicionales para mejorar la seguridad de la red.
@@ -814,30 +814,30 @@ El siguiente script configura políticas adicionales para mejorar la seguridad d
 <b><b>Script Bash:</b></b>
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Deshabilitar el redireccionamiento IP</span>
-<span style="color: #dc3eb7;">echo</span> 0 &gt; /proc/sys/net/ipv4/conf/all/send_redirects
-<span style="color: #dc3eb7;">echo</span> 0 &gt; /proc/sys/net/ipv4/conf/default/send_redirects
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Deshabilitar el redireccionamiento IP</span>
+<span style="color: #1F55A0;">echo</span> 0 &gt; /proc/sys/net/ipv4/conf/all/send_redirects
+<span style="color: #1F55A0;">echo</span> 0 &gt; /proc/sys/net/ipv4/conf/default/send_redirects
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Habilitar protecci&#243;n contra SYN Flood</span>
-<span style="color: #dc3eb7;">echo</span> 1 &gt; /proc/sys/net/ipv4/tcp_syncookies
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Habilitar protecci&#243;n contra SYN Flood</span>
+<span style="color: #1F55A0;">echo</span> 1 &gt; /proc/sys/net/ipv4/tcp_syncookies
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Deshabilitar el reenv&#237;o de paquetes IPv4</span>
-<span style="color: #dc3eb7;">echo</span> 0 &gt; /proc/sys/net/ipv4/ip_forward
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Deshabilitar el reenv&#237;o de paquetes IPv4</span>
+<span style="color: #1F55A0;">echo</span> 0 &gt; /proc/sys/net/ipv4/ip_forward
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Habilitar protecci&#243;n contra IP Spoofing</span>
-<span style="color: #219fd5; font-style: italic;">for</span> interface<span style="color: #219fd5; font-style: italic;"> in</span> $(<span style="color: #219fd5; font-weight: bold;">ls /sys/class/net | grep -v lo</span>); <span style="color: #219fd5; font-style: italic;">do</span>
-    <span style="color: #dc3eb7;">echo</span> 1 &gt; /proc/sys/net/ipv4/conf/$<span style="color: #1857a4;">interface</span>/rp_filter
-<span style="color: #219fd5; font-style: italic;">done</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Habilitar protecci&#243;n contra IP Spoofing</span>
+<span style="color: #D70000;">for</span> interface<span style="color: #D70000;"> in</span> $(<span style="color: #1F55A0; font-weight: bold;">ls /sys/class/net | grep -v lo</span>); <span style="color: #D70000;">do</span>
+    <span style="color: #1F55A0;">echo</span> 1 &gt; /proc/sys/net/ipv4/conf/$<span style="color: #004651;">interface</span>/rp_filter
+<span style="color: #D70000;">done</span>
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Guardar cambios en sysctl.conf</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Guardar cambios en sysctl.conf</span>
 cat &lt;&lt;EOF &gt;&gt; /etc/sysctl.conf
-<span style="color: #a44185;">net.ipv4.conf.all.send_redirects = 0</span>
-<span style="color: #a44185;">net.ipv4.conf.default.send_redirects = 0</span>
-<span style="color: #a44185;">net.ipv4.tcp_syncookies = 1</span>
-<span style="color: #a44185;">net.ipv4.ip_forward = 0</span>
-<span style="color: #a44185;">EOF</span>
+<span style="color: #005F00;">net.ipv4.conf.all.send_redirects = 0</span>
+<span style="color: #005F00;">net.ipv4.conf.default.send_redirects = 0</span>
+<span style="color: #005F00;">net.ipv4.tcp_syncookies = 1</span>
+<span style="color: #005F00;">net.ipv4.ip_forward = 0</span>
+<span style="color: #005F00;">EOF</span>
 
 sysctl -p
 </pre>
@@ -852,8 +852,8 @@ sysctl -p
 </ul>
 </div>
 </div>
-<div id="outline-container-orgeeff587" class="outline-2">
-<h2 id="orgeeff587"><span class="section-number-2">6.</span> Conclusión</h2>
+<div id="outline-container-org2b7936c" class="outline-2">
+<h2 id="org2b7936c"><span class="section-number-2">6.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Este documento proporciona scripts básicos en Bash y Python para configurar una seguridad mínima en sistemas Linux. Recuerda que estas medidas son solo un punto de partida y deben complementarse con auditorías regulares, actualizaciones de software y mejores prácticas de seguridad.
@@ -864,12 +864,13 @@ Para más información, consulta la documentación oficial de IPTables y las rec
 </p>
 </div>
 </div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-python.html">python</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-internet.html">internet</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> </div>]]></description>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-python.html">python</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-internet.html">internet</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
   <category><![CDATA[linux]]></category>
   <category><![CDATA[bash]]></category>
   <category><![CDATA[python]]></category>
   <category><![CDATA[internet]]></category>
   <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[tutoriales]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-configuraci%C3%B3n-m%C3%ADnima-de-seguridad-con-scripts-bash-y-python.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-configuraci%C3%B3n-m%C3%ADnima-de-seguridad-con-scripts-bash-y-python.html</guid>
   <pubDate>Tue, 18 Mar 2025 16:25:00 +0100</pubDate>
@@ -1082,16 +1083,16 @@ La opción 1.1 (<code>find</code> y <code>mv</code>) es la más simple y directa
 <item>
   <title><![CDATA[Cómo limpiar archivos y carpetas vacías en Linux con un script Bash]]></title>
   <description><![CDATA[
-<div id="outline-container-org911997b" class="outline-2">
-<h2 id="org911997b"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org5ab3c26" class="outline-2">
+<h2 id="org5ab3c26"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 ¿Alguna vez te has encontrado con archivos o carpetas vacías en tu sistema que ocupan espacio innecesario? En este post, te mostraré cómo crear un script en <b><b>Bash</b></b> que te permita limpiar automáticamente todos los archivos y carpetas con 0 bytes desde ayer hacia atrás. Este script es ideal para mantener tu sistema organizado y liberar espacio en disco.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc96c5e7" class="outline-2">
-<h2 id="orgc96c5e7"><span class="section-number-2">2.</span> Requisitos</h2>
+<div id="outline-container-org02f68c2" class="outline-2">
+<h2 id="org02f68c2"><span class="section-number-2">2.</span> Requisitos</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>Un sistema Linux (Ubuntu, Debian, Fedora, etc.).</li>
@@ -1100,38 +1101,38 @@ La opción 1.1 (<code>find</code> y <code>mv</code>) es la más simple y directa
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb7f687f" class="outline-2">
-<h2 id="orgb7f687f"><span class="section-number-2">3.</span> El Script</h2>
+<div id="outline-container-org5034a50" class="outline-2">
+<h2 id="org5034a50"><span class="section-number-2">3.</span> El Script</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 A continuación, te presento el script en Bash que realiza la limpieza. Puedes copiarlo y pegarlo directamente en tu terminal o guardarlo en un archivo `.sh` para ejecutarlo más tarde.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Pide al usuario que ingrese el directorio a limpiar</span>
-<span style="color: #dc3eb7;">read</span> -p <span style="color: #a44185;">"Introduce la ruta del directorio que deseas limpiar: "</span> DIRECTORIO
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Pide al usuario que ingrese el directorio a limpiar</span>
+<span style="color: #1F55A0;">read</span> -p <span style="color: #005F00;">"Introduce la ruta del directorio que deseas limpiar: "</span> DIRECTORIO
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verifica si el directorio existe</span>
-<span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #219fd5; font-weight: bold;">!</span> -d <span style="color: #a44185;">"$DIRECTORIO"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
-  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"El directorio $DIRECTORIO no existe."</span>
-  <span style="color: #219fd5; font-style: italic;">exit</span> 1
-<span style="color: #219fd5; font-style: italic;">fi</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verifica si el directorio existe</span>
+<span style="color: #D70000;">if</span> [ <span style="color: #1F55A0; font-weight: bold;">!</span> -d <span style="color: #005F00;">"$DIRECTORIO"</span> ]; <span style="color: #D70000;">then</span>
+  <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"El directorio $DIRECTORIO no existe."</span>
+  <span style="color: #D70000;">exit</span> 1
+<span style="color: #D70000;">fi</span>
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Busca y elimina archivos vac&#237;os (0 bytes) desde ayer hacia atr&#225;s</span>
-find <span style="color: #a44185;">"$DIRECTORIO"</span> -type f -size 0 -mtime +0 -exec rm -v {} <span style="color: #a44185;">\;</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Busca y elimina archivos vac&#237;os (0 bytes) desde ayer hacia atr&#225;s</span>
+find <span style="color: #005F00;">"$DIRECTORIO"</span> -type f -size 0 -mtime +0 -exec rm -v {} <span style="color: #005F00;">\;</span>
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Busca y elimina carpetas vac&#237;as desde ayer hacia atr&#225;s</span>
-find <span style="color: #a44185;">"$DIRECTORIO"</span> -type d -empty -mtime +0 -exec rmdir -v {} <span style="color: #a44185;">\;</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Busca y elimina carpetas vac&#237;as desde ayer hacia atr&#225;s</span>
+find <span style="color: #005F00;">"$DIRECTORIO"</span> -type d -empty -mtime +0 -exec rmdir -v {} <span style="color: #005F00;">\;</span>
 
-<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Limpieza completada. Archivos y carpetas vac&#237;as eliminados."</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Limpieza completada. Archivos y carpetas vac&#237;as eliminados."</span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org2cbf2e9" class="outline-2">
-<h2 id="org2cbf2e9"><span class="section-number-2">4.</span> Explicación del Script</h2>
+<div id="outline-container-orgc000f9d" class="outline-2">
+<h2 id="orgc000f9d"><span class="section-number-2">4.</span> Explicación del Script</h2>
 <div class="outline-text-2" id="text-4">
 <ol class="org-ol">
 <li><b><b>Pide el directorio</b></b>: El script comienza solicitando al usuario que introduzca la ruta del directorio que desea limpiar.</li>
@@ -1142,8 +1143,8 @@ find <span style="color: #a44185;">"$DIRECTORIO"</span> -type d -empty -mtime +0
 </ol>
 </div>
 </div>
-<div id="outline-container-org1984321" class="outline-2">
-<h2 id="org1984321"><span class="section-number-2">5.</span> Cómo Usar el Script</h2>
+<div id="outline-container-orga68dd0b" class="outline-2">
+<h2 id="orga68dd0b"><span class="section-number-2">5.</span> Cómo Usar el Script</h2>
 <div class="outline-text-2" id="text-5">
 <ol class="org-ol">
 <li>Copia el script en un archivo, por ejemplo, `clean<sub>empty</sub><sub>files.sh</sub>`.</li>
@@ -1153,12 +1154,13 @@ chmod +x clean<sub>empty</sub><sub>files.sh</sub></li>
 </ol>
 </div>
 </div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-script.html">script</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bytes.html">bytes</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-deepseek.html">deepseek</a> </div>]]></description>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-script.html">script</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bytes.html">bytes</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-deepseek.html">deepseek</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
   <category><![CDATA[linux]]></category>
   <category><![CDATA[script]]></category>
   <category><![CDATA[bash]]></category>
   <category><![CDATA[bytes]]></category>
   <category><![CDATA[deepseek]]></category>
+  <category><![CDATA[tutoriales]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-15-c%C3%B3mo-limpiar-archivos-y-carpetas-vac%C3%ADas-en-linux-con-un-script-bash.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-15-c%C3%B3mo-limpiar-archivos-y-carpetas-vac%C3%ADas-en-linux-con-un-script-bash.html</guid>
   <pubDate>Sat, 15 Mar 2025 19:05:00 +0100</pubDate>

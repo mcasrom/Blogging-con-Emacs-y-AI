@@ -4,7 +4,671 @@
 <title><![CDATA[Example.com - tutoriales]]></title>
 <description><![CDATA[Example.com - tutoriales]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-tutoriales.html</link>
-<lastBuildDate>Tue, 18 Mar 2025 20:54:51 +0100</lastBuildDate>
+<lastBuildDate>Tue, 18 Mar 2025 21:00:57 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Tutorial de Seguridad en Linux: Mínimo de Protección ante Ataques Informáticos (II)]]></title>
+  <description><![CDATA[
+<div id="outline-container-orgfe423c6" class="outline-2">
+<h2 id="orgfe423c6"><span class="section-number-2">1.</span> Capítulo 2: Automatización y Análisis Avanzado</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org0877f3b" class="outline-3">
+<h3 id="org0877f3b"><span class="section-number-3">1.1.</span> Objetivos</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Automatizar tareas de seguridad con scripts.</li>
+<li>Analizar logs para detectar patrones sospechosos.</li>
+<li>Generar reportes de seguridad.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgadc7dbb" class="outline-3">
+<h3 id="orgadc7dbb"><span class="section-number-3">1.2.</span> Paso 1: Automatizar Tareas con Scripts en Bash</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Crea un script para automatizar la revisión de logs y el bloqueo de IPs sospechosas.
+</p>
+
+<ol class="org-ol">
+<li><p>
+Script `security<sub>monitor.sh</sub>`:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #004651;">LOG_FILE</span>=<span style="color: #005F00;">"/var/log/auth.log"</span>
+<span style="color: #004651;">BAN_LIST</span>=<span style="color: #005F00;">"/etc/fail2ban/jail.local"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Buscar IPs con m&#250;ltiples intentos fallidos</span>
+<span style="color: #004651;">SUSPICIOUS_IPS</span>=$(<span style="color: #1F55A0; font-weight: bold;">grep "Failed password" $LOG_FILE | awk '{print $(NF-3</span><span style="color: #005F00;">)}'</span> | sort | uniq -c | awk <span style="color: #005F00;">'$1 &gt; 3 {print $2}'</span>)
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Bloquear IPs sospechosas</span>
+<span style="color: #D70000;">for</span> IP<span style="color: #D70000;"> in</span> $<span style="color: #004651;">SUSPICIOUS_IPS</span>; <span style="color: #D70000;">do</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Bloqueando IP: $IP"</span>
+    sudo fail2ban-client set sshd banip $<span style="color: #004651;">IP</span>
+<span style="color: #D70000;">done</span>
+</pre>
+</div></li>
+
+<li><p>
+Ejecutar el script diariamente con `cron`:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">sudo crontab -e
+</pre>
+</div>
+<p>
+Añade la siguiente línea:
+</p>
+<div class="org-src-container">
+<pre class="src src-nil">0 0 * * * /ruta/al/script/security_monitor.sh
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgb4cf443" class="outline-3">
+<h3 id="orgb4cf443"><span class="section-number-3">1.3.</span> Paso 2: Analizar Logs con Python</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Crea un script en Python para analizar logs y generar reportes.
+</p>
+
+<ol class="org-ol">
+<li><p>
+Script `log<sub>analyzer.py</sub>`:
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/usr/bin/env python3</span>
+<span style="color: #D70000;">import</span> re
+<span style="color: #D70000;">from</span> collections <span style="color: #D70000;">import</span> Counter
+
+<span style="color: #004651;">LOG_FILE</span> = <span style="color: #005F00;">"/var/log/auth.log"</span>
+<span style="color: #004651;">REPORT_FILE</span> = <span style="color: #005F00;">"/var/log/security_report.txt"</span>
+
+<span style="color: #D70000;">def</span> <span style="color: #AF8700;">analyze_logs</span>():
+    <span style="color: #D70000;">with</span> <span style="color: #1F55A0;">open</span>(LOG_FILE, <span style="color: #005F00;">"r"</span>) <span style="color: #D70000;">as</span> <span style="color: #1F55A0;">file</span>:
+        <span style="color: #004651;">logs</span> = <span style="color: #1F55A0;">file</span>.readlines()
+
+    <span style="color: #004651;">failed_attempts</span> = Counter()
+    <span style="color: #D70000;">for</span> log <span style="color: #D70000;">in</span> logs:
+        <span style="color: #D70000;">if</span> <span style="color: #005F00;">"Failed password"</span> <span style="color: #D70000;">in</span> log:
+            <span style="color: #004651;">ip</span> = re.search(r<span style="color: #005F00;">"\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b"</span>, log).group()
+            <span style="color: #004651;">failed_attempts</span>[ip] += 1
+
+    <span style="color: #D70000;">with</span> <span style="color: #1F55A0;">open</span>(REPORT_FILE, <span style="color: #005F00;">"w"</span>) <span style="color: #D70000;">as</span> report:
+        report.write(<span style="color: #005F00;">"Reporte de Seguridad</span><span style="color: #AF005F;">\n</span><span style="color: #005F00;">"</span>)
+        report.write(<span style="color: #005F00;">"===================</span><span style="color: #AF005F;">\n</span><span style="color: #005F00;">"</span>)
+        <span style="color: #D70000;">for</span> ip, count <span style="color: #D70000;">in</span> failed_attempts.most_common():
+            report.write(f<span style="color: #005F00;">"IP: </span>{ip}<span style="color: #005F00;"> - Intentos fallidos: </span>{count}<span style="color: #AF005F;">\n</span><span style="color: #005F00;">"</span>)
+
+<span style="color: #D70000;">if</span> <span style="color: #1F55A0;">__name__</span> == <span style="color: #005F00;">"__main__"</span>:
+    analyze_logs()
+</pre>
+</div></li>
+
+<li><p>
+Ejecutar el script:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">python3 /ruta/al/script/log_analyzer.py
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org076a014" class="outline-3">
+<h3 id="org076a014"><span class="section-number-3">1.4.</span> Paso 3: Generar Reportes de Seguridad</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Usa los scripts anteriores para generar reportes diarios.
+</p>
+
+<ol class="org-ol">
+<li><p>
+Combinar ambos scripts en un solo archivo:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+/ruta/al/script/security_monitor.sh
+python3 /ruta/al/script/log_analyzer.py
+</pre>
+</div></li>
+
+<li><p>
+Programar la ejecución con `cron`:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">sudo crontab -e
+</pre>
+</div>
+<p>
+Añade la siguiente línea:
+</p>
+<div class="org-src-container">
+<pre class="src src-nil">0 1 * * * /ruta/al/script/security_report.sh
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgbddd265" class="outline-3">
+<h3 id="orgbddd265"><span class="section-number-3">1.5.</span> Resultados Esperados</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>Tareas de seguridad automatizadas.</li>
+<li>Logs analizados en busca de patrones sospechosos.</li>
+<li>Reportes de seguridad generados diariamente.</li>
+</ul>
+
+<p>
+&#x2014;
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbac7489" class="outline-2">
+<h2 id="orgbac7489"><span class="section-number-2">2.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Con estos dos capítulos, has implementado un mínimo de seguridad en tu entorno Linux. Desde la configuración básica del firewall hasta la automatización de tareas y el análisis avanzado de logs, este tutorial te proporciona las herramientas necesarias para proteger tu sistema ante ataques informáticos. ¡Ahora es tu turno de adaptar y mejorar estas técnicas según tus necesidades!
+</p>
+</div>
+</div>
+<div id="outline-container-org285a04f" class="outline-2">
+<h2 id="org285a04f"><span class="section-number-2">3.</span> Recursos Adicionales</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><a href="https://help.ubuntu.com/community/UFW">Documentación de UFW</a></li>
+<li><a href="https://www.fail2ban.org/">Documentación de Fail2Ban</a></li>
+<li><a href="https://docs.python.org/3/">Documentación de Python</a></li>
+</ul>
+
+<p>
+```
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+### Características del Tutorial
+</p>
+
+<ol class="org-ol">
+<li><b><b>Estructura Clara</b></b>: Dividido en 2 capítulos con objetivos, pasos y resultados.</li>
+<li><b><b>Scripts Prácticos</b></b>: Incluye scripts en Bash y Python para automatizar tareas.</li>
+<li><b><b>Logs y Reportes</b></b>: Enseña a monitorear logs y generar reportes de seguridad.</li>
+<li><b><b>Recursos Adicionales</b></b>: Proporciona enlaces a documentación oficial.</li>
+</ol>
+
+<p>
+&#x2014;
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-python.html">python</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-logs.html">logs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[bash]]></category>
+  <category><![CDATA[python]]></category>
+  <category><![CDATA[firewall]]></category>
+  <category><![CDATA[logs]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-tutorial-de-seguridad-en-linux:-m%C3%ADnimo-de-protecci%C3%B3n-ante-ataques-inform%C3%A1ticos-(ii).html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-tutorial-de-seguridad-en-linux:-m%C3%ADnimo-de-protecci%C3%B3n-ante-ataques-inform%C3%A1ticos-(ii).html</guid>
+  <pubDate>Tue, 18 Mar 2025 20:43:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Tutorial de Seguridad en Linux: Mínimo de Protección ante Ataques Informáticos (I)]]></title>
+  <description><![CDATA[
+<div id="outline-container-orga1dc01c" class="outline-2">
+<h2 id="orga1dc01c"><span class="section-number-2">1.</span> Capítulo 1: Configuración Básica de Seguridad</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org738d412" class="outline-3">
+<h3 id="org738d412"><span class="section-number-3">1.1.</span> Objetivos</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Configurar un firewall básico.</li>
+<li>Deshabilitar servicios innecesarios.</li>
+<li>Monitorear logs del sistema.</li>
+<li>Detectar intentos de acceso no autorizados.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf53f1b0" class="outline-3">
+<h3 id="orgf53f1b0"><span class="section-number-3">1.2.</span> Paso 1: Configurar un Firewall Básico con `ufw`</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+`ufw` (Uncomplicated Firewall) es una herramienta sencilla para gestionar reglas de firewall en Linux.
+</p>
+
+<ol class="org-ol">
+<li><p>
+Instalar `ufw`:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">sudo apt update &amp;&amp; sudo apt install ufw -y
+</pre>
+</div></li>
+
+<li><p>
+Habilitar el firewall:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">sudo ufw enable
+</pre>
+</div></li>
+
+<li>Configurar reglas básicas:
+<ul class="org-ul">
+<li><p>
+Permitir SSH:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">sudo ufw allow ssh
+</pre>
+</div></li>
+<li><p>
+Permitir HTTP/HTTPS:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">sudo ufw allow http
+sudo ufw allow https
+</pre>
+</div></li>
+<li><p>
+Denegar todo el tráfico por defecto:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">sudo ufw default deny incoming
+sudo ufw default allow outgoing
+</pre>
+</div></li>
+</ul></li>
+
+<li><p>
+Verificar el estado del firewall:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">sudo ufw status verbose
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgc26c463" class="outline-3">
+<h3 id="orgc26c463"><span class="section-number-3">1.3.</span> Paso 2: Deshabilitar Servicios Innecesarios</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Los servicios innecesarios pueden ser un vector de ataque. Deshabilita los que no uses.
+</p>
+
+<ol class="org-ol">
+<li><p>
+Listar servicios activos:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">sudo systemctl list-unit-files --type=service | grep enabled
+</pre>
+</div></li>
+
+<li><p>
+Deshabilitar un servicio (por ejemplo, `apache2`):
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">sudo systemctl stop apache2
+sudo systemctl disable apache2
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org466ffa0" class="outline-3">
+<h3 id="org466ffa0"><span class="section-number-3">1.4.</span> Paso 3: Monitorear Logs del Sistema</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Los logs son esenciales para detectar actividad sospechosa.
+</p>
+
+<ol class="org-ol">
+<li><p>
+Ver logs de autenticación:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">sudo tail -f /var/log/auth.log
+</pre>
+</div></li>
+
+<li><p>
+Ver logs del firewall:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">sudo tail -f /var/log/ufw.log
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org52455d8" class="outline-3">
+<h3 id="org52455d8"><span class="section-number-3">1.5.</span> Paso 4: Detectar Intentos de Acceso No Autorizados</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+Usa `fail2ban` para bloquear IPs que realicen intentos de acceso fallidos.
+</p>
+
+<ol class="org-ol">
+<li><p>
+Instalar `fail2ban`:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">sudo apt install fail2ban -y
+</pre>
+</div></li>
+
+<li><p>
+Configurar `fail2ban` para SSH:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">sudo nano /etc/fail2ban/jail.local
+</pre>
+</div>
+<p>
+Añade lo siguiente:
+</p>
+<div class="org-src-container">
+<pre class="src src-nil">[sshd]
+enabled = true
+maxretry = 3
+bantime = 3600
+</pre>
+</div></li>
+
+<li><p>
+Reiniciar `fail2ban`:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">sudo systemctl restart fail2ban
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org53183b3" class="outline-3">
+<h3 id="org53183b3"><span class="section-number-3">1.6.</span> Resultados Esperados</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li>Firewall activo y configurado.</li>
+<li>Servicios innecesarios deshabilitados.</li>
+<li>Logs monitoreados en tiempo real.</li>
+<li>Intentos de acceso no autorizados bloqueados.</li>
+</ul>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-tutorial-de-seguridad-en-linux:-m%C3%ADnimo-de-protecci%C3%B3n-ante-ataques-inform%C3%A1ticos-(ii)">2025-03-18-tutorial-de-seguridad-en-linux:-mínimo-de-protección-ante-ataques-informáticos-(ii)</a>
+</p>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-python.html">python</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-logs.html">logs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[bash]]></category>
+  <category><![CDATA[python]]></category>
+  <category><![CDATA[firewall]]></category>
+  <category><![CDATA[logs]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18--tutorial-de-seguridad-en-linux:-m%C3%ADnimo-de-protecci%C3%B3n-ante-ataques-inform%C3%A1ticos-(i).html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18--tutorial-de-seguridad-en-linux:-m%C3%ADnimo-de-protecci%C3%B3n-ante-ataques-inform%C3%A1ticos-(i).html</guid>
+  <pubDate>Tue, 18 Mar 2025 20:43:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Configuración Mínima de Seguridad con Scripts Bash y Python]]></title>
+  <description><![CDATA[
+<p>
+Por Qwen AI
+</p>
+<div id="outline-container-orgdba67ba" class="outline-2">
+<h2 id="orgdba67ba"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Este documento describe cómo configurar una seguridad mínima en un sistema Linux utilizando scripts escritos en <b><b>Bash</b></b> y <b><b>Python</b></b>. Las medidas incluyen:
+</p>
+<ul class="org-ul">
+<li>Configuración básica de un <b><b>firewall</b></b> con IPTables.</li>
+<li>Bloqueo de IPs sospechosas (anti-botnet).</li>
+<li>Protección contra escaneos de puertos.</li>
+<li>Configuración de políticas de red seguras.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4f45fda" class="outline-2">
+<h2 id="org4f45fda"><span class="section-number-2">2.</span> Configuración Básica del Firewall con IPTables (Bash)</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+El siguiente script configura un firewall básico utilizando IPTables para permitir solo el tráfico necesario.
+</p>
+
+<p>
+<b><b>Script Bash:</b></b>
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Limpiar todas las reglas existentes</span>
+iptables -F
+iptables -X
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Pol&#237;tica por defecto: Denegar todo el tr&#225;fico entrante y saliente</span>
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT ACCEPT
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Permitir tr&#225;fico local (loopback)</span>
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A OUTPUT -o lo -j ACCEPT
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Permitir conexiones establecidas o relacionadas</span>
+iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Permitir SSH (puerto 22) desde una IP espec&#237;fica (opcional)</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Reemplaza "TU_IP" con tu direcci&#243;n IP p&#250;blica</span>
+iptables -A INPUT -p tcp --dport 22 -s TU_IP -j ACCEPT
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Permitir HTTP (puerto 80) y HTTPS (puerto 443)</span>
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Registrar intentos de acceso no autorizados</span>
+iptables -A INPUT -j LOG --log-prefix <span style="color: #005F00;">"IPTables-Dropped: "</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Guardar las reglas de IPTables</span>
+iptables-save &gt; /etc/iptables/rules.v4
+</pre>
+</div>
+
+<p>
+<b><b>Notas:</b></b>
+</p>
+<ul class="org-ul">
+<li>Asegúrate de tener permisos de superusuario (`sudo`) para ejecutar este script.</li>
+<li>Si bloqueas accidentalmente el acceso SSH, puedes perder el control remoto del servidor.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org414e930" class="outline-2">
+<h2 id="org414e930"><span class="section-number-2">3.</span> Bloqueo de IPs Sospechosas (Anti-Botnet)</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+El siguiente script bloquea IPs sospechosas utilizando una lista negra predefinida.
+</p>
+
+<p>
+<b><b>Script Bash:</b></b>
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Descargar una lista negra de IPs conocidas (por ejemplo, Emerging Threats)</span>
+wget -q https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt -O /tmp/blocked_ips.txt
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Leer el archivo y bloquear cada IP</span>
+<span style="color: #D70000;">while </span><span style="color: #1F55A0;">read</span> -r ip; <span style="color: #D70000;">do</span>
+    <span style="color: #D70000;">if</span> [[ $<span style="color: #004651;">ip</span> =~ ^[0-9]+<span style="color: #005F00;">\.</span>[0-9]+<span style="color: #005F00;">\.</span>[0-9]+<span style="color: #005F00;">\.</span>[0-9]+$ ]]; <span style="color: #D70000;">then</span>
+        iptables -A INPUT -s <span style="color: #005F00;">"$ip"</span> -j DROP
+        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Bloqueada IP: $ip"</span>
+    <span style="color: #D70000;">fi</span>
+<span style="color: #D70000;">done</span> &lt; /tmp/blocked_ips.txt
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Guardar las reglas de IPTables</span>
+iptables-save &gt; /etc/iptables/rules.v4
+</pre>
+</div>
+
+<p>
+<b><b>Notas:</b></b>
+</p>
+<ul class="org-ul">
+<li>La lista negra puede actualizarse periódicamente para mantenerse al día con nuevas amenazas.</li>
+<li>Puedes personalizar la fuente de la lista negra según tus necesidades.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9ef1ace" class="outline-2">
+<h2 id="org9ef1ace"><span class="section-number-2">4.</span> Protección Contra Escaneos de Puertos (Python)</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+El siguiente script utiliza Python para monitorear intentos de escaneo de puertos y bloquear IPs sospechosas.
+</p>
+
+<p>
+<b><b>Script Python:</b></b>
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #D70000;">import</span> os
+<span style="color: #D70000;">import</span> time
+<span style="color: #D70000;">from</span> collections <span style="color: #D70000;">import</span> defaultdict
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Diccionario para rastrear intentos de conexi&#243;n por IP</span>
+<span style="color: #004651;">connection_attempts</span> = defaultdict(<span style="color: #1F55A0;">int</span>)
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Umbral de intentos sospechosos</span>
+<span style="color: #004651;">THRESHOLD</span> = 5
+<span style="color: #004651;">BLOCK_TIME</span> = 60  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Tiempo en segundos para bloquear una IP</span>
+
+<span style="color: #D70000;">def</span> <span style="color: #AF8700;">block_ip</span>(ip):
+    <span style="color: #004700; font-style: italic;">"""Bloquea una IP usando IPTables."""</span>
+    os.system(f<span style="color: #005F00;">"iptables -A INPUT -s </span>{ip}<span style="color: #005F00;"> -j DROP"</span>)
+    <span style="color: #1F55A0;">print</span>(f<span style="color: #005F00;">"Bloqueada IP sospechosa: </span>{ip}<span style="color: #005F00;">"</span>)
+
+<span style="color: #D70000;">def</span> <span style="color: #AF8700;">monitor_logs</span>():
+    <span style="color: #004700; font-style: italic;">"""Monitorea los logs del sistema en busca de intentos de conexi&#243;n."""</span>
+    <span style="color: #D70000;">with</span> <span style="color: #1F55A0;">open</span>(<span style="color: #005F00;">"/var/log/auth.log"</span>, <span style="color: #005F00;">"r"</span>) <span style="color: #D70000;">as</span> log_file:
+        log_file.seek(0, 2)  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Ir al final del archivo</span>
+        <span style="color: #D70000;">while</span> <span style="color: #AF005F;">True</span>:
+            <span style="color: #004651;">line</span> = log_file.readline()
+            <span style="color: #D70000;">if</span> <span style="color: #005F00;">"Failed password"</span> <span style="color: #D70000;">in</span> line:
+                <span style="color: #004651;">ip</span> = line.split(<span style="color: #005F00;">"from "</span>)[1].split(<span style="color: #005F00;">" port"</span>)[0]
+                <span style="color: #004651;">connection_attempts</span>[ip] += 1
+                <span style="color: #1F55A0;">print</span>(f<span style="color: #005F00;">"Intento de conexi&#243;n desde: </span>{ip}<span style="color: #005F00;"> (</span>{connection_attempts[ip]}<span style="color: #005F00;"> intentos)"</span>)
+
+                <span style="color: #D70000;">if</span> connection_attempts[ip] &gt;= THRESHOLD:
+                    block_ip(ip)
+                    time.sleep(BLOCK_TIME)
+                    <span style="color: #004651;">connection_attempts</span>[ip] = 0  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Reiniciar contador</span>
+            time.sleep(1)
+
+<span style="color: #D70000;">if</span> <span style="color: #1F55A0;">__name__</span> == <span style="color: #005F00;">"__main__"</span>:
+    monitor_logs()
+</pre>
+</div>
+
+<p>
+<b><b>Notas:</b></b>
+</p>
+<ul class="org-ul">
+<li>Este script requiere acceso a los logs del sistema (`/var/log/auth.log`).</li>
+<li>Asegúrate de tener instalado Python y permisos de superusuario.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4778546" class="outline-2">
+<h2 id="org4778546"><span class="section-number-2">5.</span> Configuración de Políticas de Red Seguras (Bash)</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+El siguiente script configura políticas adicionales para mejorar la seguridad de la red.
+</p>
+
+<p>
+<b><b>Script Bash:</b></b>
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Deshabilitar el redireccionamiento IP</span>
+<span style="color: #1F55A0;">echo</span> 0 &gt; /proc/sys/net/ipv4/conf/all/send_redirects
+<span style="color: #1F55A0;">echo</span> 0 &gt; /proc/sys/net/ipv4/conf/default/send_redirects
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Habilitar protecci&#243;n contra SYN Flood</span>
+<span style="color: #1F55A0;">echo</span> 1 &gt; /proc/sys/net/ipv4/tcp_syncookies
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Deshabilitar el reenv&#237;o de paquetes IPv4</span>
+<span style="color: #1F55A0;">echo</span> 0 &gt; /proc/sys/net/ipv4/ip_forward
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Habilitar protecci&#243;n contra IP Spoofing</span>
+<span style="color: #D70000;">for</span> interface<span style="color: #D70000;"> in</span> $(<span style="color: #1F55A0; font-weight: bold;">ls /sys/class/net | grep -v lo</span>); <span style="color: #D70000;">do</span>
+    <span style="color: #1F55A0;">echo</span> 1 &gt; /proc/sys/net/ipv4/conf/$<span style="color: #004651;">interface</span>/rp_filter
+<span style="color: #D70000;">done</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Guardar cambios en sysctl.conf</span>
+cat &lt;&lt;EOF &gt;&gt; /etc/sysctl.conf
+<span style="color: #005F00;">net.ipv4.conf.all.send_redirects = 0</span>
+<span style="color: #005F00;">net.ipv4.conf.default.send_redirects = 0</span>
+<span style="color: #005F00;">net.ipv4.tcp_syncookies = 1</span>
+<span style="color: #005F00;">net.ipv4.ip_forward = 0</span>
+<span style="color: #005F00;">EOF</span>
+
+sysctl -p
+</pre>
+</div>
+
+<p>
+<b><b>Notas:</b></b>
+</p>
+<ul class="org-ul">
+<li>Estas configuraciones mejoran la seguridad del sistema contra ataques comunes.</li>
+<li>Asegúrate de probar los cambios en un entorno seguro antes de aplicarlos en producción.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2b7936c" class="outline-2">
+<h2 id="org2b7936c"><span class="section-number-2">6.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Este documento proporciona scripts básicos en Bash y Python para configurar una seguridad mínima en sistemas Linux. Recuerda que estas medidas son solo un punto de partida y deben complementarse con auditorías regulares, actualizaciones de software y mejores prácticas de seguridad.
+</p>
+
+<p>
+Para más información, consulta la documentación oficial de IPTables y las recomendaciones de seguridad para tu distribución de Linux.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-python.html">python</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-internet.html">internet</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[bash]]></category>
+  <category><![CDATA[python]]></category>
+  <category><![CDATA[internet]]></category>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-configuraci%C3%B3n-m%C3%ADnima-de-seguridad-con-scripts-bash-y-python.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-configuraci%C3%B3n-m%C3%ADnima-de-seguridad-con-scripts-bash-y-python.html</guid>
+  <pubDate>Tue, 18 Mar 2025 16:25:00 +0100</pubDate>
+</item>
 <item>
   <title><![CDATA[Opciones para Ordenar Downloads en Linux OSs]]></title>
   <description><![CDATA[
@@ -209,6 +873,606 @@ La opción 1.1 (<code>find</code> y <code>mv</code>) es la más simple y directa
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-17-opciones-para-ordenar-downloads-en-linux-oss.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-17-opciones-para-ordenar-downloads-en-linux-oss.html</guid>
   <pubDate>Mon, 17 Mar 2025 08:35:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Cómo limpiar archivos y carpetas vacías en Linux con un script Bash]]></title>
+  <description><![CDATA[
+<div id="outline-container-org5ab3c26" class="outline-2">
+<h2 id="org5ab3c26"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+¿Alguna vez te has encontrado con archivos o carpetas vacías en tu sistema que ocupan espacio innecesario? En este post, te mostraré cómo crear un script en <b><b>Bash</b></b> que te permita limpiar automáticamente todos los archivos y carpetas con 0 bytes desde ayer hacia atrás. Este script es ideal para mantener tu sistema organizado y liberar espacio en disco.
+</p>
+</div>
+</div>
+<div id="outline-container-org02f68c2" class="outline-2">
+<h2 id="org02f68c2"><span class="section-number-2">2.</span> Requisitos</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Un sistema Linux (Ubuntu, Debian, Fedora, etc.).</li>
+<li>Conocimientos básicos de terminal y Bash.</li>
+<li>Permisos de escritura en el directorio que deseas limpiar.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5034a50" class="outline-2">
+<h2 id="org5034a50"><span class="section-number-2">3.</span> El Script</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+A continuación, te presento el script en Bash que realiza la limpieza. Puedes copiarlo y pegarlo directamente en tu terminal o guardarlo en un archivo `.sh` para ejecutarlo más tarde.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Pide al usuario que ingrese el directorio a limpiar</span>
+<span style="color: #1F55A0;">read</span> -p <span style="color: #005F00;">"Introduce la ruta del directorio que deseas limpiar: "</span> DIRECTORIO
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verifica si el directorio existe</span>
+<span style="color: #D70000;">if</span> [ <span style="color: #1F55A0; font-weight: bold;">!</span> -d <span style="color: #005F00;">"$DIRECTORIO"</span> ]; <span style="color: #D70000;">then</span>
+  <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"El directorio $DIRECTORIO no existe."</span>
+  <span style="color: #D70000;">exit</span> 1
+<span style="color: #D70000;">fi</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Busca y elimina archivos vac&#237;os (0 bytes) desde ayer hacia atr&#225;s</span>
+find <span style="color: #005F00;">"$DIRECTORIO"</span> -type f -size 0 -mtime +0 -exec rm -v {} <span style="color: #005F00;">\;</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Busca y elimina carpetas vac&#237;as desde ayer hacia atr&#225;s</span>
+find <span style="color: #005F00;">"$DIRECTORIO"</span> -type d -empty -mtime +0 -exec rmdir -v {} <span style="color: #005F00;">\;</span>
+
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Limpieza completada. Archivos y carpetas vac&#237;as eliminados."</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc000f9d" class="outline-2">
+<h2 id="orgc000f9d"><span class="section-number-2">4.</span> Explicación del Script</h2>
+<div class="outline-text-2" id="text-4">
+<ol class="org-ol">
+<li><b><b>Pide el directorio</b></b>: El script comienza solicitando al usuario que introduzca la ruta del directorio que desea limpiar.</li>
+<li><b><b>Verifica el directorio</b></b>: Se verifica si el directorio existe. Si no existe, el script termina con un mensaje de error.</li>
+<li><b><b>Busca archivos vacíos</b></b>: Usa el comando `find` para buscar archivos con 0 bytes (`-size 0`) que hayan sido modificados hace más de un día (`-mtime +0`). Luego, los elimina con `rm`.</li>
+<li><b><b>Busca carpetas vacías</b></b>: También usa `find` para buscar carpetas vacías (`-type d -empty`) que hayan sido modificadas hace más de un día (`-mtime +0`). Luego, las elimina con `rmdir`.</li>
+<li><b><b>Mensaje de finalización</b></b>: Al terminar, el script muestra un mensaje indicando que la limpieza ha sido completada.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga68dd0b" class="outline-2">
+<h2 id="orga68dd0b"><span class="section-number-2">5.</span> Cómo Usar el Script</h2>
+<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li>Copia el script en un archivo, por ejemplo, `clean<sub>empty</sub><sub>files.sh</sub>`.</li>
+<li>Haz que el script sea ejecutable:
+```bash
+chmod +x clean<sub>empty</sub><sub>files.sh</sub></li>
+</ol>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-script.html">script</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bytes.html">bytes</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-deepseek.html">deepseek</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[script]]></category>
+  <category><![CDATA[bash]]></category>
+  <category><![CDATA[bytes]]></category>
+  <category><![CDATA[deepseek]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-15-c%C3%B3mo-limpiar-archivos-y-carpetas-vac%C3%ADas-en-linux-con-un-script-bash.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-15-c%C3%B3mo-limpiar-archivos-y-carpetas-vac%C3%ADas-en-linux-con-un-script-bash.html</guid>
+  <pubDate>Sat, 15 Mar 2025 19:05:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Cómo Generar un Prompt en IA: Guía Detallada, Ventajas e Inconvenientes]]></title>
+  <description><![CDATA[
+<div id="outline-container-orgc44c00d" class="outline-2">
+<h2 id="orgc44c00d"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+La inteligencia artificial (IA) ha revolucionado la forma en que interactuamos con la tecnología. Desde chatbots hasta herramientas de generación de contenido, la IA se ha convertido en una aliada indispensable para profesionales, creativos y entusiastas de la tecnología. Sin embargo, para aprovechar al máximo estas herramientas, es fundamental entender cómo <b><b>generar un prompt efectivo</b></b>. En este artículo, exploraremos en detalle qué es un prompt, cómo crearlo, sus ventajas, inconvenientes y ejemplos prácticos para que puedas dominar esta habilidad.
+</p>
+</div>
+</div>
+<div id="outline-container-org0776566" class="outline-2">
+<h2 id="org0776566"><span class="section-number-2">2.</span> ¿Qué es un Prompt en IA?</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Un <b><b>prompt</b></b> es una instrucción, pregunta o conjunto de indicaciones que se le proporciona a un modelo de inteligencia artificial para que genere una respuesta o realice una tarea específica. Es la forma en que nos comunicamos con la IA y le decimos qué queremos que haga.
+</p>
+
+<p>
+Por ejemplo, si le pides a ChatGPT que "escriba un poema sobre el océano", esa frase es el prompt. La calidad y claridad del prompt influyen directamente en la calidad de la respuesta generada por la IA.
+</p>
+</div>
+</div>
+<div id="outline-container-orgab3f9dc" class="outline-2">
+<h2 id="orgab3f9dc"><span class="section-number-2">3.</span> ¿Cómo Generar un Prompt Efectivo?</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Crear un prompt efectivo requiere claridad, precisión y contexto. A continuación, te explicamos los pasos clave para generar un prompt que obtenga los mejores resultados:
+</p>
+</div>
+<div id="outline-container-orgf0a1c54" class="outline-3">
+<h3 id="orgf0a1c54"><span class="section-number-3">3.1.</span> 1. Define el Objetivo</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>Antes de escribir el prompt, pregúntate: ¿Qué quiero lograr con la IA? ¿Necesito información, un texto creativo, un análisis de datos o una solución a un problema?</li>
+<li>Ejemplo: Si quieres que la IA te ayude a redactar un correo electrónico, tu objetivo es claro: generar un mensaje profesional y efectivo.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc95ccb3" class="outline-3">
+<h3 id="orgc95ccb3"><span class="section-number-3">3.2.</span> 2. Sé Específico</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Cuanto más específico seas, mejor será la respuesta. Incluye detalles como el tono, el estilo, la longitud o el formato que deseas.</li>
+<li>Ejemplo: En lugar de decir "escribe un correo", podrías decir: "Escribe un correo electrónico formal de 150 palabras para solicitar una reunión con un cliente potencial".</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org58d3398" class="outline-3">
+<h3 id="org58d3398"><span class="section-number-3">3.3.</span> 3. Proporciona Contexto</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>La IA funciona mejor cuando tiene suficiente información. Si el prompt requiere conocimientos específicos, inclúyelos.</li>
+<li>Ejemplo: Si pides un análisis de mercado, proporciona datos como el sector, la ubicación geográfica y el público objetivo.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org920ddfb" class="outline-3">
+<h3 id="org920ddfb"><span class="section-number-3">3.4.</span> 4. Usa un Lenguaje Claro y Directo</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li>Evita ambigüedades. Usa un lenguaje sencillo y evita frases confusas.</li>
+<li>Ejemplo: En lugar de "haz algo sobre marketing", di: "Genera una estrategia de marketing digital para una tienda de ropa sostenible".</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5dda202" class="outline-3">
+<h3 id="org5dda202"><span class="section-number-3">3.5.</span> 5. Itera y Ajusta</h3>
+<div class="outline-text-3" id="text-3-5">
+<ul class="org-ul">
+<li>Si la respuesta no es lo que esperabas, ajusta el prompt. Prueba diferentes enfoques hasta obtener el resultado deseado.</li>
+<li>Ejemplo: Si la IA genera un texto demasiado formal, puedes pedirle: "Reescribe el texto con un tono más casual y amigable".</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5d26e1b" class="outline-2">
+<h2 id="org5d26e1b"><span class="section-number-2">4.</span> Ventajas de Usar Prompts en IA</h2>
+<div class="outline-text-2" id="text-4">
+<ol class="org-ol">
+<li><b><b>Ahorro de Tiempo</b></b>: Los prompts permiten automatizar tareas repetitivas, como redactar textos, generar ideas o analizar datos.</li>
+<li><b><b>Creatividad ilimitada</b></b>: La IA puede generar ideas y soluciones innovadoras que quizás no habías considerado.</li>
+<li><b><b>Personalización</b></b>: Puedes ajustar los prompts para obtener resultados específicos según tus necesidades.</li>
+<li><b><b>Accesibilidad</b></b>: No necesitas ser un experto en programación para usar herramientas de IA basadas en prompts.</li>
+<li><b><b>Escalabilidad</b></b>: Puedes generar grandes volúmenes de contenido o análisis en poco tiempo.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgaa52ac1" class="outline-2">
+<h2 id="orgaa52ac1"><span class="section-number-2">5.</span> Inconvenientes y Desafíos</h2>
+<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li><b><b>Dependencia de la Calidad del Prompt</b></b>: Si el prompt no está bien formulado, la respuesta puede ser irrelevante o de baja calidad.</li>
+<li><b><b>Sesgos en la IA</b></b>: Los modelos de IA pueden reflejar sesgos presentes en los datos con los que fueron entrenados.</li>
+<li><b><b>Falta de Originalidad</b></b>: A veces, la IA genera contenido que puede parecer genérico o poco original.</li>
+<li><b><b>Limitaciones Técnicas</b></b>: La IA no siempre entiende prompts complejos o ambiguos.</li>
+<li><b><b>Riesgo de Sobreconfianza</b></b>: Es importante verificar y editar las respuestas generadas por la IA, ya que pueden contener errores.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orge395047" class="outline-2">
+<h2 id="orge395047"><span class="section-number-2">6.</span> Ejemplos Prácticos de Prompts</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas generadas por IA:
+</p>
+</div>
+<div id="outline-container-orgc43109c" class="outline-3">
+<h3 id="orgc43109c"><span class="section-number-3">6.1.</span> Ejemplo 1: Generación de Contenido</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li><b><b>Prompt</b></b>: "Escribe un blog de 500 palabras sobre los beneficios del ejercicio físico para la salud mental, con un tono motivacional y dirigido a jóvenes adultos."</li>
+<li><b><b>Respuesta de la IA</b></b>: La IA generará un texto estructurado, con introducción, desarrollo y conclusión, destacando cómo el ejercicio reduce el estrés y mejora el estado de ánimo.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org88c76f8" class="outline-3">
+<h3 id="org88c76f8"><span class="section-number-3">6.2.</span> Ejemplo 2: Análisis de Datos</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li><b><b>Prompt</b></b>: "Analiza los siguientes datos de ventas mensuales y sugiere estrategias para aumentar las ventas en el próximo trimestre: [datos]."</li>
+<li><b><b>Respuesta de la IA</b></b>: La IA identificará patrones, como meses con bajas ventas, y propondrá acciones como promociones o campañas publicitarias.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9897e58" class="outline-3">
+<h3 id="org9897e58"><span class="section-number-3">6.3.</span> Ejemplo 3: Creatividad</h3>
+<div class="outline-text-3" id="text-6-3">
+<ul class="org-ul">
+<li><b><b>Prompt</b></b>: "Inventa una historia corta de ciencia ficción sobre un viajero del tiempo que intenta salvar el futuro."</li>
+<li><b><b>Respuesta de la IA</b></b>: La IA creará una narrativa con personajes, conflicto y resolución, ambientada en un futuro distópico.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc8ac6d4" class="outline-2">
+<h2 id="orgc8ac6d4"><span class="section-number-2">7.</span> Consejos Avanzados para Mejorar tus Prompts</h2>
+<div class="outline-text-2" id="text-7">
+<ol class="org-ol">
+<li><b><b>Usa Ejemplos</b></b>: Proporciona ejemplos de lo que buscas. Por ejemplo: "Escribe un poema como este: [ejemplo]."</li>
+<li><b><b>Divide Tareas Complejas</b></b>: Si el prompt es muy amplio, divídelo en partes. Por ejemplo: "Primero, describe el problema. Luego, sugiere soluciones."</li>
+<li><b><b>Experimenta con Diferentes Modelos</b></b>: Algunos modelos de IA son mejores para tareas específicas. Prueba varias herramientas para encontrar la que mejor se adapte a tus necesidades.</li>
+<li><b><b>Aprende de la Comunidad</b></b>: Explora cómo otros usuarios formulan sus prompts en foros o redes sociales.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org719d7a6" class="outline-2">
+<h2 id="org719d7a6"><span class="section-number-2">8.</span> Herramientas Populares para Generar Prompts</h2>
+<div class="outline-text-2" id="text-8">
+<ol class="org-ol">
+<li><b><b>ChatGPT</b></b>: Ideal para textos, ideas y conversaciones.</li>
+<li><b><b>MidJourney</b></b>: Perfecto para generar imágenes a partir de prompts visuales.</li>
+<li><b><b>Google Bard</b></b>: Útil para búsquedas y análisis de información.</li>
+<li><b><b>DALL-E</b></b>: Especializado en creación de imágenes a partir de descripciones textuales.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org85fe441" class="outline-2">
+<h2 id="org85fe441"><span class="section-number-2">9.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo las herramientas de IA. Con un enfoque claro, específico y contextualizado, puedes obtener respuestas de alta calidad que te ayuden a ahorrar tiempo, potenciar tu creatividad y resolver problemas complejos. Sin embargo, es importante recordar que la IA es una herramienta, no un reemplazo para el pensamiento crítico y la creatividad humana.
+</p>
+
+<p>
+¿Listo para empezar? ¡Experimenta con diferentes prompts y descubre todo lo que la IA puede hacer por ti!
+</p>
+</div>
+</div>
+<div id="outline-container-orgee5b793" class="outline-2">
+<h2 id="orgee5b793"><span class="section-number-2">10.</span> Gráficos Sugeridos</h2>
+<div class="outline-text-2" id="text-10">
+<ol class="org-ol">
+<li>Diagrama de flujo: "Pasos para crear un prompt efectivo".</li>
+</ol>
+
+<figure id="orge50f956">
+<img src="images/diagrama_flujo_prompt.png" alt="diagrama_flujo_prompt.png">
+
+</figure>
+
+
+<ol class="org-ol">
+<li>Comparación visual: "Prompt difuso vs. Prompt específico".</li>
+</ol>
+
+
+<figure id="orgcd2e64a">
+<img src="images/comparacion_prompt_ditaa.png" alt="comparacion_prompt_ditaa.png">
+
+</figure>
+
+
+<ol class="org-ol">
+<li>Ejemplos de prompts y respuestas generadas por IA en formato de tabla.</li>
+</ol>
+<table>
+<caption class="t-above"><span class="table-number">Table 1:</span> Ejemplos de Prompts y Respuestas Generadas por IA</caption>
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Tipo de Prompt</th>
+<th scope="col" class="org-left">Ejemplo de Prompt</th>
+<th scope="col" class="org-left">Respuesta Generada por IA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Genérico</td>
+<td class="org-left">"Escribe algo sobre el clima."</td>
+<td class="org-left">"El clima es un tema fascinante. Hoy está soleado y cálido."</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Específico</td>
+<td class="org-left">"Escribe un poema de 4 líneas</td>
+<td class="org-left">"Bajo el cielo azul,</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">sobre el mar en verano."</td>
+<td class="org-left">el mar susurra su canción,</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">las olas besan la arena,</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">y el verano es pura emoción."</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Analítico</td>
+<td class="org-left">"Analiza las ventas del último</td>
+<td class="org-left">"Las ventas del último trimestre muestran un crecimiento del</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">trimestre y sugiere mejoras."</td>
+<td class="org-left">10%. Se recomienda aumentar la inversión en publicidad y</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">mejorar la experiencia del cliente."</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Creativo</td>
+<td class="org-left">"Inventa una historia corta</td>
+<td class="org-left">"Érase una vez un robot llamado Leo que quería aprender a</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">sobre un robot que quiere</td>
+<td class="org-left">bailar. Aunque al principio tropezaba, con práctica y</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">aprender a bailar."</td>
+<td class="org-left">dedicación, logró convertirse en el mejor bailarín de la</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">galaxia."</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>
+¡Esperamos que esta guía te haya sido útil! Si tienes preguntas o quieres compartir tus experiencias con prompts, déjanos un comentario. 😊
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-prompt.html">prompt</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-inteligencia.html">inteligencia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-artificial.html">artificial</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[prompt]]></category>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[ai]]></category>
+  <category><![CDATA[inteligencia]]></category>
+  <category><![CDATA[artificial]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-08-c%C3%B3mo-generar-un-prompt-en-ia:-gu%C3%ADa-detallada,-ventajas-e-inconvenientes.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-08-c%C3%B3mo-generar-un-prompt-en-ia:-gu%C3%ADa-detallada,-ventajas-e-inconvenientes.html</guid>
+  <pubDate>Sat, 08 Mar 2025 08:19:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Gestionando Dos Blogs Diferentes con org-static-blog en Emacs]]></title>
+  <description><![CDATA[
+<div id="outline-container-org40b1cdb" class="outline-2">
+<h2 id="org40b1cdb"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+`org-static-blog` es una herramienta poderosa para crear blogs estáticos desde Emacs, pero por defecto está diseñada para manejar un solo blog. Si quieres trabajar con dos blogs diferentes (por ejemplo, uno personal y otro profesional), necesitas ajustar tu configuración en Emacs 28 para que soporte múltiples instancias. En este artículo, te guiaré paso a paso para lograrlo.
+</p>
+</div>
+</div>
+<div id="outline-container-org5b8e508" class="outline-2">
+<h2 id="org5b8e508"><span class="section-number-2">2.</span> Estrategia general</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+La clave para manejar dos blogs con `org-static-blog` es usar configuraciones separadas para cada uno, almacenadas en variables distintas, y luego alternar entre ellas según el blog que estés editando o publicando. Esto implica:
+</p>
+<ul class="org-ul">
+<li>Tener directorios separados para posts y publicaciones.</li>
+<li>Definir plantillas y parámetros específicos por blog.</li>
+<li>Usar funciones personalizadas en Emacs para cambiar entre configuraciones.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4f6d993" class="outline-2">
+<h2 id="org4f6d993"><span class="section-number-2">3.</span> Configuración inicial</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Primero, asegúrate de tener `org-static-blog` instalado en Emacs 28 (instálalo con `M-x package-install RET org-static-blog` si no lo has hecho). Luego, organiza tus directorios. Por ejemplo:
+</p>
+<ul class="org-ul">
+<li>Blog 1 (personal): `~/blog-personal/`</li>
+<li>Blog 2 (profesional): `~/blog-profesional/`</li>
+</ul>
+
+<p>
+Dentro de cada directorio, crea subdirectorios para posts y publicaciones:
+</p>
+<ul class="org-ul">
+<li>`~/blog-personal/posts/` y `~/blog-personal/public/`</li>
+<li>`~/blog-profesional/posts/` y `~/blog-profesional/public/`</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org638003e" class="outline-2">
+<h2 id="org638003e"><span class="section-number-2">4.</span> Configurar las variables para cada blog</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+En tu `init.el`, define las configuraciones de ambos blogs usando variables personalizadas. Aquí un ejemplo:
+</p>
+
+<p>
+```emacs-lisp
+;; Configuración para Blog Personal
+(defvar my-blog-personal-settings
+  '((org-static-blog-publish-title . "Blog Personal")
+    (org-static-blog-publish-url . "<a href="https://mi-blog-personal.com/">https://mi-blog-personal.com/</a>")
+    (org-static-blog-publish-directory . "~/blog-personal/public/")
+    (org-static-blog-posts-directory . "~/blog-personal/posts/")
+    (org-static-blog-drafts-directory . "~/blog-personal/drafts/")
+    (org-static-blog-page-header . "&lt;h1&gt;Mi Blog Personal&lt;/h1&gt;")
+    (org-static-blog-post-template . "&lt;h1&gt;%title&lt;/h1&gt;&lt;div&gt;%date&lt;/div&gt;%content")))
+</p>
+
+<p>
+;; Configuración para Blog Profesional
+(defvar my-blog-pro-settings
+  '((org-static-blog-publish-title . "Blog Profesional")
+    (org-static-blog-publish-url . "<a href="https://mi-blog-pro.com/">https://mi-blog-pro.com/</a>")
+    (org-static-blog-publish-directory . "~/blog-profesional/public/")
+    (org-static-blog-posts-directory . "~/blog-profesional/posts/")
+    (org-static-blog-drafts-directory . "~/blog-profesional/drafts/")
+    (org-static-blog-page-header . "&lt;h1&gt;Trabajo y Tecnología&lt;/h1&gt;")
+    (org-static-blog-post-template . "&lt;h1&gt;%title&lt;/h1&gt;&lt;div&gt;%date&lt;/div&gt;&lt;div&gt;Por un experto&lt;/div&gt;%content")))
+</p>
+
+<p>
+Cada lista asociativa define las variables esenciales de org-static-blog para un blog específico.
+</p>
+
+<p>
+Crear funciones para alternar configuraciones Necesitas una manera de aplicar la configuración correcta antes de trabajar en un blog. Define funciones en tu init.el para esto:
+</p>
+
+<p>
+emacs
+(defun my-set-blog-personal ()
+  "Activa la configuración del blog personal."
+  (interactive)
+  (dolist (setting my-blog-personal-settings)
+    (set (car setting) (cdr setting)))
+  (message "Configuración del Blog Personal activada"))
+</p>
+
+<p>
+(defun my-set-blog-pro ()
+  "Activa la configuración del blog profesional."
+  (interactive)
+  (dolist (setting my-blog-pro-settings)
+    (set (car setting) (cdr setting)))
+  (message "Configuración del Blog Profesional activada"))
+</p>
+
+<p>
+M-x my-set-blog-personal configura Emacs para trabajar con el blog personal.
+M-x my-set-blog-pro hace lo mismo para el blog profesional.
+</p>
+
+<p>
+Crear posts para cada blog Ahora puedes crear posts en los directorios correspondientes. Por ejemplo:
+</p>
+</div>
+<div id="outline-container-orgb63aec8" class="outline-3">
+<h3 id="orgb63aec8"><span class="section-number-3">4.1.</span> Post para el Blog Personal (~/blog-personal/posts/2025-02-25-viaje.org):</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+org
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org06f6023" class="outline-2">
+<h2 id="org06f6023"><span class="section-number-2">5.</span> Reflexiones</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Hoy escribo sobre un viaje reciente que hice&#x2026;
+</p>
+</div>
+<div id="outline-container-org5091224" class="outline-3">
+<h3 id="org5091224"><span class="section-number-3">5.1.</span> Post para el Blog Profesional (~/blog-profesional/posts/2025-02-25-proyecto.org):</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+org
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org95d62c9" class="outline-2">
+<h2 id="org95d62c9"><span class="section-number-2">6.</span> Detalles</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Este post detalla un proyecto técnico en el que estoy trabajando&#x2026;
+</p>
+
+<p>
+Publicar cada blog Para publicar:
+</p>
+
+<p>
+Activa la configuración del blog deseado:
+    M-x my-set-blog-personal para el personal.
+    M-x my-set-blog-pro para el profesional.
+Publica:
+    M-x org-static-blog-publish-file RET para un archivo específico.
+    M-x org-static-blog-publish para regenerar todo el blog.
+</p>
+
+<p>
+Los archivos HTML se generarán en el directorio public/ correspondiente a cada blog.
+</p>
+
+<p>
+Personalizar aún más (opcional)
+</p>
+
+<p>
+Tags por blog: Usa #+TAGS: en los posts de cada blog según tus necesidades (como expliqué en mi respuesta anterior).
+Estilos CSS: Añade un archivo CSS diferente en cada org-static-blog-page-header para distinguir visualmente los blogs.
+Atajos de teclado: Asigna las funciones a teclas para mayor rapidez, por ejemplo:
+emacs
+</p>
+
+<p>
+(global-set-key (kbd "C-c b p") 'my-set-blog-personal)
+(global-set-key (kbd "C-c b r") 'my-set-blog-pro)
+</p>
+
+<p>
+Solución de problemas
+</p>
+
+<p>
+Configuración no cambia: Verifica que las funciones my-set-blog-* estén actualizando las variables correctamente (usa C-h v org-static-blog-publish-directory para inspeccionar).
+Posts mezclados: Asegúrate de que los directorios de posts sean distintos y que actives la configuración correcta antes de publicar.
+Errores de publicación: Confirma que los directorios existen y tienen permisos adecuados.
+</p>
+
+<p>
+Conclusión Con este método, puedes gestionar dos blogs diferentes en org-static-blog desde Emacs 28 sin conflictos. Alternar entre configuraciones con funciones personalizadas te da flexibilidad y mantiene todo organizado. Es una solución práctica para quienes, como yo, queremos separar temas personales y profesionales sin abandonar nuestro flujo de trabajo en Org-mode. ¿Qué nombres le pondrías a tus dos blogs?
+TODO Próximos pasos
+</p>
+
+<p>
+Probar publicar ambos blogs en un solo comando con un script Elisp.
+Añadir un indicador visual en Emacs para saber qué blog está activo.
+Explorar cómo sincronizar cada blog con un repositorio Git diferente.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-blogging.html">blogging</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[blogging]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-gestionando-dos-blogs-diferentes-con-org-static-blog-en-emacs.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-gestionando-dos-blogs-diferentes-con-org-static-blog-en-emacs.html</guid>
+  <pubDate>Wed, 26 Feb 2025 08:37:00 +0100</pubDate>
 </item>
 </channel>
 </rss>

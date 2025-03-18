@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - emacs]]></title>
 <description><![CDATA[Example.com - emacs]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-emacs.html</link>
-<lastBuildDate>Tue, 18 Mar 2025 20:54:58 +0100</lastBuildDate>
+<lastBuildDate>Tue, 18 Mar 2025 21:00:57 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Por Qué Elegí GitHub para Publicar Mi Blog]]></title>
   <description><![CDATA[
@@ -996,16 +996,16 @@ Así que, ponte cómodo, abre tu Emacs (o instálalo si aún no lo tienes), y ac
 <item>
   <title><![CDATA[Gestionando Dos Blogs Diferentes con org-static-blog en Emacs]]></title>
   <description><![CDATA[
-<div id="outline-container-orgb6a6060" class="outline-2">
-<h2 id="orgb6a6060"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org40b1cdb" class="outline-2">
+<h2 id="org40b1cdb"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 `org-static-blog` es una herramienta poderosa para crear blogs estáticos desde Emacs, pero por defecto está diseñada para manejar un solo blog. Si quieres trabajar con dos blogs diferentes (por ejemplo, uno personal y otro profesional), necesitas ajustar tu configuración en Emacs 28 para que soporte múltiples instancias. En este artículo, te guiaré paso a paso para lograrlo.
 </p>
 </div>
 </div>
-<div id="outline-container-org8d54ac8" class="outline-2">
-<h2 id="org8d54ac8"><span class="section-number-2">2.</span> Estrategia general</h2>
+<div id="outline-container-org5b8e508" class="outline-2">
+<h2 id="org5b8e508"><span class="section-number-2">2.</span> Estrategia general</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 La clave para manejar dos blogs con `org-static-blog` es usar configuraciones separadas para cada uno, almacenadas en variables distintas, y luego alternar entre ellas según el blog que estés editando o publicando. Esto implica:
@@ -1017,8 +1017,8 @@ La clave para manejar dos blogs con `org-static-blog` es usar configuraciones se
 </ul>
 </div>
 </div>
-<div id="outline-container-org080fc10" class="outline-2">
-<h2 id="org080fc10"><span class="section-number-2">3.</span> Configuración inicial</h2>
+<div id="outline-container-org4f6d993" class="outline-2">
+<h2 id="org4f6d993"><span class="section-number-2">3.</span> Configuración inicial</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Primero, asegúrate de tener `org-static-blog` instalado en Emacs 28 (instálalo con `M-x package-install RET org-static-blog` si no lo has hecho). Luego, organiza tus directorios. Por ejemplo:
@@ -1037,8 +1037,8 @@ Dentro de cada directorio, crea subdirectorios para posts y publicaciones:
 </ul>
 </div>
 </div>
-<div id="outline-container-org36ff2ba" class="outline-2">
-<h2 id="org36ff2ba"><span class="section-number-2">4.</span> Configurar las variables para cada blog</h2>
+<div id="outline-container-org638003e" class="outline-2">
+<h2 id="org638003e"><span class="section-number-2">4.</span> Configurar las variables para cada blog</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 En tu `init.el`, define las configuraciones de ambos blogs usando variables personalizadas. Aquí un ejemplo:
@@ -1105,8 +1105,8 @@ M-x my-set-blog-pro hace lo mismo para el blog profesional.
 Crear posts para cada blog Ahora puedes crear posts en los directorios correspondientes. Por ejemplo:
 </p>
 </div>
-<div id="outline-container-org4891b9b" class="outline-3">
-<h3 id="org4891b9b"><span class="section-number-3">4.1.</span> Post para el Blog Personal (~/blog-personal/posts/2025-02-25-viaje.org):</h3>
+<div id="outline-container-orgb63aec8" class="outline-3">
+<h3 id="orgb63aec8"><span class="section-number-3">4.1.</span> Post para el Blog Personal (~/blog-personal/posts/2025-02-25-viaje.org):</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 org
@@ -1114,15 +1114,15 @@ org
 </div>
 </div>
 </div>
-<div id="outline-container-org013dabf" class="outline-2">
-<h2 id="org013dabf"><span class="section-number-2">5.</span> Reflexiones</h2>
+<div id="outline-container-org06f6023" class="outline-2">
+<h2 id="org06f6023"><span class="section-number-2">5.</span> Reflexiones</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Hoy escribo sobre un viaje reciente que hice&#x2026;
 </p>
 </div>
-<div id="outline-container-org65b167b" class="outline-3">
-<h3 id="org65b167b"><span class="section-number-3">5.1.</span> Post para el Blog Profesional (~/blog-profesional/posts/2025-02-25-proyecto.org):</h3>
+<div id="outline-container-org5091224" class="outline-3">
+<h3 id="org5091224"><span class="section-number-3">5.1.</span> Post para el Blog Profesional (~/blog-profesional/posts/2025-02-25-proyecto.org):</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 org
@@ -1130,8 +1130,8 @@ org
 </div>
 </div>
 </div>
-<div id="outline-container-orgd80a663" class="outline-2">
-<h2 id="orgd80a663"><span class="section-number-2">6.</span> Detalles</h2>
+<div id="outline-container-org95d62c9" class="outline-2">
+<h2 id="org95d62c9"><span class="section-number-2">6.</span> Detalles</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Este post detalla un proyecto técnico en el que estoy trabajando&#x2026;
@@ -1192,9 +1192,10 @@ Explorar cómo sincronizar cada blog con un repositorio Git diferente.
 </p>
 </div>
 </div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-blogging.html">blogging</a> </div>]]></description>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-blogging.html">blogging</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
   <category><![CDATA[emacs]]></category>
   <category><![CDATA[blogging]]></category>
+  <category><![CDATA[tutoriales]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-gestionando-dos-blogs-diferentes-con-org-static-blog-en-emacs.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-gestionando-dos-blogs-diferentes-con-org-static-blog-en-emacs.html</guid>
   <pubDate>Wed, 26 Feb 2025 08:37:00 +0100</pubDate>

@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - script]]></title>
 <description><![CDATA[Example.com - script]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-script.html</link>
-<lastBuildDate>Tue, 18 Mar 2025 20:54:52 +0100</lastBuildDate>
+<lastBuildDate>Tue, 18 Mar 2025 21:00:51 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Opciones para Ordenar Downloads en Linux OSs]]></title>
   <description><![CDATA[
@@ -390,16 +390,16 @@ Este script es una herramienta práctica para mantener tus PDFs organizados con 
 <item>
   <title><![CDATA[Cómo limpiar archivos y carpetas vacías en Linux con un script Bash]]></title>
   <description><![CDATA[
-<div id="outline-container-org911997b" class="outline-2">
-<h2 id="org911997b"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org5ab3c26" class="outline-2">
+<h2 id="org5ab3c26"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 ¿Alguna vez te has encontrado con archivos o carpetas vacías en tu sistema que ocupan espacio innecesario? En este post, te mostraré cómo crear un script en <b><b>Bash</b></b> que te permita limpiar automáticamente todos los archivos y carpetas con 0 bytes desde ayer hacia atrás. Este script es ideal para mantener tu sistema organizado y liberar espacio en disco.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc96c5e7" class="outline-2">
-<h2 id="orgc96c5e7"><span class="section-number-2">2.</span> Requisitos</h2>
+<div id="outline-container-org02f68c2" class="outline-2">
+<h2 id="org02f68c2"><span class="section-number-2">2.</span> Requisitos</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>Un sistema Linux (Ubuntu, Debian, Fedora, etc.).</li>
@@ -408,38 +408,38 @@ Este script es una herramienta práctica para mantener tus PDFs organizados con 
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb7f687f" class="outline-2">
-<h2 id="orgb7f687f"><span class="section-number-2">3.</span> El Script</h2>
+<div id="outline-container-org5034a50" class="outline-2">
+<h2 id="org5034a50"><span class="section-number-2">3.</span> El Script</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 A continuación, te presento el script en Bash que realiza la limpieza. Puedes copiarlo y pegarlo directamente en tu terminal o guardarlo en un archivo `.sh` para ejecutarlo más tarde.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Pide al usuario que ingrese el directorio a limpiar</span>
-<span style="color: #dc3eb7;">read</span> -p <span style="color: #a44185;">"Introduce la ruta del directorio que deseas limpiar: "</span> DIRECTORIO
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Pide al usuario que ingrese el directorio a limpiar</span>
+<span style="color: #1F55A0;">read</span> -p <span style="color: #005F00;">"Introduce la ruta del directorio que deseas limpiar: "</span> DIRECTORIO
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verifica si el directorio existe</span>
-<span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #219fd5; font-weight: bold;">!</span> -d <span style="color: #a44185;">"$DIRECTORIO"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
-  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"El directorio $DIRECTORIO no existe."</span>
-  <span style="color: #219fd5; font-style: italic;">exit</span> 1
-<span style="color: #219fd5; font-style: italic;">fi</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verifica si el directorio existe</span>
+<span style="color: #D70000;">if</span> [ <span style="color: #1F55A0; font-weight: bold;">!</span> -d <span style="color: #005F00;">"$DIRECTORIO"</span> ]; <span style="color: #D70000;">then</span>
+  <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"El directorio $DIRECTORIO no existe."</span>
+  <span style="color: #D70000;">exit</span> 1
+<span style="color: #D70000;">fi</span>
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Busca y elimina archivos vac&#237;os (0 bytes) desde ayer hacia atr&#225;s</span>
-find <span style="color: #a44185;">"$DIRECTORIO"</span> -type f -size 0 -mtime +0 -exec rm -v {} <span style="color: #a44185;">\;</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Busca y elimina archivos vac&#237;os (0 bytes) desde ayer hacia atr&#225;s</span>
+find <span style="color: #005F00;">"$DIRECTORIO"</span> -type f -size 0 -mtime +0 -exec rm -v {} <span style="color: #005F00;">\;</span>
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Busca y elimina carpetas vac&#237;as desde ayer hacia atr&#225;s</span>
-find <span style="color: #a44185;">"$DIRECTORIO"</span> -type d -empty -mtime +0 -exec rmdir -v {} <span style="color: #a44185;">\;</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Busca y elimina carpetas vac&#237;as desde ayer hacia atr&#225;s</span>
+find <span style="color: #005F00;">"$DIRECTORIO"</span> -type d -empty -mtime +0 -exec rmdir -v {} <span style="color: #005F00;">\;</span>
 
-<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Limpieza completada. Archivos y carpetas vac&#237;as eliminados."</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Limpieza completada. Archivos y carpetas vac&#237;as eliminados."</span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org2cbf2e9" class="outline-2">
-<h2 id="org2cbf2e9"><span class="section-number-2">4.</span> Explicación del Script</h2>
+<div id="outline-container-orgc000f9d" class="outline-2">
+<h2 id="orgc000f9d"><span class="section-number-2">4.</span> Explicación del Script</h2>
 <div class="outline-text-2" id="text-4">
 <ol class="org-ol">
 <li><b><b>Pide el directorio</b></b>: El script comienza solicitando al usuario que introduzca la ruta del directorio que desea limpiar.</li>
@@ -450,8 +450,8 @@ find <span style="color: #a44185;">"$DIRECTORIO"</span> -type d -empty -mtime +0
 </ol>
 </div>
 </div>
-<div id="outline-container-org1984321" class="outline-2">
-<h2 id="org1984321"><span class="section-number-2">5.</span> Cómo Usar el Script</h2>
+<div id="outline-container-orga68dd0b" class="outline-2">
+<h2 id="orga68dd0b"><span class="section-number-2">5.</span> Cómo Usar el Script</h2>
 <div class="outline-text-2" id="text-5">
 <ol class="org-ol">
 <li>Copia el script en un archivo, por ejemplo, `clean<sub>empty</sub><sub>files.sh</sub>`.</li>
@@ -461,12 +461,13 @@ chmod +x clean<sub>empty</sub><sub>files.sh</sub></li>
 </ol>
 </div>
 </div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-script.html">script</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bytes.html">bytes</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-deepseek.html">deepseek</a> </div>]]></description>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-script.html">script</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bytes.html">bytes</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-deepseek.html">deepseek</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
   <category><![CDATA[linux]]></category>
   <category><![CDATA[script]]></category>
   <category><![CDATA[bash]]></category>
   <category><![CDATA[bytes]]></category>
   <category><![CDATA[deepseek]]></category>
+  <category><![CDATA[tutoriales]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-15-c%C3%B3mo-limpiar-archivos-y-carpetas-vac%C3%ADas-en-linux-con-un-script-bash.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-15-c%C3%B3mo-limpiar-archivos-y-carpetas-vac%C3%ADas-en-linux-con-un-script-bash.html</guid>
   <pubDate>Sat, 15 Mar 2025 19:05:00 +0100</pubDate>
