@@ -4,7 +4,198 @@
 <title><![CDATA[Example.com - tutoriales]]></title>
 <description><![CDATA[Example.com - tutoriales]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-tutoriales.html</link>
-<lastBuildDate>Wed, 19 Mar 2025 15:09:40 +0100</lastBuildDate>
+<lastBuildDate>Wed, 19 Mar 2025 16:01:14 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Scripts de Bash para Ciberseguridad en Linux: Detección y Automatización]]></title>
+  <description><![CDATA[
+<div id="outline-container-org1a7f9bc" class="outline-2">
+<h2 id="org1a7f9bc"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+En el ámbito de la ciberseguridad, la automatización de tareas mediante scripts es una habilidad crucial. Los scripts de Bash en Linux ofrecen una poderosa herramienta para realizar análisis de seguridad, detección de amenazas y auditorías de sistemas. En este post, exploraremos varios scripts de Bash diseñados para mejorar la seguridad y automatizar procesos de detección en entornos Linux.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd5c3af6" class="outline-2">
+<h2 id="orgd5c3af6"><span class="section-number-2">2.</span> Script 1: Detección Básica de Ciberataques</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Este script realiza una serie de comprobaciones básicas para detectar posibles indicios de un ciberataque en un sistema Linux.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Iniciando detecci&#243;n b&#225;sica de ciberataques..."</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar intentos de acceso no v&#225;lidos</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Comprobando intentos de acceso no v&#225;lidos..."</span>
+<span style="color: #1857a4;">invalid_attempts</span>=$(<span style="color: #219fd5; font-weight: bold;">grep "Invalid user" /var/log/auth.log | wc -l</span>)
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Se han detectado $invalid_attempts intentos de acceso no v&#225;lidos."</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar conexiones de red sospechosas</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Comprobando conexiones de red sospechosas..."</span>
+<span style="color: #1857a4;">suspicious_connections</span>=$(<span style="color: #219fd5; font-weight: bold;">netstat -tuln | grep ESTABLISHED | wc -l</span>)
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Hay $suspicious_connections conexiones de red establecidas."</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Buscar archivos modificados recientemente</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Buscando archivos modificados en las &#250;ltimas 24 horas..."</span>
+<span style="color: #1857a4;">modified_files</span>=$(<span style="color: #219fd5; font-weight: bold;">find /etc -mtime -1 -type f | wc -l</span>)
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Se han modificado $modified_files archivos en /etc en las &#250;ltimas 24 horas."</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar procesos sospechosos</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Comprobando procesos sospechosos..."</span>
+<span style="color: #1857a4;">suspicious_processes</span>=$(<span style="color: #219fd5; font-weight: bold;">ps aux | grep -E '(nc|netcat|nmap</span><span style="color: #a44185;">)'</span> | grep -v grep | wc -l)
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Se han encontrado $suspicious_processes procesos potencialmente sospechosos."</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar cambios en archivos cr&#237;ticos del sistema</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Verificando integridad de archivos cr&#237;ticos..."</span>
+<span style="color: #219fd5; font-style: italic;">if</span> [ -f /etc/passwd.bak ] &amp;&amp; <span style="color: #219fd5; font-weight: bold;">!</span> cmp -s /etc/passwd /etc/passwd.bak; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"&#161;Alerta! El archivo /etc/passwd ha sido modificado."</span>
+<span style="color: #219fd5; font-style: italic;">else</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"El archivo /etc/passwd no muestra cambios."</span>
+<span style="color: #219fd5; font-style: italic;">fi</span>
+
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Detecci&#243;n b&#225;sica completada. Revise los resultados para identificar posibles amenazas."</span>
+</pre>
+</div>
+
+<p>
+Este script realiza las siguientes comprobaciones:
+</p>
+<ol class="org-ol">
+<li>Busca intentos de acceso no válidos en el archivo de registro auth.log.</li>
+<li>Verifica el número de conexiones de red establecidas.</li>
+<li>Busca archivos modificados en el directorio /etc en las últimas 24 horas.</li>
+<li>Comprueba la presencia de procesos potencialmente sospechosos.</li>
+<li>Verifica si ha habido cambios en el archivo crítico /etc/passwd.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org619f033" class="outline-2">
+<h2 id="org619f033"><span class="section-number-2">3.</span> Script 2: Análisis de Intentos de Acceso No Válidos</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Este script se enfoca en analizar los intentos de acceso no válidos en un archivo de registro específico.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+
+<span style="color: #dc3eb7;">echo</span> -n <span style="color: #a44185;">"&#191;Qu&#233; archivo deseas consultar?: "</span>
+<span style="color: #dc3eb7;">read</span> -e LOG
+
+<span style="color: #219fd5; font-style: italic;">if</span> [ -e $<span style="color: #1857a4;">LOG</span> ] ; <span style="color: #219fd5; font-style: italic;">then</span>
+    grep -E <span style="color: #a44185;">'Invalid user'</span> $<span style="color: #1857a4;">LOG</span> | tee invalid_users.log
+    <span style="color: #1857a4;">COUNT</span>=$(<span style="color: #219fd5; font-weight: bold;">wc -l invalid_users.log | cut -d" " -f1</span>)
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Hay un total de $COUNT intentos desde usuarios no v&#225;lidos."</span>
+<span style="color: #219fd5; font-style: italic;">else</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"No se ha encontrado el fichero de log."</span>
+<span style="color: #219fd5; font-style: italic;">fi</span>
+</pre>
+</div>
+
+<p>
+Este script:
+</p>
+<ol class="org-ol">
+<li>Solicita al usuario el nombre del archivo de registro a analizar.</li>
+<li>Verifica la existencia del archivo.</li>
+<li>Busca líneas que contienen "Invalid user" y las guarda en un archivo separado.</li>
+<li>Cuenta y reporta el número total de intentos de acceso no válidos.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org4b9a3bc" class="outline-2">
+<h2 id="org4b9a3bc"><span class="section-number-2">4.</span> Script 3: Detección de Equipos en la Red Local</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Este script utiliza el comando ping para detectar equipos activos en la red local.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Detectando equipos en la red local..."</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Obtener la direcci&#243;n IP base</span>
+<span style="color: #1857a4;">ip_base</span>=$(<span style="color: #219fd5; font-weight: bold;">ip addr | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}' | cut -d'/' -f1 | sed 's/\.[0-9]*$/./'</span>)
+
+<span style="color: #219fd5; font-style: italic;">for</span> i<span style="color: #219fd5; font-style: italic;"> in</span> {1..254}
+<span style="color: #219fd5; font-style: italic;">do</span>
+   ping -c 1 $<span style="color: #1857a4;">ip_base</span>$<span style="color: #1857a4;">i</span> | grep <span style="color: #a44185;">"64 bytes"</span> | cut -d <span style="color: #a44185;">" "</span> -f 4 | tr -d <span style="color: #a44185;">":"</span> &amp;
+<span style="color: #219fd5; font-style: italic;">done</span>
+
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Escaneo completado."</span>
+</pre>
+</div>
+
+<p>
+Este script:
+</p>
+<ol class="org-ol">
+<li>Determina automáticamente la dirección IP base de la red local.</li>
+<li>Realiza un ping a todas las posibles direcciones IP en esa red.</li>
+<li>Muestra las direcciones IP de los equipos que responden al ping.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org9557c69" class="outline-2">
+<h2 id="org9557c69"><span class="section-number-2">5.</span> Consideraciones de Seguridad</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Al utilizar estos scripts, es importante tener en cuenta:
+</p>
+
+<ol class="org-ol">
+<li>Permisos: Asegúrate de tener los permisos necesarios para ejecutar estos scripts y acceder a los archivos de sistema.</li>
+<li>Uso Ético: Utiliza estos scripts solo en sistemas y redes sobre los que tengas autorización explícita.</li>
+<li>Falsos Positivos: Los resultados pueden incluir falsos positivos. Siempre verifica manualmente los hallazgos importantes.</li>
+<li>Actualizaciones: Mantén los scripts actualizados para adaptarse a nuevas amenazas y cambios en el sistema.</li>
+</ol>
+
+
+<figure id="org9d923fb">
+<img src="post_diagram.png" alt="post_diagram.png">
+
+</figure>
+
+
+<figure id="org79ad43b">
+<img src="images/post_diagram.png" alt="post_diagram.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orga669fef" class="outline-2">
+<h2 id="orga669fef"><span class="section-number-2">6.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Los scripts de Bash son herramientas poderosas para la automatización de tareas de seguridad en Linux. Desde la detección básica de amenazas hasta el análisis de redes, estos scripts pueden mejorar significativamente la eficiencia de las auditorías de seguridad y la respuesta a incidentes. Sin embargo, es crucial utilizarlos de manera responsable y en conjunto con otras prácticas de seguridad robustas.
+</p>
+</div>
+</div>
+<div id="outline-container-orga7a0069" class="outline-2">
+<h2 id="orga7a0069"><span class="section-number-2">7.</span> Referencias</h2>
+<div class="outline-text-2" id="text-7">
+<ol class="org-ol">
+<li>Centro de Investigaciones Sociológicas (CIS). (2024). Barómetro mensual. <a href="https://www.cis.es/">https://www.cis.es/</a></li>
+<li>RedesZone. (2017). Security Bash Scripts, un repositorio con scripts de seguridad y pentesting. <a href="https://www.redeszone.net/2017/02/20/security-bash-scripts-un-repositorio-con-scripts-de-seguridad-y-pentesting/">https://www.redeszone.net/2017/02/20/security-bash-scripts-un-repositorio-con-scripts-de-seguridad-y-pentesting/</a></li>
+<li>iEspai. (2023). Explorando la Seguridad: Un Script Bash para Analizar Intentos de Acceso No Válidos en Archivos de Registro. <a href="https://www.iespai.com/2023/10/10/explorando-la-seguridad-un-script-bash-para-analizar-intentos-de-acceso-no-validos-en-archivos-de-registro/">https://www.iespai.com/2023/10/10/explorando-la-seguridad-un-script-bash-para-analizar-intentos-de-acceso-no-validos-en-archivos-de-registro/</a></li>
+<li>LinkedIn Learning. (2024). Seguridad ofensiva: Bash para pentesting. <a href="https://es.linkedin.com/learning/seguridad-ofensiva-bash-para-pentesting/creacion-de-scripts-de-bash-para-la-explotacion-de-vulnerabilidades-especificas">https://es.linkedin.com/learning/seguridad-ofensiva-bash-para-pentesting/creacion-de-scripts-de-bash-para-la-explotacion-de-vulnerabilidades-especificas</a></li>
+</ol>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ciberseguridad.html">ciberseguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-script.html">script</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> </div>]]></description>
+  <category><![CDATA[ciberseguridad]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <category><![CDATA[bash]]></category>
+  <category><![CDATA[script]]></category>
+  <category><![CDATA[linux]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-19-scripts-de-bash-para-ciberseguridad-en-linux:-detecci%C3%B3n-y-automatizaci%C3%B3n.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-19-scripts-de-bash-para-ciberseguridad-en-linux:-detecci%C3%B3n-y-automatizaci%C3%B3n.html</guid>
+  <pubDate>Wed, 19 Mar 2025 15:36:00 +0100</pubDate>
+</item>
 <item>
   <title><![CDATA[Creación de un Blog Estático con GitHub]]></title>
   <description><![CDATA[
