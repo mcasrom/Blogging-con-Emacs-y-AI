@@ -4,27 +4,27 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Wed, 19 Mar 2025 08:22:41 +0100</lastBuildDate>
+<lastBuildDate>Wed, 19 Mar 2025 15:09:31 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Creación de un Blog Estático con GitHub]]></title>
   <description><![CDATA[
-<div id="outline-container-org7f4c119" class="outline-2">
-<h2 id="org7f4c119"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org77410cd" class="outline-2">
+<h2 id="org77410cd"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 GitHub es una plataforma ampliamente utilizada para el desarrollo colaborativo de software, pero también ofrece herramientas poderosas para la creación de sitios web estáticos, como blogs. En este post exploraremos cómo GitHub puede ser utilizado para crear un blog estático, analizando sus opciones, ventajas, desventajas y comparándolo con otras alternativas populares.
 </p>
 </div>
 </div>
-<div id="outline-container-org370b882" class="outline-2">
-<h2 id="org370b882"><span class="section-number-2">2.</span> ¿Qué es un Blog Estático?</h2>
+<div id="outline-container-org97d5533" class="outline-2">
+<h2 id="org97d5533"><span class="section-number-2">2.</span> ¿Qué es un Blog Estático?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Un blog estático es un sitio web que no utiliza bases de datos ni lógica del lado del servidor para generar contenido dinámico. En su lugar, todos los archivos HTML, CSS y JavaScript se generan previamente y se sirven directamente al usuario. Esto lo hace rápido, seguro y fácil de mantener.
 </p>
 </div>
-<div id="outline-container-org9d6b6ae" class="outline-3">
-<h3 id="org9d6b6ae"><span class="section-number-3">2.1.</span> Características principales:</h3>
+<div id="outline-container-org1205e85" class="outline-3">
+<h3 id="org1205e85"><span class="section-number-3">2.1.</span> Características principales:</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>Contenido pregenerado.</li>
@@ -35,15 +35,15 @@ Un blog estático es un sitio web que no utiliza bases de datos ni lógica del l
 </div>
 </div>
 </div>
-<div id="outline-container-orgad2d4dd" class="outline-2">
-<h2 id="orgad2d4dd"><span class="section-number-2">3.</span> Opciones de GitHub para Crear un Blog Estático</h2>
+<div id="outline-container-org4f5d803" class="outline-2">
+<h2 id="org4f5d803"><span class="section-number-2">3.</span> Opciones de GitHub para Crear un Blog Estático</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 GitHub Pages es la principal herramienta de GitHub para alojar sitios web estáticos. A continuación, describimos las opciones disponibles:
 </p>
 </div>
-<div id="outline-container-org5ee9ee7" class="outline-3">
-<h3 id="org5ee9ee7"><span class="section-number-3">3.1.</span> 1. Repositorio Personal</h3>
+<div id="outline-container-org8f55385" class="outline-3">
+<h3 id="org8f55385"><span class="section-number-3">3.1.</span> 1. Repositorio Personal</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li>Crea un repositorio llamado `username.github.io` (donde `username` es tu nombre de usuario en GitHub).</li>
@@ -51,8 +51,8 @@ GitHub Pages es la principal herramienta de GitHub para alojar sitios web estát
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf3c6787" class="outline-3">
-<h3 id="orgf3c6787"><span class="section-number-3">3.2.</span> 2. Proyectos dentro de un Repositorio</h3>
+<div id="outline-container-orgc5cee6f" class="outline-3">
+<h3 id="orgc5cee6f"><span class="section-number-3">3.2.</span> 2. Proyectos dentro de un Repositorio</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li>Puedes habilitar GitHub Pages en cualquier repositorio bajo la pestaña "Settings".</li>
@@ -60,8 +60,8 @@ GitHub Pages es la principal herramienta de GitHub para alojar sitios web estát
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfc90741" class="outline-3">
-<h3 id="orgfc90741"><span class="section-number-3">3.3.</span> 3. Generadores de Sitios Estáticos</h3>
+<div id="outline-container-org028dcde" class="outline-3">
+<h3 id="org028dcde"><span class="section-number-3">3.3.</span> 3. Generadores de Sitios Estáticos</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 GitHub Pages soporta varios generadores de sitios estáticos, como Jekyll, Hugo, Gatsby, etc. Estos generadores permiten escribir contenido en formato Markdown y generar automáticamente el sitio estático.
@@ -69,47 +69,47 @@ GitHub Pages soporta varios generadores de sitios estáticos, como Jekyll, Hugo,
 </div>
 </div>
 </div>
-<div id="outline-container-orgf899609" class="outline-2">
-<h2 id="orgf899609"><span class="section-number-2">4.</span> Ventajas de Usar GitHub Pages</h2>
+<div id="outline-container-orgfd2b3b6" class="outline-2">
+<h2 id="orgfd2b3b6"><span class="section-number-2">4.</span> Ventajas de Usar GitHub Pages</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 A continuación, enumeramos las principales ventajas de usar GitHub Pages para crear un blog estático:
 </p>
 </div>
-<div id="outline-container-orgdf99585" class="outline-3">
-<h3 id="orgdf99585"><span class="section-number-3">4.1.</span> 1. Gratuito</h3>
+<div id="outline-container-org12d2afc" class="outline-3">
+<h3 id="org12d2afc"><span class="section-number-3">4.1.</span> 1. Gratuito</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li>No hay costos asociados con el uso de GitHub Pages para alojar tu sitio.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org96f683c" class="outline-3">
-<h3 id="org96f683c"><span class="section-number-3">4.2.</span> 2. Integración Nativa</h3>
+<div id="outline-container-orgd08b70c" class="outline-3">
+<h3 id="orgd08b70c"><span class="section-number-3">4.2.</span> 2. Integración Nativa</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li>GitHub Pages está integrado directamente con GitHub, lo que facilita el flujo de trabajo de desarrollo y publicación.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb49c0ee" class="outline-3">
-<h3 id="orgb49c0ee"><span class="section-number-3">4.3.</span> 3. Control de Versiones</h3>
+<div id="outline-container-org5eaff02" class="outline-3">
+<h3 id="org5eaff02"><span class="section-number-3">4.3.</span> 3. Control de Versiones</h3>
 <div class="outline-text-3" id="text-4-3">
 <ul class="org-ul">
 <li>Al estar basado en Git, puedes aprovechar el control de versiones para gestionar cambios en tu blog.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf36bda7" class="outline-3">
-<h3 id="orgf36bda7"><span class="section-number-3">4.4.</span> 4. Rendimiento</h3>
+<div id="outline-container-orgc74adf5" class="outline-3">
+<h3 id="orgc74adf5"><span class="section-number-3">4.4.</span> 4. Rendimiento</h3>
 <div class="outline-text-3" id="text-4-4">
 <ul class="org-ul">
 <li>Los sitios estáticos son inherentemente rápidos porque no requieren procesamiento del lado del servidor.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org44886b6" class="outline-3">
-<h3 id="org44886b6"><span class="section-number-3">4.5.</span> 5. Comunidad y Soporte</h3>
+<div id="outline-container-orge91ce2e" class="outline-3">
+<h3 id="orge91ce2e"><span class="section-number-3">4.5.</span> 5. Comunidad y Soporte</h3>
 <div class="outline-text-3" id="text-4-5">
 <ul class="org-ul">
 <li>GitHub tiene una comunidad activa y abundante documentación para ayudarte a resolver problemas.</li>
@@ -117,15 +117,15 @@ A continuación, enumeramos las principales ventajas de usar GitHub Pages para c
 </div>
 </div>
 </div>
-<div id="outline-container-org6fb0ed6" class="outline-2">
-<h2 id="org6fb0ed6"><span class="section-number-2">5.</span> Desventajas de Usar GitHub Pages</h2>
+<div id="outline-container-org101ffca" class="outline-2">
+<h2 id="org101ffca"><span class="section-number-2">5.</span> Desventajas de Usar GitHub Pages</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 A pesar de sus ventajas, GitHub Pages también tiene algunas limitaciones:
 </p>
 </div>
-<div id="outline-container-org5122e3e" class="outline-3">
-<h3 id="org5122e3e"><span class="section-number-3">5.1.</span> 1. Limitaciones de Personalización</h3>
+<div id="outline-container-org9c94244" class="outline-3">
+<h3 id="org9c94244"><span class="section-number-3">5.1.</span> 1. Limitaciones de Personalización</h3>
 <div class="outline-text-3" id="text-5-1">
 <ul class="org-ul">
 <li>No puedes instalar plugins personalizados en Jekyll sin configuraciones adicionales.</li>
@@ -133,24 +133,24 @@ A pesar de sus ventajas, GitHub Pages también tiene algunas limitaciones:
 </ul>
 </div>
 </div>
-<div id="outline-container-org120e6e1" class="outline-3">
-<h3 id="org120e6e1"><span class="section-number-3">5.2.</span> 2. Sin Bases de Datos</h3>
+<div id="outline-container-org579fadf" class="outline-3">
+<h3 id="org579fadf"><span class="section-number-3">5.2.</span> 2. Sin Bases de Datos</h3>
 <div class="outline-text-3" id="text-5-2">
 <ul class="org-ul">
 <li>Si necesitas funcionalidades dinámicas como comentarios o formularios de contacto, deberás integrar servicios externos como Disqus o Google Forms.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org242079d" class="outline-3">
-<h3 id="org242079d"><span class="section-number-3">5.3.</span> 3. Espacio de Almacenamiento Limitado</h3>
+<div id="outline-container-org24c68be" class="outline-3">
+<h3 id="org24c68be"><span class="section-number-3">5.3.</span> 3. Espacio de Almacenamiento Limitado</h3>
 <div class="outline-text-3" id="text-5-3">
 <ul class="org-ul">
 <li>GitHub Pages tiene un límite de 1 GB de almacenamiento por repositorio.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8a394dd" class="outline-3">
-<h3 id="org8a394dd"><span class="section-number-3">5.4.</span> 4. Curva de Aprendizaje</h3>
+<div id="outline-container-org2a9c98e" class="outline-3">
+<h3 id="org2a9c98e"><span class="section-number-3">5.4.</span> 4. Curva de Aprendizaje</h3>
 <div class="outline-text-3" id="text-5-4">
 <ul class="org-ul">
 <li>Si no estás familiarizado con Git o Markdown, puede haber una curva de aprendizaje inicial.</li>
@@ -158,15 +158,15 @@ A pesar de sus ventajas, GitHub Pages también tiene algunas limitaciones:
 </div>
 </div>
 </div>
-<div id="outline-container-orgf5a11ce" class="outline-2">
-<h2 id="orgf5a11ce"><span class="section-number-2">6.</span> Comparativa con Otras Opciones</h2>
+<div id="outline-container-org9ac1f84" class="outline-2">
+<h2 id="org9ac1f84"><span class="section-number-2">6.</span> Comparativa con Otras Opciones</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 A continuación, comparamos GitHub Pages con otras plataformas populares para la creación de blogs estáticos.
 </p>
 </div>
-<div id="outline-container-orge9b9d77" class="outline-3">
-<h3 id="orge9b9d77"><span class="section-number-3">6.1.</span> Tabla Comparativa</h3>
+<div id="outline-container-org9dc28a8" class="outline-3">
+<h3 id="org9dc28a8"><span class="section-number-3">6.1.</span> Tabla Comparativa</h3>
 <div class="outline-text-3" id="text-6-1">
 <table>
 
@@ -243,19 +243,19 @@ A continuación, comparamos GitHub Pages con otras plataformas populares para la
 </table>
 </div>
 </div>
-<div id="outline-container-orga15cfc2" class="outline-3">
-<h3 id="orga15cfc2"><span class="section-number-3">6.2.</span> Gráfico Comparativo</h3>
+<div id="outline-container-org63a6341" class="outline-3">
+<h3 id="org63a6341"><span class="section-number-3">6.2.</span> Gráfico Comparativo</h3>
 <div class="outline-text-3" id="text-6-2">
 
-<figure id="org527ca3b">
+<figure id="orgfc6d644">
 <img src="grafico-comparativo.png" alt="grafico-comparativo.png">
 
 </figure>
 </div>
 </div>
 </div>
-<div id="outline-container-orgd95678d" class="outline-2">
-<h2 id="orgd95678d"><span class="section-number-2">7.</span> Conclusión</h2>
+<div id="outline-container-orgbfb444b" class="outline-2">
+<h2 id="orgbfb444b"><span class="section-number-2">7.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 GitHub Pages es una excelente opción para crear un blog estático, especialmente si ya estás familiarizado con Git y GitHub. Ofrece alojamiento gratuito, integración nativa y un rendimiento excepcional. Sin embargo, si necesitas más personalización o funcionalidades avanzadas, plataformas como Netlify o Vercel podrían ser mejores alternativas.
@@ -266,8 +266,8 @@ Finalmente, la elección dependerá de tus necesidades específicas, habilidades
 </p>
 </div>
 </div>
-<div id="outline-container-orgc614144" class="outline-2">
-<h2 id="orgc614144"><span class="section-number-2">8.</span> Referencias</h2>
+<div id="outline-container-org9b59964" class="outline-2">
+<h2 id="org9b59964"><span class="section-number-2">8.</span> Referencias</h2>
 <div class="outline-text-2" id="text-8">
 <ul class="org-ul">
 <li><a href="https://pages.github.com/">GitHub Pages</a></li>
@@ -285,6 +285,172 @@ Finalmente, la elección dependerá de tus necesidades específicas, habilidades
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-19-creaci%C3%B3n-de-un-blog-est%C3%A1tico-con-github.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-19-creaci%C3%B3n-de-un-blog-est%C3%A1tico-con-github.html</guid>
   <pubDate>Wed, 19 Mar 2025 08:08:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Día del Padre y su Celebración]]></title>
+  <description><![CDATA[
+<div id="outline-container-org8e620f0" class="outline-2">
+<h2 id="org8e620f0"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+El Día del Padre es una celebración especial dedicada a honrar y reconocer la figura paterna en nuestras vidas. En España, esta festividad tiene una fecha específica, pero en otros países varía según tradiciones culturales y religiosas. En este post exploraremos el origen, significado y formas de celebración del Día del Padre en España y cómo se celebra en otras partes del mundo.
+</p>
+</div>
+</div>
+<div id="outline-container-org57661f0" class="outline-2">
+<h2 id="org57661f0"><span class="section-number-2">2.</span> El Día del Padre en España</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org667acc5" class="outline-3">
+<h3 id="org667acc5"><span class="section-number-3">2.1.</span> Fecha:</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+En España, el Día del Padre se celebra el <b><b>19 de marzo</b></b>, coincidiendo con el día de San José, el padre de Jesús en la tradición cristiana. Esta fecha tiene raíces religiosas, pero ha evolucionado para convertirse en una celebración secular que abarca a todos los padres.
+</p>
+</div>
+</div>
+<div id="outline-container-orge5f7996" class="outline-3">
+<h3 id="orge5f7996"><span class="section-number-3">2.2.</span> Significado:</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+La festividad está inspirada en la figura de San José como modelo de paternidad responsable y amorosa. Sin embargo, hoy en día, el Día del Padre trasciende lo religioso y se centra en reconocer y agradecer a los padres por su papel en la familia y la sociedad.
+</p>
+</div>
+</div>
+<div id="outline-container-org5af845e" class="outline-3">
+<h3 id="org5af845e"><span class="section-number-3">2.3.</span> Formas de Celebración:</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>Regalos simbólicos como corbatas, libros o tecnología.</li>
+<li>Comidas familiares en casa o restaurantes.</li>
+<li>Tarjetas de felicitación y mensajes especiales.</li>
+<li>Actividades compartidas entre padres e hijos.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1dfc17a" class="outline-2">
+<h2 id="org1dfc17a"><span class="section-number-2">3.</span> Fechas del Día del Padre en Otros Países</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+El Día del Padre no se celebra en la misma fecha en todo el mundo. A continuación, se muestra una comparativa de las fechas más comunes:
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">País/Región</th>
+<th scope="col" class="org-left">Fecha</th>
+<th scope="col" class="org-left">Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">España</td>
+<td class="org-left">19 de marzo</td>
+<td class="org-left">Coincide con San José</td>
+</tr>
+
+<tr>
+<td class="org-left">Estados Unidos</td>
+<td class="org-left">Tercer domingo de junio</td>
+<td class="org-left">Iniciativa comercial del siglo XX</td>
+</tr>
+
+<tr>
+<td class="org-left">México</td>
+<td class="org-left">Tercer domingo de junio</td>
+<td class="org-left">Similar a EE.UU., con toques locales</td>
+</tr>
+
+<tr>
+<td class="org-left">Italia</td>
+<td class="org-left">19 de marzo</td>
+<td class="org-left">Igual que España</td>
+</tr>
+
+<tr>
+<td class="org-left">Brasil</td>
+<td class="org-left">Segundo domingo de agosto</td>
+<td class="org-left">Coincide con San Joaquín</td>
+</tr>
+
+<tr>
+<td class="org-left">Rusia</td>
+<td class="org-left">23 de febrero</td>
+<td class="org-left">Día del Defensor de la Patria</td>
+</tr>
+
+<tr>
+<td class="org-left">Japón</td>
+<td class="org-left">Tercer lunes de junio</td>
+<td class="org-left">Celebración moderna</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="outline-container-org7df76d4" class="outline-3">
+<h3 id="org7df76d4"><span class="section-number-3">3.1.</span> Gráfico Comparativo de Fechas</h3>
+</div>
+</div>
+<div id="outline-container-org3ffef16" class="outline-2">
+<h2 id="org3ffef16"><span class="section-number-2">4.</span> Imagen</h2>
+<div class="outline-text-2" id="text-4">
+
+<figure id="orgd8e7384">
+<img src="images/comic-dia-del-padre.png" alt="comic-dia-del-padre.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orga46effd" class="outline-2">
+<h2 id="orga46effd"><span class="section-number-2">5.</span> Similitudes y Diferencias</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgeb0e5e2" class="outline-3">
+<h3 id="orgeb0e5e2"><span class="section-number-3">5.1.</span> Similitudes:</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>En la mayoría de los países, el Día del Padre es una oportunidad para expresar gratitud hacia los padres.</li>
+<li>Las celebraciones suelen incluir regalos, comidas familiares y actividades compartidas.</li>
+<li>La tendencia moderna es secularizar la festividad, enfocándose en la figura paterna independientemente de contextos religiosos.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4d0bd52" class="outline-3">
+<h3 id="org4d0bd52"><span class="section-number-3">5.2.</span> Diferencias:</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>Las fechas varían según tradiciones culturales y religiosas.</li>
+<li>Algunos países incorporan elementos únicos, como en Brasil, donde la festividad coincide con San Joaquín, el padre de la Virgen María.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga81af20" class="outline-2">
+<h2 id="orga81af20"><span class="section-number-2">6.</span> Reflexión Final</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+El Día del Padre es una ocasión universal para reconocer la importancia de los padres en nuestras vidas. Aunque las fechas
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-dia.html">dia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-padre.html">padre</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-festividad.html">festividad</a> </div>]]></description>
+  <category><![CDATA[dia]]></category>
+  <category><![CDATA[padre]]></category>
+  <category><![CDATA[festividad]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-19-d%C3%ADa-del-padre-y-su-celebraci%C3%B3n.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-19-d%C3%ADa-del-padre-y-su-celebraci%C3%B3n.html</guid>
+  <pubDate>Wed, 19 Mar 2025 06:00:00 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Tutorial de Seguridad en Linux: Mínimo de Protección ante Ataques Informáticos (II)]]></title>
@@ -1137,8 +1303,8 @@ Este índice ofrece una visión holística de la situación de un país, integra
 <item>
   <title><![CDATA[Explorando Shima Spain Village: Un Rincón Español en Japón]]></title>
   <description><![CDATA[
-<div id="outline-container-org3207d0a" class="outline-2">
-<h2 id="org3207d0a"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-orged4c949" class="outline-2">
+<h2 id="orged4c949"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 En el corazón de <b><b>Shima City</b></b>, una ciudad costera en la prefectura de Mie, Japón, se encuentra un lugar mágico que transporta a los visitantes directamente a España sin salir del país. Este lugar es <b><b>Shima Spain Village</b></b>, un parque temático que recrea la arquitectura, la cultura y el ambiente de un pueblo español tradicional. 
@@ -1149,8 +1315,8 @@ En este post, exploraremos las principales atracciones de este parque, sus detal
 </p>
 </div>
 </div>
-<div id="outline-container-orgdf87a3e" class="outline-2">
-<h2 id="orgdf87a3e"><span class="section-number-2">2.</span> ¿Qué es Shima Spain Village?</h2>
+<div id="outline-container-org1668baa" class="outline-2">
+<h2 id="org1668baa"><span class="section-number-2">2.</span> ¿Qué es Shima Spain Village?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 <b><b>Shima Spain Village</b></b> (志摩スペイン村, <b>Shima Supein-mura</b>) es un parque temático inspirado en la cultura española. Desde su inauguración en 1994, ha sido uno de los destinos más populares de la región de Kansai. El parque combina elementos de la cultura española, como flamenco, toros y arquitectura mediterránea, con atracciones modernas y emocionantes.
@@ -1165,15 +1331,15 @@ El parque está dividido en dos áreas principales:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgc729d9f" class="outline-2">
-<h2 id="orgc729d9f"><span class="section-number-2">3.</span> Atracciones Destacadas</h2>
+<div id="outline-container-org89776ba" class="outline-2">
+<h2 id="org89776ba"><span class="section-number-2">3.</span> Atracciones Destacadas</h2>
 </div>
 
-<div id="outline-container-orgcf539c3" class="outline-2">
-<h2 id="orgcf539c3"><span class="section-number-2">4.</span> Fotos</h2>
+<div id="outline-container-org93c4fa9" class="outline-2">
+<h2 id="org93c4fa9"><span class="section-number-2">4.</span> Fotos</h2>
 <div class="outline-text-2" id="text-4">
 
-<figure id="orge1ffd88">
+<figure id="orga165e27">
 <img src="images/japon.jpg" alt="japon.jpg">
 
 </figure>
@@ -1200,8 +1366,8 @@ El <b><b>Pueblo Español</b></b> es una réplica fiel de un pueblo mediterráneo
 </p>
 </div>
 </div>
-<div id="outline-container-orgb8ead24" class="outline-2">
-<h2 id="orgb8ead24"><span class="section-number-2">5.</span> Gastronomía en Shima Spain Village</h2>
+<div id="outline-container-orgd625913" class="outline-2">
+<h2 id="orgd625913"><span class="section-number-2">5.</span> Gastronomía en Shima Spain Village</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Una de las mayores atracciones del parque es su oferta gastronómica. Aquí puedes probar platos típicos españoles como:
@@ -1217,8 +1383,8 @@ Además, el parque cuenta con restaurantes temáticos donde puedes disfrutar de 
 </p>
 </div>
 </div>
-<div id="outline-container-org1217a5a" class="outline-2">
-<h2 id="org1217a5a"><span class="section-number-2">6.</span> Consejos para Visitar Shima Spain Village</h2>
+<div id="outline-container-org1d2d4ea" class="outline-2">
+<h2 id="org1d2d4ea"><span class="section-number-2">6.</span> Consejos para Visitar Shima Spain Village</h2>
 <div class="outline-text-2" id="text-6">
 <ol class="org-ol">
 <li><b><b>Compra tus boletos con anticipación</b></b>: Durante la temporada alta, las entradas pueden agotarse rápidamente. Compra tus boletos en línea para evitar largas colas.</li>
@@ -1228,8 +1394,8 @@ Además, el parque cuenta con restaurantes temáticos donde puedes disfrutar de 
 </ol>
 </div>
 </div>
-<div id="outline-container-orgfd11ec3" class="outline-2">
-<h2 id="orgfd11ec3"><span class="section-number-2">7.</span> Cómo Llegar</h2>
+<div id="outline-container-orgcdf122d" class="outline-2">
+<h2 id="orgcdf122d"><span class="section-number-2">7.</span> Cómo Llegar</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Shima Spain Village está ubicado en la ciudad de Shima, en la prefectura de Mie. Para llegar, puedes:
@@ -1240,8 +1406,8 @@ Shima Spain Village está ubicado en la ciudad de Shima, en la prefectura de Mie
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc8e4fdf" class="outline-2">
-<h2 id="orgc8e4fdf"><span class="section-number-2">8.</span> Conclusión</h2>
+<div id="outline-container-orgcf3023b" class="outline-2">
+<h2 id="orgcf3023b"><span class="section-number-2">8.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 Shima Spain Village es un destino único que combina cultura, diversión y gastronomía en un solo lugar. Ya sea que busques emociones fuertes en las montañas rusas o prefieras pasear por el encantador Pueblo Español, este parque temático tiene algo para todos. 
@@ -1252,7 +1418,11 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
 </p>
 </div>
 </div>
-<div class="taglist"></div>]]></description>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-trekking.html">trekking</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-japon.html">japon</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-shima.html">shima</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-españa.html">españa</a> </div>]]></description>
+  <category><![CDATA[trekking]]></category>
+  <category><![CDATA[japon]]></category>
+  <category><![CDATA[shima]]></category>
+  <category><![CDATA[españa]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</guid>
   <pubDate>Tue, 18 Mar 2025 06:00:00 +0100</pubDate>
@@ -2167,8 +2337,8 @@ Elegir GitHub para mi blog ha sido una decisión transformadora. Su <b><b>gratui
 <item>
   <title><![CDATA[Free as Beer: Contexto y Significado en el Mundo Linux ]]></title>
   <description><![CDATA[
-<div id="outline-container-org3f4315f" class="outline-2">
-<h2 id="org3f4315f"><span class="section-number-2">1.</span> Origen del Término</h2>
+<div id="outline-container-orgf081306" class="outline-2">
+<h2 id="orgf081306"><span class="section-number-2">1.</span> Origen del Término</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 La expresión <span class="underline">"free as in beer"</span> (libre como una cerveza) se popularizó en la comunidad de software libre para:  
@@ -2178,8 +2348,8 @@ La expresión <span class="underline">"free as in beer"</span> (libre como una c
 <li>Referenciar la distinción clave del movimiento FSF (Free Software Foundation)</li>
 </ul>
 </div>
-<div id="outline-container-org3fdc05a" class="outline-3">
-<h3 id="org3fdc05a"><span class="section-number-3">1.1.</span> Contexto Histórico</h3>
+<div id="outline-container-orgc6d1a63" class="outline-3">
+<h3 id="orgc6d1a63"><span class="section-number-3">1.1.</span> Contexto Histórico</h3>
 <div class="outline-text-3" id="text-1-1">
 <table>
 
@@ -2215,8 +2385,8 @@ La expresión <span class="underline">"free as in beer"</span> (libre como una c
 </div>
 </div>
 </div>
-<div id="outline-container-org824d412" class="outline-2">
-<h2 id="org824d412"><span class="section-number-2">2.</span> Relación con Linux</h2>
+<div id="outline-container-orgbb7097b" class="outline-2">
+<h2 id="orgbb7097b"><span class="section-number-2">2.</span> Relación con Linux</h2>
 <div class="outline-text-2" id="text-2">
 <ol class="org-ol">
 <li><b><b>Modelo de Licenciamiento</b></b>:  
@@ -2233,8 +2403,8 @@ La expresión <span class="underline">"free as in beer"</span> (libre como una c
 </ol>
 </div>
 </div>
-<div id="outline-container-orgd041804" class="outline-2">
-<h2 id="orgd041804"><span class="section-number-2">3.</span> Comparativa Clave</h2>
+<div id="outline-container-org935a7c0" class="outline-2">
+<h2 id="org935a7c0"><span class="section-number-2">3.</span> Comparativa Clave</h2>
 <div class="outline-text-2" id="text-3">
 <table>
 
@@ -2288,8 +2458,8 @@ La expresión <span class="underline">"free as in beer"</span> (libre como una c
 </blockquote>
 </div>
 </div>
-<div id="outline-container-org47f6f5c" class="outline-2">
-<h2 id="org47f6f5c"><span class="section-number-2">4.</span> Implicaciones Actuales (2025)</h2>
+<div id="outline-container-org17f74f2" class="outline-2">
+<h2 id="org17f74f2"><span class="section-number-2">4.</span> Implicaciones Actuales (2025)</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li><b><b>Tendencias en Cloud Computing</b></b>:  
@@ -4922,23 +5092,23 @@ Emacs es una herramienta impresionante que ha resistido la prueba del tiempo gra
 <item>
   <title><![CDATA[Recursos para Introducirse en Inteligencia Artificial]]></title>
   <description><![CDATA[
-<div id="outline-container-org78375a3" class="outline-2">
-<h2 id="org78375a3"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-orgb773d89" class="outline-2">
+<h2 id="orgb773d89"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 La Inteligencia Artificial (IA) abarca desde conceptos básicos hasta técnicas avanzadas de aprendizaje profundo y razonamiento. Este listado ofrece recursos seleccionados para principiantes (sin conocimientos previos), nivel intermedio (con fundamentos básicos) y avanzado (expertos o investigadores). Cada recomendación incluye una justificación basada en accesibilidad, claridad y profundidad técnica.
 </p>
 </div>
 </div>
-<div id="outline-container-org4863202" class="outline-2">
-<h2 id="org4863202"><span class="section-number-2">2.</span> Nivel Principiante</h2>
+<div id="outline-container-org95b21a7" class="outline-2">
+<h2 id="org95b21a7"><span class="section-number-2">2.</span> Nivel Principiante</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Recursos introductorios sin necesidad de conocimientos previos en matemáticas o programación.
 </p>
 </div>
-<div id="outline-container-org2780822" class="outline-3">
-<h3 id="org2780822"><span class="section-number-3">2.1.</span> 1. "Inteligencia Artificial: Una Guía para Gente Pensante" - Melanie Mitchell</h3>
+<div id="outline-container-orgc80e3cc" class="outline-3">
+<h3 id="orgc80e3cc"><span class="section-number-3">2.1.</span> 1. "Inteligencia Artificial: Una Guía para Gente Pensante" - Melanie Mitchell</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Introducción narrativa a los conceptos básicos de IA, desde perceptrones hasta redes neuronales, sin ecuaciones complejas.</li>
@@ -4948,8 +5118,8 @@ Recursos introductorios sin necesidad de conocimientos previos en matemáticas o
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfc06b70" class="outline-3">
-<h3 id="orgfc06b70"><span class="section-number-3">2.2.</span> 2. "Artificial Intelligence: A Modern Approach" (Capítulos 1-3) - Stuart Russell y Peter Norvig</h3>
+<div id="outline-container-org065ec23" class="outline-3">
+<h3 id="org065ec23"><span class="section-number-3">2.2.</span> 2. "Artificial Intelligence: A Modern Approach" (Capítulos 1-3) - Stuart Russell y Peter Norvig</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Libro de texto clásico, pero los primeros capítulos son una introducción amigable a los fundamentos de IA (agentes inteligentes, búsqueda).</li>
@@ -4959,8 +5129,8 @@ Recursos introductorios sin necesidad de conocimientos previos en matemáticas o
 </ul>
 </div>
 </div>
-<div id="outline-container-org8081d88" class="outline-3">
-<h3 id="org8081d88"><span class="section-number-3">2.3.</span> 3. "Machine Learning Yearning" - Andrew Ng</h3>
+<div id="outline-container-orgd22ea93" class="outline-3">
+<h3 id="orgd22ea93"><span class="section-number-3">2.3.</span> 3. "Machine Learning Yearning" - Andrew Ng</h3>
 <div class="outline-text-3" id="text-2-3">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Guía corta y práctica sobre cómo abordar proyectos de aprendizaje automático (ML), enfocada en estrategia más que en teoría.</li>
@@ -4971,15 +5141,15 @@ Recursos introductorios sin necesidad de conocimientos previos en matemáticas o
 </div>
 </div>
 </div>
-<div id="outline-container-orgc842411" class="outline-2">
-<h2 id="orgc842411"><span class="section-number-2">3.</span> Nivel Intermedio</h2>
+<div id="outline-container-org118d8b4" class="outline-2">
+<h2 id="org118d8b4"><span class="section-number-2">3.</span> Nivel Intermedio</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Recursos para quienes tienen nociones básicas de programación (Python) y matemáticas (álgebra lineal, estadística).
 </p>
 </div>
-<div id="outline-container-orgcd31076" class="outline-3">
-<h3 id="orgcd31076"><span class="section-number-3">3.1.</span> 1. "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" - Aurélien Géron</h3>
+<div id="outline-container-orgc57b027" class="outline-3">
+<h3 id="orgc57b027"><span class="section-number-3">3.1.</span> 1. "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" - Aurélien Géron</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Manual práctico que guía desde regresiones simples hasta redes neuronales profundas con código en Python.</li>
@@ -4989,8 +5159,8 @@ Recursos para quienes tienen nociones básicas de programación (Python) y matem
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd1a5f01" class="outline-3">
-<h3 id="orgd1a5f01"><span class="section-number-3">3.2.</span> 2. "Deep Learning with Python" - François Chollet</h3>
+<div id="outline-container-org8435714" class="outline-3">
+<h3 id="org8435714"><span class="section-number-3">3.2.</span> 2. "Deep Learning with Python" - François Chollet</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Introducción al aprendizaje profundo usando Keras, con ejemplos desde redes básicas hasta convolucionales.</li>
@@ -5000,8 +5170,8 @@ Recursos para quienes tienen nociones básicas de programación (Python) y matem
 </ul>
 </div>
 </div>
-<div id="outline-container-org47cdddf" class="outline-3">
-<h3 id="org47cdddf"><span class="section-number-3">3.3.</span> 3. "CS231n: Convolutional Neural Networks for Visual Recognition" - Stanford University</h3>
+<div id="outline-container-orgd0babcc" class="outline-3">
+<h3 id="orgd0babcc"><span class="section-number-3">3.3.</span> 3. "CS231n: Convolutional Neural Networks for Visual Recognition" - Stanford University</h3>
 <div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Curso en línea con notas y videos sobre redes neuronales convolucionales (CNN).</li>
@@ -5012,15 +5182,15 @@ Recursos para quienes tienen nociones básicas de programación (Python) y matem
 </div>
 </div>
 </div>
-<div id="outline-container-org8e32fcf" class="outline-2">
-<h2 id="org8e32fcf"><span class="section-number-2">4.</span> Nivel Avanzado</h2>
+<div id="outline-container-org492b7c6" class="outline-2">
+<h2 id="org492b7c6"><span class="section-number-2">4.</span> Nivel Avanzado</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Recursos para expertos o investigadores con conocimientos sólidos en matemáticas (cálculo, probabilidad) y programación.
 </p>
 </div>
-<div id="outline-container-org2cf625a" class="outline-3">
-<h3 id="org2cf625a"><span class="section-number-3">4.1.</span> 1. "Deep Learning" - Ian Goodfellow, Yoshua Bengio, Aaron Courville</h3>
+<div id="outline-container-orgd244947" class="outline-3">
+<h3 id="orgd244947"><span class="section-number-3">4.1.</span> 1. "Deep Learning" - Ian Goodfellow, Yoshua Bengio, Aaron Courville</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Texto definitivo sobre aprendizaje profundo, cubriendo teoría matemática, algoritmos y aplicaciones avanzadas.</li>
@@ -5030,8 +5200,8 @@ Recursos para expertos o investigadores con conocimientos sólidos en matemátic
 </ul>
 </div>
 </div>
-<div id="outline-container-org1c9a4f8" class="outline-3">
-<h3 id="org1c9a4f8"><span class="section-number-3">4.2.</span> 2. "Pattern Recognition and Machine Learning" - Christopher Bishop</h3>
+<div id="outline-container-org90d8fb7" class="outline-3">
+<h3 id="org90d8fb7"><span class="section-number-3">4.2.</span> 2. "Pattern Recognition and Machine Learning" - Christopher Bishop</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Libro académico sobre aprendizaje automático probabilístico, desde modelos bayesianos hasta redes neuronales.</li>
@@ -5041,8 +5211,8 @@ Recursos para expertos o investigadores con conocimientos sólidos en matemátic
 </ul>
 </div>
 </div>
-<div id="outline-container-org4e843ad" class="outline-3">
-<h3 id="org4e843ad"><span class="section-number-3">4.3.</span> 3. "Attention Is All You Need" - Vaswani et al.</h3>
+<div id="outline-container-org478d034" class="outline-3">
+<h3 id="org478d034"><span class="section-number-3">4.3.</span> 3. "Attention Is All You Need" - Vaswani et al.</h3>
 <div class="outline-text-3" id="text-4-3">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Artículo seminal que introduce los transformers, base de modelos como BERT o GPT.</li>
@@ -5053,8 +5223,8 @@ Recursos para expertos o investigadores con conocimientos sólidos en matemátic
 </div>
 </div>
 </div>
-<div id="outline-container-orgfe84d9c" class="outline-2">
-<h2 id="orgfe84d9c"><span class="section-number-2">5.</span> Justificación General</h2>
+<div id="outline-container-orgb7bbd4a" class="outline-2">
+<h2 id="orgb7bbd4a"><span class="section-number-2">5.</span> Justificación General</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li><b><b>Principiantes</b></b>: Los recursos son narrativos y evitan tecnicismos, enfocándose en conceptos y contexto histórico para despertar interés.</li>
@@ -5063,8 +5233,8 @@ Recursos para expertos o investigadores con conocimientos sólidos en matemátic
 </ul>
 </div>
 </div>
-<div id="outline-container-orgeacfe5d" class="outline-2">
-<h2 id="orgeacfe5d"><span class="section-number-2">6.</span> Conclusión</h2>
+<div id="outline-container-orga6bfb0c" class="outline-2">
+<h2 id="orga6bfb0c"><span class="section-number-2">6.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Este listado ofrece una progresión clara para introducirse en IA:
@@ -5076,8 +5246,8 @@ Este listado ofrece una progresión clara para introducirse en IA:
 </ul>
 </div>
 </div>
-<div id="outline-container-orge31eccf" class="outline-2">
-<h2 id="orge31eccf"><span class="section-number-2">7.</span> Nota Final</h2>
+<div id="outline-container-orgcb65731" class="outline-2">
+<h2 id="orgcb65731"><span class="section-number-2">7.</span> Nota Final</h2>
 <div class="outline-text-2" id="text-7">
 <ul class="org-ul">
 <li>Este documento ha sido generado por Grok 3, creado por xAI, el 26 de febrero de 2025, con el propósito de proporcionar una guía estructurada y detallada para introducirse en la Inteligencia Artificial.</li>
@@ -5092,8 +5262,8 @@ Con estos recursos, puedes construir una base sólida en IA desde cero hasta niv
 </p>
 </div>
 </div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-libro.html">libro</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> </div>]]></description>
-  <category><![CDATA[libro]]></category>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-libros.html">libros</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> </div>]]></description>
+  <category><![CDATA[libros]]></category>
   <category><![CDATA[ia]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-27-listado-de-libros-y-documentos-para-introducirse-en-inteligencia-artificial.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-27-listado-de-libros-y-documentos-para-introducirse-en-inteligencia-artificial.html</guid>
