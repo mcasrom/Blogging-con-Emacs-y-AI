@@ -4,7 +4,288 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Tue, 18 Mar 2025 21:04:08 +0100</lastBuildDate>
+<lastBuildDate>Wed, 19 Mar 2025 08:22:41 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Creación de un Blog Estático con GitHub]]></title>
+  <description><![CDATA[
+<div id="outline-container-org7f4c119" class="outline-2">
+<h2 id="org7f4c119"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+GitHub es una plataforma ampliamente utilizada para el desarrollo colaborativo de software, pero también ofrece herramientas poderosas para la creación de sitios web estáticos, como blogs. En este post exploraremos cómo GitHub puede ser utilizado para crear un blog estático, analizando sus opciones, ventajas, desventajas y comparándolo con otras alternativas populares.
+</p>
+</div>
+</div>
+<div id="outline-container-org370b882" class="outline-2">
+<h2 id="org370b882"><span class="section-number-2">2.</span> ¿Qué es un Blog Estático?</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Un blog estático es un sitio web que no utiliza bases de datos ni lógica del lado del servidor para generar contenido dinámico. En su lugar, todos los archivos HTML, CSS y JavaScript se generan previamente y se sirven directamente al usuario. Esto lo hace rápido, seguro y fácil de mantener.
+</p>
+</div>
+<div id="outline-container-org9d6b6ae" class="outline-3">
+<h3 id="org9d6b6ae"><span class="section-number-3">2.1.</span> Características principales:</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Contenido pregenerado.</li>
+<li>Sin necesidad de bases de datos.</li>
+<li>Alojamiento simple y eficiente.</li>
+<li>Ideal para blogs personales o proyectos pequeños.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgad2d4dd" class="outline-2">
+<h2 id="orgad2d4dd"><span class="section-number-2">3.</span> Opciones de GitHub para Crear un Blog Estático</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+GitHub Pages es la principal herramienta de GitHub para alojar sitios web estáticos. A continuación, describimos las opciones disponibles:
+</p>
+</div>
+<div id="outline-container-org5ee9ee7" class="outline-3">
+<h3 id="org5ee9ee7"><span class="section-number-3">3.1.</span> 1. Repositorio Personal</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>Crea un repositorio llamado `username.github.io` (donde `username` es tu nombre de usuario en GitHub).</li>
+<li>El contenido del repositorio se publicará automáticamente en `<a href="https://username.github.io">https://username.github.io</a>`.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf3c6787" class="outline-3">
+<h3 id="orgf3c6787"><span class="section-number-3">3.2.</span> 2. Proyectos dentro de un Repositorio</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Puedes habilitar GitHub Pages en cualquier repositorio bajo la pestaña "Settings".</li>
+<li>Selecciona la rama y la carpeta donde reside tu sitio estático.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfc90741" class="outline-3">
+<h3 id="orgfc90741"><span class="section-number-3">3.3.</span> 3. Generadores de Sitios Estáticos</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+GitHub Pages soporta varios generadores de sitios estáticos, como Jekyll, Hugo, Gatsby, etc. Estos generadores permiten escribir contenido en formato Markdown y generar automáticamente el sitio estático.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf899609" class="outline-2">
+<h2 id="orgf899609"><span class="section-number-2">4.</span> Ventajas de Usar GitHub Pages</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+A continuación, enumeramos las principales ventajas de usar GitHub Pages para crear un blog estático:
+</p>
+</div>
+<div id="outline-container-orgdf99585" class="outline-3">
+<h3 id="orgdf99585"><span class="section-number-3">4.1.</span> 1. Gratuito</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>No hay costos asociados con el uso de GitHub Pages para alojar tu sitio.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org96f683c" class="outline-3">
+<h3 id="org96f683c"><span class="section-number-3">4.2.</span> 2. Integración Nativa</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>GitHub Pages está integrado directamente con GitHub, lo que facilita el flujo de trabajo de desarrollo y publicación.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb49c0ee" class="outline-3">
+<h3 id="orgb49c0ee"><span class="section-number-3">4.3.</span> 3. Control de Versiones</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>Al estar basado en Git, puedes aprovechar el control de versiones para gestionar cambios en tu blog.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf36bda7" class="outline-3">
+<h3 id="orgf36bda7"><span class="section-number-3">4.4.</span> 4. Rendimiento</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li>Los sitios estáticos son inherentemente rápidos porque no requieren procesamiento del lado del servidor.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org44886b6" class="outline-3">
+<h3 id="org44886b6"><span class="section-number-3">4.5.</span> 5. Comunidad y Soporte</h3>
+<div class="outline-text-3" id="text-4-5">
+<ul class="org-ul">
+<li>GitHub tiene una comunidad activa y abundante documentación para ayudarte a resolver problemas.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6fb0ed6" class="outline-2">
+<h2 id="org6fb0ed6"><span class="section-number-2">5.</span> Desventajas de Usar GitHub Pages</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+A pesar de sus ventajas, GitHub Pages también tiene algunas limitaciones:
+</p>
+</div>
+<div id="outline-container-org5122e3e" class="outline-3">
+<h3 id="org5122e3e"><span class="section-number-3">5.1.</span> 1. Limitaciones de Personalización</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>No puedes instalar plugins personalizados en Jekyll sin configuraciones adicionales.</li>
+<li>Algunas funcionalidades avanzadas pueden requerir servicios externos.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org120e6e1" class="outline-3">
+<h3 id="org120e6e1"><span class="section-number-3">5.2.</span> 2. Sin Bases de Datos</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>Si necesitas funcionalidades dinámicas como comentarios o formularios de contacto, deberás integrar servicios externos como Disqus o Google Forms.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org242079d" class="outline-3">
+<h3 id="org242079d"><span class="section-number-3">5.3.</span> 3. Espacio de Almacenamiento Limitado</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>GitHub Pages tiene un límite de 1 GB de almacenamiento por repositorio.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8a394dd" class="outline-3">
+<h3 id="org8a394dd"><span class="section-number-3">5.4.</span> 4. Curva de Aprendizaje</h3>
+<div class="outline-text-3" id="text-5-4">
+<ul class="org-ul">
+<li>Si no estás familiarizado con Git o Markdown, puede haber una curva de aprendizaje inicial.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf5a11ce" class="outline-2">
+<h2 id="orgf5a11ce"><span class="section-number-2">6.</span> Comparativa con Otras Opciones</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+A continuación, comparamos GitHub Pages con otras plataformas populares para la creación de blogs estáticos.
+</p>
+</div>
+<div id="outline-container-orge9b9d77" class="outline-3">
+<h3 id="orge9b9d77"><span class="section-number-3">6.1.</span> Tabla Comparativa</h3>
+<div class="outline-text-3" id="text-6-1">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Plataforma</th>
+<th scope="col" class="org-left">Alojamiento Gratuito</th>
+<th scope="col" class="org-left">Facilidad de Uso</th>
+<th scope="col" class="org-left">Personalización</th>
+<th scope="col" class="org-left">Integración con Git</th>
+<th scope="col" class="org-left">Velocidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">GitHub Pages</td>
+<td class="org-left">Sí</td>
+<td class="org-left">Media</td>
+<td class="org-left">Media</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Alta</td>
+</tr>
+
+<tr>
+<td class="org-left">Netlify</td>
+<td class="org-left">Sí</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Alta</td>
+</tr>
+
+<tr>
+<td class="org-left">Vercel</td>
+<td class="org-left">Sí</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Alta</td>
+</tr>
+
+<tr>
+<td class="org-left">WordPress.com</td>
+<td class="org-left">Sí (con limitaciones)</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Media</td>
+</tr>
+
+<tr>
+<td class="org-left">Render</td>
+<td class="org-left">Sí</td>
+<td class="org-left">Media</td>
+<td class="org-left">Media</td>
+<td class="org-left">Media</td>
+<td class="org-left">Alta</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orga15cfc2" class="outline-3">
+<h3 id="orga15cfc2"><span class="section-number-3">6.2.</span> Gráfico Comparativo</h3>
+<div class="outline-text-3" id="text-6-2">
+
+<figure id="org527ca3b">
+<img src="grafico-comparativo.png" alt="grafico-comparativo.png">
+
+</figure>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd95678d" class="outline-2">
+<h2 id="orgd95678d"><span class="section-number-2">7.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+GitHub Pages es una excelente opción para crear un blog estático, especialmente si ya estás familiarizado con Git y GitHub. Ofrece alojamiento gratuito, integración nativa y un rendimiento excepcional. Sin embargo, si necesitas más personalización o funcionalidades avanzadas, plataformas como Netlify o Vercel podrían ser mejores alternativas.
+</p>
+
+<p>
+Finalmente, la elección dependerá de tus necesidades específicas, habilidades técnicas y objetivos para el blog.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc614144" class="outline-2">
+<h2 id="orgc614144"><span class="section-number-2">8.</span> Referencias</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li><a href="https://pages.github.com/">GitHub Pages</a></li>
+<li><a href="https://www.netlify.com/">Netlify</a></li>
+<li><a href="https://vercel.com/">Vercel</a></li>
+<li><a href="https://wordpress.com/">WordPress.com</a></li>
+<li><a href="https://render.com/">Render</a></li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-github.html">github</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-blog.html">blog</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[github]]></category>
+  <category><![CDATA[blog]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-19-creaci%C3%B3n-de-un-blog-est%C3%A1tico-con-github.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-19-creaci%C3%B3n-de-un-blog-est%C3%A1tico-con-github.html</guid>
+  <pubDate>Wed, 19 Mar 2025 08:08:00 +0100</pubDate>
+</item>
 <item>
   <title><![CDATA[Tutorial de Seguridad en Linux: Mínimo de Protección ante Ataques Informáticos (II)]]></title>
   <description><![CDATA[
