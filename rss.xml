@@ -4,16 +4,372 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Thu, 20 Mar 2025 10:56:16 +0100</lastBuildDate>
+<lastBuildDate>Thu, 20 Mar 2025 16:36:31 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Botnets, Antibotnets y un Script en Bash para Detección de Botnets en Linux]]></title>
+  <description><![CDATA[
+<div id="outline-container-org61e1f46" class="outline-2">
+<h2 id="org61e1f46"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+En este artículo exploraremos qué son las botnets, cómo operan y qué medidas podemos tomar para minimizar el riesgo de ser víctimas de estos ataques. Además, proporcionaremos un script en <b>Bash</b> que utiliza <b>Nmap</b> para detectar actividad sospechosa en la red y bloquear posibles amenazas.
+</p>
+</div>
+</div>
+<div id="outline-container-org705b769" class="outline-2">
+<h2 id="org705b769"><span class="section-number-2">2.</span> ¿Qué es una Botnet?</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Una <b>botnet</b> es una red de dispositivos infectados (<b>bots</b> o <b>zombies</b>) controlados de manera remota por un atacante (<b>botmaster</b>). Estas redes suelen utilizarse para ataques de denegación de servicio (DDoS), envío masivo de spam, robo de datos y otros fines maliciosos.
+</p>
+</div>
+<div id="outline-container-org487592c" class="outline-3">
+<h3 id="org487592c"><span class="section-number-3">2.1.</span> Funcionamiento de una Botnet **</h3>
+<div class="outline-text-3" id="text-2-1">
+<ol class="org-ol">
+<li><b><b>Infección</b></b>: Los dispositivos son infectados mediante malware, exploits o ingeniería social.</li>
+<li><b><b>Conexión al C&amp;C</b></b>: Los bots se conectan a un servidor de comando y control (C&amp;C) del atacante.</li>
+<li><b><b>Ejecución de ataques</b></b>: El atacante emite órdenes, como lanzar ataques DDoS o robar información.</li>
+<li><b><b>Propagación</b></b>: La botnet busca infectar más dispositivos, aumentando su tamaño y efectividad.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orge8ffafa" class="outline-2">
+<h2 id="orge8ffafa"><span class="section-number-2">3.</span> Cómo minimizar el riesgo de infección</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Para evitar que nuestros dispositivos sean parte de una botnet, debemos:
+</p>
+
+<ul class="org-ul">
+<li>Mantener el sistema operativo y software actualizados.</li>
+<li>Usar firewalls y listas de control de acceso (ACLs) para restringir tráfico sospechoso.</li>
+<li>Configurar correctamente servicios como SSH y RDP, evitando contraseñas débiles.</li>
+<li>Escanear la red regularmente en busca de actividad sospechosa.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1e06f6d" class="outline-2">
+<h2 id="org1e06f6d"><span class="section-number-2">4.</span> Detección y bloqueo de Botnets con Bash y Nmap</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+A continuación, presentamos un script en <b>Bash</b> que escanea la red en busca de actividad sospechosa y bloquea dispositivos potencialmente infectados.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Script Antibotnet con Nmap</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Autor: M. Castillo</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Fecha: 2025-03-20</span>
+
+<span style="color: #1857a4;">LOGFILE</span>=<span style="color: #a44185;">"/var/log/antibotnet.log"</span>
+<span style="color: #1857a4;">NETWORK</span>=<span style="color: #a44185;">"192.168.1.0/24"</span>
+<span style="color: #1857a4;">PORTS</span>=<span style="color: #a44185;">"23,445,8080,1080,6667,22"</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verifica permisos de root</span>
+<span style="color: #219fd5; font-style: italic;">if</span> [[ $<span style="color: #1857a4;">EUID</span> -ne 0 ]]; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Este script debe ejecutarse como root."</span> &gt;&amp;2
+    <span style="color: #219fd5; font-style: italic;">exit</span> 1
+<span style="color: #219fd5; font-style: italic;">fi</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Escanea la red en busca de puertos abiertos usados por botnets</span>
+<span style="color: #dc3eb7;">scan_network</span>() {
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"[+] Escaneando la red..."</span> | tee -a $<span style="color: #1857a4;">LOGFILE</span>
+    nmap -p $<span style="color: #1857a4;">PORTS</span> --open -oG - $<span style="color: #1857a4;">NETWORK</span> | awk <span style="color: #a44185;">'/open/ {print $2}'</span> &gt; /tmp/suspicious_ips.txt
+
+    <span style="color: #219fd5; font-style: italic;">if</span> [[ <span style="color: #219fd5; font-weight: bold;">!</span> -s /tmp/suspicious_ips.txt ]]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"[+] No se detect&#243; actividad sospechosa."</span> | tee -a $<span style="color: #1857a4;">LOGFILE</span>
+    <span style="color: #219fd5; font-style: italic;">else</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"[*] Se detectaron IPs sospechosas:"</span> | tee -a $<span style="color: #1857a4;">LOGFILE</span>
+        cat /tmp/suspicious_ips.txt | tee -a $<span style="color: #1857a4;">LOGFILE</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Bloquea las IPs sospechosas</span>
+<span style="color: #dc3eb7;">block_hosts</span>() {
+    <span style="color: #219fd5; font-style: italic;">while </span><span style="color: #dc3eb7;">read</span> -r ip; <span style="color: #219fd5; font-style: italic;">do</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"[!] Bloqueando IP sospechosa: $ip"</span> | tee -a $<span style="color: #1857a4;">LOGFILE</span>
+        iptables -A INPUT -s $<span style="color: #1857a4;">ip</span> -j DROP
+    <span style="color: #219fd5; font-style: italic;">done</span> &lt; /tmp/suspicious_ips.txt
+}
+
+scan_network
+block_hosts
+
+<span style="color: #219fd5; font-style: italic;">exit</span> 0
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org24c5e62" class="outline-2">
+<h2 id="org24c5e62"><span class="section-number-2">5.</span> Uso del Script</h2>
+<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li><p>
+Guardar el script y otorgarle permisos de ejecución:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">chmod +x antibotnet.sh
+</pre>
+</div></li>
+
+<li><p>
+Ejecutarlo como root:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">sudo ./antibotnet.sh
+</pre>
+</div></li>
+
+<li>Revisar el log en <b>/var/log/antibotnet.log</b> para analizar los resultados.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org258e3b1" class="outline-2">
+<h2 id="org258e3b1"><span class="section-number-2">6.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Este script ayuda a identificar y bloquear dispositivos sospechosos en la red, reduciendo el riesgo de infección por botnets. Sin embargo, la seguridad debe abordarse desde múltiples ángulos, combinando medidas preventivas y herramientas de detección.
+</p>
+</div>
+</div>
+<div id="outline-container-orgffe6277" class="outline-2">
+<h2 id="orgffe6277"><span class="section-number-2">7.</span> Referencias</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li><a href="https://nmap.org">Nmap - The Network Mapper</a></li>
+<li><a href="https://www.cisa.gov/stopransomware/botnets">CISA - Botnets and Cybersecurity</a></li>
+<li><a href="https://www.kaspersky.com/resource-center/definitions/botnet">Kaspersky - What is a Botnet?</a></li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-botnet.html">botnet</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-antibotnet.html">antibotnet</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ciberseguridad.html">ciberseguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-script.html">script</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> </div>]]></description>
+  <category><![CDATA[botnet]]></category>
+  <category><![CDATA[antibotnet]]></category>
+  <category><![CDATA[ciberseguridad]]></category>
+  <category><![CDATA[script]]></category>
+  <category><![CDATA[linux]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-20-botnets,-antibotnets-y-un-script-en-bash-para-detecci%C3%B3n-de-botnets-en-linux.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-20-botnets,-antibotnets-y-un-script-en-bash-para-detecci%C3%B3n-de-botnets-en-linux.html</guid>
+  <pubDate>Thu, 20 Mar 2025 15:19:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Tutorial de Ciberseguridad Básica para Equipos Linux y Otros Sistemas Operativos III]]></title>
+  <description><![CDATA[
+<div id="outline-container-orgf11aec6" class="outline-2">
+<h2 id="orgf11aec6"><span class="section-number-2">1.</span> Capítulo 3: Ciberseguridad en Otros Sistemas Operativos (Windows y macOS)</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<b><b>3.1 Ciberseguridad en Windows</b></b>
+</p>
+
+<p>
+<b><b><b>3.1.1 Configuración inicial</b></b></b>
+Windows es uno de los sistemas operativos más utilizados, lo que lo convierte en un objetivo frecuente para los atacantes. Sigue estos pasos para mejorar su seguridad:
+</p>
+
+<ul class="org-ul">
+<li><b><b>Activar Windows Defender</b></b>: Es un antivirus incorporado eficaz. Asegúrate de que esté habilitado y actualizado.</li>
+<li><b><b>Configurar BitLocker</b></b>: Si tu versión de Windows lo permite, activa el cifrado de disco BitLocker.</li>
+<li><b><b>Desactivar servicios innecesarios</b></b>: Deshabilita características como el "Acceso remoto" si no las necesitas.</li>
+</ul>
+
+<p>
+<b><b><b>3.1.2 Herramientas adicionales</b></b></b>
+</p>
+<ul class="org-ul">
+<li><b><b>Malwarebytes</b></b>: Un complemento excelente para Windows Defender.</li>
+<li><b><b>AdGuard</b></b>: Bloqueador de anuncios y malware en navegadores.</li>
+</ul>
+
+<p>
+<b><b>3.2 Ciberseguridad en macOS</b></b>
+</p>
+
+<p>
+<b><b><b>3.2.1 Configuración básica</b></b></b>
+macOS es conocido por su seguridad inherente, pero aún así requiere atención:
+</p>
+
+<ul class="org-ul">
+<li><b><b>Gatekeeper</b></b>: Asegúrate de que solo se puedan instalar aplicaciones de la App Store o desarrolladores identificados.</li>
+<li><b><b>FileVault</b></b>: Activa el cifrado de disco FileVault para proteger tus datos.</li>
+<li><b><b>Firewall</b></b>: Habilita el firewall en Preferencias del Sistema &gt; Seguridad y Privacidad.</li>
+</ul>
+
+<p>
+<b><b><b>3.2.2 Buenas prácticas</b></b></b>
+</p>
+<ul class="org-ul">
+<li><b><b>No desactivar SIP</b></b>: El System Integrity Protection (SIP) es una característica crítica de macOS que protege archivos y directorios del sistema.</li>
+<li><b><b>Actualizaciones automáticas</b></b>: Configura macOS para que instale actualizaciones automáticamente.</li>
+</ul>
+
+<p>
+<b><b>3.3 Medidas universales para todos los sistemas operativos</b></b>
+</p>
+
+<p>
+<b><b><b>3.3.1 Copias de seguridad</b></b></b>
+Independientemente del sistema operativo, realiza copias de seguridad periódicas. Usa herramientas como:
+</p>
+
+<ul class="org-ul">
+<li><b><b>Time Machine</b></b> (macOS)</li>
+<li><b><b>Backup and Restore</b></b> (Windows)</li>
+<li><b><b>rsync</b></b> o <b><b>Deja Dup</b></b> (Linux)</li>
+</ul>
+
+<p>
+<b><b><b>3.3.2 Educación continua</b></b></b>
+Mantente informado sobre las últimas amenazas y mejores prácticas. Participa en foros, sigue blogs de seguridad y asiste a webinars relacionados.
+</p>
+
+<p>
+<b><b><b>3.3.3 Uso de VPN</b></b></b>
+Una red privada virtual (VPN) cifra tu tráfico y oculta tu dirección IP, lo que es especialmente útil en redes públicas.
+</p>
+
+<p>
+&#x2014;
+</p>
+</div>
+</div>
+<div id="outline-container-org1c5372d" class="outline-2">
+<h2 id="org1c5372d"><span class="section-number-2">2.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+La ciberseguridad es una responsabilidad compartida entre el usuario y el sistema operativo. Siguiendo las prácticas descritas en este tutorial, puedes reducir significativamente el riesgo de ataques y proteger tus datos en cualquier plataforma. Recuerda que la seguridad no es un evento único, sino un proceso continuo que requiere atención constante.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ciberseguridad.html">ciberseguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[ciberseguridad]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-20--tutorial-de-ciberseguridad-b%C3%A1sica-para-equipos-linux-y-otros-sistemas-operativos-iii.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-20--tutorial-de-ciberseguridad-b%C3%A1sica-para-equipos-linux-y-otros-sistemas-operativos-iii.html</guid>
+  <pubDate>Thu, 20 Mar 2025 10:52:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Tutorial de Ciberseguridad Básica para Equipos Linux y Otros Sistemas Operativos II]]></title>
+  <description><![CDATA[
+<div id="outline-container-orga28344b" class="outline-2">
+<h2 id="orga28344b"><span class="section-number-2">1.</span> Capítulo 2: Configuración y Prácticas de Seguridad en Linux</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<b><b>2.1 Ventajas de Linux en términos de seguridad</b></b>
+Linux es conocido por su robustez y flexibilidad en términos de seguridad. Algunas de sus ventajas incluyen:
+</p>
+
+<ul class="org-ul">
+<li><b><b>Modelo de permisos</b></b>: Linux utiliza un sistema de permisos basado en usuarios y grupos, lo que limita el acceso a archivos y recursos sensibles.</li>
+<li><b><b>Menor objetivo de ataque</b></b>: Debido a su menor popularidad en comparación con Windows, Linux es menos objetivo de ataques masivos.</li>
+<li><b><b>Software de código abierto</b></b>: La transparencia del código permite que la comunidad identifique y corrija vulnerabilidades rápidamente.</li>
+</ul>
+
+<p>
+<b><b>2.2 Configuración inicial de seguridad en Linux</b></b>
+</p>
+
+<p>
+<b><b><b>2.2.1 Actualización del sistema</b></b></b>
+Asegúrate de que tu distribución de Linux esté completamente actualizada. Usa los siguientes comandos dependiendo de tu gestor de paquetes:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt update &amp;&amp; sudo apt upgrade -y  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para Debian/Ubuntu</span>
+sudo dnf update -y                     <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para Fedora</span>
+sudo pacman -Syu                       <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para Arch Linux</span>
+</pre>
+</div>
+
+<p>
+<b><b><b>2.2.2 Creación de un usuario no root</b></b></b>
+Es una mala práctica usar el usuario "root" para tareas diarias. Crea un usuario estándar y otórgale privilegios de superusuario cuando sea necesario:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo adduser nombreusuario
+sudo usermod -aG sudo nombreusuario     <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para sistemas basados en Debian</span>
+sudo usermod -aG wheel nombreusuario    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para sistemas basados en Red Hat</span>
+</pre>
+</div>
+
+<p>
+<b><b><b>2.2.3 Configuración del firewall</b></b></b>
+El firewall es esencial para bloquear accesos no deseados. Usa `ufw` (Uncomplicated Firewall) para configurarlo fácilmente:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt install ufw                    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Instalar UFW</span>
+sudo ufw enable                         <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Habilitar el firewall</span>
+sudo ufw allow ssh                      <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Permitir conexiones SSH</span>
+sudo ufw status                         <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar el estado</span>
+</pre>
+</div>
+
+<p>
+<b><b>2.3 Herramientas de seguridad recomendadas para Linux</b></b>
+</p>
+
+<p>
+<b><b><b>2.3.1 Antivirus</b></b></b>
+Aunque Linux es menos propenso a malware, no está exento de riesgos. Usa herramientas como ClamAV para escanear archivos:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt install clamav clamtk          <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Instalar ClamAV y su interfaz gr&#225;fica</span>
+clamscan -r /ruta/a/escanear            <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Escanear un directorio espec&#237;fico</span>
+</pre>
+</div>
+
+<p>
+<b><b><b>2.3.2 Auditoría de seguridad</b></b></b>
+Herramientas como Lynis pueden ayudarte a realizar auditorías de seguridad y detectar vulnerabilidades:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt install lynis                  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Instalar Lynis</span>
+sudo lynis audit system                 <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar auditor&#237;a</span>
+</pre>
+</div>
+
+<p>
+<b><b>2.4 Buenas prácticas adicionales en Linux</b></b>
+</p>
+
+<ul class="org-ul">
+<li><b><b>SSH seguro</b></b>: Cambia el puerto predeterminado (22), deshabilita el inicio de sesión como root y usa autenticación por clave en lugar de contraseñas.</li>
+<li><b><b>Cifrado de disco</b></b>: Activa el cifrado de disco durante la instalación para proteger tus datos en caso de robo.</li>
+<li><b><b>Monitoreo de logs</b></b>: Revisa regularmente los logs del sistema (`/var/log/`) para detectar actividades sospechosas.</li>
+</ul>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-20--tutorial-de-ciberseguridad-b%C3%A1sica-para-equipos-linux-y-otros-sistemas-operativos-iii">2025-03-20&#x2013;tutorial-de-ciberseguridad-básica-para-equipos-linux-y-otros-sistemas-operativos-iii</a>
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ciberseguridad.html">ciberseguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[ciberseguridad]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-20--tutorial-de-ciberseguridad-b%C3%A1sica-para-equipos-linux-y-otros-sistemas-operativos-ii.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-20--tutorial-de-ciberseguridad-b%C3%A1sica-para-equipos-linux-y-otros-sistemas-operativos-ii.html</guid>
+  <pubDate>Thu, 20 Mar 2025 10:52:00 +0100</pubDate>
+</item>
 <item>
   <title><![CDATA[Tutorial de Ciberseguridad Básica para Equipos Linux y Otros Sistemas Operativos I]]></title>
   <description><![CDATA[
-<div id="outline-container-org06d195e" class="outline-2">
-<h2 id="org06d195e"><span class="section-number-2">1.</span> Capítulo 1: Introducción a la Ciberseguridad en tu Equipo</h2>
+<div id="outline-container-orgde26ee9" class="outline-2">
+<h2 id="orgde26ee9"><span class="section-number-2">1.</span> Capítulo 1: Introducción a la Ciberseguridad en tu Equipo</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgb9c92ef" class="outline-3">
-<h3 id="orgb9c92ef"><span class="section-number-3">1.1.</span> 1.1 ¿Qué es la ciberseguridad y por qué es importante?</h3>
+<div id="outline-container-org0e776ec" class="outline-3">
+<h3 id="org0e776ec"><span class="section-number-3">1.1.</span> 1.1 ¿Qué es la ciberseguridad y por qué es importante?</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 La ciberseguridad se refiere al conjunto de prácticas, herramientas y estrategias diseñadas para proteger dispositivos, redes y datos contra accesos no autorizados, ataques maliciosos o cualquier tipo de amenaza digital. En un mundo donde la tecnología está cada vez más integrada en nuestra vida diaria, garantizar la seguridad de nuestros equipos es crucial.
@@ -52,6 +408,10 @@ Independientemente del sistema operativo que utilices, hay algunos principios fu
 
 <p>
 &#x2014;
+</p>
+
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-20--tutorial-de-ciberseguridad-b%C3%A1sica-para-equipos-linux-y-otros-sistemas-operativos-ii">2025-03-20&#x2013;tutorial-de-ciberseguridad-básica-para-equipos-linux-y-otros-sistemas-operativos-ii</a>
 </p>
 </div>
 </div>
@@ -3510,6 +3870,76 @@ Para ponerte en contacto, envíanos un email a <a href="mailto:mybloggingnotes@g
 <item>
   <title><![CDATA[Nosotros]]></title>
   <description><![CDATA[
+<div id="outline-container-org9d64cb5" class="outline-2">
+<h2 id="org9d64cb5">Sobre Nosotros</h2>
+<div class="outline-text-2" id="text-org9d64cb5">
+<p>
+Bienvenido a <b>Emacs con Esteroides</b>, un espacio donde combinamos la potencia de Emacs con las capacidades de la <b>IA Generativa</b> para crear un flujo de trabajo optimizado en la gestión y generación de contenido. Este blog es coordinado por <b>M. Castillo</b>, un entusiasta del software libre, la automatización y la productividad extrema.
+</p>
+</div>
+<div id="outline-container-orgdcd4d26" class="outline-3">
+<h3 id="orgdcd4d26">¿Qué es Emacs con Esteroides? **</h3>
+<div class="outline-text-3" id="text-orgdcd4d26">
+<p>
+Es un blog dedicado a explorar cómo llevar a <b>Emacs</b> al siguiente nivel con herramientas avanzadas. Aquí documentamos técnicas, configuraciones y scripts que permiten convertir Emacs en un entorno ultrapotente para la creación de contenido, el desarrollo de software y la productividad en general.
+</p>
+
+<p>
+Nuestro enfoque se centra en tres pilares principales:
+</p>
+
+<ol class="org-ol">
+<li><b><b>IA Generativa para la creación de contenido</b></b>: Utilizamos herramientas de <b>IA Generativa</b> para asistir en la generación de ideas, estructuración de artículos y automatización de tareas repetitivas.</li>
+<li><b><b>Emacs como editor definitivo de posts</b></b>: Todos los artículos del blog son escritos, editados y gestionados dentro de Emacs, aprovechando funcionalidades como <b>Org Mode</b>, <b>Magit</b> y <b>Projectile</b>.</li>
+<li><b><b>Generación automática del blog con Org Mode</b></b>: A través de <b>Org Mode</b>, convertimos nuestros documentos en publicaciones listas para la web, integrando herramientas como <b>Hugo</b> o <b>Pandoc</b> para el despliegue del contenido.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org72683f1" class="outline-3">
+<h3 id="org72683f1">La IA y Emacs: Un dúo imparable **</h3>
+<div class="outline-text-3" id="text-org72683f1">
+<p>
+La combinación de <b>Emacs</b> con <b>IA Generativa</b> nos permite:
+</p>
+
+<ul class="org-ul">
+<li>Crear contenido de calidad de manera más eficiente.</li>
+<li>Sugerir estructuras de post y mejorar la redacción.</li>
+<li>Automatizar partes tediosas del proceso de blogging, desde la planificación hasta la publicación.</li>
+<li>Integrar respuestas dinámicas y adaptables según las necesidades del lector.</li>
+</ul>
+
+<p>
+<b>El resultado: un flujo de trabajo optimizado que reduce el tiempo de redacción sin comprometer la calidad.</b>
+</p>
+</div>
+</div>
+<div id="outline-container-org13e02e3" class="outline-3">
+<h3 id="org13e02e3">Actores clave en la creación del blog **</h3>
+<div class="outline-text-3" id="text-org13e02e3">
+<p>
+Para ilustrar el ecosistema de trabajo en <b>Emacs con Esteroides</b>, aquí tienes un diagrama con los actores principales:
+</p>
+
+
+<figure id="orgaca7cc0">
+<img src="images/diagrama_actores.png" alt="diagrama_actores.png">
+
+</figure>
+
+<ul class="org-ul">
+<li>🧑‍💻 <b>M. Castillo</b>: El arquitecto detrás de todo, configurando Emacs hasta el límite.</li>
+<li>🤖 <b>IA Generativa</b>: Suministrando ideas, revisando contenido y sugiriendo mejoras.</li>
+<li>🔧 <b>Emacs</b>: El todoterreno que lo hace todo posible.</li>
+<li>📜 <b>Org Mode</b>: La magia detrás de la estructuración y generación del blog.</li>
+<li>🚀 <b>Hugo/Pandoc</b>: La pasarela final para que el contenido llegue a los lectores.</li>
+</ul>
+
+<p>
+¡Bienvenido a <b>Emacs con Esteroides</b>! Esperamos que disfrutes de este viaje tanto como nosotros al crearlo.
+</p>
+
+
 <p>
 Para ponerte en contacto, envíanos un email a <a href="mailto:mybloggingnotes@gmail.com">mybloggingnotes@gmail.com</a>.
 </p>
@@ -3517,6 +3947,9 @@ Para ponerte en contacto, envíanos un email a <a href="mailto:mybloggingnotes@g
 <p>
 <a href="index.html">Volver al inicio</a>
 </p>
+</div>
+</div>
+</div>
 <div class="taglist"></div>]]></description>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/nosotros.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/nosotros.html</guid>

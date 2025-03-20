@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Protección contra Botnets en Linux con Nmap">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Botnets, Antibotnets y un Script en Bash para Detección de Botnets en Linux</title>
+<meta charset='UTF-8'>
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: flex-start;
+           text-align: left;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+         }
+         .blog-header img {
+           max-width: 70px;
+           height: auto;
+           margin-right: 20px;
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+         }
+         .blog-title {
+           font-size: 2em;
+           margin: 0;
+         }
+         .blog-subtitle {
+           font-size: 1.1em;
+           color: #666;
+           margin-top: 5px;
+         }
+         .blog-email {
+           font-size: 0.9em;
+           color: #777;
+           margin-top: 8px;
+         }
+         .blog-email a {
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.85em;
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+       </style>
+       
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>
+       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='tags.html'>Tags</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a>
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a>
+       </nav>
+        <hr></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">20/03/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-20-botnets,-antibotnets-y-un-script-en-bash-para-detección-de-botnets-en-linux.html">Botnets, Antibotnets y un Script en Bash para Detección de Botnets en Linux</a></h1>
+<div id="outline-container-org61e1f46" class="outline-2">
+<h2 id="org61e1f46"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+En este artículo exploraremos qué son las botnets, cómo operan y qué medidas podemos tomar para minimizar el riesgo de ser víctimas de estos ataques. Además, proporcionaremos un script en <b>Bash</b> que utiliza <b>Nmap</b> para detectar actividad sospechosa en la red y bloquear posibles amenazas.
+</p>
+</div>
+</div>
+<div id="outline-container-org705b769" class="outline-2">
+<h2 id="org705b769"><span class="section-number-2">2.</span> ¿Qué es una Botnet?</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Una <b>botnet</b> es una red de dispositivos infectados (<b>bots</b> o <b>zombies</b>) controlados de manera remota por un atacante (<b>botmaster</b>). Estas redes suelen utilizarse para ataques de denegación de servicio (DDoS), envío masivo de spam, robo de datos y otros fines maliciosos.
+</p>
+</div>
+<div id="outline-container-org487592c" class="outline-3">
+<h3 id="org487592c"><span class="section-number-3">2.1.</span> Funcionamiento de una Botnet **</h3>
+<div class="outline-text-3" id="text-2-1">
+<ol class="org-ol">
+<li><b><b>Infección</b></b>: Los dispositivos son infectados mediante malware, exploits o ingeniería social.</li>
+<li><b><b>Conexión al C&amp;C</b></b>: Los bots se conectan a un servidor de comando y control (C&amp;C) del atacante.</li>
+<li><b><b>Ejecución de ataques</b></b>: El atacante emite órdenes, como lanzar ataques DDoS o robar información.</li>
+<li><b><b>Propagación</b></b>: La botnet busca infectar más dispositivos, aumentando su tamaño y efectividad.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orge8ffafa" class="outline-2">
+<h2 id="orge8ffafa"><span class="section-number-2">3.</span> Cómo minimizar el riesgo de infección</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Para evitar que nuestros dispositivos sean parte de una botnet, debemos:
+</p>
+
+<ul class="org-ul">
+<li>Mantener el sistema operativo y software actualizados.</li>
+<li>Usar firewalls y listas de control de acceso (ACLs) para restringir tráfico sospechoso.</li>
+<li>Configurar correctamente servicios como SSH y RDP, evitando contraseñas débiles.</li>
+<li>Escanear la red regularmente en busca de actividad sospechosa.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1e06f6d" class="outline-2">
+<h2 id="org1e06f6d"><span class="section-number-2">4.</span> Detección y bloqueo de Botnets con Bash y Nmap</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+A continuación, presentamos un script en <b>Bash</b> que escanea la red en busca de actividad sospechosa y bloquea dispositivos potencialmente infectados.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Script Antibotnet con Nmap</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Autor: M. Castillo</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Fecha: 2025-03-20</span>
+
+<span style="color: #1857a4;">LOGFILE</span>=<span style="color: #a44185;">"/var/log/antibotnet.log"</span>
+<span style="color: #1857a4;">NETWORK</span>=<span style="color: #a44185;">"192.168.1.0/24"</span>
+<span style="color: #1857a4;">PORTS</span>=<span style="color: #a44185;">"23,445,8080,1080,6667,22"</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verifica permisos de root</span>
+<span style="color: #219fd5; font-style: italic;">if</span> [[ $<span style="color: #1857a4;">EUID</span> -ne 0 ]]; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Este script debe ejecutarse como root."</span> &gt;&amp;2
+    <span style="color: #219fd5; font-style: italic;">exit</span> 1
+<span style="color: #219fd5; font-style: italic;">fi</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Escanea la red en busca de puertos abiertos usados por botnets</span>
+<span style="color: #dc3eb7;">scan_network</span>() {
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"[+] Escaneando la red..."</span> | tee -a $<span style="color: #1857a4;">LOGFILE</span>
+    nmap -p $<span style="color: #1857a4;">PORTS</span> --open -oG - $<span style="color: #1857a4;">NETWORK</span> | awk <span style="color: #a44185;">'/open/ {print $2}'</span> &gt; /tmp/suspicious_ips.txt
+
+    <span style="color: #219fd5; font-style: italic;">if</span> [[ <span style="color: #219fd5; font-weight: bold;">!</span> -s /tmp/suspicious_ips.txt ]]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"[+] No se detect&#243; actividad sospechosa."</span> | tee -a $<span style="color: #1857a4;">LOGFILE</span>
+    <span style="color: #219fd5; font-style: italic;">else</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"[*] Se detectaron IPs sospechosas:"</span> | tee -a $<span style="color: #1857a4;">LOGFILE</span>
+        cat /tmp/suspicious_ips.txt | tee -a $<span style="color: #1857a4;">LOGFILE</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Bloquea las IPs sospechosas</span>
+<span style="color: #dc3eb7;">block_hosts</span>() {
+    <span style="color: #219fd5; font-style: italic;">while </span><span style="color: #dc3eb7;">read</span> -r ip; <span style="color: #219fd5; font-style: italic;">do</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"[!] Bloqueando IP sospechosa: $ip"</span> | tee -a $<span style="color: #1857a4;">LOGFILE</span>
+        iptables -A INPUT -s $<span style="color: #1857a4;">ip</span> -j DROP
+    <span style="color: #219fd5; font-style: italic;">done</span> &lt; /tmp/suspicious_ips.txt
+}
+
+scan_network
+block_hosts
+
+<span style="color: #219fd5; font-style: italic;">exit</span> 0
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org24c5e62" class="outline-2">
+<h2 id="org24c5e62"><span class="section-number-2">5.</span> Uso del Script</h2>
+<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li><p>
+Guardar el script y otorgarle permisos de ejecución:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">chmod +x antibotnet.sh
+</pre>
+</div></li>
+
+<li><p>
+Ejecutarlo como root:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">sudo ./antibotnet.sh
+</pre>
+</div></li>
+
+<li>Revisar el log en <b>/var/log/antibotnet.log</b> para analizar los resultados.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org258e3b1" class="outline-2">
+<h2 id="org258e3b1"><span class="section-number-2">6.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Este script ayuda a identificar y bloquear dispositivos sospechosos en la red, reduciendo el riesgo de infección por botnets. Sin embargo, la seguridad debe abordarse desde múltiples ángulos, combinando medidas preventivas y herramientas de detección.
+</p>
+</div>
+</div>
+<div id="outline-container-orgffe6277" class="outline-2">
+<h2 id="orgffe6277"><span class="section-number-2">7.</span> Referencias</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li><a href="https://nmap.org">Nmap - The Network Mapper</a></li>
+<li><a href="https://www.cisa.gov/stopransomware/botnets">CISA - Botnets and Cybersecurity</a></li>
+<li><a href="https://www.kaspersky.com/resource-center/definitions/botnet">Kaspersky - What is a Botnet?</a></li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-botnet.html">botnet</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-antibotnet.html">antibotnet</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ciberseguridad.html">ciberseguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-script.html">script</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p>
+           <a href="rss.xml">
+             <img src="rss.png" alt="RSS Feed" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+       </div></div>
+</body>
+</html>

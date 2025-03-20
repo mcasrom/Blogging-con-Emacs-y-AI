@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Tutorial de Ciberseguridad Básica para Equipos Linux y Otros Sistemas Operativos">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Tutorial de Ciberseguridad Básica para Equipos Linux y Otros Sistemas Operativos II</title>
+<meta charset='UTF-8'>
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: flex-start;
+           text-align: left;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+         }
+         .blog-header img {
+           max-width: 70px;
+           height: auto;
+           margin-right: 20px;
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+         }
+         .blog-title {
+           font-size: 2em;
+           margin: 0;
+         }
+         .blog-subtitle {
+           font-size: 1.1em;
+           color: #666;
+           margin-top: 5px;
+         }
+         .blog-email {
+           font-size: 0.9em;
+           color: #777;
+           margin-top: 8px;
+         }
+         .blog-email a {
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.85em;
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+       </style>
+       
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>
+       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='tags.html'>Tags</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a>
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a>
+       </nav>
+        <hr></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">20/03/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-20--tutorial-de-ciberseguridad-básica-para-equipos-linux-y-otros-sistemas-operativos-ii.html">Tutorial de Ciberseguridad Básica para Equipos Linux y Otros Sistemas Operativos II</a></h1>
+<div id="outline-container-orga28344b" class="outline-2">
+<h2 id="orga28344b"><span class="section-number-2">1.</span> Capítulo 2: Configuración y Prácticas de Seguridad en Linux</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<b><b>2.1 Ventajas de Linux en términos de seguridad</b></b>
+Linux es conocido por su robustez y flexibilidad en términos de seguridad. Algunas de sus ventajas incluyen:
+</p>
+
+<ul class="org-ul">
+<li><b><b>Modelo de permisos</b></b>: Linux utiliza un sistema de permisos basado en usuarios y grupos, lo que limita el acceso a archivos y recursos sensibles.</li>
+<li><b><b>Menor objetivo de ataque</b></b>: Debido a su menor popularidad en comparación con Windows, Linux es menos objetivo de ataques masivos.</li>
+<li><b><b>Software de código abierto</b></b>: La transparencia del código permite que la comunidad identifique y corrija vulnerabilidades rápidamente.</li>
+</ul>
+
+<p>
+<b><b>2.2 Configuración inicial de seguridad en Linux</b></b>
+</p>
+
+<p>
+<b><b><b>2.2.1 Actualización del sistema</b></b></b>
+Asegúrate de que tu distribución de Linux esté completamente actualizada. Usa los siguientes comandos dependiendo de tu gestor de paquetes:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt update &amp;&amp; sudo apt upgrade -y  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para Debian/Ubuntu</span>
+sudo dnf update -y                     <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para Fedora</span>
+sudo pacman -Syu                       <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para Arch Linux</span>
+</pre>
+</div>
+
+<p>
+<b><b><b>2.2.2 Creación de un usuario no root</b></b></b>
+Es una mala práctica usar el usuario "root" para tareas diarias. Crea un usuario estándar y otórgale privilegios de superusuario cuando sea necesario:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo adduser nombreusuario
+sudo usermod -aG sudo nombreusuario     <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para sistemas basados en Debian</span>
+sudo usermod -aG wheel nombreusuario    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para sistemas basados en Red Hat</span>
+</pre>
+</div>
+
+<p>
+<b><b><b>2.2.3 Configuración del firewall</b></b></b>
+El firewall es esencial para bloquear accesos no deseados. Usa `ufw` (Uncomplicated Firewall) para configurarlo fácilmente:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt install ufw                    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Instalar UFW</span>
+sudo ufw enable                         <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Habilitar el firewall</span>
+sudo ufw allow ssh                      <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Permitir conexiones SSH</span>
+sudo ufw status                         <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar el estado</span>
+</pre>
+</div>
+
+<p>
+<b><b>2.3 Herramientas de seguridad recomendadas para Linux</b></b>
+</p>
+
+<p>
+<b><b><b>2.3.1 Antivirus</b></b></b>
+Aunque Linux es menos propenso a malware, no está exento de riesgos. Usa herramientas como ClamAV para escanear archivos:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt install clamav clamtk          <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Instalar ClamAV y su interfaz gr&#225;fica</span>
+clamscan -r /ruta/a/escanear            <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Escanear un directorio espec&#237;fico</span>
+</pre>
+</div>
+
+<p>
+<b><b><b>2.3.2 Auditoría de seguridad</b></b></b>
+Herramientas como Lynis pueden ayudarte a realizar auditorías de seguridad y detectar vulnerabilidades:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt install lynis                  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Instalar Lynis</span>
+sudo lynis audit system                 <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar auditor&#237;a</span>
+</pre>
+</div>
+
+<p>
+<b><b>2.4 Buenas prácticas adicionales en Linux</b></b>
+</p>
+
+<ul class="org-ul">
+<li><b><b>SSH seguro</b></b>: Cambia el puerto predeterminado (22), deshabilita el inicio de sesión como root y usa autenticación por clave en lugar de contraseñas.</li>
+<li><b><b>Cifrado de disco</b></b>: Activa el cifrado de disco durante la instalación para proteger tus datos en caso de robo.</li>
+<li><b><b>Monitoreo de logs</b></b>: Revisa regularmente los logs del sistema (`/var/log/`) para detectar actividades sospechosas.</li>
+</ul>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-20--tutorial-de-ciberseguridad-b%C3%A1sica-para-equipos-linux-y-otros-sistemas-operativos-iii">2025-03-20&#x2013;tutorial-de-ciberseguridad-básica-para-equipos-linux-y-otros-sistemas-operativos-iii</a>
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ciberseguridad.html">ciberseguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p>
+           <a href="rss.xml">
+             <img src="rss.png" alt="RSS Feed" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+       </div></div>
+</body>
+</html>
