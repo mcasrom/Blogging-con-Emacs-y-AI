@@ -4,7 +4,65 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Thu, 20 Mar 2025 09:00:56 +0100</lastBuildDate>
+<lastBuildDate>Thu, 20 Mar 2025 10:56:16 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Tutorial de Ciberseguridad Básica para Equipos Linux y Otros Sistemas Operativos I]]></title>
+  <description><![CDATA[
+<div id="outline-container-org06d195e" class="outline-2">
+<h2 id="org06d195e"><span class="section-number-2">1.</span> Capítulo 1: Introducción a la Ciberseguridad en tu Equipo</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgb9c92ef" class="outline-3">
+<h3 id="orgb9c92ef"><span class="section-number-3">1.1.</span> 1.1 ¿Qué es la ciberseguridad y por qué es importante?</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+La ciberseguridad se refiere al conjunto de prácticas, herramientas y estrategias diseñadas para proteger dispositivos, redes y datos contra accesos no autorizados, ataques maliciosos o cualquier tipo de amenaza digital. En un mundo donde la tecnología está cada vez más integrada en nuestra vida diaria, garantizar la seguridad de nuestros equipos es crucial.
+</p>
+
+<ul class="org-ul">
+<li><b><b>Importancia</b></b>: Los ataques cibernéticos pueden comprometer información personal, financiera o profesional, causando pérdidas económicas, robos de identidad o incluso daños reputacionales.</li>
+<li><b><b>Objetivo básico</b></b>: Mantener la confidencialidad, integridad y disponibilidad de los datos (principio CIA).</li>
+</ul>
+
+<p>
+<b><b>1.2 Amenazas comunes a tener en cuenta</b></b>
+Antes de profundizar en las medidas específicas, es importante conocer algunas de las principales amenazas que enfrentan los usuarios:
+</p>
+
+<ul class="org-ul">
+<li><b><b>Malware</b></b>: Software malicioso como virus, gusanos, troyanos, ransomware, spyware, etc., que puede infectar tu equipo.</li>
+<li><b><b>Phishing</b></b>: Técnicas de ingeniería social que intentan engañarte para que reveles información sensible, como contraseñas o números de tarjetas de crédito.</li>
+<li><b><b>Ataques de fuerza bruta</b></b>: Intentos automatizados de descifrar contraseñas mediante pruebas sistemáticas.</li>
+<li><b><b>Vulnerabilidades del sistema</b></b>: Fallos en el software o el sistema operativo que pueden ser explotados por atacantes.</li>
+<li><b><b>Redes inseguras</b></b>: Conexiones Wi-Fi públicas o mal configuradas que permiten el acceso a terceros no autorizados.</li>
+</ul>
+
+<p>
+<b><b>1.3 Principios básicos de seguridad</b></b>
+Independientemente del sistema operativo que utilices, hay algunos principios fundamentales que debes seguir:
+</p>
+
+<ul class="org-ul">
+<li><b><b>Actualizaciones regulares</b></b>: Mantén tu sistema operativo y todas las aplicaciones actualizadas para corregir vulnerabilidades conocidas.</li>
+<li><b><b>Contraseñas seguras</b></b>: Usa contraseñas largas y complejas, evita reutilizarlas y considera el uso de un administrador de contraseñas.</li>
+<li><b><b>Copia de seguridad</b></b>: Realiza copias de seguridad periódicas de tus datos importantes.</li>
+<li><b><b>Conciencia sobre phishing</b></b>: Nunca hagas clic en enlaces sospechosos ni descargues archivos de fuentes desconocidas.</li>
+<li><b><b>Firewall activado</b></b>: Asegúrate de que el firewall de tu sistema esté habilitado para bloquear conexiones no deseadas.</li>
+</ul>
+
+<p>
+&#x2014;
+</p>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ciberseguridad.html">ciberseguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[ciberseguridad]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-20--tutorial-de-ciberseguridad-b%C3%A1sica-para-equipos-linux-y-otros-sistemas-operativos-i.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-20--tutorial-de-ciberseguridad-b%C3%A1sica-para-equipos-linux-y-otros-sistemas-operativos-i.html</guid>
+  <pubDate>Thu, 20 Mar 2025 10:52:00 +0100</pubDate>
+</item>
 <item>
   <title><![CDATA[Scripts de Bash para Ciberseguridad en Linux: Detección y Automatización]]></title>
   <description><![CDATA[
