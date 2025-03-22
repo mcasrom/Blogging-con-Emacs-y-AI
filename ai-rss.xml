@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - ai]]></title>
 <description><![CDATA[Example.com - ai]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-ai.html</link>
-<lastBuildDate>Sat, 22 Mar 2025 20:40:12 +0100</lastBuildDate>
+<lastBuildDate>Sat, 22 Mar 2025 21:06:31 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - VI]]></title>
   <description><![CDATA[
@@ -128,96 +128,96 @@ Answer from Perplexity: pplx.ai/share
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - V]]></title>
   <description><![CDATA[
-<div id="outline-container-orgb74bd2d" class="outline-2">
-<h2 id="orgb74bd2d"><span class="section-number-2">1.</span> Capítulo 5: Futuro y Consideraciones de la Inteligencia Artificial</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orgfbb303d" class="outline-2">
+<h2 id="orgfbb303d">Capítulo 5: Futuro y Consideraciones de la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-orgfbb303d">
 </div>
-<div id="outline-container-org8fbfda8" class="outline-3">
-<h3 id="org8fbfda8"><span class="section-number-3">1.1.</span> Tendencias Futuras</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org3ed274b" class="outline-3">
+<h3 id="org3ed274b">Tendencias Futuras</h3>
+<div class="outline-text-3" id="text-org3ed274b">
 </div>
-<div id="outline-container-orgaf16de4" class="outline-4">
-<h4 id="orgaf16de4"><span class="section-number-4">1.1.1.</span> IA Agéntica</h4>
-<div class="outline-text-4" id="text-1-1-1">
+<div id="outline-container-org09a309b" class="outline-4">
+<h4 id="org09a309b">IA Agéntica</h4>
+<div class="outline-text-4" id="text-org09a309b">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: Sistemas capaces de ejecutar tareas de manera autónoma con mínima intervención humana.</li>
 <li><b><b>Aplicaciones</b></b>: Automatización de procesos internos en empresas, pero requiere supervisión para evitar errores[1].</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1d49b0a" class="outline-4">
-<h4 id="org1d49b0a"><span class="section-number-4">1.1.2.</span> IA Generativa</h4>
-<div class="outline-text-4" id="text-1-1-2">
+<div id="outline-container-org225afb6" class="outline-4">
+<h4 id="org225afb6">IA Generativa</h4>
+<div class="outline-text-4" id="text-org225afb6">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: Herramientas que pueden generar contenido o optimizar procesos.</li>
 <li><b><b>Desafíos</b></b>: Medir su impacto económico real y asegurar un retorno de inversión adecuado[1].</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org6ef040e" class="outline-4">
-<h4 id="org6ef040e"><span class="section-number-4">1.1.3.</span> Avances en Aprendizaje Profundo</h4>
-<div class="outline-text-4" id="text-1-1-3">
+<div id="outline-container-org4df4e64" class="outline-4">
+<h4 id="org4df4e64">Avances en Aprendizaje Profundo</h4>
+<div class="outline-text-4" id="text-org4df4e64">
 <ul class="org-ul">
 <li><b><b>Predicciones</b></b>: Redes neuronales más grandes y sofisticadas, acercándose a la IA generalizada[6].</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-org71d65ca" class="outline-3">
-<h3 id="org71d65ca"><span class="section-number-3">1.2.</span> Retos Actuales</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-org5142afc" class="outline-3">
+<h3 id="org5142afc">Retos Actuales</h3>
+<div class="outline-text-3" id="text-org5142afc">
 </div>
-<div id="outline-container-org9cd5ec4" class="outline-4">
-<h4 id="org9cd5ec4"><span class="section-number-4">1.2.1.</span> Sesgos Algorítmicos</h4>
-<div class="outline-text-4" id="text-1-2-1">
+<div id="outline-container-org6ebf8aa" class="outline-4">
+<h4 id="org6ebf8aa">Sesgos Algorítmicos</h4>
+<div class="outline-text-4" id="text-org6ebf8aa">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: Resultados injustos debido a sesgos en los datos o algoritmos.</li>
 <li><b><b>Ejemplos</b></b>: Reconocimiento facial, contratación de personal[3].</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8dbec13" class="outline-4">
-<h4 id="org8dbec13"><span class="section-number-4">1.2.2.</span> Ética y Responsabilidad</h4>
-<div class="outline-text-4" id="text-1-2-2">
+<div id="outline-container-orgbc5f413" class="outline-4">
+<h4 id="orgbc5f413">Ética y Responsabilidad</h4>
+<div class="outline-text-4" id="text-orgbc5f413">
 <ul class="org-ul">
 <li><b><b>Desafíos</b></b>: Garantizar decisiones éticas y responsabilidad en sistemas autónomos[2].</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org6f24119" class="outline-4">
-<h4 id="org6f24119"><span class="section-number-4">1.2.3.</span> Consumo Energético</h4>
-<div class="outline-text-4" id="text-1-2-3">
+<div id="outline-container-orgd4bb719" class="outline-4">
+<h4 id="orgd4bb719">Consumo Energético</h4>
+<div class="outline-text-4" id="text-orgd4bb719">
 <ul class="org-ul">
 <li><b><b>Impacto Ambiental</b></b>: Los modelos de IA grandes consumen mucha energía, lo que plantea preocupaciones ambientales.</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-org46331b9" class="outline-3">
-<h3 id="org46331b9"><span class="section-number-3">1.3.</span> Tendencias Emergentes</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-org26f14be" class="outline-3">
+<h3 id="org26f14be">Tendencias Emergentes</h3>
+<div class="outline-text-3" id="text-org26f14be">
 </div>
-<div id="outline-container-org8e25abe" class="outline-4">
-<h4 id="org8e25abe"><span class="section-number-4">1.3.1.</span> IA Generalizada (AGI)</h4>
-<div class="outline-text-4" id="text-1-3-1">
+<div id="outline-container-orgc779aad" class="outline-4">
+<h4 id="orgc779aad">IA Generalizada (AGI)</h4>
+<div class="outline-text-4" id="text-orgc779aad">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: Capaz de realizar cualquier tarea intelectual que un ser humano pueda hacer.</li>
 <li><b><b>Estado Actual</b></b>: Aún en desarrollo, pero avances en aprendizaje por refuerzo y computación cuántica lo acercan[6].</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgaed2607" class="outline-4">
-<h4 id="orgaed2607"><span class="section-number-4">1.3.2.</span> Neuro-Simbólica</h4>
-<div class="outline-text-4" id="text-1-3-2">
+<div id="outline-container-org156fa94" class="outline-4">
+<h4 id="org156fa94">Neuro-Simbólica</h4>
+<div class="outline-text-4" id="text-org156fa94">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: Combinación de lógica simbólica con redes neuronales.</li>
 <li><b><b>Aplicaciones</b></b>: Mejora en la interpretación y explicación de decisiones de IA.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org56a16d9" class="outline-4">
-<h4 id="org56a16d9"><span class="section-number-4">1.3.3.</span> Edge AI</h4>
-<div class="outline-text-4" id="text-1-3-3">
+<div id="outline-container-orgc8568f0" class="outline-4">
+<h4 id="orgc8568f0">Edge AI</h4>
+<div class="outline-text-4" id="text-orgc8568f0">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: Procesamiento de IA en dispositivos locales para reducir la latencia y mejorar la privacidad.</li>
 <li><b><b>Aplicaciones</b></b>: Vehículos autónomos, dispositivos IoT.</li>
@@ -225,30 +225,30 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-orga7062a9" class="outline-3">
-<h3 id="orga7062a9"><span class="section-number-3">1.4.</span> Consideraciones Legales y Regulatorias</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-org659b664" class="outline-3">
+<h3 id="org659b664">Consideraciones Legales y Regulatorias</h3>
+<div class="outline-text-3" id="text-org659b664">
 </div>
-<div id="outline-container-org2ba3730" class="outline-4">
-<h4 id="org2ba3730"><span class="section-number-4">1.4.1.</span> Regulación de Modelos de IA</h4>
-<div class="outline-text-4" id="text-1-4-1">
+<div id="outline-container-org89a1348" class="outline-4">
+<h4 id="org89a1348">Regulación de Modelos de IA</h4>
+<div class="outline-text-4" id="text-org89a1348">
 <ul class="org-ul">
 <li><b><b>Ejemplos</b></b>: Clasificación de modelos de IA de propósito general con riesgo sistémico[7].</li>
 <li><b><b>Desafíos</b></b>: Equilibrar innovación con regulación efectiva.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orge7f84bc" class="outline-4">
-<h4 id="orge7f84bc"><span class="section-number-4">1.4.2.</span> Privacidad y Seguridad de Datos</h4>
-<div class="outline-text-4" id="text-1-4-2">
+<div id="outline-container-orgc02467c" class="outline-4">
+<h4 id="orgc02467c">Privacidad y Seguridad de Datos</h4>
+<div class="outline-text-4" id="text-orgc02467c">
 <ul class="org-ul">
 <li><b><b>Importancia</b></b>: Proteger datos personales en aplicaciones de IA, especialmente en gestión de crisis[5].</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1e703a1" class="outline-4">
-<h4 id="org1e703a1"><span class="section-number-4">1.4.3.</span> Tendencias Futuras Adicionales</h4>
-<div class="outline-text-4" id="text-1-4-3">
+<div id="outline-container-org7500f0d" class="outline-4">
+<h4 id="org7500f0d">Tendencias Futuras Adicionales</h4>
+<div class="outline-text-4" id="text-org7500f0d">
 <ul class="org-ul">
 <li><b><b>Aplicaciones en Salud</b></b>: Mejoras en diagnóstico y tratamiento personalizado[8].</li>
 <li><b><b>Exploración Espacial</b></b>: Uso de IA para misiones autónomas y análisis de datos[8].</li>
