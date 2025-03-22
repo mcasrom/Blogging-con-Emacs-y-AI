@@ -4,7 +4,153 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Sat, 22 Mar 2025 16:34:19 +0100</lastBuildDate>
+<lastBuildDate>Sat, 22 Mar 2025 20:35:05 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Emacs con Esteroides: Configurar un Contador de Visitantes para el Blog]]></title>
+  <description><![CDATA[
+<div id="outline-container-org751b303" class="outline-2">
+<h2 id="org751b303">Emacs con Esteroides: Configurar un Contador de Visitantes para tu Blog</h2>
+<div class="outline-text-2" id="text-org751b303">
+<p>
+¡Bienvenidos a una nueva entrega de <b>Emacs con Esteroides</b>! Hoy vamos a añadir un toque de funcionalidad a nuestro blog estático generado con Emacs y desplegado en GitHub: un contador de visitantes. Si usas Org Mode para escribir tus posts y un generador de sitios estáticos como Hugo o Jekyll, esto te permitirá saber cuántas personas visitan tu sitio sin complicaciones. ¡Vamos a ello!
+</p>
+</div>
+<div id="outline-container-org2b00677" class="outline-3">
+<h3 id="org2b00677">Por qué un contador de visitantes</h3>
+<div class="outline-text-3" id="text-org2b00677">
+<p>
+Un contador de visitantes no solo es una curiosidad divertida, sino que también te da una idea de quién está leyendo tu contenido. Para un blog minimalista y sin servidor, necesitamos una solución ligera que no dependa de bases de datos ni scripts pesados. Aquí entra en juego una herramienta externa como <b>Hit Counter</b> o una integración simple con servicios como GitHub Pages.
+</p>
+</div>
+</div>
+<div id="outline-container-org2dc49b4" class="outline-3">
+<h3 id="org2dc49b4">Paso 1: Elegir un servicio de contador</h3>
+<div class="outline-text-3" id="text-org2dc49b4">
+<p>
+Para mantenerlo simple, usaremos un servicio gratuito como <b>HitWebCounter</b> o <b>Simple Counter</b>. Alternativamente, si prefieres algo más personalizado, puedes usar una función Lambda en AWS o un script en Cloudflare Workers, pero hoy nos quedaremos con la opción más directa.
+</p>
+
+<ul class="org-ul">
+<li>Visita <a href="https://www.hitwebcounter.com">HitWebCounter</a> o un servicio similar.</li>
+<li>Registra tu sitio y obtén un fragmento de código HTML (normalmente un `&lt;script&gt;` o una imagen `&lt;img&gt;`).</li>
+</ul>
+
+<p>
+Por ejemplo, el código podría verse así:
+</p>
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="color: #AF8700;">img</span> <span style="color: #004651;">src</span>=<span style="color: #005F00;">"https://hitwebcounter.com/counter/id=123456"</span> <span style="color: #004651;">alt</span>=<span style="color: #005F00;">"Contador de visitas"</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org9856cde" class="outline-3">
+<h3 id="org9856cde">Paso 2: Integrarlo en tu blog con Org Mode</h3>
+<div class="outline-text-3" id="text-org9856cde">
+<p>
+Si usas Hugo con Org Mode, puedes añadir el contador en tu plantilla base o en un archivo específico. Por ejemplo:
+</p>
+
+<ol class="org-ol">
+<li>Abre tu archivo de plantilla (e.g., <code>themes/mi-tema/layouts/partials/footer.html</code>).</li>
+<li>Pega el fragmento HTML donde quieras que aparezca el contador (como el pie de página).</li>
+</ol>
+
+<p>
+En Org Mode, si prefieres incluirlo directamente en un post o en una página estática, usa un bloque HTML:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-size: 80%; font-style: italic;">EXPORT</span><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;"> html</span>
+<span style="background-color: #E9E9F2;">&lt;</span><span style="color: #AF8700; background-color: #E9E9F2;">img</span><span style="background-color: #E9E9F2;"> </span><span style="color: #004651; background-color: #E9E9F2;">src</span><span style="background-color: #E9E9F2;">=</span><span style="color: #005F00; background-color: #E9E9F2;">"<a href="https://hitwebcounter.com/counter/id=123456">https://hitwebcounter.com/counter/id=123456</a>"</span><span style="background-color: #E9E9F2;"> </span><span style="color: #004651; background-color: #E9E9F2;">alt</span><span style="background-color: #E9E9F2;">=</span><span style="color: #005F00; background-color: #E9E9F2;">"Contador de visitas"</span><span style="background-color: #E9E9F2;">&gt;</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-size: 80%; font-style: italic;">EXPORT</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgec6127e" class="outline-3">
+<h3 id="orgec6127e">Paso 3: Configurar Emacs para automatizar</h3>
+<div class="outline-text-3" id="text-orgec6127e">
+<p>
+¿Por qué no hacer esto más "Emacs"? Crea un snippet en <code>yasnippet</code> para insertar contadores rápidamente. Por ejemplo:
+</p>
+
+<ul class="org-ul">
+<li>Abre tu archivo de snippets (<code>yasnippet-snippets-dir</code>) y crea uno nuevo en <code>org-mode/</code> llamado <code>contador</code>:</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-snippet"><span style="color: #4E4E4E; font-style: italic;"># -*- mode: snippet -*-</span>
+<span style="color: #4E4E4E; font-style: italic;"># name: contador</span>
+<span style="color: #4E4E4E; font-style: italic;"># key: contador</span>
+<span style="color: #4E4E4E; font-style: italic;"># --</span>
+<span style="color: #4E4E4E; font-style: italic;">#+BEGIN_EXPORT html</span>
+&lt;img src=<span style="color: #005F00;">"https://hitwebcounter.com/counter/id=${</span><span style="color: #D75F00;">1</span><span style="color: #005F00;">:123456}"</span> alt=<span style="color: #005F00;">"Contador de visitas"</span>&gt;
+<span style="color: #4E4E4E; font-style: italic;">#+END_EXPORT</span>
+</pre>
+</div>
+
+<p>
+Ahora, al escribir <code>contador</code> y presionar <code>TAB</code>, tendrás el código listo para personalizar.
+</p>
+</div>
+</div>
+<div id="outline-container-orge948d22" class="outline-3">
+<h3 id="orge948d22">Paso 4: Desplegar con GitHub</h3>
+<div class="outline-text-3" id="text-orge948d22">
+<p>
+Una vez que hayas añadido el contador:
+</p>
+<ol class="org-ol">
+<li>Ejecuta tu comando habitual para generar el sitio (e.g., <code>hugo</code>).</li>
+<li><p>
+Haz commit de los cambios:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">git add .
+git commit -m <span style="color: #005F00;">"A&#241;adir contador de visitantes al blog"</span>
+git push origin main
+</pre>
+</div></li>
+<li>GitHub Pages actualizará tu sitio automáticamente.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org31f9e86" class="outline-3">
+<h3 id="org31f9e86">Bonus: Monitoreo con Emacs</h3>
+<div class="outline-text-3" id="text-org31f9e86">
+<p>
+Si quieres ver estadísticas desde Emacs, considera usar un paquete como <code>request.el</code> para consultar APIs de contadores (si el servicio lo ofrece). Por ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">request</span>)
+(request
+ <span style="color: #005F00;">"https://api.hitwebcounter.com/stats?id=123456"</span>
+ <span style="color: #1F55A0;">:parser</span> 'json-read
+ <span style="color: #1F55A0;">:success</span> (<span style="color: #D70000;">cl-function</span>
+           (<span style="color: #D70000;">lambda</span> (<span style="color: #1F55A0;">&amp;key</span> data <span style="color: #1F55A0;">&amp;allow-other-keys</span>)
+             (message <span style="color: #005F00;">"Visitantes: %s"</span> (alist-get 'visits data)))))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org0cf7e48" class="outline-3">
+<h3 id="org0cf7e48">Conclusión</h3>
+<div class="outline-text-3" id="text-org0cf7e48">
+<p>
+Con unas pocas líneas de código y la potencia de Org Mode, hemos añadido un contador de visitantes a nuestro blog estático. Emacs no solo nos ayuda a escribir, sino también a personalizar y automatizar nuestro flujo de trabajo. ¿Qué más puedes añadir con Emacs a tu blog? ¡Déjame tus ideas en los comentarios (si tu blog los tiene)!
+</p>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-blog.html">blog</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-contador.html">contador</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutorial.html">tutorial</a> </div>]]></description>
+  <category><![CDATA[blog]]></category>
+  <category><![CDATA[contador]]></category>
+  <category><![CDATA[tutorial]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-emacs-con-esteroides:-configurar-un-contador-de-visitantes-para-el-blog.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-emacs-con-esteroides:-configurar-un-contador-de-visitantes-para-el-blog.html</guid>
+  <pubDate>Sat, 22 Mar 2025 19:58:00 +0100</pubDate>
+</item>
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - VI]]></title>
   <description><![CDATA[
@@ -293,78 +439,35 @@ Answer from Perplexity: pplx.ai/share
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - IV]]></title>
   <description><![CDATA[
-<nav id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#orgf0cf161">1. Capítulo 4: Aplicaciones Industriales de la Inteligencia Artificial</a>
-<ul>
-<li><a href="#org4bd0868">1.1. Sector Salud</a>
-<ul>
-<li><a href="#orge0d96de">1.1.1. Diagnóstico por Imágenes</a></li>
-<li><a href="#org3a04e9d">1.1.2. Descubrimiento de Fármacos</a></li>
-<li><a href="#org66e92f8">1.1.3. Análisis de Datos Médicos</a></li>
-</ul>
-</li>
-<li><a href="#orga146f9b">1.2. Manufactura</a>
-<ul>
-<li><a href="#org071bddd">1.2.1. Automatización Industrial</a></li>
-<li><a href="#org96792da">1.2.2. Mantenimiento Predictivo</a></li>
-</ul>
-</li>
-<li><a href="#orgcbfde87">1.3. Agricultura</a>
-<ul>
-<li><a href="#org87d9faa">1.3.1. Monitoreo de Cultivos</a></li>
-<li><a href="#orgaccffe9">1.3.2. Optimización de Rendimientos</a></li>
-</ul>
-</li>
-<li><a href="#orgdf205fc">1.4. Finanzas</a>
-<ul>
-<li><a href="#orgbf3a317">1.4.1. Detección de Fraude</a></li>
-<li><a href="#org1b4c533">1.4.2. Análisis de Mercados</a></li>
-</ul>
-</li>
-<li><a href="#orgc08364b">1.5. Educación</a>
-<ul>
-<li><a href="#orgf2140b6">1.5.1. Personalización del Aprendizaje</a></li>
-<li><a href="#orgc50b9d6">1.5.2. Automatización de Tareas Administrativas</a></li>
-<li><a href="#orgd2f1ad4">1.5.3. Aplicaciones Prácticas Adicionales</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<div id="outline-container-org7422e2c" class="outline-2">
+<h2 id="org7422e2c">Capítulo 4: Aplicaciones Industriales de la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-org7422e2c">
 </div>
-</nav>
-<div id="outline-container-orgf0cf161" class="outline-2">
-<h2 id="orgf0cf161"><span class="section-number-2">1.</span> Capítulo 4: Aplicaciones Industriales de la Inteligencia Artificial</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orgfb7bfa8" class="outline-3">
+<h3 id="orgfb7bfa8">Sector Salud</h3>
+<div class="outline-text-3" id="text-orgfb7bfa8">
 </div>
-<div id="outline-container-org4bd0868" class="outline-3">
-<h3 id="org4bd0868"><span class="section-number-3">1.1.</span> Sector Salud</h3>
-<div class="outline-text-3" id="text-1-1">
-</div>
-<div id="outline-container-orge0d96de" class="outline-4">
-<h4 id="orge0d96de"><span class="section-number-4">1.1.1.</span> Diagnóstico por Imágenes</h4>
-<div class="outline-text-4" id="text-1-1-1">
+<div id="outline-container-org495a1a9" class="outline-4">
+<h4 id="org495a1a9">Diagnóstico por Imágenes</h4>
+<div class="outline-text-4" id="text-org495a1a9">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Redes Neuronales Convolucionales (CNN) para analizar imágenes médicas.</li>
 <li><b><b>Aplicaciones</b></b>: Detección temprana de cáncer, diagnóstico de enfermedades cardíacas.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org3a04e9d" class="outline-4">
-<h4 id="org3a04e9d"><span class="section-number-4">1.1.2.</span> Descubrimiento de Fármacos</h4>
-<div class="outline-text-4" id="text-1-1-2">
+<div id="outline-container-orgf31080a" class="outline-4">
+<h4 id="orgf31080a">Descubrimiento de Fármacos</h4>
+<div class="outline-text-4" id="text-orgf31080a">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Simulación molecular y aprendizaje automático para identificar compuestos potencialmente efectivos.</li>
 <li><b><b>Aplicaciones</b></b>: Reducción del tiempo y costo en el desarrollo de nuevos medicamentos.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org66e92f8" class="outline-4">
-<h4 id="org66e92f8"><span class="section-number-4">1.1.3.</span> Análisis de Datos Médicos</h4>
-<div class="outline-text-4" id="text-1-1-3">
+<div id="outline-container-org50b1c40" class="outline-4">
+<h4 id="org50b1c40">Análisis de Datos Médicos</h4>
+<div class="outline-text-4" id="text-org50b1c40">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Procesamiento de grandes conjuntos de datos para identificar patrones y predecir resultados de tratamientos.</li>
 <li><b><b>Aplicaciones</b></b>: Mejora en la toma de decisiones clínicas y personalización de tratamientos.</li>
@@ -372,22 +475,22 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-orga146f9b" class="outline-3">
-<h3 id="orga146f9b"><span class="section-number-3">1.2.</span> Manufactura</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-org3027cdf" class="outline-3">
+<h3 id="org3027cdf">Manufactura</h3>
+<div class="outline-text-3" id="text-org3027cdf">
 </div>
-<div id="outline-container-org071bddd" class="outline-4">
-<h4 id="org071bddd"><span class="section-number-4">1.2.1.</span> Automatización Industrial</h4>
-<div class="outline-text-4" id="text-1-2-1">
+<div id="outline-container-orge3ffda2" class="outline-4">
+<h4 id="orge3ffda2">Automatización Industrial</h4>
+<div class="outline-text-4" id="text-orge3ffda2">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Robots autónomos y sistemas de control inteligentes para mejorar la eficiencia y seguridad en la producción.</li>
 <li><b><b>Aplicaciones</b></b>: Ensamblaje preciso, control de calidad visual, logística en almacenes.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org96792da" class="outline-4">
-<h4 id="org96792da"><span class="section-number-4">1.2.2.</span> Mantenimiento Predictivo</h4>
-<div class="outline-text-4" id="text-1-2-2">
+<div id="outline-container-orgcafbf47" class="outline-4">
+<h4 id="orgcafbf47">Mantenimiento Predictivo</h4>
+<div class="outline-text-4" id="text-orgcafbf47">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Análisis de datos de sensores para predecir fallos en maquinaria.</li>
 <li><b><b>Aplicaciones</b></b>: Reducción de costos de reparación y aumento de la disponibilidad de equipos.</li>
@@ -395,22 +498,22 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-orgcbfde87" class="outline-3">
-<h3 id="orgcbfde87"><span class="section-number-3">1.3.</span> Agricultura</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-orgd561d2c" class="outline-3">
+<h3 id="orgd561d2c">Agricultura</h3>
+<div class="outline-text-3" id="text-orgd561d2c">
 </div>
-<div id="outline-container-org87d9faa" class="outline-4">
-<h4 id="org87d9faa"><span class="section-number-4">1.3.1.</span> Monitoreo de Cultivos</h4>
-<div class="outline-text-4" id="text-1-3-1">
+<div id="outline-container-orgc13dd9a" class="outline-4">
+<h4 id="orgc13dd9a">Monitoreo de Cultivos</h4>
+<div class="outline-text-4" id="text-orgc13dd9a">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Drones equipados con sensores y visión artificial para monitorear el crecimiento de cultivos.</li>
 <li><b><b>Aplicaciones</b></b>: Detección temprana de plagas y deficiencias nutricionales.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgaccffe9" class="outline-4">
-<h4 id="orgaccffe9"><span class="section-number-4">1.3.2.</span> Optimización de Rendimientos</h4>
-<div class="outline-text-4" id="text-1-3-2">
+<div id="outline-container-orgcc0e45b" class="outline-4">
+<h4 id="orgcc0e45b">Optimización de Rendimientos</h4>
+<div class="outline-text-4" id="text-orgcc0e45b">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Análisis predictivo para optimizar la aplicación de fertilizantes y pesticidas.</li>
 <li><b><b>Aplicaciones</b></b>: Mejora en la eficiencia del uso de recursos y reducción del impacto ambiental.</li>
@@ -418,22 +521,22 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-orgdf205fc" class="outline-3">
-<h3 id="orgdf205fc"><span class="section-number-3">1.4.</span> Finanzas</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-org2a5efc6" class="outline-3">
+<h3 id="org2a5efc6">Finanzas</h3>
+<div class="outline-text-3" id="text-org2a5efc6">
 </div>
-<div id="outline-container-orgbf3a317" class="outline-4">
-<h4 id="orgbf3a317"><span class="section-number-4">1.4.1.</span> Detección de Fraude</h4>
-<div class="outline-text-4" id="text-1-4-1">
+<div id="outline-container-orgc7d2375" class="outline-4">
+<h4 id="orgc7d2375">Detección de Fraude</h4>
+<div class="outline-text-4" id="text-orgc7d2375">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Algoritmos de aprendizaje automático para identificar patrones anómalos en transacciones.</li>
 <li><b><b>Aplicaciones</b></b>: Protección de clientes y reducción de pérdidas financieras.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1b4c533" class="outline-4">
-<h4 id="org1b4c533"><span class="section-number-4">1.4.2.</span> Análisis de Mercados</h4>
-<div class="outline-text-4" id="text-1-4-2">
+<div id="outline-container-org09f4afc" class="outline-4">
+<h4 id="org09f4afc">Análisis de Mercados</h4>
+<div class="outline-text-4" id="text-org09f4afc">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Predicción de tendencias y patrones en los mercados financieros.</li>
 <li><b><b>Aplicaciones</b></b>: Asesoramiento financiero personalizado y optimización de inversiones.</li>
@@ -441,31 +544,31 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-orgc08364b" class="outline-3">
-<h3 id="orgc08364b"><span class="section-number-3">1.5.</span> Educación</h3>
-<div class="outline-text-3" id="text-1-5">
+<div id="outline-container-org442dc1c" class="outline-3">
+<h3 id="org442dc1c">Educación</h3>
+<div class="outline-text-3" id="text-org442dc1c">
 </div>
-<div id="outline-container-orgf2140b6" class="outline-4">
-<h4 id="orgf2140b6"><span class="section-number-4">1.5.1.</span> Personalización del Aprendizaje</h4>
-<div class="outline-text-4" id="text-1-5-1">
+<div id="outline-container-orgaa4ac83" class="outline-4">
+<h4 id="orgaa4ac83">Personalización del Aprendizaje</h4>
+<div class="outline-text-4" id="text-orgaa4ac83">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Sistemas de recomendación para adaptar el contenido educativo a las necesidades individuales de los estudiantes.</li>
 <li><b><b>Aplicaciones</b></b>: Mejora en la eficacia del aprendizaje y aumento de la motivación.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc50b9d6" class="outline-4">
-<h4 id="orgc50b9d6"><span class="section-number-4">1.5.2.</span> Automatización de Tareas Administrativas</h4>
-<div class="outline-text-4" id="text-1-5-2">
+<div id="outline-container-orga0c5923" class="outline-4">
+<h4 id="orga0c5923">Automatización de Tareas Administrativas</h4>
+<div class="outline-text-4" id="text-orga0c5923">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Chatbots y sistemas de gestión automatizados para reducir la carga administrativa.</li>
 <li><b><b>Aplicaciones</b></b>: Liberar tiempo para actividades más importantes como la enseñanza y el desarrollo curricular.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd2f1ad4" class="outline-4">
-<h4 id="orgd2f1ad4"><span class="section-number-4">1.5.3.</span> Aplicaciones Prácticas Adicionales</h4>
-<div class="outline-text-4" id="text-1-5-3">
+<div id="outline-container-org89518c3" class="outline-4">
+<h4 id="org89518c3">Aplicaciones Prácticas Adicionales</h4>
+<div class="outline-text-4" id="text-org89518c3">
 <ul class="org-ul">
 <li><b><b>Asistentes Virtuales</b></b>: Siri, Alexa, Google Assistant, que utilizan NLP para comprender y responder a comandos de voz[2][5].</li>
 <li><b><b>Reconocimiento Facial</b></b>: Utilizado en seguridad y autenticación de dispositivos[6][7].</li>
@@ -4476,8 +4579,8 @@ La expresión <span class="underline">"free as in beer"</span> (libre como una c
 <item>
   <title><![CDATA[Análisis Demográfico de los Votantes de Donald Trump en las Elecciones 2024 - Perplexity]]></title>
   <description><![CDATA[
-<div id="outline-container-org4ece3ea" class="outline-2">
-<h2 id="org4ece3ea"><span class="section-number-2">1.</span> Introducción: El Fenómeno Trump en la Política Contemporánea</h2>
+<div id="outline-container-org4a37552" class="outline-2">
+<h2 id="org4a37552"><span class="section-number-2">1.</span> Introducción: El Fenómeno Trump en la Política Contemporánea</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el mapa político estadounidense. Este análisis examina los patrones demográficos, creencias y factores socioeconómicos de su base electoral, utilizando datos recientes de:
@@ -4489,8 +4592,8 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 <li>Estudios del Brookings Institution</li>
 </ul>
 </div>
-<div id="outline-container-orgaab68e0" class="outline-3">
-<h3 id="orgaab68e0"><span class="section-number-3">1.1.</span> Metodología:</h3>
+<div id="outline-container-orge6ba22e" class="outline-3">
+<h3 id="orge6ba22e"><span class="section-number-3">1.1.</span> Metodología:</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>Muestra: 15,000 votantes registrados en 12 estados clave</li>
@@ -4500,12 +4603,12 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </div>
 </div>
 </div>
-<div id="outline-container-orgd2307ad" class="outline-2">
-<h2 id="orgd2307ad"><span class="section-number-2">2.</span> Perfil Demográfico del Votante Trumpista</h2>
+<div id="outline-container-org1cb06eb" class="outline-2">
+<h2 id="org1cb06eb"><span class="section-number-2">2.</span> Perfil Demográfico del Votante Trumpista</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org2738fd7" class="outline-3">
-<h3 id="org2738fd7"><span class="section-number-3">2.1.</span> Edad y Género</h3>
+<div id="outline-container-org7084aa4" class="outline-3">
+<h3 id="org7084aa4"><span class="section-number-3">2.1.</span> Edad y Género</h3>
 <div class="outline-text-3" id="text-2-1">
 <table>
 
@@ -4550,8 +4653,8 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </p>
 </div>
 </div>
-<div id="outline-container-org7c13383" class="outline-3">
-<h3 id="org7c13383"><span class="section-number-3">2.2.</span> Distribución Geográfica</h3>
+<div id="outline-container-orgecad19a" class="outline-3">
+<h3 id="orgecad19a"><span class="section-number-3">2.2.</span> Distribución Geográfica</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li>72% proceden de áreas rurales/suburbanas</li>
@@ -4561,12 +4664,12 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </div>
 </div>
 </div>
-<div id="outline-container-org7ed5362" class="outline-2">
-<h2 id="org7ed5362"><span class="section-number-2">3.</span> Factores Ideológicos Clave</h2>
+<div id="outline-container-org3712f8b" class="outline-2">
+<h2 id="org3712f8b"><span class="section-number-2">3.</span> Factores Ideológicos Clave</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgcb66ad2" class="outline-3">
-<h3 id="orgcb66ad2"><span class="section-number-3">3.1.</span> Posiciones Políticas Prioritarias</h3>
+<div id="outline-container-org4582377" class="outline-3">
+<h3 id="org4582377"><span class="section-number-3">3.1.</span> Posiciones Políticas Prioritarias</h3>
 <div class="outline-text-3" id="text-3-1">
 <ol class="org-ol">
 <li>Control migratorio (89%)</li>
@@ -4576,8 +4679,8 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </ol>
 </div>
 </div>
-<div id="outline-container-org5308e4d" class="outline-3">
-<h3 id="org5308e4d"><span class="section-number-3">3.2.</span> Creencia en Teorías Conspirativas</h3>
+<div id="outline-container-orgcb33136" class="outline-3">
+<h3 id="orgcb33136"><span class="section-number-3">3.2.</span> Creencia en Teorías Conspirativas</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li>63% cree en fraude electoral 2020</li>
@@ -4587,12 +4690,12 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </div>
 </div>
 </div>
-<div id="outline-container-org0c30e80" class="outline-2">
-<h2 id="org0c30e80"><span class="section-number-2">4.</span> Religión y Educación</h2>
+<div id="outline-container-orgbc4273e" class="outline-2">
+<h2 id="orgbc4273e"><span class="section-number-2">4.</span> Religión y Educación</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org70a7c5d" class="outline-3">
-<h3 id="org70a7c5d"><span class="section-number-3">4.1.</span> Afiliación Religiosa</h3>
+<div id="outline-container-orgc62a7dd" class="outline-3">
+<h3 id="orgc62a7dd"><span class="section-number-3">4.1.</span> Afiliación Religiosa</h3>
 <div class="outline-text-3" id="text-4-1">
 <table>
 
@@ -4637,8 +4740,8 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </p>
 </div>
 </div>
-<div id="outline-container-orgd350023" class="outline-3">
-<h3 id="orgd350023"><span class="section-number-3">4.2.</span> Nivel Educativo</h3>
+<div id="outline-container-org964f196" class="outline-3">
+<h3 id="org964f196"><span class="section-number-3">4.2.</span> Nivel Educativo</h3>
 <div class="outline-text-3" id="text-4-2">
 <table>
 
@@ -4680,12 +4783,12 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </div>
 </div>
 </div>
-<div id="outline-container-orgbd4fe66" class="outline-2">
-<h2 id="orgbd4fe66"><span class="section-number-2">5.</span> Análisis Socioeconómico</h2>
+<div id="outline-container-org22f74fc" class="outline-2">
+<h2 id="org22f74fc"><span class="section-number-2">5.</span> Análisis Socioeconómico</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org91aa473" class="outline-3">
-<h3 id="org91aa473"><span class="section-number-3">5.1.</span> Factores de Riesgo Económico</h3>
+<div id="outline-container-org1cc349a" class="outline-3">
+<h3 id="org1cc349a"><span class="section-number-3">5.1.</span> Factores de Riesgo Económico</h3>
 <div class="outline-text-3" id="text-5-1">
 <ul class="org-ul">
 <li>58% trabajan en sectores amenazados por automatización</li>
@@ -4694,8 +4797,8 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </ul>
 </div>
 </div>
-<div id="outline-container-org8a65853" class="outline-3">
-<h3 id="org8a65853"><span class="section-number-3">5.2.</span> Percepción de Movilidad Social</h3>
+<div id="outline-container-orga714a53" class="outline-3">
+<h3 id="orga714a53"><span class="section-number-3">5.2.</span> Percepción de Movilidad Social</h3>
 <div class="outline-text-3" id="text-5-2">
 <ul class="org-ul">
 <li>Solo 29% cree en el "sueño americano" tradicional</li>
@@ -4704,12 +4807,12 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </div>
 </div>
 </div>
-<div id="outline-container-orgb444111" class="outline-2">
-<h2 id="orgb444111"><span class="section-number-2">6.</span> Estudio de Caso: Condado de Jefferson (Ohio)</h2>
+<div id="outline-container-orgef8dafe" class="outline-2">
+<h2 id="orgef8dafe"><span class="section-number-2">6.</span> Estudio de Caso: Condado de Jefferson (Ohio)</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-org3e536ca" class="outline-3">
-<h3 id="org3e536ca"><span class="section-number-3">6.1.</span> Características Clave</h3>
+<div id="outline-container-org7dd291f" class="outline-3">
+<h3 id="org7dd291f"><span class="section-number-3">6.1.</span> Características Clave</h3>
 <div class="outline-text-3" id="text-6-1">
 <ul class="org-ul">
 <li>Población: 230,000 habitantes</li>
@@ -4718,8 +4821,8 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </ul>
 </div>
 </div>
-<div id="outline-container-org9e0a029" class="outline-3">
-<h3 id="org9e0a029"><span class="section-number-3">6.2.</span> Resultados Electorales 2024</h3>
+<div id="outline-container-orge499ccc" class="outline-3">
+<h3 id="orge499ccc"><span class="section-number-3">6.2.</span> Resultados Electorales 2024</h3>
 <div class="outline-text-3" id="text-6-2">
 <ul class="org-ul">
 <li>Trump: 64% (+7% vs 2020)</li>
@@ -4728,18 +4831,18 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </div>
 </div>
 </div>
-<div id="outline-container-org00b0d25" class="outline-2">
-<h2 id="org00b0d25"><span class="section-number-2">7.</span> Gráfico Comparativo: Educación vs Apoyo a Trump</h2>
+<div id="outline-container-org8d79e63" class="outline-2">
+<h2 id="org8d79e63"><span class="section-number-2">7.</span> Gráfico Comparativo: Educación vs Apoyo a Trump</h2>
 <div class="outline-text-2" id="text-7">
 
-<figure id="orgc663ae8">
+<figure id="orgc8d4178">
 <img src="trump_voters_education.png" alt="trump_voters_education.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org47f1e81" class="outline-2">
-<h2 id="org47f1e81"><span class="section-number-2">8.</span> Conclusión: La Nueva Geografía Política</h2>
+<div id="outline-container-org42602e8" class="outline-2">
+<h2 id="org42602e8"><span class="section-number-2">8.</span> Conclusión: La Nueva Geografía Política</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 Los datos revelan una base electoral envejecida, menos educada y concentrada en sectores económicos tradicionales. El éxito de Trump se sustenta en:
@@ -4756,8 +4859,8 @@ Sin embargo, su creciente desconexión con votantes jóvenes (&lt;30 años solo 
 </p>
 </div>
 </div>
-<div id="outline-container-org1822e7f" class="outline-2">
-<h2 id="org1822e7f"><span class="section-number-2">9.</span> Referencias</h2>
+<div id="outline-container-org04eedde" class="outline-2">
+<h2 id="org04eedde"><span class="section-number-2">9.</span> Referencias</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 Brenan, M. (2024). <span class="underline">U.S. Political Ideology Trends, 2024</span>. Gallup. <a href="https://www.gallup.com">https://www.gallup.com</a>

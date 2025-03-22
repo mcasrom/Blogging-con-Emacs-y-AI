@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - ia]]></title>
 <description><![CDATA[Example.com - ia]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-ia.html</link>
-<lastBuildDate>Sat, 22 Mar 2025 16:34:31 +0100</lastBuildDate>
+<lastBuildDate>Sat, 22 Mar 2025 20:35:16 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - VI]]></title>
   <description><![CDATA[
@@ -293,78 +293,35 @@ Answer from Perplexity: pplx.ai/share
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - IV]]></title>
   <description><![CDATA[
-<nav id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#orgf0cf161">1. Capítulo 4: Aplicaciones Industriales de la Inteligencia Artificial</a>
-<ul>
-<li><a href="#org4bd0868">1.1. Sector Salud</a>
-<ul>
-<li><a href="#orge0d96de">1.1.1. Diagnóstico por Imágenes</a></li>
-<li><a href="#org3a04e9d">1.1.2. Descubrimiento de Fármacos</a></li>
-<li><a href="#org66e92f8">1.1.3. Análisis de Datos Médicos</a></li>
-</ul>
-</li>
-<li><a href="#orga146f9b">1.2. Manufactura</a>
-<ul>
-<li><a href="#org071bddd">1.2.1. Automatización Industrial</a></li>
-<li><a href="#org96792da">1.2.2. Mantenimiento Predictivo</a></li>
-</ul>
-</li>
-<li><a href="#orgcbfde87">1.3. Agricultura</a>
-<ul>
-<li><a href="#org87d9faa">1.3.1. Monitoreo de Cultivos</a></li>
-<li><a href="#orgaccffe9">1.3.2. Optimización de Rendimientos</a></li>
-</ul>
-</li>
-<li><a href="#orgdf205fc">1.4. Finanzas</a>
-<ul>
-<li><a href="#orgbf3a317">1.4.1. Detección de Fraude</a></li>
-<li><a href="#org1b4c533">1.4.2. Análisis de Mercados</a></li>
-</ul>
-</li>
-<li><a href="#orgc08364b">1.5. Educación</a>
-<ul>
-<li><a href="#orgf2140b6">1.5.1. Personalización del Aprendizaje</a></li>
-<li><a href="#orgc50b9d6">1.5.2. Automatización de Tareas Administrativas</a></li>
-<li><a href="#orgd2f1ad4">1.5.3. Aplicaciones Prácticas Adicionales</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<div id="outline-container-org7422e2c" class="outline-2">
+<h2 id="org7422e2c">Capítulo 4: Aplicaciones Industriales de la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-org7422e2c">
 </div>
-</nav>
-<div id="outline-container-orgf0cf161" class="outline-2">
-<h2 id="orgf0cf161"><span class="section-number-2">1.</span> Capítulo 4: Aplicaciones Industriales de la Inteligencia Artificial</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orgfb7bfa8" class="outline-3">
+<h3 id="orgfb7bfa8">Sector Salud</h3>
+<div class="outline-text-3" id="text-orgfb7bfa8">
 </div>
-<div id="outline-container-org4bd0868" class="outline-3">
-<h3 id="org4bd0868"><span class="section-number-3">1.1.</span> Sector Salud</h3>
-<div class="outline-text-3" id="text-1-1">
-</div>
-<div id="outline-container-orge0d96de" class="outline-4">
-<h4 id="orge0d96de"><span class="section-number-4">1.1.1.</span> Diagnóstico por Imágenes</h4>
-<div class="outline-text-4" id="text-1-1-1">
+<div id="outline-container-org495a1a9" class="outline-4">
+<h4 id="org495a1a9">Diagnóstico por Imágenes</h4>
+<div class="outline-text-4" id="text-org495a1a9">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Redes Neuronales Convolucionales (CNN) para analizar imágenes médicas.</li>
 <li><b><b>Aplicaciones</b></b>: Detección temprana de cáncer, diagnóstico de enfermedades cardíacas.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org3a04e9d" class="outline-4">
-<h4 id="org3a04e9d"><span class="section-number-4">1.1.2.</span> Descubrimiento de Fármacos</h4>
-<div class="outline-text-4" id="text-1-1-2">
+<div id="outline-container-orgf31080a" class="outline-4">
+<h4 id="orgf31080a">Descubrimiento de Fármacos</h4>
+<div class="outline-text-4" id="text-orgf31080a">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Simulación molecular y aprendizaje automático para identificar compuestos potencialmente efectivos.</li>
 <li><b><b>Aplicaciones</b></b>: Reducción del tiempo y costo en el desarrollo de nuevos medicamentos.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org66e92f8" class="outline-4">
-<h4 id="org66e92f8"><span class="section-number-4">1.1.3.</span> Análisis de Datos Médicos</h4>
-<div class="outline-text-4" id="text-1-1-3">
+<div id="outline-container-org50b1c40" class="outline-4">
+<h4 id="org50b1c40">Análisis de Datos Médicos</h4>
+<div class="outline-text-4" id="text-org50b1c40">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Procesamiento de grandes conjuntos de datos para identificar patrones y predecir resultados de tratamientos.</li>
 <li><b><b>Aplicaciones</b></b>: Mejora en la toma de decisiones clínicas y personalización de tratamientos.</li>
@@ -372,22 +329,22 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-orga146f9b" class="outline-3">
-<h3 id="orga146f9b"><span class="section-number-3">1.2.</span> Manufactura</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-org3027cdf" class="outline-3">
+<h3 id="org3027cdf">Manufactura</h3>
+<div class="outline-text-3" id="text-org3027cdf">
 </div>
-<div id="outline-container-org071bddd" class="outline-4">
-<h4 id="org071bddd"><span class="section-number-4">1.2.1.</span> Automatización Industrial</h4>
-<div class="outline-text-4" id="text-1-2-1">
+<div id="outline-container-orge3ffda2" class="outline-4">
+<h4 id="orge3ffda2">Automatización Industrial</h4>
+<div class="outline-text-4" id="text-orge3ffda2">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Robots autónomos y sistemas de control inteligentes para mejorar la eficiencia y seguridad en la producción.</li>
 <li><b><b>Aplicaciones</b></b>: Ensamblaje preciso, control de calidad visual, logística en almacenes.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org96792da" class="outline-4">
-<h4 id="org96792da"><span class="section-number-4">1.2.2.</span> Mantenimiento Predictivo</h4>
-<div class="outline-text-4" id="text-1-2-2">
+<div id="outline-container-orgcafbf47" class="outline-4">
+<h4 id="orgcafbf47">Mantenimiento Predictivo</h4>
+<div class="outline-text-4" id="text-orgcafbf47">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Análisis de datos de sensores para predecir fallos en maquinaria.</li>
 <li><b><b>Aplicaciones</b></b>: Reducción de costos de reparación y aumento de la disponibilidad de equipos.</li>
@@ -395,22 +352,22 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-orgcbfde87" class="outline-3">
-<h3 id="orgcbfde87"><span class="section-number-3">1.3.</span> Agricultura</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-orgd561d2c" class="outline-3">
+<h3 id="orgd561d2c">Agricultura</h3>
+<div class="outline-text-3" id="text-orgd561d2c">
 </div>
-<div id="outline-container-org87d9faa" class="outline-4">
-<h4 id="org87d9faa"><span class="section-number-4">1.3.1.</span> Monitoreo de Cultivos</h4>
-<div class="outline-text-4" id="text-1-3-1">
+<div id="outline-container-orgc13dd9a" class="outline-4">
+<h4 id="orgc13dd9a">Monitoreo de Cultivos</h4>
+<div class="outline-text-4" id="text-orgc13dd9a">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Drones equipados con sensores y visión artificial para monitorear el crecimiento de cultivos.</li>
 <li><b><b>Aplicaciones</b></b>: Detección temprana de plagas y deficiencias nutricionales.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgaccffe9" class="outline-4">
-<h4 id="orgaccffe9"><span class="section-number-4">1.3.2.</span> Optimización de Rendimientos</h4>
-<div class="outline-text-4" id="text-1-3-2">
+<div id="outline-container-orgcc0e45b" class="outline-4">
+<h4 id="orgcc0e45b">Optimización de Rendimientos</h4>
+<div class="outline-text-4" id="text-orgcc0e45b">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Análisis predictivo para optimizar la aplicación de fertilizantes y pesticidas.</li>
 <li><b><b>Aplicaciones</b></b>: Mejora en la eficiencia del uso de recursos y reducción del impacto ambiental.</li>
@@ -418,22 +375,22 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-orgdf205fc" class="outline-3">
-<h3 id="orgdf205fc"><span class="section-number-3">1.4.</span> Finanzas</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-org2a5efc6" class="outline-3">
+<h3 id="org2a5efc6">Finanzas</h3>
+<div class="outline-text-3" id="text-org2a5efc6">
 </div>
-<div id="outline-container-orgbf3a317" class="outline-4">
-<h4 id="orgbf3a317"><span class="section-number-4">1.4.1.</span> Detección de Fraude</h4>
-<div class="outline-text-4" id="text-1-4-1">
+<div id="outline-container-orgc7d2375" class="outline-4">
+<h4 id="orgc7d2375">Detección de Fraude</h4>
+<div class="outline-text-4" id="text-orgc7d2375">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Algoritmos de aprendizaje automático para identificar patrones anómalos en transacciones.</li>
 <li><b><b>Aplicaciones</b></b>: Protección de clientes y reducción de pérdidas financieras.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1b4c533" class="outline-4">
-<h4 id="org1b4c533"><span class="section-number-4">1.4.2.</span> Análisis de Mercados</h4>
-<div class="outline-text-4" id="text-1-4-2">
+<div id="outline-container-org09f4afc" class="outline-4">
+<h4 id="org09f4afc">Análisis de Mercados</h4>
+<div class="outline-text-4" id="text-org09f4afc">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Predicción de tendencias y patrones en los mercados financieros.</li>
 <li><b><b>Aplicaciones</b></b>: Asesoramiento financiero personalizado y optimización de inversiones.</li>
@@ -441,31 +398,31 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-orgc08364b" class="outline-3">
-<h3 id="orgc08364b"><span class="section-number-3">1.5.</span> Educación</h3>
-<div class="outline-text-3" id="text-1-5">
+<div id="outline-container-org442dc1c" class="outline-3">
+<h3 id="org442dc1c">Educación</h3>
+<div class="outline-text-3" id="text-org442dc1c">
 </div>
-<div id="outline-container-orgf2140b6" class="outline-4">
-<h4 id="orgf2140b6"><span class="section-number-4">1.5.1.</span> Personalización del Aprendizaje</h4>
-<div class="outline-text-4" id="text-1-5-1">
+<div id="outline-container-orgaa4ac83" class="outline-4">
+<h4 id="orgaa4ac83">Personalización del Aprendizaje</h4>
+<div class="outline-text-4" id="text-orgaa4ac83">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Sistemas de recomendación para adaptar el contenido educativo a las necesidades individuales de los estudiantes.</li>
 <li><b><b>Aplicaciones</b></b>: Mejora en la eficacia del aprendizaje y aumento de la motivación.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc50b9d6" class="outline-4">
-<h4 id="orgc50b9d6"><span class="section-number-4">1.5.2.</span> Automatización de Tareas Administrativas</h4>
-<div class="outline-text-4" id="text-1-5-2">
+<div id="outline-container-orga0c5923" class="outline-4">
+<h4 id="orga0c5923">Automatización de Tareas Administrativas</h4>
+<div class="outline-text-4" id="text-orga0c5923">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Chatbots y sistemas de gestión automatizados para reducir la carga administrativa.</li>
 <li><b><b>Aplicaciones</b></b>: Liberar tiempo para actividades más importantes como la enseñanza y el desarrollo curricular.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd2f1ad4" class="outline-4">
-<h4 id="orgd2f1ad4"><span class="section-number-4">1.5.3.</span> Aplicaciones Prácticas Adicionales</h4>
-<div class="outline-text-4" id="text-1-5-3">
+<div id="outline-container-org89518c3" class="outline-4">
+<h4 id="org89518c3">Aplicaciones Prácticas Adicionales</h4>
+<div class="outline-text-4" id="text-org89518c3">
 <ul class="org-ul">
 <li><b><b>Asistentes Virtuales</b></b>: Siri, Alexa, Google Assistant, que utilizan NLP para comprender y responder a comandos de voz[2][5].</li>
 <li><b><b>Reconocimiento Facial</b></b>: Utilizado en seguridad y autenticación de dispositivos[6][7].</li>
