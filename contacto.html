@@ -87,11 +87,19 @@
            height: 2px;
            background: #ddd;
            margin: 40px 0 20px 0;
-         }
+	 }
          .postamble {
            text-align: center;
            font-size: 0.85em;
            color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
          }
        </style>
        
@@ -126,9 +134,9 @@
 <p>
 Puedes enviarme un correo electrónico a: <a href="mailto:tu.email@ejemplo.com">mybloggingnotes@gmail.com</a>. Trataré de responder lo antes posible.
 </p>
-<div id="outline-container-orge200d5e" class="outline-2">
-<h2 id="orge200d5e">¿Qué puedes escribir?</h2>
-<div class="outline-text-2" id="text-orge200d5e">
+<div id="outline-container-orgcbb5815" class="outline-2">
+<h2 id="orgcbb5815">¿Qué puedes escribir?</h2>
+<div class="outline-text-2" id="text-orgcbb5815">
 <ul class="org-ul">
 <li>Preguntas sobre los temas tratados en el blog.</li>
 <li>Ideas para futuros <b>posts</b> o colaboraciones.</li>
@@ -154,13 +162,20 @@ Para ponerte en contacto, envía un email a <a href="mailto:mybloggingnotes@gmai
 <div class="taglist"></div></div>
 <div id="postamble" class="status"><div class='postamble'>
          <hr class='footer-hr'>
-         <p>
-           <a href="rss.xml">
-             <img src="rss.png" alt="RSS Feed" style="width:20px; height:20px;">
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
              Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
            </a>
          </p>
          <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
        </div></div>
 </body>
 </html>

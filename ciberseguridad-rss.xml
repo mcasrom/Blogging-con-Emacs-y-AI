@@ -4,27 +4,27 @@
 <title><![CDATA[Example.com - ciberseguridad]]></title>
 <description><![CDATA[Example.com - ciberseguridad]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-ciberseguridad.html</link>
-<lastBuildDate>Sat, 22 Mar 2025 20:35:08 +0100</lastBuildDate>
+<lastBuildDate>Sat, 22 Mar 2025 20:40:04 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Botnets, Antibotnets y un Script en Bash para Detección de Botnets en Linux]]></title>
   <description><![CDATA[
-<div id="outline-container-org4b92c06" class="outline-2">
-<h2 id="org4b92c06"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org16dba8a" class="outline-2">
+<h2 id="org16dba8a"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 En este artículo exploraremos qué son las botnets, cómo operan y qué medidas podemos tomar para minimizar el riesgo de ser víctimas de estos ataques. Además, proporcionaremos un script en <b>Bash</b> que utiliza <b>Nmap</b> para detectar actividad sospechosa en la red y bloquear posibles amenazas.
 </p>
 </div>
 </div>
-<div id="outline-container-org5b39ec0" class="outline-2">
-<h2 id="org5b39ec0"><span class="section-number-2">2.</span> ¿Qué es una Botnet?</h2>
+<div id="outline-container-orgb36ef57" class="outline-2">
+<h2 id="orgb36ef57"><span class="section-number-2">2.</span> ¿Qué es una Botnet?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Una <b>botnet</b> es una red de dispositivos infectados (<b>bots</b> o <b>zombies</b>) controlados de manera remota por un atacante (<b>botmaster</b>). Estas redes suelen utilizarse para ataques de denegación de servicio (DDoS), envío masivo de spam, robo de datos y otros fines maliciosos.
 </p>
 </div>
-<div id="outline-container-orgd012170" class="outline-3">
-<h3 id="orgd012170"><span class="section-number-3">2.1.</span> Funcionamiento de una Botnet</h3>
+<div id="outline-container-org8bfa141" class="outline-3">
+<h3 id="org8bfa141"><span class="section-number-3">2.1.</span> Funcionamiento de una Botnet</h3>
 <div class="outline-text-3" id="text-2-1">
 <ol class="org-ol">
 <li><b><b>Infección</b></b>: Los dispositivos son infectados mediante malware, exploits o ingeniería social.</li>
@@ -35,8 +35,8 @@ Una <b>botnet</b> es una red de dispositivos infectados (<b>bots</b> o <b>zombie
 </div>
 </div>
 </div>
-<div id="outline-container-org7298652" class="outline-2">
-<h2 id="org7298652"><span class="section-number-2">3.</span> Cómo minimizar el riesgo de infección</h2>
+<div id="outline-container-org230c7ec" class="outline-2">
+<h2 id="org230c7ec"><span class="section-number-2">3.</span> Cómo minimizar el riesgo de infección</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Para evitar que nuestros dispositivos sean parte de una botnet, debemos:
@@ -50,8 +50,8 @@ Para evitar que nuestros dispositivos sean parte de una botnet, debemos:
 </ul>
 </div>
 </div>
-<div id="outline-container-org0f956bc" class="outline-2">
-<h2 id="org0f956bc"><span class="section-number-2">4.</span> Detección y bloqueo de Botnets con Bash y Nmap</h2>
+<div id="outline-container-org618af43" class="outline-2">
+<h2 id="org618af43"><span class="section-number-2">4.</span> Detección y bloqueo de Botnets con Bash y Nmap</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 A continuación, presentamos un script en <b>Bash</b> que escanea la red en busca de actividad sospechosa y bloquea dispositivos potencialmente infectados.
@@ -102,8 +102,8 @@ block_hosts
 </div>
 </div>
 </div>
-<div id="outline-container-orga3f1f74" class="outline-2">
-<h2 id="orga3f1f74"><span class="section-number-2">5.</span> Uso del Script</h2>
+<div id="outline-container-orge2b20fe" class="outline-2">
+<h2 id="orge2b20fe"><span class="section-number-2">5.</span> Uso del Script</h2>
 <div class="outline-text-2" id="text-5">
 <ol class="org-ol">
 <li><p>
@@ -126,16 +126,16 @@ Ejecutarlo como root:
 </ol>
 </div>
 </div>
-<div id="outline-container-org2efa6d0" class="outline-2">
-<h2 id="org2efa6d0"><span class="section-number-2">6.</span> Conclusión</h2>
+<div id="outline-container-org5423bfc" class="outline-2">
+<h2 id="org5423bfc"><span class="section-number-2">6.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Este script ayuda a identificar y bloquear dispositivos sospechosos en la red, reduciendo el riesgo de infección por botnets. Sin embargo, la seguridad debe abordarse desde múltiples ángulos, combinando medidas preventivas y herramientas de detección.
 </p>
 </div>
 </div>
-<div id="outline-container-org62670f9" class="outline-2">
-<h2 id="org62670f9"><span class="section-number-2">7.</span> Referencias</h2>
+<div id="outline-container-orgafd5e25" class="outline-2">
+<h2 id="orgafd5e25"><span class="section-number-2">7.</span> Referencias</h2>
 <div class="outline-text-2" id="text-7">
 <ul class="org-ul">
 <li><a href="https://nmap.org">Nmap - The Network Mapper</a></li>
