@@ -4,27 +4,27 @@
 <title><![CDATA[Example.com - script]]></title>
 <description><![CDATA[Example.com - script]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-script.html</link>
-<lastBuildDate>Thu, 20 Mar 2025 16:36:38 +0100</lastBuildDate>
+<lastBuildDate>Sat, 22 Mar 2025 16:34:25 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Botnets, Antibotnets y un Script en Bash para Detección de Botnets en Linux]]></title>
   <description><![CDATA[
-<div id="outline-container-org61e1f46" class="outline-2">
-<h2 id="org61e1f46"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org4b92c06" class="outline-2">
+<h2 id="org4b92c06"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 En este artículo exploraremos qué son las botnets, cómo operan y qué medidas podemos tomar para minimizar el riesgo de ser víctimas de estos ataques. Además, proporcionaremos un script en <b>Bash</b> que utiliza <b>Nmap</b> para detectar actividad sospechosa en la red y bloquear posibles amenazas.
 </p>
 </div>
 </div>
-<div id="outline-container-org705b769" class="outline-2">
-<h2 id="org705b769"><span class="section-number-2">2.</span> ¿Qué es una Botnet?</h2>
+<div id="outline-container-org5b39ec0" class="outline-2">
+<h2 id="org5b39ec0"><span class="section-number-2">2.</span> ¿Qué es una Botnet?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Una <b>botnet</b> es una red de dispositivos infectados (<b>bots</b> o <b>zombies</b>) controlados de manera remota por un atacante (<b>botmaster</b>). Estas redes suelen utilizarse para ataques de denegación de servicio (DDoS), envío masivo de spam, robo de datos y otros fines maliciosos.
 </p>
 </div>
-<div id="outline-container-org487592c" class="outline-3">
-<h3 id="org487592c"><span class="section-number-3">2.1.</span> Funcionamiento de una Botnet **</h3>
+<div id="outline-container-orgd012170" class="outline-3">
+<h3 id="orgd012170"><span class="section-number-3">2.1.</span> Funcionamiento de una Botnet</h3>
 <div class="outline-text-3" id="text-2-1">
 <ol class="org-ol">
 <li><b><b>Infección</b></b>: Los dispositivos son infectados mediante malware, exploits o ingeniería social.</li>
@@ -35,8 +35,8 @@ Una <b>botnet</b> es una red de dispositivos infectados (<b>bots</b> o <b>zombie
 </div>
 </div>
 </div>
-<div id="outline-container-orge8ffafa" class="outline-2">
-<h2 id="orge8ffafa"><span class="section-number-2">3.</span> Cómo minimizar el riesgo de infección</h2>
+<div id="outline-container-org7298652" class="outline-2">
+<h2 id="org7298652"><span class="section-number-2">3.</span> Cómo minimizar el riesgo de infección</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Para evitar que nuestros dispositivos sean parte de una botnet, debemos:
@@ -50,60 +50,60 @@ Para evitar que nuestros dispositivos sean parte de una botnet, debemos:
 </ul>
 </div>
 </div>
-<div id="outline-container-org1e06f6d" class="outline-2">
-<h2 id="org1e06f6d"><span class="section-number-2">4.</span> Detección y bloqueo de Botnets con Bash y Nmap</h2>
+<div id="outline-container-org0f956bc" class="outline-2">
+<h2 id="org0f956bc"><span class="section-number-2">4.</span> Detección y bloqueo de Botnets con Bash y Nmap</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 A continuación, presentamos un script en <b>Bash</b> que escanea la red en busca de actividad sospechosa y bloquea dispositivos potencialmente infectados.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Script Antibotnet con Nmap</span>
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Autor: M. Castillo</span>
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Fecha: 2025-03-20</span>
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Script Antibotnet con Nmap</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Autor: M. Castillo</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Fecha: 2025-03-20</span>
 
-<span style="color: #1857a4;">LOGFILE</span>=<span style="color: #a44185;">"/var/log/antibotnet.log"</span>
-<span style="color: #1857a4;">NETWORK</span>=<span style="color: #a44185;">"192.168.1.0/24"</span>
-<span style="color: #1857a4;">PORTS</span>=<span style="color: #a44185;">"23,445,8080,1080,6667,22"</span>
+<span style="color: #004651;">LOGFILE</span>=<span style="color: #005F00;">"/var/log/antibotnet.log"</span>
+<span style="color: #004651;">NETWORK</span>=<span style="color: #005F00;">"192.168.1.0/24"</span>
+<span style="color: #004651;">PORTS</span>=<span style="color: #005F00;">"23,445,8080,1080,6667,22"</span>
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verifica permisos de root</span>
-<span style="color: #219fd5; font-style: italic;">if</span> [[ $<span style="color: #1857a4;">EUID</span> -ne 0 ]]; <span style="color: #219fd5; font-style: italic;">then</span>
-    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Este script debe ejecutarse como root."</span> &gt;&amp;2
-    <span style="color: #219fd5; font-style: italic;">exit</span> 1
-<span style="color: #219fd5; font-style: italic;">fi</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verifica permisos de root</span>
+<span style="color: #D70000;">if</span> [[ $<span style="color: #004651;">EUID</span> -ne 0 ]]; <span style="color: #D70000;">then</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Este script debe ejecutarse como root."</span> &gt;&amp;2
+    <span style="color: #D70000;">exit</span> 1
+<span style="color: #D70000;">fi</span>
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Escanea la red en busca de puertos abiertos usados por botnets</span>
-<span style="color: #dc3eb7;">scan_network</span>() {
-    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"[+] Escaneando la red..."</span> | tee -a $<span style="color: #1857a4;">LOGFILE</span>
-    nmap -p $<span style="color: #1857a4;">PORTS</span> --open -oG - $<span style="color: #1857a4;">NETWORK</span> | awk <span style="color: #a44185;">'/open/ {print $2}'</span> &gt; /tmp/suspicious_ips.txt
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Escanea la red en busca de puertos abiertos usados por botnets</span>
+<span style="color: #AF8700;">scan_network</span>() {
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"[+] Escaneando la red..."</span> | tee -a $<span style="color: #004651;">LOGFILE</span>
+    nmap -p $<span style="color: #004651;">PORTS</span> --open -oG - $<span style="color: #004651;">NETWORK</span> | awk <span style="color: #005F00;">'/open/ {print $2}'</span> &gt; /tmp/suspicious_ips.txt
 
-    <span style="color: #219fd5; font-style: italic;">if</span> [[ <span style="color: #219fd5; font-weight: bold;">!</span> -s /tmp/suspicious_ips.txt ]]; <span style="color: #219fd5; font-style: italic;">then</span>
-        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"[+] No se detect&#243; actividad sospechosa."</span> | tee -a $<span style="color: #1857a4;">LOGFILE</span>
-    <span style="color: #219fd5; font-style: italic;">else</span>
-        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"[*] Se detectaron IPs sospechosas:"</span> | tee -a $<span style="color: #1857a4;">LOGFILE</span>
-        cat /tmp/suspicious_ips.txt | tee -a $<span style="color: #1857a4;">LOGFILE</span>
-    <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #D70000;">if</span> [[ <span style="color: #1F55A0; font-weight: bold;">!</span> -s /tmp/suspicious_ips.txt ]]; <span style="color: #D70000;">then</span>
+        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"[+] No se detect&#243; actividad sospechosa."</span> | tee -a $<span style="color: #004651;">LOGFILE</span>
+    <span style="color: #D70000;">else</span>
+        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"[*] Se detectaron IPs sospechosas:"</span> | tee -a $<span style="color: #004651;">LOGFILE</span>
+        cat /tmp/suspicious_ips.txt | tee -a $<span style="color: #004651;">LOGFILE</span>
+    <span style="color: #D70000;">fi</span>
 }
 
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Bloquea las IPs sospechosas</span>
-<span style="color: #dc3eb7;">block_hosts</span>() {
-    <span style="color: #219fd5; font-style: italic;">while </span><span style="color: #dc3eb7;">read</span> -r ip; <span style="color: #219fd5; font-style: italic;">do</span>
-        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"[!] Bloqueando IP sospechosa: $ip"</span> | tee -a $<span style="color: #1857a4;">LOGFILE</span>
-        iptables -A INPUT -s $<span style="color: #1857a4;">ip</span> -j DROP
-    <span style="color: #219fd5; font-style: italic;">done</span> &lt; /tmp/suspicious_ips.txt
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Bloquea las IPs sospechosas</span>
+<span style="color: #AF8700;">block_hosts</span>() {
+    <span style="color: #D70000;">while </span><span style="color: #1F55A0;">read</span> -r ip; <span style="color: #D70000;">do</span>
+        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"[!] Bloqueando IP sospechosa: $ip"</span> | tee -a $<span style="color: #004651;">LOGFILE</span>
+        iptables -A INPUT -s $<span style="color: #004651;">ip</span> -j DROP
+    <span style="color: #D70000;">done</span> &lt; /tmp/suspicious_ips.txt
 }
 
 scan_network
 block_hosts
 
-<span style="color: #219fd5; font-style: italic;">exit</span> 0
+<span style="color: #D70000;">exit</span> 0
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org24c5e62" class="outline-2">
-<h2 id="org24c5e62"><span class="section-number-2">5.</span> Uso del Script</h2>
+<div id="outline-container-orga3f1f74" class="outline-2">
+<h2 id="orga3f1f74"><span class="section-number-2">5.</span> Uso del Script</h2>
 <div class="outline-text-2" id="text-5">
 <ol class="org-ol">
 <li><p>
@@ -126,16 +126,16 @@ Ejecutarlo como root:
 </ol>
 </div>
 </div>
-<div id="outline-container-org258e3b1" class="outline-2">
-<h2 id="org258e3b1"><span class="section-number-2">6.</span> Conclusión</h2>
+<div id="outline-container-org2efa6d0" class="outline-2">
+<h2 id="org2efa6d0"><span class="section-number-2">6.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Este script ayuda a identificar y bloquear dispositivos sospechosos en la red, reduciendo el riesgo de infección por botnets. Sin embargo, la seguridad debe abordarse desde múltiples ángulos, combinando medidas preventivas y herramientas de detección.
 </p>
 </div>
 </div>
-<div id="outline-container-orgffe6277" class="outline-2">
-<h2 id="orgffe6277"><span class="section-number-2">7.</span> Referencias</h2>
+<div id="outline-container-org62670f9" class="outline-2">
+<h2 id="org62670f9"><span class="section-number-2">7.</span> Referencias</h2>
 <div class="outline-text-2" id="text-7">
 <ul class="org-ul">
 <li><a href="https://nmap.org">Nmap - The Network Mapper</a></li>

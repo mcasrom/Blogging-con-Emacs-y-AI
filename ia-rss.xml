@@ -4,7 +4,1021 @@
 <title><![CDATA[Example.com - ia]]></title>
 <description><![CDATA[Example.com - ia]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-ia.html</link>
-<lastBuildDate>Thu, 20 Mar 2025 16:36:44 +0100</lastBuildDate>
+<lastBuildDate>Sat, 22 Mar 2025 16:34:31 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - VI]]></title>
+  <description><![CDATA[
+<div id="outline-container-orgf303636" class="outline-2">
+<h2 id="orgf303636"><span class="section-number-2">1.</span> Capítulo 6: Guías y Recursos para Introducirse en la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org784d260" class="outline-3">
+<h3 id="org784d260"><span class="section-number-3">1.1.</span> Libros Recomendados</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org441db46" class="outline-4">
+<h4 id="org441db46"><span class="section-number-4">1.1.1.</span> Para Principiantes:</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<ul class="org-ul">
+<li><b><b>"Artificial Intelligence For Dummies (2nd Edition)"</b></b> por Luca Massaron y John Mueller: Introducción no técnica que explica conceptos básicos y aplicaciones prácticas de la IA[1][7].</li>
+<li><b><b>"Artificial Intelligence Basics: A Non-Technical Introduction"</b></b> por Tom Taulli: Ideal para entender los conceptos fundamentales sin jerga técnica[1].</li>
+<li><b><b>"Machine Learning for Beginners"</b></b> por Chris Sebastian: Enfocado en los fundamentos del aprendizaje automático y su relación con la IA[4].</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8d4060a" class="outline-4">
+<h4 id="org8d4060a"><span class="section-number-4">1.1.2.</span> Para Expertos:</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<ul class="org-ul">
+<li><b><b>"Artificial Intelligence: A Modern Approach"</b></b>: Un texto clásico que cubre aspectos avanzados de la IA[4].</li>
+<li><b><b>"Human Compatible: Artificial Intelligence and the Problem of Control"</b></b>: Explora los desafíos éticos y de control en la IA[4].</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org51deec9" class="outline-3">
+<h3 id="org51deec9"><span class="section-number-3">1.2.</span> Cursos y Seminarios</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org82b979b" class="outline-4">
+<h4 id="org82b979b"><span class="section-number-4">1.2.1.</span> Cursos en Línea</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li><b><b>"Elements of AI"</b></b> por la Universidad de Helsinki: Un curso gratuito que demystifica la IA sin requerir conocimientos técnicos avanzados[8].</li>
+<li><b><b>"Introduction to Artificial Intelligence with Python"</b></b> en EdX/Harvard University: Introducción práctica usando Python[6].</li>
+<li><b><b>Microsoft Learn</b></b>: Ofrece un camino de aprendizaje estructurado para IA con Azure AI[3].</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org417a1ab" class="outline-4">
+<h4 id="org417a1ab"><span class="section-number-4">1.2.2.</span> Seminarios y Talleres</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<ul class="org-ul">
+<li><b><b>"Introduction to AI Workshop"</b></b> por EmpServe: Un taller interactivo que cubre conceptos básicos y aplicaciones prácticas de la IA[2].</li>
+<li><b><b>"Introduction to AI and Machine Learning"</b></b> en Peaks: Un curso de dos días que enseña los fundamentos teóricos y prácticos de la IA y el aprendizaje automático usando Python[5].</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org4a52118" class="outline-3">
+<h3 id="org4a52118"><span class="section-number-3">1.3.</span> Recursos en Línea</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org37f1bb5" class="outline-4">
+<h4 id="org37f1bb5"><span class="section-number-4">1.3.1.</span> Plataformas de Aprendizaje</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<ul class="org-ul">
+<li><b><b>DataCamp</b></b>: Ofrece cursos interactivos enfocados en ciencia de datos y IA[3].</li>
+<li><b><b>Kaggle</b></b>: Plataforma para competencias de ciencia de datos y aprendizaje colaborativo[3].</li>
+<li><b><b>Fast.ai</b></b>: Recursos para aprendizaje automático y IA con un enfoque práctico[3].</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org71ab4ae" class="outline-4">
+<h4 id="org71ab4ae"><span class="section-number-4">1.3.2.</span> Comunidades y Blogs</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<ul class="org-ul">
+<li><b><b>GitHub</b></b>: Repositorios de código abierto relacionados con IA y aprendizaje automático[3].</li>
+<li><b><b>Reddit (r/MachineLearning y r/AI)</b></b>: Comunidades activas para discusiones y recursos sobre IA[3].</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org085bbc3" class="outline-3">
+<h3 id="org085bbc3"><span class="section-number-3">1.4.</span> URLs Recomendadas</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li><b><b>Learn with Google AI</b></b>: Recursos educativos de Google sobre IA[6].</li>
+<li><b><b>Microsoft AI School</b></b>: Recursos para aprender sobre IA con Microsoft[6].</li>
+<li><b><b>Crash Course - Artificial Intelligence</b></b>: Serie de videos educativos sobre IA en YouTube[6].</li>
+</ul>
+
+<p>
+Citations:
+</p>
+<ul class="org-ul">
+<li>[1] <a href="https://willfrancis.com/best-books-on-ai-from-beginner-to-expert-level/">https://willfrancis.com/best-books-on-ai-from-beginner-to-expert-level/</a></li>
+<li>[2] <a href="https://empserve.org/introduction-to-ai-workshop/">https://empserve.org/introduction-to-ai-workshop/</a></li>
+<li>[3] <a href="https://ai-pro.org/learn-ai/articles/the-top-ai-resources-for-learning-courses-and-online-platforms/">https://ai-pro.org/learn-ai/articles/the-top-ai-resources-for-learning-courses-and-online-platforms/</a></li>
+<li>[4] <a href="https://futureskillsacademy.com/blog/best-artificial-intelligence-books/">https://futureskillsacademy.com/blog/best-artificial-intelligence-books/</a></li>
+<li>[5] <a href="https://peaks.fr/en/formation/introduction-a-lintelligence-artificielle-et-au-machine-learning/">https://peaks.fr/en/formation/introduction-a-lintelligence-artificielle-et-au-machine-learning/</a></li>
+<li>[6] <a href="https://github.com/mrsaeeddev/free-ai-resources">https://github.com/mrsaeeddev/free-ai-resources</a></li>
+<li>[7] <a href="https://www.flowlu.com/blog/productivity/ai-books/">https://www.flowlu.com/blog/productivity/ai-books/</a></li>
+<li>[8] <a href="https://www.elementsofai.com">https://www.elementsofai.com</a></li>
+<li>[9] <a href="https://www.reddit.com/r/ArtificialInteligence/comments/18z4ig3/what_are_the_best_resources_to_learn_about_ai_for/">https://www.reddit.com/r/ArtificialInteligence/comments/18z4ig3/what_are_the_best_resources_to_learn_about_ai_for/</a></li>
+<li>[10] <a href="https://www.reddit.com/r/artificial/comments/156e71h/can_anyone_recommend_a_book_to_get_up_to_speed/">https://www.reddit.com/r/artificial/comments/156e71h/can_anyone_recommend_a_book_to_get_up_to_speed/</a></li>
+<li>[11] <a href="https://www.coursera.org/learn/introduction-to-ai">https://www.coursera.org/learn/introduction-to-ai</a></li>
+</ul>
+
+<p>
+&#x2014;
+Answer from Perplexity: pplx.ai/share
+</p>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[ai]]></category>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---vi.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---vi.html</guid>
+  <pubDate>Sat, 22 Mar 2025 15:16:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - V]]></title>
+  <description><![CDATA[
+<div id="outline-container-orgb74bd2d" class="outline-2">
+<h2 id="orgb74bd2d"><span class="section-number-2">1.</span> Capítulo 5: Futuro y Consideraciones de la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org8fbfda8" class="outline-3">
+<h3 id="org8fbfda8"><span class="section-number-3">1.1.</span> Tendencias Futuras</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orgaf16de4" class="outline-4">
+<h4 id="orgaf16de4"><span class="section-number-4">1.1.1.</span> IA Agéntica</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<ul class="org-ul">
+<li><b><b>Definición</b></b>: Sistemas capaces de ejecutar tareas de manera autónoma con mínima intervención humana.</li>
+<li><b><b>Aplicaciones</b></b>: Automatización de procesos internos en empresas, pero requiere supervisión para evitar errores[1].</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1d49b0a" class="outline-4">
+<h4 id="org1d49b0a"><span class="section-number-4">1.1.2.</span> IA Generativa</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<ul class="org-ul">
+<li><b><b>Definición</b></b>: Herramientas que pueden generar contenido o optimizar procesos.</li>
+<li><b><b>Desafíos</b></b>: Medir su impacto económico real y asegurar un retorno de inversión adecuado[1].</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6ef040e" class="outline-4">
+<h4 id="org6ef040e"><span class="section-number-4">1.1.3.</span> Avances en Aprendizaje Profundo</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<ul class="org-ul">
+<li><b><b>Predicciones</b></b>: Redes neuronales más grandes y sofisticadas, acercándose a la IA generalizada[6].</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org71d65ca" class="outline-3">
+<h3 id="org71d65ca"><span class="section-number-3">1.2.</span> Retos Actuales</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org9cd5ec4" class="outline-4">
+<h4 id="org9cd5ec4"><span class="section-number-4">1.2.1.</span> Sesgos Algorítmicos</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li><b><b>Definición</b></b>: Resultados injustos debido a sesgos en los datos o algoritmos.</li>
+<li><b><b>Ejemplos</b></b>: Reconocimiento facial, contratación de personal[3].</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8dbec13" class="outline-4">
+<h4 id="org8dbec13"><span class="section-number-4">1.2.2.</span> Ética y Responsabilidad</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<ul class="org-ul">
+<li><b><b>Desafíos</b></b>: Garantizar decisiones éticas y responsabilidad en sistemas autónomos[2].</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6f24119" class="outline-4">
+<h4 id="org6f24119"><span class="section-number-4">1.2.3.</span> Consumo Energético</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<ul class="org-ul">
+<li><b><b>Impacto Ambiental</b></b>: Los modelos de IA grandes consumen mucha energía, lo que plantea preocupaciones ambientales.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org46331b9" class="outline-3">
+<h3 id="org46331b9"><span class="section-number-3">1.3.</span> Tendencias Emergentes</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org8e25abe" class="outline-4">
+<h4 id="org8e25abe"><span class="section-number-4">1.3.1.</span> IA Generalizada (AGI)</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<ul class="org-ul">
+<li><b><b>Definición</b></b>: Capaz de realizar cualquier tarea intelectual que un ser humano pueda hacer.</li>
+<li><b><b>Estado Actual</b></b>: Aún en desarrollo, pero avances en aprendizaje por refuerzo y computación cuántica lo acercan[6].</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgaed2607" class="outline-4">
+<h4 id="orgaed2607"><span class="section-number-4">1.3.2.</span> Neuro-Simbólica</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<ul class="org-ul">
+<li><b><b>Definición</b></b>: Combinación de lógica simbólica con redes neuronales.</li>
+<li><b><b>Aplicaciones</b></b>: Mejora en la interpretación y explicación de decisiones de IA.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org56a16d9" class="outline-4">
+<h4 id="org56a16d9"><span class="section-number-4">1.3.3.</span> Edge AI</h4>
+<div class="outline-text-4" id="text-1-3-3">
+<ul class="org-ul">
+<li><b><b>Definición</b></b>: Procesamiento de IA en dispositivos locales para reducir la latencia y mejorar la privacidad.</li>
+<li><b><b>Aplicaciones</b></b>: Vehículos autónomos, dispositivos IoT.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga7062a9" class="outline-3">
+<h3 id="orga7062a9"><span class="section-number-3">1.4.</span> Consideraciones Legales y Regulatorias</h3>
+<div class="outline-text-3" id="text-1-4">
+</div>
+<div id="outline-container-org2ba3730" class="outline-4">
+<h4 id="org2ba3730"><span class="section-number-4">1.4.1.</span> Regulación de Modelos de IA</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<ul class="org-ul">
+<li><b><b>Ejemplos</b></b>: Clasificación de modelos de IA de propósito general con riesgo sistémico[7].</li>
+<li><b><b>Desafíos</b></b>: Equilibrar innovación con regulación efectiva.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge7f84bc" class="outline-4">
+<h4 id="orge7f84bc"><span class="section-number-4">1.4.2.</span> Privacidad y Seguridad de Datos</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<ul class="org-ul">
+<li><b><b>Importancia</b></b>: Proteger datos personales en aplicaciones de IA, especialmente en gestión de crisis[5].</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1e703a1" class="outline-4">
+<h4 id="org1e703a1"><span class="section-number-4">1.4.3.</span> Tendencias Futuras Adicionales</h4>
+<div class="outline-text-4" id="text-1-4-3">
+<ul class="org-ul">
+<li><b><b>Aplicaciones en Salud</b></b>: Mejoras en diagnóstico y tratamiento personalizado[8].</li>
+<li><b><b>Exploración Espacial</b></b>: Uso de IA para misiones autónomas y análisis de datos[8].</li>
+</ul>
+
+<p>
+Citations:
+</p>
+<ul class="org-ul">
+<li>[1] <a href="https://www.infobae.com/opinion/2025/03/22/el-futuro-de-la-ia-en-los-negocios/">https://www.infobae.com/opinion/2025/03/22/el-futuro-de-la-ia-en-los-negocios/</a></li>
+<li>[2] <a href="https://espejodemonografias.comunicacionsocial.es/article/view/6800">https://espejodemonografias.comunicacionsocial.es/article/view/6800</a></li>
+<li>[3] <a href="https://www.youtube.com/watch?v=fP_f-aNZFLo">https://www.youtube.com/watch?v=fP_f-aNZFLo</a></li>
+<li>[4] <a href="https://ailabschool.com/cual-es-el-futuro-de-la-inteligencia-artificial/">https://ailabschool.com/cual-es-el-futuro-de-la-inteligencia-artificial/</a></li>
+<li>[5] <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=9581167">https://dialnet.unirioja.es/servlet/articulo?codigo=9581167</a></li>
+<li>[6] <a href="https://www.hackaboss.com/blog/futuro-inteligencia-artificial">https://www.hackaboss.com/blog/futuro-inteligencia-artificial</a></li>
+<li>[7] <a href="https://artificialintelligenceact.eu/es/chapter/5/">https://artificialintelligenceact.eu/es/chapter/5/</a></li>
+<li>[8] <a href="https://www.bbc.com/mundo/articles/c4gxzx0kpp6o">https://www.bbc.com/mundo/articles/c4gxzx0kpp6o</a></li>
+<li>[9] <a href="https://www.youtube.com/watch?v=QXWgQM0w4Rg">https://www.youtube.com/watch?v=QXWgQM0w4Rg</a></li>
+</ul>
+
+<p>
+&#x2014;
+Answer from Perplexity: pplx.ai/share
+</p>
+
+<hr>
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---vi">2025-03-22-inteligencia-artificial:-guía-desde-conceptos-hasta-aplicaciones&#x2014;vi</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[ai]]></category>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---v.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---v.html</guid>
+  <pubDate>Sat, 22 Mar 2025 15:14:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - IV]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf0cf161">1. Capítulo 4: Aplicaciones Industriales de la Inteligencia Artificial</a>
+<ul>
+<li><a href="#org4bd0868">1.1. Sector Salud</a>
+<ul>
+<li><a href="#orge0d96de">1.1.1. Diagnóstico por Imágenes</a></li>
+<li><a href="#org3a04e9d">1.1.2. Descubrimiento de Fármacos</a></li>
+<li><a href="#org66e92f8">1.1.3. Análisis de Datos Médicos</a></li>
+</ul>
+</li>
+<li><a href="#orga146f9b">1.2. Manufactura</a>
+<ul>
+<li><a href="#org071bddd">1.2.1. Automatización Industrial</a></li>
+<li><a href="#org96792da">1.2.2. Mantenimiento Predictivo</a></li>
+</ul>
+</li>
+<li><a href="#orgcbfde87">1.3. Agricultura</a>
+<ul>
+<li><a href="#org87d9faa">1.3.1. Monitoreo de Cultivos</a></li>
+<li><a href="#orgaccffe9">1.3.2. Optimización de Rendimientos</a></li>
+</ul>
+</li>
+<li><a href="#orgdf205fc">1.4. Finanzas</a>
+<ul>
+<li><a href="#orgbf3a317">1.4.1. Detección de Fraude</a></li>
+<li><a href="#org1b4c533">1.4.2. Análisis de Mercados</a></li>
+</ul>
+</li>
+<li><a href="#orgc08364b">1.5. Educación</a>
+<ul>
+<li><a href="#orgf2140b6">1.5.1. Personalización del Aprendizaje</a></li>
+<li><a href="#orgc50b9d6">1.5.2. Automatización de Tareas Administrativas</a></li>
+<li><a href="#orgd2f1ad4">1.5.3. Aplicaciones Prácticas Adicionales</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-orgf0cf161" class="outline-2">
+<h2 id="orgf0cf161"><span class="section-number-2">1.</span> Capítulo 4: Aplicaciones Industriales de la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org4bd0868" class="outline-3">
+<h3 id="org4bd0868"><span class="section-number-3">1.1.</span> Sector Salud</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orge0d96de" class="outline-4">
+<h4 id="orge0d96de"><span class="section-number-4">1.1.1.</span> Diagnóstico por Imágenes</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<ul class="org-ul">
+<li><b><b>Tecnología</b></b>: Redes Neuronales Convolucionales (CNN) para analizar imágenes médicas.</li>
+<li><b><b>Aplicaciones</b></b>: Detección temprana de cáncer, diagnóstico de enfermedades cardíacas.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3a04e9d" class="outline-4">
+<h4 id="org3a04e9d"><span class="section-number-4">1.1.2.</span> Descubrimiento de Fármacos</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<ul class="org-ul">
+<li><b><b>Tecnología</b></b>: Simulación molecular y aprendizaje automático para identificar compuestos potencialmente efectivos.</li>
+<li><b><b>Aplicaciones</b></b>: Reducción del tiempo y costo en el desarrollo de nuevos medicamentos.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org66e92f8" class="outline-4">
+<h4 id="org66e92f8"><span class="section-number-4">1.1.3.</span> Análisis de Datos Médicos</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<ul class="org-ul">
+<li><b><b>Tecnología</b></b>: Procesamiento de grandes conjuntos de datos para identificar patrones y predecir resultados de tratamientos.</li>
+<li><b><b>Aplicaciones</b></b>: Mejora en la toma de decisiones clínicas y personalización de tratamientos.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga146f9b" class="outline-3">
+<h3 id="orga146f9b"><span class="section-number-3">1.2.</span> Manufactura</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org071bddd" class="outline-4">
+<h4 id="org071bddd"><span class="section-number-4">1.2.1.</span> Automatización Industrial</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li><b><b>Tecnología</b></b>: Robots autónomos y sistemas de control inteligentes para mejorar la eficiencia y seguridad en la producción.</li>
+<li><b><b>Aplicaciones</b></b>: Ensamblaje preciso, control de calidad visual, logística en almacenes.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org96792da" class="outline-4">
+<h4 id="org96792da"><span class="section-number-4">1.2.2.</span> Mantenimiento Predictivo</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<ul class="org-ul">
+<li><b><b>Tecnología</b></b>: Análisis de datos de sensores para predecir fallos en maquinaria.</li>
+<li><b><b>Aplicaciones</b></b>: Reducción de costos de reparación y aumento de la disponibilidad de equipos.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcbfde87" class="outline-3">
+<h3 id="orgcbfde87"><span class="section-number-3">1.3.</span> Agricultura</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org87d9faa" class="outline-4">
+<h4 id="org87d9faa"><span class="section-number-4">1.3.1.</span> Monitoreo de Cultivos</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<ul class="org-ul">
+<li><b><b>Tecnología</b></b>: Drones equipados con sensores y visión artificial para monitorear el crecimiento de cultivos.</li>
+<li><b><b>Aplicaciones</b></b>: Detección temprana de plagas y deficiencias nutricionales.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgaccffe9" class="outline-4">
+<h4 id="orgaccffe9"><span class="section-number-4">1.3.2.</span> Optimización de Rendimientos</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<ul class="org-ul">
+<li><b><b>Tecnología</b></b>: Análisis predictivo para optimizar la aplicación de fertilizantes y pesticidas.</li>
+<li><b><b>Aplicaciones</b></b>: Mejora en la eficiencia del uso de recursos y reducción del impacto ambiental.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdf205fc" class="outline-3">
+<h3 id="orgdf205fc"><span class="section-number-3">1.4.</span> Finanzas</h3>
+<div class="outline-text-3" id="text-1-4">
+</div>
+<div id="outline-container-orgbf3a317" class="outline-4">
+<h4 id="orgbf3a317"><span class="section-number-4">1.4.1.</span> Detección de Fraude</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<ul class="org-ul">
+<li><b><b>Tecnología</b></b>: Algoritmos de aprendizaje automático para identificar patrones anómalos en transacciones.</li>
+<li><b><b>Aplicaciones</b></b>: Protección de clientes y reducción de pérdidas financieras.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1b4c533" class="outline-4">
+<h4 id="org1b4c533"><span class="section-number-4">1.4.2.</span> Análisis de Mercados</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<ul class="org-ul">
+<li><b><b>Tecnología</b></b>: Predicción de tendencias y patrones en los mercados financieros.</li>
+<li><b><b>Aplicaciones</b></b>: Asesoramiento financiero personalizado y optimización de inversiones.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc08364b" class="outline-3">
+<h3 id="orgc08364b"><span class="section-number-3">1.5.</span> Educación</h3>
+<div class="outline-text-3" id="text-1-5">
+</div>
+<div id="outline-container-orgf2140b6" class="outline-4">
+<h4 id="orgf2140b6"><span class="section-number-4">1.5.1.</span> Personalización del Aprendizaje</h4>
+<div class="outline-text-4" id="text-1-5-1">
+<ul class="org-ul">
+<li><b><b>Tecnología</b></b>: Sistemas de recomendación para adaptar el contenido educativo a las necesidades individuales de los estudiantes.</li>
+<li><b><b>Aplicaciones</b></b>: Mejora en la eficacia del aprendizaje y aumento de la motivación.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc50b9d6" class="outline-4">
+<h4 id="orgc50b9d6"><span class="section-number-4">1.5.2.</span> Automatización de Tareas Administrativas</h4>
+<div class="outline-text-4" id="text-1-5-2">
+<ul class="org-ul">
+<li><b><b>Tecnología</b></b>: Chatbots y sistemas de gestión automatizados para reducir la carga administrativa.</li>
+<li><b><b>Aplicaciones</b></b>: Liberar tiempo para actividades más importantes como la enseñanza y el desarrollo curricular.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd2f1ad4" class="outline-4">
+<h4 id="orgd2f1ad4"><span class="section-number-4">1.5.3.</span> Aplicaciones Prácticas Adicionales</h4>
+<div class="outline-text-4" id="text-1-5-3">
+<ul class="org-ul">
+<li><b><b>Asistentes Virtuales</b></b>: Siri, Alexa, Google Assistant, que utilizan NLP para comprender y responder a comandos de voz[2][5].</li>
+<li><b><b>Reconocimiento Facial</b></b>: Utilizado en seguridad y autenticación de dispositivos[6][7].</li>
+<li><b><b>Vehículos Autónomos</b></b>: Conducción segura mediante algoritmos de aprendizaje automático[7].</li>
+</ul>
+
+<p>
+Citations:
+</p>
+<ul class="org-ul">
+<li>[1] <a href="https://www.iberdrola.com/innovacion/que-es-inteligencia-artificial">https://www.iberdrola.com/innovacion/que-es-inteligencia-artificial</a></li>
+<li>[2] <a href="https://www.unir.net/actualidad/vida-academica/17-aplicaciones-practicas-inteligencia-artificial/">https://www.unir.net/actualidad/vida-academica/17-aplicaciones-practicas-inteligencia-artificial/</a></li>
+<li>[3] <a href="https://www.zendesk.com.mx/blog/aplicaciones-practicas-de-inteligencia/">https://www.zendesk.com.mx/blog/aplicaciones-practicas-de-inteligencia/</a></li>
+<li>[4] <a href="https://www.telefonica.com/es/sala-comunicacion/blog/aplicaciones-tiene-inteligencia-artificial/">https://www.telefonica.com/es/sala-comunicacion/blog/aplicaciones-tiene-inteligencia-artificial/</a></li>
+<li>[5] <a href="https://www.docusign.com/es-mx/blog/aplicaciones-inteligencia-artificial">https://www.docusign.com/es-mx/blog/aplicaciones-inteligencia-artificial</a></li>
+<li>[6] <a href="https://immune.institute/blog/7-ejemplos-de-uso-de-inteligencia-artificial-en-nuestro-dia-a-dia/">https://immune.institute/blog/7-ejemplos-de-uso-de-inteligencia-artificial-en-nuestro-dia-a-dia/</a></li>
+<li>[7] <a href="https://mmi-e.com/la-ia-en-la-vida-cotidiana-aplicaciones-practicas-que-transforman-nuestro-dia-a-dia/">https://mmi-e.com/la-ia-en-la-vida-cotidiana-aplicaciones-practicas-que-transforman-nuestro-dia-a-dia/</a></li>
+<li>[8] <a href="https://aifindy.com/blog-y-noticias/aplicaciones-prcticas-de-la-inteligencia-artificial">https://aifindy.com/blog-y-noticias/aplicaciones-prcticas-de-la-inteligencia-artificial</a></li>
+</ul>
+
+<p>
+&#x2014;
+Answer from Perplexity: pplx.ai/share
+</p>
+
+
+<hr>
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---v">2025-03-22-inteligencia-artificial:-guía-desde-conceptos-hasta-aplicaciones&#x2014;v</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[ai]]></category>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---iv.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---iv.html</guid>
+  <pubDate>Sat, 22 Mar 2025 15:12:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - III]]></title>
+  <description><![CDATA[
+<div id="outline-container-org6768020" class="outline-2">
+<h2 id="org6768020"><span class="section-number-2">1.</span> Capítulo 3: Funcionamiento Técnico de la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgff1e169" class="outline-3">
+<h3 id="orgff1e169"><span class="section-number-3">1.1.</span> Flujo de Procesamiento</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orgbfe5ef2" class="outline-4">
+<h4 id="orgbfe5ef2"><span class="section-number-4">1.1.1.</span> Adquisición de Datos</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<ul class="org-ul">
+<li><b><b>Fuentes de Datos</b></b>: Sensores, bases de datos, redes sociales, etc.</li>
+<li><b><b>Importancia</b></b>: Los datos son el combustible para entrenar y mejorar los modelos de IA.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgba9a7f6" class="outline-4">
+<h4 id="orgba9a7f6"><span class="section-number-4">1.1.2.</span> Preprocesamiento</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<ul class="org-ul">
+<li><b><b>Limpieza de Datos</b></b>: Eliminar errores o valores faltantes.</li>
+<li><b><b>Normalización</b></b>: Ajustar los datos a un rango común para mejorar el rendimiento del modelo.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2f231d0" class="outline-4">
+<h4 id="org2f231d0"><span class="section-number-4">1.1.3.</span> Modelado</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<ul class="org-ul">
+<li><b><b>Selección de Algoritmo</b></b>: Elección del tipo de aprendizaje (supervisado, no supervisado, por refuerzo) y del modelo específico (redes neuronales, árboles de decisión, etc.).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8b8072b" class="outline-4">
+<h4 id="org8b8072b"><span class="section-number-4">1.1.4.</span> Entrenamiento</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<ul class="org-ul">
+<li><b><b>División de Datos</b></b>: Entrenamiento, validación y pruebas.</li>
+<li><b><b>Ajuste de Parámetros</b></b>: Uso de técnicas como la retropropagación para optimizar los pesos del modelo.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5f246cd" class="outline-4">
+<h4 id="org5f246cd"><span class="section-number-4">1.1.5.</span> Implementación</h4>
+<div class="outline-text-4" id="text-1-1-5">
+<ul class="org-ul">
+<li><b><b>Inferencia en Tiempo Real</b></b>: Uso del modelo entrenado para hacer predicciones o tomar decisiones en aplicaciones reales.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org79a20b5" class="outline-3">
+<h3 id="org79a20b5"><span class="section-number-3">1.2.</span> Tipos de Aprendizaje</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-orgc8bfc64" class="outline-4">
+<h4 id="orgc8bfc64"><span class="section-number-4">1.2.1.</span> Aprendizaje Supervisado</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li><b><b>Definición</b></b>: El modelo aprende a partir de datos etiquetados.</li>
+<li><b><b>Ejemplos</b></b>: Clasificación de imágenes, predicción de precios.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc8c79d1" class="outline-4">
+<h4 id="orgc8c79d1"><span class="section-number-4">1.2.2.</span> Aprendizaje No Supervisado</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<ul class="org-ul">
+<li><b><b>Definición</b></b>: El modelo busca patrones en datos sin etiquetas.</li>
+<li><b><b>Ejemplos</b></b>: Clustering, reducción de dimensionalidad.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf452d26" class="outline-4">
+<h4 id="orgf452d26"><span class="section-number-4">1.2.3.</span> Aprendizaje por Refuerzo</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<ul class="org-ul">
+<li><b><b>Definición</b></b>: El modelo aprende mediante recompensas o penalizaciones.</li>
+<li><b><b>Ejemplos</b></b>: Juegos, control de robots.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge63de18" class="outline-3">
+<h3 id="orge63de18"><span class="section-number-3">1.3.</span> Arquitecturas de Redes Neuronales</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org27be2db" class="outline-4">
+<h4 id="org27be2db"><span class="section-number-4">1.3.1.</span> Redes Neuronales Artificiales (ANN)</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<ul class="org-ul">
+<li><b><b>Definición</b></b>: Simulan el comportamiento del cerebro humano.</li>
+<li><b><b>Uso</b></b>: Predicción de series temporales, clasificación de texto.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc13e507" class="outline-4">
+<h4 id="orgc13e507"><span class="section-number-4">1.3.2.</span> Redes Neuronales Convolucionales (CNN)</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<ul class="org-ul">
+<li><b><b>Definición</b></b>: Usadas para el procesamiento de imágenes.</li>
+<li><b><b>Uso</b></b>: Reconocimiento facial, clasificación de imágenes.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0241186" class="outline-4">
+<h4 id="org0241186"><span class="section-number-4">1.3.3.</span> Redes Neuronales Recurrentes (RNN)</h4>
+<div class="outline-text-4" id="text-1-3-3">
+<ul class="org-ul">
+<li><b><b>Definición</b></b>: Utilizadas para series temporales y texto.</li>
+<li><b><b>Uso</b></b>: Predicción del lenguaje, traducción automática.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga01033d" class="outline-3">
+<h3 id="orga01033d"><span class="section-number-3">1.4.</span> Herramientas y Frameworks</h3>
+<div class="outline-text-3" id="text-1-4">
+</div>
+<div id="outline-container-org2ff4862" class="outline-4">
+<h4 id="org2ff4862"><span class="section-number-4">1.4.1.</span> Frameworks Populares</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<ul class="org-ul">
+<li><b><b>TensorFlow</b></b>: Desarrollado por Google, ideal para modelos complejos.</li>
+<li><b><b>PyTorch</b></b>: Fácil de usar y flexible, popular entre investigadores.</li>
+<li><b><b>Keras</b></b>: Interfaz de alto nivel para TensorFlow y Theano.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org30ba312" class="outline-4">
+<h4 id="org30ba312"><span class="section-number-4">1.4.2.</span> Bibliotecas de Apoyo</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<ul class="org-ul">
+<li><b><b>NumPy</b></b>: Para operaciones matemáticas.</li>
+<li><b><b>Pandas</b></b>: Para manipulación de datos.</li>
+<li><b><b>Scikit-learn</b></b>: Para algoritmos de aprendizaje automático tradicionales.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3f891d6" class="outline-4">
+<h4 id="org3f891d6"><span class="section-number-4">1.4.3.</span> Conceptos Adicionales</h4>
+<div class="outline-text-4" id="text-1-4-3">
+<ul class="org-ul">
+<li><b><b>Componentes Básicos de la IA</b></b>: Aprendizaje, razonamiento, resolución de problemas, percepción y comprensión del lenguaje[1].</li>
+<li><b><b>Aplicaciones Prácticas</b></b>: Asistentes virtuales, medicina, finanzas, agricultura[2][5].</li>
+</ul>
+
+<p>
+Citations:
+</p>
+<ul class="org-ul">
+<li>[1] <a href="https://caseguard.com/es/articles/los-cinco-componentes-basicos-de-la-ia-nuevo-desarrollo-de-software/">https://caseguard.com/es/articles/los-cinco-componentes-basicos-de-la-ia-nuevo-desarrollo-de-software/</a></li>
+<li>[2] <a href="https://www.iberdrola.com/innovacion/que-es-inteligencia-artificial">https://www.iberdrola.com/innovacion/que-es-inteligencia-artificial</a></li>
+<li>[3] <a href="https://www.anesma.com/diez-avances-en-inteligencia-artificial-para-2025-el-futuro-hoy/">https://www.anesma.com/diez-avances-en-inteligencia-artificial-para-2025-el-futuro-hoy/</a></li>
+<li>[4] <a href="https://aws.amazon.com/es/what-is/artificial-intelligence/">https://aws.amazon.com/es/what-is/artificial-intelligence/</a></li>
+<li>[5] <a href="https://www.unir.net/actualidad/vida-academica/17-aplicaciones-practicas-inteligencia-artificial/">https://www.unir.net/actualidad/vida-academica/17-aplicaciones-practicas-inteligencia-artificial/</a></li>
+<li>[6] <a href="https://www.anesma.com/diez-avances-de-la-inteligencia-artificial-que-se-perfilan-para-2024/">https://www.anesma.com/diez-avances-de-la-inteligencia-artificial-que-se-perfilan-para-2024/</a></li>
+<li>[7] <a href="https://artificialintelligenceact.eu/es/ai-act-explorer/">https://artificialintelligenceact.eu/es/ai-act-explorer/</a></li>
+<li>[8] <a href="https://www.zendesk.com.mx/blog/aplicaciones-practicas-de-inteligencia/">https://www.zendesk.com.mx/blog/aplicaciones-practicas-de-inteligencia/</a></li>
+<li>[9] <a href="https://www.bbc.com/mundo/articles/c4gxzx0kpp6o">https://www.bbc.com/mundo/articles/c4gxzx0kpp6o</a></li>
+<li>[10] <a href="https://www.nationalgeographic.com.es/ciencia/avances-y-controversias-inteligencia-artificial-2023_21268">https://www.nationalgeographic.com.es/ciencia/avances-y-controversias-inteligencia-artificial-2023_21268</a></li>
+</ul>
+
+<p>
+&#x2014;
+Answer from Perplexity: pplx.ai/share
+</p>
+
+<hr>
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---iv">2025-03-22&#x2013;inteligencia-artificial:-guía-desde-conceptos-hasta-aplicaciones&#x2014;iv</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[ai]]></category>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---iii.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---iii.html</guid>
+  <pubDate>Sat, 22 Mar 2025 15:10:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - II]]></title>
+  <description><![CDATA[
+<div id="outline-container-orge858050" class="outline-2">
+<h2 id="orge858050"><span class="section-number-2">1.</span> Capítulo 2: Componentes Clave de la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgd2ce7fb" class="outline-3">
+<h3 id="orgd2ce7fb"><span class="section-number-3">1.1.</span> Estructura Fundamental</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orga6d5e49" class="outline-4">
+<h4 id="orga6d5e49"><span class="section-number-4">1.1.1.</span> 2.1.1 Datos</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<ul class="org-ul">
+<li><b><b>Tipos de Datos</b></b>: Estructurados (bases de datos) y no estructurados (imágenes, texto).</li>
+<li><b><b>Importancia</b></b>: Los datos son el combustible principal para entrenar modelos de IA.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb8bb1a6" class="outline-4">
+<h4 id="orgb8bb1a6"><span class="section-number-4">1.1.2.</span> Algoritmos</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<ul class="org-ul">
+<li><b><b>Definición</b></b>: Ecuaciones matemáticas que procesan datos para tomar decisiones o realizar predicciones.</li>
+<li><b><b>Ejemplos</b></b>:
+<ul class="org-ul">
+<li>Regresión lineal</li>
+<li>Árboles de decisión</li>
+<li>Máquinas de soporte vectorial (SVM)</li>
+<li>Redes Neuronales</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org76dc73d" class="outline-4">
+<h4 id="org76dc73d"><span class="section-number-4">1.1.3.</span> Redes Neuronales</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<ul class="org-ul">
+<li><p>
+<b><b>Arquitectura</b></b>: Inspiradas en el cerebro humano, consisten en capas de neuronas interconectadas.
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Capa</th>
+<th scope="col" class="org-left">Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Entrada</td>
+<td class="org-left">Recibe datos crudos</td>
+</tr>
+
+<tr>
+<td class="org-left">Oculta</td>
+<td class="org-left">Procesamiento mediante neuronas</td>
+</tr>
+
+<tr>
+<td class="org-left">Salida</td>
+<td class="org-left">Genera resultados/predicciones</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1fb743d" class="outline-3">
+<h3 id="org1fb743d"><span class="section-number-3">1.2.</span> Proceso de Entrenamiento</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-orgb1c1a44" class="outline-4">
+<h4 id="orgb1c1a44"><span class="section-number-4">1.2.1.</span> División de Datos</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li><b><b>Entrenamiento</b></b>: 70-80% de los datos para ajustar el modelo.</li>
+<li><b><b>Validación</b></b>: 15% para evaluar el rendimiento durante el entrenamiento.</li>
+<li><b><b>Pruebas</b></b>: 10-15% para medir el desempeño final del modelo.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org147cd2e" class="outline-4">
+<h4 id="org147cd2e"><span class="section-number-4">1.2.2.</span> Ajuste de Parámetros</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<ul class="org-ul">
+<li><b><b>Retropropagación</b></b>: Algoritmo para ajustar los pesos de las neuronas según el error de predicción.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org30615c1" class="outline-3">
+<h3 id="org30615c1"><span class="section-number-3">1.3.</span> Tipos de Modelos</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org2ed06b4" class="outline-4">
+<h4 id="org2ed06b4"><span class="section-number-4">1.3.1.</span> Modelos de Aprendizaje</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<ul class="org-ul">
+<li><b><b>Aprendizaje Supervisado</b></b>: El sistema aprende a partir de datos etiquetados.</li>
+<li><b><b>Aprendizaje No Supervisado</b></b>: El sistema busca patrones en datos sin etiquetas.</li>
+<li><b><b>Aprendizaje por Refuerzo</b></b>: El sistema aprende mediante recompensas o penalizaciones.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9a9a87e" class="outline-4">
+<h4 id="org9a9a87e"><span class="section-number-4">1.3.2.</span> Modelos de Redes Neuronales</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<ul class="org-ul">
+<li><b><b>Redes Neuronales Artificiales (ANN)</b></b>: Simulan el comportamiento del cerebro humano.</li>
+<li><b><b>Redes Neuronales Convolucionales (CNN)</b></b>: Usadas para el procesamiento de imágenes.</li>
+<li><b><b>Redes Neuronales Recurrentes (RNN)</b></b>: Utilizadas para series temporales y texto.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8f98afe" class="outline-3">
+<h3 id="org8f98afe"><span class="section-number-3">1.4.</span> Herramientas y Frameworks</h3>
+<div class="outline-text-3" id="text-1-4">
+</div>
+<div id="outline-container-org04f9afa" class="outline-4">
+<h4 id="org04f9afa"><span class="section-number-4">1.4.1.</span> Frameworks Populares</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<ul class="org-ul">
+<li><b><b>TensorFlow</b></b>: Desarrollado por Google, ideal para modelos complejos.</li>
+<li><b><b>PyTorch</b></b>: Fácil de usar y flexible, popular entre investigadores.</li>
+<li><b><b>Keras</b></b>: Interfaz de alto nivel para TensorFlow y Theano.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge713ac0" class="outline-4">
+<h4 id="orge713ac0"><span class="section-number-4">1.4.2.</span> Bibliotecas de Apoyo</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<ul class="org-ul">
+<li><b><b>NumPy</b></b>: Para operaciones matemáticas.</li>
+<li><b><b>Pandas</b></b>: Para manipulación de datos.</li>
+<li><b><b>Scikit-learn</b></b>: Para algoritmos de aprendizaje automático tradicionales.</li>
+</ul>
+
+
+<p>
+&#x2014;
+Answer from Perplexity: pplx.ai/share
+</p>
+
+<hr>
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---iii">2025-03-22&#x2013;inteligencia-artificial:-guía-desde-conceptos-hasta-aplicaciones&#x2014;iii</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[ai]]></category>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---ii.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---ii.html</guid>
+  <pubDate>Sat, 22 Mar 2025 15:07:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - I]]></title>
+  <description><![CDATA[
+<div id="outline-container-org0a63e14" class="outline-2">
+<h2 id="org0a63e14"><span class="section-number-2">1.</span> Capítulo 1: Conceptos Básicos de IA</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgd8474d1" class="outline-3">
+<h3 id="orgd8474d1"><span class="section-number-3">1.1.</span> ¿Qué es la Inteligencia Artificial?</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Tecnología que permite a máquinas simular capacidades cognitivas humanas.</li>
+<li>Sistemas capaces de:
+<ul class="org-ul">
+<li>Aprendizaje autónomo (identificar patrones en datos)</li>
+<li>Toma de decisiones</li>
+<li>Procesamiento de lenguaje natural</li>
+<li>Visión artificial</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga2fa87b" class="outline-3">
+<h3 id="orga2fa87b"><span class="section-number-3">1.2.</span> Origen e Historia</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li><b><b>1943</b></b>: Primer modelo matemático de redes neuronales (McCullough &amp; Pitts)</li>
+<li><b><b>1950</b></b>:
+<ul class="org-ul">
+<li>Primer computador neuronal SNARC (Minsky &amp; Edmonds)</li>
+<li>Test de Turing publicado por Alan Turing</li>
+</ul></li>
+<li><b><b>1956</b></b>: Conferencia de Dartmouth donde se acuñó el término "Inteligencia Artificial"</li>
+<li><b><b>Hitos posteriores</b></b>:
+<ul class="org-ul">
+<li><b><b>1959</b></b>: Arthur Samuel define "Machine Learning" en IBM</li>
+<li><b><b>1963</b></b>: Primer laboratorio de IA en Stanford</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org456768e" class="outline-3">
+<h3 id="org456768e"><span class="section-number-3">1.3.</span> Conceptos Fundamentales</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org4a0e18b" class="outline-4">
+<h4 id="org4a0e18b"><span class="section-number-4">1.3.1.</span> Tipos de Inteligencia Artificial</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<ul class="org-ul">
+<li><b><b>Inteligencia Artificial Estrecha (Narrow AI)</b></b>: Diseñada para realizar una tarea específica.</li>
+<li><b><b>Inteligencia Artificial General (AGI)</b></b>: Capaz de realizar cualquier tarea intelectual que un ser humano pueda hacer.</li>
+<li><b><b>Inteligencia Artificial Superinteligente</b></b>: Excede significativamente la capacidad intelectual humana.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbc846ad" class="outline-4">
+<h4 id="orgbc846ad"><span class="section-number-4">1.3.2.</span> Modelos de Aprendizaje</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<ul class="org-ul">
+<li><b><b>Aprendizaje Supervisado</b></b>: El sistema aprende a partir de datos etiquetados.</li>
+<li><b><b>Aprendizaje No Supervisado</b></b>: El sistema busca patrones en datos sin etiquetas.</li>
+<li><b><b>Aprendizaje por Refuerzo</b></b>: El sistema aprende mediante recompensas o penalizaciones.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5e20556" class="outline-3">
+<h3 id="org5e20556"><span class="section-number-3">1.4.</span> Desafíos y Consideraciones Éticas</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>A medida que la IA se vuelve más omnipresente, surgen preocupaciones sobre su impacto en la sociedad, como la privacidad, el sesgo en los algoritmos, y el desplazamiento de empleos. Estos desafíos requieren un enfoque multidisciplinario para asegurar que la IA se desarrolle y se aplique de manera responsable.</li>
+</ul>
+
+<p>
+Citations:
+</p>
+<ul class="org-ul">
+<li>[1] <a href="https://traficantes.net/sites/default/files/pdfs/orgguide.es_.pdf">https://traficantes.net/sites/default/files/pdfs/orgguide.es_.pdf</a></li>
+<li>[2] <a href="https://www.gnu.org/software/emacs/manual/html_mono/org.html">https://www.gnu.org/software/emacs/manual/html_mono/org.html</a></li>
+<li>[3] <a href="https://orgmode.org/worg/org-syntax.html">https://orgmode.org/worg/org-syntax.html</a></li>
+<li>[4] <a href="https://www.youtube.com/watch?v=CV2IFpSW2sE">https://www.youtube.com/watch?v=CV2IFpSW2sE</a></li>
+<li>[5] <a href="https://orgmode.org/org.html">https://orgmode.org/org.html</a></li>
+<li>[6] <a href="https://orgmode.org/manual/Document-Structure.html">https://orgmode.org/manual/Document-Structure.html</a></li>
+<li>[7] <a href="https://orgmode.org/manual/Tables.html">https://orgmode.org/manual/Tables.html</a></li>
+<li>[8] <a href="https://karl-voit.at/2020/05/03/current-org-files/">https://karl-voit.at/2020/05/03/current-org-files/</a></li>
+</ul>
+
+<p>
+&#x2014;
+Answer from Perplexity: pplx.ai/share
+</p>
+
+<hr>
+
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---ii">2025-03-22&#x2013;inteligencia-artificial:-guía-desde-conceptos-hasta-aplicaciones&#x2014;ii</a>
+</p>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[ai]]></category>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---i.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---i.html</guid>
+  <pubDate>Sat, 22 Mar 2025 15:05:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - Introducción]]></title>
+  <description><![CDATA[
+<div id="outline-container-org50ab017" class="outline-2">
+<h2 id="org50ab017"><span class="section-number-2">1.</span> Introducción a la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+La Inteligencia Artificial (IA) ha dejado de ser un concepto futurista para convertirse en una realidad omnipresente que impacta prácticamente todos los aspectos de nuestra vida cotidiana. Desde los asistentes virtuales que responden nuestras preguntas más simples hasta sistemas avanzados que diagnostican enfermedades con precisión médica, la IA está transformando industrias, redefiniendo límites tecnológicos y desafiando nuestra comprensión sobre qué significa "pensar".  
+</p>
+
+<p>
+Este artículo es tu puerta de entrada al fascinante mundo de la Inteligencia Artificial. Aquí exploraremos desde los fundamentos teóricos hasta las aplicaciones prácticas más innovadoras, brindándote una visión integral que combina rigor técnico con accesibilidad conceptual. Si alguna vez te has preguntado cómo funcionan los modelos de lenguaje como el que genera este texto, cuáles son sus orígenes históricos o cómo se están utilizando en sectores tan diversos como la salud, la agricultura o el entretenimiento, estás en el lugar correcto.  
+</p>
+
+<p>
+En los siguientes capítulos, desglosaremos conceptos clave, analizaremos los componentes fundamentales de los sistemas de IA, y exploraremos su funcionamiento técnico paso a paso. Además, veremos ejemplos concretos de cómo estas tecnologías están siendo implementadas hoy en día y reflexionaremos sobre los retos éticos y las tendencias emergentes que definirán su futuro.  
+</p>
+
+<p>
+Prepárate para sumergirte en una guía completa que no solo te ayudará a entender qué es la Inteligencia Artificial, sino también a apreciar su potencial y sus implicaciones en nuestra sociedad. ¡Comencemos!
+</p>
+
+<ul class="org-ul">
+<li><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---i">2025-03-22&#x2013;inteligencia-artificial:-guía-desde-conceptos-hasta-aplicaciones&#x2014;i</a></li>
+<li><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---ii">2025-03-22&#x2013;inteligencia-artificial:-guía-desde-conceptos-hasta-aplicaciones&#x2014;ii</a></li>
+<li><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-20--tutorial-de-ciberseguridad-b%C3%A1sica-para-equipos-linux-y-otros-sistemas-operativos-iii">2025-03-20&#x2013;tutorial-de-ciberseguridad-básica-para-equipos-linux-y-otros-sistemas-operativos-iii</a></li>
+<li><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---iv">2025-03-22&#x2013;inteligencia-artificial:-guía-desde-conceptos-hasta-aplicaciones&#x2014;iv</a></li>
+<li><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---v">2025-03-22-inteligencia-artificial:-guía-desde-conceptos-hasta-aplicaciones&#x2014;v</a></li>
+<li><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---vi">2025-03-22-inteligencia-artificial:-guía-desde-conceptos-hasta-aplicaciones&#x2014;vi</a></li>
+</ul>
+
+<p>
+&#x2014;
+Answer from Perplexity: pplx.ai/share
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[ai]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---introducci%C3%B3n.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---introducci%C3%B3n.html</guid>
+  <pubDate>Sat, 22 Mar 2025 15:03:00 +0100</pubDate>
+</item>
 <item>
   <title><![CDATA[Generadores de IA por Relevancia y Países (2025)  Perplexity]]></title>
   <description><![CDATA[
