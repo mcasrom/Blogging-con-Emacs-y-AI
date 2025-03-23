@@ -4,20 +4,20 @@
 <title><![CDATA[Example.com - IA]]></title>
 <description><![CDATA[Example.com - IA]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-ia.html</link>
-<lastBuildDate>Sun, 23 Mar 2025 17:13:05 +0100</lastBuildDate>
+<lastBuildDate>Sun, 23 Mar 2025 17:23:09 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Evaluación de Bloques Mundiales Usando Qwen IA]]></title>
   <description><![CDATA[
-<div id="outline-container-org3029a15" class="outline-2">
-<h2 id="org3029a15"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org000f007" class="outline-2">
+<h2 id="org000f007"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 En este documento evaluamos los principales bloques mundiales (<b><b>China</b></b>, <b><b>EE.UU.</b></b>, <b><b>Unión Europea</b></b> y <b><b>Rusia</b></b>) utilizando un <b><b>KPI compuesto</b></b> basado en cinco componentes clave: <b><b>Poder Militar</b></b>, <b><b>Economía</b></b>, <b><b>Tecnología</b></b>, <b><b>Diplomacia</b></b> y <b><b>Sostenibilidad</b></b>. Cada componente tiene un peso del 20%. Al final, se incluye un gráfico comparativo y una referencia al modelo Qwen Chat, una IA desarrollada en China.
 </p>
 </div>
 </div>
-<div id="outline-container-org671d24f" class="outline-2">
-<h2 id="org671d24f"><span class="section-number-2">2.</span> Evaluación de Bloques Mundiales</h2>
+<div id="outline-container-org45f21aa" class="outline-2">
+<h2 id="org45f21aa"><span class="section-number-2">2.</span> Evaluación de Bloques Mundiales</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 <b><b>1. China</b></b>
@@ -92,8 +92,8 @@ KPI = \frac{(80 + 60 + 55 + 50 + 45)}{5} = 58
 </p>
 </div>
 </div>
-<div id="outline-container-orgaca72f1" class="outline-2">
-<h2 id="orgaca72f1"><span class="section-number-2">3.</span> Gráfico Comparativo de KPI por Bloques Mundiales</h2>
+<div id="outline-container-org0f5cd00" class="outline-2">
+<h2 id="org0f5cd00"><span class="section-number-2">3.</span> Gráfico Comparativo de KPI por Bloques Mundiales</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 A continuación, se muestra un gráfico ASCII que representa los KPI totales de cada bloque:
@@ -110,8 +110,8 @@ Rusia               | &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#
 </div>
 </div>
 </div>
-<div id="outline-container-org6ba875c" class="outline-2">
-<h2 id="org6ba875c"><span class="section-number-2">4.</span> Referencias</h2>
+<div id="outline-container-org10ee02d" class="outline-2">
+<h2 id="org10ee02d"><span class="section-number-2">4.</span> Referencias</h2>
 <div class="outline-text-2" id="text-4">
 <ol class="org-ol">
 <li><b><b>Datos generales sobre poder militar:</b></b>  
@@ -138,20 +138,21 @@ Intergovernmental Panel on Climate Change (IPCC). (2023). <b>Sixth Assessment Re
 </p>
 </div>
 </div>
-<div id="outline-container-orge1d4654" class="outline-2">
-<h2 id="orge1d4654"><span class="section-number-2">5.</span> Nota Final: Elaborado con Qwen Chat</h2>
+<div id="outline-container-org47dcc2a" class="outline-2">
+<h2 id="org47dcc2a"><span class="section-number-2">5.</span> Nota Final: Elaborado con Qwen Chat</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Este análisis fue elaborado con la asistencia de <b><b>Qwen Chat</b></b>, una inteligencia artificial desarrollada por Alibaba Cloud en China. Qwen Chat es conocido por su capacidad para manejar tareas complejas de procesamiento del lenguaje natural, generación de texto y análisis de datos. Para más información sobre Qwen Chat, visita: <a href="https://www.alibabacloud.com/product/qwen">https://www.alibabacloud.com/product/qwen</a>.
 </p>
 </div>
 </div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-kpi.html">KPI</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-geopolítica.html">geopolítica</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">IA</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-relaciones.html">relaciones</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-internacionales.html">internacionales</a> </div>]]></description>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-kpi.html">KPI</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-geopolítica.html">geopolítica</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">IA</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-relaciones.html">relaciones</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-internacionales.html">internacionales</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-opiniones.html">opiniones</a> </div>]]></description>
   <category><![CDATA[KPI]]></category>
   <category><![CDATA[geopolítica]]></category>
   <category><![CDATA[IA]]></category>
   <category><![CDATA[relaciones]]></category>
   <category><![CDATA[internacionales]]></category>
+  <category><![CDATA[opiniones]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-23-evaluaci%C3%B3n-de-bloques-mundiales-usando-qwen-ia.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-23-evaluaci%C3%B3n-de-bloques-mundiales-usando-qwen-ia.html</guid>
   <pubDate>Sun, 23 Mar 2025 17:09:00 +0100</pubDate>
