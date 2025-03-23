@@ -4,7 +4,158 @@
 <title><![CDATA[Example.com - internacionales]]></title>
 <description><![CDATA[Example.com - internacionales]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-internacionales.html</link>
-<lastBuildDate>Sun, 23 Mar 2025 16:52:01 +0100</lastBuildDate>
+<lastBuildDate>Sun, 23 Mar 2025 17:13:05 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Evaluación de Bloques Mundiales Usando Qwen IA]]></title>
+  <description><![CDATA[
+<div id="outline-container-org3029a15" class="outline-2">
+<h2 id="org3029a15"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+En este documento evaluamos los principales bloques mundiales (<b><b>China</b></b>, <b><b>EE.UU.</b></b>, <b><b>Unión Europea</b></b> y <b><b>Rusia</b></b>) utilizando un <b><b>KPI compuesto</b></b> basado en cinco componentes clave: <b><b>Poder Militar</b></b>, <b><b>Economía</b></b>, <b><b>Tecnología</b></b>, <b><b>Diplomacia</b></b> y <b><b>Sostenibilidad</b></b>. Cada componente tiene un peso del 20%. Al final, se incluye un gráfico comparativo y una referencia al modelo Qwen Chat, una IA desarrollada en China.
+</p>
+</div>
+</div>
+<div id="outline-container-org671d24f" class="outline-2">
+<h2 id="org671d24f"><span class="section-number-2">2.</span> Evaluación de Bloques Mundiales</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<b><b>1. China</b></b>
+</p>
+
+<ul class="org-ul">
+<li><b><b>Poder Militar:</b></b> 85/100</li>
+<li><b><b>Economía:</b></b> 90/100</li>
+<li><b><b>Tecnología:</b></b> 85/100</li>
+<li><b><b>Diplomacia:</b></b> 75/100</li>
+<li><b><b>Sostenibilidad:</b></b> 65/100</li>
+<li><b><b>KPI Total:</b></b></li>
+</ul>
+<p>
+\[
+KPI = \frac{(85 + 90 + 85 + 75 + 65)}{5} = 80
+\]
+</p>
+
+<p>
+<b><b>2. Estados Unidos (EE.UU.)</b></b>
+</p>
+
+<ul class="org-ul">
+<li><b><b>Poder Militar:</b></b> 95/100</li>
+<li><b><b>Economía:</b></b> 90/100</li>
+<li><b><b>Tecnología:</b></b> 95/100</li>
+<li><b><b>Diplomacia:</b></b> 85/100</li>
+<li><b><b>Sostenibilidad:</b></b> 70/100</li>
+<li><b><b>KPI Total:</b></b></li>
+</ul>
+<p>
+\[
+KPI = \frac{(95 + 90 + 95 + 85 + 70)}{5} = 87
+\]
+</p>
+
+<p>
+<b><b>3. Unión Europea (UE)</b></b>
+</p>
+
+<ul class="org-ul">
+<li><b><b>Poder Militar:</b></b> 70/100</li>
+<li><b><b>Economía:</b></b> 85/100</li>
+<li><b><b>Tecnología:</b></b> 80/100</li>
+<li><b><b>Diplomacia:</b></b> 85/100</li>
+<li><b><b>Sostenibilidad:</b></b> 90/100</li>
+<li><b><b>KPI Total:</b></b></li>
+</ul>
+<p>
+\[
+KPI = \frac{(70 + 85 + 80 + 85 + 90)}{5} = 82
+\]
+</p>
+
+<p>
+<b><b>4. Rusia</b></b>
+</p>
+
+<ul class="org-ul">
+<li><b><b>Poder Militar:</b></b> 80/100</li>
+<li><b><b>Economía:</b></b> 60/100</li>
+<li><b><b>Tecnología:</b></b> 55/100</li>
+<li><b><b>Diplomacia:</b></b> 50/100</li>
+<li><b><b>Sostenibilidad:</b></b> 45/100</li>
+<li><b><b>KPI Total:</b></b></li>
+</ul>
+<p>
+\[
+KPI = \frac{(80 + 60 + 55 + 50 + 45)}{5} = 58
+\]
+</p>
+</div>
+</div>
+<div id="outline-container-orgaca72f1" class="outline-2">
+<h2 id="orgaca72f1"><span class="section-number-2">3.</span> Gráfico Comparativo de KPI por Bloques Mundiales</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+A continuación, se muestra un gráfico ASCII que representa los KPI totales de cada bloque:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">Bloque Mundial      | KPI Total
+--------------------|-----------
+EE.UU.              | &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;  87
+China               | &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;    80
+Uni&#243;n Europea (UE)  | &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;      82
+Rusia               | &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;            58
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6ba875c" class="outline-2">
+<h2 id="org6ba875c"><span class="section-number-2">4.</span> Referencias</h2>
+<div class="outline-text-2" id="text-4">
+<ol class="org-ol">
+<li><b><b>Datos generales sobre poder militar:</b></b>  
+Stockholm International Peace Research Institute (SIPRI). (2023). <b>Military Expenditure Database</b>. <a href="https://www.sipri.org">https://www.sipri.org</a></li>
+
+<li><b><b>Economía global y comercio internacional:</b></b>  
+World Bank. (2023). <b>World Development Indicators</b>. <a href="https://data.worldbank.org">https://data.worldbank.org</a></li>
+
+<li><b><b>Innovación tecnológica y liderazgo en IA:</b></b>  
+McKinsey Global Institute. (2023). <b>The State of AI in 2023</b>. <a href="https://www.mckinsey.com">https://www.mckinsey.com</a></li>
+
+<li><b><b>Políticas climáticas y sostenibilidad:</b></b>  
+Climate Action Tracker. (2023). <b>Global Climate Policy Analysis</b>. <a href="https://climateactiontracker.org">https://climateactiontracker.org</a></li>
+
+<li><b><b>Relaciones diplomáticas y alianzas globales:</b></b>  
+United Nations. (2023). <b>Member States and Observers</b>. <a href="https://www.un.org">https://www.un.org</a></li>
+
+<li><b><b>Resiliencia ambiental y crisis globales:</b></b>  
+Intergovernmental Panel on Climate Change (IPCC). (2023). <b>Sixth Assessment Report</b>. <a href="https://www.ipcc.ch">https://www.ipcc.ch</a></li>
+</ol>
+
+<p>
+&#x2014;
+</p>
+</div>
+</div>
+<div id="outline-container-orge1d4654" class="outline-2">
+<h2 id="orge1d4654"><span class="section-number-2">5.</span> Nota Final: Elaborado con Qwen Chat</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Este análisis fue elaborado con la asistencia de <b><b>Qwen Chat</b></b>, una inteligencia artificial desarrollada por Alibaba Cloud en China. Qwen Chat es conocido por su capacidad para manejar tareas complejas de procesamiento del lenguaje natural, generación de texto y análisis de datos. Para más información sobre Qwen Chat, visita: <a href="https://www.alibabacloud.com/product/qwen">https://www.alibabacloud.com/product/qwen</a>.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-kpi.html">KPI</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-geopolítica.html">geopolítica</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">IA</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-relaciones.html">relaciones</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-internacionales.html">internacionales</a> </div>]]></description>
+  <category><![CDATA[KPI]]></category>
+  <category><![CDATA[geopolítica]]></category>
+  <category><![CDATA[IA]]></category>
+  <category><![CDATA[relaciones]]></category>
+  <category><![CDATA[internacionales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-23-evaluaci%C3%B3n-de-bloques-mundiales-usando-qwen-ia.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-23-evaluaci%C3%B3n-de-bloques-mundiales-usando-qwen-ia.html</guid>
+  <pubDate>Sun, 23 Mar 2025 17:09:00 +0100</pubDate>
+</item>
 <item>
   <title><![CDATA[Aplicación del KPI de Influencia Geopolítica a los Grandes Bloques Mundiales en 2025]]></title>
   <description><![CDATA[

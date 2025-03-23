@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - indice]]></title>
 <description><![CDATA[Example.com - indice]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-indice.html</link>
-<lastBuildDate>Sun, 23 Mar 2025 16:52:00 +0100</lastBuildDate>
+<lastBuildDate>Sun, 23 Mar 2025 17:13:04 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -279,8 +279,20 @@
 
 <tr>
 <td class="org-right">2025-03-23</td>
+<td class="org-left">Evaluación de Bloques Mundiales Usando Qwen IA</td>
+<td class="org-left"><a href="2025-03-23-evaluación-de-bloques-mundiales-usando-qwen-ia.html">Enlace</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-03-23</td>
 <td class="org-left">Geopolítica: Definición, Historia, Evolución y un KPI para Evaluar el Poder Global</td>
 <td class="org-left"><a href="2025-03-23-geopolítica:-definición,-historia,-evolución-y-un-kpi-para-evaluar-el-poder-global.html">Enlace</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-03-23</td>
+<td class="org-left">Geopolítica: Una Visión Integral de su Definición, Historia, Evolución y Actualidad</td>
+<td class="org-left"><a href="2025-03-23-geopolítica:-una-visión-integral-de-su-definición,-historia,-evolución-y-actualidad.html">Enlace</a></td>
 </tr>
 
 <tr>
@@ -313,7 +325,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Sun, 23 Mar 2025 16:50:00 +0100</pubDate>
+  <pubDate>Sun, 23 Mar 2025 17:12:00 +0100</pubDate>
 </item>
 </channel>
 </rss>
