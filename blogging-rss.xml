@@ -4,20 +4,20 @@
 <title><![CDATA[Example.com - blogging]]></title>
 <description><![CDATA[Example.com - blogging]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-blogging.html</link>
-<lastBuildDate>Sat, 22 Mar 2025 21:06:32 +0100</lastBuildDate>
+<lastBuildDate>Sun, 23 Mar 2025 09:43:23 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Mi Blog con Emacs y Esteroides: Una Aventura Potenciada por Código y IA]]></title>
   <description><![CDATA[
-<div id="outline-container-orgbb6ad7a" class="outline-2">
-<h2 id="orgbb6ad7a"><span class="section-number-2">1.</span> Bienvenidos a Mi Blog con Emacs y Esteroides</h2>
+<div id="outline-container-orgcb98bd2" class="outline-2">
+<h2 id="orgcb98bd2"><span class="section-number-2">1.</span> Bienvenidos a Mi Blog con Emacs y Esteroides</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 ¡Hola, lector! Si has llegado hasta aquí, probablemente compartas mi pasión por la tecnología, el código y la libertad creativa que ofrecen herramientas como Emacs. Este blog, titulado <b>"Mi Blog con Emacs y Esteroides"</b>, no es solo un espacio para compartir ideas, sino una declaración en favor a un editor legendario y una exploración de cómo la inteligencia artificial generativa lo lleva a otro nivel. ¿Listo para el viaje? ¡Sube a bordo!
 </p>
 </div>
 </div>
-<div id="outline-container-org484cd9f" class="outline-2">
-<h2 id="org484cd9f"><span class="section-number-2">2.</span> Emacs: El Corazón de mi Flujo de Trabajo</h2>
+<div id="outline-container-orgb7858d4" class="outline-2">
+<h2 id="orgb7858d4"><span class="section-number-2">2.</span> Emacs: El Corazón de mi Flujo de Trabajo</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Cuando pienso en Emacs, no veo solo un editor de texto. Veo una navaja suiza digital, un compañero fiel que ha estado en los paquetes estándar de Linux desde tiempos inmemoriales. No es una herramienta pasajera ni una moda; es un pilar de la cultura del software libre, robusto y flexible como pocos. Lo uso para todo: desde escribir código en Python o Lisp hasta tomar notas en Org-mode (¡como este post!), gestionar mi correo con Gnus o incluso relajarme jugando un poco de Tetris cuando el día se pone duro.
@@ -28,8 +28,8 @@ Mi interés por Emacs nació de su promesa de control total. En un mundo lleno d
 </p>
 </div>
 </div>
-<div id="outline-container-org20a7fb2" class="outline-2">
-<h2 id="org20a7fb2"><span class="section-number-2">3.</span> Esteroides: El Poder de la IA Generativa</h2>
+<div id="outline-container-orgfea3c31" class="outline-2">
+<h2 id="orgfea3c31"><span class="section-number-2">3.</span> Esteroides: El Poder de la IA Generativa</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Pero, ¿qué pasa con lo de "Esteroides"? Aquí es donde la cosa se pone emocionante. No me conformo con un Emacs estándar (por muy poderoso que sea). He decidido inyectarle una dosis de esteroides digitales mediante la IA generativa. ¿Qué significa esto? Que uso herramientas como modelos de lenguaje avanzados para acelerar mi configuración de Emacs y generar contenido con una chispa extra.
@@ -44,8 +44,8 @@ Los "esteroides" son esa capa de potencia que transforma Emacs de un editor exce
 </p>
 </div>
 </div>
-<div id="outline-container-org51bdbe1" class="outline-2">
-<h2 id="org51bdbe1"><span class="section-number-2">4.</span> Un Blog con Alma y Tecnología</h2>
+<div id="outline-container-orgf0ee9b9" class="outline-2">
+<h2 id="orgf0ee9b9"><span class="section-number-2">4.</span> Un Blog con Alma y Tecnología</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Este blog es el resultado de esa combinación. Aquí encontrarás reflexiones sobre Emacs, tutoriales para sacarle el máximo provecho, y experimentos con IA generativa que dan vida a mis palabras. Uso `org-static-blog` para publicar todo desde archivos Org-mode, lo que significa que cada post empieza como un documento vivo en mi Emacs, lleno de notas, enlaces y ajustes, antes de convertirse en las páginas que ves.
@@ -56,8 +56,8 @@ Este blog es el resultado de esa combinación. Aquí encontrarás reflexiones so
 </p>
 </div>
 </div>
-<div id="outline-container-org9eabc1d" class="outline-2">
-<h2 id="org9eabc1d"><span class="section-number-2">5.</span> ¿Qué viene después?</h2>
+<div id="outline-container-orgd1331ef" class="outline-2">
+<h2 id="orgd1331ef"><span class="section-number-2">5.</span> ¿Qué viene después?</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Si te apasiona Emacs, Linux, o la IA, este es tu lugar. Próximamente hablaré de cómo configuro mi `init.el` con ayuda de IA, trucos de Org-mode para la productividad, y quizás alguna locura como generar poesía con Lisp y modelos de lenguaje. ¿Tienes ideas o sugerencias? Escríbeme a <a href="mailto:mybloggingnotes@gmail.com">mybloggingnotes@gmail.com</a>; este blog también es un diálogo.
@@ -82,16 +82,16 @@ Así que, ponte cómodo, abre tu Emacs (o instálalo si aún no lo tienes), y ac
 <item>
   <title><![CDATA[Gestionando Dos Blogs Diferentes con org-static-blog en Emacs]]></title>
   <description><![CDATA[
-<div id="outline-container-org40b1cdb" class="outline-2">
-<h2 id="org40b1cdb"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org2bab91d" class="outline-2">
+<h2 id="org2bab91d"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 `org-static-blog` es una herramienta poderosa para crear blogs estáticos desde Emacs, pero por defecto está diseñada para manejar un solo blog. Si quieres trabajar con dos blogs diferentes (por ejemplo, uno personal y otro profesional), necesitas ajustar tu configuración en Emacs 28 para que soporte múltiples instancias. En este artículo, te guiaré paso a paso para lograrlo.
 </p>
 </div>
 </div>
-<div id="outline-container-org5b8e508" class="outline-2">
-<h2 id="org5b8e508"><span class="section-number-2">2.</span> Estrategia general</h2>
+<div id="outline-container-org787d78d" class="outline-2">
+<h2 id="org787d78d"><span class="section-number-2">2.</span> Estrategia general</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 La clave para manejar dos blogs con `org-static-blog` es usar configuraciones separadas para cada uno, almacenadas en variables distintas, y luego alternar entre ellas según el blog que estés editando o publicando. Esto implica:
@@ -103,8 +103,8 @@ La clave para manejar dos blogs con `org-static-blog` es usar configuraciones se
 </ul>
 </div>
 </div>
-<div id="outline-container-org4f6d993" class="outline-2">
-<h2 id="org4f6d993"><span class="section-number-2">3.</span> Configuración inicial</h2>
+<div id="outline-container-org4c807ea" class="outline-2">
+<h2 id="org4c807ea"><span class="section-number-2">3.</span> Configuración inicial</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Primero, asegúrate de tener `org-static-blog` instalado en Emacs 28 (instálalo con `M-x package-install RET org-static-blog` si no lo has hecho). Luego, organiza tus directorios. Por ejemplo:
@@ -123,8 +123,8 @@ Dentro de cada directorio, crea subdirectorios para posts y publicaciones:
 </ul>
 </div>
 </div>
-<div id="outline-container-org638003e" class="outline-2">
-<h2 id="org638003e"><span class="section-number-2">4.</span> Configurar las variables para cada blog</h2>
+<div id="outline-container-org95efc42" class="outline-2">
+<h2 id="org95efc42"><span class="section-number-2">4.</span> Configurar las variables para cada blog</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 En tu `init.el`, define las configuraciones de ambos blogs usando variables personalizadas. Aquí un ejemplo:
@@ -191,8 +191,8 @@ M-x my-set-blog-pro hace lo mismo para el blog profesional.
 Crear posts para cada blog Ahora puedes crear posts en los directorios correspondientes. Por ejemplo:
 </p>
 </div>
-<div id="outline-container-orgb63aec8" class="outline-3">
-<h3 id="orgb63aec8"><span class="section-number-3">4.1.</span> Post para el Blog Personal (~/blog-personal/posts/2025-02-25-viaje.org):</h3>
+<div id="outline-container-org0b15d36" class="outline-3">
+<h3 id="org0b15d36"><span class="section-number-3">4.1.</span> Post para el Blog Personal (~/blog-personal/posts/2025-02-25-viaje.org):</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 org
@@ -200,15 +200,15 @@ org
 </div>
 </div>
 </div>
-<div id="outline-container-org06f6023" class="outline-2">
-<h2 id="org06f6023"><span class="section-number-2">5.</span> Reflexiones</h2>
+<div id="outline-container-orgaaf1212" class="outline-2">
+<h2 id="orgaaf1212"><span class="section-number-2">5.</span> Reflexiones</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Hoy escribo sobre un viaje reciente que hice&#x2026;
 </p>
 </div>
-<div id="outline-container-org5091224" class="outline-3">
-<h3 id="org5091224"><span class="section-number-3">5.1.</span> Post para el Blog Profesional (~/blog-profesional/posts/2025-02-25-proyecto.org):</h3>
+<div id="outline-container-org01f7be7" class="outline-3">
+<h3 id="org01f7be7"><span class="section-number-3">5.1.</span> Post para el Blog Profesional (~/blog-profesional/posts/2025-02-25-proyecto.org):</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 org
@@ -216,8 +216,8 @@ org
 </div>
 </div>
 </div>
-<div id="outline-container-org95d62c9" class="outline-2">
-<h2 id="org95d62c9"><span class="section-number-2">6.</span> Detalles</h2>
+<div id="outline-container-orga4fa8b1" class="outline-2">
+<h2 id="orga4fa8b1"><span class="section-number-2">6.</span> Detalles</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Este post detalla un proyecto técnico en el que estoy trabajando&#x2026;

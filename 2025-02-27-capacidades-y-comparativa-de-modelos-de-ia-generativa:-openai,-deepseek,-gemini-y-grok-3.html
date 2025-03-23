@@ -9,51 +9,110 @@
       title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
 <title>Capacidades y Comparativa de Modelos de IA Generativa: OpenAI, DeepSeek, Gemini y Grok 3</title>
 <meta charset='UTF-8'>
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
        <style>
          body {
-           font-family: 'Arial', sans-serif;
-           line-height: 1.6;
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
            color: #333;
-           max-width: 800px;
+           max-width: 900px;
            margin: 0 auto;
            padding: 20px;
-           background-color: #f5f5f5;
+           background-color: #f9f9f9;
          }
-         h1, h2, h3 { color: #2c3e50; font-family: 'Helvetica', sans-serif; }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
          .blog-header {
            display: flex;
            align-items: center;
-           justify-content: left;
+           justify-content: flex-start;
            text-align: left;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
          }
          .blog-header img {
-           max-width: 80px;
+           max-width: 70px;
            height: auto;
-           margin-right: 15px;
+           margin-right: 20px;
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+         }
+         .blog-title {
+           font-size: 2em;
+           margin: 0;
          }
          .blog-subtitle {
-           font-size: 1.2em;
-           color: #555;
+           font-size: 1.1em;
+           color: #666;
+           margin-top: 5px;
+         }
+         .blog-email {
+           font-size: 0.9em;
+           color: #777;
+           margin-top: 8px;
+         }
+         .blog-email a {
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
          }
          nav {
            text-align: center;
            font-size: 1em;
-           margin-top: 10px;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
          }
          nav a {
-           margin: 0 10px;
+           color: white;
+           margin: 0 15px;
            text-decoration: none;
-           color: #2c3e50;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.85em;
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
          }
        </style>
+       
        <div class='blog-header'>
          <img src='logo.png' alt='Logo'>
-         <div>
-           <h1>Mi Blog con Emacs y Esteroides</h1>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
            <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
-           <p style='font-size: 0.8em;'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
          </div>
        </div>
+       
        <nav>
          <a href='index.html'>Inicio</a> |
          <a href='tags.html'>Tags</a> |
@@ -61,22 +120,24 @@
          <a href='contacto.html'>Contacto</a> |
          <a href='nosotros.html'>Nosotros</a> |
          <a href='proyectos.html'>Proyectos</a>
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a>
        </nav>
-       <hr></head>
+        <hr></head>
 <body>
 <div id="preamble" class="status"></div>
 <div id="content">
 <div class="post-date">27/02/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-27-capacidades-y-comparativa-de-modelos-de-ia-generativa:-openai,-deepseek,-gemini-y-grok-3.html">Capacidades y Comparativa de Modelos de IA Generativa: OpenAI, DeepSeek, Gemini y Grok 3</a></h1>
-<div id="outline-container-org7c9823c" class="outline-2">
-<h2 id="org7c9823c"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org9c64bb3" class="outline-2">
+<h2 id="org9c64bb3"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 La IA generativa es una categoría de inteligencia artificial que crea contenido nuevo (texto, imágenes, código, etc.) a partir de datos de entrenamiento, utilizando modelos de aprendizaje profundo como transformers o sistemas de mezcla de expertos (MoE). Este documento define sus capacidades, características y compara los modelos líderes: OpenAI (GPT-4o/o1), DeepSeek (R1/V3), Gemini (2.0/Pro) y Grok 3 de xAI, con una valoración de 1 a 10.
 </p>
 </div>
 </div>
-<div id="outline-container-org9660652" class="outline-2">
-<h2 id="org9660652"><span class="section-number-2">2.</span> Capacidades de la IA Generativa</h2>
+<div id="outline-container-orgabb02a6" class="outline-2">
+<h2 id="orgabb02a6"><span class="section-number-2">2.</span> Capacidades de la IA Generativa</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 La IA generativa tiene las siguientes capacidades generales:
@@ -91,8 +152,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfe14d45" class="outline-2">
-<h2 id="orgfe14d45"><span class="section-number-2">3.</span> Características Comunes</h2>
+<div id="outline-container-orgc1685c3" class="outline-2">
+<h2 id="orgc1685c3"><span class="section-number-2">3.</span> Características Comunes</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li><b><b>Arquitectura</b></b>: Basada en transformers o MoE para eficiencia y escalabilidad.</li>
@@ -103,12 +164,12 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-org5282582" class="outline-2">
-<h2 id="org5282582"><span class="section-number-2">4.</span> Comparativa de Modelos</h2>
+<div id="outline-container-org5e88224" class="outline-2">
+<h2 id="org5e88224"><span class="section-number-2">4.</span> Comparativa de Modelos</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org9510840" class="outline-3">
-<h3 id="org9510840"><span class="section-number-3">4.1.</span> OpenAI (GPT-4o / o1)**</h3>
+<div id="outline-container-org1ed87c7" class="outline-3">
+<h3 id="org1ed87c7"><span class="section-number-3">4.1.</span> OpenAI (GPT-4o / o1)**</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Líder en IA conversacional, con GPT-4o como modelo multimodal y o1 especializado en razonamiento.</li>
@@ -134,8 +195,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgaa501b2" class="outline-3">
-<h3 id="orgaa501b2"><span class="section-number-3">4.2.</span> DeepSeek (R1 / V3)**</h3>
+<div id="outline-container-orgc9f83c9" class="outline-3">
+<h3 id="orgc9f83c9"><span class="section-number-3">4.2.</span> DeepSeek (R1 / V3)**</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Modelo chino de bajo costo, con R1 enfocado en razonamiento y V3 como MoE de 671B parámetros.</li>
@@ -161,8 +222,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-org6a1e00b" class="outline-3">
-<h3 id="org6a1e00b"><span class="section-number-3">4.3.</span> Gemini (2.0 / Pro)**</h3>
+<div id="outline-container-org8ecb844" class="outline-3">
+<h3 id="org8ecb844"><span class="section-number-3">4.3.</span> Gemini (2.0 / Pro)**</h3>
 <div class="outline-text-3" id="text-4-3">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Modelo de Google, integrado con su ecosistema, con Gemini 2.0 Pro como versión avanzada.</li>
@@ -188,8 +249,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-org832ade5" class="outline-3">
-<h3 id="org832ade5"><span class="section-number-3">4.4.</span> Grok 3 (xAI)**</h3>
+<div id="outline-container-org355229e" class="outline-3">
+<h3 id="org355229e"><span class="section-number-3">4.4.</span> Grok 3 (xAI)**</h3>
 <div class="outline-text-3" id="text-4-4">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Último modelo de xAI, con énfasis en razonamiento y "búsqueda de la verdad".</li>
@@ -216,8 +277,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </div>
 </div>
 </div>
-<div id="outline-container-org820a862" class="outline-2">
-<h2 id="org820a862"><span class="section-number-2">5.</span> Comparativa Resumida</h2>
+<div id="outline-container-org342702d" class="outline-2">
+<h2 id="org342702d"><span class="section-number-2">5.</span> Comparativa Resumida</h2>
 <div class="outline-text-2" id="text-5">
 <table>
 
@@ -299,8 +360,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </table>
 </div>
 </div>
-<div id="outline-container-org56b43ab" class="outline-2">
-<h2 id="org56b43ab"><span class="section-number-2">6.</span> Conclusión</h2>
+<div id="outline-container-orgc86d0d4" class="outline-2">
+<h2 id="orgc86d0d4"><span class="section-number-2">6.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li><b><b>OpenAI (GPT-4o/o1)</b></b>: Ideal para usuarios que buscan versatilidad y razonamiento avanzado, aunque costoso.</li>
@@ -323,11 +384,22 @@ Nota: Generado por Grok
 </div>
 </div>
 <div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-openai.html">openai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gemini.html">gemini</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-grok3.html">grok3</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-deepseek.html">deepseek</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-comparativa.html">comparativa</a> </div></div>
-<div id="postamble" class="status"><div id='postamble' class='status'>
+<div id="postamble" class="status"><div class='postamble'>
          <hr class='footer-hr'>
-         <div style='text-align: center; color: #777; font-size: 0.9em; padding-top: 20px;'>
-           <p>© 2025 M.Castillo | Hecho con Emacs y org-static-blog</p>
-         </div>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
        </div></div>
 </body>
 </html>

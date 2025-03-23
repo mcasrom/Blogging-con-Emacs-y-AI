@@ -4,21 +4,21 @@
 <title><![CDATA[Example.com - ia]]></title>
 <description><![CDATA[Example.com - ia]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-ia.html</link>
-<lastBuildDate>Sat, 22 Mar 2025 21:06:32 +0100</lastBuildDate>
+<lastBuildDate>Sun, 23 Mar 2025 09:43:23 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - VI]]></title>
   <description><![CDATA[
-<div id="outline-container-orgf303636" class="outline-2">
-<h2 id="orgf303636"><span class="section-number-2">1.</span> Capítulo 6: Guías y Recursos para Introducirse en la Inteligencia Artificial</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org060ae52" class="outline-2">
+<h2 id="org060ae52">Capítulo 6: Guías y Recursos para Introducirse en la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-org060ae52">
 </div>
-<div id="outline-container-org784d260" class="outline-3">
-<h3 id="org784d260"><span class="section-number-3">1.1.</span> Libros Recomendados</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org991f34b" class="outline-3">
+<h3 id="org991f34b">Libros Recomendados</h3>
+<div class="outline-text-3" id="text-org991f34b">
 </div>
-<div id="outline-container-org441db46" class="outline-4">
-<h4 id="org441db46"><span class="section-number-4">1.1.1.</span> Para Principiantes:</h4>
-<div class="outline-text-4" id="text-1-1-1">
+<div id="outline-container-org9269199" class="outline-4">
+<h4 id="org9269199">Para Principiantes:</h4>
+<div class="outline-text-4" id="text-org9269199">
 <ul class="org-ul">
 <li><b><b>"Artificial Intelligence For Dummies (2nd Edition)"</b></b> por Luca Massaron y John Mueller: Introducción no técnica que explica conceptos básicos y aplicaciones prácticas de la IA[1][7].</li>
 <li><b><b>"Artificial Intelligence Basics: A Non-Technical Introduction"</b></b> por Tom Taulli: Ideal para entender los conceptos fundamentales sin jerga técnica[1].</li>
@@ -26,9 +26,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org8d4060a" class="outline-4">
-<h4 id="org8d4060a"><span class="section-number-4">1.1.2.</span> Para Expertos:</h4>
-<div class="outline-text-4" id="text-1-1-2">
+<div id="outline-container-orgfc2dfe9" class="outline-4">
+<h4 id="orgfc2dfe9">Para Expertos:</h4>
+<div class="outline-text-4" id="text-orgfc2dfe9">
 <ul class="org-ul">
 <li><b><b>"Artificial Intelligence: A Modern Approach"</b></b>: Un texto clásico que cubre aspectos avanzados de la IA[4].</li>
 <li><b><b>"Human Compatible: Artificial Intelligence and the Problem of Control"</b></b>: Explora los desafíos éticos y de control en la IA[4].</li>
@@ -36,13 +36,13 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org51deec9" class="outline-3">
-<h3 id="org51deec9"><span class="section-number-3">1.2.</span> Cursos y Seminarios</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-org14106ec" class="outline-3">
+<h3 id="org14106ec">Cursos y Seminarios</h3>
+<div class="outline-text-3" id="text-org14106ec">
 </div>
-<div id="outline-container-org82b979b" class="outline-4">
-<h4 id="org82b979b"><span class="section-number-4">1.2.1.</span> Cursos en Línea</h4>
-<div class="outline-text-4" id="text-1-2-1">
+<div id="outline-container-orga190045" class="outline-4">
+<h4 id="orga190045">Cursos en Línea</h4>
+<div class="outline-text-4" id="text-orga190045">
 <ul class="org-ul">
 <li><b><b>"Elements of AI"</b></b> por la Universidad de Helsinki: Un curso gratuito que demystifica la IA sin requerir conocimientos técnicos avanzados[8].</li>
 <li><b><b>"Introduction to Artificial Intelligence with Python"</b></b> en EdX/Harvard University: Introducción práctica usando Python[6].</li>
@@ -50,9 +50,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org417a1ab" class="outline-4">
-<h4 id="org417a1ab"><span class="section-number-4">1.2.2.</span> Seminarios y Talleres</h4>
-<div class="outline-text-4" id="text-1-2-2">
+<div id="outline-container-org13a896e" class="outline-4">
+<h4 id="org13a896e">Seminarios y Talleres</h4>
+<div class="outline-text-4" id="text-org13a896e">
 <ul class="org-ul">
 <li><b><b>"Introduction to AI Workshop"</b></b> por EmpServe: Un taller interactivo que cubre conceptos básicos y aplicaciones prácticas de la IA[2].</li>
 <li><b><b>"Introduction to AI and Machine Learning"</b></b> en Peaks: Un curso de dos días que enseña los fundamentos teóricos y prácticos de la IA y el aprendizaje automático usando Python[5].</li>
@@ -60,13 +60,13 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org4a52118" class="outline-3">
-<h3 id="org4a52118"><span class="section-number-3">1.3.</span> Recursos en Línea</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-orgb329f74" class="outline-3">
+<h3 id="orgb329f74">Recursos en Línea</h3>
+<div class="outline-text-3" id="text-orgb329f74">
 </div>
-<div id="outline-container-org37f1bb5" class="outline-4">
-<h4 id="org37f1bb5"><span class="section-number-4">1.3.1.</span> Plataformas de Aprendizaje</h4>
-<div class="outline-text-4" id="text-1-3-1">
+<div id="outline-container-orge31857e" class="outline-4">
+<h4 id="orge31857e">Plataformas de Aprendizaje</h4>
+<div class="outline-text-4" id="text-orge31857e">
 <ul class="org-ul">
 <li><b><b>DataCamp</b></b>: Ofrece cursos interactivos enfocados en ciencia de datos y IA[3].</li>
 <li><b><b>Kaggle</b></b>: Plataforma para competencias de ciencia de datos y aprendizaje colaborativo[3].</li>
@@ -74,9 +74,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org71ab4ae" class="outline-4">
-<h4 id="org71ab4ae"><span class="section-number-4">1.3.2.</span> Comunidades y Blogs</h4>
-<div class="outline-text-4" id="text-1-3-2">
+<div id="outline-container-org9a2b79b" class="outline-4">
+<h4 id="org9a2b79b">Comunidades y Blogs</h4>
+<div class="outline-text-4" id="text-org9a2b79b">
 <ul class="org-ul">
 <li><b><b>GitHub</b></b>: Repositorios de código abierto relacionados con IA y aprendizaje automático[3].</li>
 <li><b><b>Reddit (r/MachineLearning y r/AI)</b></b>: Comunidades activas para discusiones y recursos sobre IA[3].</li>
@@ -84,9 +84,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org085bbc3" class="outline-3">
-<h3 id="org085bbc3"><span class="section-number-3">1.4.</span> URLs Recomendadas</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-org9202ab2" class="outline-3">
+<h3 id="org9202ab2">URLs Recomendadas</h3>
+<div class="outline-text-3" id="text-org9202ab2">
 <ul class="org-ul">
 <li><b><b>Learn with Google AI</b></b>: Recursos educativos de Google sobre IA[6].</li>
 <li><b><b>Microsoft AI School</b></b>: Recursos para aprender sobre IA con Microsoft[6].</li>
@@ -293,35 +293,35 @@ Answer from Perplexity: pplx.ai/share
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - IV]]></title>
   <description><![CDATA[
-<div id="outline-container-org7422e2c" class="outline-2">
-<h2 id="org7422e2c">Capítulo 4: Aplicaciones Industriales de la Inteligencia Artificial</h2>
-<div class="outline-text-2" id="text-org7422e2c">
+<div id="outline-container-org19ee53b" class="outline-2">
+<h2 id="org19ee53b">Capítulo 4: Aplicaciones Industriales de la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-org19ee53b">
 </div>
-<div id="outline-container-orgfb7bfa8" class="outline-3">
-<h3 id="orgfb7bfa8">Sector Salud</h3>
-<div class="outline-text-3" id="text-orgfb7bfa8">
+<div id="outline-container-org14b2591" class="outline-3">
+<h3 id="org14b2591">Sector Salud</h3>
+<div class="outline-text-3" id="text-org14b2591">
 </div>
-<div id="outline-container-org495a1a9" class="outline-4">
-<h4 id="org495a1a9">Diagnóstico por Imágenes</h4>
-<div class="outline-text-4" id="text-org495a1a9">
+<div id="outline-container-org11d479a" class="outline-4">
+<h4 id="org11d479a">Diagnóstico por Imágenes</h4>
+<div class="outline-text-4" id="text-org11d479a">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Redes Neuronales Convolucionales (CNN) para analizar imágenes médicas.</li>
 <li><b><b>Aplicaciones</b></b>: Detección temprana de cáncer, diagnóstico de enfermedades cardíacas.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf31080a" class="outline-4">
-<h4 id="orgf31080a">Descubrimiento de Fármacos</h4>
-<div class="outline-text-4" id="text-orgf31080a">
+<div id="outline-container-org11eabc5" class="outline-4">
+<h4 id="org11eabc5">Descubrimiento de Fármacos</h4>
+<div class="outline-text-4" id="text-org11eabc5">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Simulación molecular y aprendizaje automático para identificar compuestos potencialmente efectivos.</li>
 <li><b><b>Aplicaciones</b></b>: Reducción del tiempo y costo en el desarrollo de nuevos medicamentos.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org50b1c40" class="outline-4">
-<h4 id="org50b1c40">Análisis de Datos Médicos</h4>
-<div class="outline-text-4" id="text-org50b1c40">
+<div id="outline-container-org040eb07" class="outline-4">
+<h4 id="org040eb07">Análisis de Datos Médicos</h4>
+<div class="outline-text-4" id="text-org040eb07">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Procesamiento de grandes conjuntos de datos para identificar patrones y predecir resultados de tratamientos.</li>
 <li><b><b>Aplicaciones</b></b>: Mejora en la toma de decisiones clínicas y personalización de tratamientos.</li>
@@ -329,22 +329,22 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-org3027cdf" class="outline-3">
-<h3 id="org3027cdf">Manufactura</h3>
-<div class="outline-text-3" id="text-org3027cdf">
+<div id="outline-container-org0f6769a" class="outline-3">
+<h3 id="org0f6769a">Manufactura</h3>
+<div class="outline-text-3" id="text-org0f6769a">
 </div>
-<div id="outline-container-orge3ffda2" class="outline-4">
-<h4 id="orge3ffda2">Automatización Industrial</h4>
-<div class="outline-text-4" id="text-orge3ffda2">
+<div id="outline-container-org8721166" class="outline-4">
+<h4 id="org8721166">Automatización Industrial</h4>
+<div class="outline-text-4" id="text-org8721166">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Robots autónomos y sistemas de control inteligentes para mejorar la eficiencia y seguridad en la producción.</li>
 <li><b><b>Aplicaciones</b></b>: Ensamblaje preciso, control de calidad visual, logística en almacenes.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcafbf47" class="outline-4">
-<h4 id="orgcafbf47">Mantenimiento Predictivo</h4>
-<div class="outline-text-4" id="text-orgcafbf47">
+<div id="outline-container-orgd4b0fc2" class="outline-4">
+<h4 id="orgd4b0fc2">Mantenimiento Predictivo</h4>
+<div class="outline-text-4" id="text-orgd4b0fc2">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Análisis de datos de sensores para predecir fallos en maquinaria.</li>
 <li><b><b>Aplicaciones</b></b>: Reducción de costos de reparación y aumento de la disponibilidad de equipos.</li>
@@ -352,22 +352,22 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-orgd561d2c" class="outline-3">
-<h3 id="orgd561d2c">Agricultura</h3>
-<div class="outline-text-3" id="text-orgd561d2c">
+<div id="outline-container-orga5d0257" class="outline-3">
+<h3 id="orga5d0257">Agricultura</h3>
+<div class="outline-text-3" id="text-orga5d0257">
 </div>
-<div id="outline-container-orgc13dd9a" class="outline-4">
-<h4 id="orgc13dd9a">Monitoreo de Cultivos</h4>
-<div class="outline-text-4" id="text-orgc13dd9a">
+<div id="outline-container-org16d2ec7" class="outline-4">
+<h4 id="org16d2ec7">Monitoreo de Cultivos</h4>
+<div class="outline-text-4" id="text-org16d2ec7">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Drones equipados con sensores y visión artificial para monitorear el crecimiento de cultivos.</li>
 <li><b><b>Aplicaciones</b></b>: Detección temprana de plagas y deficiencias nutricionales.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcc0e45b" class="outline-4">
-<h4 id="orgcc0e45b">Optimización de Rendimientos</h4>
-<div class="outline-text-4" id="text-orgcc0e45b">
+<div id="outline-container-org6f36dab" class="outline-4">
+<h4 id="org6f36dab">Optimización de Rendimientos</h4>
+<div class="outline-text-4" id="text-org6f36dab">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Análisis predictivo para optimizar la aplicación de fertilizantes y pesticidas.</li>
 <li><b><b>Aplicaciones</b></b>: Mejora en la eficiencia del uso de recursos y reducción del impacto ambiental.</li>
@@ -375,22 +375,22 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-org2a5efc6" class="outline-3">
-<h3 id="org2a5efc6">Finanzas</h3>
-<div class="outline-text-3" id="text-org2a5efc6">
+<div id="outline-container-orgfbd0da0" class="outline-3">
+<h3 id="orgfbd0da0">Finanzas</h3>
+<div class="outline-text-3" id="text-orgfbd0da0">
 </div>
-<div id="outline-container-orgc7d2375" class="outline-4">
-<h4 id="orgc7d2375">Detección de Fraude</h4>
-<div class="outline-text-4" id="text-orgc7d2375">
+<div id="outline-container-org158a0b2" class="outline-4">
+<h4 id="org158a0b2">Detección de Fraude</h4>
+<div class="outline-text-4" id="text-org158a0b2">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Algoritmos de aprendizaje automático para identificar patrones anómalos en transacciones.</li>
 <li><b><b>Aplicaciones</b></b>: Protección de clientes y reducción de pérdidas financieras.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org09f4afc" class="outline-4">
-<h4 id="org09f4afc">Análisis de Mercados</h4>
-<div class="outline-text-4" id="text-org09f4afc">
+<div id="outline-container-orgba3a1e6" class="outline-4">
+<h4 id="orgba3a1e6">Análisis de Mercados</h4>
+<div class="outline-text-4" id="text-orgba3a1e6">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Predicción de tendencias y patrones en los mercados financieros.</li>
 <li><b><b>Aplicaciones</b></b>: Asesoramiento financiero personalizado y optimización de inversiones.</li>
@@ -398,31 +398,31 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-org442dc1c" class="outline-3">
-<h3 id="org442dc1c">Educación</h3>
-<div class="outline-text-3" id="text-org442dc1c">
+<div id="outline-container-org0d4b0dc" class="outline-3">
+<h3 id="org0d4b0dc">Educación</h3>
+<div class="outline-text-3" id="text-org0d4b0dc">
 </div>
-<div id="outline-container-orgaa4ac83" class="outline-4">
-<h4 id="orgaa4ac83">Personalización del Aprendizaje</h4>
-<div class="outline-text-4" id="text-orgaa4ac83">
+<div id="outline-container-orgd1cbc68" class="outline-4">
+<h4 id="orgd1cbc68">Personalización del Aprendizaje</h4>
+<div class="outline-text-4" id="text-orgd1cbc68">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Sistemas de recomendación para adaptar el contenido educativo a las necesidades individuales de los estudiantes.</li>
 <li><b><b>Aplicaciones</b></b>: Mejora en la eficacia del aprendizaje y aumento de la motivación.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga0c5923" class="outline-4">
-<h4 id="orga0c5923">Automatización de Tareas Administrativas</h4>
-<div class="outline-text-4" id="text-orga0c5923">
+<div id="outline-container-orgfd42c58" class="outline-4">
+<h4 id="orgfd42c58">Automatización de Tareas Administrativas</h4>
+<div class="outline-text-4" id="text-orgfd42c58">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Chatbots y sistemas de gestión automatizados para reducir la carga administrativa.</li>
 <li><b><b>Aplicaciones</b></b>: Liberar tiempo para actividades más importantes como la enseñanza y el desarrollo curricular.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org89518c3" class="outline-4">
-<h4 id="org89518c3">Aplicaciones Prácticas Adicionales</h4>
-<div class="outline-text-4" id="text-org89518c3">
+<div id="outline-container-orgaedd993" class="outline-4">
+<h4 id="orgaedd993">Aplicaciones Prácticas Adicionales</h4>
+<div class="outline-text-4" id="text-orgaedd993">
 <ul class="org-ul">
 <li><b><b>Asistentes Virtuales</b></b>: Siri, Alexa, Google Assistant, que utilizan NLP para comprender y responder a comandos de voz[2][5].</li>
 <li><b><b>Reconocimiento Facial</b></b>: Utilizado en seguridad y autenticación de dispositivos[6][7].</li>
@@ -461,90 +461,90 @@ Answer from Perplexity: pplx.ai/share
   <category><![CDATA[ai]]></category>
   <category><![CDATA[ia]]></category>
   <category><![CDATA[tutoriales]]></category>
-  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---iv.html</link>
-  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---iv.html</guid>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---iv.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---iv.html</guid>
   <pubDate>Sat, 22 Mar 2025 15:12:00 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - III]]></title>
   <description><![CDATA[
-<div id="outline-container-org6768020" class="outline-2">
-<h2 id="org6768020"><span class="section-number-2">1.</span> Capítulo 3: Funcionamiento Técnico de la Inteligencia Artificial</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orgb8bebfe" class="outline-2">
+<h2 id="orgb8bebfe">Capítulo 3: Funcionamiento Técnico de la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-orgb8bebfe">
 </div>
-<div id="outline-container-orgff1e169" class="outline-3">
-<h3 id="orgff1e169"><span class="section-number-3">1.1.</span> Flujo de Procesamiento</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org906fcc3" class="outline-3">
+<h3 id="org906fcc3">Flujo de Procesamiento</h3>
+<div class="outline-text-3" id="text-org906fcc3">
 </div>
-<div id="outline-container-orgbfe5ef2" class="outline-4">
-<h4 id="orgbfe5ef2"><span class="section-number-4">1.1.1.</span> Adquisición de Datos</h4>
-<div class="outline-text-4" id="text-1-1-1">
+<div id="outline-container-orgc0ca5ed" class="outline-4">
+<h4 id="orgc0ca5ed">Adquisición de Datos</h4>
+<div class="outline-text-4" id="text-orgc0ca5ed">
 <ul class="org-ul">
 <li><b><b>Fuentes de Datos</b></b>: Sensores, bases de datos, redes sociales, etc.</li>
 <li><b><b>Importancia</b></b>: Los datos son el combustible para entrenar y mejorar los modelos de IA.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgba9a7f6" class="outline-4">
-<h4 id="orgba9a7f6"><span class="section-number-4">1.1.2.</span> Preprocesamiento</h4>
-<div class="outline-text-4" id="text-1-1-2">
+<div id="outline-container-org5b05ab9" class="outline-4">
+<h4 id="org5b05ab9">Preprocesamiento</h4>
+<div class="outline-text-4" id="text-org5b05ab9">
 <ul class="org-ul">
 <li><b><b>Limpieza de Datos</b></b>: Eliminar errores o valores faltantes.</li>
 <li><b><b>Normalización</b></b>: Ajustar los datos a un rango común para mejorar el rendimiento del modelo.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2f231d0" class="outline-4">
-<h4 id="org2f231d0"><span class="section-number-4">1.1.3.</span> Modelado</h4>
-<div class="outline-text-4" id="text-1-1-3">
+<div id="outline-container-orgcfedbc3" class="outline-4">
+<h4 id="orgcfedbc3">Modelado</h4>
+<div class="outline-text-4" id="text-orgcfedbc3">
 <ul class="org-ul">
 <li><b><b>Selección de Algoritmo</b></b>: Elección del tipo de aprendizaje (supervisado, no supervisado, por refuerzo) y del modelo específico (redes neuronales, árboles de decisión, etc.).</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8b8072b" class="outline-4">
-<h4 id="org8b8072b"><span class="section-number-4">1.1.4.</span> Entrenamiento</h4>
-<div class="outline-text-4" id="text-1-1-4">
+<div id="outline-container-org36f61d1" class="outline-4">
+<h4 id="org36f61d1">Entrenamiento</h4>
+<div class="outline-text-4" id="text-org36f61d1">
 <ul class="org-ul">
 <li><b><b>División de Datos</b></b>: Entrenamiento, validación y pruebas.</li>
 <li><b><b>Ajuste de Parámetros</b></b>: Uso de técnicas como la retropropagación para optimizar los pesos del modelo.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org5f246cd" class="outline-4">
-<h4 id="org5f246cd"><span class="section-number-4">1.1.5.</span> Implementación</h4>
-<div class="outline-text-4" id="text-1-1-5">
+<div id="outline-container-orgef910c8" class="outline-4">
+<h4 id="orgef910c8">Implementación</h4>
+<div class="outline-text-4" id="text-orgef910c8">
 <ul class="org-ul">
 <li><b><b>Inferencia en Tiempo Real</b></b>: Uso del modelo entrenado para hacer predicciones o tomar decisiones en aplicaciones reales.</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-org79a20b5" class="outline-3">
-<h3 id="org79a20b5"><span class="section-number-3">1.2.</span> Tipos de Aprendizaje</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-org6a00608" class="outline-3">
+<h3 id="org6a00608">Tipos de Aprendizaje</h3>
+<div class="outline-text-3" id="text-org6a00608">
 </div>
-<div id="outline-container-orgc8bfc64" class="outline-4">
-<h4 id="orgc8bfc64"><span class="section-number-4">1.2.1.</span> Aprendizaje Supervisado</h4>
-<div class="outline-text-4" id="text-1-2-1">
+<div id="outline-container-org8e316e5" class="outline-4">
+<h4 id="org8e316e5">Aprendizaje Supervisado</h4>
+<div class="outline-text-4" id="text-org8e316e5">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: El modelo aprende a partir de datos etiquetados.</li>
 <li><b><b>Ejemplos</b></b>: Clasificación de imágenes, predicción de precios.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc8c79d1" class="outline-4">
-<h4 id="orgc8c79d1"><span class="section-number-4">1.2.2.</span> Aprendizaje No Supervisado</h4>
-<div class="outline-text-4" id="text-1-2-2">
+<div id="outline-container-orgca6925e" class="outline-4">
+<h4 id="orgca6925e">Aprendizaje No Supervisado</h4>
+<div class="outline-text-4" id="text-orgca6925e">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: El modelo busca patrones en datos sin etiquetas.</li>
 <li><b><b>Ejemplos</b></b>: Clustering, reducción de dimensionalidad.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf452d26" class="outline-4">
-<h4 id="orgf452d26"><span class="section-number-4">1.2.3.</span> Aprendizaje por Refuerzo</h4>
-<div class="outline-text-4" id="text-1-2-3">
+<div id="outline-container-org3091dd9" class="outline-4">
+<h4 id="org3091dd9">Aprendizaje por Refuerzo</h4>
+<div class="outline-text-4" id="text-org3091dd9">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: El modelo aprende mediante recompensas o penalizaciones.</li>
 <li><b><b>Ejemplos</b></b>: Juegos, control de robots.</li>
@@ -552,31 +552,31 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-orge63de18" class="outline-3">
-<h3 id="orge63de18"><span class="section-number-3">1.3.</span> Arquitecturas de Redes Neuronales</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-org9a3d163" class="outline-3">
+<h3 id="org9a3d163">Arquitecturas de Redes Neuronales</h3>
+<div class="outline-text-3" id="text-org9a3d163">
 </div>
-<div id="outline-container-org27be2db" class="outline-4">
-<h4 id="org27be2db"><span class="section-number-4">1.3.1.</span> Redes Neuronales Artificiales (ANN)</h4>
-<div class="outline-text-4" id="text-1-3-1">
+<div id="outline-container-org2a7595c" class="outline-4">
+<h4 id="org2a7595c">Redes Neuronales Artificiales (ANN)</h4>
+<div class="outline-text-4" id="text-org2a7595c">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: Simulan el comportamiento del cerebro humano.</li>
 <li><b><b>Uso</b></b>: Predicción de series temporales, clasificación de texto.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc13e507" class="outline-4">
-<h4 id="orgc13e507"><span class="section-number-4">1.3.2.</span> Redes Neuronales Convolucionales (CNN)</h4>
-<div class="outline-text-4" id="text-1-3-2">
+<div id="outline-container-org23cc3c4" class="outline-4">
+<h4 id="org23cc3c4">Redes Neuronales Convolucionales (CNN)</h4>
+<div class="outline-text-4" id="text-org23cc3c4">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: Usadas para el procesamiento de imágenes.</li>
 <li><b><b>Uso</b></b>: Reconocimiento facial, clasificación de imágenes.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org0241186" class="outline-4">
-<h4 id="org0241186"><span class="section-number-4">1.3.3.</span> Redes Neuronales Recurrentes (RNN)</h4>
-<div class="outline-text-4" id="text-1-3-3">
+<div id="outline-container-org92f4f88" class="outline-4">
+<h4 id="org92f4f88">Redes Neuronales Recurrentes (RNN)</h4>
+<div class="outline-text-4" id="text-org92f4f88">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: Utilizadas para series temporales y texto.</li>
 <li><b><b>Uso</b></b>: Predicción del lenguaje, traducción automática.</li>
@@ -584,13 +584,13 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-orga01033d" class="outline-3">
-<h3 id="orga01033d"><span class="section-number-3">1.4.</span> Herramientas y Frameworks</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-orga3271ff" class="outline-3">
+<h3 id="orga3271ff">Herramientas y Frameworks</h3>
+<div class="outline-text-3" id="text-orga3271ff">
 </div>
-<div id="outline-container-org2ff4862" class="outline-4">
-<h4 id="org2ff4862"><span class="section-number-4">1.4.1.</span> Frameworks Populares</h4>
-<div class="outline-text-4" id="text-1-4-1">
+<div id="outline-container-org3bb05e6" class="outline-4">
+<h4 id="org3bb05e6">Frameworks Populares</h4>
+<div class="outline-text-4" id="text-org3bb05e6">
 <ul class="org-ul">
 <li><b><b>TensorFlow</b></b>: Desarrollado por Google, ideal para modelos complejos.</li>
 <li><b><b>PyTorch</b></b>: Fácil de usar y flexible, popular entre investigadores.</li>
@@ -598,9 +598,9 @@ Answer from Perplexity: pplx.ai/share
 </ul>
 </div>
 </div>
-<div id="outline-container-org30ba312" class="outline-4">
-<h4 id="org30ba312"><span class="section-number-4">1.4.2.</span> Bibliotecas de Apoyo</h4>
-<div class="outline-text-4" id="text-1-4-2">
+<div id="outline-container-orga176cea" class="outline-4">
+<h4 id="orga176cea">Bibliotecas de Apoyo</h4>
+<div class="outline-text-4" id="text-orga176cea">
 <ul class="org-ul">
 <li><b><b>NumPy</b></b>: Para operaciones matemáticas.</li>
 <li><b><b>Pandas</b></b>: Para manipulación de datos.</li>
@@ -608,9 +608,9 @@ Answer from Perplexity: pplx.ai/share
 </ul>
 </div>
 </div>
-<div id="outline-container-org3f891d6" class="outline-4">
-<h4 id="org3f891d6"><span class="section-number-4">1.4.3.</span> Conceptos Adicionales</h4>
-<div class="outline-text-4" id="text-1-4-3">
+<div id="outline-container-orge46c734" class="outline-4">
+<h4 id="orge46c734">Conceptos Adicionales</h4>
+<div class="outline-text-4" id="text-orge46c734">
 <ul class="org-ul">
 <li><b><b>Componentes Básicos de la IA</b></b>: Aprendizaje, razonamiento, resolución de problemas, percepción y comprensión del lenguaje[1].</li>
 <li><b><b>Aplicaciones Prácticas</b></b>: Asistentes virtuales, medicina, finanzas, agricultura[2][5].</li>
@@ -649,33 +649,33 @@ Answer from Perplexity: pplx.ai/share
   <category><![CDATA[ai]]></category>
   <category><![CDATA[ia]]></category>
   <category><![CDATA[tutoriales]]></category>
-  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---iii.html</link>
-  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---iii.html</guid>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---iii.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---iii.html</guid>
   <pubDate>Sat, 22 Mar 2025 15:10:00 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - II]]></title>
   <description><![CDATA[
-<div id="outline-container-orge858050" class="outline-2">
-<h2 id="orge858050"><span class="section-number-2">1.</span> Capítulo 2: Componentes Clave de la Inteligencia Artificial</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org5db9370" class="outline-2">
+<h2 id="org5db9370">Capítulo 2: Componentes Clave de la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-org5db9370">
 </div>
-<div id="outline-container-orgd2ce7fb" class="outline-3">
-<h3 id="orgd2ce7fb"><span class="section-number-3">1.1.</span> Estructura Fundamental</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-orgc1463dc" class="outline-3">
+<h3 id="orgc1463dc">Estructura Fundamental</h3>
+<div class="outline-text-3" id="text-orgc1463dc">
 </div>
-<div id="outline-container-orga6d5e49" class="outline-4">
-<h4 id="orga6d5e49"><span class="section-number-4">1.1.1.</span> 2.1.1 Datos</h4>
-<div class="outline-text-4" id="text-1-1-1">
+<div id="outline-container-org2082d62" class="outline-4">
+<h4 id="org2082d62">2.1.1 Datos</h4>
+<div class="outline-text-4" id="text-org2082d62">
 <ul class="org-ul">
 <li><b><b>Tipos de Datos</b></b>: Estructurados (bases de datos) y no estructurados (imágenes, texto).</li>
 <li><b><b>Importancia</b></b>: Los datos son el combustible principal para entrenar modelos de IA.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb8bb1a6" class="outline-4">
-<h4 id="orgb8bb1a6"><span class="section-number-4">1.1.2.</span> Algoritmos</h4>
-<div class="outline-text-4" id="text-1-1-2">
+<div id="outline-container-orgc228a46" class="outline-4">
+<h4 id="orgc228a46">Algoritmos</h4>
+<div class="outline-text-4" id="text-orgc228a46">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: Ecuaciones matemáticas que procesan datos para tomar decisiones o realizar predicciones.</li>
 <li><b><b>Ejemplos</b></b>:
@@ -688,9 +688,9 @@ Answer from Perplexity: pplx.ai/share
 </ul>
 </div>
 </div>
-<div id="outline-container-org76dc73d" class="outline-4">
-<h4 id="org76dc73d"><span class="section-number-4">1.1.3.</span> Redes Neuronales</h4>
-<div class="outline-text-4" id="text-1-1-3">
+<div id="outline-container-org432b392" class="outline-4">
+<h4 id="org432b392">Redes Neuronales</h4>
+<div class="outline-text-4" id="text-org432b392">
 <ul class="org-ul">
 <li><p>
 <b><b>Arquitectura</b></b>: Inspiradas en el cerebro humano, consisten en capas de neuronas interconectadas.
@@ -730,13 +730,13 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-org1fb743d" class="outline-3">
-<h3 id="org1fb743d"><span class="section-number-3">1.2.</span> Proceso de Entrenamiento</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-org808b88e" class="outline-3">
+<h3 id="org808b88e">Proceso de Entrenamiento</h3>
+<div class="outline-text-3" id="text-org808b88e">
 </div>
-<div id="outline-container-orgb1c1a44" class="outline-4">
-<h4 id="orgb1c1a44"><span class="section-number-4">1.2.1.</span> División de Datos</h4>
-<div class="outline-text-4" id="text-1-2-1">
+<div id="outline-container-orgbd13e7f" class="outline-4">
+<h4 id="orgbd13e7f">División de Datos</h4>
+<div class="outline-text-4" id="text-orgbd13e7f">
 <ul class="org-ul">
 <li><b><b>Entrenamiento</b></b>: 70-80% de los datos para ajustar el modelo.</li>
 <li><b><b>Validación</b></b>: 15% para evaluar el rendimiento durante el entrenamiento.</li>
@@ -744,22 +744,22 @@ Answer from Perplexity: pplx.ai/share
 </ul>
 </div>
 </div>
-<div id="outline-container-org147cd2e" class="outline-4">
-<h4 id="org147cd2e"><span class="section-number-4">1.2.2.</span> Ajuste de Parámetros</h4>
-<div class="outline-text-4" id="text-1-2-2">
+<div id="outline-container-orge695bf5" class="outline-4">
+<h4 id="orge695bf5">Ajuste de Parámetros</h4>
+<div class="outline-text-4" id="text-orge695bf5">
 <ul class="org-ul">
 <li><b><b>Retropropagación</b></b>: Algoritmo para ajustar los pesos de las neuronas según el error de predicción.</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-org30615c1" class="outline-3">
-<h3 id="org30615c1"><span class="section-number-3">1.3.</span> Tipos de Modelos</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-org4cba6b6" class="outline-3">
+<h3 id="org4cba6b6">Tipos de Modelos</h3>
+<div class="outline-text-3" id="text-org4cba6b6">
 </div>
-<div id="outline-container-org2ed06b4" class="outline-4">
-<h4 id="org2ed06b4"><span class="section-number-4">1.3.1.</span> Modelos de Aprendizaje</h4>
-<div class="outline-text-4" id="text-1-3-1">
+<div id="outline-container-org979e8eb" class="outline-4">
+<h4 id="org979e8eb">Modelos de Aprendizaje</h4>
+<div class="outline-text-4" id="text-org979e8eb">
 <ul class="org-ul">
 <li><b><b>Aprendizaje Supervisado</b></b>: El sistema aprende a partir de datos etiquetados.</li>
 <li><b><b>Aprendizaje No Supervisado</b></b>: El sistema busca patrones en datos sin etiquetas.</li>
@@ -767,9 +767,9 @@ Answer from Perplexity: pplx.ai/share
 </ul>
 </div>
 </div>
-<div id="outline-container-org9a9a87e" class="outline-4">
-<h4 id="org9a9a87e"><span class="section-number-4">1.3.2.</span> Modelos de Redes Neuronales</h4>
-<div class="outline-text-4" id="text-1-3-2">
+<div id="outline-container-orga00250b" class="outline-4">
+<h4 id="orga00250b">Modelos de Redes Neuronales</h4>
+<div class="outline-text-4" id="text-orga00250b">
 <ul class="org-ul">
 <li><b><b>Redes Neuronales Artificiales (ANN)</b></b>: Simulan el comportamiento del cerebro humano.</li>
 <li><b><b>Redes Neuronales Convolucionales (CNN)</b></b>: Usadas para el procesamiento de imágenes.</li>
@@ -778,13 +778,13 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-org8f98afe" class="outline-3">
-<h3 id="org8f98afe"><span class="section-number-3">1.4.</span> Herramientas y Frameworks</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-org76b6cbb" class="outline-3">
+<h3 id="org76b6cbb">Herramientas y Frameworks</h3>
+<div class="outline-text-3" id="text-org76b6cbb">
 </div>
-<div id="outline-container-org04f9afa" class="outline-4">
-<h4 id="org04f9afa"><span class="section-number-4">1.4.1.</span> Frameworks Populares</h4>
-<div class="outline-text-4" id="text-1-4-1">
+<div id="outline-container-org571aa18" class="outline-4">
+<h4 id="org571aa18">Frameworks Populares</h4>
+<div class="outline-text-4" id="text-org571aa18">
 <ul class="org-ul">
 <li><b><b>TensorFlow</b></b>: Desarrollado por Google, ideal para modelos complejos.</li>
 <li><b><b>PyTorch</b></b>: Fácil de usar y flexible, popular entre investigadores.</li>
@@ -792,9 +792,9 @@ Answer from Perplexity: pplx.ai/share
 </ul>
 </div>
 </div>
-<div id="outline-container-orge713ac0" class="outline-4">
-<h4 id="orge713ac0"><span class="section-number-4">1.4.2.</span> Bibliotecas de Apoyo</h4>
-<div class="outline-text-4" id="text-1-4-2">
+<div id="outline-container-org88638a6" class="outline-4">
+<h4 id="org88638a6">Bibliotecas de Apoyo</h4>
+<div class="outline-text-4" id="text-org88638a6">
 <ul class="org-ul">
 <li><b><b>NumPy</b></b>: Para operaciones matemáticas.</li>
 <li><b><b>Pandas</b></b>: Para manipulación de datos.</li>
@@ -819,20 +819,20 @@ Answer from Perplexity: pplx.ai/share
   <category><![CDATA[ai]]></category>
   <category><![CDATA[ia]]></category>
   <category><![CDATA[tutoriales]]></category>
-  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---ii.html</link>
-  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---ii.html</guid>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---ii.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---ii.html</guid>
   <pubDate>Sat, 22 Mar 2025 15:07:00 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - I]]></title>
   <description><![CDATA[
-<div id="outline-container-org0a63e14" class="outline-2">
-<h2 id="org0a63e14"><span class="section-number-2">1.</span> Capítulo 1: Conceptos Básicos de IA</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orgeac83df" class="outline-2">
+<h2 id="orgeac83df">Capítulo 1: Conceptos Básicos de IA</h2>
+<div class="outline-text-2" id="text-orgeac83df">
 </div>
-<div id="outline-container-orgd8474d1" class="outline-3">
-<h3 id="orgd8474d1"><span class="section-number-3">1.1.</span> ¿Qué es la Inteligencia Artificial?</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org52b4937" class="outline-3">
+<h3 id="org52b4937">¿Qué es la Inteligencia Artificial?</h3>
+<div class="outline-text-3" id="text-org52b4937">
 <ul class="org-ul">
 <li>Tecnología que permite a máquinas simular capacidades cognitivas humanas.</li>
 <li>Sistemas capaces de:
@@ -845,9 +845,9 @@ Answer from Perplexity: pplx.ai/share
 </ul>
 </div>
 </div>
-<div id="outline-container-orga2fa87b" class="outline-3">
-<h3 id="orga2fa87b"><span class="section-number-3">1.2.</span> Origen e Historia</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-orgf6160c8" class="outline-3">
+<h3 id="orgf6160c8">Origen e Historia</h3>
+<div class="outline-text-3" id="text-orgf6160c8">
 <ul class="org-ul">
 <li><b><b>1943</b></b>: Primer modelo matemático de redes neuronales (McCullough &amp; Pitts)</li>
 <li><b><b>1950</b></b>:
@@ -864,13 +864,13 @@ Answer from Perplexity: pplx.ai/share
 </ul>
 </div>
 </div>
-<div id="outline-container-org456768e" class="outline-3">
-<h3 id="org456768e"><span class="section-number-3">1.3.</span> Conceptos Fundamentales</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-org94eac5c" class="outline-3">
+<h3 id="org94eac5c">Conceptos Fundamentales</h3>
+<div class="outline-text-3" id="text-org94eac5c">
 </div>
-<div id="outline-container-org4a0e18b" class="outline-4">
-<h4 id="org4a0e18b"><span class="section-number-4">1.3.1.</span> Tipos de Inteligencia Artificial</h4>
-<div class="outline-text-4" id="text-1-3-1">
+<div id="outline-container-orgea50f29" class="outline-4">
+<h4 id="orgea50f29">Tipos de Inteligencia Artificial</h4>
+<div class="outline-text-4" id="text-orgea50f29">
 <ul class="org-ul">
 <li><b><b>Inteligencia Artificial Estrecha (Narrow AI)</b></b>: Diseñada para realizar una tarea específica.</li>
 <li><b><b>Inteligencia Artificial General (AGI)</b></b>: Capaz de realizar cualquier tarea intelectual que un ser humano pueda hacer.</li>
@@ -878,9 +878,9 @@ Answer from Perplexity: pplx.ai/share
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbc846ad" class="outline-4">
-<h4 id="orgbc846ad"><span class="section-number-4">1.3.2.</span> Modelos de Aprendizaje</h4>
-<div class="outline-text-4" id="text-1-3-2">
+<div id="outline-container-org4e7127e" class="outline-4">
+<h4 id="org4e7127e">Modelos de Aprendizaje</h4>
+<div class="outline-text-4" id="text-org4e7127e">
 <ul class="org-ul">
 <li><b><b>Aprendizaje Supervisado</b></b>: El sistema aprende a partir de datos etiquetados.</li>
 <li><b><b>Aprendizaje No Supervisado</b></b>: El sistema busca patrones en datos sin etiquetas.</li>
@@ -889,9 +889,9 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-org5e20556" class="outline-3">
-<h3 id="org5e20556"><span class="section-number-3">1.4.</span> Desafíos y Consideraciones Éticas</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-org7a50dc6" class="outline-3">
+<h3 id="org7a50dc6">Desafíos y Consideraciones Éticas</h3>
+<div class="outline-text-3" id="text-org7a50dc6">
 <ul class="org-ul">
 <li>A medida que la IA se vuelve más omnipresente, surgen preocupaciones sobre su impacto en la sociedad, como la privacidad, el sesgo en los algoritmos, y el desplazamiento de empleos. Estos desafíos requieren un enfoque multidisciplinario para asegurar que la IA se desarrolle y se aplique de manera responsable.</li>
 </ul>
@@ -927,16 +927,16 @@ Answer from Perplexity: pplx.ai/share
   <category><![CDATA[ai]]></category>
   <category><![CDATA[ia]]></category>
   <category><![CDATA[tutoriales]]></category>
-  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---i.html</link>
-  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---i.html</guid>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---i.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---i.html</guid>
   <pubDate>Sat, 22 Mar 2025 15:05:00 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - Introducción]]></title>
   <description><![CDATA[
-<div id="outline-container-org50ab017" class="outline-2">
-<h2 id="org50ab017"><span class="section-number-2">1.</span> Introducción a la Inteligencia Artificial</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org9fe18b9" class="outline-2">
+<h2 id="org9fe18b9">Introducción a la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-org9fe18b9">
 <p>
 La Inteligencia Artificial (IA) ha dejado de ser un concepto futurista para convertirse en una realidad omnipresente que impacta prácticamente todos los aspectos de nuestra vida cotidiana. Desde los asistentes virtuales que responden nuestras preguntas más simples hasta sistemas avanzados que diagnostican enfermedades con precisión médica, la IA está transformando industrias, redefiniendo límites tecnológicos y desafiando nuestra comprensión sobre qué significa "pensar".  
 </p>
@@ -972,19 +972,19 @@ Answer from Perplexity: pplx.ai/share
   <category><![CDATA[ia]]></category>
   <category><![CDATA[ai]]></category>
   <category><![CDATA[tutoriales]]></category>
-  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---introducci%C3%B3n.html</link>
-  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22--inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---introducci%C3%B3n.html</guid>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---introducci%C3%B3n.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-inteligencia-artificial:-gu%C3%ADa-desde-conceptos-hasta-aplicaciones---introducci%C3%B3n.html</guid>
   <pubDate>Sat, 22 Mar 2025 15:03:00 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Generadores de IA por Relevancia y Países (2025)  Perplexity]]></title>
   <description><![CDATA[
-<div id="outline-container-org827e698" class="outline-2">
-<h2 id="org827e698"><span class="section-number-2">1.</span> Clasificación Global de Generadores de IA</h2>
+<div id="outline-container-org786747b" class="outline-2">
+<h2 id="org786747b"><span class="section-number-2">1.</span> Clasificación Global de Generadores de IA</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orga65d022" class="outline-3">
-<h3 id="orga65d022"><span class="section-number-3">1.1.</span> Top 10 Países Líderes en Desarrollo de IA (2025)</h3>
+<div id="outline-container-orgab06686" class="outline-3">
+<h3 id="orgab06686"><span class="section-number-3">1.1.</span> Top 10 Países Líderes en Desarrollo de IA (2025)</h3>
 <div class="outline-text-3" id="text-1-1">
 <table>
 
@@ -1081,12 +1081,12 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-org9db3b34" class="outline-2">
-<h2 id="org9db3b34"><span class="section-number-2">2.</span> Generadores por Categoría</h2>
+<div id="outline-container-org8f97bc9" class="outline-2">
+<h2 id="org8f97bc9"><span class="section-number-2">2.</span> Generadores por Categoría</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org2d8873e" class="outline-3">
-<h3 id="org2d8873e"><span class="section-number-3">2.1.</span> Texto</h3>
+<div id="outline-container-org29f1a8c" class="outline-3">
+<h3 id="org29f1a8c"><span class="section-number-3">2.1.</span> Texto</h3>
 <div class="outline-text-3" id="text-2-1">
 <table>
 
@@ -1133,8 +1133,8 @@ Answer from Perplexity: pplx.ai/share
 </table>
 </div>
 </div>
-<div id="outline-container-org5cca4da" class="outline-3">
-<h3 id="org5cca4da"><span class="section-number-3">2.2.</span> Imágenes/Vídeo</h3>
+<div id="outline-container-orgddb442f" class="outline-3">
+<h3 id="orgddb442f"><span class="section-number-3">2.2.</span> Imágenes/Vídeo</h3>
 <div class="outline-text-3" id="text-2-2">
 <table>
 
@@ -1175,8 +1175,8 @@ Answer from Perplexity: pplx.ai/share
 </table>
 </div>
 </div>
-<div id="outline-container-orge55ef11" class="outline-3">
-<h3 id="orge55ef11"><span class="section-number-3">2.3.</span> Código</h3>
+<div id="outline-container-org3bdfca4" class="outline-3">
+<h3 id="org3bdfca4"><span class="section-number-3">2.3.</span> Código</h3>
 <div class="outline-text-3" id="text-2-3">
 <table>
 
@@ -1218,12 +1218,12 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-orgbb898e9" class="outline-2">
-<h2 id="orgbb898e9"><span class="section-number-2">3.</span> Tendencias Regionales</h2>
+<div id="outline-container-orgbaea56b" class="outline-2">
+<h2 id="orgbaea56b"><span class="section-number-2">3.</span> Tendencias Regionales</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org5c1be80" class="outline-3">
-<h3 id="org5c1be80"><span class="section-number-3">3.1.</span> América del Norte</h3>
+<div id="outline-container-orgf4b92bd" class="outline-3">
+<h3 id="orgf4b92bd"><span class="section-number-3">3.1.</span> América del Norte</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li>Dominio de modelos lingüísticos (EE.UU: 78% inversión global en LLMs)</li>
@@ -1231,8 +1231,8 @@ Answer from Perplexity: pplx.ai/share
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf3a2ec7" class="outline-3">
-<h3 id="orgf3a2ec7"><span class="section-number-3">3.2.</span> Asia-Pacífico</h3>
+<div id="outline-container-orga7bb75a" class="outline-3">
+<h3 id="orga7bb75a"><span class="section-number-3">3.2.</span> Asia-Pacífico</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li>China: 412K patentes IA registradas (2023)</li>
@@ -1241,8 +1241,8 @@ Answer from Perplexity: pplx.ai/share
 </ul>
 </div>
 </div>
-<div id="outline-container-org0b51d04" class="outline-3">
-<h3 id="org0b51d04"><span class="section-number-3">3.3.</span> Europa</h3>
+<div id="outline-container-org7b73bf9" class="outline-3">
+<h3 id="org7b73bf9"><span class="section-number-3">3.3.</span> Europa</h3>
 <div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
 <li>Reino Unido: 54% empresas usando IA ética</li>
@@ -1251,8 +1251,8 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-org184642f" class="outline-2">
-<h2 id="org184642f"><span class="section-number-2">4.</span> Factores Clave de Relevancia</h2>
+<div id="outline-container-org00fd366" class="outline-2">
+<h2 id="org00fd366"><span class="section-number-2">4.</span> Factores Clave de Relevancia</h2>
 <div class="outline-text-2" id="text-4">
 <table>
 
@@ -1305,8 +1305,8 @@ Answer from Perplexity: pplx.ai/share
 </table>
 </div>
 </div>
-<div id="outline-container-org114af6b" class="outline-2">
-<h2 id="org114af6b"><span class="section-number-2">5.</span> Proyecciones 2025-2030</h2>
+<div id="outline-container-orgb4d5c90" class="outline-2">
+<h2 id="orgb4d5c90"><span class="section-number-2">5.</span> Proyecciones 2025-2030</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li>Mercado global IA generativa: $207B (CAGR 32%)</li>
@@ -1315,8 +1315,8 @@ Answer from Perplexity: pplx.ai/share
 </ul>
 </div>
 </div>
-<div id="outline-container-org7a8f6b0" class="outline-2">
-<h2 id="org7a8f6b0"><span class="section-number-2">6.</span> Referencias [1][2][3][4][5][6][7]</h2>
+<div id="outline-container-orge9f5815" class="outline-2">
+<h2 id="orge9f5815"><span class="section-number-2">6.</span> Referencias [1][2][3][4][5][6][7]</h2>
 <div class="outline-text-2" id="text-6">
 <ol class="org-ol">
 <li>Stanford HAI (2023). Global AI Index 2024.</li>
@@ -1341,17 +1341,17 @@ Answer from Perplexity: pplx.ai/share
 <item>
   <title><![CDATA[Cómo Generar un Prompt en IA: Guía Detallada, Ventajas e Inconvenientes]]></title>
   <description><![CDATA[
-<div id="outline-container-orgc44c00d" class="outline-2">
-<h2 id="orgc44c00d"><span class="section-number-2">1.</span> Introducción</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org460a920" class="outline-2">
+<h2 id="org460a920">Introducción</h2>
+<div class="outline-text-2" id="text-org460a920">
 <p>
 La inteligencia artificial (IA) ha revolucionado la forma en que interactuamos con la tecnología. Desde chatbots hasta herramientas de generación de contenido, la IA se ha convertido en una aliada indispensable para profesionales, creativos y entusiastas de la tecnología. Sin embargo, para aprovechar al máximo estas herramientas, es fundamental entender cómo <b><b>generar un prompt efectivo</b></b>. En este artículo, exploraremos en detalle qué es un prompt, cómo crearlo, sus ventajas, inconvenientes y ejemplos prácticos para que puedas dominar esta habilidad.
 </p>
 </div>
 </div>
-<div id="outline-container-org0776566" class="outline-2">
-<h2 id="org0776566"><span class="section-number-2">2.</span> ¿Qué es un Prompt en IA?</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org7309f8c" class="outline-2">
+<h2 id="org7309f8c">¿Qué es un Prompt en IA?</h2>
+<div class="outline-text-2" id="text-org7309f8c">
 <p>
 Un <b><b>prompt</b></b> es una instrucción, pregunta o conjunto de indicaciones que se le proporciona a un modelo de inteligencia artificial para que genere una respuesta o realice una tarea específica. Es la forma en que nos comunicamos con la IA y le decimos qué queremos que haga.
 </p>
@@ -1361,52 +1361,52 @@ Por ejemplo, si le pides a ChatGPT que "escriba un poema sobre el océano", esa 
 </p>
 </div>
 </div>
-<div id="outline-container-orgab3f9dc" class="outline-2">
-<h2 id="orgab3f9dc"><span class="section-number-2">3.</span> ¿Cómo Generar un Prompt Efectivo?</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org649d576" class="outline-2">
+<h2 id="org649d576">¿Cómo Generar un Prompt Efectivo?</h2>
+<div class="outline-text-2" id="text-org649d576">
 <p>
 Crear un prompt efectivo requiere claridad, precisión y contexto. A continuación, te explicamos los pasos clave para generar un prompt que obtenga los mejores resultados:
 </p>
 </div>
-<div id="outline-container-orgf0a1c54" class="outline-3">
-<h3 id="orgf0a1c54"><span class="section-number-3">3.1.</span> 1. Define el Objetivo</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-org145340e" class="outline-3">
+<h3 id="org145340e">1. Define el Objetivo</h3>
+<div class="outline-text-3" id="text-org145340e">
 <ul class="org-ul">
 <li>Antes de escribir el prompt, pregúntate: ¿Qué quiero lograr con la IA? ¿Necesito información, un texto creativo, un análisis de datos o una solución a un problema?</li>
 <li>Ejemplo: Si quieres que la IA te ayude a redactar un correo electrónico, tu objetivo es claro: generar un mensaje profesional y efectivo.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc95ccb3" class="outline-3">
-<h3 id="orgc95ccb3"><span class="section-number-3">3.2.</span> 2. Sé Específico</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-org8cb367c" class="outline-3">
+<h3 id="org8cb367c">2. Sé Específico</h3>
+<div class="outline-text-3" id="text-org8cb367c">
 <ul class="org-ul">
 <li>Cuanto más específico seas, mejor será la respuesta. Incluye detalles como el tono, el estilo, la longitud o el formato que deseas.</li>
 <li>Ejemplo: En lugar de decir "escribe un correo", podrías decir: "Escribe un correo electrónico formal de 150 palabras para solicitar una reunión con un cliente potencial".</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org58d3398" class="outline-3">
-<h3 id="org58d3398"><span class="section-number-3">3.3.</span> 3. Proporciona Contexto</h3>
-<div class="outline-text-3" id="text-3-3">
+<div id="outline-container-org2b15cc0" class="outline-3">
+<h3 id="org2b15cc0">3. Proporciona Contexto</h3>
+<div class="outline-text-3" id="text-org2b15cc0">
 <ul class="org-ul">
 <li>La IA funciona mejor cuando tiene suficiente información. Si el prompt requiere conocimientos específicos, inclúyelos.</li>
 <li>Ejemplo: Si pides un análisis de mercado, proporciona datos como el sector, la ubicación geográfica y el público objetivo.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org920ddfb" class="outline-3">
-<h3 id="org920ddfb"><span class="section-number-3">3.4.</span> 4. Usa un Lenguaje Claro y Directo</h3>
-<div class="outline-text-3" id="text-3-4">
+<div id="outline-container-org9d116ed" class="outline-3">
+<h3 id="org9d116ed">4. Usa un Lenguaje Claro y Directo</h3>
+<div class="outline-text-3" id="text-org9d116ed">
 <ul class="org-ul">
 <li>Evita ambigüedades. Usa un lenguaje sencillo y evita frases confusas.</li>
 <li>Ejemplo: En lugar de "haz algo sobre marketing", di: "Genera una estrategia de marketing digital para una tienda de ropa sostenible".</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org5dda202" class="outline-3">
-<h3 id="org5dda202"><span class="section-number-3">3.5.</span> 5. Itera y Ajusta</h3>
-<div class="outline-text-3" id="text-3-5">
+<div id="outline-container-org4a9679e" class="outline-3">
+<h3 id="org4a9679e">5. Itera y Ajusta</h3>
+<div class="outline-text-3" id="text-org4a9679e">
 <ul class="org-ul">
 <li>Si la respuesta no es lo que esperabas, ajusta el prompt. Prueba diferentes enfoques hasta obtener el resultado deseado.</li>
 <li>Ejemplo: Si la IA genera un texto demasiado formal, puedes pedirle: "Reescribe el texto con un tono más casual y amigable".</li>
@@ -1414,9 +1414,9 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </div>
 </div>
 </div>
-<div id="outline-container-org5d26e1b" class="outline-2">
-<h2 id="org5d26e1b"><span class="section-number-2">4.</span> Ventajas de Usar Prompts en IA</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org93fc974" class="outline-2">
+<h2 id="org93fc974">Ventajas de Usar Prompts en IA</h2>
+<div class="outline-text-2" id="text-org93fc974">
 <ol class="org-ol">
 <li><b><b>Ahorro de Tiempo</b></b>: Los prompts permiten automatizar tareas repetitivas, como redactar textos, generar ideas o analizar datos.</li>
 <li><b><b>Creatividad ilimitada</b></b>: La IA puede generar ideas y soluciones innovadoras que quizás no habías considerado.</li>
@@ -1426,9 +1426,9 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </ol>
 </div>
 </div>
-<div id="outline-container-orgaa52ac1" class="outline-2">
-<h2 id="orgaa52ac1"><span class="section-number-2">5.</span> Inconvenientes y Desafíos</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-org9f8f864" class="outline-2">
+<h2 id="org9f8f864">Inconvenientes y Desafíos</h2>
+<div class="outline-text-2" id="text-org9f8f864">
 <ol class="org-ol">
 <li><b><b>Dependencia de la Calidad del Prompt</b></b>: Si el prompt no está bien formulado, la respuesta puede ser irrelevante o de baja calidad.</li>
 <li><b><b>Sesgos en la IA</b></b>: Los modelos de IA pueden reflejar sesgos presentes en los datos con los que fueron entrenados.</li>
@@ -1438,34 +1438,34 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </ol>
 </div>
 </div>
-<div id="outline-container-orge395047" class="outline-2">
-<h2 id="orge395047"><span class="section-number-2">6.</span> Ejemplos Prácticos de Prompts</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-orge6abfaa" class="outline-2">
+<h2 id="orge6abfaa">Ejemplos Prácticos de Prompts</h2>
+<div class="outline-text-2" id="text-orge6abfaa">
 <p>
 A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas generadas por IA:
 </p>
 </div>
-<div id="outline-container-orgc43109c" class="outline-3">
-<h3 id="orgc43109c"><span class="section-number-3">6.1.</span> Ejemplo 1: Generación de Contenido</h3>
-<div class="outline-text-3" id="text-6-1">
+<div id="outline-container-org88fd78f" class="outline-3">
+<h3 id="org88fd78f">Ejemplo 1: Generación de Contenido</h3>
+<div class="outline-text-3" id="text-org88fd78f">
 <ul class="org-ul">
 <li><b><b>Prompt</b></b>: "Escribe un blog de 500 palabras sobre los beneficios del ejercicio físico para la salud mental, con un tono motivacional y dirigido a jóvenes adultos."</li>
 <li><b><b>Respuesta de la IA</b></b>: La IA generará un texto estructurado, con introducción, desarrollo y conclusión, destacando cómo el ejercicio reduce el estrés y mejora el estado de ánimo.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org88c76f8" class="outline-3">
-<h3 id="org88c76f8"><span class="section-number-3">6.2.</span> Ejemplo 2: Análisis de Datos</h3>
-<div class="outline-text-3" id="text-6-2">
+<div id="outline-container-org7a94925" class="outline-3">
+<h3 id="org7a94925">Ejemplo 2: Análisis de Datos</h3>
+<div class="outline-text-3" id="text-org7a94925">
 <ul class="org-ul">
 <li><b><b>Prompt</b></b>: "Analiza los siguientes datos de ventas mensuales y sugiere estrategias para aumentar las ventas en el próximo trimestre: [datos]."</li>
 <li><b><b>Respuesta de la IA</b></b>: La IA identificará patrones, como meses con bajas ventas, y propondrá acciones como promociones o campañas publicitarias.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org9897e58" class="outline-3">
-<h3 id="org9897e58"><span class="section-number-3">6.3.</span> Ejemplo 3: Creatividad</h3>
-<div class="outline-text-3" id="text-6-3">
+<div id="outline-container-org7090bfe" class="outline-3">
+<h3 id="org7090bfe">Ejemplo 3: Creatividad</h3>
+<div class="outline-text-3" id="text-org7090bfe">
 <ul class="org-ul">
 <li><b><b>Prompt</b></b>: "Inventa una historia corta de ciencia ficción sobre un viajero del tiempo que intenta salvar el futuro."</li>
 <li><b><b>Respuesta de la IA</b></b>: La IA creará una narrativa con personajes, conflicto y resolución, ambientada en un futuro distópico.</li>
@@ -1473,9 +1473,9 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </div>
 </div>
 </div>
-<div id="outline-container-orgc8ac6d4" class="outline-2">
-<h2 id="orgc8ac6d4"><span class="section-number-2">7.</span> Consejos Avanzados para Mejorar tus Prompts</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-org4834b2b" class="outline-2">
+<h2 id="org4834b2b">Consejos Avanzados para Mejorar tus Prompts</h2>
+<div class="outline-text-2" id="text-org4834b2b">
 <ol class="org-ol">
 <li><b><b>Usa Ejemplos</b></b>: Proporciona ejemplos de lo que buscas. Por ejemplo: "Escribe un poema como este: [ejemplo]."</li>
 <li><b><b>Divide Tareas Complejas</b></b>: Si el prompt es muy amplio, divídelo en partes. Por ejemplo: "Primero, describe el problema. Luego, sugiere soluciones."</li>
@@ -1484,9 +1484,9 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </ol>
 </div>
 </div>
-<div id="outline-container-org719d7a6" class="outline-2">
-<h2 id="org719d7a6"><span class="section-number-2">8.</span> Herramientas Populares para Generar Prompts</h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-orgcdcaf49" class="outline-2">
+<h2 id="orgcdcaf49">Herramientas Populares para Generar Prompts</h2>
+<div class="outline-text-2" id="text-orgcdcaf49">
 <ol class="org-ol">
 <li><b><b>ChatGPT</b></b>: Ideal para textos, ideas y conversaciones.</li>
 <li><b><b>MidJourney</b></b>: Perfecto para generar imágenes a partir de prompts visuales.</li>
@@ -1495,9 +1495,9 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </ol>
 </div>
 </div>
-<div id="outline-container-org85fe441" class="outline-2">
-<h2 id="org85fe441"><span class="section-number-2">9.</span> Conclusión</h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-org2de89de" class="outline-2">
+<h2 id="org2de89de">Conclusión</h2>
+<div class="outline-text-2" id="text-org2de89de">
 <p>
 Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo las herramientas de IA. Con un enfoque claro, específico y contextualizado, puedes obtener respuestas de alta calidad que te ayuden a ahorrar tiempo, potenciar tu creatividad y resolver problemas complejos. Sin embargo, es importante recordar que la IA es una herramienta, no un reemplazo para el pensamiento crítico y la creatividad humana.
 </p>
@@ -1507,14 +1507,14 @@ Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo 
 </p>
 </div>
 </div>
-<div id="outline-container-orgee5b793" class="outline-2">
-<h2 id="orgee5b793"><span class="section-number-2">10.</span> Gráficos Sugeridos</h2>
-<div class="outline-text-2" id="text-10">
+<div id="outline-container-org29bbabc" class="outline-2">
+<h2 id="org29bbabc">Gráficos Sugeridos</h2>
+<div class="outline-text-2" id="text-org29bbabc">
 <ol class="org-ol">
 <li>Diagrama de flujo: "Pasos para crear un prompt efectivo".</li>
 </ol>
 
-<figure id="orge50f956">
+<figure id="org7f435fb">
 <img src="images/diagrama_flujo_prompt.png" alt="diagrama_flujo_prompt.png">
 
 </figure>
@@ -1525,7 +1525,7 @@ Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo 
 </ol>
 
 
-<figure id="orgcd2e64a">
+<figure id="orgb9dfade">
 <img src="images/comparacion_prompt_ditaa.png" alt="comparacion_prompt_ditaa.png">
 
 </figure>
@@ -1865,20 +1865,20 @@ En este ranking, hemos destacado las herramientas más valoradas por su funciona
 <item>
   <title><![CDATA[Análisis IA Generativa por DeepSeek]]></title>
   <description><![CDATA[
-<div id="outline-container-orge077d5f" class="outline-2">
-<h2 id="orge077d5f"><span class="section-number-2">1.</span> INTRODUCCIÓN</h2>
+<div id="outline-container-org0a7ce6f" class="outline-2">
+<h2 id="org0a7ce6f"><span class="section-number-2">1.</span> INTRODUCCIÓN</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgc77378c" class="outline-3">
-<h3 id="orgc77378c"><span class="section-number-3">1.1.</span> Objetivo</h3>
+<div id="outline-container-orgad8ccf1" class="outline-3">
+<h3 id="orgad8ccf1"><span class="section-number-3">1.1.</span> Objetivo</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gemini Ultra (Google) y Grok-3 (xAI), evaluando sus capacidades técnicas, rendimiento práctico y viabilidad comercial.  
 </p>
 </div>
 </div>
-<div id="outline-container-org86a3c48" class="outline-3">
-<h3 id="org86a3c48"><span class="section-number-3">1.2.</span> Metodología</h3>
+<div id="outline-container-orgbe628c9" class="outline-3">
+<h3 id="orgbe628c9"><span class="section-number-3">1.2.</span> Metodología</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
 <li>Revisión de papers técnicos (2023-2024).</li>
@@ -1889,12 +1889,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-orgab267be" class="outline-2">
-<h2 id="orgab267be"><span class="section-number-2">2.</span> ESPECIFICACIONES TÉCNICAS</h2>
+<div id="outline-container-orge58305b" class="outline-2">
+<h2 id="orge58305b"><span class="section-number-2">2.</span> ESPECIFICACIONES TÉCNICAS</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org71f1d6b" class="outline-3">
-<h3 id="org71f1d6b"><span class="section-number-3">2.1.</span> Parámetros Clave por Modelo</h3>
+<div id="outline-container-org49fab54" class="outline-3">
+<h3 id="org49fab54"><span class="section-number-3">2.1.</span> Parámetros Clave por Modelo</h3>
 <div class="outline-text-3" id="text-2-1">
 <table>
 
@@ -1971,8 +1971,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org378b98a" class="outline-2">
-<h2 id="org378b98a"><span class="section-number-2">3.</span> COMPARATIVA DETALLADA (1-10)</h2>
+<div id="outline-container-orgd50e746" class="outline-2">
+<h2 id="orgd50e746"><span class="section-number-2">3.</span> COMPARATIVA DETALLADA (1-10)</h2>
 <div class="outline-text-2" id="text-3">
 <table>
 
@@ -2129,16 +2129,16 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </table>
 </div>
 </div>
-<div id="outline-container-org7f71dda" class="outline-2">
-<h2 id="org7f71dda"><span class="section-number-2">4.</span> ANÁLISIS POR MODELO</h2>
+<div id="outline-container-org05e73b0" class="outline-2">
+<h2 id="org05e73b0"><span class="section-number-2">4.</span> ANÁLISIS POR MODELO</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org91fabeb" class="outline-3">
-<h3 id="org91fabeb"><span class="section-number-3">4.1.</span> GPT-4 (OpenAI)</h3>
+<div id="outline-container-org64fda7d" class="outline-3">
+<h3 id="org64fda7d"><span class="section-number-3">4.1.</span> GPT-4 (OpenAI)</h3>
 <div class="outline-text-3" id="text-4-1">
 </div>
-<div id="outline-container-org6c34439" class="outline-4">
-<h4 id="org6c34439"><span class="section-number-4">4.1.1.</span> Ventajas</h4>
+<div id="outline-container-org1507104" class="outline-4">
+<h4 id="org1507104"><span class="section-number-4">4.1.1.</span> Ventajas</h4>
 <div class="outline-text-4" id="text-4-1-1">
 <ul class="org-ul">
 <li>Soporta plugins para matemáticas (Wolfram), búsquedas (Bing) y código (Code Interpreter).</li>
@@ -2147,8 +2147,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-org061151c" class="outline-4">
-<h4 id="org061151c"><span class="section-number-4">4.1.2.</span> Desventajas</h4>
+<div id="outline-container-org02167f1" class="outline-4">
+<h4 id="org02167f1"><span class="section-number-4">4.1.2.</span> Desventajas</h4>
 <div class="outline-text-4" id="text-4-1-2">
 <ul class="org-ul">
 <li>Coste elevado para alto volumen (~$6 por millón tokens en entrada).</li>
@@ -2157,12 +2157,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org222cc2d" class="outline-3">
-<h3 id="org222cc2d"><span class="section-number-3">4.2.</span> DeepSeek-MoE</h3>
+<div id="outline-container-org922fb12" class="outline-3">
+<h3 id="org922fb12"><span class="section-number-3">4.2.</span> DeepSeek-MoE</h3>
 <div class="outline-text-3" id="text-4-2">
 </div>
-<div id="outline-container-orgddefb9c" class="outline-4">
-<h4 id="orgddefb9c"><span class="section-number-4">4.2.1.</span> Casos de Uso Ideales</h4>
+<div id="outline-container-org5d70a48" class="outline-4">
+<h4 id="org5d70a48"><span class="section-number-4">4.2.1.</span> Casos de Uso Ideales</h4>
 <div class="outline-text-4" id="text-4-2-1">
 <ul class="org-ul">
 <li>Generación de código Python/JavaScript con bajo consumo de recursos.</li>
@@ -2170,8 +2170,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-org3f11f11" class="outline-4">
-<h4 id="org3f11f11"><span class="section-number-4">4.2.2.</span> Limitaciones</h4>
+<div id="outline-container-orgf13caef" class="outline-4">
+<h4 id="orgf13caef"><span class="section-number-4">4.2.2.</span> Limitaciones</h4>
 <div class="outline-text-4" id="text-4-2-2">
 <ul class="org-ul">
 <li>Rendimiento pobre en español (precisión ~68% vs 92% en inglés).</li>
@@ -2180,12 +2180,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org53d7568" class="outline-3">
-<h3 id="org53d7568"><span class="section-number-3">4.3.</span> Gemini Ultra</h3>
+<div id="outline-container-orgb425881" class="outline-3">
+<h3 id="orgb425881"><span class="section-number-3">4.3.</span> Gemini Ultra</h3>
 <div class="outline-text-3" id="text-4-3">
 </div>
-<div id="outline-container-orgfafdfb0" class="outline-4">
-<h4 id="orgfafdfb0"><span class="section-number-4">4.3.1.</span> Fortalezas Multimodales</h4>
+<div id="outline-container-org23d512c" class="outline-4">
+<h4 id="org23d512c"><span class="section-number-4">4.3.1.</span> Fortalezas Multimodales</h4>
 <div class="outline-text-4" id="text-4-3-1">
 <ul class="org-ul">
 <li>Análisis de vídeo (extracción de frames + transcripción).</li>
@@ -2194,8 +2194,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-org47d03a8" class="outline-4">
-<h4 id="org47d03a8"><span class="section-number-4">4.3.2.</span> Debilidades</h4>
+<div id="outline-container-org4701e44" class="outline-4">
+<h4 id="org4701e44"><span class="section-number-4">4.3.2.</span> Debilidades</h4>
 <div class="outline-text-4" id="text-4-3-2">
 <ul class="org-ul">
 <li>Inconsistencias en razonamiento lógico (ej: silogismos).</li>
@@ -2204,12 +2204,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-orgaf93b02" class="outline-3">
-<h3 id="orgaf93b02"><span class="section-number-3">4.4.</span> Grok-3</h3>
+<div id="outline-container-orgcd40830" class="outline-3">
+<h3 id="orgcd40830"><span class="section-number-3">4.4.</span> Grok-3</h3>
 <div class="outline-text-3" id="text-4-4">
 </div>
-<div id="outline-container-org4b9e3a7" class="outline-4">
-<h4 id="org4b9e3a7"><span class="section-number-4">4.4.1.</span> Diferenciadores</h4>
+<div id="outline-container-org34358cb" class="outline-4">
+<h4 id="org34358cb"><span class="section-number-4">4.4.1.</span> Diferenciadores</h4>
 <div class="outline-text-4" id="text-4-4-1">
 <ul class="org-ul">
 <li>Entrenado con datos de 𝕏 (Twitter) hasta Q1 2024.</li>
@@ -2217,8 +2217,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-org49f39f0" class="outline-4">
-<h4 id="org49f39f0"><span class="section-number-4">4.4.2.</span> Riesgos</h4>
+<div id="outline-container-orga80be71" class="outline-4">
+<h4 id="orga80be71"><span class="section-number-4">4.4.2.</span> Riesgos</h4>
 <div class="outline-text-4" id="text-4-4-2">
 <ul class="org-ul">
 <li>Alucinaciones frecuentes en temas técnicos (ej: código).</li>
@@ -2228,12 +2228,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-orga2a48ed" class="outline-2">
-<h2 id="orga2a48ed"><span class="section-number-2">5.</span> TAREAS PENDIENTES</h2>
+<div id="outline-container-org686bf60" class="outline-2">
+<h2 id="org686bf60"><span class="section-number-2">5.</span> TAREAS PENDIENTES</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org4931fc3" class="outline-3">
-<h3 id="org4931fc3"><span class="section-number-3">5.1.</span> Prioridad Alta</h3>
+<div id="outline-container-orgfaacb1c" class="outline-3">
+<h3 id="orgfaacb1c"><span class="section-number-3">5.1.</span> Prioridad Alta</h3>
 <div class="outline-text-3" id="text-5-1">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> Probar Gemini Ultra en análisis de vídeos educativos (deadline: 2024-05-25).</li>
@@ -2242,8 +2242,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd048a05" class="outline-3">
-<h3 id="orgd048a05"><span class="section-number-3">5.2.</span> Prioridad Media</h3>
+<div id="outline-container-org1da6a17" class="outline-3">
+<h3 id="org1da6a17"><span class="section-number-3">5.2.</span> Prioridad Media</h3>
 <div class="outline-text-3" id="text-5-2">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> Crear script Emacs para automatizar tablas comparativas (elisp).</li>
@@ -2252,8 +2252,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org2e77b6f" class="outline-2">
-<h2 id="org2e77b6f"><span class="section-number-2">6.</span> CONCLUSIONES</h2>
+<div id="outline-container-org89f1015" class="outline-2">
+<h2 id="org89f1015"><span class="section-number-2">6.</span> CONCLUSIONES</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li><b><b>Mejor generalista</b></b>: GPT-4 (9.1/10) para equilibrio entre calidad y herramientas.</li>
@@ -2274,23 +2274,23 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 <item>
   <title><![CDATA[Recursos para Introducirse en Inteligencia Artificial]]></title>
   <description><![CDATA[
-<div id="outline-container-orgb773d89" class="outline-2">
-<h2 id="orgb773d89"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org04c546e" class="outline-2">
+<h2 id="org04c546e"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 La Inteligencia Artificial (IA) abarca desde conceptos básicos hasta técnicas avanzadas de aprendizaje profundo y razonamiento. Este listado ofrece recursos seleccionados para principiantes (sin conocimientos previos), nivel intermedio (con fundamentos básicos) y avanzado (expertos o investigadores). Cada recomendación incluye una justificación basada en accesibilidad, claridad y profundidad técnica.
 </p>
 </div>
 </div>
-<div id="outline-container-org95b21a7" class="outline-2">
-<h2 id="org95b21a7"><span class="section-number-2">2.</span> Nivel Principiante</h2>
+<div id="outline-container-org7f1f4f6" class="outline-2">
+<h2 id="org7f1f4f6"><span class="section-number-2">2.</span> Nivel Principiante</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Recursos introductorios sin necesidad de conocimientos previos en matemáticas o programación.
 </p>
 </div>
-<div id="outline-container-orgc80e3cc" class="outline-3">
-<h3 id="orgc80e3cc"><span class="section-number-3">2.1.</span> 1. "Inteligencia Artificial: Una Guía para Gente Pensante" - Melanie Mitchell</h3>
+<div id="outline-container-org614b8f8" class="outline-3">
+<h3 id="org614b8f8"><span class="section-number-3">2.1.</span> 1. "Inteligencia Artificial: Una Guía para Gente Pensante" - Melanie Mitchell</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Introducción narrativa a los conceptos básicos de IA, desde perceptrones hasta redes neuronales, sin ecuaciones complejas.</li>
@@ -2300,8 +2300,8 @@ Recursos introductorios sin necesidad de conocimientos previos en matemáticas o
 </ul>
 </div>
 </div>
-<div id="outline-container-org065ec23" class="outline-3">
-<h3 id="org065ec23"><span class="section-number-3">2.2.</span> 2. "Artificial Intelligence: A Modern Approach" (Capítulos 1-3) - Stuart Russell y Peter Norvig</h3>
+<div id="outline-container-org8863009" class="outline-3">
+<h3 id="org8863009"><span class="section-number-3">2.2.</span> 2. "Artificial Intelligence: A Modern Approach" (Capítulos 1-3) - Stuart Russell y Peter Norvig</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Libro de texto clásico, pero los primeros capítulos son una introducción amigable a los fundamentos de IA (agentes inteligentes, búsqueda).</li>
@@ -2311,8 +2311,8 @@ Recursos introductorios sin necesidad de conocimientos previos en matemáticas o
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd22ea93" class="outline-3">
-<h3 id="orgd22ea93"><span class="section-number-3">2.3.</span> 3. "Machine Learning Yearning" - Andrew Ng</h3>
+<div id="outline-container-org7c16a37" class="outline-3">
+<h3 id="org7c16a37"><span class="section-number-3">2.3.</span> 3. "Machine Learning Yearning" - Andrew Ng</h3>
 <div class="outline-text-3" id="text-2-3">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Guía corta y práctica sobre cómo abordar proyectos de aprendizaje automático (ML), enfocada en estrategia más que en teoría.</li>
@@ -2323,15 +2323,15 @@ Recursos introductorios sin necesidad de conocimientos previos en matemáticas o
 </div>
 </div>
 </div>
-<div id="outline-container-org118d8b4" class="outline-2">
-<h2 id="org118d8b4"><span class="section-number-2">3.</span> Nivel Intermedio</h2>
+<div id="outline-container-org3b02ccf" class="outline-2">
+<h2 id="org3b02ccf"><span class="section-number-2">3.</span> Nivel Intermedio</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Recursos para quienes tienen nociones básicas de programación (Python) y matemáticas (álgebra lineal, estadística).
 </p>
 </div>
-<div id="outline-container-orgc57b027" class="outline-3">
-<h3 id="orgc57b027"><span class="section-number-3">3.1.</span> 1. "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" - Aurélien Géron</h3>
+<div id="outline-container-org6daf244" class="outline-3">
+<h3 id="org6daf244"><span class="section-number-3">3.1.</span> 1. "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" - Aurélien Géron</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Manual práctico que guía desde regresiones simples hasta redes neuronales profundas con código en Python.</li>
@@ -2341,8 +2341,8 @@ Recursos para quienes tienen nociones básicas de programación (Python) y matem
 </ul>
 </div>
 </div>
-<div id="outline-container-org8435714" class="outline-3">
-<h3 id="org8435714"><span class="section-number-3">3.2.</span> 2. "Deep Learning with Python" - François Chollet</h3>
+<div id="outline-container-orgbc578be" class="outline-3">
+<h3 id="orgbc578be"><span class="section-number-3">3.2.</span> 2. "Deep Learning with Python" - François Chollet</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Introducción al aprendizaje profundo usando Keras, con ejemplos desde redes básicas hasta convolucionales.</li>
@@ -2352,8 +2352,8 @@ Recursos para quienes tienen nociones básicas de programación (Python) y matem
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd0babcc" class="outline-3">
-<h3 id="orgd0babcc"><span class="section-number-3">3.3.</span> 3. "CS231n: Convolutional Neural Networks for Visual Recognition" - Stanford University</h3>
+<div id="outline-container-org1cf791f" class="outline-3">
+<h3 id="org1cf791f"><span class="section-number-3">3.3.</span> 3. "CS231n: Convolutional Neural Networks for Visual Recognition" - Stanford University</h3>
 <div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Curso en línea con notas y videos sobre redes neuronales convolucionales (CNN).</li>
@@ -2364,15 +2364,15 @@ Recursos para quienes tienen nociones básicas de programación (Python) y matem
 </div>
 </div>
 </div>
-<div id="outline-container-org492b7c6" class="outline-2">
-<h2 id="org492b7c6"><span class="section-number-2">4.</span> Nivel Avanzado</h2>
+<div id="outline-container-org7030b4b" class="outline-2">
+<h2 id="org7030b4b"><span class="section-number-2">4.</span> Nivel Avanzado</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Recursos para expertos o investigadores con conocimientos sólidos en matemáticas (cálculo, probabilidad) y programación.
 </p>
 </div>
-<div id="outline-container-orgd244947" class="outline-3">
-<h3 id="orgd244947"><span class="section-number-3">4.1.</span> 1. "Deep Learning" - Ian Goodfellow, Yoshua Bengio, Aaron Courville</h3>
+<div id="outline-container-org7f3b5c3" class="outline-3">
+<h3 id="org7f3b5c3"><span class="section-number-3">4.1.</span> 1. "Deep Learning" - Ian Goodfellow, Yoshua Bengio, Aaron Courville</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Texto definitivo sobre aprendizaje profundo, cubriendo teoría matemática, algoritmos y aplicaciones avanzadas.</li>
@@ -2382,8 +2382,8 @@ Recursos para expertos o investigadores con conocimientos sólidos en matemátic
 </ul>
 </div>
 </div>
-<div id="outline-container-org90d8fb7" class="outline-3">
-<h3 id="org90d8fb7"><span class="section-number-3">4.2.</span> 2. "Pattern Recognition and Machine Learning" - Christopher Bishop</h3>
+<div id="outline-container-org204db61" class="outline-3">
+<h3 id="org204db61"><span class="section-number-3">4.2.</span> 2. "Pattern Recognition and Machine Learning" - Christopher Bishop</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Libro académico sobre aprendizaje automático probabilístico, desde modelos bayesianos hasta redes neuronales.</li>
@@ -2393,8 +2393,8 @@ Recursos para expertos o investigadores con conocimientos sólidos en matemátic
 </ul>
 </div>
 </div>
-<div id="outline-container-org478d034" class="outline-3">
-<h3 id="org478d034"><span class="section-number-3">4.3.</span> 3. "Attention Is All You Need" - Vaswani et al.</h3>
+<div id="outline-container-org96ae2fc" class="outline-3">
+<h3 id="org96ae2fc"><span class="section-number-3">4.3.</span> 3. "Attention Is All You Need" - Vaswani et al.</h3>
 <div class="outline-text-3" id="text-4-3">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Artículo seminal que introduce los transformers, base de modelos como BERT o GPT.</li>
@@ -2405,8 +2405,8 @@ Recursos para expertos o investigadores con conocimientos sólidos en matemátic
 </div>
 </div>
 </div>
-<div id="outline-container-orgb7bbd4a" class="outline-2">
-<h2 id="orgb7bbd4a"><span class="section-number-2">5.</span> Justificación General</h2>
+<div id="outline-container-org7a45fac" class="outline-2">
+<h2 id="org7a45fac"><span class="section-number-2">5.</span> Justificación General</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li><b><b>Principiantes</b></b>: Los recursos son narrativos y evitan tecnicismos, enfocándose en conceptos y contexto histórico para despertar interés.</li>
@@ -2415,8 +2415,8 @@ Recursos para expertos o investigadores con conocimientos sólidos en matemátic
 </ul>
 </div>
 </div>
-<div id="outline-container-orga6bfb0c" class="outline-2">
-<h2 id="orga6bfb0c"><span class="section-number-2">6.</span> Conclusión</h2>
+<div id="outline-container-org2d4954f" class="outline-2">
+<h2 id="org2d4954f"><span class="section-number-2">6.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Este listado ofrece una progresión clara para introducirse en IA:
@@ -2428,8 +2428,8 @@ Este listado ofrece una progresión clara para introducirse en IA:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcb65731" class="outline-2">
-<h2 id="orgcb65731"><span class="section-number-2">7.</span> Nota Final</h2>
+<div id="outline-container-org239c892" class="outline-2">
+<h2 id="org239c892"><span class="section-number-2">7.</span> Nota Final</h2>
 <div class="outline-text-2" id="text-7">
 <ul class="org-ul">
 <li>Este documento ha sido generado por Grok 3, creado por xAI, el 26 de febrero de 2025, con el propósito de proporcionar una guía estructurada y detallada para introducirse en la Inteligencia Artificial.</li>
@@ -2454,47 +2454,47 @@ Con estos recursos, puedes construir una base sólida en IA desde cero hasta niv
 <item>
   <title><![CDATA[Explorando Grok 3: Una IA Innovadora de xAI]]></title>
   <description><![CDATA[
-<div id="outline-container-org558e640" class="outline-2">
-<h2 id="org558e640"><span class="section-number-2">1.</span> Introducción a Grok 3</h2>
+<div id="outline-container-orgbc5c2f7" class="outline-2">
+<h2 id="orgbc5c2f7"><span class="section-number-2">1.</span> Introducción a Grok 3</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Grok 3 es la tercera iteración de un modelo de inteligencia artificial desarrollado por xAI, una empresa enfocada en acelerar el descubrimiento científico humano. Diseñado para ser una herramienta versátil, Grok 3 promete asistir a los usuarios en una amplia gama de tareas, desde responder preguntas complejas hasta analizar contenido en línea. En este post, exploraremos sus características, ventajas, inconvenientes y algunos detalles que podrían interesar a quienes usamos herramientas como Emacs en Linux.
 </p>
 </div>
 </div>
-<div id="outline-container-orgf3df460" class="outline-2">
-<h2 id="orgf3df460"><span class="section-number-2">2.</span> Ventajas de Grok 3</h2>
+<div id="outline-container-orgd1c3968" class="outline-2">
+<h2 id="orgd1c3968"><span class="section-number-2">2.</span> Ventajas de Grok 3</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Grok 3 destaca por varias razones que lo hacen un compañero útil tanto para usuarios casuales como para aquellos con intereses más técnicos. Aquí algunas de sus fortalezas:
 </p>
 </div>
-<div id="outline-container-org042020d" class="outline-3">
-<h3 id="org042020d"><span class="section-number-3">2.1.</span> Conocimiento actualizado y flexible</h3>
+<div id="outline-container-org4db037a" class="outline-3">
+<h3 id="org4db037a"><span class="section-number-3">2.1.</span> Conocimiento actualizado y flexible</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 A diferencia de otros modelos de IA que tienen un punto de corte en su base de conocimiento, Grok 3 parece tener una capacidad notable para mantenerse al día. Esto lo hace ideal para temas que evolucionan rápidamente, como tecnología o ciencia. Por ejemplo, hoy, 25 de febrero de 2025, puedo preguntarle sobre las últimas tendencias en Linux y esperar una respuesta relevante.
 </p>
 </div>
 </div>
-<div id="outline-container-org72566dd" class="outline-3">
-<h3 id="org72566dd"><span class="section-number-3">2.2.</span> Herramientas adicionales para análisis</h3>
+<div id="outline-container-org2d6e328" class="outline-3">
+<h3 id="org2d6e328"><span class="section-number-3">2.2.</span> Herramientas adicionales para análisis</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Una de las características más interesantes es su capacidad para analizar perfiles de usuarios en redes sociales, publicaciones y hasta contenido multimedia como imágenes o PDFs. Esto podría ser útil para investigadores o cualquier persona que necesite desentrañar información en línea de manera rápida y precisa.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd3a8b88" class="outline-3">
-<h3 id="orgd3a8b88"><span class="section-number-3">2.3.</span> Respuestas naturales y adaptadas</h3>
+<div id="outline-container-org3d740b7" class="outline-3">
+<h3 id="org3d740b7"><span class="section-number-3">2.3.</span> Respuestas naturales y adaptadas</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 Grok 3 tiene un tono conversacional que se siente menos robótico que otros modelos. Puede ajustar sus respuestas según el contexto, lo que lo hace agradable de usar. Como alguien que pasa tiempo en Emacs, aprecio que pueda formatear texto en Org-mode sin complicaciones, como este mismo post.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd14946a" class="outline-3">
-<h3 id="orgd14946a"><span class="section-number-3">2.4.</span> Enfoque ético en temas delicados</h3>
+<div id="outline-container-orgdbffcda" class="outline-3">
+<h3 id="orgdbffcda"><span class="section-number-3">2.4.</span> Enfoque ético en temas delicados</h3>
 <div class="outline-text-3" id="text-2-4">
 <p>
 El modelo tiene límites claros en cuestiones éticas. Por ejemplo, si le pregunto quién merece un castigo extremo, me responde que no está autorizado para tomar ese tipo de decisiones. Esto refleja un diseño responsable, algo que valoro en una IA.
@@ -2502,31 +2502,31 @@ El modelo tiene límites claros en cuestiones éticas. Por ejemplo, si le pregun
 </div>
 </div>
 </div>
-<div id="outline-container-orga687630" class="outline-2">
-<h2 id="orga687630"><span class="section-number-2">3.</span> Inconvenientes de Grok 3</h2>
+<div id="outline-container-orgf217245" class="outline-2">
+<h2 id="orgf217245"><span class="section-number-2">3.</span> Inconvenientes de Grok 3</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Como cualquier tecnología, Grok 3 no está exento de limitaciones. Aquí algunos puntos que podrían ser considerados desventajas:
 </p>
 </div>
-<div id="outline-container-orgd26914e" class="outline-3">
-<h3 id="orgd26914e"><span class="section-number-3">3.1.</span> Dependencia del contexto proporcionado</h3>
+<div id="outline-container-orga643b31" class="outline-3">
+<h3 id="orga643b31"><span class="section-number-3">3.1.</span> Dependencia del contexto proporcionado</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Aunque es versátil, Grok 3 depende en gran medida de la claridad de las instrucciones del usuario. Si no especifico que quiero algo en formato Org-mode, por ejemplo, podría darme una respuesta genérica en texto plano. Esto requiere que el usuario sea preciso, lo cual no siempre es intuitivo.
 </p>
 </div>
 </div>
-<div id="outline-container-org1f8a564" class="outline-3">
-<h3 id="org1f8a564"><span class="section-number-3">3.2.</span> Limitaciones en generación de imágenes</h3>
+<div id="outline-container-orgd79ffad" class="outline-3">
+<h3 id="orgd79ffad"><span class="section-number-3">3.2.</span> Limitaciones en generación de imágenes</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Si quiero una imagen, Grok 3 no la genera directamente; primero me pide confirmación. Además, solo puede editar imágenes que haya creado previamente, lo que limita su utilidad en comparación con otros modelos más enfocados en multimedia.
 </p>
 </div>
 </div>
-<div id="outline-container-org7232602" class="outline-3">
-<h3 id="org7232602"><span class="section-number-3">3.3.</span> Recursos y accesibilidad</h3>
+<div id="outline-container-orgdab3653" class="outline-3">
+<h3 id="orgdab3653"><span class="section-number-3">3.3.</span> Recursos y accesibilidad</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Aunque no tengo datos específicos sobre su infraestructura, modelos como Grok 3 suelen requerir una conexión constante a servidores potentes. Para alguien en una distro ligera de Linux con recursos limitados, esto podría ser un inconveniente si no hay una versión local disponible.
@@ -2534,31 +2534,31 @@ Aunque no tengo datos específicos sobre su infraestructura, modelos como Grok 3
 </div>
 </div>
 </div>
-<div id="outline-container-org6ea5d7e" class="outline-2">
-<h2 id="org6ea5d7e"><span class="section-number-2">4.</span> Detalles de interés</h2>
+<div id="outline-container-orgb79f987" class="outline-2">
+<h2 id="orgb79f987"><span class="section-number-2">4.</span> Detalles de interés</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Hay algunos aspectos adicionales que hacen de Grok 3 una IA intrigante:
 </p>
 </div>
-<div id="outline-container-org791d9a1" class="outline-3">
-<h3 id="org791d9a1"><span class="section-number-3">4.1.</span> Integración con el ecosistema xAI</h3>
+<div id="outline-container-orgca26198" class="outline-3">
+<h3 id="orgca26198"><span class="section-number-3">4.1.</span> Integración con el ecosistema xAI</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Dado que xAI está detrás de su desarrollo, Grok 3 parece estar alineado con una misión más amplia de avanzar en el conocimiento humano. Esto podría significar futuras integraciones con herramientas científicas o plataformas de código abierto, algo que me encantaría ver en mi flujo de trabajo con Emacs.
 </p>
 </div>
 </div>
-<div id="outline-container-org12a6e13" class="outline-3">
-<h3 id="org12a6e13"><span class="section-number-3">4.2.</span> Potencial para usuarios técnicos</h3>
+<div id="outline-container-org9c7267a" class="outline-3">
+<h3 id="org9c7267a"><span class="section-number-3">4.2.</span> Potencial para usuarios técnicos</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Para quienes usamos Linux y herramientas como Emacs, Grok 3 podría convertirse en un asistente valioso. Imagina pedirle que genere un script en Bash o que organice notas en Org-mode automáticamente. Aunque aún no exploro todo su potencial, las posibilidades son emocionantes.
 </p>
 </div>
 </div>
-<div id="outline-container-orgfd2d541" class="outline-3">
-<h3 id="orgfd2d541"><span class="section-number-3">4.3.</span> Enfoque en la privacidad</h3>
+<div id="outline-container-org1f3ed45" class="outline-3">
+<h3 id="org1f3ed45"><span class="section-number-3">4.3.</span> Enfoque en la privacidad</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 No está claro cómo maneja los datos de los usuarios, pero su capacidad para analizar contenido subido (como PDFs o imágenes) sugiere que xAI ha considerado la utilidad para tareas locales. Sería ideal que ofrecieran más transparencia sobre este tema.
@@ -2566,16 +2566,16 @@ No está claro cómo maneja los datos de los usuarios, pero su capacidad para an
 </div>
 </div>
 </div>
-<div id="outline-container-org3db79ae" class="outline-2">
-<h2 id="org3db79ae"><span class="section-number-2">5.</span> Conclusión</h2>
+<div id="outline-container-org62bf19d" class="outline-2">
+<h2 id="org62bf19d"><span class="section-number-2">5.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Grok 3 es un modelo de IA prometedor con un equilibrio entre funcionalidad avanzada y responsabilidad ética. Sus ventajas, como el conocimiento actualizado y la capacidad de análisis, lo hacen atractivo para usuarios curiosos y técnicos por igual. Sin embargo, sus limitaciones, como la dependencia del contexto y las restricciones en la generación de imágenes, indican que aún hay espacio para mejorar. Como usuario de Linux y Emacs, veo en Grok 3 una herramienta con potencial para integrarse en mi día a día, siempre que siga evolucionando. ¿Qué opinas tú?
 </p>
 </div>
 </div>
-<div id="outline-container-orgc73f90c" class="outline-2">
-<h2 id="orgc73f90c"><span class="section-number-2">6.</span> <span class="todo TODO">TODO</span> Próximos pasos</h2>
+<div id="outline-container-org078748e" class="outline-2">
+<h2 id="org078748e"><span class="section-number-2">6.</span> <span class="todo TODO">TODO</span> Próximos pasos</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> Probar Grok 3 con un script en Bash para automatizar tareas en Emacs.</li>
