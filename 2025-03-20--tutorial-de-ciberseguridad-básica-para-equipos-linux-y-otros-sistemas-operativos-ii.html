@@ -128,11 +128,14 @@
 <div id="preamble" class="status"></div>
 <div id="content">
 <div class="post-date">20/03/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-20--tutorial-de-ciberseguridad-básica-para-equipos-linux-y-otros-sistemas-operativos-ii.html">Tutorial de Ciberseguridad Básica para Equipos Linux y Otros Sistemas Operativos II</a></h1>
-<div id="outline-container-orga28344b" class="outline-2">
-<h2 id="orga28344b"><span class="section-number-2">1.</span> Capítulo 2: Configuración y Prácticas de Seguridad en Linux</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orge9bab04" class="outline-2">
+<h2 id="orge9bab04">Capítulo 2: Configuración y Prácticas de Seguridad en Linux</h2>
+<div class="outline-text-2" id="text-orge9bab04">
+</div>
+<div id="outline-container-org977949f" class="outline-3">
+<h3 id="org977949f">2.1 Ventajas de Linux en términos de seguridad**</h3>
+<div class="outline-text-3" id="text-org977949f">
 <p>
-<b><b>2.1 Ventajas de Linux en términos de seguridad</b></b>
 Linux es conocido por su robustez y flexibilidad en términos de seguridad. Algunas de sus ventajas incluyen:
 </p>
 
@@ -141,13 +144,16 @@ Linux es conocido por su robustez y flexibilidad en términos de seguridad. Algu
 <li><b><b>Menor objetivo de ataque</b></b>: Debido a su menor popularidad en comparación con Windows, Linux es menos objetivo de ataques masivos.</li>
 <li><b><b>Software de código abierto</b></b>: La transparencia del código permite que la comunidad identifique y corrija vulnerabilidades rápidamente.</li>
 </ul>
-
+</div>
+</div>
+<div id="outline-container-org2bbb8a8" class="outline-3">
+<h3 id="org2bbb8a8">Configuración inicial de seguridad en Linux**</h3>
+<div class="outline-text-3" id="text-org2bbb8a8">
+</div>
+<div id="outline-container-orgec4fff4" class="outline-4">
+<h4 id="orgec4fff4">Actualización del sistema***</h4>
+<div class="outline-text-4" id="text-orgec4fff4">
 <p>
-<b><b>2.2 Configuración inicial de seguridad en Linux</b></b>
-</p>
-
-<p>
-<b><b><b>2.2.1 Actualización del sistema</b></b></b>
 Asegúrate de que tu distribución de Linux esté completamente actualizada. Usa los siguientes comandos dependiendo de tu gestor de paquetes:
 </p>
 
@@ -157,9 +163,12 @@ sudo dnf update -y                     <span style="color: #8195b0; font-style: 
 sudo pacman -Syu                       <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para Arch Linux</span>
 </pre>
 </div>
-
+</div>
+</div>
+<div id="outline-container-org3cc3ee0" class="outline-4">
+<h4 id="org3cc3ee0">Creación de un usuario no root***</h4>
+<div class="outline-text-4" id="text-org3cc3ee0">
 <p>
-<b><b><b>2.2.2 Creación de un usuario no root</b></b></b>
 Es una mala práctica usar el usuario "root" para tareas diarias. Crea un usuario estándar y otórgale privilegios de superusuario cuando sea necesario:
 </p>
 
@@ -169,9 +178,12 @@ sudo usermod -aG sudo nombreusuario     <span style="color: #8195b0; font-style:
 sudo usermod -aG wheel nombreusuario    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para sistemas basados en Red Hat</span>
 </pre>
 </div>
-
+</div>
+</div>
+<div id="outline-container-org893c5cd" class="outline-4">
+<h4 id="org893c5cd">Configuración del firewall***</h4>
+<div class="outline-text-4" id="text-org893c5cd">
 <p>
-<b><b><b>2.2.3 Configuración del firewall</b></b></b>
 El firewall es esencial para bloquear accesos no deseados. Usa `ufw` (Uncomplicated Firewall) para configurarlo fácilmente:
 </p>
 
@@ -182,13 +194,17 @@ sudo ufw allow ssh                      <span style="color: #8195b0; font-style:
 sudo ufw status                         <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar el estado</span>
 </pre>
 </div>
-
+</div>
+</div>
+</div>
+<div id="outline-container-org0ff691e" class="outline-3">
+<h3 id="org0ff691e">Herramientas de seguridad recomendadas para Linux**</h3>
+<div class="outline-text-3" id="text-org0ff691e">
+</div>
+<div id="outline-container-orgcc5ba80" class="outline-4">
+<h4 id="orgcc5ba80">Antivirus***</h4>
+<div class="outline-text-4" id="text-orgcc5ba80">
 <p>
-<b><b>2.3 Herramientas de seguridad recomendadas para Linux</b></b>
-</p>
-
-<p>
-<b><b><b>2.3.1 Antivirus</b></b></b>
 Aunque Linux es menos propenso a malware, no está exento de riesgos. Usa herramientas como ClamAV para escanear archivos:
 </p>
 
@@ -197,9 +213,12 @@ Aunque Linux es menos propenso a malware, no está exento de riesgos. Usa herram
 clamscan -r /ruta/a/escanear            <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Escanear un directorio espec&#237;fico</span>
 </pre>
 </div>
-
+</div>
+</div>
+<div id="outline-container-org58a379d" class="outline-4">
+<h4 id="org58a379d">Auditoría de seguridad***</h4>
+<div class="outline-text-4" id="text-org58a379d">
 <p>
-<b><b><b>2.3.2 Auditoría de seguridad</b></b></b>
 Herramientas como Lynis pueden ayudarte a realizar auditorías de seguridad y detectar vulnerabilidades:
 </p>
 
@@ -208,11 +227,12 @@ Herramientas como Lynis pueden ayudarte a realizar auditorías de seguridad y de
 sudo lynis audit system                 <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar auditor&#237;a</span>
 </pre>
 </div>
-
-<p>
-<b><b>2.4 Buenas prácticas adicionales en Linux</b></b>
-</p>
-
+</div>
+</div>
+</div>
+<div id="outline-container-org9a56434" class="outline-3">
+<h3 id="org9a56434">Buenas prácticas adicionales en Linux**</h3>
+<div class="outline-text-3" id="text-org9a56434">
 <ul class="org-ul">
 <li><b><b>SSH seguro</b></b>: Cambia el puerto predeterminado (22), deshabilita el inicio de sesión como root y usa autenticación por clave en lugar de contraseñas.</li>
 <li><b><b>Cifrado de disco</b></b>: Activa el cifrado de disco durante la instalación para proteger tus datos en caso de robo.</li>
@@ -228,12 +248,12 @@ sudo lynis audit system                 <span style="color: #8195b0; font-style:
 </p>
 </div>
 </div>
+</div>
 <div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ciberseguridad.html">ciberseguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div></div>
 <div id="postamble" class="status"><div class='postamble'>
          <hr class='footer-hr'>
-         <p>
-           <a href="rss.xml">
-             <img src="rss.png" alt="RSS Feed" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
              Suscribirse al Feed RSS
            </a>
            <span style="margin: 0 20px;">|</span>
@@ -242,6 +262,10 @@ sudo lynis audit system                 <span style="color: #8195b0; font-style:
            </a>
          </p>
          <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
        </div></div>
 </body>
 </html>

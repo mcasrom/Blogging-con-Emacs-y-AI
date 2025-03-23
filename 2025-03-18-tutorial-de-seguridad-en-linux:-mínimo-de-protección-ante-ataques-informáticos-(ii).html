@@ -88,11 +88,19 @@
            height: 2px;
            background: #ddd;
            margin: 40px 0 20px 0;
-         }
+	 }
          .postamble {
            text-align: center;
            font-size: 0.85em;
            color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
          }
        </style>
        
@@ -120,13 +128,13 @@
 <div id="preamble" class="status"></div>
 <div id="content">
 <div class="post-date">18/03/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-tutorial-de-seguridad-en-linux:-mínimo-de-protección-ante-ataques-informáticos-(ii).html">Tutorial de Seguridad en Linux: Mínimo de Protección ante Ataques Informáticos (II)</a></h1>
-<div id="outline-container-orgfe423c6" class="outline-2">
-<h2 id="orgfe423c6"><span class="section-number-2">1.</span> Capítulo 2: Automatización y Análisis Avanzado</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org8b21ed4" class="outline-2">
+<h2 id="org8b21ed4">Capítulo 2: Automatización y Análisis Avanzado</h2>
+<div class="outline-text-2" id="text-org8b21ed4">
 </div>
-<div id="outline-container-org0877f3b" class="outline-3">
-<h3 id="org0877f3b"><span class="section-number-3">1.1.</span> Objetivos</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-orgc67696a" class="outline-3">
+<h3 id="orgc67696a">Objetivos</h3>
+<div class="outline-text-3" id="text-orgc67696a">
 <ul class="org-ul">
 <li>Automatizar tareas de seguridad con scripts.</li>
 <li>Analizar logs para detectar patrones sospechosos.</li>
@@ -134,9 +142,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-orgadc7dbb" class="outline-3">
-<h3 id="orgadc7dbb"><span class="section-number-3">1.2.</span> Paso 1: Automatizar Tareas con Scripts en Bash</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-orgd0bea96" class="outline-3">
+<h3 id="orgd0bea96">Paso 1: Automatizar Tareas con Scripts en Bash</h3>
+<div class="outline-text-3" id="text-orgd0bea96">
 <p>
 Crea un script para automatizar la revisión de logs y el bloqueo de IPs sospechosas.
 </p>
@@ -146,18 +154,18 @@ Crea un script para automatizar la revisión de logs y el bloqueo de IPs sospech
 Script `security<sub>monitor.sh</sub>`:
 </p>
 <div class="org-src-container">
-<pre class="src src-sh"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
-<span style="color: #004651;">LOG_FILE</span>=<span style="color: #005F00;">"/var/log/auth.log"</span>
-<span style="color: #004651;">BAN_LIST</span>=<span style="color: #005F00;">"/etc/fail2ban/jail.local"</span>
+<pre class="src src-sh"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #1857a4;">LOG_FILE</span>=<span style="color: #a44185;">"/var/log/auth.log"</span>
+<span style="color: #1857a4;">BAN_LIST</span>=<span style="color: #a44185;">"/etc/fail2ban/jail.local"</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Buscar IPs con m&#250;ltiples intentos fallidos</span>
-<span style="color: #004651;">SUSPICIOUS_IPS</span>=$(<span style="color: #1F55A0; font-weight: bold;">grep "Failed password" $LOG_FILE | awk '{print $(NF-3</span><span style="color: #005F00;">)}'</span> | sort | uniq -c | awk <span style="color: #005F00;">'$1 &gt; 3 {print $2}'</span>)
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Buscar IPs con m&#250;ltiples intentos fallidos</span>
+<span style="color: #1857a4;">SUSPICIOUS_IPS</span>=$(<span style="color: #219fd5; font-weight: bold;">grep "Failed password" $LOG_FILE | awk '{print $(NF-3</span><span style="color: #a44185;">)}'</span> | sort | uniq -c | awk <span style="color: #a44185;">'$1 &gt; 3 {print $2}'</span>)
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Bloquear IPs sospechosas</span>
-<span style="color: #D70000;">for</span> IP<span style="color: #D70000;"> in</span> $<span style="color: #004651;">SUSPICIOUS_IPS</span>; <span style="color: #D70000;">do</span>
-    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Bloqueando IP: $IP"</span>
-    sudo fail2ban-client set sshd banip $<span style="color: #004651;">IP</span>
-<span style="color: #D70000;">done</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Bloquear IPs sospechosas</span>
+<span style="color: #219fd5; font-style: italic;">for</span> IP<span style="color: #219fd5; font-style: italic;"> in</span> $<span style="color: #1857a4;">SUSPICIOUS_IPS</span>; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Bloqueando IP: $IP"</span>
+    sudo fail2ban-client set sshd banip $<span style="color: #1857a4;">IP</span>
+<span style="color: #219fd5; font-style: italic;">done</span>
 </pre>
 </div></li>
 
@@ -178,9 +186,9 @@ Añade la siguiente línea:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgb4cf443" class="outline-3">
-<h3 id="orgb4cf443"><span class="section-number-3">1.3.</span> Paso 2: Analizar Logs con Python</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-orgd476327" class="outline-3">
+<h3 id="orgd476327">Paso 2: Analizar Logs con Python</h3>
+<div class="outline-text-3" id="text-orgd476327">
 <p>
 Crea un script en Python para analizar logs y generar reportes.
 </p>
@@ -190,30 +198,30 @@ Crea un script en Python para analizar logs y generar reportes.
 Script `log<sub>analyzer.py</sub>`:
 </p>
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/usr/bin/env python3</span>
-<span style="color: #D70000;">import</span> re
-<span style="color: #D70000;">from</span> collections <span style="color: #D70000;">import</span> Counter
+<pre class="src src-python"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/usr/bin/env python3</span>
+<span style="color: #219fd5; font-style: italic;">import</span> re
+<span style="color: #219fd5; font-style: italic;">from</span> collections <span style="color: #219fd5; font-style: italic;">import</span> Counter
 
-<span style="color: #004651;">LOG_FILE</span> = <span style="color: #005F00;">"/var/log/auth.log"</span>
-<span style="color: #004651;">REPORT_FILE</span> = <span style="color: #005F00;">"/var/log/security_report.txt"</span>
+<span style="color: #1857a4;">LOG_FILE</span> = <span style="color: #a44185;">"/var/log/auth.log"</span>
+<span style="color: #1857a4;">REPORT_FILE</span> = <span style="color: #a44185;">"/var/log/security_report.txt"</span>
 
-<span style="color: #D70000;">def</span> <span style="color: #AF8700;">analyze_logs</span>():
-    <span style="color: #D70000;">with</span> <span style="color: #1F55A0;">open</span>(LOG_FILE, <span style="color: #005F00;">"r"</span>) <span style="color: #D70000;">as</span> <span style="color: #1F55A0;">file</span>:
-        <span style="color: #004651;">logs</span> = <span style="color: #1F55A0;">file</span>.readlines()
+<span style="color: #219fd5; font-style: italic;">def</span> <span style="color: #dc3eb7;">analyze_logs</span>():
+    <span style="color: #219fd5; font-style: italic;">with</span> <span style="color: #dc3eb7;">open</span>(LOG_FILE, <span style="color: #a44185;">"r"</span>) <span style="color: #219fd5; font-style: italic;">as</span> <span style="color: #dc3eb7;">file</span>:
+        <span style="color: #1857a4;">logs</span> = <span style="color: #dc3eb7;">file</span>.readlines()
 
-    <span style="color: #004651;">failed_attempts</span> = Counter()
-    <span style="color: #D70000;">for</span> log <span style="color: #D70000;">in</span> logs:
-        <span style="color: #D70000;">if</span> <span style="color: #005F00;">"Failed password"</span> <span style="color: #D70000;">in</span> log:
-            <span style="color: #004651;">ip</span> = re.search(r<span style="color: #005F00;">"\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b"</span>, log).group()
-            <span style="color: #004651;">failed_attempts</span>[ip] += 1
+    <span style="color: #1857a4;">failed_attempts</span> = Counter()
+    <span style="color: #219fd5; font-style: italic;">for</span> log <span style="color: #219fd5; font-style: italic;">in</span> logs:
+        <span style="color: #219fd5; font-style: italic;">if</span> <span style="color: #a44185;">"Failed password"</span> <span style="color: #219fd5; font-style: italic;">in</span> log:
+            <span style="color: #1857a4;">ip</span> = re.search(r<span style="color: #a44185;">"\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b"</span>, log).group()
+            <span style="color: #1857a4;">failed_attempts</span>[ip] += 1
 
-    <span style="color: #D70000;">with</span> <span style="color: #1F55A0;">open</span>(REPORT_FILE, <span style="color: #005F00;">"w"</span>) <span style="color: #D70000;">as</span> report:
-        report.write(<span style="color: #005F00;">"Reporte de Seguridad</span><span style="color: #AF005F;">\n</span><span style="color: #005F00;">"</span>)
-        report.write(<span style="color: #005F00;">"===================</span><span style="color: #AF005F;">\n</span><span style="color: #005F00;">"</span>)
-        <span style="color: #D70000;">for</span> ip, count <span style="color: #D70000;">in</span> failed_attempts.most_common():
-            report.write(f<span style="color: #005F00;">"IP: </span>{ip}<span style="color: #005F00;"> - Intentos fallidos: </span>{count}<span style="color: #AF005F;">\n</span><span style="color: #005F00;">"</span>)
+    <span style="color: #219fd5; font-style: italic;">with</span> <span style="color: #dc3eb7;">open</span>(REPORT_FILE, <span style="color: #a44185;">"w"</span>) <span style="color: #219fd5; font-style: italic;">as</span> report:
+        report.write(<span style="color: #a44185;">"Reporte de Seguridad</span><span style="color: #2f86d2;">\n</span><span style="color: #a44185;">"</span>)
+        report.write(<span style="color: #a44185;">"===================</span><span style="color: #2f86d2;">\n</span><span style="color: #a44185;">"</span>)
+        <span style="color: #219fd5; font-style: italic;">for</span> ip, count <span style="color: #219fd5; font-style: italic;">in</span> failed_attempts.most_common():
+            report.write(f<span style="color: #a44185;">"IP: </span>{ip}<span style="color: #a44185;"> - Intentos fallidos: </span>{count}<span style="color: #2f86d2;">\n</span><span style="color: #a44185;">"</span>)
 
-<span style="color: #D70000;">if</span> <span style="color: #1F55A0;">__name__</span> == <span style="color: #005F00;">"__main__"</span>:
+<span style="color: #219fd5; font-style: italic;">if</span> <span style="color: #dc3eb7;">__name__</span> == <span style="color: #a44185;">"__main__"</span>:
     analyze_logs()
 </pre>
 </div></li>
@@ -228,9 +236,9 @@ Ejecutar el script:
 </ol>
 </div>
 </div>
-<div id="outline-container-org076a014" class="outline-3">
-<h3 id="org076a014"><span class="section-number-3">1.4.</span> Paso 3: Generar Reportes de Seguridad</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-orgb0c2406" class="outline-3">
+<h3 id="orgb0c2406">Paso 3: Generar Reportes de Seguridad</h3>
+<div class="outline-text-3" id="text-orgb0c2406">
 <p>
 Usa los scripts anteriores para generar reportes diarios.
 </p>
@@ -240,7 +248,7 @@ Usa los scripts anteriores para generar reportes diarios.
 Combinar ambos scripts en un solo archivo:
 </p>
 <div class="org-src-container">
-<pre class="src src-sh"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<pre class="src src-sh"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
 /ruta/al/script/security_monitor.sh
 python3 /ruta/al/script/log_analyzer.py
 </pre>
@@ -263,9 +271,9 @@ Añade la siguiente línea:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgbddd265" class="outline-3">
-<h3 id="orgbddd265"><span class="section-number-3">1.5.</span> Resultados Esperados</h3>
-<div class="outline-text-3" id="text-1-5">
+<div id="outline-container-org963fd93" class="outline-3">
+<h3 id="org963fd93">Resultados Esperados</h3>
+<div class="outline-text-3" id="text-org963fd93">
 <ul class="org-ul">
 <li>Tareas de seguridad automatizadas.</li>
 <li>Logs analizados en busca de patrones sospechosos.</li>
@@ -278,17 +286,17 @@ Añade la siguiente línea:
 </div>
 </div>
 </div>
-<div id="outline-container-orgbac7489" class="outline-2">
-<h2 id="orgbac7489"><span class="section-number-2">2.</span> Conclusión</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org35e397b" class="outline-2">
+<h2 id="org35e397b">Conclusión</h2>
+<div class="outline-text-2" id="text-org35e397b">
 <p>
 Con estos dos capítulos, has implementado un mínimo de seguridad en tu entorno Linux. Desde la configuración básica del firewall hasta la automatización de tareas y el análisis avanzado de logs, este tutorial te proporciona las herramientas necesarias para proteger tu sistema ante ataques informáticos. ¡Ahora es tu turno de adaptar y mejorar estas técnicas según tus necesidades!
 </p>
 </div>
 </div>
-<div id="outline-container-org285a04f" class="outline-2">
-<h2 id="org285a04f"><span class="section-number-2">3.</span> Recursos Adicionales</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org358fc11" class="outline-2">
+<h2 id="org358fc11">Recursos Adicionales</h2>
+<div class="outline-text-2" id="text-org358fc11">
 <ul class="org-ul">
 <li><a href="https://help.ubuntu.com/community/UFW">Documentación de UFW</a></li>
 <li><a href="https://www.fail2ban.org/">Documentación de Fail2Ban</a></li>
@@ -322,13 +330,20 @@ Con estos dos capítulos, has implementado un mínimo de seguridad en tu entorno
 <div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-python.html">python</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-logs.html">logs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div></div>
 <div id="postamble" class="status"><div class='postamble'>
          <hr class='footer-hr'>
-         <p>
-           <a href="rss.xml">
-             <img src="rss.png" alt="RSS Feed" style="width:20px; height:20px;">
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
              Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
            </a>
          </p>
          <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
        </div></div>
 </body>
 </html>

@@ -4,20 +4,20 @@
 <title><![CDATA[Example.com - comparativa]]></title>
 <description><![CDATA[Example.com - comparativa]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-comparativa.html</link>
-<lastBuildDate>Sun, 23 Mar 2025 09:43:22 +0100</lastBuildDate>
+<lastBuildDate>Sun, 23 Mar 2025 13:26:05 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Comparativa de Modelos de IA Generativa en 2025 (Grok)]]></title>
   <description><![CDATA[
-<div id="outline-container-org473f833" class="outline-2">
-<h2 id="org473f833"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-orgfc83277" class="outline-2">
+<h2 id="orgfc83277"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Este documento presenta una tabla vertical detallada en Org-mode que compara modelos de IA generativa: DeepSeek, Grok, OpenAI (ChatGPT), GitHub Copilot y alternativas gratuitas (Claude, Gemini). Se valoran aspectos clave de 1 a 10, con justificaciones basadas en su desempeño, accesibilidad y tendencias al 2 de marzo de 2025.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc3797b6" class="outline-2">
-<h2 id="orgc3797b6"><span class="section-number-2">2.</span> Tabla Comparativa Vertical de Modelos de IA Generativa</h2>
+<div id="outline-container-orgec7c428" class="outline-2">
+<h2 id="orgec7c428"><span class="section-number-2">2.</span> Tabla Comparativa Vertical de Modelos de IA Generativa</h2>
 <div class="outline-text-2" id="text-2">
 <table>
 
@@ -262,8 +262,8 @@ Este documento presenta una tabla vertical detallada en Org-mode que compara mod
 </table>
 </div>
 </div>
-<div id="outline-container-orgc7f182a" class="outline-2">
-<h2 id="orgc7f182a"><span class="section-number-2">3.</span> Notas sobre la Valoración</h2>
+<div id="outline-container-org3ac6a69" class="outline-2">
+<h2 id="org3ac6a69"><span class="section-number-2">3.</span> Notas sobre la Valoración</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li><b><b>DeepSeek</b></b>: Destaca en accesibilidad (10) y eficiencia (9), pero creativity (6) y privacidad (6) son débiles por su enfoque técnico y origen.</li>
@@ -275,8 +275,8 @@ Este documento presenta una tabla vertical detallada en Org-mode que compara mod
 </ul>
 </div>
 </div>
-<div id="outline-container-orgeac18e1" class="outline-2">
-<h2 id="orgeac18e1"><span class="section-number-2">4.</span> Metodología</h2>
+<div id="outline-container-org543075d" class="outline-2">
+<h2 id="org543075d"><span class="section-number-2">4.</span> Metodología</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li><b><b>Escala</b></b>: 1 (muy deficiente) a 10 (excelente).</li>
@@ -285,8 +285,8 @@ Este documento presenta una tabla vertical detallada en Org-mode que compara mod
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb56137e" class="outline-2">
-<h2 id="orgb56137e"><span class="section-number-2">5.</span> Conclusión</h2>
+<div id="outline-container-org465ca3f" class="outline-2">
+<h2 id="org465ca3f"><span class="section-number-2">5.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 OpenAI lidera con 79/100 por su versatilidad, seguido de cerca por DeepSeek y Grok (78/100) por su eficiencia técnica y accesibilidad. Copilot (72/100) es ideal para codificación, mientras Claude (71/100) y Gemini (74/100) ofrecen opciones gratuitas sólidas pero limitadas en ciertas áreas.
@@ -304,16 +304,16 @@ OpenAI lidera con 79/100 por su versatilidad, seguido de cerca por DeepSeek y Gr
 <item>
   <title><![CDATA[Capacidades y Comparativa de Modelos de IA Generativa: OpenAI, DeepSeek, Gemini y Grok 3]]></title>
   <description><![CDATA[
-<div id="outline-container-org9c64bb3" class="outline-2">
-<h2 id="org9c64bb3"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org9070f14" class="outline-2">
+<h2 id="org9070f14"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 La IA generativa es una categoría de inteligencia artificial que crea contenido nuevo (texto, imágenes, código, etc.) a partir de datos de entrenamiento, utilizando modelos de aprendizaje profundo como transformers o sistemas de mezcla de expertos (MoE). Este documento define sus capacidades, características y compara los modelos líderes: OpenAI (GPT-4o/o1), DeepSeek (R1/V3), Gemini (2.0/Pro) y Grok 3 de xAI, con una valoración de 1 a 10.
 </p>
 </div>
 </div>
-<div id="outline-container-orgabb02a6" class="outline-2">
-<h2 id="orgabb02a6"><span class="section-number-2">2.</span> Capacidades de la IA Generativa</h2>
+<div id="outline-container-org4ab10ef" class="outline-2">
+<h2 id="org4ab10ef"><span class="section-number-2">2.</span> Capacidades de la IA Generativa</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 La IA generativa tiene las siguientes capacidades generales:
@@ -328,8 +328,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc1685c3" class="outline-2">
-<h2 id="orgc1685c3"><span class="section-number-2">3.</span> Características Comunes</h2>
+<div id="outline-container-org3f5dd43" class="outline-2">
+<h2 id="org3f5dd43"><span class="section-number-2">3.</span> Características Comunes</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li><b><b>Arquitectura</b></b>: Basada en transformers o MoE para eficiencia y escalabilidad.</li>
@@ -340,12 +340,12 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-org5e88224" class="outline-2">
-<h2 id="org5e88224"><span class="section-number-2">4.</span> Comparativa de Modelos</h2>
+<div id="outline-container-org7306a77" class="outline-2">
+<h2 id="org7306a77"><span class="section-number-2">4.</span> Comparativa de Modelos</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org1ed87c7" class="outline-3">
-<h3 id="org1ed87c7"><span class="section-number-3">4.1.</span> OpenAI (GPT-4o / o1)**</h3>
+<div id="outline-container-orgc167e09" class="outline-3">
+<h3 id="orgc167e09"><span class="section-number-3">4.1.</span> OpenAI (GPT-4o / o1)**</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Líder en IA conversacional, con GPT-4o como modelo multimodal y o1 especializado en razonamiento.</li>
@@ -371,8 +371,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc9f83c9" class="outline-3">
-<h3 id="orgc9f83c9"><span class="section-number-3">4.2.</span> DeepSeek (R1 / V3)**</h3>
+<div id="outline-container-org2eb9f6d" class="outline-3">
+<h3 id="org2eb9f6d"><span class="section-number-3">4.2.</span> DeepSeek (R1 / V3)**</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Modelo chino de bajo costo, con R1 enfocado en razonamiento y V3 como MoE de 671B parámetros.</li>
@@ -398,8 +398,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-org8ecb844" class="outline-3">
-<h3 id="org8ecb844"><span class="section-number-3">4.3.</span> Gemini (2.0 / Pro)**</h3>
+<div id="outline-container-orga594c8e" class="outline-3">
+<h3 id="orga594c8e"><span class="section-number-3">4.3.</span> Gemini (2.0 / Pro)**</h3>
 <div class="outline-text-3" id="text-4-3">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Modelo de Google, integrado con su ecosistema, con Gemini 2.0 Pro como versión avanzada.</li>
@@ -425,8 +425,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-org355229e" class="outline-3">
-<h3 id="org355229e"><span class="section-number-3">4.4.</span> Grok 3 (xAI)**</h3>
+<div id="outline-container-org57c5428" class="outline-3">
+<h3 id="org57c5428"><span class="section-number-3">4.4.</span> Grok 3 (xAI)**</h3>
 <div class="outline-text-3" id="text-4-4">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Último modelo de xAI, con énfasis en razonamiento y "búsqueda de la verdad".</li>
@@ -453,8 +453,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </div>
 </div>
 </div>
-<div id="outline-container-org342702d" class="outline-2">
-<h2 id="org342702d"><span class="section-number-2">5.</span> Comparativa Resumida</h2>
+<div id="outline-container-org8fe62ed" class="outline-2">
+<h2 id="org8fe62ed"><span class="section-number-2">5.</span> Comparativa Resumida</h2>
 <div class="outline-text-2" id="text-5">
 <table>
 
@@ -536,8 +536,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </table>
 </div>
 </div>
-<div id="outline-container-orgc86d0d4" class="outline-2">
-<h2 id="orgc86d0d4"><span class="section-number-2">6.</span> Conclusión</h2>
+<div id="outline-container-org9ddf015" class="outline-2">
+<h2 id="org9ddf015"><span class="section-number-2">6.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li><b><b>OpenAI (GPT-4o/o1)</b></b>: Ideal para usuarios que buscan versatilidad y razonamiento avanzado, aunque costoso.</li>

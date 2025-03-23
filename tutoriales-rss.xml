@@ -4,21 +4,21 @@
 <title><![CDATA[Example.com - tutoriales]]></title>
 <description><![CDATA[Example.com - tutoriales]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-tutoriales.html</link>
-<lastBuildDate>Sun, 23 Mar 2025 09:43:23 +0100</lastBuildDate>
+<lastBuildDate>Sun, 23 Mar 2025 13:26:05 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - VI]]></title>
   <description><![CDATA[
-<div id="outline-container-org060ae52" class="outline-2">
-<h2 id="org060ae52">Capítulo 6: Guías y Recursos para Introducirse en la Inteligencia Artificial</h2>
-<div class="outline-text-2" id="text-org060ae52">
+<div id="outline-container-org5a35f2f" class="outline-2">
+<h2 id="org5a35f2f">Capítulo 6: Guías y Recursos para Introducirse en la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-org5a35f2f">
 </div>
-<div id="outline-container-org991f34b" class="outline-3">
-<h3 id="org991f34b">Libros Recomendados</h3>
-<div class="outline-text-3" id="text-org991f34b">
+<div id="outline-container-org1d565b7" class="outline-3">
+<h3 id="org1d565b7">Libros Recomendados</h3>
+<div class="outline-text-3" id="text-org1d565b7">
 </div>
-<div id="outline-container-org9269199" class="outline-4">
-<h4 id="org9269199">Para Principiantes:</h4>
-<div class="outline-text-4" id="text-org9269199">
+<div id="outline-container-org6cdad87" class="outline-4">
+<h4 id="org6cdad87">Para Principiantes:</h4>
+<div class="outline-text-4" id="text-org6cdad87">
 <ul class="org-ul">
 <li><b><b>"Artificial Intelligence For Dummies (2nd Edition)"</b></b> por Luca Massaron y John Mueller: Introducción no técnica que explica conceptos básicos y aplicaciones prácticas de la IA[1][7].</li>
 <li><b><b>"Artificial Intelligence Basics: A Non-Technical Introduction"</b></b> por Tom Taulli: Ideal para entender los conceptos fundamentales sin jerga técnica[1].</li>
@@ -26,9 +26,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfc2dfe9" class="outline-4">
-<h4 id="orgfc2dfe9">Para Expertos:</h4>
-<div class="outline-text-4" id="text-orgfc2dfe9">
+<div id="outline-container-org15948a1" class="outline-4">
+<h4 id="org15948a1">Para Expertos:</h4>
+<div class="outline-text-4" id="text-org15948a1">
 <ul class="org-ul">
 <li><b><b>"Artificial Intelligence: A Modern Approach"</b></b>: Un texto clásico que cubre aspectos avanzados de la IA[4].</li>
 <li><b><b>"Human Compatible: Artificial Intelligence and the Problem of Control"</b></b>: Explora los desafíos éticos y de control en la IA[4].</li>
@@ -36,13 +36,13 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org14106ec" class="outline-3">
-<h3 id="org14106ec">Cursos y Seminarios</h3>
-<div class="outline-text-3" id="text-org14106ec">
+<div id="outline-container-org035d782" class="outline-3">
+<h3 id="org035d782">Cursos y Seminarios</h3>
+<div class="outline-text-3" id="text-org035d782">
 </div>
-<div id="outline-container-orga190045" class="outline-4">
-<h4 id="orga190045">Cursos en Línea</h4>
-<div class="outline-text-4" id="text-orga190045">
+<div id="outline-container-orgb033a7e" class="outline-4">
+<h4 id="orgb033a7e">Cursos en Línea</h4>
+<div class="outline-text-4" id="text-orgb033a7e">
 <ul class="org-ul">
 <li><b><b>"Elements of AI"</b></b> por la Universidad de Helsinki: Un curso gratuito que demystifica la IA sin requerir conocimientos técnicos avanzados[8].</li>
 <li><b><b>"Introduction to Artificial Intelligence with Python"</b></b> en EdX/Harvard University: Introducción práctica usando Python[6].</li>
@@ -50,9 +50,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org13a896e" class="outline-4">
-<h4 id="org13a896e">Seminarios y Talleres</h4>
-<div class="outline-text-4" id="text-org13a896e">
+<div id="outline-container-orgb1b3195" class="outline-4">
+<h4 id="orgb1b3195">Seminarios y Talleres</h4>
+<div class="outline-text-4" id="text-orgb1b3195">
 <ul class="org-ul">
 <li><b><b>"Introduction to AI Workshop"</b></b> por EmpServe: Un taller interactivo que cubre conceptos básicos y aplicaciones prácticas de la IA[2].</li>
 <li><b><b>"Introduction to AI and Machine Learning"</b></b> en Peaks: Un curso de dos días que enseña los fundamentos teóricos y prácticos de la IA y el aprendizaje automático usando Python[5].</li>
@@ -60,13 +60,13 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgb329f74" class="outline-3">
-<h3 id="orgb329f74">Recursos en Línea</h3>
-<div class="outline-text-3" id="text-orgb329f74">
+<div id="outline-container-org366b2c9" class="outline-3">
+<h3 id="org366b2c9">Recursos en Línea</h3>
+<div class="outline-text-3" id="text-org366b2c9">
 </div>
-<div id="outline-container-orge31857e" class="outline-4">
-<h4 id="orge31857e">Plataformas de Aprendizaje</h4>
-<div class="outline-text-4" id="text-orge31857e">
+<div id="outline-container-org72e1a4b" class="outline-4">
+<h4 id="org72e1a4b">Plataformas de Aprendizaje</h4>
+<div class="outline-text-4" id="text-org72e1a4b">
 <ul class="org-ul">
 <li><b><b>DataCamp</b></b>: Ofrece cursos interactivos enfocados en ciencia de datos y IA[3].</li>
 <li><b><b>Kaggle</b></b>: Plataforma para competencias de ciencia de datos y aprendizaje colaborativo[3].</li>
@@ -74,9 +74,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org9a2b79b" class="outline-4">
-<h4 id="org9a2b79b">Comunidades y Blogs</h4>
-<div class="outline-text-4" id="text-org9a2b79b">
+<div id="outline-container-org9afcb36" class="outline-4">
+<h4 id="org9afcb36">Comunidades y Blogs</h4>
+<div class="outline-text-4" id="text-org9afcb36">
 <ul class="org-ul">
 <li><b><b>GitHub</b></b>: Repositorios de código abierto relacionados con IA y aprendizaje automático[3].</li>
 <li><b><b>Reddit (r/MachineLearning y r/AI)</b></b>: Comunidades activas para discusiones y recursos sobre IA[3].</li>
@@ -84,9 +84,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org9202ab2" class="outline-3">
-<h3 id="org9202ab2">URLs Recomendadas</h3>
-<div class="outline-text-3" id="text-org9202ab2">
+<div id="outline-container-orge2f2982" class="outline-3">
+<h3 id="orge2f2982">URLs Recomendadas</h3>
+<div class="outline-text-3" id="text-orge2f2982">
 <ul class="org-ul">
 <li><b><b>Learn with Google AI</b></b>: Recursos educativos de Google sobre IA[6].</li>
 <li><b><b>Microsoft AI School</b></b>: Recursos para aprender sobre IA con Microsoft[6].</li>
@@ -128,96 +128,96 @@ Answer from Perplexity: pplx.ai/share
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - V]]></title>
   <description><![CDATA[
-<div id="outline-container-orgfbb303d" class="outline-2">
-<h2 id="orgfbb303d">Capítulo 5: Futuro y Consideraciones de la Inteligencia Artificial</h2>
-<div class="outline-text-2" id="text-orgfbb303d">
+<div id="outline-container-orga9c2e26" class="outline-2">
+<h2 id="orga9c2e26">Capítulo 5: Futuro y Consideraciones de la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-orga9c2e26">
 </div>
-<div id="outline-container-org3ed274b" class="outline-3">
-<h3 id="org3ed274b">Tendencias Futuras</h3>
-<div class="outline-text-3" id="text-org3ed274b">
+<div id="outline-container-org93b42c2" class="outline-3">
+<h3 id="org93b42c2">Tendencias Futuras</h3>
+<div class="outline-text-3" id="text-org93b42c2">
 </div>
-<div id="outline-container-org09a309b" class="outline-4">
-<h4 id="org09a309b">IA Agéntica</h4>
-<div class="outline-text-4" id="text-org09a309b">
+<div id="outline-container-orgba4f7c4" class="outline-4">
+<h4 id="orgba4f7c4">IA Agéntica</h4>
+<div class="outline-text-4" id="text-orgba4f7c4">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: Sistemas capaces de ejecutar tareas de manera autónoma con mínima intervención humana.</li>
 <li><b><b>Aplicaciones</b></b>: Automatización de procesos internos en empresas, pero requiere supervisión para evitar errores[1].</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org225afb6" class="outline-4">
-<h4 id="org225afb6">IA Generativa</h4>
-<div class="outline-text-4" id="text-org225afb6">
+<div id="outline-container-orgaddb7f3" class="outline-4">
+<h4 id="orgaddb7f3">IA Generativa</h4>
+<div class="outline-text-4" id="text-orgaddb7f3">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: Herramientas que pueden generar contenido o optimizar procesos.</li>
 <li><b><b>Desafíos</b></b>: Medir su impacto económico real y asegurar un retorno de inversión adecuado[1].</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org4df4e64" class="outline-4">
-<h4 id="org4df4e64">Avances en Aprendizaje Profundo</h4>
-<div class="outline-text-4" id="text-org4df4e64">
+<div id="outline-container-orgb94f87d" class="outline-4">
+<h4 id="orgb94f87d">Avances en Aprendizaje Profundo</h4>
+<div class="outline-text-4" id="text-orgb94f87d">
 <ul class="org-ul">
 <li><b><b>Predicciones</b></b>: Redes neuronales más grandes y sofisticadas, acercándose a la IA generalizada[6].</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-org5142afc" class="outline-3">
-<h3 id="org5142afc">Retos Actuales</h3>
-<div class="outline-text-3" id="text-org5142afc">
+<div id="outline-container-orga0e8cae" class="outline-3">
+<h3 id="orga0e8cae">Retos Actuales</h3>
+<div class="outline-text-3" id="text-orga0e8cae">
 </div>
-<div id="outline-container-org6ebf8aa" class="outline-4">
-<h4 id="org6ebf8aa">Sesgos Algorítmicos</h4>
-<div class="outline-text-4" id="text-org6ebf8aa">
+<div id="outline-container-org9083d89" class="outline-4">
+<h4 id="org9083d89">Sesgos Algorítmicos</h4>
+<div class="outline-text-4" id="text-org9083d89">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: Resultados injustos debido a sesgos en los datos o algoritmos.</li>
 <li><b><b>Ejemplos</b></b>: Reconocimiento facial, contratación de personal[3].</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbc5f413" class="outline-4">
-<h4 id="orgbc5f413">Ética y Responsabilidad</h4>
-<div class="outline-text-4" id="text-orgbc5f413">
+<div id="outline-container-org34f8697" class="outline-4">
+<h4 id="org34f8697">Ética y Responsabilidad</h4>
+<div class="outline-text-4" id="text-org34f8697">
 <ul class="org-ul">
 <li><b><b>Desafíos</b></b>: Garantizar decisiones éticas y responsabilidad en sistemas autónomos[2].</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd4bb719" class="outline-4">
-<h4 id="orgd4bb719">Consumo Energético</h4>
-<div class="outline-text-4" id="text-orgd4bb719">
+<div id="outline-container-org466a824" class="outline-4">
+<h4 id="org466a824">Consumo Energético</h4>
+<div class="outline-text-4" id="text-org466a824">
 <ul class="org-ul">
 <li><b><b>Impacto Ambiental</b></b>: Los modelos de IA grandes consumen mucha energía, lo que plantea preocupaciones ambientales.</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-org26f14be" class="outline-3">
-<h3 id="org26f14be">Tendencias Emergentes</h3>
-<div class="outline-text-3" id="text-org26f14be">
+<div id="outline-container-orgd8bc272" class="outline-3">
+<h3 id="orgd8bc272">Tendencias Emergentes</h3>
+<div class="outline-text-3" id="text-orgd8bc272">
 </div>
-<div id="outline-container-orgc779aad" class="outline-4">
-<h4 id="orgc779aad">IA Generalizada (AGI)</h4>
-<div class="outline-text-4" id="text-orgc779aad">
+<div id="outline-container-org1210269" class="outline-4">
+<h4 id="org1210269">IA Generalizada (AGI)</h4>
+<div class="outline-text-4" id="text-org1210269">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: Capaz de realizar cualquier tarea intelectual que un ser humano pueda hacer.</li>
 <li><b><b>Estado Actual</b></b>: Aún en desarrollo, pero avances en aprendizaje por refuerzo y computación cuántica lo acercan[6].</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org156fa94" class="outline-4">
-<h4 id="org156fa94">Neuro-Simbólica</h4>
-<div class="outline-text-4" id="text-org156fa94">
+<div id="outline-container-orgc61ba72" class="outline-4">
+<h4 id="orgc61ba72">Neuro-Simbólica</h4>
+<div class="outline-text-4" id="text-orgc61ba72">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: Combinación de lógica simbólica con redes neuronales.</li>
 <li><b><b>Aplicaciones</b></b>: Mejora en la interpretación y explicación de decisiones de IA.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc8568f0" class="outline-4">
-<h4 id="orgc8568f0">Edge AI</h4>
-<div class="outline-text-4" id="text-orgc8568f0">
+<div id="outline-container-org90910d6" class="outline-4">
+<h4 id="org90910d6">Edge AI</h4>
+<div class="outline-text-4" id="text-org90910d6">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: Procesamiento de IA en dispositivos locales para reducir la latencia y mejorar la privacidad.</li>
 <li><b><b>Aplicaciones</b></b>: Vehículos autónomos, dispositivos IoT.</li>
@@ -225,30 +225,30 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-org659b664" class="outline-3">
-<h3 id="org659b664">Consideraciones Legales y Regulatorias</h3>
-<div class="outline-text-3" id="text-org659b664">
+<div id="outline-container-org8e338f3" class="outline-3">
+<h3 id="org8e338f3">Consideraciones Legales y Regulatorias</h3>
+<div class="outline-text-3" id="text-org8e338f3">
 </div>
-<div id="outline-container-org89a1348" class="outline-4">
-<h4 id="org89a1348">Regulación de Modelos de IA</h4>
-<div class="outline-text-4" id="text-org89a1348">
+<div id="outline-container-orgfde1afa" class="outline-4">
+<h4 id="orgfde1afa">Regulación de Modelos de IA</h4>
+<div class="outline-text-4" id="text-orgfde1afa">
 <ul class="org-ul">
 <li><b><b>Ejemplos</b></b>: Clasificación de modelos de IA de propósito general con riesgo sistémico[7].</li>
 <li><b><b>Desafíos</b></b>: Equilibrar innovación con regulación efectiva.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc02467c" class="outline-4">
-<h4 id="orgc02467c">Privacidad y Seguridad de Datos</h4>
-<div class="outline-text-4" id="text-orgc02467c">
+<div id="outline-container-orga7b98bd" class="outline-4">
+<h4 id="orga7b98bd">Privacidad y Seguridad de Datos</h4>
+<div class="outline-text-4" id="text-orga7b98bd">
 <ul class="org-ul">
 <li><b><b>Importancia</b></b>: Proteger datos personales en aplicaciones de IA, especialmente en gestión de crisis[5].</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org7500f0d" class="outline-4">
-<h4 id="org7500f0d">Tendencias Futuras Adicionales</h4>
-<div class="outline-text-4" id="text-org7500f0d">
+<div id="outline-container-org373022e" class="outline-4">
+<h4 id="org373022e">Tendencias Futuras Adicionales</h4>
+<div class="outline-text-4" id="text-org373022e">
 <ul class="org-ul">
 <li><b><b>Aplicaciones en Salud</b></b>: Mejoras en diagnóstico y tratamiento personalizado[8].</li>
 <li><b><b>Exploración Espacial</b></b>: Uso de IA para misiones autónomas y análisis de datos[8].</li>
@@ -293,35 +293,35 @@ Answer from Perplexity: pplx.ai/share
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - IV]]></title>
   <description><![CDATA[
-<div id="outline-container-org19ee53b" class="outline-2">
-<h2 id="org19ee53b">Capítulo 4: Aplicaciones Industriales de la Inteligencia Artificial</h2>
-<div class="outline-text-2" id="text-org19ee53b">
+<div id="outline-container-org873296e" class="outline-2">
+<h2 id="org873296e">Capítulo 4: Aplicaciones Industriales de la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-org873296e">
 </div>
-<div id="outline-container-org14b2591" class="outline-3">
-<h3 id="org14b2591">Sector Salud</h3>
-<div class="outline-text-3" id="text-org14b2591">
+<div id="outline-container-orgcd9cfc0" class="outline-3">
+<h3 id="orgcd9cfc0">Sector Salud</h3>
+<div class="outline-text-3" id="text-orgcd9cfc0">
 </div>
-<div id="outline-container-org11d479a" class="outline-4">
-<h4 id="org11d479a">Diagnóstico por Imágenes</h4>
-<div class="outline-text-4" id="text-org11d479a">
+<div id="outline-container-org631769f" class="outline-4">
+<h4 id="org631769f">Diagnóstico por Imágenes</h4>
+<div class="outline-text-4" id="text-org631769f">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Redes Neuronales Convolucionales (CNN) para analizar imágenes médicas.</li>
 <li><b><b>Aplicaciones</b></b>: Detección temprana de cáncer, diagnóstico de enfermedades cardíacas.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org11eabc5" class="outline-4">
-<h4 id="org11eabc5">Descubrimiento de Fármacos</h4>
-<div class="outline-text-4" id="text-org11eabc5">
+<div id="outline-container-org9a56c61" class="outline-4">
+<h4 id="org9a56c61">Descubrimiento de Fármacos</h4>
+<div class="outline-text-4" id="text-org9a56c61">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Simulación molecular y aprendizaje automático para identificar compuestos potencialmente efectivos.</li>
 <li><b><b>Aplicaciones</b></b>: Reducción del tiempo y costo en el desarrollo de nuevos medicamentos.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org040eb07" class="outline-4">
-<h4 id="org040eb07">Análisis de Datos Médicos</h4>
-<div class="outline-text-4" id="text-org040eb07">
+<div id="outline-container-org6136b21" class="outline-4">
+<h4 id="org6136b21">Análisis de Datos Médicos</h4>
+<div class="outline-text-4" id="text-org6136b21">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Procesamiento de grandes conjuntos de datos para identificar patrones y predecir resultados de tratamientos.</li>
 <li><b><b>Aplicaciones</b></b>: Mejora en la toma de decisiones clínicas y personalización de tratamientos.</li>
@@ -329,22 +329,22 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-org0f6769a" class="outline-3">
-<h3 id="org0f6769a">Manufactura</h3>
-<div class="outline-text-3" id="text-org0f6769a">
+<div id="outline-container-org4d11ea5" class="outline-3">
+<h3 id="org4d11ea5">Manufactura</h3>
+<div class="outline-text-3" id="text-org4d11ea5">
 </div>
-<div id="outline-container-org8721166" class="outline-4">
-<h4 id="org8721166">Automatización Industrial</h4>
-<div class="outline-text-4" id="text-org8721166">
+<div id="outline-container-org5df214b" class="outline-4">
+<h4 id="org5df214b">Automatización Industrial</h4>
+<div class="outline-text-4" id="text-org5df214b">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Robots autónomos y sistemas de control inteligentes para mejorar la eficiencia y seguridad en la producción.</li>
 <li><b><b>Aplicaciones</b></b>: Ensamblaje preciso, control de calidad visual, logística en almacenes.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd4b0fc2" class="outline-4">
-<h4 id="orgd4b0fc2">Mantenimiento Predictivo</h4>
-<div class="outline-text-4" id="text-orgd4b0fc2">
+<div id="outline-container-orgba03c6d" class="outline-4">
+<h4 id="orgba03c6d">Mantenimiento Predictivo</h4>
+<div class="outline-text-4" id="text-orgba03c6d">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Análisis de datos de sensores para predecir fallos en maquinaria.</li>
 <li><b><b>Aplicaciones</b></b>: Reducción de costos de reparación y aumento de la disponibilidad de equipos.</li>
@@ -352,22 +352,22 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-orga5d0257" class="outline-3">
-<h3 id="orga5d0257">Agricultura</h3>
-<div class="outline-text-3" id="text-orga5d0257">
+<div id="outline-container-orgde23233" class="outline-3">
+<h3 id="orgde23233">Agricultura</h3>
+<div class="outline-text-3" id="text-orgde23233">
 </div>
-<div id="outline-container-org16d2ec7" class="outline-4">
-<h4 id="org16d2ec7">Monitoreo de Cultivos</h4>
-<div class="outline-text-4" id="text-org16d2ec7">
+<div id="outline-container-org9735c57" class="outline-4">
+<h4 id="org9735c57">Monitoreo de Cultivos</h4>
+<div class="outline-text-4" id="text-org9735c57">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Drones equipados con sensores y visión artificial para monitorear el crecimiento de cultivos.</li>
 <li><b><b>Aplicaciones</b></b>: Detección temprana de plagas y deficiencias nutricionales.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org6f36dab" class="outline-4">
-<h4 id="org6f36dab">Optimización de Rendimientos</h4>
-<div class="outline-text-4" id="text-org6f36dab">
+<div id="outline-container-orgd2df15c" class="outline-4">
+<h4 id="orgd2df15c">Optimización de Rendimientos</h4>
+<div class="outline-text-4" id="text-orgd2df15c">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Análisis predictivo para optimizar la aplicación de fertilizantes y pesticidas.</li>
 <li><b><b>Aplicaciones</b></b>: Mejora en la eficiencia del uso de recursos y reducción del impacto ambiental.</li>
@@ -375,22 +375,22 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-orgfbd0da0" class="outline-3">
-<h3 id="orgfbd0da0">Finanzas</h3>
-<div class="outline-text-3" id="text-orgfbd0da0">
+<div id="outline-container-orgd8d3265" class="outline-3">
+<h3 id="orgd8d3265">Finanzas</h3>
+<div class="outline-text-3" id="text-orgd8d3265">
 </div>
-<div id="outline-container-org158a0b2" class="outline-4">
-<h4 id="org158a0b2">Detección de Fraude</h4>
-<div class="outline-text-4" id="text-org158a0b2">
+<div id="outline-container-org44cc228" class="outline-4">
+<h4 id="org44cc228">Detección de Fraude</h4>
+<div class="outline-text-4" id="text-org44cc228">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Algoritmos de aprendizaje automático para identificar patrones anómalos en transacciones.</li>
 <li><b><b>Aplicaciones</b></b>: Protección de clientes y reducción de pérdidas financieras.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgba3a1e6" class="outline-4">
-<h4 id="orgba3a1e6">Análisis de Mercados</h4>
-<div class="outline-text-4" id="text-orgba3a1e6">
+<div id="outline-container-org5d5b08c" class="outline-4">
+<h4 id="org5d5b08c">Análisis de Mercados</h4>
+<div class="outline-text-4" id="text-org5d5b08c">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Predicción de tendencias y patrones en los mercados financieros.</li>
 <li><b><b>Aplicaciones</b></b>: Asesoramiento financiero personalizado y optimización de inversiones.</li>
@@ -398,31 +398,31 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-org0d4b0dc" class="outline-3">
-<h3 id="org0d4b0dc">Educación</h3>
-<div class="outline-text-3" id="text-org0d4b0dc">
+<div id="outline-container-org7758eee" class="outline-3">
+<h3 id="org7758eee">Educación</h3>
+<div class="outline-text-3" id="text-org7758eee">
 </div>
-<div id="outline-container-orgd1cbc68" class="outline-4">
-<h4 id="orgd1cbc68">Personalización del Aprendizaje</h4>
-<div class="outline-text-4" id="text-orgd1cbc68">
+<div id="outline-container-org2785580" class="outline-4">
+<h4 id="org2785580">Personalización del Aprendizaje</h4>
+<div class="outline-text-4" id="text-org2785580">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Sistemas de recomendación para adaptar el contenido educativo a las necesidades individuales de los estudiantes.</li>
 <li><b><b>Aplicaciones</b></b>: Mejora en la eficacia del aprendizaje y aumento de la motivación.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfd42c58" class="outline-4">
-<h4 id="orgfd42c58">Automatización de Tareas Administrativas</h4>
-<div class="outline-text-4" id="text-orgfd42c58">
+<div id="outline-container-orge00cda6" class="outline-4">
+<h4 id="orge00cda6">Automatización de Tareas Administrativas</h4>
+<div class="outline-text-4" id="text-orge00cda6">
 <ul class="org-ul">
 <li><b><b>Tecnología</b></b>: Chatbots y sistemas de gestión automatizados para reducir la carga administrativa.</li>
 <li><b><b>Aplicaciones</b></b>: Liberar tiempo para actividades más importantes como la enseñanza y el desarrollo curricular.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgaedd993" class="outline-4">
-<h4 id="orgaedd993">Aplicaciones Prácticas Adicionales</h4>
-<div class="outline-text-4" id="text-orgaedd993">
+<div id="outline-container-org1a722fe" class="outline-4">
+<h4 id="org1a722fe">Aplicaciones Prácticas Adicionales</h4>
+<div class="outline-text-4" id="text-org1a722fe">
 <ul class="org-ul">
 <li><b><b>Asistentes Virtuales</b></b>: Siri, Alexa, Google Assistant, que utilizan NLP para comprender y responder a comandos de voz[2][5].</li>
 <li><b><b>Reconocimiento Facial</b></b>: Utilizado en seguridad y autenticación de dispositivos[6][7].</li>
@@ -656,26 +656,26 @@ Answer from Perplexity: pplx.ai/share
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - II]]></title>
   <description><![CDATA[
-<div id="outline-container-org5db9370" class="outline-2">
-<h2 id="org5db9370">Capítulo 2: Componentes Clave de la Inteligencia Artificial</h2>
-<div class="outline-text-2" id="text-org5db9370">
+<div id="outline-container-org552d041" class="outline-2">
+<h2 id="org552d041">Capítulo 2: Componentes Clave de la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-org552d041">
 </div>
-<div id="outline-container-orgc1463dc" class="outline-3">
-<h3 id="orgc1463dc">Estructura Fundamental</h3>
-<div class="outline-text-3" id="text-orgc1463dc">
+<div id="outline-container-orgb728343" class="outline-3">
+<h3 id="orgb728343">Estructura Fundamental</h3>
+<div class="outline-text-3" id="text-orgb728343">
 </div>
-<div id="outline-container-org2082d62" class="outline-4">
-<h4 id="org2082d62">2.1.1 Datos</h4>
-<div class="outline-text-4" id="text-org2082d62">
+<div id="outline-container-orgbf3c0e9" class="outline-4">
+<h4 id="orgbf3c0e9">2.1.1 Datos</h4>
+<div class="outline-text-4" id="text-orgbf3c0e9">
 <ul class="org-ul">
 <li><b><b>Tipos de Datos</b></b>: Estructurados (bases de datos) y no estructurados (imágenes, texto).</li>
 <li><b><b>Importancia</b></b>: Los datos son el combustible principal para entrenar modelos de IA.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc228a46" class="outline-4">
-<h4 id="orgc228a46">Algoritmos</h4>
-<div class="outline-text-4" id="text-orgc228a46">
+<div id="outline-container-orge5dde09" class="outline-4">
+<h4 id="orge5dde09">Algoritmos</h4>
+<div class="outline-text-4" id="text-orge5dde09">
 <ul class="org-ul">
 <li><b><b>Definición</b></b>: Ecuaciones matemáticas que procesan datos para tomar decisiones o realizar predicciones.</li>
 <li><b><b>Ejemplos</b></b>:
@@ -688,9 +688,9 @@ Answer from Perplexity: pplx.ai/share
 </ul>
 </div>
 </div>
-<div id="outline-container-org432b392" class="outline-4">
-<h4 id="org432b392">Redes Neuronales</h4>
-<div class="outline-text-4" id="text-org432b392">
+<div id="outline-container-org777c55c" class="outline-4">
+<h4 id="org777c55c">Redes Neuronales</h4>
+<div class="outline-text-4" id="text-org777c55c">
 <ul class="org-ul">
 <li><p>
 <b><b>Arquitectura</b></b>: Inspiradas en el cerebro humano, consisten en capas de neuronas interconectadas.
@@ -730,13 +730,13 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-org808b88e" class="outline-3">
-<h3 id="org808b88e">Proceso de Entrenamiento</h3>
-<div class="outline-text-3" id="text-org808b88e">
+<div id="outline-container-org5d0ff41" class="outline-3">
+<h3 id="org5d0ff41">Proceso de Entrenamiento</h3>
+<div class="outline-text-3" id="text-org5d0ff41">
 </div>
-<div id="outline-container-orgbd13e7f" class="outline-4">
-<h4 id="orgbd13e7f">División de Datos</h4>
-<div class="outline-text-4" id="text-orgbd13e7f">
+<div id="outline-container-org88d26a9" class="outline-4">
+<h4 id="org88d26a9">División de Datos</h4>
+<div class="outline-text-4" id="text-org88d26a9">
 <ul class="org-ul">
 <li><b><b>Entrenamiento</b></b>: 70-80% de los datos para ajustar el modelo.</li>
 <li><b><b>Validación</b></b>: 15% para evaluar el rendimiento durante el entrenamiento.</li>
@@ -744,22 +744,22 @@ Answer from Perplexity: pplx.ai/share
 </ul>
 </div>
 </div>
-<div id="outline-container-orge695bf5" class="outline-4">
-<h4 id="orge695bf5">Ajuste de Parámetros</h4>
-<div class="outline-text-4" id="text-orge695bf5">
+<div id="outline-container-org639576c" class="outline-4">
+<h4 id="org639576c">Ajuste de Parámetros</h4>
+<div class="outline-text-4" id="text-org639576c">
 <ul class="org-ul">
 <li><b><b>Retropropagación</b></b>: Algoritmo para ajustar los pesos de las neuronas según el error de predicción.</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-org4cba6b6" class="outline-3">
-<h3 id="org4cba6b6">Tipos de Modelos</h3>
-<div class="outline-text-3" id="text-org4cba6b6">
+<div id="outline-container-org5245869" class="outline-3">
+<h3 id="org5245869">Tipos de Modelos</h3>
+<div class="outline-text-3" id="text-org5245869">
 </div>
-<div id="outline-container-org979e8eb" class="outline-4">
-<h4 id="org979e8eb">Modelos de Aprendizaje</h4>
-<div class="outline-text-4" id="text-org979e8eb">
+<div id="outline-container-org499984d" class="outline-4">
+<h4 id="org499984d">Modelos de Aprendizaje</h4>
+<div class="outline-text-4" id="text-org499984d">
 <ul class="org-ul">
 <li><b><b>Aprendizaje Supervisado</b></b>: El sistema aprende a partir de datos etiquetados.</li>
 <li><b><b>Aprendizaje No Supervisado</b></b>: El sistema busca patrones en datos sin etiquetas.</li>
@@ -767,9 +767,9 @@ Answer from Perplexity: pplx.ai/share
 </ul>
 </div>
 </div>
-<div id="outline-container-orga00250b" class="outline-4">
-<h4 id="orga00250b">Modelos de Redes Neuronales</h4>
-<div class="outline-text-4" id="text-orga00250b">
+<div id="outline-container-org9dbb8da" class="outline-4">
+<h4 id="org9dbb8da">Modelos de Redes Neuronales</h4>
+<div class="outline-text-4" id="text-org9dbb8da">
 <ul class="org-ul">
 <li><b><b>Redes Neuronales Artificiales (ANN)</b></b>: Simulan el comportamiento del cerebro humano.</li>
 <li><b><b>Redes Neuronales Convolucionales (CNN)</b></b>: Usadas para el procesamiento de imágenes.</li>
@@ -778,13 +778,13 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-org76b6cbb" class="outline-3">
-<h3 id="org76b6cbb">Herramientas y Frameworks</h3>
-<div class="outline-text-3" id="text-org76b6cbb">
+<div id="outline-container-orga8d2e3b" class="outline-3">
+<h3 id="orga8d2e3b">Herramientas y Frameworks</h3>
+<div class="outline-text-3" id="text-orga8d2e3b">
 </div>
-<div id="outline-container-org571aa18" class="outline-4">
-<h4 id="org571aa18">Frameworks Populares</h4>
-<div class="outline-text-4" id="text-org571aa18">
+<div id="outline-container-orge1cbd3c" class="outline-4">
+<h4 id="orge1cbd3c">Frameworks Populares</h4>
+<div class="outline-text-4" id="text-orge1cbd3c">
 <ul class="org-ul">
 <li><b><b>TensorFlow</b></b>: Desarrollado por Google, ideal para modelos complejos.</li>
 <li><b><b>PyTorch</b></b>: Fácil de usar y flexible, popular entre investigadores.</li>
@@ -792,9 +792,9 @@ Answer from Perplexity: pplx.ai/share
 </ul>
 </div>
 </div>
-<div id="outline-container-org88638a6" class="outline-4">
-<h4 id="org88638a6">Bibliotecas de Apoyo</h4>
-<div class="outline-text-4" id="text-org88638a6">
+<div id="outline-container-org38b1ab2" class="outline-4">
+<h4 id="org38b1ab2">Bibliotecas de Apoyo</h4>
+<div class="outline-text-4" id="text-org38b1ab2">
 <ul class="org-ul">
 <li><b><b>NumPy</b></b>: Para operaciones matemáticas.</li>
 <li><b><b>Pandas</b></b>: Para manipulación de datos.</li>
@@ -934,9 +934,9 @@ Answer from Perplexity: pplx.ai/share
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - Introducción]]></title>
   <description><![CDATA[
-<div id="outline-container-org9fe18b9" class="outline-2">
-<h2 id="org9fe18b9">Introducción a la Inteligencia Artificial</h2>
-<div class="outline-text-2" id="text-org9fe18b9">
+<div id="outline-container-org197143e" class="outline-2">
+<h2 id="org197143e">Introducción a la Inteligencia Artificial</h2>
+<div class="outline-text-2" id="text-org197143e">
 <p>
 La Inteligencia Artificial (IA) ha dejado de ser un concepto futurista para convertirse en una realidad omnipresente que impacta prácticamente todos los aspectos de nuestra vida cotidiana. Desde los asistentes virtuales que responden nuestras preguntas más simples hasta sistemas avanzados que diagnostican enfermedades con precisión médica, la IA está transformando industrias, redefiniendo límites tecnológicos y desafiando nuestra comprensión sobre qué significa "pensar".  
 </p>
@@ -979,15 +979,18 @@ Answer from Perplexity: pplx.ai/share
 <item>
   <title><![CDATA[Tutorial de Ciberseguridad Básica para Equipos Linux y Otros Sistemas Operativos III]]></title>
   <description><![CDATA[
-<div id="outline-container-orgf11aec6" class="outline-2">
-<h2 id="orgf11aec6"><span class="section-number-2">1.</span> Capítulo 3: Ciberseguridad en Otros Sistemas Operativos (Windows y macOS)</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org734a299" class="outline-2">
+<h2 id="org734a299">Capítulo 3: Ciberseguridad en Otros Sistemas Operativos (Windows y macOS)</h2>
+<div class="outline-text-2" id="text-org734a299">
+</div>
+<div id="outline-container-orgaef945e" class="outline-3">
+<h3 id="orgaef945e">Ciberseguridad en Windows**</h3>
+<div class="outline-text-3" id="text-orgaef945e">
+</div>
+<div id="outline-container-org2b06d99" class="outline-4">
+<h4 id="org2b06d99">Configuración inicial***</h4>
+<div class="outline-text-4" id="text-org2b06d99">
 <p>
-<b><b>3.1 Ciberseguridad en Windows</b></b>
-</p>
-
-<p>
-<b><b><b>3.1.1 Configuración inicial</b></b></b>
 Windows es uno de los sistemas operativos más utilizados, lo que lo convierte en un objetivo frecuente para los atacantes. Sigue estos pasos para mejorar su seguridad:
 </p>
 
@@ -996,21 +999,26 @@ Windows es uno de los sistemas operativos más utilizados, lo que lo convierte e
 <li><b><b>Configurar BitLocker</b></b>: Si tu versión de Windows lo permite, activa el cifrado de disco BitLocker.</li>
 <li><b><b>Desactivar servicios innecesarios</b></b>: Deshabilita características como el "Acceso remoto" si no las necesitas.</li>
 </ul>
-
-<p>
-<b><b><b>3.1.2 Herramientas adicionales</b></b></b>
-</p>
+</div>
+</div>
+<div id="outline-container-org33045cc" class="outline-4">
+<h4 id="org33045cc">Herramientas adicionales***</h4>
+<div class="outline-text-4" id="text-org33045cc">
 <ul class="org-ul">
 <li><b><b>Malwarebytes</b></b>: Un complemento excelente para Windows Defender.</li>
 <li><b><b>AdGuard</b></b>: Bloqueador de anuncios y malware en navegadores.</li>
 </ul>
-
+</div>
+</div>
+</div>
+<div id="outline-container-orgec6b95f" class="outline-3">
+<h3 id="orgec6b95f">Ciberseguridad en macOS**</h3>
+<div class="outline-text-3" id="text-orgec6b95f">
+</div>
+<div id="outline-container-orgb5b5400" class="outline-4">
+<h4 id="orgb5b5400">Configuración básica***</h4>
+<div class="outline-text-4" id="text-orgb5b5400">
 <p>
-<b><b>3.2 Ciberseguridad en macOS</b></b>
-</p>
-
-<p>
-<b><b><b>3.2.1 Configuración básica</b></b></b>
 macOS es conocido por su seguridad inherente, pero aún así requiere atención:
 </p>
 
@@ -1019,21 +1027,26 @@ macOS es conocido por su seguridad inherente, pero aún así requiere atención:
 <li><b><b>FileVault</b></b>: Activa el cifrado de disco FileVault para proteger tus datos.</li>
 <li><b><b>Firewall</b></b>: Habilita el firewall en Preferencias del Sistema &gt; Seguridad y Privacidad.</li>
 </ul>
-
-<p>
-<b><b><b>3.2.2 Buenas prácticas</b></b></b>
-</p>
+</div>
+</div>
+<div id="outline-container-org9504dd0" class="outline-4">
+<h4 id="org9504dd0">Buenas prácticas***</h4>
+<div class="outline-text-4" id="text-org9504dd0">
 <ul class="org-ul">
 <li><b><b>No desactivar SIP</b></b>: El System Integrity Protection (SIP) es una característica crítica de macOS que protege archivos y directorios del sistema.</li>
 <li><b><b>Actualizaciones automáticas</b></b>: Configura macOS para que instale actualizaciones automáticamente.</li>
 </ul>
-
+</div>
+</div>
+</div>
+<div id="outline-container-org04a4d54" class="outline-3">
+<h3 id="org04a4d54">Medidas universales para todos los sistemas operativos**</h3>
+<div class="outline-text-3" id="text-org04a4d54">
+</div>
+<div id="outline-container-orga661535" class="outline-4">
+<h4 id="orga661535">Copias de seguridad***</h4>
+<div class="outline-text-4" id="text-orga661535">
 <p>
-<b><b>3.3 Medidas universales para todos los sistemas operativos</b></b>
-</p>
-
-<p>
-<b><b><b>3.3.1 Copias de seguridad</b></b></b>
 Independientemente del sistema operativo, realiza copias de seguridad periódicas. Usa herramientas como:
 </p>
 
@@ -1042,14 +1055,20 @@ Independientemente del sistema operativo, realiza copias de seguridad periódica
 <li><b><b>Backup and Restore</b></b> (Windows)</li>
 <li><b><b>rsync</b></b> o <b><b>Deja Dup</b></b> (Linux)</li>
 </ul>
-
+</div>
+</div>
+<div id="outline-container-org0215ff9" class="outline-4">
+<h4 id="org0215ff9">Educación continua***</h4>
+<div class="outline-text-4" id="text-org0215ff9">
 <p>
-<b><b><b>3.3.2 Educación continua</b></b></b>
 Mantente informado sobre las últimas amenazas y mejores prácticas. Participa en foros, sigue blogs de seguridad y asiste a webinars relacionados.
 </p>
-
+</div>
+</div>
+<div id="outline-container-org57f12a4" class="outline-4">
+<h4 id="org57f12a4">Uso de VPN***</h4>
+<div class="outline-text-4" id="text-org57f12a4">
 <p>
-<b><b><b>3.3.3 Uso de VPN</b></b></b>
 Una red privada virtual (VPN) cifra tu tráfico y oculta tu dirección IP, lo que es especialmente útil en redes públicas.
 </p>
 
@@ -1058,9 +1077,11 @@ Una red privada virtual (VPN) cifra tu tráfico y oculta tu dirección IP, lo qu
 </p>
 </div>
 </div>
-<div id="outline-container-org1c5372d" class="outline-2">
-<h2 id="org1c5372d"><span class="section-number-2">2.</span> Conclusión</h2>
-<div class="outline-text-2" id="text-2">
+</div>
+</div>
+<div id="outline-container-org2a343d8" class="outline-2">
+<h2 id="org2a343d8">Conclusión</h2>
+<div class="outline-text-2" id="text-org2a343d8">
 <p>
 La ciberseguridad es una responsabilidad compartida entre el usuario y el sistema operativo. Siguiendo las prácticas descritas en este tutorial, puedes reducir significativamente el riesgo de ataques y proteger tus datos en cualquier plataforma. Recuerda que la seguridad no es un evento único, sino un proceso continuo que requiere atención constante.
 </p>
@@ -1076,11 +1097,14 @@ La ciberseguridad es una responsabilidad compartida entre el usuario y el sistem
 <item>
   <title><![CDATA[Tutorial de Ciberseguridad Básica para Equipos Linux y Otros Sistemas Operativos II]]></title>
   <description><![CDATA[
-<div id="outline-container-orga28344b" class="outline-2">
-<h2 id="orga28344b"><span class="section-number-2">1.</span> Capítulo 2: Configuración y Prácticas de Seguridad en Linux</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orge9bab04" class="outline-2">
+<h2 id="orge9bab04">Capítulo 2: Configuración y Prácticas de Seguridad en Linux</h2>
+<div class="outline-text-2" id="text-orge9bab04">
+</div>
+<div id="outline-container-org977949f" class="outline-3">
+<h3 id="org977949f">2.1 Ventajas de Linux en términos de seguridad**</h3>
+<div class="outline-text-3" id="text-org977949f">
 <p>
-<b><b>2.1 Ventajas de Linux en términos de seguridad</b></b>
 Linux es conocido por su robustez y flexibilidad en términos de seguridad. Algunas de sus ventajas incluyen:
 </p>
 
@@ -1089,13 +1113,16 @@ Linux es conocido por su robustez y flexibilidad en términos de seguridad. Algu
 <li><b><b>Menor objetivo de ataque</b></b>: Debido a su menor popularidad en comparación con Windows, Linux es menos objetivo de ataques masivos.</li>
 <li><b><b>Software de código abierto</b></b>: La transparencia del código permite que la comunidad identifique y corrija vulnerabilidades rápidamente.</li>
 </ul>
-
+</div>
+</div>
+<div id="outline-container-org2bbb8a8" class="outline-3">
+<h3 id="org2bbb8a8">Configuración inicial de seguridad en Linux**</h3>
+<div class="outline-text-3" id="text-org2bbb8a8">
+</div>
+<div id="outline-container-orgec4fff4" class="outline-4">
+<h4 id="orgec4fff4">Actualización del sistema***</h4>
+<div class="outline-text-4" id="text-orgec4fff4">
 <p>
-<b><b>2.2 Configuración inicial de seguridad en Linux</b></b>
-</p>
-
-<p>
-<b><b><b>2.2.1 Actualización del sistema</b></b></b>
 Asegúrate de que tu distribución de Linux esté completamente actualizada. Usa los siguientes comandos dependiendo de tu gestor de paquetes:
 </p>
 
@@ -1105,9 +1132,12 @@ sudo dnf update -y                     <span style="color: #8195b0; font-style: 
 sudo pacman -Syu                       <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para Arch Linux</span>
 </pre>
 </div>
-
+</div>
+</div>
+<div id="outline-container-org3cc3ee0" class="outline-4">
+<h4 id="org3cc3ee0">Creación de un usuario no root***</h4>
+<div class="outline-text-4" id="text-org3cc3ee0">
 <p>
-<b><b><b>2.2.2 Creación de un usuario no root</b></b></b>
 Es una mala práctica usar el usuario "root" para tareas diarias. Crea un usuario estándar y otórgale privilegios de superusuario cuando sea necesario:
 </p>
 
@@ -1117,9 +1147,12 @@ sudo usermod -aG sudo nombreusuario     <span style="color: #8195b0; font-style:
 sudo usermod -aG wheel nombreusuario    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para sistemas basados en Red Hat</span>
 </pre>
 </div>
-
+</div>
+</div>
+<div id="outline-container-org893c5cd" class="outline-4">
+<h4 id="org893c5cd">Configuración del firewall***</h4>
+<div class="outline-text-4" id="text-org893c5cd">
 <p>
-<b><b><b>2.2.3 Configuración del firewall</b></b></b>
 El firewall es esencial para bloquear accesos no deseados. Usa `ufw` (Uncomplicated Firewall) para configurarlo fácilmente:
 </p>
 
@@ -1130,13 +1163,17 @@ sudo ufw allow ssh                      <span style="color: #8195b0; font-style:
 sudo ufw status                         <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar el estado</span>
 </pre>
 </div>
-
+</div>
+</div>
+</div>
+<div id="outline-container-org0ff691e" class="outline-3">
+<h3 id="org0ff691e">Herramientas de seguridad recomendadas para Linux**</h3>
+<div class="outline-text-3" id="text-org0ff691e">
+</div>
+<div id="outline-container-orgcc5ba80" class="outline-4">
+<h4 id="orgcc5ba80">Antivirus***</h4>
+<div class="outline-text-4" id="text-orgcc5ba80">
 <p>
-<b><b>2.3 Herramientas de seguridad recomendadas para Linux</b></b>
-</p>
-
-<p>
-<b><b><b>2.3.1 Antivirus</b></b></b>
 Aunque Linux es menos propenso a malware, no está exento de riesgos. Usa herramientas como ClamAV para escanear archivos:
 </p>
 
@@ -1145,9 +1182,12 @@ Aunque Linux es menos propenso a malware, no está exento de riesgos. Usa herram
 clamscan -r /ruta/a/escanear            <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Escanear un directorio espec&#237;fico</span>
 </pre>
 </div>
-
+</div>
+</div>
+<div id="outline-container-org58a379d" class="outline-4">
+<h4 id="org58a379d">Auditoría de seguridad***</h4>
+<div class="outline-text-4" id="text-org58a379d">
 <p>
-<b><b><b>2.3.2 Auditoría de seguridad</b></b></b>
 Herramientas como Lynis pueden ayudarte a realizar auditorías de seguridad y detectar vulnerabilidades:
 </p>
 
@@ -1156,11 +1196,12 @@ Herramientas como Lynis pueden ayudarte a realizar auditorías de seguridad y de
 sudo lynis audit system                 <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar auditor&#237;a</span>
 </pre>
 </div>
-
-<p>
-<b><b>2.4 Buenas prácticas adicionales en Linux</b></b>
-</p>
-
+</div>
+</div>
+</div>
+<div id="outline-container-org9a56434" class="outline-3">
+<h3 id="org9a56434">Buenas prácticas adicionales en Linux**</h3>
+<div class="outline-text-3" id="text-org9a56434">
 <ul class="org-ul">
 <li><b><b>SSH seguro</b></b>: Cambia el puerto predeterminado (22), deshabilita el inicio de sesión como root y usa autenticación por clave en lugar de contraseñas.</li>
 <li><b><b>Cifrado de disco</b></b>: Activa el cifrado de disco durante la instalación para proteger tus datos en caso de robo.</li>
@@ -1176,6 +1217,7 @@ sudo lynis audit system                 <span style="color: #8195b0; font-style:
 </p>
 </div>
 </div>
+</div>
 <div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ciberseguridad.html">ciberseguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
   <category><![CDATA[ciberseguridad]]></category>
   <category><![CDATA[tutoriales]]></category>
@@ -1186,13 +1228,13 @@ sudo lynis audit system                 <span style="color: #8195b0; font-style:
 <item>
   <title><![CDATA[Tutorial de Ciberseguridad Básica para Equipos Linux y Otros Sistemas Operativos I]]></title>
   <description><![CDATA[
-<div id="outline-container-orgde26ee9" class="outline-2">
-<h2 id="orgde26ee9"><span class="section-number-2">1.</span> Capítulo 1: Introducción a la Ciberseguridad en tu Equipo</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org36916ad" class="outline-2">
+<h2 id="org36916ad">Capítulo 1: Introducción a la Ciberseguridad en tu Equipo</h2>
+<div class="outline-text-2" id="text-org36916ad">
 </div>
-<div id="outline-container-org0e776ec" class="outline-3">
-<h3 id="org0e776ec"><span class="section-number-3">1.1.</span> 1.1 ¿Qué es la ciberseguridad y por qué es importante?</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-orgcbfc741" class="outline-3">
+<h3 id="orgcbfc741">1.1 ¿Qué es la ciberseguridad y por qué es importante?</h3>
+<div class="outline-text-3" id="text-orgcbfc741">
 <p>
 La ciberseguridad se refiere al conjunto de prácticas, herramientas y estrategias diseñadas para proteger dispositivos, redes y datos contra accesos no autorizados, ataques maliciosos o cualquier tipo de amenaza digital. En un mundo donde la tecnología está cada vez más integrada en nuestra vida diaria, garantizar la seguridad de nuestros equipos es crucial.
 </p>
@@ -1201,9 +1243,12 @@ La ciberseguridad se refiere al conjunto de prácticas, herramientas y estrategi
 <li><b><b>Importancia</b></b>: Los ataques cibernéticos pueden comprometer información personal, financiera o profesional, causando pérdidas económicas, robos de identidad o incluso daños reputacionales.</li>
 <li><b><b>Objetivo básico</b></b>: Mantener la confidencialidad, integridad y disponibilidad de los datos (principio CIA).</li>
 </ul>
-
+</div>
+</div>
+<div id="outline-container-org140b68a" class="outline-3">
+<h3 id="org140b68a">1.2 Amenazas comunes a tener en cuenta**</h3>
+<div class="outline-text-3" id="text-org140b68a">
 <p>
-<b><b>1.2 Amenazas comunes a tener en cuenta</b></b>
 Antes de profundizar en las medidas específicas, es importante conocer algunas de las principales amenazas que enfrentan los usuarios:
 </p>
 
@@ -1214,9 +1259,12 @@ Antes de profundizar en las medidas específicas, es importante conocer algunas 
 <li><b><b>Vulnerabilidades del sistema</b></b>: Fallos en el software o el sistema operativo que pueden ser explotados por atacantes.</li>
 <li><b><b>Redes inseguras</b></b>: Conexiones Wi-Fi públicas o mal configuradas que permiten el acceso a terceros no autorizados.</li>
 </ul>
-
+</div>
+</div>
+<div id="outline-container-org36a2ea8" class="outline-3">
+<h3 id="org36a2ea8">1.3 Principios básicos de seguridad**</h3>
+<div class="outline-text-3" id="text-org36a2ea8">
 <p>
-<b><b>1.3 Principios básicos de seguridad</b></b>
 Independientemente del sistema operativo que utilices, hay algunos principios fundamentales que debes seguir:
 </p>
 
@@ -1248,16 +1296,16 @@ Independientemente del sistema operativo que utilices, hay algunos principios fu
 <item>
   <title><![CDATA[Scripts de Bash para Ciberseguridad en Linux: Detección y Automatización]]></title>
   <description><![CDATA[
-<div id="outline-container-org1a7f9bc" class="outline-2">
-<h2 id="org1a7f9bc"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-orga413c74" class="outline-2">
+<h2 id="orga413c74"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 En el ámbito de la ciberseguridad, la automatización de tareas mediante scripts es una habilidad crucial. Los scripts de Bash en Linux ofrecen una poderosa herramienta para realizar análisis de seguridad, detección de amenazas y auditorías de sistemas. En este post, exploraremos varios scripts de Bash diseñados para mejorar la seguridad y automatizar procesos de detección en entornos Linux.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd5c3af6" class="outline-2">
-<h2 id="orgd5c3af6"><span class="section-number-2">2.</span> Script 1: Detección Básica de Ciberataques</h2>
+<div id="outline-container-org90a695f" class="outline-2">
+<h2 id="org90a695f"><span class="section-number-2">2.</span> Script 1: Detección Básica de Ciberataques</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Este script realiza una serie de comprobaciones básicas para detectar posibles indicios de un ciberataque en un sistema Linux.
@@ -1312,8 +1360,8 @@ Este script realiza las siguientes comprobaciones:
 </ol>
 </div>
 </div>
-<div id="outline-container-org619f033" class="outline-2">
-<h2 id="org619f033"><span class="section-number-2">3.</span> Script 2: Análisis de Intentos de Acceso No Válidos</h2>
+<div id="outline-container-org342caf9" class="outline-2">
+<h2 id="org342caf9"><span class="section-number-2">3.</span> Script 2: Análisis de Intentos de Acceso No Válidos</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Este script se enfoca en analizar los intentos de acceso no válidos en un archivo de registro específico.
@@ -1346,8 +1394,8 @@ Este script:
 </ol>
 </div>
 </div>
-<div id="outline-container-org4b9a3bc" class="outline-2">
-<h2 id="org4b9a3bc"><span class="section-number-2">4.</span> Script 3: Detección de Equipos en la Red Local</h2>
+<div id="outline-container-org3aa3e5d" class="outline-2">
+<h2 id="org3aa3e5d"><span class="section-number-2">4.</span> Script 3: Detección de Equipos en la Red Local</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Este script utiliza el comando ping para detectar equipos activos en la red local.
@@ -1380,8 +1428,8 @@ Este script:
 </ol>
 </div>
 </div>
-<div id="outline-container-org9557c69" class="outline-2">
-<h2 id="org9557c69"><span class="section-number-2">5.</span> Consideraciones de Seguridad</h2>
+<div id="outline-container-orgbad4036" class="outline-2">
+<h2 id="orgbad4036"><span class="section-number-2">5.</span> Consideraciones de Seguridad</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Al utilizar estos scripts, es importante tener en cuenta:
@@ -1395,28 +1443,28 @@ Al utilizar estos scripts, es importante tener en cuenta:
 </ol>
 
 
-<figure id="org9d923fb">
+<figure id="org2152095">
 <img src="post_diagram.png" alt="post_diagram.png">
 
 </figure>
 
 
-<figure id="org79ad43b">
+<figure id="org2c66bac">
 <img src="images/post_diagram.png" alt="post_diagram.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-orga669fef" class="outline-2">
-<h2 id="orga669fef"><span class="section-number-2">6.</span> Conclusión</h2>
+<div id="outline-container-org611afd0" class="outline-2">
+<h2 id="org611afd0"><span class="section-number-2">6.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Los scripts de Bash son herramientas poderosas para la automatización de tareas de seguridad en Linux. Desde la detección básica de amenazas hasta el análisis de redes, estos scripts pueden mejorar significativamente la eficiencia de las auditorías de seguridad y la respuesta a incidentes. Sin embargo, es crucial utilizarlos de manera responsable y en conjunto con otras prácticas de seguridad robustas.
 </p>
 </div>
 </div>
-<div id="outline-container-orga7a0069" class="outline-2">
-<h2 id="orga7a0069"><span class="section-number-2">7.</span> Referencias</h2>
+<div id="outline-container-org9e70459" class="outline-2">
+<h2 id="org9e70459"><span class="section-number-2">7.</span> Referencias</h2>
 <div class="outline-text-2" id="text-7">
 <ol class="org-ol">
 <li>Centro de Investigaciones Sociológicas (CIS). (2024). Barómetro mensual. <a href="https://www.cis.es/">https://www.cis.es/</a></li>
@@ -1439,24 +1487,24 @@ Los scripts de Bash son herramientas poderosas para la automatización de tareas
 <item>
   <title><![CDATA[Creación de un Blog Estático con GitHub]]></title>
   <description><![CDATA[
-<div id="outline-container-org77410cd" class="outline-2">
-<h2 id="org77410cd"><span class="section-number-2">1.</span> Introducción</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org1310ca5" class="outline-2">
+<h2 id="org1310ca5">Introducción</h2>
+<div class="outline-text-2" id="text-org1310ca5">
 <p>
 GitHub es una plataforma ampliamente utilizada para el desarrollo colaborativo de software, pero también ofrece herramientas poderosas para la creación de sitios web estáticos, como blogs. En este post exploraremos cómo GitHub puede ser utilizado para crear un blog estático, analizando sus opciones, ventajas, desventajas y comparándolo con otras alternativas populares.
 </p>
 </div>
 </div>
-<div id="outline-container-org97d5533" class="outline-2">
-<h2 id="org97d5533"><span class="section-number-2">2.</span> ¿Qué es un Blog Estático?</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-orgfd00ad5" class="outline-2">
+<h2 id="orgfd00ad5">¿Qué es un Blog Estático?</h2>
+<div class="outline-text-2" id="text-orgfd00ad5">
 <p>
 Un blog estático es un sitio web que no utiliza bases de datos ni lógica del lado del servidor para generar contenido dinámico. En su lugar, todos los archivos HTML, CSS y JavaScript se generan previamente y se sirven directamente al usuario. Esto lo hace rápido, seguro y fácil de mantener.
 </p>
 </div>
-<div id="outline-container-org1205e85" class="outline-3">
-<h3 id="org1205e85"><span class="section-number-3">2.1.</span> Características principales:</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-org02f9cdf" class="outline-3">
+<h3 id="org02f9cdf">Características principales:</h3>
+<div class="outline-text-3" id="text-org02f9cdf">
 <ul class="org-ul">
 <li>Contenido pregenerado.</li>
 <li>Sin necesidad de bases de datos.</li>
@@ -1466,139 +1514,139 @@ Un blog estático es un sitio web que no utiliza bases de datos ni lógica del l
 </div>
 </div>
 </div>
-<div id="outline-container-org4f5d803" class="outline-2">
-<h2 id="org4f5d803"><span class="section-number-2">3.</span> Opciones de GitHub para Crear un Blog Estático</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org0657b18" class="outline-2">
+<h2 id="org0657b18">Opciones de GitHub para Crear un Blog Estático</h2>
+<div class="outline-text-2" id="text-org0657b18">
 <p>
 GitHub Pages es la principal herramienta de GitHub para alojar sitios web estáticos. A continuación, describimos las opciones disponibles:
 </p>
 </div>
-<div id="outline-container-org8f55385" class="outline-3">
-<h3 id="org8f55385"><span class="section-number-3">3.1.</span> 1. Repositorio Personal</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-org7301afb" class="outline-3">
+<h3 id="org7301afb">1. Repositorio Personal</h3>
+<div class="outline-text-3" id="text-org7301afb">
 <ul class="org-ul">
 <li>Crea un repositorio llamado `username.github.io` (donde `username` es tu nombre de usuario en GitHub).</li>
 <li>El contenido del repositorio se publicará automáticamente en `<a href="https://username.github.io">https://username.github.io</a>`.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc5cee6f" class="outline-3">
-<h3 id="orgc5cee6f"><span class="section-number-3">3.2.</span> 2. Proyectos dentro de un Repositorio</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-org8ca6ad7" class="outline-3">
+<h3 id="org8ca6ad7">2. Proyectos dentro de un Repositorio</h3>
+<div class="outline-text-3" id="text-org8ca6ad7">
 <ul class="org-ul">
 <li>Puedes habilitar GitHub Pages en cualquier repositorio bajo la pestaña "Settings".</li>
 <li>Selecciona la rama y la carpeta donde reside tu sitio estático.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org028dcde" class="outline-3">
-<h3 id="org028dcde"><span class="section-number-3">3.3.</span> 3. Generadores de Sitios Estáticos</h3>
-<div class="outline-text-3" id="text-3-3">
+<div id="outline-container-orgc2e474b" class="outline-3">
+<h3 id="orgc2e474b">3. Generadores de Sitios Estáticos</h3>
+<div class="outline-text-3" id="text-orgc2e474b">
 <p>
 GitHub Pages soporta varios generadores de sitios estáticos, como Jekyll, Hugo, Gatsby, etc. Estos generadores permiten escribir contenido en formato Markdown y generar automáticamente el sitio estático.
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgfd2b3b6" class="outline-2">
-<h2 id="orgfd2b3b6"><span class="section-number-2">4.</span> Ventajas de Usar GitHub Pages</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-orgd865e1a" class="outline-2">
+<h2 id="orgd865e1a">Ventajas de Usar GitHub Pages</h2>
+<div class="outline-text-2" id="text-orgd865e1a">
 <p>
 A continuación, enumeramos las principales ventajas de usar GitHub Pages para crear un blog estático:
 </p>
 </div>
-<div id="outline-container-org12d2afc" class="outline-3">
-<h3 id="org12d2afc"><span class="section-number-3">4.1.</span> 1. Gratuito</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-org5ad1bea" class="outline-3">
+<h3 id="org5ad1bea">1. Gratuito</h3>
+<div class="outline-text-3" id="text-org5ad1bea">
 <ul class="org-ul">
 <li>No hay costos asociados con el uso de GitHub Pages para alojar tu sitio.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd08b70c" class="outline-3">
-<h3 id="orgd08b70c"><span class="section-number-3">4.2.</span> 2. Integración Nativa</h3>
-<div class="outline-text-3" id="text-4-2">
+<div id="outline-container-org7dbf51c" class="outline-3">
+<h3 id="org7dbf51c">2. Integración Nativa</h3>
+<div class="outline-text-3" id="text-org7dbf51c">
 <ul class="org-ul">
 <li>GitHub Pages está integrado directamente con GitHub, lo que facilita el flujo de trabajo de desarrollo y publicación.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org5eaff02" class="outline-3">
-<h3 id="org5eaff02"><span class="section-number-3">4.3.</span> 3. Control de Versiones</h3>
-<div class="outline-text-3" id="text-4-3">
+<div id="outline-container-orgf7de8f0" class="outline-3">
+<h3 id="orgf7de8f0">3. Control de Versiones</h3>
+<div class="outline-text-3" id="text-orgf7de8f0">
 <ul class="org-ul">
 <li>Al estar basado en Git, puedes aprovechar el control de versiones para gestionar cambios en tu blog.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc74adf5" class="outline-3">
-<h3 id="orgc74adf5"><span class="section-number-3">4.4.</span> 4. Rendimiento</h3>
-<div class="outline-text-3" id="text-4-4">
+<div id="outline-container-orgb2a1119" class="outline-3">
+<h3 id="orgb2a1119">4. Rendimiento</h3>
+<div class="outline-text-3" id="text-orgb2a1119">
 <ul class="org-ul">
 <li>Los sitios estáticos son inherentemente rápidos porque no requieren procesamiento del lado del servidor.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orge91ce2e" class="outline-3">
-<h3 id="orge91ce2e"><span class="section-number-3">4.5.</span> 5. Comunidad y Soporte</h3>
-<div class="outline-text-3" id="text-4-5">
+<div id="outline-container-org20ab286" class="outline-3">
+<h3 id="org20ab286">5. Comunidad y Soporte</h3>
+<div class="outline-text-3" id="text-org20ab286">
 <ul class="org-ul">
 <li>GitHub tiene una comunidad activa y abundante documentación para ayudarte a resolver problemas.</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-org101ffca" class="outline-2">
-<h2 id="org101ffca"><span class="section-number-2">5.</span> Desventajas de Usar GitHub Pages</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-org6082993" class="outline-2">
+<h2 id="org6082993">Desventajas de Usar GitHub Pages</h2>
+<div class="outline-text-2" id="text-org6082993">
 <p>
 A pesar de sus ventajas, GitHub Pages también tiene algunas limitaciones:
 </p>
 </div>
-<div id="outline-container-org9c94244" class="outline-3">
-<h3 id="org9c94244"><span class="section-number-3">5.1.</span> 1. Limitaciones de Personalización</h3>
-<div class="outline-text-3" id="text-5-1">
+<div id="outline-container-org50145ea" class="outline-3">
+<h3 id="org50145ea">1. Limitaciones de Personalización</h3>
+<div class="outline-text-3" id="text-org50145ea">
 <ul class="org-ul">
 <li>No puedes instalar plugins personalizados en Jekyll sin configuraciones adicionales.</li>
 <li>Algunas funcionalidades avanzadas pueden requerir servicios externos.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org579fadf" class="outline-3">
-<h3 id="org579fadf"><span class="section-number-3">5.2.</span> 2. Sin Bases de Datos</h3>
-<div class="outline-text-3" id="text-5-2">
+<div id="outline-container-org521c1db" class="outline-3">
+<h3 id="org521c1db">2. Sin Bases de Datos</h3>
+<div class="outline-text-3" id="text-org521c1db">
 <ul class="org-ul">
 <li>Si necesitas funcionalidades dinámicas como comentarios o formularios de contacto, deberás integrar servicios externos como Disqus o Google Forms.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org24c68be" class="outline-3">
-<h3 id="org24c68be"><span class="section-number-3">5.3.</span> 3. Espacio de Almacenamiento Limitado</h3>
-<div class="outline-text-3" id="text-5-3">
+<div id="outline-container-org8c929cf" class="outline-3">
+<h3 id="org8c929cf">3. Espacio de Almacenamiento Limitado</h3>
+<div class="outline-text-3" id="text-org8c929cf">
 <ul class="org-ul">
 <li>GitHub Pages tiene un límite de 1 GB de almacenamiento por repositorio.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2a9c98e" class="outline-3">
-<h3 id="org2a9c98e"><span class="section-number-3">5.4.</span> 4. Curva de Aprendizaje</h3>
-<div class="outline-text-3" id="text-5-4">
+<div id="outline-container-org1d8e27e" class="outline-3">
+<h3 id="org1d8e27e">4. Curva de Aprendizaje</h3>
+<div class="outline-text-3" id="text-org1d8e27e">
 <ul class="org-ul">
 <li>Si no estás familiarizado con Git o Markdown, puede haber una curva de aprendizaje inicial.</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-org9ac1f84" class="outline-2">
-<h2 id="org9ac1f84"><span class="section-number-2">6.</span> Comparativa con Otras Opciones</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-org8fd8fd5" class="outline-2">
+<h2 id="org8fd8fd5">Comparativa con Otras Opciones</h2>
+<div class="outline-text-2" id="text-org8fd8fd5">
 <p>
 A continuación, comparamos GitHub Pages con otras plataformas populares para la creación de blogs estáticos.
 </p>
 </div>
-<div id="outline-container-org9dc28a8" class="outline-3">
-<h3 id="org9dc28a8"><span class="section-number-3">6.1.</span> Tabla Comparativa</h3>
-<div class="outline-text-3" id="text-6-1">
+<div id="outline-container-org11452f9" class="outline-3">
+<h3 id="org11452f9">Tabla Comparativa</h3>
+<div class="outline-text-3" id="text-org11452f9">
 <table>
 
 
@@ -1674,20 +1722,20 @@ A continuación, comparamos GitHub Pages con otras plataformas populares para la
 </table>
 </div>
 </div>
-<div id="outline-container-org63a6341" class="outline-3">
-<h3 id="org63a6341"><span class="section-number-3">6.2.</span> Gráfico Comparativo</h3>
-<div class="outline-text-3" id="text-6-2">
+<div id="outline-container-org6fe48a7" class="outline-3">
+<h3 id="org6fe48a7">Gráfico Comparativo</h3>
+<div class="outline-text-3" id="text-org6fe48a7">
 
-<figure id="orgfc6d644">
+<figure id="orgbee96a3">
 <img src="grafico-comparativo.png" alt="grafico-comparativo.png">
 
 </figure>
 </div>
 </div>
 </div>
-<div id="outline-container-orgbfb444b" class="outline-2">
-<h2 id="orgbfb444b"><span class="section-number-2">7.</span> Conclusión</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-orgd7e3ab6" class="outline-2">
+<h2 id="orgd7e3ab6">Conclusión</h2>
+<div class="outline-text-2" id="text-orgd7e3ab6">
 <p>
 GitHub Pages es una excelente opción para crear un blog estático, especialmente si ya estás familiarizado con Git y GitHub. Ofrece alojamiento gratuito, integración nativa y un rendimiento excepcional. Sin embargo, si necesitas más personalización o funcionalidades avanzadas, plataformas como Netlify o Vercel podrían ser mejores alternativas.
 </p>
@@ -1697,9 +1745,9 @@ Finalmente, la elección dependerá de tus necesidades específicas, habilidades
 </p>
 </div>
 </div>
-<div id="outline-container-org9b59964" class="outline-2">
-<h2 id="org9b59964"><span class="section-number-2">8.</span> Referencias</h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-org026af66" class="outline-2">
+<h2 id="org026af66">Referencias</h2>
+<div class="outline-text-2" id="text-org026af66">
 <ul class="org-ul">
 <li><a href="https://pages.github.com/">GitHub Pages</a></li>
 <li><a href="https://www.netlify.com/">Netlify</a></li>
@@ -1720,13 +1768,13 @@ Finalmente, la elección dependerá de tus necesidades específicas, habilidades
 <item>
   <title><![CDATA[Tutorial de Seguridad en Linux: Mínimo de Protección ante Ataques Informáticos (II)]]></title>
   <description><![CDATA[
-<div id="outline-container-orgfe423c6" class="outline-2">
-<h2 id="orgfe423c6"><span class="section-number-2">1.</span> Capítulo 2: Automatización y Análisis Avanzado</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org8b21ed4" class="outline-2">
+<h2 id="org8b21ed4">Capítulo 2: Automatización y Análisis Avanzado</h2>
+<div class="outline-text-2" id="text-org8b21ed4">
 </div>
-<div id="outline-container-org0877f3b" class="outline-3">
-<h3 id="org0877f3b"><span class="section-number-3">1.1.</span> Objetivos</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-orgc67696a" class="outline-3">
+<h3 id="orgc67696a">Objetivos</h3>
+<div class="outline-text-3" id="text-orgc67696a">
 <ul class="org-ul">
 <li>Automatizar tareas de seguridad con scripts.</li>
 <li>Analizar logs para detectar patrones sospechosos.</li>
@@ -1734,9 +1782,9 @@ Finalmente, la elección dependerá de tus necesidades específicas, habilidades
 </ul>
 </div>
 </div>
-<div id="outline-container-orgadc7dbb" class="outline-3">
-<h3 id="orgadc7dbb"><span class="section-number-3">1.2.</span> Paso 1: Automatizar Tareas con Scripts en Bash</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-orgd0bea96" class="outline-3">
+<h3 id="orgd0bea96">Paso 1: Automatizar Tareas con Scripts en Bash</h3>
+<div class="outline-text-3" id="text-orgd0bea96">
 <p>
 Crea un script para automatizar la revisión de logs y el bloqueo de IPs sospechosas.
 </p>
@@ -1746,18 +1794,18 @@ Crea un script para automatizar la revisión de logs y el bloqueo de IPs sospech
 Script `security<sub>monitor.sh</sub>`:
 </p>
 <div class="org-src-container">
-<pre class="src src-sh"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
-<span style="color: #004651;">LOG_FILE</span>=<span style="color: #005F00;">"/var/log/auth.log"</span>
-<span style="color: #004651;">BAN_LIST</span>=<span style="color: #005F00;">"/etc/fail2ban/jail.local"</span>
+<pre class="src src-sh"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #1857a4;">LOG_FILE</span>=<span style="color: #a44185;">"/var/log/auth.log"</span>
+<span style="color: #1857a4;">BAN_LIST</span>=<span style="color: #a44185;">"/etc/fail2ban/jail.local"</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Buscar IPs con m&#250;ltiples intentos fallidos</span>
-<span style="color: #004651;">SUSPICIOUS_IPS</span>=$(<span style="color: #1F55A0; font-weight: bold;">grep "Failed password" $LOG_FILE | awk '{print $(NF-3</span><span style="color: #005F00;">)}'</span> | sort | uniq -c | awk <span style="color: #005F00;">'$1 &gt; 3 {print $2}'</span>)
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Buscar IPs con m&#250;ltiples intentos fallidos</span>
+<span style="color: #1857a4;">SUSPICIOUS_IPS</span>=$(<span style="color: #219fd5; font-weight: bold;">grep "Failed password" $LOG_FILE | awk '{print $(NF-3</span><span style="color: #a44185;">)}'</span> | sort | uniq -c | awk <span style="color: #a44185;">'$1 &gt; 3 {print $2}'</span>)
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Bloquear IPs sospechosas</span>
-<span style="color: #D70000;">for</span> IP<span style="color: #D70000;"> in</span> $<span style="color: #004651;">SUSPICIOUS_IPS</span>; <span style="color: #D70000;">do</span>
-    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Bloqueando IP: $IP"</span>
-    sudo fail2ban-client set sshd banip $<span style="color: #004651;">IP</span>
-<span style="color: #D70000;">done</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Bloquear IPs sospechosas</span>
+<span style="color: #219fd5; font-style: italic;">for</span> IP<span style="color: #219fd5; font-style: italic;"> in</span> $<span style="color: #1857a4;">SUSPICIOUS_IPS</span>; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Bloqueando IP: $IP"</span>
+    sudo fail2ban-client set sshd banip $<span style="color: #1857a4;">IP</span>
+<span style="color: #219fd5; font-style: italic;">done</span>
 </pre>
 </div></li>
 
@@ -1778,9 +1826,9 @@ Añade la siguiente línea:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgb4cf443" class="outline-3">
-<h3 id="orgb4cf443"><span class="section-number-3">1.3.</span> Paso 2: Analizar Logs con Python</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-orgd476327" class="outline-3">
+<h3 id="orgd476327">Paso 2: Analizar Logs con Python</h3>
+<div class="outline-text-3" id="text-orgd476327">
 <p>
 Crea un script en Python para analizar logs y generar reportes.
 </p>
@@ -1790,30 +1838,30 @@ Crea un script en Python para analizar logs y generar reportes.
 Script `log<sub>analyzer.py</sub>`:
 </p>
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/usr/bin/env python3</span>
-<span style="color: #D70000;">import</span> re
-<span style="color: #D70000;">from</span> collections <span style="color: #D70000;">import</span> Counter
+<pre class="src src-python"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/usr/bin/env python3</span>
+<span style="color: #219fd5; font-style: italic;">import</span> re
+<span style="color: #219fd5; font-style: italic;">from</span> collections <span style="color: #219fd5; font-style: italic;">import</span> Counter
 
-<span style="color: #004651;">LOG_FILE</span> = <span style="color: #005F00;">"/var/log/auth.log"</span>
-<span style="color: #004651;">REPORT_FILE</span> = <span style="color: #005F00;">"/var/log/security_report.txt"</span>
+<span style="color: #1857a4;">LOG_FILE</span> = <span style="color: #a44185;">"/var/log/auth.log"</span>
+<span style="color: #1857a4;">REPORT_FILE</span> = <span style="color: #a44185;">"/var/log/security_report.txt"</span>
 
-<span style="color: #D70000;">def</span> <span style="color: #AF8700;">analyze_logs</span>():
-    <span style="color: #D70000;">with</span> <span style="color: #1F55A0;">open</span>(LOG_FILE, <span style="color: #005F00;">"r"</span>) <span style="color: #D70000;">as</span> <span style="color: #1F55A0;">file</span>:
-        <span style="color: #004651;">logs</span> = <span style="color: #1F55A0;">file</span>.readlines()
+<span style="color: #219fd5; font-style: italic;">def</span> <span style="color: #dc3eb7;">analyze_logs</span>():
+    <span style="color: #219fd5; font-style: italic;">with</span> <span style="color: #dc3eb7;">open</span>(LOG_FILE, <span style="color: #a44185;">"r"</span>) <span style="color: #219fd5; font-style: italic;">as</span> <span style="color: #dc3eb7;">file</span>:
+        <span style="color: #1857a4;">logs</span> = <span style="color: #dc3eb7;">file</span>.readlines()
 
-    <span style="color: #004651;">failed_attempts</span> = Counter()
-    <span style="color: #D70000;">for</span> log <span style="color: #D70000;">in</span> logs:
-        <span style="color: #D70000;">if</span> <span style="color: #005F00;">"Failed password"</span> <span style="color: #D70000;">in</span> log:
-            <span style="color: #004651;">ip</span> = re.search(r<span style="color: #005F00;">"\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b"</span>, log).group()
-            <span style="color: #004651;">failed_attempts</span>[ip] += 1
+    <span style="color: #1857a4;">failed_attempts</span> = Counter()
+    <span style="color: #219fd5; font-style: italic;">for</span> log <span style="color: #219fd5; font-style: italic;">in</span> logs:
+        <span style="color: #219fd5; font-style: italic;">if</span> <span style="color: #a44185;">"Failed password"</span> <span style="color: #219fd5; font-style: italic;">in</span> log:
+            <span style="color: #1857a4;">ip</span> = re.search(r<span style="color: #a44185;">"\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b"</span>, log).group()
+            <span style="color: #1857a4;">failed_attempts</span>[ip] += 1
 
-    <span style="color: #D70000;">with</span> <span style="color: #1F55A0;">open</span>(REPORT_FILE, <span style="color: #005F00;">"w"</span>) <span style="color: #D70000;">as</span> report:
-        report.write(<span style="color: #005F00;">"Reporte de Seguridad</span><span style="color: #AF005F;">\n</span><span style="color: #005F00;">"</span>)
-        report.write(<span style="color: #005F00;">"===================</span><span style="color: #AF005F;">\n</span><span style="color: #005F00;">"</span>)
-        <span style="color: #D70000;">for</span> ip, count <span style="color: #D70000;">in</span> failed_attempts.most_common():
-            report.write(f<span style="color: #005F00;">"IP: </span>{ip}<span style="color: #005F00;"> - Intentos fallidos: </span>{count}<span style="color: #AF005F;">\n</span><span style="color: #005F00;">"</span>)
+    <span style="color: #219fd5; font-style: italic;">with</span> <span style="color: #dc3eb7;">open</span>(REPORT_FILE, <span style="color: #a44185;">"w"</span>) <span style="color: #219fd5; font-style: italic;">as</span> report:
+        report.write(<span style="color: #a44185;">"Reporte de Seguridad</span><span style="color: #2f86d2;">\n</span><span style="color: #a44185;">"</span>)
+        report.write(<span style="color: #a44185;">"===================</span><span style="color: #2f86d2;">\n</span><span style="color: #a44185;">"</span>)
+        <span style="color: #219fd5; font-style: italic;">for</span> ip, count <span style="color: #219fd5; font-style: italic;">in</span> failed_attempts.most_common():
+            report.write(f<span style="color: #a44185;">"IP: </span>{ip}<span style="color: #a44185;"> - Intentos fallidos: </span>{count}<span style="color: #2f86d2;">\n</span><span style="color: #a44185;">"</span>)
 
-<span style="color: #D70000;">if</span> <span style="color: #1F55A0;">__name__</span> == <span style="color: #005F00;">"__main__"</span>:
+<span style="color: #219fd5; font-style: italic;">if</span> <span style="color: #dc3eb7;">__name__</span> == <span style="color: #a44185;">"__main__"</span>:
     analyze_logs()
 </pre>
 </div></li>
@@ -1828,9 +1876,9 @@ Ejecutar el script:
 </ol>
 </div>
 </div>
-<div id="outline-container-org076a014" class="outline-3">
-<h3 id="org076a014"><span class="section-number-3">1.4.</span> Paso 3: Generar Reportes de Seguridad</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-orgb0c2406" class="outline-3">
+<h3 id="orgb0c2406">Paso 3: Generar Reportes de Seguridad</h3>
+<div class="outline-text-3" id="text-orgb0c2406">
 <p>
 Usa los scripts anteriores para generar reportes diarios.
 </p>
@@ -1840,7 +1888,7 @@ Usa los scripts anteriores para generar reportes diarios.
 Combinar ambos scripts en un solo archivo:
 </p>
 <div class="org-src-container">
-<pre class="src src-sh"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<pre class="src src-sh"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
 /ruta/al/script/security_monitor.sh
 python3 /ruta/al/script/log_analyzer.py
 </pre>
@@ -1863,9 +1911,9 @@ Añade la siguiente línea:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgbddd265" class="outline-3">
-<h3 id="orgbddd265"><span class="section-number-3">1.5.</span> Resultados Esperados</h3>
-<div class="outline-text-3" id="text-1-5">
+<div id="outline-container-org963fd93" class="outline-3">
+<h3 id="org963fd93">Resultados Esperados</h3>
+<div class="outline-text-3" id="text-org963fd93">
 <ul class="org-ul">
 <li>Tareas de seguridad automatizadas.</li>
 <li>Logs analizados en busca de patrones sospechosos.</li>
@@ -1878,17 +1926,17 @@ Añade la siguiente línea:
 </div>
 </div>
 </div>
-<div id="outline-container-orgbac7489" class="outline-2">
-<h2 id="orgbac7489"><span class="section-number-2">2.</span> Conclusión</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org35e397b" class="outline-2">
+<h2 id="org35e397b">Conclusión</h2>
+<div class="outline-text-2" id="text-org35e397b">
 <p>
 Con estos dos capítulos, has implementado un mínimo de seguridad en tu entorno Linux. Desde la configuración básica del firewall hasta la automatización de tareas y el análisis avanzado de logs, este tutorial te proporciona las herramientas necesarias para proteger tu sistema ante ataques informáticos. ¡Ahora es tu turno de adaptar y mejorar estas técnicas según tus necesidades!
 </p>
 </div>
 </div>
-<div id="outline-container-org285a04f" class="outline-2">
-<h2 id="org285a04f"><span class="section-number-2">3.</span> Recursos Adicionales</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org358fc11" class="outline-2">
+<h2 id="org358fc11">Recursos Adicionales</h2>
+<div class="outline-text-2" id="text-org358fc11">
 <ul class="org-ul">
 <li><a href="https://help.ubuntu.com/community/UFW">Documentación de UFW</a></li>
 <li><a href="https://www.fail2ban.org/">Documentación de Fail2Ban</a></li>
@@ -1937,9 +1985,9 @@ Con estos dos capítulos, has implementado un mínimo de seguridad en tu entorno
 <p>
 Por Qwen AI
 </p>
-<div id="outline-container-orgdba67ba" class="outline-2">
-<h2 id="orgdba67ba"><span class="section-number-2">1.</span> Introducción</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org5ffb64a" class="outline-2">
+<h2 id="org5ffb64a">Introducción</h2>
+<div class="outline-text-2" id="text-org5ffb64a">
 <p>
 Este documento describe cómo configurar una seguridad mínima en un sistema Linux utilizando scripts escritos en <b><b>Bash</b></b> y <b><b>Python</b></b>. Las medidas incluyen:
 </p>
@@ -1951,9 +1999,9 @@ Este documento describe cómo configurar una seguridad mínima en un sistema Lin
 </ul>
 </div>
 </div>
-<div id="outline-container-org4f45fda" class="outline-2">
-<h2 id="org4f45fda"><span class="section-number-2">2.</span> Configuración Básica del Firewall con IPTables (Bash)</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-orgc1fc759" class="outline-2">
+<h2 id="orgc1fc759">Configuración Básica del Firewall con IPTables (Bash)</h2>
+<div class="outline-text-2" id="text-orgc1fc759">
 <p>
 El siguiente script configura un firewall básico utilizando IPTables para permitir solo el tráfico necesario.
 </p>
@@ -1962,36 +2010,36 @@ El siguiente script configura un firewall básico utilizando IPTables para permi
 <b><b>Script Bash:</b></b>
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Limpiar todas las reglas existentes</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Limpiar todas las reglas existentes</span>
 iptables -F
 iptables -X
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Pol&#237;tica por defecto: Denegar todo el tr&#225;fico entrante y saliente</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Pol&#237;tica por defecto: Denegar todo el tr&#225;fico entrante y saliente</span>
 iptables -P INPUT DROP
 iptables -P FORWARD DROP
 iptables -P OUTPUT ACCEPT
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Permitir tr&#225;fico local (loopback)</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Permitir tr&#225;fico local (loopback)</span>
 iptables -A INPUT -i lo -j ACCEPT
 iptables -A OUTPUT -o lo -j ACCEPT
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Permitir conexiones establecidas o relacionadas</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Permitir conexiones establecidas o relacionadas</span>
 iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Permitir SSH (puerto 22) desde una IP espec&#237;fica (opcional)</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Reemplaza "TU_IP" con tu direcci&#243;n IP p&#250;blica</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Permitir SSH (puerto 22) desde una IP espec&#237;fica (opcional)</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Reemplaza "TU_IP" con tu direcci&#243;n IP p&#250;blica</span>
 iptables -A INPUT -p tcp --dport 22 -s TU_IP -j ACCEPT
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Permitir HTTP (puerto 80) y HTTPS (puerto 443)</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Permitir HTTP (puerto 80) y HTTPS (puerto 443)</span>
 iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Registrar intentos de acceso no autorizados</span>
-iptables -A INPUT -j LOG --log-prefix <span style="color: #005F00;">"IPTables-Dropped: "</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Registrar intentos de acceso no autorizados</span>
+iptables -A INPUT -j LOG --log-prefix <span style="color: #a44185;">"IPTables-Dropped: "</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Guardar las reglas de IPTables</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Guardar las reglas de IPTables</span>
 iptables-save &gt; /etc/iptables/rules.v4
 </pre>
 </div>
@@ -2005,9 +2053,9 @@ iptables-save &gt; /etc/iptables/rules.v4
 </ul>
 </div>
 </div>
-<div id="outline-container-org414e930" class="outline-2">
-<h2 id="org414e930"><span class="section-number-2">3.</span> Bloqueo de IPs Sospechosas (Anti-Botnet)</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-orgc0d97ed" class="outline-2">
+<h2 id="orgc0d97ed">Bloqueo de IPs Sospechosas (Anti-Botnet)</h2>
+<div class="outline-text-2" id="text-orgc0d97ed">
 <p>
 El siguiente script bloquea IPs sospechosas utilizando una lista negra predefinida.
 </p>
@@ -2016,20 +2064,20 @@ El siguiente script bloquea IPs sospechosas utilizando una lista negra predefini
 <b><b>Script Bash:</b></b>
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Descargar una lista negra de IPs conocidas (por ejemplo, Emerging Threats)</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Descargar una lista negra de IPs conocidas (por ejemplo, Emerging Threats)</span>
 wget -q https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt -O /tmp/blocked_ips.txt
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Leer el archivo y bloquear cada IP</span>
-<span style="color: #D70000;">while </span><span style="color: #1F55A0;">read</span> -r ip; <span style="color: #D70000;">do</span>
-    <span style="color: #D70000;">if</span> [[ $<span style="color: #004651;">ip</span> =~ ^[0-9]+<span style="color: #005F00;">\.</span>[0-9]+<span style="color: #005F00;">\.</span>[0-9]+<span style="color: #005F00;">\.</span>[0-9]+$ ]]; <span style="color: #D70000;">then</span>
-        iptables -A INPUT -s <span style="color: #005F00;">"$ip"</span> -j DROP
-        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Bloqueada IP: $ip"</span>
-    <span style="color: #D70000;">fi</span>
-<span style="color: #D70000;">done</span> &lt; /tmp/blocked_ips.txt
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Leer el archivo y bloquear cada IP</span>
+<span style="color: #219fd5; font-style: italic;">while </span><span style="color: #dc3eb7;">read</span> -r ip; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [[ $<span style="color: #1857a4;">ip</span> =~ ^[0-9]+<span style="color: #a44185;">\.</span>[0-9]+<span style="color: #a44185;">\.</span>[0-9]+<span style="color: #a44185;">\.</span>[0-9]+$ ]]; <span style="color: #219fd5; font-style: italic;">then</span>
+        iptables -A INPUT -s <span style="color: #a44185;">"$ip"</span> -j DROP
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Bloqueada IP: $ip"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+<span style="color: #219fd5; font-style: italic;">done</span> &lt; /tmp/blocked_ips.txt
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Guardar las reglas de IPTables</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Guardar las reglas de IPTables</span>
 iptables-save &gt; /etc/iptables/rules.v4
 </pre>
 </div>
@@ -2043,9 +2091,9 @@ iptables-save &gt; /etc/iptables/rules.v4
 </ul>
 </div>
 </div>
-<div id="outline-container-org9ef1ace" class="outline-2">
-<h2 id="org9ef1ace"><span class="section-number-2">4.</span> Protección Contra Escaneos de Puertos (Python)</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-orgd6dd9af" class="outline-2">
+<h2 id="orgd6dd9af">Protección Contra Escaneos de Puertos (Python)</h2>
+<div class="outline-text-2" id="text-orgd6dd9af">
 <p>
 El siguiente script utiliza Python para monitorear intentos de escaneo de puertos y bloquear IPs sospechosas.
 </p>
@@ -2054,40 +2102,40 @@ El siguiente script utiliza Python para monitorear intentos de escaneo de puerto
 <b><b>Script Python:</b></b>
 </p>
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #D70000;">import</span> os
-<span style="color: #D70000;">import</span> time
-<span style="color: #D70000;">from</span> collections <span style="color: #D70000;">import</span> defaultdict
+<pre class="src src-python"><span style="color: #219fd5; font-style: italic;">import</span> os
+<span style="color: #219fd5; font-style: italic;">import</span> time
+<span style="color: #219fd5; font-style: italic;">from</span> collections <span style="color: #219fd5; font-style: italic;">import</span> defaultdict
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Diccionario para rastrear intentos de conexi&#243;n por IP</span>
-<span style="color: #004651;">connection_attempts</span> = defaultdict(<span style="color: #1F55A0;">int</span>)
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Diccionario para rastrear intentos de conexi&#243;n por IP</span>
+<span style="color: #1857a4;">connection_attempts</span> = defaultdict(<span style="color: #dc3eb7;">int</span>)
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Umbral de intentos sospechosos</span>
-<span style="color: #004651;">THRESHOLD</span> = 5
-<span style="color: #004651;">BLOCK_TIME</span> = 60  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Tiempo en segundos para bloquear una IP</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Umbral de intentos sospechosos</span>
+<span style="color: #1857a4;">THRESHOLD</span> = 5
+<span style="color: #1857a4;">BLOCK_TIME</span> = 60  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Tiempo en segundos para bloquear una IP</span>
 
-<span style="color: #D70000;">def</span> <span style="color: #AF8700;">block_ip</span>(ip):
-    <span style="color: #004700; font-style: italic;">"""Bloquea una IP usando IPTables."""</span>
-    os.system(f<span style="color: #005F00;">"iptables -A INPUT -s </span>{ip}<span style="color: #005F00;"> -j DROP"</span>)
-    <span style="color: #1F55A0;">print</span>(f<span style="color: #005F00;">"Bloqueada IP sospechosa: </span>{ip}<span style="color: #005F00;">"</span>)
+<span style="color: #219fd5; font-style: italic;">def</span> <span style="color: #dc3eb7;">block_ip</span>(ip):
+    <span style="color: #60a8a1; font-style: italic;">"""Bloquea una IP usando IPTables."""</span>
+    os.system(f<span style="color: #a44185;">"iptables -A INPUT -s </span>{ip}<span style="color: #a44185;"> -j DROP"</span>)
+    <span style="color: #dc3eb7;">print</span>(f<span style="color: #a44185;">"Bloqueada IP sospechosa: </span>{ip}<span style="color: #a44185;">"</span>)
 
-<span style="color: #D70000;">def</span> <span style="color: #AF8700;">monitor_logs</span>():
-    <span style="color: #004700; font-style: italic;">"""Monitorea los logs del sistema en busca de intentos de conexi&#243;n."""</span>
-    <span style="color: #D70000;">with</span> <span style="color: #1F55A0;">open</span>(<span style="color: #005F00;">"/var/log/auth.log"</span>, <span style="color: #005F00;">"r"</span>) <span style="color: #D70000;">as</span> log_file:
-        log_file.seek(0, 2)  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Ir al final del archivo</span>
-        <span style="color: #D70000;">while</span> <span style="color: #AF005F;">True</span>:
-            <span style="color: #004651;">line</span> = log_file.readline()
-            <span style="color: #D70000;">if</span> <span style="color: #005F00;">"Failed password"</span> <span style="color: #D70000;">in</span> line:
-                <span style="color: #004651;">ip</span> = line.split(<span style="color: #005F00;">"from "</span>)[1].split(<span style="color: #005F00;">" port"</span>)[0]
-                <span style="color: #004651;">connection_attempts</span>[ip] += 1
-                <span style="color: #1F55A0;">print</span>(f<span style="color: #005F00;">"Intento de conexi&#243;n desde: </span>{ip}<span style="color: #005F00;"> (</span>{connection_attempts[ip]}<span style="color: #005F00;"> intentos)"</span>)
+<span style="color: #219fd5; font-style: italic;">def</span> <span style="color: #dc3eb7;">monitor_logs</span>():
+    <span style="color: #60a8a1; font-style: italic;">"""Monitorea los logs del sistema en busca de intentos de conexi&#243;n."""</span>
+    <span style="color: #219fd5; font-style: italic;">with</span> <span style="color: #dc3eb7;">open</span>(<span style="color: #a44185;">"/var/log/auth.log"</span>, <span style="color: #a44185;">"r"</span>) <span style="color: #219fd5; font-style: italic;">as</span> log_file:
+        log_file.seek(0, 2)  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ir al final del archivo</span>
+        <span style="color: #219fd5; font-style: italic;">while</span> <span style="color: #2f86d2;">True</span>:
+            <span style="color: #1857a4;">line</span> = log_file.readline()
+            <span style="color: #219fd5; font-style: italic;">if</span> <span style="color: #a44185;">"Failed password"</span> <span style="color: #219fd5; font-style: italic;">in</span> line:
+                <span style="color: #1857a4;">ip</span> = line.split(<span style="color: #a44185;">"from "</span>)[1].split(<span style="color: #a44185;">" port"</span>)[0]
+                <span style="color: #1857a4;">connection_attempts</span>[ip] += 1
+                <span style="color: #dc3eb7;">print</span>(f<span style="color: #a44185;">"Intento de conexi&#243;n desde: </span>{ip}<span style="color: #a44185;"> (</span>{connection_attempts[ip]}<span style="color: #a44185;"> intentos)"</span>)
 
-                <span style="color: #D70000;">if</span> connection_attempts[ip] &gt;= THRESHOLD:
+                <span style="color: #219fd5; font-style: italic;">if</span> connection_attempts[ip] &gt;= THRESHOLD:
                     block_ip(ip)
                     time.sleep(BLOCK_TIME)
-                    <span style="color: #004651;">connection_attempts</span>[ip] = 0  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Reiniciar contador</span>
+                    <span style="color: #1857a4;">connection_attempts</span>[ip] = 0  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Reiniciar contador</span>
             time.sleep(1)
 
-<span style="color: #D70000;">if</span> <span style="color: #1F55A0;">__name__</span> == <span style="color: #005F00;">"__main__"</span>:
+<span style="color: #219fd5; font-style: italic;">if</span> <span style="color: #dc3eb7;">__name__</span> == <span style="color: #a44185;">"__main__"</span>:
     monitor_logs()
 </pre>
 </div>
@@ -2101,9 +2149,9 @@ El siguiente script utiliza Python para monitorear intentos de escaneo de puerto
 </ul>
 </div>
 </div>
-<div id="outline-container-org4778546" class="outline-2">
-<h2 id="org4778546"><span class="section-number-2">5.</span> Configuración de Políticas de Red Seguras (Bash)</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-orgd2ddd5a" class="outline-2">
+<h2 id="orgd2ddd5a">Configuración de Políticas de Red Seguras (Bash)</h2>
+<div class="outline-text-2" id="text-orgd2ddd5a">
 <p>
 El siguiente script configura políticas adicionales para mejorar la seguridad de la red.
 </p>
@@ -2112,30 +2160,30 @@ El siguiente script configura políticas adicionales para mejorar la seguridad d
 <b><b>Script Bash:</b></b>
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Deshabilitar el redireccionamiento IP</span>
-<span style="color: #1F55A0;">echo</span> 0 &gt; /proc/sys/net/ipv4/conf/all/send_redirects
-<span style="color: #1F55A0;">echo</span> 0 &gt; /proc/sys/net/ipv4/conf/default/send_redirects
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Deshabilitar el redireccionamiento IP</span>
+<span style="color: #dc3eb7;">echo</span> 0 &gt; /proc/sys/net/ipv4/conf/all/send_redirects
+<span style="color: #dc3eb7;">echo</span> 0 &gt; /proc/sys/net/ipv4/conf/default/send_redirects
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Habilitar protecci&#243;n contra SYN Flood</span>
-<span style="color: #1F55A0;">echo</span> 1 &gt; /proc/sys/net/ipv4/tcp_syncookies
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Habilitar protecci&#243;n contra SYN Flood</span>
+<span style="color: #dc3eb7;">echo</span> 1 &gt; /proc/sys/net/ipv4/tcp_syncookies
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Deshabilitar el reenv&#237;o de paquetes IPv4</span>
-<span style="color: #1F55A0;">echo</span> 0 &gt; /proc/sys/net/ipv4/ip_forward
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Deshabilitar el reenv&#237;o de paquetes IPv4</span>
+<span style="color: #dc3eb7;">echo</span> 0 &gt; /proc/sys/net/ipv4/ip_forward
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Habilitar protecci&#243;n contra IP Spoofing</span>
-<span style="color: #D70000;">for</span> interface<span style="color: #D70000;"> in</span> $(<span style="color: #1F55A0; font-weight: bold;">ls /sys/class/net | grep -v lo</span>); <span style="color: #D70000;">do</span>
-    <span style="color: #1F55A0;">echo</span> 1 &gt; /proc/sys/net/ipv4/conf/$<span style="color: #004651;">interface</span>/rp_filter
-<span style="color: #D70000;">done</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Habilitar protecci&#243;n contra IP Spoofing</span>
+<span style="color: #219fd5; font-style: italic;">for</span> interface<span style="color: #219fd5; font-style: italic;"> in</span> $(<span style="color: #219fd5; font-weight: bold;">ls /sys/class/net | grep -v lo</span>); <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #dc3eb7;">echo</span> 1 &gt; /proc/sys/net/ipv4/conf/$<span style="color: #1857a4;">interface</span>/rp_filter
+<span style="color: #219fd5; font-style: italic;">done</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Guardar cambios en sysctl.conf</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Guardar cambios en sysctl.conf</span>
 cat &lt;&lt;EOF &gt;&gt; /etc/sysctl.conf
-<span style="color: #005F00;">net.ipv4.conf.all.send_redirects = 0</span>
-<span style="color: #005F00;">net.ipv4.conf.default.send_redirects = 0</span>
-<span style="color: #005F00;">net.ipv4.tcp_syncookies = 1</span>
-<span style="color: #005F00;">net.ipv4.ip_forward = 0</span>
-<span style="color: #005F00;">EOF</span>
+<span style="color: #a44185;">net.ipv4.conf.all.send_redirects = 0</span>
+<span style="color: #a44185;">net.ipv4.conf.default.send_redirects = 0</span>
+<span style="color: #a44185;">net.ipv4.tcp_syncookies = 1</span>
+<span style="color: #a44185;">net.ipv4.ip_forward = 0</span>
+<span style="color: #a44185;">EOF</span>
 
 sysctl -p
 </pre>
@@ -2150,9 +2198,9 @@ sysctl -p
 </ul>
 </div>
 </div>
-<div id="outline-container-org2b7936c" class="outline-2">
-<h2 id="org2b7936c"><span class="section-number-2">6.</span> Conclusión</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-org12afde5" class="outline-2">
+<h2 id="org12afde5">Conclusión</h2>
+<div class="outline-text-2" id="text-org12afde5">
 <p>
 Este documento proporciona scripts básicos en Bash y Python para configurar una seguridad mínima en sistemas Linux. Recuerda que estas medidas son solo un punto de partida y deben complementarse con auditorías regulares, actualizaciones de software y mejores prácticas de seguridad.
 </p>
@@ -2176,32 +2224,32 @@ Para más información, consulta la documentación oficial de IPTables y las rec
 <item>
   <title><![CDATA[Opciones para Ordenar Downloads en Linux OSs]]></title>
   <description><![CDATA[
-<div id="outline-container-org05a9d8f" class="outline-2">
-<h2 id="org05a9d8f"><span class="section-number-2">1.</span> Introducción</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org721ebe2" class="outline-2">
+<h2 id="org721ebe2">Introducción</h2>
+<div class="outline-text-2" id="text-org721ebe2">
 <p>
 Este documento ofrece métodos para organizar la carpeta <code>~/Downloads</code> en Ubuntu, renombrando archivos con el prefijo <code>YYMMDD_nombre</code> (YY: últimos 2 dígitos del año, MM: mes 01-12, DD: día de modificación) y otras estrategias de ordenamiento. Las soluciones usan herramientas de terminal y Emacs.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd0981d2" class="outline-2">
-<h2 id="orgd0981d2"><span class="section-number-2">2.</span> 1 Renombrar Archivos con YYMMDD<sub>nombre</sub></h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org23afa60" class="outline-2">
+<h2 id="org23afa60">Renombrar Archivos con YYMMDD<sub>nombre</sub></h2>
+<div class="outline-text-2" id="text-org23afa60">
 <p>
 Renombrar archivos según su fecha de modificación usando el formato solicitado.
 </p>
 </div>
-<div id="outline-container-orge0d5d72" class="outline-3">
-<h3 id="orge0d5d72"><span class="section-number-3">2.1.</span> 1.1 Usando `find` y `mv` en la Terminal</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-orgd908031" class="outline-3">
+<h3 id="orgd908031">Usando `find` y `mv` en la Terminal</h3>
+<div class="outline-text-3" id="text-orgd908031">
 <ul class="org-ul">
 <li><b>Descripción</b>: Busca archivos y los renombra con la fecha de modificación.</li>
 <li><p>
 <b>Comando</b>:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #1F55A0;">cd</span> ~/Downloads
-find . -type f -exec sh -c <span style="color: #005F00;">'mv "$1" "$(</span><span style="color: #1F55A0; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #005F00;">)_$(</span><span style="color: #1F55A0; font-weight: bold;">basename "$1"</span><span style="color: #005F00;">)"'</span> _ {} <span style="color: #005F00;">\;</span>
+<pre class="src src-bash"><span style="color: #dc3eb7;">cd</span> ~/Downloads
+find . -type f -exec sh -c <span style="color: #a44185;">'mv "$1" "$(</span><span style="color: #219fd5; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #a44185;">)_$(</span><span style="color: #219fd5; font-weight: bold;">basename "$1"</span><span style="color: #a44185;">)"'</span> _ {} <span style="color: #a44185;">\;</span>
 </pre>
 </div></li>
 <li><b>Explicación</b>:
@@ -2215,27 +2263,27 @@ find . -type f -exec sh -c <span style="color: #005F00;">'mv "$1" "$(</span><spa
 </ul>
 </div>
 </div>
-<div id="outline-container-orge2b1978" class="outline-3">
-<h3 id="orge2b1978"><span class="section-number-3">2.2.</span> 1.2 Script Bash para Mayor Control</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-org1ef59fd" class="outline-3">
+<h3 id="org1ef59fd">Script Bash para Mayor Control</h3>
+<div class="outline-text-3" id="text-org1ef59fd">
 <ul class="org-ul">
 <li><b>Descripción</b>: Script reutilizable con manejo de conflictos.</li>
 <li><p>
 <b>Implementación</b>:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #1F55A0;">cd</span> ~/Downloads
-<span style="color: #D70000;">for</span> file<span style="color: #D70000;"> in</span> *; <span style="color: #D70000;">do</span>
-    <span style="color: #D70000;">if</span> [ -f <span style="color: #005F00;">"$file"</span> ]; <span style="color: #D70000;">then</span>
-        <span style="color: #004651;">prefix</span>=$(<span style="color: #1F55A0; font-weight: bold;">stat -c %y "$file" | cut -d' ' -f1 | sed 's/-//g' | cut -c3-8</span>)
-        <span style="color: #004651;">new_name</span>=<span style="color: #005F00;">"${prefix}_$file"</span>
-        <span style="color: #D70000;">if</span> [ -e <span style="color: #005F00;">"$new_name"</span> ]; <span style="color: #D70000;">then</span>
-            <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Conflicto: $new_name ya existe, omitiendo..."</span>
-        <span style="color: #D70000;">else</span>
-            mv <span style="color: #005F00;">"$file"</span> <span style="color: #005F00;">"$new_name"</span>
-        <span style="color: #D70000;">fi</span>
-    <span style="color: #D70000;">fi</span>
-<span style="color: #D70000;">done</span>
+<pre class="src src-bash"><span style="color: #dc3eb7;">cd</span> ~/Downloads
+<span style="color: #219fd5; font-style: italic;">for</span> file<span style="color: #219fd5; font-style: italic;"> in</span> *; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [ -f <span style="color: #a44185;">"$file"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #1857a4;">prefix</span>=$(<span style="color: #219fd5; font-weight: bold;">stat -c %y "$file" | cut -d' ' -f1 | sed 's/-//g' | cut -c3-8</span>)
+        <span style="color: #1857a4;">new_name</span>=<span style="color: #a44185;">"${prefix}_$file"</span>
+        <span style="color: #219fd5; font-style: italic;">if</span> [ -e <span style="color: #a44185;">"$new_name"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+            <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Conflicto: $new_name ya existe, omitiendo..."</span>
+        <span style="color: #219fd5; font-style: italic;">else</span>
+            mv <span style="color: #a44185;">"$file"</span> <span style="color: #a44185;">"$new_name"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+<span style="color: #219fd5; font-style: italic;">done</span>
 </pre>
 </div></li>
 <li><b>Uso</b>: Guarda como <code>rename_downloads.sh</code>, da permisos con <code>chmod +x rename_downloads.sh</code>, y ejecuta con <code>./rename_downloads.sh</code>.</li>
@@ -2243,9 +2291,9 @@ find . -type f -exec sh -c <span style="color: #005F00;">'mv "$1" "$(</span><spa
 </ul>
 </div>
 </div>
-<div id="outline-container-orge3bc3e4" class="outline-3">
-<h3 id="orge3bc3e4"><span class="section-number-3">2.3.</span> 1.3 Desde Emacs con Dired</h3>
-<div class="outline-text-3" id="text-2-3">
+<div id="outline-container-org54158d4" class="outline-3">
+<h3 id="org54158d4">Desde Emacs con Dired</h3>
+<div class="outline-text-3" id="text-org54158d4">
 <ul class="org-ul">
 <li><b>Descripción</b>: Usa Dired para renombrar manualmente o con un script.</li>
 <li><b>Pasos</b>:
@@ -2258,11 +2306,11 @@ find . -type f -exec sh -c <span style="color: #005F00;">'mv "$1" "$(</span><spa
 <b>Alternativa con Elisp</b>:
 </p>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">rename-downloads-yymmdd</span> ()
-  (<span style="color: #D70000;">interactive</span>)
-  (dired <span style="color: #005F00;">"~/Downloads"</span>)
+<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">rename-downloads-yymmdd</span> ()
+  (<span style="color: #219fd5; font-style: italic;">interactive</span>)
+  (dired <span style="color: #a44185;">"~/Downloads"</span>)
   (dired-do-shell-command
-   <span style="color: #005F00;">"mv ? $(date -r ? +%y%m%d)_?"</span> nil
+   <span style="color: #a44185;">"mv ? $(date -r ? +%y%m%d)_?"</span> nil
    (dired-get-marked-files)))
 </pre>
 </div>
@@ -2274,45 +2322,45 @@ find . -type f -exec sh -c <span style="color: #005F00;">'mv "$1" "$(</span><spa
 </div>
 </div>
 </div>
-<div id="outline-container-org7996be3" class="outline-2">
-<h2 id="org7996be3"><span class="section-number-2">3.</span> 2 Otras Opciones de Ordenamiento</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org8d5f5d7" class="outline-2">
+<h2 id="org8d5f5d7">Otras Opciones de Ordenamiento</h2>
+<div class="outline-text-2" id="text-org8d5f5d7">
 <p>
 Alternativas para organizar <code>~/Downloads</code> más allá del renombramiento.
 </p>
 </div>
-<div id="outline-container-org4595f61" class="outline-3">
-<h3 id="org4595f61"><span class="section-number-3">3.1.</span> 2.1 Clasificación por Tipo de Archivo</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-org6dc4385" class="outline-3">
+<h3 id="org6dc4385">Clasificación por Tipo de Archivo</h3>
+<div class="outline-text-3" id="text-org6dc4385">
 <ul class="org-ul">
 <li><b>Descripción</b>: Mover archivos a subcarpetas según extensión.</li>
 <li><p>
 <b>Comando</b>:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #1F55A0;">cd</span> ~/Downloads
+<pre class="src src-bash"><span style="color: #dc3eb7;">cd</span> ~/Downloads
 mkdir -p Documents Images Videos Other
-find . -maxdepth 1 -type f -name <span style="color: #005F00;">"*.pdf"</span> -exec mv {} Documents/ <span style="color: #005F00;">\;</span>
-find . -maxdepth 1 -type f -name <span style="color: #005F00;">"*.jpg"</span> -o -name <span style="color: #005F00;">"*.png"</span> -exec mv {} Images/ <span style="color: #005F00;">\;</span>
-find . -maxdepth 1 -type f -name <span style="color: #005F00;">"*.mp4"</span> -o -name <span style="color: #005F00;">"*.mkv"</span> -exec mv {} Videos/ <span style="color: #005F00;">\;</span>
-find . -maxdepth 1 -type f -not -path <span style="color: #005F00;">"./*/*"</span> -exec mv {} Other/ <span style="color: #005F00;">\;</span>
+find . -maxdepth 1 -type f -name <span style="color: #a44185;">"*.pdf"</span> -exec mv {} Documents/ <span style="color: #a44185;">\;</span>
+find . -maxdepth 1 -type f -name <span style="color: #a44185;">"*.jpg"</span> -o -name <span style="color: #a44185;">"*.png"</span> -exec mv {} Images/ <span style="color: #a44185;">\;</span>
+find . -maxdepth 1 -type f -name <span style="color: #a44185;">"*.mp4"</span> -o -name <span style="color: #a44185;">"*.mkv"</span> -exec mv {} Videos/ <span style="color: #a44185;">\;</span>
+find . -maxdepth 1 -type f -not -path <span style="color: #a44185;">"./*/*"</span> -exec mv {} Other/ <span style="color: #a44185;">\;</span>
 </pre>
 </div></li>
 <li><b>Beneficio</b>: Orden visual por categoría (ej. PDFs en <code>Documents/</code>).</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org710367a" class="outline-3">
-<h3 id="org710367a"><span class="section-number-3">3.2.</span> 2.2 Orden por Fecha en Subcarpetas</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-org227170d" class="outline-3">
+<h3 id="org227170d">Orden por Fecha en Subcarpetas</h3>
+<div class="outline-text-3" id="text-org227170d">
 <ul class="org-ul">
 <li><b>Descripción</b>: Crear carpetas YYMMDD y mover archivos según modificación.</li>
 <li><p>
 <b>Comando</b>:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #1F55A0;">cd</span> ~/Downloads
-find . -type f -exec sh -c <span style="color: #005F00;">'mkdir -p "$(</span><span style="color: #1F55A0; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #005F00;">)"; mv "$1" "$(</span><span style="color: #1F55A0; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #005F00;">)/"'</span> _ {} <span style="color: #005F00;">\;</span>
+<pre class="src src-bash"><span style="color: #dc3eb7;">cd</span> ~/Downloads
+find . -type f -exec sh -c <span style="color: #a44185;">'mkdir -p "$(</span><span style="color: #219fd5; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #a44185;">)"; mv "$1" "$(</span><span style="color: #219fd5; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #a44185;">)/"'</span> _ {} <span style="color: #a44185;">\;</span>
 </pre>
 </div></li>
 <li><b>Ejemplo</b>: Archivos del 16/03/2025 van a <code>250316/</code>.</li>
@@ -2320,9 +2368,9 @@ find . -type f -exec sh -c <span style="color: #005F00;">'mkdir -p "$(</span><sp
 </ul>
 </div>
 </div>
-<div id="outline-container-org8f721a6" class="outline-3">
-<h3 id="org8f721a6"><span class="section-number-3">3.3.</span> 2.3 Automatización con `inotifywait`</h3>
-<div class="outline-text-3" id="text-3-3">
+<div id="outline-container-orga62937e" class="outline-3">
+<h3 id="orga62937e">Automatización con `inotifywait`</h3>
+<div class="outline-text-3" id="text-orga62937e">
 <ul class="org-ul">
 <li><b>Descripción</b>: Monitorear descargas nuevas y organizarlas automáticamente.</li>
 <li><b>Implementación</b>:
@@ -2333,10 +2381,10 @@ Script:
 </p>
 <div class="org-src-container">
 <pre class="src src-bash">inotifywait -m ~/Downloads -e create -e moved_to |
-    <span style="color: #D70000;">while </span><span style="color: #1F55A0;">read</span> path action file; <span style="color: #D70000;">do</span>
-        <span style="color: #004651;">prefix</span>=$(<span style="color: #1F55A0; font-weight: bold;">date -r "$path$file" +%y%m%d</span>)
-        mv <span style="color: #005F00;">"$path$file"</span> <span style="color: #005F00;">"$path${prefix}_$file"</span>
-    <span style="color: #D70000;">done</span>
+    <span style="color: #219fd5; font-style: italic;">while </span><span style="color: #dc3eb7;">read</span> path action file; <span style="color: #219fd5; font-style: italic;">do</span>
+        <span style="color: #1857a4;">prefix</span>=$(<span style="color: #219fd5; font-weight: bold;">date -r "$path$file" +%y%m%d</span>)
+        mv <span style="color: #a44185;">"$path$file"</span> <span style="color: #a44185;">"$path${prefix}_$file"</span>
+    <span style="color: #219fd5; font-style: italic;">done</span>
 </pre>
 </div></li>
 <li>Ejecuta con <code>./watch_downloads.sh &amp; disown</code> para que corra en segundo plano.</li>
@@ -2346,9 +2394,9 @@ Script:
 </div>
 </div>
 </div>
-<div id="outline-container-org9ed46c7" class="outline-2">
-<h2 id="org9ed46c7"><span class="section-number-2">4.</span> 3 Recomendaciones Generales</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org74358fe" class="outline-2">
+<h2 id="org74358fe">Recomendaciones Generales</h2>
+<div class="outline-text-2" id="text-org74358fe">
 <ul class="org-ul">
 <li><b>Copia de seguridad</b>: <code>tar -czf ~/downloads_backup.tar.gz ~/Downloads</code> antes de pruebas.</li>
 <li><b>Prueba primero</b>: Usa <code>echo</code> en lugar de <code>mv</code> para simular (ej. <code>echo mv "$file" "$new_name"</code>).</li>
@@ -2356,9 +2404,9 @@ Script:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbdb06fe" class="outline-2">
-<h2 id="orgbdb06fe"><span class="section-number-2">5.</span> 4 Conclusión</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-orgfaafff4" class="outline-2">
+<h2 id="orgfaafff4">Conclusión</h2>
+<div class="outline-text-2" id="text-orgfaafff4">
 <p>
 La opción 1.1 (<code>find</code> y <code>mv</code>) es la más simple y directa para renombrar con <code>YYMMDD</code>. Para automatización, usa 2.3 (<code>inotifywait</code>). Si prefieres carpetas, opta por 2.1 o 2.2. Combina según tus necesidades: renombrar + clasificar es una solución robusta.
 </p>
@@ -2381,17 +2429,17 @@ La opción 1.1 (<code>find</code> y <code>mv</code>) es la más simple y directa
 <item>
   <title><![CDATA[Cómo limpiar archivos y carpetas vacías en Linux con un script Bash]]></title>
   <description><![CDATA[
-<div id="outline-container-org5ab3c26" class="outline-2">
-<h2 id="org5ab3c26"><span class="section-number-2">1.</span> Introducción</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org47dd05b" class="outline-2">
+<h2 id="org47dd05b">Introducción</h2>
+<div class="outline-text-2" id="text-org47dd05b">
 <p>
 ¿Alguna vez te has encontrado con archivos o carpetas vacías en tu sistema que ocupan espacio innecesario? En este post, te mostraré cómo crear un script en <b><b>Bash</b></b> que te permita limpiar automáticamente todos los archivos y carpetas con 0 bytes desde ayer hacia atrás. Este script es ideal para mantener tu sistema organizado y liberar espacio en disco.
 </p>
 </div>
 </div>
-<div id="outline-container-org02f68c2" class="outline-2">
-<h2 id="org02f68c2"><span class="section-number-2">2.</span> Requisitos</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org0368371" class="outline-2">
+<h2 id="org0368371">Requisitos</h2>
+<div class="outline-text-2" id="text-org0368371">
 <ul class="org-ul">
 <li>Un sistema Linux (Ubuntu, Debian, Fedora, etc.).</li>
 <li>Conocimientos básicos de terminal y Bash.</li>
@@ -2399,39 +2447,39 @@ La opción 1.1 (<code>find</code> y <code>mv</code>) es la más simple y directa
 </ul>
 </div>
 </div>
-<div id="outline-container-org5034a50" class="outline-2">
-<h2 id="org5034a50"><span class="section-number-2">3.</span> El Script</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-orgc528c0e" class="outline-2">
+<h2 id="orgc528c0e">El Script</h2>
+<div class="outline-text-2" id="text-orgc528c0e">
 <p>
 A continuación, te presento el script en Bash que realiza la limpieza. Puedes copiarlo y pegarlo directamente en tu terminal o guardarlo en un archivo `.sh` para ejecutarlo más tarde.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Pide al usuario que ingrese el directorio a limpiar</span>
-<span style="color: #1F55A0;">read</span> -p <span style="color: #005F00;">"Introduce la ruta del directorio que deseas limpiar: "</span> DIRECTORIO
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Pide al usuario que ingrese el directorio a limpiar</span>
+<span style="color: #dc3eb7;">read</span> -p <span style="color: #a44185;">"Introduce la ruta del directorio que deseas limpiar: "</span> DIRECTORIO
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verifica si el directorio existe</span>
-<span style="color: #D70000;">if</span> [ <span style="color: #1F55A0; font-weight: bold;">!</span> -d <span style="color: #005F00;">"$DIRECTORIO"</span> ]; <span style="color: #D70000;">then</span>
-  <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"El directorio $DIRECTORIO no existe."</span>
-  <span style="color: #D70000;">exit</span> 1
-<span style="color: #D70000;">fi</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verifica si el directorio existe</span>
+<span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #219fd5; font-weight: bold;">!</span> -d <span style="color: #a44185;">"$DIRECTORIO"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"El directorio $DIRECTORIO no existe."</span>
+  <span style="color: #219fd5; font-style: italic;">exit</span> 1
+<span style="color: #219fd5; font-style: italic;">fi</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Busca y elimina archivos vac&#237;os (0 bytes) desde ayer hacia atr&#225;s</span>
-find <span style="color: #005F00;">"$DIRECTORIO"</span> -type f -size 0 -mtime +0 -exec rm -v {} <span style="color: #005F00;">\;</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Busca y elimina archivos vac&#237;os (0 bytes) desde ayer hacia atr&#225;s</span>
+find <span style="color: #a44185;">"$DIRECTORIO"</span> -type f -size 0 -mtime +0 -exec rm -v {} <span style="color: #a44185;">\;</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Busca y elimina carpetas vac&#237;as desde ayer hacia atr&#225;s</span>
-find <span style="color: #005F00;">"$DIRECTORIO"</span> -type d -empty -mtime +0 -exec rmdir -v {} <span style="color: #005F00;">\;</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Busca y elimina carpetas vac&#237;as desde ayer hacia atr&#225;s</span>
+find <span style="color: #a44185;">"$DIRECTORIO"</span> -type d -empty -mtime +0 -exec rmdir -v {} <span style="color: #a44185;">\;</span>
 
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Limpieza completada. Archivos y carpetas vac&#237;as eliminados."</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Limpieza completada. Archivos y carpetas vac&#237;as eliminados."</span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgc000f9d" class="outline-2">
-<h2 id="orgc000f9d"><span class="section-number-2">4.</span> Explicación del Script</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org1e83a4e" class="outline-2">
+<h2 id="org1e83a4e">Explicación del Script</h2>
+<div class="outline-text-2" id="text-org1e83a4e">
 <ol class="org-ol">
 <li><b><b>Pide el directorio</b></b>: El script comienza solicitando al usuario que introduzca la ruta del directorio que desea limpiar.</li>
 <li><b><b>Verifica el directorio</b></b>: Se verifica si el directorio existe. Si no existe, el script termina con un mensaje de error.</li>
@@ -2441,9 +2489,9 @@ find <span style="color: #005F00;">"$DIRECTORIO"</span> -type d -empty -mtime +0
 </ol>
 </div>
 </div>
-<div id="outline-container-orga68dd0b" class="outline-2">
-<h2 id="orga68dd0b"><span class="section-number-2">5.</span> Cómo Usar el Script</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-orgb1fe513" class="outline-2">
+<h2 id="orgb1fe513">Cómo Usar el Script</h2>
+<div class="outline-text-2" id="text-orgb1fe513">
 <ol class="org-ol">
 <li>Copia el script en un archivo, por ejemplo, `clean<sub>empty</sub><sub>files.sh</sub>`.</li>
 <li>Haz que el script sea ejecutable:
@@ -2466,17 +2514,17 @@ chmod +x clean<sub>empty</sub><sub>files.sh</sub></li>
 <item>
   <title><![CDATA[Cómo Generar un Prompt en IA: Guía Detallada, Ventajas e Inconvenientes]]></title>
   <description><![CDATA[
-<div id="outline-container-org460a920" class="outline-2">
-<h2 id="org460a920">Introducción</h2>
-<div class="outline-text-2" id="text-org460a920">
+<div id="outline-container-org3751d94" class="outline-2">
+<h2 id="org3751d94">Introducción</h2>
+<div class="outline-text-2" id="text-org3751d94">
 <p>
 La inteligencia artificial (IA) ha revolucionado la forma en que interactuamos con la tecnología. Desde chatbots hasta herramientas de generación de contenido, la IA se ha convertido en una aliada indispensable para profesionales, creativos y entusiastas de la tecnología. Sin embargo, para aprovechar al máximo estas herramientas, es fundamental entender cómo <b><b>generar un prompt efectivo</b></b>. En este artículo, exploraremos en detalle qué es un prompt, cómo crearlo, sus ventajas, inconvenientes y ejemplos prácticos para que puedas dominar esta habilidad.
 </p>
 </div>
 </div>
-<div id="outline-container-org7309f8c" class="outline-2">
-<h2 id="org7309f8c">¿Qué es un Prompt en IA?</h2>
-<div class="outline-text-2" id="text-org7309f8c">
+<div id="outline-container-org082ca93" class="outline-2">
+<h2 id="org082ca93">¿Qué es un Prompt en IA?</h2>
+<div class="outline-text-2" id="text-org082ca93">
 <p>
 Un <b><b>prompt</b></b> es una instrucción, pregunta o conjunto de indicaciones que se le proporciona a un modelo de inteligencia artificial para que genere una respuesta o realice una tarea específica. Es la forma en que nos comunicamos con la IA y le decimos qué queremos que haga.
 </p>
@@ -2486,52 +2534,52 @@ Por ejemplo, si le pides a ChatGPT que "escriba un poema sobre el océano", esa 
 </p>
 </div>
 </div>
-<div id="outline-container-org649d576" class="outline-2">
-<h2 id="org649d576">¿Cómo Generar un Prompt Efectivo?</h2>
-<div class="outline-text-2" id="text-org649d576">
+<div id="outline-container-orgcc18a77" class="outline-2">
+<h2 id="orgcc18a77">¿Cómo Generar un Prompt Efectivo?</h2>
+<div class="outline-text-2" id="text-orgcc18a77">
 <p>
 Crear un prompt efectivo requiere claridad, precisión y contexto. A continuación, te explicamos los pasos clave para generar un prompt que obtenga los mejores resultados:
 </p>
 </div>
-<div id="outline-container-org145340e" class="outline-3">
-<h3 id="org145340e">1. Define el Objetivo</h3>
-<div class="outline-text-3" id="text-org145340e">
+<div id="outline-container-org3eea11c" class="outline-3">
+<h3 id="org3eea11c">1. Define el Objetivo</h3>
+<div class="outline-text-3" id="text-org3eea11c">
 <ul class="org-ul">
 <li>Antes de escribir el prompt, pregúntate: ¿Qué quiero lograr con la IA? ¿Necesito información, un texto creativo, un análisis de datos o una solución a un problema?</li>
 <li>Ejemplo: Si quieres que la IA te ayude a redactar un correo electrónico, tu objetivo es claro: generar un mensaje profesional y efectivo.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8cb367c" class="outline-3">
-<h3 id="org8cb367c">2. Sé Específico</h3>
-<div class="outline-text-3" id="text-org8cb367c">
+<div id="outline-container-orga38691b" class="outline-3">
+<h3 id="orga38691b">2. Sé Específico</h3>
+<div class="outline-text-3" id="text-orga38691b">
 <ul class="org-ul">
 <li>Cuanto más específico seas, mejor será la respuesta. Incluye detalles como el tono, el estilo, la longitud o el formato que deseas.</li>
 <li>Ejemplo: En lugar de decir "escribe un correo", podrías decir: "Escribe un correo electrónico formal de 150 palabras para solicitar una reunión con un cliente potencial".</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2b15cc0" class="outline-3">
-<h3 id="org2b15cc0">3. Proporciona Contexto</h3>
-<div class="outline-text-3" id="text-org2b15cc0">
+<div id="outline-container-org2ab2cf4" class="outline-3">
+<h3 id="org2ab2cf4">3. Proporciona Contexto</h3>
+<div class="outline-text-3" id="text-org2ab2cf4">
 <ul class="org-ul">
 <li>La IA funciona mejor cuando tiene suficiente información. Si el prompt requiere conocimientos específicos, inclúyelos.</li>
 <li>Ejemplo: Si pides un análisis de mercado, proporciona datos como el sector, la ubicación geográfica y el público objetivo.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org9d116ed" class="outline-3">
-<h3 id="org9d116ed">4. Usa un Lenguaje Claro y Directo</h3>
-<div class="outline-text-3" id="text-org9d116ed">
+<div id="outline-container-orgb613a51" class="outline-3">
+<h3 id="orgb613a51">4. Usa un Lenguaje Claro y Directo</h3>
+<div class="outline-text-3" id="text-orgb613a51">
 <ul class="org-ul">
 <li>Evita ambigüedades. Usa un lenguaje sencillo y evita frases confusas.</li>
 <li>Ejemplo: En lugar de "haz algo sobre marketing", di: "Genera una estrategia de marketing digital para una tienda de ropa sostenible".</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org4a9679e" class="outline-3">
-<h3 id="org4a9679e">5. Itera y Ajusta</h3>
-<div class="outline-text-3" id="text-org4a9679e">
+<div id="outline-container-org91fca45" class="outline-3">
+<h3 id="org91fca45">5. Itera y Ajusta</h3>
+<div class="outline-text-3" id="text-org91fca45">
 <ul class="org-ul">
 <li>Si la respuesta no es lo que esperabas, ajusta el prompt. Prueba diferentes enfoques hasta obtener el resultado deseado.</li>
 <li>Ejemplo: Si la IA genera un texto demasiado formal, puedes pedirle: "Reescribe el texto con un tono más casual y amigable".</li>
@@ -2539,9 +2587,9 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </div>
 </div>
 </div>
-<div id="outline-container-org93fc974" class="outline-2">
-<h2 id="org93fc974">Ventajas de Usar Prompts en IA</h2>
-<div class="outline-text-2" id="text-org93fc974">
+<div id="outline-container-org2f02a67" class="outline-2">
+<h2 id="org2f02a67">Ventajas de Usar Prompts en IA</h2>
+<div class="outline-text-2" id="text-org2f02a67">
 <ol class="org-ol">
 <li><b><b>Ahorro de Tiempo</b></b>: Los prompts permiten automatizar tareas repetitivas, como redactar textos, generar ideas o analizar datos.</li>
 <li><b><b>Creatividad ilimitada</b></b>: La IA puede generar ideas y soluciones innovadoras que quizás no habías considerado.</li>
@@ -2551,9 +2599,9 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </ol>
 </div>
 </div>
-<div id="outline-container-org9f8f864" class="outline-2">
-<h2 id="org9f8f864">Inconvenientes y Desafíos</h2>
-<div class="outline-text-2" id="text-org9f8f864">
+<div id="outline-container-orgad47c81" class="outline-2">
+<h2 id="orgad47c81">Inconvenientes y Desafíos</h2>
+<div class="outline-text-2" id="text-orgad47c81">
 <ol class="org-ol">
 <li><b><b>Dependencia de la Calidad del Prompt</b></b>: Si el prompt no está bien formulado, la respuesta puede ser irrelevante o de baja calidad.</li>
 <li><b><b>Sesgos en la IA</b></b>: Los modelos de IA pueden reflejar sesgos presentes en los datos con los que fueron entrenados.</li>
@@ -2563,34 +2611,34 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </ol>
 </div>
 </div>
-<div id="outline-container-orge6abfaa" class="outline-2">
-<h2 id="orge6abfaa">Ejemplos Prácticos de Prompts</h2>
-<div class="outline-text-2" id="text-orge6abfaa">
+<div id="outline-container-org93b9e2d" class="outline-2">
+<h2 id="org93b9e2d">Ejemplos Prácticos de Prompts</h2>
+<div class="outline-text-2" id="text-org93b9e2d">
 <p>
 A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas generadas por IA:
 </p>
 </div>
-<div id="outline-container-org88fd78f" class="outline-3">
-<h3 id="org88fd78f">Ejemplo 1: Generación de Contenido</h3>
-<div class="outline-text-3" id="text-org88fd78f">
+<div id="outline-container-org0a49f77" class="outline-3">
+<h3 id="org0a49f77">Ejemplo 1: Generación de Contenido</h3>
+<div class="outline-text-3" id="text-org0a49f77">
 <ul class="org-ul">
 <li><b><b>Prompt</b></b>: "Escribe un blog de 500 palabras sobre los beneficios del ejercicio físico para la salud mental, con un tono motivacional y dirigido a jóvenes adultos."</li>
 <li><b><b>Respuesta de la IA</b></b>: La IA generará un texto estructurado, con introducción, desarrollo y conclusión, destacando cómo el ejercicio reduce el estrés y mejora el estado de ánimo.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org7a94925" class="outline-3">
-<h3 id="org7a94925">Ejemplo 2: Análisis de Datos</h3>
-<div class="outline-text-3" id="text-org7a94925">
+<div id="outline-container-org0d37522" class="outline-3">
+<h3 id="org0d37522">Ejemplo 2: Análisis de Datos</h3>
+<div class="outline-text-3" id="text-org0d37522">
 <ul class="org-ul">
 <li><b><b>Prompt</b></b>: "Analiza los siguientes datos de ventas mensuales y sugiere estrategias para aumentar las ventas en el próximo trimestre: [datos]."</li>
 <li><b><b>Respuesta de la IA</b></b>: La IA identificará patrones, como meses con bajas ventas, y propondrá acciones como promociones o campañas publicitarias.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org7090bfe" class="outline-3">
-<h3 id="org7090bfe">Ejemplo 3: Creatividad</h3>
-<div class="outline-text-3" id="text-org7090bfe">
+<div id="outline-container-orgf8ad2bc" class="outline-3">
+<h3 id="orgf8ad2bc">Ejemplo 3: Creatividad</h3>
+<div class="outline-text-3" id="text-orgf8ad2bc">
 <ul class="org-ul">
 <li><b><b>Prompt</b></b>: "Inventa una historia corta de ciencia ficción sobre un viajero del tiempo que intenta salvar el futuro."</li>
 <li><b><b>Respuesta de la IA</b></b>: La IA creará una narrativa con personajes, conflicto y resolución, ambientada en un futuro distópico.</li>
@@ -2598,9 +2646,9 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </div>
 </div>
 </div>
-<div id="outline-container-org4834b2b" class="outline-2">
-<h2 id="org4834b2b">Consejos Avanzados para Mejorar tus Prompts</h2>
-<div class="outline-text-2" id="text-org4834b2b">
+<div id="outline-container-org5e34c81" class="outline-2">
+<h2 id="org5e34c81">Consejos Avanzados para Mejorar tus Prompts</h2>
+<div class="outline-text-2" id="text-org5e34c81">
 <ol class="org-ol">
 <li><b><b>Usa Ejemplos</b></b>: Proporciona ejemplos de lo que buscas. Por ejemplo: "Escribe un poema como este: [ejemplo]."</li>
 <li><b><b>Divide Tareas Complejas</b></b>: Si el prompt es muy amplio, divídelo en partes. Por ejemplo: "Primero, describe el problema. Luego, sugiere soluciones."</li>
@@ -2609,9 +2657,9 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </ol>
 </div>
 </div>
-<div id="outline-container-orgcdcaf49" class="outline-2">
-<h2 id="orgcdcaf49">Herramientas Populares para Generar Prompts</h2>
-<div class="outline-text-2" id="text-orgcdcaf49">
+<div id="outline-container-orgd86e2c1" class="outline-2">
+<h2 id="orgd86e2c1">Herramientas Populares para Generar Prompts</h2>
+<div class="outline-text-2" id="text-orgd86e2c1">
 <ol class="org-ol">
 <li><b><b>ChatGPT</b></b>: Ideal para textos, ideas y conversaciones.</li>
 <li><b><b>MidJourney</b></b>: Perfecto para generar imágenes a partir de prompts visuales.</li>
@@ -2620,9 +2668,9 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </ol>
 </div>
 </div>
-<div id="outline-container-org2de89de" class="outline-2">
-<h2 id="org2de89de">Conclusión</h2>
-<div class="outline-text-2" id="text-org2de89de">
+<div id="outline-container-org9632dc8" class="outline-2">
+<h2 id="org9632dc8">Conclusión</h2>
+<div class="outline-text-2" id="text-org9632dc8">
 <p>
 Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo las herramientas de IA. Con un enfoque claro, específico y contextualizado, puedes obtener respuestas de alta calidad que te ayuden a ahorrar tiempo, potenciar tu creatividad y resolver problemas complejos. Sin embargo, es importante recordar que la IA es una herramienta, no un reemplazo para el pensamiento crítico y la creatividad humana.
 </p>
@@ -2632,14 +2680,14 @@ Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo 
 </p>
 </div>
 </div>
-<div id="outline-container-org29bbabc" class="outline-2">
-<h2 id="org29bbabc">Gráficos Sugeridos</h2>
-<div class="outline-text-2" id="text-org29bbabc">
+<div id="outline-container-org15ba2ed" class="outline-2">
+<h2 id="org15ba2ed">Gráficos Sugeridos</h2>
+<div class="outline-text-2" id="text-org15ba2ed">
 <ol class="org-ol">
 <li>Diagrama de flujo: "Pasos para crear un prompt efectivo".</li>
 </ol>
 
-<figure id="org7f435fb">
+<figure id="org537d8fb">
 <img src="images/diagrama_flujo_prompt.png" alt="diagrama_flujo_prompt.png">
 
 </figure>
@@ -2650,7 +2698,7 @@ Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo 
 </ol>
 
 
-<figure id="orgb9dfade">
+<figure id="org5add3d3">
 <img src="images/comparacion_prompt_ditaa.png" alt="comparacion_prompt_ditaa.png">
 
 </figure>
@@ -2774,16 +2822,16 @@ Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo 
 <item>
   <title><![CDATA[Gestionando Dos Blogs Diferentes con org-static-blog en Emacs]]></title>
   <description><![CDATA[
-<div id="outline-container-org2bab91d" class="outline-2">
-<h2 id="org2bab91d"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org56d01a8" class="outline-2">
+<h2 id="org56d01a8"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 `org-static-blog` es una herramienta poderosa para crear blogs estáticos desde Emacs, pero por defecto está diseñada para manejar un solo blog. Si quieres trabajar con dos blogs diferentes (por ejemplo, uno personal y otro profesional), necesitas ajustar tu configuración en Emacs 28 para que soporte múltiples instancias. En este artículo, te guiaré paso a paso para lograrlo.
 </p>
 </div>
 </div>
-<div id="outline-container-org787d78d" class="outline-2">
-<h2 id="org787d78d"><span class="section-number-2">2.</span> Estrategia general</h2>
+<div id="outline-container-orgf048b5b" class="outline-2">
+<h2 id="orgf048b5b"><span class="section-number-2">2.</span> Estrategia general</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 La clave para manejar dos blogs con `org-static-blog` es usar configuraciones separadas para cada uno, almacenadas en variables distintas, y luego alternar entre ellas según el blog que estés editando o publicando. Esto implica:
@@ -2795,8 +2843,8 @@ La clave para manejar dos blogs con `org-static-blog` es usar configuraciones se
 </ul>
 </div>
 </div>
-<div id="outline-container-org4c807ea" class="outline-2">
-<h2 id="org4c807ea"><span class="section-number-2">3.</span> Configuración inicial</h2>
+<div id="outline-container-org9a2fbf3" class="outline-2">
+<h2 id="org9a2fbf3"><span class="section-number-2">3.</span> Configuración inicial</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Primero, asegúrate de tener `org-static-blog` instalado en Emacs 28 (instálalo con `M-x package-install RET org-static-blog` si no lo has hecho). Luego, organiza tus directorios. Por ejemplo:
@@ -2815,8 +2863,8 @@ Dentro de cada directorio, crea subdirectorios para posts y publicaciones:
 </ul>
 </div>
 </div>
-<div id="outline-container-org95efc42" class="outline-2">
-<h2 id="org95efc42"><span class="section-number-2">4.</span> Configurar las variables para cada blog</h2>
+<div id="outline-container-orgeaadaf0" class="outline-2">
+<h2 id="orgeaadaf0"><span class="section-number-2">4.</span> Configurar las variables para cada blog</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 En tu `init.el`, define las configuraciones de ambos blogs usando variables personalizadas. Aquí un ejemplo:
@@ -2883,8 +2931,8 @@ M-x my-set-blog-pro hace lo mismo para el blog profesional.
 Crear posts para cada blog Ahora puedes crear posts en los directorios correspondientes. Por ejemplo:
 </p>
 </div>
-<div id="outline-container-org0b15d36" class="outline-3">
-<h3 id="org0b15d36"><span class="section-number-3">4.1.</span> Post para el Blog Personal (~/blog-personal/posts/2025-02-25-viaje.org):</h3>
+<div id="outline-container-orgf9a71ee" class="outline-3">
+<h3 id="orgf9a71ee"><span class="section-number-3">4.1.</span> Post para el Blog Personal (~/blog-personal/posts/2025-02-25-viaje.org):</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 org
@@ -2892,15 +2940,15 @@ org
 </div>
 </div>
 </div>
-<div id="outline-container-orgaaf1212" class="outline-2">
-<h2 id="orgaaf1212"><span class="section-number-2">5.</span> Reflexiones</h2>
+<div id="outline-container-org27fde10" class="outline-2">
+<h2 id="org27fde10"><span class="section-number-2">5.</span> Reflexiones</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Hoy escribo sobre un viaje reciente que hice&#x2026;
 </p>
 </div>
-<div id="outline-container-org01f7be7" class="outline-3">
-<h3 id="org01f7be7"><span class="section-number-3">5.1.</span> Post para el Blog Profesional (~/blog-profesional/posts/2025-02-25-proyecto.org):</h3>
+<div id="outline-container-org6d931ad" class="outline-3">
+<h3 id="org6d931ad"><span class="section-number-3">5.1.</span> Post para el Blog Profesional (~/blog-profesional/posts/2025-02-25-proyecto.org):</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 org
@@ -2908,8 +2956,8 @@ org
 </div>
 </div>
 </div>
-<div id="outline-container-orga4fa8b1" class="outline-2">
-<h2 id="orga4fa8b1"><span class="section-number-2">6.</span> Detalles</h2>
+<div id="outline-container-org9e51599" class="outline-2">
+<h2 id="org9e51599"><span class="section-number-2">6.</span> Detalles</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Este post detalla un proyecto técnico en el que estoy trabajando&#x2026;

@@ -4,21 +4,21 @@
 <title><![CDATA[Example.com - deepseek]]></title>
 <description><![CDATA[Example.com - deepseek]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-deepseek.html</link>
-<lastBuildDate>Sun, 23 Mar 2025 09:43:22 +0100</lastBuildDate>
+<lastBuildDate>Sun, 23 Mar 2025 13:26:05 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Cómo limpiar archivos y carpetas vacías en Linux con un script Bash]]></title>
   <description><![CDATA[
-<div id="outline-container-org5ab3c26" class="outline-2">
-<h2 id="org5ab3c26"><span class="section-number-2">1.</span> Introducción</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org47dd05b" class="outline-2">
+<h2 id="org47dd05b">Introducción</h2>
+<div class="outline-text-2" id="text-org47dd05b">
 <p>
 ¿Alguna vez te has encontrado con archivos o carpetas vacías en tu sistema que ocupan espacio innecesario? En este post, te mostraré cómo crear un script en <b><b>Bash</b></b> que te permita limpiar automáticamente todos los archivos y carpetas con 0 bytes desde ayer hacia atrás. Este script es ideal para mantener tu sistema organizado y liberar espacio en disco.
 </p>
 </div>
 </div>
-<div id="outline-container-org02f68c2" class="outline-2">
-<h2 id="org02f68c2"><span class="section-number-2">2.</span> Requisitos</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org0368371" class="outline-2">
+<h2 id="org0368371">Requisitos</h2>
+<div class="outline-text-2" id="text-org0368371">
 <ul class="org-ul">
 <li>Un sistema Linux (Ubuntu, Debian, Fedora, etc.).</li>
 <li>Conocimientos básicos de terminal y Bash.</li>
@@ -26,39 +26,39 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org5034a50" class="outline-2">
-<h2 id="org5034a50"><span class="section-number-2">3.</span> El Script</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-orgc528c0e" class="outline-2">
+<h2 id="orgc528c0e">El Script</h2>
+<div class="outline-text-2" id="text-orgc528c0e">
 <p>
 A continuación, te presento el script en Bash que realiza la limpieza. Puedes copiarlo y pegarlo directamente en tu terminal o guardarlo en un archivo `.sh` para ejecutarlo más tarde.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Pide al usuario que ingrese el directorio a limpiar</span>
-<span style="color: #1F55A0;">read</span> -p <span style="color: #005F00;">"Introduce la ruta del directorio que deseas limpiar: "</span> DIRECTORIO
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Pide al usuario que ingrese el directorio a limpiar</span>
+<span style="color: #dc3eb7;">read</span> -p <span style="color: #a44185;">"Introduce la ruta del directorio que deseas limpiar: "</span> DIRECTORIO
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verifica si el directorio existe</span>
-<span style="color: #D70000;">if</span> [ <span style="color: #1F55A0; font-weight: bold;">!</span> -d <span style="color: #005F00;">"$DIRECTORIO"</span> ]; <span style="color: #D70000;">then</span>
-  <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"El directorio $DIRECTORIO no existe."</span>
-  <span style="color: #D70000;">exit</span> 1
-<span style="color: #D70000;">fi</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verifica si el directorio existe</span>
+<span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #219fd5; font-weight: bold;">!</span> -d <span style="color: #a44185;">"$DIRECTORIO"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"El directorio $DIRECTORIO no existe."</span>
+  <span style="color: #219fd5; font-style: italic;">exit</span> 1
+<span style="color: #219fd5; font-style: italic;">fi</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Busca y elimina archivos vac&#237;os (0 bytes) desde ayer hacia atr&#225;s</span>
-find <span style="color: #005F00;">"$DIRECTORIO"</span> -type f -size 0 -mtime +0 -exec rm -v {} <span style="color: #005F00;">\;</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Busca y elimina archivos vac&#237;os (0 bytes) desde ayer hacia atr&#225;s</span>
+find <span style="color: #a44185;">"$DIRECTORIO"</span> -type f -size 0 -mtime +0 -exec rm -v {} <span style="color: #a44185;">\;</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Busca y elimina carpetas vac&#237;as desde ayer hacia atr&#225;s</span>
-find <span style="color: #005F00;">"$DIRECTORIO"</span> -type d -empty -mtime +0 -exec rmdir -v {} <span style="color: #005F00;">\;</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Busca y elimina carpetas vac&#237;as desde ayer hacia atr&#225;s</span>
+find <span style="color: #a44185;">"$DIRECTORIO"</span> -type d -empty -mtime +0 -exec rmdir -v {} <span style="color: #a44185;">\;</span>
 
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Limpieza completada. Archivos y carpetas vac&#237;as eliminados."</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Limpieza completada. Archivos y carpetas vac&#237;as eliminados."</span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgc000f9d" class="outline-2">
-<h2 id="orgc000f9d"><span class="section-number-2">4.</span> Explicación del Script</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org1e83a4e" class="outline-2">
+<h2 id="org1e83a4e">Explicación del Script</h2>
+<div class="outline-text-2" id="text-org1e83a4e">
 <ol class="org-ol">
 <li><b><b>Pide el directorio</b></b>: El script comienza solicitando al usuario que introduzca la ruta del directorio que desea limpiar.</li>
 <li><b><b>Verifica el directorio</b></b>: Se verifica si el directorio existe. Si no existe, el script termina con un mensaje de error.</li>
@@ -68,9 +68,9 @@ find <span style="color: #005F00;">"$DIRECTORIO"</span> -type d -empty -mtime +0
 </ol>
 </div>
 </div>
-<div id="outline-container-orga68dd0b" class="outline-2">
-<h2 id="orga68dd0b"><span class="section-number-2">5.</span> Cómo Usar el Script</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-orgb1fe513" class="outline-2">
+<h2 id="orgb1fe513">Cómo Usar el Script</h2>
+<div class="outline-text-2" id="text-orgb1fe513">
 <ol class="org-ol">
 <li>Copia el script en un archivo, por ejemplo, `clean<sub>empty</sub><sub>files.sh</sub>`.</li>
 <li>Haz que el script sea ejecutable:
@@ -93,20 +93,20 @@ chmod +x clean<sub>empty</sub><sub>files.sh</sub></li>
 <item>
   <title><![CDATA[Análisis IA Generativa por DeepSeek]]></title>
   <description><![CDATA[
-<div id="outline-container-org0a7ce6f" class="outline-2">
-<h2 id="org0a7ce6f"><span class="section-number-2">1.</span> INTRODUCCIÓN</h2>
+<div id="outline-container-org4c51828" class="outline-2">
+<h2 id="org4c51828"><span class="section-number-2">1.</span> INTRODUCCIÓN</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgad8ccf1" class="outline-3">
-<h3 id="orgad8ccf1"><span class="section-number-3">1.1.</span> Objetivo</h3>
+<div id="outline-container-orgbed306a" class="outline-3">
+<h3 id="orgbed306a"><span class="section-number-3">1.1.</span> Objetivo</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gemini Ultra (Google) y Grok-3 (xAI), evaluando sus capacidades técnicas, rendimiento práctico y viabilidad comercial.  
 </p>
 </div>
 </div>
-<div id="outline-container-orgbe628c9" class="outline-3">
-<h3 id="orgbe628c9"><span class="section-number-3">1.2.</span> Metodología</h3>
+<div id="outline-container-orgdf2c44a" class="outline-3">
+<h3 id="orgdf2c44a"><span class="section-number-3">1.2.</span> Metodología</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
 <li>Revisión de papers técnicos (2023-2024).</li>
@@ -117,12 +117,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-orge58305b" class="outline-2">
-<h2 id="orge58305b"><span class="section-number-2">2.</span> ESPECIFICACIONES TÉCNICAS</h2>
+<div id="outline-container-orgffc814c" class="outline-2">
+<h2 id="orgffc814c"><span class="section-number-2">2.</span> ESPECIFICACIONES TÉCNICAS</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org49fab54" class="outline-3">
-<h3 id="org49fab54"><span class="section-number-3">2.1.</span> Parámetros Clave por Modelo</h3>
+<div id="outline-container-org63012ea" class="outline-3">
+<h3 id="org63012ea"><span class="section-number-3">2.1.</span> Parámetros Clave por Modelo</h3>
 <div class="outline-text-3" id="text-2-1">
 <table>
 
@@ -199,8 +199,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-orgd50e746" class="outline-2">
-<h2 id="orgd50e746"><span class="section-number-2">3.</span> COMPARATIVA DETALLADA (1-10)</h2>
+<div id="outline-container-org8325080" class="outline-2">
+<h2 id="org8325080"><span class="section-number-2">3.</span> COMPARATIVA DETALLADA (1-10)</h2>
 <div class="outline-text-2" id="text-3">
 <table>
 
@@ -357,16 +357,16 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </table>
 </div>
 </div>
-<div id="outline-container-org05e73b0" class="outline-2">
-<h2 id="org05e73b0"><span class="section-number-2">4.</span> ANÁLISIS POR MODELO</h2>
+<div id="outline-container-orgbb6bf31" class="outline-2">
+<h2 id="orgbb6bf31"><span class="section-number-2">4.</span> ANÁLISIS POR MODELO</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org64fda7d" class="outline-3">
-<h3 id="org64fda7d"><span class="section-number-3">4.1.</span> GPT-4 (OpenAI)</h3>
+<div id="outline-container-org0f1a70e" class="outline-3">
+<h3 id="org0f1a70e"><span class="section-number-3">4.1.</span> GPT-4 (OpenAI)</h3>
 <div class="outline-text-3" id="text-4-1">
 </div>
-<div id="outline-container-org1507104" class="outline-4">
-<h4 id="org1507104"><span class="section-number-4">4.1.1.</span> Ventajas</h4>
+<div id="outline-container-org29fc73d" class="outline-4">
+<h4 id="org29fc73d"><span class="section-number-4">4.1.1.</span> Ventajas</h4>
 <div class="outline-text-4" id="text-4-1-1">
 <ul class="org-ul">
 <li>Soporta plugins para matemáticas (Wolfram), búsquedas (Bing) y código (Code Interpreter).</li>
@@ -375,8 +375,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-org02167f1" class="outline-4">
-<h4 id="org02167f1"><span class="section-number-4">4.1.2.</span> Desventajas</h4>
+<div id="outline-container-orgc78234b" class="outline-4">
+<h4 id="orgc78234b"><span class="section-number-4">4.1.2.</span> Desventajas</h4>
 <div class="outline-text-4" id="text-4-1-2">
 <ul class="org-ul">
 <li>Coste elevado para alto volumen (~$6 por millón tokens en entrada).</li>
@@ -385,12 +385,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org922fb12" class="outline-3">
-<h3 id="org922fb12"><span class="section-number-3">4.2.</span> DeepSeek-MoE</h3>
+<div id="outline-container-org042f4b6" class="outline-3">
+<h3 id="org042f4b6"><span class="section-number-3">4.2.</span> DeepSeek-MoE</h3>
 <div class="outline-text-3" id="text-4-2">
 </div>
-<div id="outline-container-org5d70a48" class="outline-4">
-<h4 id="org5d70a48"><span class="section-number-4">4.2.1.</span> Casos de Uso Ideales</h4>
+<div id="outline-container-orga4f4b5e" class="outline-4">
+<h4 id="orga4f4b5e"><span class="section-number-4">4.2.1.</span> Casos de Uso Ideales</h4>
 <div class="outline-text-4" id="text-4-2-1">
 <ul class="org-ul">
 <li>Generación de código Python/JavaScript con bajo consumo de recursos.</li>
@@ -398,8 +398,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf13caef" class="outline-4">
-<h4 id="orgf13caef"><span class="section-number-4">4.2.2.</span> Limitaciones</h4>
+<div id="outline-container-orgbf5e254" class="outline-4">
+<h4 id="orgbf5e254"><span class="section-number-4">4.2.2.</span> Limitaciones</h4>
 <div class="outline-text-4" id="text-4-2-2">
 <ul class="org-ul">
 <li>Rendimiento pobre en español (precisión ~68% vs 92% en inglés).</li>
@@ -408,12 +408,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-orgb425881" class="outline-3">
-<h3 id="orgb425881"><span class="section-number-3">4.3.</span> Gemini Ultra</h3>
+<div id="outline-container-org58ff93e" class="outline-3">
+<h3 id="org58ff93e"><span class="section-number-3">4.3.</span> Gemini Ultra</h3>
 <div class="outline-text-3" id="text-4-3">
 </div>
-<div id="outline-container-org23d512c" class="outline-4">
-<h4 id="org23d512c"><span class="section-number-4">4.3.1.</span> Fortalezas Multimodales</h4>
+<div id="outline-container-org84919b0" class="outline-4">
+<h4 id="org84919b0"><span class="section-number-4">4.3.1.</span> Fortalezas Multimodales</h4>
 <div class="outline-text-4" id="text-4-3-1">
 <ul class="org-ul">
 <li>Análisis de vídeo (extracción de frames + transcripción).</li>
@@ -422,8 +422,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-org4701e44" class="outline-4">
-<h4 id="org4701e44"><span class="section-number-4">4.3.2.</span> Debilidades</h4>
+<div id="outline-container-orge0320fc" class="outline-4">
+<h4 id="orge0320fc"><span class="section-number-4">4.3.2.</span> Debilidades</h4>
 <div class="outline-text-4" id="text-4-3-2">
 <ul class="org-ul">
 <li>Inconsistencias en razonamiento lógico (ej: silogismos).</li>
@@ -432,12 +432,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-orgcd40830" class="outline-3">
-<h3 id="orgcd40830"><span class="section-number-3">4.4.</span> Grok-3</h3>
+<div id="outline-container-org0a8c02c" class="outline-3">
+<h3 id="org0a8c02c"><span class="section-number-3">4.4.</span> Grok-3</h3>
 <div class="outline-text-3" id="text-4-4">
 </div>
-<div id="outline-container-org34358cb" class="outline-4">
-<h4 id="org34358cb"><span class="section-number-4">4.4.1.</span> Diferenciadores</h4>
+<div id="outline-container-orgd115f15" class="outline-4">
+<h4 id="orgd115f15"><span class="section-number-4">4.4.1.</span> Diferenciadores</h4>
 <div class="outline-text-4" id="text-4-4-1">
 <ul class="org-ul">
 <li>Entrenado con datos de 𝕏 (Twitter) hasta Q1 2024.</li>
@@ -445,8 +445,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-orga80be71" class="outline-4">
-<h4 id="orga80be71"><span class="section-number-4">4.4.2.</span> Riesgos</h4>
+<div id="outline-container-org2ce330c" class="outline-4">
+<h4 id="org2ce330c"><span class="section-number-4">4.4.2.</span> Riesgos</h4>
 <div class="outline-text-4" id="text-4-4-2">
 <ul class="org-ul">
 <li>Alucinaciones frecuentes en temas técnicos (ej: código).</li>
@@ -456,12 +456,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org686bf60" class="outline-2">
-<h2 id="org686bf60"><span class="section-number-2">5.</span> TAREAS PENDIENTES</h2>
+<div id="outline-container-org9f5c516" class="outline-2">
+<h2 id="org9f5c516"><span class="section-number-2">5.</span> TAREAS PENDIENTES</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-orgfaacb1c" class="outline-3">
-<h3 id="orgfaacb1c"><span class="section-number-3">5.1.</span> Prioridad Alta</h3>
+<div id="outline-container-org0407846" class="outline-3">
+<h3 id="org0407846"><span class="section-number-3">5.1.</span> Prioridad Alta</h3>
 <div class="outline-text-3" id="text-5-1">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> Probar Gemini Ultra en análisis de vídeos educativos (deadline: 2024-05-25).</li>
@@ -470,8 +470,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-org1da6a17" class="outline-3">
-<h3 id="org1da6a17"><span class="section-number-3">5.2.</span> Prioridad Media</h3>
+<div id="outline-container-org8a4f285" class="outline-3">
+<h3 id="org8a4f285"><span class="section-number-3">5.2.</span> Prioridad Media</h3>
 <div class="outline-text-3" id="text-5-2">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> Crear script Emacs para automatizar tablas comparativas (elisp).</li>
@@ -480,8 +480,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org89f1015" class="outline-2">
-<h2 id="org89f1015"><span class="section-number-2">6.</span> CONCLUSIONES</h2>
+<div id="outline-container-orgb0d9ce7" class="outline-2">
+<h2 id="orgb0d9ce7"><span class="section-number-2">6.</span> CONCLUSIONES</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li><b><b>Mejor generalista</b></b>: GPT-4 (9.1/10) para equilibrio entre calidad y herramientas.</li>
@@ -502,16 +502,16 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 <item>
   <title><![CDATA[Capacidades y Comparativa de Modelos de IA Generativa: OpenAI, DeepSeek, Gemini y Grok 3]]></title>
   <description><![CDATA[
-<div id="outline-container-org9c64bb3" class="outline-2">
-<h2 id="org9c64bb3"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org9070f14" class="outline-2">
+<h2 id="org9070f14"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 La IA generativa es una categoría de inteligencia artificial que crea contenido nuevo (texto, imágenes, código, etc.) a partir de datos de entrenamiento, utilizando modelos de aprendizaje profundo como transformers o sistemas de mezcla de expertos (MoE). Este documento define sus capacidades, características y compara los modelos líderes: OpenAI (GPT-4o/o1), DeepSeek (R1/V3), Gemini (2.0/Pro) y Grok 3 de xAI, con una valoración de 1 a 10.
 </p>
 </div>
 </div>
-<div id="outline-container-orgabb02a6" class="outline-2">
-<h2 id="orgabb02a6"><span class="section-number-2">2.</span> Capacidades de la IA Generativa</h2>
+<div id="outline-container-org4ab10ef" class="outline-2">
+<h2 id="org4ab10ef"><span class="section-number-2">2.</span> Capacidades de la IA Generativa</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 La IA generativa tiene las siguientes capacidades generales:
@@ -526,8 +526,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc1685c3" class="outline-2">
-<h2 id="orgc1685c3"><span class="section-number-2">3.</span> Características Comunes</h2>
+<div id="outline-container-org3f5dd43" class="outline-2">
+<h2 id="org3f5dd43"><span class="section-number-2">3.</span> Características Comunes</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li><b><b>Arquitectura</b></b>: Basada en transformers o MoE para eficiencia y escalabilidad.</li>
@@ -538,12 +538,12 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-org5e88224" class="outline-2">
-<h2 id="org5e88224"><span class="section-number-2">4.</span> Comparativa de Modelos</h2>
+<div id="outline-container-org7306a77" class="outline-2">
+<h2 id="org7306a77"><span class="section-number-2">4.</span> Comparativa de Modelos</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org1ed87c7" class="outline-3">
-<h3 id="org1ed87c7"><span class="section-number-3">4.1.</span> OpenAI (GPT-4o / o1)**</h3>
+<div id="outline-container-orgc167e09" class="outline-3">
+<h3 id="orgc167e09"><span class="section-number-3">4.1.</span> OpenAI (GPT-4o / o1)**</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Líder en IA conversacional, con GPT-4o como modelo multimodal y o1 especializado en razonamiento.</li>
@@ -569,8 +569,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc9f83c9" class="outline-3">
-<h3 id="orgc9f83c9"><span class="section-number-3">4.2.</span> DeepSeek (R1 / V3)**</h3>
+<div id="outline-container-org2eb9f6d" class="outline-3">
+<h3 id="org2eb9f6d"><span class="section-number-3">4.2.</span> DeepSeek (R1 / V3)**</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Modelo chino de bajo costo, con R1 enfocado en razonamiento y V3 como MoE de 671B parámetros.</li>
@@ -596,8 +596,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-org8ecb844" class="outline-3">
-<h3 id="org8ecb844"><span class="section-number-3">4.3.</span> Gemini (2.0 / Pro)**</h3>
+<div id="outline-container-orga594c8e" class="outline-3">
+<h3 id="orga594c8e"><span class="section-number-3">4.3.</span> Gemini (2.0 / Pro)**</h3>
 <div class="outline-text-3" id="text-4-3">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Modelo de Google, integrado con su ecosistema, con Gemini 2.0 Pro como versión avanzada.</li>
@@ -623,8 +623,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </ul>
 </div>
 </div>
-<div id="outline-container-org355229e" class="outline-3">
-<h3 id="org355229e"><span class="section-number-3">4.4.</span> Grok 3 (xAI)**</h3>
+<div id="outline-container-org57c5428" class="outline-3">
+<h3 id="org57c5428"><span class="section-number-3">4.4.</span> Grok 3 (xAI)**</h3>
 <div class="outline-text-3" id="text-4-4">
 <ul class="org-ul">
 <li><b><b>Descripción</b></b>: Último modelo de xAI, con énfasis en razonamiento y "búsqueda de la verdad".</li>
@@ -651,8 +651,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </div>
 </div>
 </div>
-<div id="outline-container-org342702d" class="outline-2">
-<h2 id="org342702d"><span class="section-number-2">5.</span> Comparativa Resumida</h2>
+<div id="outline-container-org8fe62ed" class="outline-2">
+<h2 id="org8fe62ed"><span class="section-number-2">5.</span> Comparativa Resumida</h2>
 <div class="outline-text-2" id="text-5">
 <table>
 
@@ -734,8 +734,8 @@ La IA generativa tiene las siguientes capacidades generales:
 </table>
 </div>
 </div>
-<div id="outline-container-orgc86d0d4" class="outline-2">
-<h2 id="orgc86d0d4"><span class="section-number-2">6.</span> Conclusión</h2>
+<div id="outline-container-org9ddf015" class="outline-2">
+<h2 id="org9ddf015"><span class="section-number-2">6.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li><b><b>OpenAI (GPT-4o/o1)</b></b>: Ideal para usuarios que buscan versatilidad y razonamiento avanzado, aunque costoso.</li>

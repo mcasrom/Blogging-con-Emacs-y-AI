@@ -4,20 +4,20 @@
 <title><![CDATA[Example.com - bash]]></title>
 <description><![CDATA[Example.com - bash]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-bash.html</link>
-<lastBuildDate>Sun, 23 Mar 2025 09:43:21 +0100</lastBuildDate>
+<lastBuildDate>Sun, 23 Mar 2025 13:26:04 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Scripts de Bash para Ciberseguridad en Linux: Detección y Automatización]]></title>
   <description><![CDATA[
-<div id="outline-container-org1a7f9bc" class="outline-2">
-<h2 id="org1a7f9bc"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-orga413c74" class="outline-2">
+<h2 id="orga413c74"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 En el ámbito de la ciberseguridad, la automatización de tareas mediante scripts es una habilidad crucial. Los scripts de Bash en Linux ofrecen una poderosa herramienta para realizar análisis de seguridad, detección de amenazas y auditorías de sistemas. En este post, exploraremos varios scripts de Bash diseñados para mejorar la seguridad y automatizar procesos de detección en entornos Linux.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd5c3af6" class="outline-2">
-<h2 id="orgd5c3af6"><span class="section-number-2">2.</span> Script 1: Detección Básica de Ciberataques</h2>
+<div id="outline-container-org90a695f" class="outline-2">
+<h2 id="org90a695f"><span class="section-number-2">2.</span> Script 1: Detección Básica de Ciberataques</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Este script realiza una serie de comprobaciones básicas para detectar posibles indicios de un ciberataque en un sistema Linux.
@@ -72,8 +72,8 @@ Este script realiza las siguientes comprobaciones:
 </ol>
 </div>
 </div>
-<div id="outline-container-org619f033" class="outline-2">
-<h2 id="org619f033"><span class="section-number-2">3.</span> Script 2: Análisis de Intentos de Acceso No Válidos</h2>
+<div id="outline-container-org342caf9" class="outline-2">
+<h2 id="org342caf9"><span class="section-number-2">3.</span> Script 2: Análisis de Intentos de Acceso No Válidos</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Este script se enfoca en analizar los intentos de acceso no válidos en un archivo de registro específico.
@@ -106,8 +106,8 @@ Este script:
 </ol>
 </div>
 </div>
-<div id="outline-container-org4b9a3bc" class="outline-2">
-<h2 id="org4b9a3bc"><span class="section-number-2">4.</span> Script 3: Detección de Equipos en la Red Local</h2>
+<div id="outline-container-org3aa3e5d" class="outline-2">
+<h2 id="org3aa3e5d"><span class="section-number-2">4.</span> Script 3: Detección de Equipos en la Red Local</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Este script utiliza el comando ping para detectar equipos activos en la red local.
@@ -140,8 +140,8 @@ Este script:
 </ol>
 </div>
 </div>
-<div id="outline-container-org9557c69" class="outline-2">
-<h2 id="org9557c69"><span class="section-number-2">5.</span> Consideraciones de Seguridad</h2>
+<div id="outline-container-orgbad4036" class="outline-2">
+<h2 id="orgbad4036"><span class="section-number-2">5.</span> Consideraciones de Seguridad</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Al utilizar estos scripts, es importante tener en cuenta:
@@ -155,28 +155,28 @@ Al utilizar estos scripts, es importante tener en cuenta:
 </ol>
 
 
-<figure id="org9d923fb">
+<figure id="org2152095">
 <img src="post_diagram.png" alt="post_diagram.png">
 
 </figure>
 
 
-<figure id="org79ad43b">
+<figure id="org2c66bac">
 <img src="images/post_diagram.png" alt="post_diagram.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-orga669fef" class="outline-2">
-<h2 id="orga669fef"><span class="section-number-2">6.</span> Conclusión</h2>
+<div id="outline-container-org611afd0" class="outline-2">
+<h2 id="org611afd0"><span class="section-number-2">6.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Los scripts de Bash son herramientas poderosas para la automatización de tareas de seguridad en Linux. Desde la detección básica de amenazas hasta el análisis de redes, estos scripts pueden mejorar significativamente la eficiencia de las auditorías de seguridad y la respuesta a incidentes. Sin embargo, es crucial utilizarlos de manera responsable y en conjunto con otras prácticas de seguridad robustas.
 </p>
 </div>
 </div>
-<div id="outline-container-orga7a0069" class="outline-2">
-<h2 id="orga7a0069"><span class="section-number-2">7.</span> Referencias</h2>
+<div id="outline-container-org9e70459" class="outline-2">
+<h2 id="org9e70459"><span class="section-number-2">7.</span> Referencias</h2>
 <div class="outline-text-2" id="text-7">
 <ol class="org-ol">
 <li>Centro de Investigaciones Sociológicas (CIS). (2024). Barómetro mensual. <a href="https://www.cis.es/">https://www.cis.es/</a></li>
@@ -199,13 +199,13 @@ Los scripts de Bash son herramientas poderosas para la automatización de tareas
 <item>
   <title><![CDATA[Tutorial de Seguridad en Linux: Mínimo de Protección ante Ataques Informáticos (II)]]></title>
   <description><![CDATA[
-<div id="outline-container-orgfe423c6" class="outline-2">
-<h2 id="orgfe423c6"><span class="section-number-2">1.</span> Capítulo 2: Automatización y Análisis Avanzado</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org8b21ed4" class="outline-2">
+<h2 id="org8b21ed4">Capítulo 2: Automatización y Análisis Avanzado</h2>
+<div class="outline-text-2" id="text-org8b21ed4">
 </div>
-<div id="outline-container-org0877f3b" class="outline-3">
-<h3 id="org0877f3b"><span class="section-number-3">1.1.</span> Objetivos</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-orgc67696a" class="outline-3">
+<h3 id="orgc67696a">Objetivos</h3>
+<div class="outline-text-3" id="text-orgc67696a">
 <ul class="org-ul">
 <li>Automatizar tareas de seguridad con scripts.</li>
 <li>Analizar logs para detectar patrones sospechosos.</li>
@@ -213,9 +213,9 @@ Los scripts de Bash son herramientas poderosas para la automatización de tareas
 </ul>
 </div>
 </div>
-<div id="outline-container-orgadc7dbb" class="outline-3">
-<h3 id="orgadc7dbb"><span class="section-number-3">1.2.</span> Paso 1: Automatizar Tareas con Scripts en Bash</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-orgd0bea96" class="outline-3">
+<h3 id="orgd0bea96">Paso 1: Automatizar Tareas con Scripts en Bash</h3>
+<div class="outline-text-3" id="text-orgd0bea96">
 <p>
 Crea un script para automatizar la revisión de logs y el bloqueo de IPs sospechosas.
 </p>
@@ -225,18 +225,18 @@ Crea un script para automatizar la revisión de logs y el bloqueo de IPs sospech
 Script `security<sub>monitor.sh</sub>`:
 </p>
 <div class="org-src-container">
-<pre class="src src-sh"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
-<span style="color: #004651;">LOG_FILE</span>=<span style="color: #005F00;">"/var/log/auth.log"</span>
-<span style="color: #004651;">BAN_LIST</span>=<span style="color: #005F00;">"/etc/fail2ban/jail.local"</span>
+<pre class="src src-sh"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #1857a4;">LOG_FILE</span>=<span style="color: #a44185;">"/var/log/auth.log"</span>
+<span style="color: #1857a4;">BAN_LIST</span>=<span style="color: #a44185;">"/etc/fail2ban/jail.local"</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Buscar IPs con m&#250;ltiples intentos fallidos</span>
-<span style="color: #004651;">SUSPICIOUS_IPS</span>=$(<span style="color: #1F55A0; font-weight: bold;">grep "Failed password" $LOG_FILE | awk '{print $(NF-3</span><span style="color: #005F00;">)}'</span> | sort | uniq -c | awk <span style="color: #005F00;">'$1 &gt; 3 {print $2}'</span>)
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Buscar IPs con m&#250;ltiples intentos fallidos</span>
+<span style="color: #1857a4;">SUSPICIOUS_IPS</span>=$(<span style="color: #219fd5; font-weight: bold;">grep "Failed password" $LOG_FILE | awk '{print $(NF-3</span><span style="color: #a44185;">)}'</span> | sort | uniq -c | awk <span style="color: #a44185;">'$1 &gt; 3 {print $2}'</span>)
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Bloquear IPs sospechosas</span>
-<span style="color: #D70000;">for</span> IP<span style="color: #D70000;"> in</span> $<span style="color: #004651;">SUSPICIOUS_IPS</span>; <span style="color: #D70000;">do</span>
-    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Bloqueando IP: $IP"</span>
-    sudo fail2ban-client set sshd banip $<span style="color: #004651;">IP</span>
-<span style="color: #D70000;">done</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Bloquear IPs sospechosas</span>
+<span style="color: #219fd5; font-style: italic;">for</span> IP<span style="color: #219fd5; font-style: italic;"> in</span> $<span style="color: #1857a4;">SUSPICIOUS_IPS</span>; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Bloqueando IP: $IP"</span>
+    sudo fail2ban-client set sshd banip $<span style="color: #1857a4;">IP</span>
+<span style="color: #219fd5; font-style: italic;">done</span>
 </pre>
 </div></li>
 
@@ -257,9 +257,9 @@ Añade la siguiente línea:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgb4cf443" class="outline-3">
-<h3 id="orgb4cf443"><span class="section-number-3">1.3.</span> Paso 2: Analizar Logs con Python</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-orgd476327" class="outline-3">
+<h3 id="orgd476327">Paso 2: Analizar Logs con Python</h3>
+<div class="outline-text-3" id="text-orgd476327">
 <p>
 Crea un script en Python para analizar logs y generar reportes.
 </p>
@@ -269,30 +269,30 @@ Crea un script en Python para analizar logs y generar reportes.
 Script `log<sub>analyzer.py</sub>`:
 </p>
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/usr/bin/env python3</span>
-<span style="color: #D70000;">import</span> re
-<span style="color: #D70000;">from</span> collections <span style="color: #D70000;">import</span> Counter
+<pre class="src src-python"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/usr/bin/env python3</span>
+<span style="color: #219fd5; font-style: italic;">import</span> re
+<span style="color: #219fd5; font-style: italic;">from</span> collections <span style="color: #219fd5; font-style: italic;">import</span> Counter
 
-<span style="color: #004651;">LOG_FILE</span> = <span style="color: #005F00;">"/var/log/auth.log"</span>
-<span style="color: #004651;">REPORT_FILE</span> = <span style="color: #005F00;">"/var/log/security_report.txt"</span>
+<span style="color: #1857a4;">LOG_FILE</span> = <span style="color: #a44185;">"/var/log/auth.log"</span>
+<span style="color: #1857a4;">REPORT_FILE</span> = <span style="color: #a44185;">"/var/log/security_report.txt"</span>
 
-<span style="color: #D70000;">def</span> <span style="color: #AF8700;">analyze_logs</span>():
-    <span style="color: #D70000;">with</span> <span style="color: #1F55A0;">open</span>(LOG_FILE, <span style="color: #005F00;">"r"</span>) <span style="color: #D70000;">as</span> <span style="color: #1F55A0;">file</span>:
-        <span style="color: #004651;">logs</span> = <span style="color: #1F55A0;">file</span>.readlines()
+<span style="color: #219fd5; font-style: italic;">def</span> <span style="color: #dc3eb7;">analyze_logs</span>():
+    <span style="color: #219fd5; font-style: italic;">with</span> <span style="color: #dc3eb7;">open</span>(LOG_FILE, <span style="color: #a44185;">"r"</span>) <span style="color: #219fd5; font-style: italic;">as</span> <span style="color: #dc3eb7;">file</span>:
+        <span style="color: #1857a4;">logs</span> = <span style="color: #dc3eb7;">file</span>.readlines()
 
-    <span style="color: #004651;">failed_attempts</span> = Counter()
-    <span style="color: #D70000;">for</span> log <span style="color: #D70000;">in</span> logs:
-        <span style="color: #D70000;">if</span> <span style="color: #005F00;">"Failed password"</span> <span style="color: #D70000;">in</span> log:
-            <span style="color: #004651;">ip</span> = re.search(r<span style="color: #005F00;">"\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b"</span>, log).group()
-            <span style="color: #004651;">failed_attempts</span>[ip] += 1
+    <span style="color: #1857a4;">failed_attempts</span> = Counter()
+    <span style="color: #219fd5; font-style: italic;">for</span> log <span style="color: #219fd5; font-style: italic;">in</span> logs:
+        <span style="color: #219fd5; font-style: italic;">if</span> <span style="color: #a44185;">"Failed password"</span> <span style="color: #219fd5; font-style: italic;">in</span> log:
+            <span style="color: #1857a4;">ip</span> = re.search(r<span style="color: #a44185;">"\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b"</span>, log).group()
+            <span style="color: #1857a4;">failed_attempts</span>[ip] += 1
 
-    <span style="color: #D70000;">with</span> <span style="color: #1F55A0;">open</span>(REPORT_FILE, <span style="color: #005F00;">"w"</span>) <span style="color: #D70000;">as</span> report:
-        report.write(<span style="color: #005F00;">"Reporte de Seguridad</span><span style="color: #AF005F;">\n</span><span style="color: #005F00;">"</span>)
-        report.write(<span style="color: #005F00;">"===================</span><span style="color: #AF005F;">\n</span><span style="color: #005F00;">"</span>)
-        <span style="color: #D70000;">for</span> ip, count <span style="color: #D70000;">in</span> failed_attempts.most_common():
-            report.write(f<span style="color: #005F00;">"IP: </span>{ip}<span style="color: #005F00;"> - Intentos fallidos: </span>{count}<span style="color: #AF005F;">\n</span><span style="color: #005F00;">"</span>)
+    <span style="color: #219fd5; font-style: italic;">with</span> <span style="color: #dc3eb7;">open</span>(REPORT_FILE, <span style="color: #a44185;">"w"</span>) <span style="color: #219fd5; font-style: italic;">as</span> report:
+        report.write(<span style="color: #a44185;">"Reporte de Seguridad</span><span style="color: #2f86d2;">\n</span><span style="color: #a44185;">"</span>)
+        report.write(<span style="color: #a44185;">"===================</span><span style="color: #2f86d2;">\n</span><span style="color: #a44185;">"</span>)
+        <span style="color: #219fd5; font-style: italic;">for</span> ip, count <span style="color: #219fd5; font-style: italic;">in</span> failed_attempts.most_common():
+            report.write(f<span style="color: #a44185;">"IP: </span>{ip}<span style="color: #a44185;"> - Intentos fallidos: </span>{count}<span style="color: #2f86d2;">\n</span><span style="color: #a44185;">"</span>)
 
-<span style="color: #D70000;">if</span> <span style="color: #1F55A0;">__name__</span> == <span style="color: #005F00;">"__main__"</span>:
+<span style="color: #219fd5; font-style: italic;">if</span> <span style="color: #dc3eb7;">__name__</span> == <span style="color: #a44185;">"__main__"</span>:
     analyze_logs()
 </pre>
 </div></li>
@@ -307,9 +307,9 @@ Ejecutar el script:
 </ol>
 </div>
 </div>
-<div id="outline-container-org076a014" class="outline-3">
-<h3 id="org076a014"><span class="section-number-3">1.4.</span> Paso 3: Generar Reportes de Seguridad</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-orgb0c2406" class="outline-3">
+<h3 id="orgb0c2406">Paso 3: Generar Reportes de Seguridad</h3>
+<div class="outline-text-3" id="text-orgb0c2406">
 <p>
 Usa los scripts anteriores para generar reportes diarios.
 </p>
@@ -319,7 +319,7 @@ Usa los scripts anteriores para generar reportes diarios.
 Combinar ambos scripts en un solo archivo:
 </p>
 <div class="org-src-container">
-<pre class="src src-sh"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<pre class="src src-sh"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
 /ruta/al/script/security_monitor.sh
 python3 /ruta/al/script/log_analyzer.py
 </pre>
@@ -342,9 +342,9 @@ Añade la siguiente línea:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgbddd265" class="outline-3">
-<h3 id="orgbddd265"><span class="section-number-3">1.5.</span> Resultados Esperados</h3>
-<div class="outline-text-3" id="text-1-5">
+<div id="outline-container-org963fd93" class="outline-3">
+<h3 id="org963fd93">Resultados Esperados</h3>
+<div class="outline-text-3" id="text-org963fd93">
 <ul class="org-ul">
 <li>Tareas de seguridad automatizadas.</li>
 <li>Logs analizados en busca de patrones sospechosos.</li>
@@ -357,17 +357,17 @@ Añade la siguiente línea:
 </div>
 </div>
 </div>
-<div id="outline-container-orgbac7489" class="outline-2">
-<h2 id="orgbac7489"><span class="section-number-2">2.</span> Conclusión</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org35e397b" class="outline-2">
+<h2 id="org35e397b">Conclusión</h2>
+<div class="outline-text-2" id="text-org35e397b">
 <p>
 Con estos dos capítulos, has implementado un mínimo de seguridad en tu entorno Linux. Desde la configuración básica del firewall hasta la automatización de tareas y el análisis avanzado de logs, este tutorial te proporciona las herramientas necesarias para proteger tu sistema ante ataques informáticos. ¡Ahora es tu turno de adaptar y mejorar estas técnicas según tus necesidades!
 </p>
 </div>
 </div>
-<div id="outline-container-org285a04f" class="outline-2">
-<h2 id="org285a04f"><span class="section-number-2">3.</span> Recursos Adicionales</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org358fc11" class="outline-2">
+<h2 id="org358fc11">Recursos Adicionales</h2>
+<div class="outline-text-2" id="text-org358fc11">
 <ul class="org-ul">
 <li><a href="https://help.ubuntu.com/community/UFW">Documentación de UFW</a></li>
 <li><a href="https://www.fail2ban.org/">Documentación de Fail2Ban</a></li>
@@ -416,13 +416,13 @@ Con estos dos capítulos, has implementado un mínimo de seguridad en tu entorno
 <p>
 AUTHOR: Tu Nombre
 </p>
-<div id="outline-container-orgae93554" class="outline-2">
-<h2 id="orgae93554"><span class="section-number-2">1.</span> Capítulo 1: Configuración Básica de Seguridad</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orgac7d834" class="outline-2">
+<h2 id="orgac7d834">Capítulo 1: Configuración Básica de Seguridad</h2>
+<div class="outline-text-2" id="text-orgac7d834">
 </div>
-<div id="outline-container-org34b86e4" class="outline-3">
-<h3 id="org34b86e4"><span class="section-number-3">1.1.</span> Objetivos</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org6aed3b4" class="outline-3">
+<h3 id="org6aed3b4">Objetivos</h3>
+<div class="outline-text-3" id="text-org6aed3b4">
 <ul class="org-ul">
 <li>Configurar un firewall básico.</li>
 <li>Deshabilitar servicios innecesarios.</li>
@@ -431,9 +431,9 @@ AUTHOR: Tu Nombre
 </ul>
 </div>
 </div>
-<div id="outline-container-org207fca1" class="outline-3">
-<h3 id="org207fca1"><span class="section-number-3">1.2.</span> Paso 1: Configurar un Firewall Básico con `ufw`</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-org6232592" class="outline-3">
+<h3 id="org6232592">Paso 1: Configurar un Firewall Básico con `ufw`</h3>
+<div class="outline-text-3" id="text-org6232592">
 <p>
 `ufw` (Uncomplicated Firewall) es una herramienta sencilla para gestionar reglas de firewall en Linux.
 </p>
@@ -492,9 +492,9 @@ Verificar el estado del firewall:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf7cbb39" class="outline-3">
-<h3 id="orgf7cbb39"><span class="section-number-3">1.3.</span> Paso 2: Deshabilitar Servicios Innecesarios</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-orga4c3880" class="outline-3">
+<h3 id="orga4c3880">Paso 2: Deshabilitar Servicios Innecesarios</h3>
+<div class="outline-text-3" id="text-orga4c3880">
 <p>
 Los servicios innecesarios pueden ser un vector de ataque. Deshabilita los que no uses.
 </p>
@@ -519,9 +519,9 @@ sudo systemctl disable apache2
 </ol>
 </div>
 </div>
-<div id="outline-container-org32b35f5" class="outline-3">
-<h3 id="org32b35f5"><span class="section-number-3">1.4.</span> Paso 3: Monitorear Logs del Sistema</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-org00217f7" class="outline-3">
+<h3 id="org00217f7">Paso 3: Monitorear Logs del Sistema</h3>
+<div class="outline-text-3" id="text-org00217f7">
 <p>
 Los logs son esenciales para detectar actividad sospechosa.
 </p>
@@ -545,9 +545,9 @@ Ver logs del firewall:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgd647c80" class="outline-3">
-<h3 id="orgd647c80"><span class="section-number-3">1.5.</span> Paso 4: Detectar Intentos de Acceso No Autorizados</h3>
-<div class="outline-text-3" id="text-1-5">
+<div id="outline-container-org91d8990" class="outline-3">
+<h3 id="org91d8990">Paso 4: Detectar Intentos de Acceso No Autorizados</h3>
+<div class="outline-text-3" id="text-org91d8990">
 <p>
 Usa `fail2ban` para bloquear IPs que realicen intentos de acceso fallidos.
 </p>
@@ -589,9 +589,9 @@ Reiniciar `fail2ban`:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf174586" class="outline-3">
-<h3 id="orgf174586"><span class="section-number-3">1.6.</span> Resultados Esperados</h3>
-<div class="outline-text-3" id="text-1-6">
+<div id="outline-container-orgf3602c2" class="outline-3">
+<h3 id="orgf3602c2">Resultados Esperados</h3>
+<div class="outline-text-3" id="text-orgf3602c2">
 <ul class="org-ul">
 <li>Firewall activo y configurado.</li>
 <li>Servicios innecesarios deshabilitados.</li>
@@ -622,9 +622,9 @@ Reiniciar `fail2ban`:
 <p>
 Por Qwen AI
 </p>
-<div id="outline-container-orgdba67ba" class="outline-2">
-<h2 id="orgdba67ba"><span class="section-number-2">1.</span> Introducción</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org5ffb64a" class="outline-2">
+<h2 id="org5ffb64a">Introducción</h2>
+<div class="outline-text-2" id="text-org5ffb64a">
 <p>
 Este documento describe cómo configurar una seguridad mínima en un sistema Linux utilizando scripts escritos en <b><b>Bash</b></b> y <b><b>Python</b></b>. Las medidas incluyen:
 </p>
@@ -636,9 +636,9 @@ Este documento describe cómo configurar una seguridad mínima en un sistema Lin
 </ul>
 </div>
 </div>
-<div id="outline-container-org4f45fda" class="outline-2">
-<h2 id="org4f45fda"><span class="section-number-2">2.</span> Configuración Básica del Firewall con IPTables (Bash)</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-orgc1fc759" class="outline-2">
+<h2 id="orgc1fc759">Configuración Básica del Firewall con IPTables (Bash)</h2>
+<div class="outline-text-2" id="text-orgc1fc759">
 <p>
 El siguiente script configura un firewall básico utilizando IPTables para permitir solo el tráfico necesario.
 </p>
@@ -647,36 +647,36 @@ El siguiente script configura un firewall básico utilizando IPTables para permi
 <b><b>Script Bash:</b></b>
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Limpiar todas las reglas existentes</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Limpiar todas las reglas existentes</span>
 iptables -F
 iptables -X
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Pol&#237;tica por defecto: Denegar todo el tr&#225;fico entrante y saliente</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Pol&#237;tica por defecto: Denegar todo el tr&#225;fico entrante y saliente</span>
 iptables -P INPUT DROP
 iptables -P FORWARD DROP
 iptables -P OUTPUT ACCEPT
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Permitir tr&#225;fico local (loopback)</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Permitir tr&#225;fico local (loopback)</span>
 iptables -A INPUT -i lo -j ACCEPT
 iptables -A OUTPUT -o lo -j ACCEPT
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Permitir conexiones establecidas o relacionadas</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Permitir conexiones establecidas o relacionadas</span>
 iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Permitir SSH (puerto 22) desde una IP espec&#237;fica (opcional)</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Reemplaza "TU_IP" con tu direcci&#243;n IP p&#250;blica</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Permitir SSH (puerto 22) desde una IP espec&#237;fica (opcional)</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Reemplaza "TU_IP" con tu direcci&#243;n IP p&#250;blica</span>
 iptables -A INPUT -p tcp --dport 22 -s TU_IP -j ACCEPT
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Permitir HTTP (puerto 80) y HTTPS (puerto 443)</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Permitir HTTP (puerto 80) y HTTPS (puerto 443)</span>
 iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Registrar intentos de acceso no autorizados</span>
-iptables -A INPUT -j LOG --log-prefix <span style="color: #005F00;">"IPTables-Dropped: "</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Registrar intentos de acceso no autorizados</span>
+iptables -A INPUT -j LOG --log-prefix <span style="color: #a44185;">"IPTables-Dropped: "</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Guardar las reglas de IPTables</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Guardar las reglas de IPTables</span>
 iptables-save &gt; /etc/iptables/rules.v4
 </pre>
 </div>
@@ -690,9 +690,9 @@ iptables-save &gt; /etc/iptables/rules.v4
 </ul>
 </div>
 </div>
-<div id="outline-container-org414e930" class="outline-2">
-<h2 id="org414e930"><span class="section-number-2">3.</span> Bloqueo de IPs Sospechosas (Anti-Botnet)</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-orgc0d97ed" class="outline-2">
+<h2 id="orgc0d97ed">Bloqueo de IPs Sospechosas (Anti-Botnet)</h2>
+<div class="outline-text-2" id="text-orgc0d97ed">
 <p>
 El siguiente script bloquea IPs sospechosas utilizando una lista negra predefinida.
 </p>
@@ -701,20 +701,20 @@ El siguiente script bloquea IPs sospechosas utilizando una lista negra predefini
 <b><b>Script Bash:</b></b>
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Descargar una lista negra de IPs conocidas (por ejemplo, Emerging Threats)</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Descargar una lista negra de IPs conocidas (por ejemplo, Emerging Threats)</span>
 wget -q https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt -O /tmp/blocked_ips.txt
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Leer el archivo y bloquear cada IP</span>
-<span style="color: #D70000;">while </span><span style="color: #1F55A0;">read</span> -r ip; <span style="color: #D70000;">do</span>
-    <span style="color: #D70000;">if</span> [[ $<span style="color: #004651;">ip</span> =~ ^[0-9]+<span style="color: #005F00;">\.</span>[0-9]+<span style="color: #005F00;">\.</span>[0-9]+<span style="color: #005F00;">\.</span>[0-9]+$ ]]; <span style="color: #D70000;">then</span>
-        iptables -A INPUT -s <span style="color: #005F00;">"$ip"</span> -j DROP
-        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Bloqueada IP: $ip"</span>
-    <span style="color: #D70000;">fi</span>
-<span style="color: #D70000;">done</span> &lt; /tmp/blocked_ips.txt
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Leer el archivo y bloquear cada IP</span>
+<span style="color: #219fd5; font-style: italic;">while </span><span style="color: #dc3eb7;">read</span> -r ip; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [[ $<span style="color: #1857a4;">ip</span> =~ ^[0-9]+<span style="color: #a44185;">\.</span>[0-9]+<span style="color: #a44185;">\.</span>[0-9]+<span style="color: #a44185;">\.</span>[0-9]+$ ]]; <span style="color: #219fd5; font-style: italic;">then</span>
+        iptables -A INPUT -s <span style="color: #a44185;">"$ip"</span> -j DROP
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Bloqueada IP: $ip"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+<span style="color: #219fd5; font-style: italic;">done</span> &lt; /tmp/blocked_ips.txt
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Guardar las reglas de IPTables</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Guardar las reglas de IPTables</span>
 iptables-save &gt; /etc/iptables/rules.v4
 </pre>
 </div>
@@ -728,9 +728,9 @@ iptables-save &gt; /etc/iptables/rules.v4
 </ul>
 </div>
 </div>
-<div id="outline-container-org9ef1ace" class="outline-2">
-<h2 id="org9ef1ace"><span class="section-number-2">4.</span> Protección Contra Escaneos de Puertos (Python)</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-orgd6dd9af" class="outline-2">
+<h2 id="orgd6dd9af">Protección Contra Escaneos de Puertos (Python)</h2>
+<div class="outline-text-2" id="text-orgd6dd9af">
 <p>
 El siguiente script utiliza Python para monitorear intentos de escaneo de puertos y bloquear IPs sospechosas.
 </p>
@@ -739,40 +739,40 @@ El siguiente script utiliza Python para monitorear intentos de escaneo de puerto
 <b><b>Script Python:</b></b>
 </p>
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #D70000;">import</span> os
-<span style="color: #D70000;">import</span> time
-<span style="color: #D70000;">from</span> collections <span style="color: #D70000;">import</span> defaultdict
+<pre class="src src-python"><span style="color: #219fd5; font-style: italic;">import</span> os
+<span style="color: #219fd5; font-style: italic;">import</span> time
+<span style="color: #219fd5; font-style: italic;">from</span> collections <span style="color: #219fd5; font-style: italic;">import</span> defaultdict
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Diccionario para rastrear intentos de conexi&#243;n por IP</span>
-<span style="color: #004651;">connection_attempts</span> = defaultdict(<span style="color: #1F55A0;">int</span>)
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Diccionario para rastrear intentos de conexi&#243;n por IP</span>
+<span style="color: #1857a4;">connection_attempts</span> = defaultdict(<span style="color: #dc3eb7;">int</span>)
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Umbral de intentos sospechosos</span>
-<span style="color: #004651;">THRESHOLD</span> = 5
-<span style="color: #004651;">BLOCK_TIME</span> = 60  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Tiempo en segundos para bloquear una IP</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Umbral de intentos sospechosos</span>
+<span style="color: #1857a4;">THRESHOLD</span> = 5
+<span style="color: #1857a4;">BLOCK_TIME</span> = 60  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Tiempo en segundos para bloquear una IP</span>
 
-<span style="color: #D70000;">def</span> <span style="color: #AF8700;">block_ip</span>(ip):
-    <span style="color: #004700; font-style: italic;">"""Bloquea una IP usando IPTables."""</span>
-    os.system(f<span style="color: #005F00;">"iptables -A INPUT -s </span>{ip}<span style="color: #005F00;"> -j DROP"</span>)
-    <span style="color: #1F55A0;">print</span>(f<span style="color: #005F00;">"Bloqueada IP sospechosa: </span>{ip}<span style="color: #005F00;">"</span>)
+<span style="color: #219fd5; font-style: italic;">def</span> <span style="color: #dc3eb7;">block_ip</span>(ip):
+    <span style="color: #60a8a1; font-style: italic;">"""Bloquea una IP usando IPTables."""</span>
+    os.system(f<span style="color: #a44185;">"iptables -A INPUT -s </span>{ip}<span style="color: #a44185;"> -j DROP"</span>)
+    <span style="color: #dc3eb7;">print</span>(f<span style="color: #a44185;">"Bloqueada IP sospechosa: </span>{ip}<span style="color: #a44185;">"</span>)
 
-<span style="color: #D70000;">def</span> <span style="color: #AF8700;">monitor_logs</span>():
-    <span style="color: #004700; font-style: italic;">"""Monitorea los logs del sistema en busca de intentos de conexi&#243;n."""</span>
-    <span style="color: #D70000;">with</span> <span style="color: #1F55A0;">open</span>(<span style="color: #005F00;">"/var/log/auth.log"</span>, <span style="color: #005F00;">"r"</span>) <span style="color: #D70000;">as</span> log_file:
-        log_file.seek(0, 2)  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Ir al final del archivo</span>
-        <span style="color: #D70000;">while</span> <span style="color: #AF005F;">True</span>:
-            <span style="color: #004651;">line</span> = log_file.readline()
-            <span style="color: #D70000;">if</span> <span style="color: #005F00;">"Failed password"</span> <span style="color: #D70000;">in</span> line:
-                <span style="color: #004651;">ip</span> = line.split(<span style="color: #005F00;">"from "</span>)[1].split(<span style="color: #005F00;">" port"</span>)[0]
-                <span style="color: #004651;">connection_attempts</span>[ip] += 1
-                <span style="color: #1F55A0;">print</span>(f<span style="color: #005F00;">"Intento de conexi&#243;n desde: </span>{ip}<span style="color: #005F00;"> (</span>{connection_attempts[ip]}<span style="color: #005F00;"> intentos)"</span>)
+<span style="color: #219fd5; font-style: italic;">def</span> <span style="color: #dc3eb7;">monitor_logs</span>():
+    <span style="color: #60a8a1; font-style: italic;">"""Monitorea los logs del sistema en busca de intentos de conexi&#243;n."""</span>
+    <span style="color: #219fd5; font-style: italic;">with</span> <span style="color: #dc3eb7;">open</span>(<span style="color: #a44185;">"/var/log/auth.log"</span>, <span style="color: #a44185;">"r"</span>) <span style="color: #219fd5; font-style: italic;">as</span> log_file:
+        log_file.seek(0, 2)  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ir al final del archivo</span>
+        <span style="color: #219fd5; font-style: italic;">while</span> <span style="color: #2f86d2;">True</span>:
+            <span style="color: #1857a4;">line</span> = log_file.readline()
+            <span style="color: #219fd5; font-style: italic;">if</span> <span style="color: #a44185;">"Failed password"</span> <span style="color: #219fd5; font-style: italic;">in</span> line:
+                <span style="color: #1857a4;">ip</span> = line.split(<span style="color: #a44185;">"from "</span>)[1].split(<span style="color: #a44185;">" port"</span>)[0]
+                <span style="color: #1857a4;">connection_attempts</span>[ip] += 1
+                <span style="color: #dc3eb7;">print</span>(f<span style="color: #a44185;">"Intento de conexi&#243;n desde: </span>{ip}<span style="color: #a44185;"> (</span>{connection_attempts[ip]}<span style="color: #a44185;"> intentos)"</span>)
 
-                <span style="color: #D70000;">if</span> connection_attempts[ip] &gt;= THRESHOLD:
+                <span style="color: #219fd5; font-style: italic;">if</span> connection_attempts[ip] &gt;= THRESHOLD:
                     block_ip(ip)
                     time.sleep(BLOCK_TIME)
-                    <span style="color: #004651;">connection_attempts</span>[ip] = 0  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Reiniciar contador</span>
+                    <span style="color: #1857a4;">connection_attempts</span>[ip] = 0  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Reiniciar contador</span>
             time.sleep(1)
 
-<span style="color: #D70000;">if</span> <span style="color: #1F55A0;">__name__</span> == <span style="color: #005F00;">"__main__"</span>:
+<span style="color: #219fd5; font-style: italic;">if</span> <span style="color: #dc3eb7;">__name__</span> == <span style="color: #a44185;">"__main__"</span>:
     monitor_logs()
 </pre>
 </div>
@@ -786,9 +786,9 @@ El siguiente script utiliza Python para monitorear intentos de escaneo de puerto
 </ul>
 </div>
 </div>
-<div id="outline-container-org4778546" class="outline-2">
-<h2 id="org4778546"><span class="section-number-2">5.</span> Configuración de Políticas de Red Seguras (Bash)</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-orgd2ddd5a" class="outline-2">
+<h2 id="orgd2ddd5a">Configuración de Políticas de Red Seguras (Bash)</h2>
+<div class="outline-text-2" id="text-orgd2ddd5a">
 <p>
 El siguiente script configura políticas adicionales para mejorar la seguridad de la red.
 </p>
@@ -797,30 +797,30 @@ El siguiente script configura políticas adicionales para mejorar la seguridad d
 <b><b>Script Bash:</b></b>
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Deshabilitar el redireccionamiento IP</span>
-<span style="color: #1F55A0;">echo</span> 0 &gt; /proc/sys/net/ipv4/conf/all/send_redirects
-<span style="color: #1F55A0;">echo</span> 0 &gt; /proc/sys/net/ipv4/conf/default/send_redirects
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Deshabilitar el redireccionamiento IP</span>
+<span style="color: #dc3eb7;">echo</span> 0 &gt; /proc/sys/net/ipv4/conf/all/send_redirects
+<span style="color: #dc3eb7;">echo</span> 0 &gt; /proc/sys/net/ipv4/conf/default/send_redirects
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Habilitar protecci&#243;n contra SYN Flood</span>
-<span style="color: #1F55A0;">echo</span> 1 &gt; /proc/sys/net/ipv4/tcp_syncookies
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Habilitar protecci&#243;n contra SYN Flood</span>
+<span style="color: #dc3eb7;">echo</span> 1 &gt; /proc/sys/net/ipv4/tcp_syncookies
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Deshabilitar el reenv&#237;o de paquetes IPv4</span>
-<span style="color: #1F55A0;">echo</span> 0 &gt; /proc/sys/net/ipv4/ip_forward
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Deshabilitar el reenv&#237;o de paquetes IPv4</span>
+<span style="color: #dc3eb7;">echo</span> 0 &gt; /proc/sys/net/ipv4/ip_forward
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Habilitar protecci&#243;n contra IP Spoofing</span>
-<span style="color: #D70000;">for</span> interface<span style="color: #D70000;"> in</span> $(<span style="color: #1F55A0; font-weight: bold;">ls /sys/class/net | grep -v lo</span>); <span style="color: #D70000;">do</span>
-    <span style="color: #1F55A0;">echo</span> 1 &gt; /proc/sys/net/ipv4/conf/$<span style="color: #004651;">interface</span>/rp_filter
-<span style="color: #D70000;">done</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Habilitar protecci&#243;n contra IP Spoofing</span>
+<span style="color: #219fd5; font-style: italic;">for</span> interface<span style="color: #219fd5; font-style: italic;"> in</span> $(<span style="color: #219fd5; font-weight: bold;">ls /sys/class/net | grep -v lo</span>); <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #dc3eb7;">echo</span> 1 &gt; /proc/sys/net/ipv4/conf/$<span style="color: #1857a4;">interface</span>/rp_filter
+<span style="color: #219fd5; font-style: italic;">done</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Guardar cambios en sysctl.conf</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Guardar cambios en sysctl.conf</span>
 cat &lt;&lt;EOF &gt;&gt; /etc/sysctl.conf
-<span style="color: #005F00;">net.ipv4.conf.all.send_redirects = 0</span>
-<span style="color: #005F00;">net.ipv4.conf.default.send_redirects = 0</span>
-<span style="color: #005F00;">net.ipv4.tcp_syncookies = 1</span>
-<span style="color: #005F00;">net.ipv4.ip_forward = 0</span>
-<span style="color: #005F00;">EOF</span>
+<span style="color: #a44185;">net.ipv4.conf.all.send_redirects = 0</span>
+<span style="color: #a44185;">net.ipv4.conf.default.send_redirects = 0</span>
+<span style="color: #a44185;">net.ipv4.tcp_syncookies = 1</span>
+<span style="color: #a44185;">net.ipv4.ip_forward = 0</span>
+<span style="color: #a44185;">EOF</span>
 
 sysctl -p
 </pre>
@@ -835,9 +835,9 @@ sysctl -p
 </ul>
 </div>
 </div>
-<div id="outline-container-org2b7936c" class="outline-2">
-<h2 id="org2b7936c"><span class="section-number-2">6.</span> Conclusión</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-org12afde5" class="outline-2">
+<h2 id="org12afde5">Conclusión</h2>
+<div class="outline-text-2" id="text-org12afde5">
 <p>
 Este documento proporciona scripts básicos en Bash y Python para configurar una seguridad mínima en sistemas Linux. Recuerda que estas medidas son solo un punto de partida y deben complementarse con auditorías regulares, actualizaciones de software y mejores prácticas de seguridad.
 </p>
@@ -861,32 +861,32 @@ Para más información, consulta la documentación oficial de IPTables y las rec
 <item>
   <title><![CDATA[Opciones para Ordenar Downloads en Linux OSs]]></title>
   <description><![CDATA[
-<div id="outline-container-org05a9d8f" class="outline-2">
-<h2 id="org05a9d8f"><span class="section-number-2">1.</span> Introducción</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org721ebe2" class="outline-2">
+<h2 id="org721ebe2">Introducción</h2>
+<div class="outline-text-2" id="text-org721ebe2">
 <p>
 Este documento ofrece métodos para organizar la carpeta <code>~/Downloads</code> en Ubuntu, renombrando archivos con el prefijo <code>YYMMDD_nombre</code> (YY: últimos 2 dígitos del año, MM: mes 01-12, DD: día de modificación) y otras estrategias de ordenamiento. Las soluciones usan herramientas de terminal y Emacs.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd0981d2" class="outline-2">
-<h2 id="orgd0981d2"><span class="section-number-2">2.</span> 1 Renombrar Archivos con YYMMDD<sub>nombre</sub></h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org23afa60" class="outline-2">
+<h2 id="org23afa60">Renombrar Archivos con YYMMDD<sub>nombre</sub></h2>
+<div class="outline-text-2" id="text-org23afa60">
 <p>
 Renombrar archivos según su fecha de modificación usando el formato solicitado.
 </p>
 </div>
-<div id="outline-container-orge0d5d72" class="outline-3">
-<h3 id="orge0d5d72"><span class="section-number-3">2.1.</span> 1.1 Usando `find` y `mv` en la Terminal</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-orgd908031" class="outline-3">
+<h3 id="orgd908031">Usando `find` y `mv` en la Terminal</h3>
+<div class="outline-text-3" id="text-orgd908031">
 <ul class="org-ul">
 <li><b>Descripción</b>: Busca archivos y los renombra con la fecha de modificación.</li>
 <li><p>
 <b>Comando</b>:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #1F55A0;">cd</span> ~/Downloads
-find . -type f -exec sh -c <span style="color: #005F00;">'mv "$1" "$(</span><span style="color: #1F55A0; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #005F00;">)_$(</span><span style="color: #1F55A0; font-weight: bold;">basename "$1"</span><span style="color: #005F00;">)"'</span> _ {} <span style="color: #005F00;">\;</span>
+<pre class="src src-bash"><span style="color: #dc3eb7;">cd</span> ~/Downloads
+find . -type f -exec sh -c <span style="color: #a44185;">'mv "$1" "$(</span><span style="color: #219fd5; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #a44185;">)_$(</span><span style="color: #219fd5; font-weight: bold;">basename "$1"</span><span style="color: #a44185;">)"'</span> _ {} <span style="color: #a44185;">\;</span>
 </pre>
 </div></li>
 <li><b>Explicación</b>:
@@ -900,27 +900,27 @@ find . -type f -exec sh -c <span style="color: #005F00;">'mv "$1" "$(</span><spa
 </ul>
 </div>
 </div>
-<div id="outline-container-orge2b1978" class="outline-3">
-<h3 id="orge2b1978"><span class="section-number-3">2.2.</span> 1.2 Script Bash para Mayor Control</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-org1ef59fd" class="outline-3">
+<h3 id="org1ef59fd">Script Bash para Mayor Control</h3>
+<div class="outline-text-3" id="text-org1ef59fd">
 <ul class="org-ul">
 <li><b>Descripción</b>: Script reutilizable con manejo de conflictos.</li>
 <li><p>
 <b>Implementación</b>:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #1F55A0;">cd</span> ~/Downloads
-<span style="color: #D70000;">for</span> file<span style="color: #D70000;"> in</span> *; <span style="color: #D70000;">do</span>
-    <span style="color: #D70000;">if</span> [ -f <span style="color: #005F00;">"$file"</span> ]; <span style="color: #D70000;">then</span>
-        <span style="color: #004651;">prefix</span>=$(<span style="color: #1F55A0; font-weight: bold;">stat -c %y "$file" | cut -d' ' -f1 | sed 's/-//g' | cut -c3-8</span>)
-        <span style="color: #004651;">new_name</span>=<span style="color: #005F00;">"${prefix}_$file"</span>
-        <span style="color: #D70000;">if</span> [ -e <span style="color: #005F00;">"$new_name"</span> ]; <span style="color: #D70000;">then</span>
-            <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Conflicto: $new_name ya existe, omitiendo..."</span>
-        <span style="color: #D70000;">else</span>
-            mv <span style="color: #005F00;">"$file"</span> <span style="color: #005F00;">"$new_name"</span>
-        <span style="color: #D70000;">fi</span>
-    <span style="color: #D70000;">fi</span>
-<span style="color: #D70000;">done</span>
+<pre class="src src-bash"><span style="color: #dc3eb7;">cd</span> ~/Downloads
+<span style="color: #219fd5; font-style: italic;">for</span> file<span style="color: #219fd5; font-style: italic;"> in</span> *; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [ -f <span style="color: #a44185;">"$file"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #1857a4;">prefix</span>=$(<span style="color: #219fd5; font-weight: bold;">stat -c %y "$file" | cut -d' ' -f1 | sed 's/-//g' | cut -c3-8</span>)
+        <span style="color: #1857a4;">new_name</span>=<span style="color: #a44185;">"${prefix}_$file"</span>
+        <span style="color: #219fd5; font-style: italic;">if</span> [ -e <span style="color: #a44185;">"$new_name"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+            <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Conflicto: $new_name ya existe, omitiendo..."</span>
+        <span style="color: #219fd5; font-style: italic;">else</span>
+            mv <span style="color: #a44185;">"$file"</span> <span style="color: #a44185;">"$new_name"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+<span style="color: #219fd5; font-style: italic;">done</span>
 </pre>
 </div></li>
 <li><b>Uso</b>: Guarda como <code>rename_downloads.sh</code>, da permisos con <code>chmod +x rename_downloads.sh</code>, y ejecuta con <code>./rename_downloads.sh</code>.</li>
@@ -928,9 +928,9 @@ find . -type f -exec sh -c <span style="color: #005F00;">'mv "$1" "$(</span><spa
 </ul>
 </div>
 </div>
-<div id="outline-container-orge3bc3e4" class="outline-3">
-<h3 id="orge3bc3e4"><span class="section-number-3">2.3.</span> 1.3 Desde Emacs con Dired</h3>
-<div class="outline-text-3" id="text-2-3">
+<div id="outline-container-org54158d4" class="outline-3">
+<h3 id="org54158d4">Desde Emacs con Dired</h3>
+<div class="outline-text-3" id="text-org54158d4">
 <ul class="org-ul">
 <li><b>Descripción</b>: Usa Dired para renombrar manualmente o con un script.</li>
 <li><b>Pasos</b>:
@@ -943,11 +943,11 @@ find . -type f -exec sh -c <span style="color: #005F00;">'mv "$1" "$(</span><spa
 <b>Alternativa con Elisp</b>:
 </p>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">rename-downloads-yymmdd</span> ()
-  (<span style="color: #D70000;">interactive</span>)
-  (dired <span style="color: #005F00;">"~/Downloads"</span>)
+<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">rename-downloads-yymmdd</span> ()
+  (<span style="color: #219fd5; font-style: italic;">interactive</span>)
+  (dired <span style="color: #a44185;">"~/Downloads"</span>)
   (dired-do-shell-command
-   <span style="color: #005F00;">"mv ? $(date -r ? +%y%m%d)_?"</span> nil
+   <span style="color: #a44185;">"mv ? $(date -r ? +%y%m%d)_?"</span> nil
    (dired-get-marked-files)))
 </pre>
 </div>
@@ -959,45 +959,45 @@ find . -type f -exec sh -c <span style="color: #005F00;">'mv "$1" "$(</span><spa
 </div>
 </div>
 </div>
-<div id="outline-container-org7996be3" class="outline-2">
-<h2 id="org7996be3"><span class="section-number-2">3.</span> 2 Otras Opciones de Ordenamiento</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org8d5f5d7" class="outline-2">
+<h2 id="org8d5f5d7">Otras Opciones de Ordenamiento</h2>
+<div class="outline-text-2" id="text-org8d5f5d7">
 <p>
 Alternativas para organizar <code>~/Downloads</code> más allá del renombramiento.
 </p>
 </div>
-<div id="outline-container-org4595f61" class="outline-3">
-<h3 id="org4595f61"><span class="section-number-3">3.1.</span> 2.1 Clasificación por Tipo de Archivo</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-org6dc4385" class="outline-3">
+<h3 id="org6dc4385">Clasificación por Tipo de Archivo</h3>
+<div class="outline-text-3" id="text-org6dc4385">
 <ul class="org-ul">
 <li><b>Descripción</b>: Mover archivos a subcarpetas según extensión.</li>
 <li><p>
 <b>Comando</b>:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #1F55A0;">cd</span> ~/Downloads
+<pre class="src src-bash"><span style="color: #dc3eb7;">cd</span> ~/Downloads
 mkdir -p Documents Images Videos Other
-find . -maxdepth 1 -type f -name <span style="color: #005F00;">"*.pdf"</span> -exec mv {} Documents/ <span style="color: #005F00;">\;</span>
-find . -maxdepth 1 -type f -name <span style="color: #005F00;">"*.jpg"</span> -o -name <span style="color: #005F00;">"*.png"</span> -exec mv {} Images/ <span style="color: #005F00;">\;</span>
-find . -maxdepth 1 -type f -name <span style="color: #005F00;">"*.mp4"</span> -o -name <span style="color: #005F00;">"*.mkv"</span> -exec mv {} Videos/ <span style="color: #005F00;">\;</span>
-find . -maxdepth 1 -type f -not -path <span style="color: #005F00;">"./*/*"</span> -exec mv {} Other/ <span style="color: #005F00;">\;</span>
+find . -maxdepth 1 -type f -name <span style="color: #a44185;">"*.pdf"</span> -exec mv {} Documents/ <span style="color: #a44185;">\;</span>
+find . -maxdepth 1 -type f -name <span style="color: #a44185;">"*.jpg"</span> -o -name <span style="color: #a44185;">"*.png"</span> -exec mv {} Images/ <span style="color: #a44185;">\;</span>
+find . -maxdepth 1 -type f -name <span style="color: #a44185;">"*.mp4"</span> -o -name <span style="color: #a44185;">"*.mkv"</span> -exec mv {} Videos/ <span style="color: #a44185;">\;</span>
+find . -maxdepth 1 -type f -not -path <span style="color: #a44185;">"./*/*"</span> -exec mv {} Other/ <span style="color: #a44185;">\;</span>
 </pre>
 </div></li>
 <li><b>Beneficio</b>: Orden visual por categoría (ej. PDFs en <code>Documents/</code>).</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org710367a" class="outline-3">
-<h3 id="org710367a"><span class="section-number-3">3.2.</span> 2.2 Orden por Fecha en Subcarpetas</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-org227170d" class="outline-3">
+<h3 id="org227170d">Orden por Fecha en Subcarpetas</h3>
+<div class="outline-text-3" id="text-org227170d">
 <ul class="org-ul">
 <li><b>Descripción</b>: Crear carpetas YYMMDD y mover archivos según modificación.</li>
 <li><p>
 <b>Comando</b>:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #1F55A0;">cd</span> ~/Downloads
-find . -type f -exec sh -c <span style="color: #005F00;">'mkdir -p "$(</span><span style="color: #1F55A0; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #005F00;">)"; mv "$1" "$(</span><span style="color: #1F55A0; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #005F00;">)/"'</span> _ {} <span style="color: #005F00;">\;</span>
+<pre class="src src-bash"><span style="color: #dc3eb7;">cd</span> ~/Downloads
+find . -type f -exec sh -c <span style="color: #a44185;">'mkdir -p "$(</span><span style="color: #219fd5; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #a44185;">)"; mv "$1" "$(</span><span style="color: #219fd5; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #a44185;">)/"'</span> _ {} <span style="color: #a44185;">\;</span>
 </pre>
 </div></li>
 <li><b>Ejemplo</b>: Archivos del 16/03/2025 van a <code>250316/</code>.</li>
@@ -1005,9 +1005,9 @@ find . -type f -exec sh -c <span style="color: #005F00;">'mkdir -p "$(</span><sp
 </ul>
 </div>
 </div>
-<div id="outline-container-org8f721a6" class="outline-3">
-<h3 id="org8f721a6"><span class="section-number-3">3.3.</span> 2.3 Automatización con `inotifywait`</h3>
-<div class="outline-text-3" id="text-3-3">
+<div id="outline-container-orga62937e" class="outline-3">
+<h3 id="orga62937e">Automatización con `inotifywait`</h3>
+<div class="outline-text-3" id="text-orga62937e">
 <ul class="org-ul">
 <li><b>Descripción</b>: Monitorear descargas nuevas y organizarlas automáticamente.</li>
 <li><b>Implementación</b>:
@@ -1018,10 +1018,10 @@ Script:
 </p>
 <div class="org-src-container">
 <pre class="src src-bash">inotifywait -m ~/Downloads -e create -e moved_to |
-    <span style="color: #D70000;">while </span><span style="color: #1F55A0;">read</span> path action file; <span style="color: #D70000;">do</span>
-        <span style="color: #004651;">prefix</span>=$(<span style="color: #1F55A0; font-weight: bold;">date -r "$path$file" +%y%m%d</span>)
-        mv <span style="color: #005F00;">"$path$file"</span> <span style="color: #005F00;">"$path${prefix}_$file"</span>
-    <span style="color: #D70000;">done</span>
+    <span style="color: #219fd5; font-style: italic;">while </span><span style="color: #dc3eb7;">read</span> path action file; <span style="color: #219fd5; font-style: italic;">do</span>
+        <span style="color: #1857a4;">prefix</span>=$(<span style="color: #219fd5; font-weight: bold;">date -r "$path$file" +%y%m%d</span>)
+        mv <span style="color: #a44185;">"$path$file"</span> <span style="color: #a44185;">"$path${prefix}_$file"</span>
+    <span style="color: #219fd5; font-style: italic;">done</span>
 </pre>
 </div></li>
 <li>Ejecuta con <code>./watch_downloads.sh &amp; disown</code> para que corra en segundo plano.</li>
@@ -1031,9 +1031,9 @@ Script:
 </div>
 </div>
 </div>
-<div id="outline-container-org9ed46c7" class="outline-2">
-<h2 id="org9ed46c7"><span class="section-number-2">4.</span> 3 Recomendaciones Generales</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org74358fe" class="outline-2">
+<h2 id="org74358fe">Recomendaciones Generales</h2>
+<div class="outline-text-2" id="text-org74358fe">
 <ul class="org-ul">
 <li><b>Copia de seguridad</b>: <code>tar -czf ~/downloads_backup.tar.gz ~/Downloads</code> antes de pruebas.</li>
 <li><b>Prueba primero</b>: Usa <code>echo</code> en lugar de <code>mv</code> para simular (ej. <code>echo mv "$file" "$new_name"</code>).</li>
@@ -1041,9 +1041,9 @@ Script:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbdb06fe" class="outline-2">
-<h2 id="orgbdb06fe"><span class="section-number-2">5.</span> 4 Conclusión</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-orgfaafff4" class="outline-2">
+<h2 id="orgfaafff4">Conclusión</h2>
+<div class="outline-text-2" id="text-orgfaafff4">
 <p>
 La opción 1.1 (<code>find</code> y <code>mv</code>) es la más simple y directa para renombrar con <code>YYMMDD</code>. Para automatización, usa 2.3 (<code>inotifywait</code>). Si prefieres carpetas, opta por 2.1 o 2.2. Combina según tus necesidades: renombrar + clasificar es una solución robusta.
 </p>
@@ -1066,16 +1066,16 @@ La opción 1.1 (<code>find</code> y <code>mv</code>) es la más simple y directa
 <item>
   <title><![CDATA[Renombrando Archivos PDF con Fecha de Modificación en Linux]]></title>
   <description><![CDATA[
-<div id="outline-container-org82a3701" class="outline-2">
-<h2 id="org82a3701"><span class="section-number-2">1.</span> Renombrando Archivos PDF con Fecha de Modificación en Linux</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orgbc57c70" class="outline-2">
+<h2 id="orgbc57c70">Renombrando Archivos PDF con Fecha de Modificación en Linux</h2>
+<div class="outline-text-2" id="text-orgbc57c70">
 <p>
 ¿Tienes una colección de archivos PDF desorganizados y quieres renombrarlos automáticamente con un formato específico? En este post, te mostraré cómo crear un script en <b><b>Bash</b></b> que selecciona un directorio, encuentra todos los archivos `.pdf` que no tengan el prefijo `YYMMDD-nombre.pdf`, y los renombra usando la fecha de modificación del archivo. Este formato es útil para organizar documentos de manera cronológica.
 </p>
 </div>
-<div id="outline-container-orgc63b389" class="outline-3">
-<h3 id="orgc63b389"><span class="section-number-3">1.1.</span> Requisitos</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org9c480a5" class="outline-3">
+<h3 id="org9c480a5">Requisitos</h3>
+<div class="outline-text-3" id="text-org9c480a5">
 <ul class="org-ul">
 <li>Un sistema Linux (Ubuntu, Debian, Fedora, etc.).</li>
 <li>Conocimientos básicos de terminal y Bash.</li>
@@ -1083,89 +1083,89 @@ La opción 1.1 (<code>find</code> y <code>mv</code>) es la más simple y directa
 </ul>
 </div>
 </div>
-<div id="outline-container-org2fd6b95" class="outline-3">
-<h3 id="org2fd6b95"><span class="section-number-3">1.2.</span> Introducción</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-org742de16" class="outline-3">
+<h3 id="org742de16">Introducción</h3>
+<div class="outline-text-3" id="text-org742de16">
 <p>
 En este post, comparto un script en Bash que automatiza el renombrado de archivos PDF en un directorio específico. El objetivo es identificar aquellos archivos que no tienen el prefijo `YYMMDD-` (donde `YY` son los últimos dos dígitos del año, `MM` el mes de 01 a 12, y `DD` el día de 01 a 31) y renombrarlos usando su fecha de modificación en ese formato. Esto es útil para organizar documentos, como trabajos finales o reportes, manteniendo un estándar claro basado en metadatos del archivo.
 </p>
 </div>
 </div>
-<div id="outline-container-org199908d" class="outline-3">
-<h3 id="org199908d"><span class="section-number-3">1.3.</span> El Script</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-org5589855" class="outline-3">
+<h3 id="org5589855">El Script</h3>
+<div class="outline-text-3" id="text-org5589855">
 <p>
 Aquí está el script Bash que realiza esta tarea:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Script para renombrar archivos PDF con fecha de modificaci&#243;n en formato YYMMDD-nombre.pdf</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Script para renombrar archivos PDF con fecha de modificaci&#243;n en formato YYMMDD-nombre.pdf</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verificar si se proporcion&#243; un directorio como argumento</span>
-<span style="color: #D70000;">if</span> [ $<span style="color: #004651;">#</span> -ne 1 ]; <span style="color: #D70000;">then</span>
-    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Uso: $0 &lt;directorio&gt;"</span>
-    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Ejemplo: $0 /ruta/a/tus/pdfs"</span>
-    <span style="color: #D70000;">exit</span> 1
-<span style="color: #D70000;">fi</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar si se proporcion&#243; un directorio como argumento</span>
+<span style="color: #219fd5; font-style: italic;">if</span> [ $<span style="color: #1857a4;">#</span> -ne 1 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Uso: $0 &lt;directorio&gt;"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Ejemplo: $0 /ruta/a/tus/pdfs"</span>
+    <span style="color: #219fd5; font-style: italic;">exit</span> 1
+<span style="color: #219fd5; font-style: italic;">fi</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Asignar el directorio proporcionado</span>
-<span style="color: #004651;">DIRECTORY</span>=<span style="color: #005F00;">"$1"</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Asignar el directorio proporcionado</span>
+<span style="color: #1857a4;">DIRECTORY</span>=<span style="color: #a44185;">"$1"</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verificar si el directorio existe</span>
-<span style="color: #D70000;">if</span> [ <span style="color: #1F55A0; font-weight: bold;">!</span> -d <span style="color: #005F00;">"$DIRECTORY"</span> ]; <span style="color: #D70000;">then</span>
-    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Error: El directorio '$DIRECTORY' no existe."</span>
-    <span style="color: #D70000;">exit</span> 1
-<span style="color: #D70000;">fi</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar si el directorio existe</span>
+<span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #219fd5; font-weight: bold;">!</span> -d <span style="color: #a44185;">"$DIRECTORY"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Error: El directorio '$DIRECTORY' no existe."</span>
+    <span style="color: #219fd5; font-style: italic;">exit</span> 1
+<span style="color: #219fd5; font-style: italic;">fi</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Cambiar al directorio especificado</span>
-<span style="color: #1F55A0;">cd</span> <span style="color: #005F00;">"$DIRECTORY"</span> || {
-    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Error: No se pudo acceder al directorio '$DIRECTORY'."</span>
-    <span style="color: #D70000;">exit</span> 1
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Cambiar al directorio especificado</span>
+<span style="color: #dc3eb7;">cd</span> <span style="color: #a44185;">"$DIRECTORY"</span> || {
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Error: No se pudo acceder al directorio '$DIRECTORY'."</span>
+    <span style="color: #219fd5; font-style: italic;">exit</span> 1
 }
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Contador para archivos procesados</span>
-<span style="color: #004651;">COUNT</span>=0
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Contador para archivos procesados</span>
+<span style="color: #1857a4;">COUNT</span>=0
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Buscar archivos PDF y procesarlos</span>
-<span style="color: #D70000;">for</span> file<span style="color: #D70000;"> in</span> *.pdf; <span style="color: #D70000;">do</span>
-    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verificar si hay archivos PDF en el directorio</span>
-    <span style="color: #D70000;">if</span> [ <span style="color: #1F55A0; font-weight: bold;">!</span> -e <span style="color: #005F00;">"$file"</span> ]; <span style="color: #D70000;">then</span>
-        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"No se encontraron archivos PDF en '$DIRECTORY'."</span>
-        <span style="color: #D70000;">exit</span> 0
-    <span style="color: #D70000;">fi</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Buscar archivos PDF y procesarlos</span>
+<span style="color: #219fd5; font-style: italic;">for</span> file<span style="color: #219fd5; font-style: italic;"> in</span> *.pdf; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar si hay archivos PDF en el directorio</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #219fd5; font-weight: bold;">!</span> -e <span style="color: #a44185;">"$file"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"No se encontraron archivos PDF en '$DIRECTORY'."</span>
+        <span style="color: #219fd5; font-style: italic;">exit</span> 0
+    <span style="color: #219fd5; font-style: italic;">fi</span>
 
-    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Comprobar si el nombre ya tiene el prefijo YYMMDD-</span>
-    <span style="color: #D70000;">if</span> [[ <span style="color: #005F00;">"$file"</span> =~ ^[0-9]{6}-.*<span style="color: #005F00;">\.</span>pdf$ ]]; <span style="color: #D70000;">then</span>
-        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Saltando '$file': ya tiene el formato YYMMDD-."</span>
-        <span style="color: #D70000;">continue</span>
-    <span style="color: #D70000;">fi</span>
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Comprobar si el nombre ya tiene el prefijo YYMMDD-</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [[ <span style="color: #a44185;">"$file"</span> =~ ^[0-9]{6}-.*<span style="color: #a44185;">\.</span>pdf$ ]]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Saltando '$file': ya tiene el formato YYMMDD-."</span>
+        <span style="color: #219fd5; font-style: italic;">continue</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
 
-    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Obtener la fecha de modificaci&#243;n del archivo (YYMMDD)</span>
-    <span style="color: #004651;">MOD_DATE</span>=$(<span style="color: #1F55A0; font-weight: bold;">stat -c %y "$file" | cut -d' ' -f1 | sed 's/-//g' | cut -c3-8</span>)
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Obtener la fecha de modificaci&#243;n del archivo (YYMMDD)</span>
+    <span style="color: #1857a4;">MOD_DATE</span>=$(<span style="color: #219fd5; font-weight: bold;">stat -c %y "$file" | cut -d' ' -f1 | sed 's/-//g' | cut -c3-8</span>)
 
-    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Construir el nuevo nombre con la fecha</span>
-    <span style="color: #004651;">NEW_NAME</span>=<span style="color: #005F00;">"${MOD_DATE}-${file}"</span>
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Construir el nuevo nombre con la fecha</span>
+    <span style="color: #1857a4;">NEW_NAME</span>=<span style="color: #a44185;">"${MOD_DATE}-${file}"</span>
 
-    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Renombrar el archivo</span>
-    <span style="color: #D70000;">if</span> mv -n <span style="color: #005F00;">"$file"</span> <span style="color: #005F00;">"$NEW_NAME"</span>; <span style="color: #D70000;">then</span>
-        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Renombrado: '$file' -&gt; '$NEW_NAME'"</span>
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Renombrar el archivo</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> mv -n <span style="color: #a44185;">"$file"</span> <span style="color: #a44185;">"$NEW_NAME"</span>; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Renombrado: '$file' -&gt; '$NEW_NAME'"</span>
         ((COUNT++))
-    <span style="color: #D70000;">else</span>
-        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Error al renombrar '$file'. Puede que '$NEW_NAME' ya exista."</span>
-    <span style="color: #D70000;">fi</span>
-<span style="color: #D70000;">done</span>
+    <span style="color: #219fd5; font-style: italic;">else</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Error al renombrar '$file'. Puede que '$NEW_NAME' ya exista."</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+<span style="color: #219fd5; font-style: italic;">done</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Resumen final</span>
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Proceso completado. Archivos renombrados: $COUNT."</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Resumen final</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Proceso completado. Archivos renombrados: $COUNT."</span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org7779b09" class="outline-3">
-<h3 id="org7779b09"><span class="section-number-3">1.4.</span> Explicación del Script</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-org70c44bb" class="outline-3">
+<h3 id="org70c44bb">Explicación del Script</h3>
+<div class="outline-text-3" id="text-org70c44bb">
 <ul class="org-ul">
 <li><b><b>Línea inicial</b></b>: `#!/bin/bash` indica que es un script Bash.</li>
 <li><b><b>Verificación de argumentos</b></b>: Comprueba que se pase un directorio como parámetro (`$1`), mostrando un mensaje de uso si falta.</li>
@@ -1181,9 +1181,9 @@ Aquí está el script Bash que realiza esta tarea:
 </ul>
 </div>
 </div>
-<div id="outline-container-orge0926be" class="outline-3">
-<h3 id="orge0926be"><span class="section-number-3">1.5.</span> Uso del Script</h3>
-<div class="outline-text-3" id="text-1-5">
+<div id="outline-container-org4e42bb5" class="outline-3">
+<h3 id="org4e42bb5">Uso del Script</h3>
+<div class="outline-text-3" id="text-org4e42bb5">
 <ol class="org-ol">
 <li>Guarda el script como `rename<sub>pdfs.sh</sub>`.</li>
 <li><p>
@@ -1203,7 +1203,7 @@ Ejecútalo especificando un directorio:
 <p>
 Ejemplo de salida:
 </p>
-<pre class="example" id="orgc723859">
+<pre class="example" id="orgdedfa26">
 Saltando '250314-informe.pdf': ya tiene el formato YYMMDD-.
 Renombrado: 'documento.pdf' -&gt; '250315-documento.pdf'
 Proceso completado. Archivos renombrados: 1.
@@ -1211,9 +1211,9 @@ Proceso completado. Archivos renombrados: 1.
 </ol>
 </div>
 </div>
-<div id="outline-container-orgd962ef1" class="outline-3">
-<h3 id="orgd962ef1"><span class="section-number-3">1.6.</span> Notas y Precauciones</h3>
-<div class="outline-text-3" id="text-1-6">
+<div id="outline-container-org6a27cd0" class="outline-3">
+<h3 id="org6a27cd0">Notas y Precauciones</h3>
+<div class="outline-text-3" id="text-org6a27cd0">
 <ul class="org-ul">
 <li><b><b>Fecha de modificación</b></b>: Depende de la última vez que el archivo fue modificado, no de su creación. Si necesitas la fecha de creación, ajusta usando `stat -c %w` (si el sistema lo soporta).</li>
 <li><b><b>Colisiones</b></b>: Usa `-n` en `mv` para evitar sobrescribir archivos existentes; revisa manualmente si hay errores.</li>
@@ -1221,9 +1221,9 @@ Proceso completado. Archivos renombrados: 1.
 </ul>
 </div>
 </div>
-<div id="outline-container-org18bf31c" class="outline-3">
-<h3 id="org18bf31c"><span class="section-number-3">1.7.</span> Conclusión</h3>
-<div class="outline-text-3" id="text-1-7">
+<div id="outline-container-orgacad518" class="outline-3">
+<h3 id="orgacad518">Conclusión</h3>
+<div class="outline-text-3" id="text-orgacad518">
 <p>
 Este script es una herramienta práctica para mantener tus PDFs organizados con un estándar basado en fechas. Puedes adaptarlo para otros formatos (`.docx`, `.txt`) cambiando `*.pdf` por el patrón deseado. ¡Automatiza y simplifica tu gestión de archivos en Linux!
 </p>
@@ -1243,17 +1243,17 @@ Este script es una herramienta práctica para mantener tus PDFs organizados con 
 <item>
   <title><![CDATA[Cómo limpiar archivos y carpetas vacías en Linux con un script Bash]]></title>
   <description><![CDATA[
-<div id="outline-container-org5ab3c26" class="outline-2">
-<h2 id="org5ab3c26"><span class="section-number-2">1.</span> Introducción</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org47dd05b" class="outline-2">
+<h2 id="org47dd05b">Introducción</h2>
+<div class="outline-text-2" id="text-org47dd05b">
 <p>
 ¿Alguna vez te has encontrado con archivos o carpetas vacías en tu sistema que ocupan espacio innecesario? En este post, te mostraré cómo crear un script en <b><b>Bash</b></b> que te permita limpiar automáticamente todos los archivos y carpetas con 0 bytes desde ayer hacia atrás. Este script es ideal para mantener tu sistema organizado y liberar espacio en disco.
 </p>
 </div>
 </div>
-<div id="outline-container-org02f68c2" class="outline-2">
-<h2 id="org02f68c2"><span class="section-number-2">2.</span> Requisitos</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org0368371" class="outline-2">
+<h2 id="org0368371">Requisitos</h2>
+<div class="outline-text-2" id="text-org0368371">
 <ul class="org-ul">
 <li>Un sistema Linux (Ubuntu, Debian, Fedora, etc.).</li>
 <li>Conocimientos básicos de terminal y Bash.</li>
@@ -1261,39 +1261,39 @@ Este script es una herramienta práctica para mantener tus PDFs organizados con 
 </ul>
 </div>
 </div>
-<div id="outline-container-org5034a50" class="outline-2">
-<h2 id="org5034a50"><span class="section-number-2">3.</span> El Script</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-orgc528c0e" class="outline-2">
+<h2 id="orgc528c0e">El Script</h2>
+<div class="outline-text-2" id="text-orgc528c0e">
 <p>
 A continuación, te presento el script en Bash que realiza la limpieza. Puedes copiarlo y pegarlo directamente en tu terminal o guardarlo en un archivo `.sh` para ejecutarlo más tarde.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Pide al usuario que ingrese el directorio a limpiar</span>
-<span style="color: #1F55A0;">read</span> -p <span style="color: #005F00;">"Introduce la ruta del directorio que deseas limpiar: "</span> DIRECTORIO
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Pide al usuario que ingrese el directorio a limpiar</span>
+<span style="color: #dc3eb7;">read</span> -p <span style="color: #a44185;">"Introduce la ruta del directorio que deseas limpiar: "</span> DIRECTORIO
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verifica si el directorio existe</span>
-<span style="color: #D70000;">if</span> [ <span style="color: #1F55A0; font-weight: bold;">!</span> -d <span style="color: #005F00;">"$DIRECTORIO"</span> ]; <span style="color: #D70000;">then</span>
-  <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"El directorio $DIRECTORIO no existe."</span>
-  <span style="color: #D70000;">exit</span> 1
-<span style="color: #D70000;">fi</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verifica si el directorio existe</span>
+<span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #219fd5; font-weight: bold;">!</span> -d <span style="color: #a44185;">"$DIRECTORIO"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"El directorio $DIRECTORIO no existe."</span>
+  <span style="color: #219fd5; font-style: italic;">exit</span> 1
+<span style="color: #219fd5; font-style: italic;">fi</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Busca y elimina archivos vac&#237;os (0 bytes) desde ayer hacia atr&#225;s</span>
-find <span style="color: #005F00;">"$DIRECTORIO"</span> -type f -size 0 -mtime +0 -exec rm -v {} <span style="color: #005F00;">\;</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Busca y elimina archivos vac&#237;os (0 bytes) desde ayer hacia atr&#225;s</span>
+find <span style="color: #a44185;">"$DIRECTORIO"</span> -type f -size 0 -mtime +0 -exec rm -v {} <span style="color: #a44185;">\;</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Busca y elimina carpetas vac&#237;as desde ayer hacia atr&#225;s</span>
-find <span style="color: #005F00;">"$DIRECTORIO"</span> -type d -empty -mtime +0 -exec rmdir -v {} <span style="color: #005F00;">\;</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Busca y elimina carpetas vac&#237;as desde ayer hacia atr&#225;s</span>
+find <span style="color: #a44185;">"$DIRECTORIO"</span> -type d -empty -mtime +0 -exec rmdir -v {} <span style="color: #a44185;">\;</span>
 
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Limpieza completada. Archivos y carpetas vac&#237;as eliminados."</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Limpieza completada. Archivos y carpetas vac&#237;as eliminados."</span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgc000f9d" class="outline-2">
-<h2 id="orgc000f9d"><span class="section-number-2">4.</span> Explicación del Script</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org1e83a4e" class="outline-2">
+<h2 id="org1e83a4e">Explicación del Script</h2>
+<div class="outline-text-2" id="text-org1e83a4e">
 <ol class="org-ol">
 <li><b><b>Pide el directorio</b></b>: El script comienza solicitando al usuario que introduzca la ruta del directorio que desea limpiar.</li>
 <li><b><b>Verifica el directorio</b></b>: Se verifica si el directorio existe. Si no existe, el script termina con un mensaje de error.</li>
@@ -1303,9 +1303,9 @@ find <span style="color: #005F00;">"$DIRECTORIO"</span> -type d -empty -mtime +0
 </ol>
 </div>
 </div>
-<div id="outline-container-orga68dd0b" class="outline-2">
-<h2 id="orga68dd0b"><span class="section-number-2">5.</span> Cómo Usar el Script</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-orgb1fe513" class="outline-2">
+<h2 id="orgb1fe513">Cómo Usar el Script</h2>
+<div class="outline-text-2" id="text-orgb1fe513">
 <ol class="org-ol">
 <li>Copia el script en un archivo, por ejemplo, `clean<sub>empty</sub><sub>files.sh</sub>`.</li>
 <li>Haz que el script sea ejecutable:

@@ -88,11 +88,19 @@
            height: 2px;
            background: #ddd;
            margin: 40px 0 20px 0;
-         }
+	 }
          .postamble {
            text-align: center;
            font-size: 0.85em;
            color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
          }
        </style>
        
@@ -112,40 +120,40 @@
          <a href='contacto.html'>Contacto</a> |
          <a href='nosotros.html'>Nosotros</a> |
          <a href='proyectos.html'>Proyectos</a>
-         <a href='tutoriales.html'>Tutoriales</a> |
-         <a href='opiniones.html'>Opiniones</a>
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a>
        </nav>
         <hr></head>
 <body>
 <div id="preamble" class="status"></div>
 <div id="content">
 <div class="post-date">17/03/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-17-opciones-para-ordenar-downloads-en-linux-oss.html">Opciones para Ordenar Downloads en Linux OSs</a></h1>
-<div id="outline-container-org05a9d8f" class="outline-2">
-<h2 id="org05a9d8f"><span class="section-number-2">1.</span> Introducción</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org721ebe2" class="outline-2">
+<h2 id="org721ebe2">Introducción</h2>
+<div class="outline-text-2" id="text-org721ebe2">
 <p>
 Este documento ofrece métodos para organizar la carpeta <code>~/Downloads</code> en Ubuntu, renombrando archivos con el prefijo <code>YYMMDD_nombre</code> (YY: últimos 2 dígitos del año, MM: mes 01-12, DD: día de modificación) y otras estrategias de ordenamiento. Las soluciones usan herramientas de terminal y Emacs.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd0981d2" class="outline-2">
-<h2 id="orgd0981d2"><span class="section-number-2">2.</span> 1 Renombrar Archivos con YYMMDD<sub>nombre</sub></h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org23afa60" class="outline-2">
+<h2 id="org23afa60">Renombrar Archivos con YYMMDD<sub>nombre</sub></h2>
+<div class="outline-text-2" id="text-org23afa60">
 <p>
 Renombrar archivos según su fecha de modificación usando el formato solicitado.
 </p>
 </div>
-<div id="outline-container-orge0d5d72" class="outline-3">
-<h3 id="orge0d5d72"><span class="section-number-3">2.1.</span> 1.1 Usando `find` y `mv` en la Terminal</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-orgd908031" class="outline-3">
+<h3 id="orgd908031">Usando `find` y `mv` en la Terminal</h3>
+<div class="outline-text-3" id="text-orgd908031">
 <ul class="org-ul">
 <li><b>Descripción</b>: Busca archivos y los renombra con la fecha de modificación.</li>
 <li><p>
 <b>Comando</b>:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #1F55A0;">cd</span> ~/Downloads
-find . -type f -exec sh -c <span style="color: #005F00;">'mv "$1" "$(</span><span style="color: #1F55A0; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #005F00;">)_$(</span><span style="color: #1F55A0; font-weight: bold;">basename "$1"</span><span style="color: #005F00;">)"'</span> _ {} <span style="color: #005F00;">\;</span>
+<pre class="src src-bash"><span style="color: #dc3eb7;">cd</span> ~/Downloads
+find . -type f -exec sh -c <span style="color: #a44185;">'mv "$1" "$(</span><span style="color: #219fd5; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #a44185;">)_$(</span><span style="color: #219fd5; font-weight: bold;">basename "$1"</span><span style="color: #a44185;">)"'</span> _ {} <span style="color: #a44185;">\;</span>
 </pre>
 </div></li>
 <li><b>Explicación</b>:
@@ -159,27 +167,27 @@ find . -type f -exec sh -c <span style="color: #005F00;">'mv "$1" "$(</span><spa
 </ul>
 </div>
 </div>
-<div id="outline-container-orge2b1978" class="outline-3">
-<h3 id="orge2b1978"><span class="section-number-3">2.2.</span> 1.2 Script Bash para Mayor Control</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-org1ef59fd" class="outline-3">
+<h3 id="org1ef59fd">Script Bash para Mayor Control</h3>
+<div class="outline-text-3" id="text-org1ef59fd">
 <ul class="org-ul">
 <li><b>Descripción</b>: Script reutilizable con manejo de conflictos.</li>
 <li><p>
 <b>Implementación</b>:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #1F55A0;">cd</span> ~/Downloads
-<span style="color: #D70000;">for</span> file<span style="color: #D70000;"> in</span> *; <span style="color: #D70000;">do</span>
-    <span style="color: #D70000;">if</span> [ -f <span style="color: #005F00;">"$file"</span> ]; <span style="color: #D70000;">then</span>
-        <span style="color: #004651;">prefix</span>=$(<span style="color: #1F55A0; font-weight: bold;">stat -c %y "$file" | cut -d' ' -f1 | sed 's/-//g' | cut -c3-8</span>)
-        <span style="color: #004651;">new_name</span>=<span style="color: #005F00;">"${prefix}_$file"</span>
-        <span style="color: #D70000;">if</span> [ -e <span style="color: #005F00;">"$new_name"</span> ]; <span style="color: #D70000;">then</span>
-            <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Conflicto: $new_name ya existe, omitiendo..."</span>
-        <span style="color: #D70000;">else</span>
-            mv <span style="color: #005F00;">"$file"</span> <span style="color: #005F00;">"$new_name"</span>
-        <span style="color: #D70000;">fi</span>
-    <span style="color: #D70000;">fi</span>
-<span style="color: #D70000;">done</span>
+<pre class="src src-bash"><span style="color: #dc3eb7;">cd</span> ~/Downloads
+<span style="color: #219fd5; font-style: italic;">for</span> file<span style="color: #219fd5; font-style: italic;"> in</span> *; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [ -f <span style="color: #a44185;">"$file"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #1857a4;">prefix</span>=$(<span style="color: #219fd5; font-weight: bold;">stat -c %y "$file" | cut -d' ' -f1 | sed 's/-//g' | cut -c3-8</span>)
+        <span style="color: #1857a4;">new_name</span>=<span style="color: #a44185;">"${prefix}_$file"</span>
+        <span style="color: #219fd5; font-style: italic;">if</span> [ -e <span style="color: #a44185;">"$new_name"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+            <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Conflicto: $new_name ya existe, omitiendo..."</span>
+        <span style="color: #219fd5; font-style: italic;">else</span>
+            mv <span style="color: #a44185;">"$file"</span> <span style="color: #a44185;">"$new_name"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+<span style="color: #219fd5; font-style: italic;">done</span>
 </pre>
 </div></li>
 <li><b>Uso</b>: Guarda como <code>rename_downloads.sh</code>, da permisos con <code>chmod +x rename_downloads.sh</code>, y ejecuta con <code>./rename_downloads.sh</code>.</li>
@@ -187,9 +195,9 @@ find . -type f -exec sh -c <span style="color: #005F00;">'mv "$1" "$(</span><spa
 </ul>
 </div>
 </div>
-<div id="outline-container-orge3bc3e4" class="outline-3">
-<h3 id="orge3bc3e4"><span class="section-number-3">2.3.</span> 1.3 Desde Emacs con Dired</h3>
-<div class="outline-text-3" id="text-2-3">
+<div id="outline-container-org54158d4" class="outline-3">
+<h3 id="org54158d4">Desde Emacs con Dired</h3>
+<div class="outline-text-3" id="text-org54158d4">
 <ul class="org-ul">
 <li><b>Descripción</b>: Usa Dired para renombrar manualmente o con un script.</li>
 <li><b>Pasos</b>:
@@ -202,11 +210,11 @@ find . -type f -exec sh -c <span style="color: #005F00;">'mv "$1" "$(</span><spa
 <b>Alternativa con Elisp</b>:
 </p>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">rename-downloads-yymmdd</span> ()
-  (<span style="color: #D70000;">interactive</span>)
-  (dired <span style="color: #005F00;">"~/Downloads"</span>)
+<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">rename-downloads-yymmdd</span> ()
+  (<span style="color: #219fd5; font-style: italic;">interactive</span>)
+  (dired <span style="color: #a44185;">"~/Downloads"</span>)
   (dired-do-shell-command
-   <span style="color: #005F00;">"mv ? $(date -r ? +%y%m%d)_?"</span> nil
+   <span style="color: #a44185;">"mv ? $(date -r ? +%y%m%d)_?"</span> nil
    (dired-get-marked-files)))
 </pre>
 </div>
@@ -218,45 +226,45 @@ find . -type f -exec sh -c <span style="color: #005F00;">'mv "$1" "$(</span><spa
 </div>
 </div>
 </div>
-<div id="outline-container-org7996be3" class="outline-2">
-<h2 id="org7996be3"><span class="section-number-2">3.</span> 2 Otras Opciones de Ordenamiento</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org8d5f5d7" class="outline-2">
+<h2 id="org8d5f5d7">Otras Opciones de Ordenamiento</h2>
+<div class="outline-text-2" id="text-org8d5f5d7">
 <p>
 Alternativas para organizar <code>~/Downloads</code> más allá del renombramiento.
 </p>
 </div>
-<div id="outline-container-org4595f61" class="outline-3">
-<h3 id="org4595f61"><span class="section-number-3">3.1.</span> 2.1 Clasificación por Tipo de Archivo</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-org6dc4385" class="outline-3">
+<h3 id="org6dc4385">Clasificación por Tipo de Archivo</h3>
+<div class="outline-text-3" id="text-org6dc4385">
 <ul class="org-ul">
 <li><b>Descripción</b>: Mover archivos a subcarpetas según extensión.</li>
 <li><p>
 <b>Comando</b>:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #1F55A0;">cd</span> ~/Downloads
+<pre class="src src-bash"><span style="color: #dc3eb7;">cd</span> ~/Downloads
 mkdir -p Documents Images Videos Other
-find . -maxdepth 1 -type f -name <span style="color: #005F00;">"*.pdf"</span> -exec mv {} Documents/ <span style="color: #005F00;">\;</span>
-find . -maxdepth 1 -type f -name <span style="color: #005F00;">"*.jpg"</span> -o -name <span style="color: #005F00;">"*.png"</span> -exec mv {} Images/ <span style="color: #005F00;">\;</span>
-find . -maxdepth 1 -type f -name <span style="color: #005F00;">"*.mp4"</span> -o -name <span style="color: #005F00;">"*.mkv"</span> -exec mv {} Videos/ <span style="color: #005F00;">\;</span>
-find . -maxdepth 1 -type f -not -path <span style="color: #005F00;">"./*/*"</span> -exec mv {} Other/ <span style="color: #005F00;">\;</span>
+find . -maxdepth 1 -type f -name <span style="color: #a44185;">"*.pdf"</span> -exec mv {} Documents/ <span style="color: #a44185;">\;</span>
+find . -maxdepth 1 -type f -name <span style="color: #a44185;">"*.jpg"</span> -o -name <span style="color: #a44185;">"*.png"</span> -exec mv {} Images/ <span style="color: #a44185;">\;</span>
+find . -maxdepth 1 -type f -name <span style="color: #a44185;">"*.mp4"</span> -o -name <span style="color: #a44185;">"*.mkv"</span> -exec mv {} Videos/ <span style="color: #a44185;">\;</span>
+find . -maxdepth 1 -type f -not -path <span style="color: #a44185;">"./*/*"</span> -exec mv {} Other/ <span style="color: #a44185;">\;</span>
 </pre>
 </div></li>
 <li><b>Beneficio</b>: Orden visual por categoría (ej. PDFs en <code>Documents/</code>).</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org710367a" class="outline-3">
-<h3 id="org710367a"><span class="section-number-3">3.2.</span> 2.2 Orden por Fecha en Subcarpetas</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-org227170d" class="outline-3">
+<h3 id="org227170d">Orden por Fecha en Subcarpetas</h3>
+<div class="outline-text-3" id="text-org227170d">
 <ul class="org-ul">
 <li><b>Descripción</b>: Crear carpetas YYMMDD y mover archivos según modificación.</li>
 <li><p>
 <b>Comando</b>:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #1F55A0;">cd</span> ~/Downloads
-find . -type f -exec sh -c <span style="color: #005F00;">'mkdir -p "$(</span><span style="color: #1F55A0; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #005F00;">)"; mv "$1" "$(</span><span style="color: #1F55A0; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #005F00;">)/"'</span> _ {} <span style="color: #005F00;">\;</span>
+<pre class="src src-bash"><span style="color: #dc3eb7;">cd</span> ~/Downloads
+find . -type f -exec sh -c <span style="color: #a44185;">'mkdir -p "$(</span><span style="color: #219fd5; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #a44185;">)"; mv "$1" "$(</span><span style="color: #219fd5; font-weight: bold;">date -r "$1" +%y%m%d</span><span style="color: #a44185;">)/"'</span> _ {} <span style="color: #a44185;">\;</span>
 </pre>
 </div></li>
 <li><b>Ejemplo</b>: Archivos del 16/03/2025 van a <code>250316/</code>.</li>
@@ -264,9 +272,9 @@ find . -type f -exec sh -c <span style="color: #005F00;">'mkdir -p "$(</span><sp
 </ul>
 </div>
 </div>
-<div id="outline-container-org8f721a6" class="outline-3">
-<h3 id="org8f721a6"><span class="section-number-3">3.3.</span> 2.3 Automatización con `inotifywait`</h3>
-<div class="outline-text-3" id="text-3-3">
+<div id="outline-container-orga62937e" class="outline-3">
+<h3 id="orga62937e">Automatización con `inotifywait`</h3>
+<div class="outline-text-3" id="text-orga62937e">
 <ul class="org-ul">
 <li><b>Descripción</b>: Monitorear descargas nuevas y organizarlas automáticamente.</li>
 <li><b>Implementación</b>:
@@ -277,10 +285,10 @@ Script:
 </p>
 <div class="org-src-container">
 <pre class="src src-bash">inotifywait -m ~/Downloads -e create -e moved_to |
-    <span style="color: #D70000;">while </span><span style="color: #1F55A0;">read</span> path action file; <span style="color: #D70000;">do</span>
-        <span style="color: #004651;">prefix</span>=$(<span style="color: #1F55A0; font-weight: bold;">date -r "$path$file" +%y%m%d</span>)
-        mv <span style="color: #005F00;">"$path$file"</span> <span style="color: #005F00;">"$path${prefix}_$file"</span>
-    <span style="color: #D70000;">done</span>
+    <span style="color: #219fd5; font-style: italic;">while </span><span style="color: #dc3eb7;">read</span> path action file; <span style="color: #219fd5; font-style: italic;">do</span>
+        <span style="color: #1857a4;">prefix</span>=$(<span style="color: #219fd5; font-weight: bold;">date -r "$path$file" +%y%m%d</span>)
+        mv <span style="color: #a44185;">"$path$file"</span> <span style="color: #a44185;">"$path${prefix}_$file"</span>
+    <span style="color: #219fd5; font-style: italic;">done</span>
 </pre>
 </div></li>
 <li>Ejecuta con <code>./watch_downloads.sh &amp; disown</code> para que corra en segundo plano.</li>
@@ -290,9 +298,9 @@ Script:
 </div>
 </div>
 </div>
-<div id="outline-container-org9ed46c7" class="outline-2">
-<h2 id="org9ed46c7"><span class="section-number-2">4.</span> 3 Recomendaciones Generales</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org74358fe" class="outline-2">
+<h2 id="org74358fe">Recomendaciones Generales</h2>
+<div class="outline-text-2" id="text-org74358fe">
 <ul class="org-ul">
 <li><b>Copia de seguridad</b>: <code>tar -czf ~/downloads_backup.tar.gz ~/Downloads</code> antes de pruebas.</li>
 <li><b>Prueba primero</b>: Usa <code>echo</code> en lugar de <code>mv</code> para simular (ej. <code>echo mv "$file" "$new_name"</code>).</li>
@@ -300,9 +308,9 @@ Script:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbdb06fe" class="outline-2">
-<h2 id="orgbdb06fe"><span class="section-number-2">5.</span> 4 Conclusión</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-orgfaafff4" class="outline-2">
+<h2 id="orgfaafff4">Conclusión</h2>
+<div class="outline-text-2" id="text-orgfaafff4">
 <p>
 La opción 1.1 (<code>find</code> y <code>mv</code>) es la más simple y directa para renombrar con <code>YYMMDD</code>. Para automatización, usa 2.3 (<code>inotifywait</code>). Si prefieres carpetas, opta por 2.1 o 2.2. Combina según tus necesidades: renombrar + clasificar es una solución robusta.
 </p>
@@ -315,13 +323,20 @@ La opción 1.1 (<code>find</code> y <code>mv</code>) es la más simple y directa
 <div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-script.html">script</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ordenar.html">ordenar</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div></div>
 <div id="postamble" class="status"><div class='postamble'>
          <hr class='footer-hr'>
-         <p>
-           <a href="rss.xml">
-             <img src="rss.png" alt="RSS Feed" style="width:20px; height:20px;">
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
              Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
            </a>
          </p>
          <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
        </div></div>
 </body>
 </html>

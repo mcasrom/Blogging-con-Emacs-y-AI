@@ -88,11 +88,19 @@
            height: 2px;
            background: #ddd;
            margin: 40px 0 20px 0;
-         }
+	 }
          .postamble {
            text-align: center;
            font-size: 0.85em;
            color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
          }
        </style>
        
@@ -123,13 +131,13 @@
 <p>
 AUTHOR: Tu Nombre
 </p>
-<div id="outline-container-orgae93554" class="outline-2">
-<h2 id="orgae93554"><span class="section-number-2">1.</span> Capítulo 1: Configuración Básica de Seguridad</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orgac7d834" class="outline-2">
+<h2 id="orgac7d834">Capítulo 1: Configuración Básica de Seguridad</h2>
+<div class="outline-text-2" id="text-orgac7d834">
 </div>
-<div id="outline-container-org34b86e4" class="outline-3">
-<h3 id="org34b86e4"><span class="section-number-3">1.1.</span> Objetivos</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org6aed3b4" class="outline-3">
+<h3 id="org6aed3b4">Objetivos</h3>
+<div class="outline-text-3" id="text-org6aed3b4">
 <ul class="org-ul">
 <li>Configurar un firewall básico.</li>
 <li>Deshabilitar servicios innecesarios.</li>
@@ -138,9 +146,9 @@ AUTHOR: Tu Nombre
 </ul>
 </div>
 </div>
-<div id="outline-container-org207fca1" class="outline-3">
-<h3 id="org207fca1"><span class="section-number-3">1.2.</span> Paso 1: Configurar un Firewall Básico con `ufw`</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-org6232592" class="outline-3">
+<h3 id="org6232592">Paso 1: Configurar un Firewall Básico con `ufw`</h3>
+<div class="outline-text-3" id="text-org6232592">
 <p>
 `ufw` (Uncomplicated Firewall) es una herramienta sencilla para gestionar reglas de firewall en Linux.
 </p>
@@ -199,9 +207,9 @@ Verificar el estado del firewall:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf7cbb39" class="outline-3">
-<h3 id="orgf7cbb39"><span class="section-number-3">1.3.</span> Paso 2: Deshabilitar Servicios Innecesarios</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-orga4c3880" class="outline-3">
+<h3 id="orga4c3880">Paso 2: Deshabilitar Servicios Innecesarios</h3>
+<div class="outline-text-3" id="text-orga4c3880">
 <p>
 Los servicios innecesarios pueden ser un vector de ataque. Deshabilita los que no uses.
 </p>
@@ -226,9 +234,9 @@ sudo systemctl disable apache2
 </ol>
 </div>
 </div>
-<div id="outline-container-org32b35f5" class="outline-3">
-<h3 id="org32b35f5"><span class="section-number-3">1.4.</span> Paso 3: Monitorear Logs del Sistema</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-org00217f7" class="outline-3">
+<h3 id="org00217f7">Paso 3: Monitorear Logs del Sistema</h3>
+<div class="outline-text-3" id="text-org00217f7">
 <p>
 Los logs son esenciales para detectar actividad sospechosa.
 </p>
@@ -252,9 +260,9 @@ Ver logs del firewall:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgd647c80" class="outline-3">
-<h3 id="orgd647c80"><span class="section-number-3">1.5.</span> Paso 4: Detectar Intentos de Acceso No Autorizados</h3>
-<div class="outline-text-3" id="text-1-5">
+<div id="outline-container-org91d8990" class="outline-3">
+<h3 id="org91d8990">Paso 4: Detectar Intentos de Acceso No Autorizados</h3>
+<div class="outline-text-3" id="text-org91d8990">
 <p>
 Usa `fail2ban` para bloquear IPs que realicen intentos de acceso fallidos.
 </p>
@@ -296,9 +304,9 @@ Reiniciar `fail2ban`:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf174586" class="outline-3">
-<h3 id="orgf174586"><span class="section-number-3">1.6.</span> Resultados Esperados</h3>
-<div class="outline-text-3" id="text-1-6">
+<div id="outline-container-orgf3602c2" class="outline-3">
+<h3 id="orgf3602c2">Resultados Esperados</h3>
+<div class="outline-text-3" id="text-orgf3602c2">
 <ul class="org-ul">
 <li>Firewall activo y configurado.</li>
 <li>Servicios innecesarios deshabilitados.</li>
@@ -315,13 +323,20 @@ Reiniciar `fail2ban`:
 <div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-python.html">python</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-logs.html">logs</a> </div></div>
 <div id="postamble" class="status"><div class='postamble'>
          <hr class='footer-hr'>
-         <p>
-           <a href="rss.xml">
-             <img src="rss.png" alt="RSS Feed" style="width:20px; height:20px;">
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
              Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
            </a>
          </p>
          <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
        </div></div>
 </body>
 </html>

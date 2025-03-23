@@ -4,28 +4,28 @@
 <title><![CDATA[Example.com - contador]]></title>
 <description><![CDATA[Example.com - contador]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-contador.html</link>
-<lastBuildDate>Sun, 23 Mar 2025 09:43:20 +0100</lastBuildDate>
+<lastBuildDate>Sun, 23 Mar 2025 13:26:03 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Emacs con Esteroides: Configurar un Contador de Visitantes para el Blog]]></title>
   <description><![CDATA[
-<div id="outline-container-org751b303" class="outline-2">
-<h2 id="org751b303">Emacs con Esteroides: Configurar un Contador de Visitantes para tu Blog</h2>
-<div class="outline-text-2" id="text-org751b303">
+<div id="outline-container-orgf12764e" class="outline-2">
+<h2 id="orgf12764e">Emacs con Esteroides: Configurar un Contador de Visitantes para tu Blog</h2>
+<div class="outline-text-2" id="text-orgf12764e">
 <p>
 ¡Bienvenidos a una nueva entrega de <b>Emacs con Esteroides</b>! Hoy vamos a añadir un toque de funcionalidad a nuestro blog estático generado con Emacs y desplegado en GitHub: un contador de visitantes. Si usas Org Mode para escribir tus posts y un generador de sitios estáticos como Hugo o Jekyll, esto te permitirá saber cuántas personas visitan tu sitio sin complicaciones. ¡Vamos a ello!
 </p>
 </div>
-<div id="outline-container-org2b00677" class="outline-3">
-<h3 id="org2b00677">Por qué un contador de visitantes</h3>
-<div class="outline-text-3" id="text-org2b00677">
+<div id="outline-container-orgc27f90b" class="outline-3">
+<h3 id="orgc27f90b">Por qué un contador de visitantes</h3>
+<div class="outline-text-3" id="text-orgc27f90b">
 <p>
 Un contador de visitantes no solo es una curiosidad divertida, sino que también te da una idea de quién está leyendo tu contenido. Para un blog minimalista y sin servidor, necesitamos una solución ligera que no dependa de bases de datos ni scripts pesados. Aquí entra en juego una herramienta externa como <b>Hit Counter</b> o una integración simple con servicios como GitHub Pages.
 </p>
 </div>
 </div>
-<div id="outline-container-org2dc49b4" class="outline-3">
-<h3 id="org2dc49b4">Paso 1: Elegir un servicio de contador</h3>
-<div class="outline-text-3" id="text-org2dc49b4">
+<div id="outline-container-org3897367" class="outline-3">
+<h3 id="org3897367">Paso 1: Elegir un servicio de contador</h3>
+<div class="outline-text-3" id="text-org3897367">
 <p>
 Para mantenerlo simple, usaremos un servicio gratuito como <b>HitWebCounter</b> o <b>Simple Counter</b>. Alternativamente, si prefieres algo más personalizado, puedes usar una función Lambda en AWS o un script en Cloudflare Workers, pero hoy nos quedaremos con la opción más directa.
 </p>
@@ -39,14 +39,14 @@ Para mantenerlo simple, usaremos un servicio gratuito como <b>HitWebCounter</b> 
 Por ejemplo, el código podría verse así:
 </p>
 <div class="org-src-container">
-<pre class="src src-html">&lt;<span style="color: #AF8700;">img</span> <span style="color: #004651;">src</span>=<span style="color: #005F00;">"https://hitwebcounter.com/counter/id=123456"</span> <span style="color: #004651;">alt</span>=<span style="color: #005F00;">"Contador de visitas"</span>&gt;
+<pre class="src src-html">&lt;<span style="color: #dc3eb7;">img</span> <span style="color: #1857a4;">src</span>=<span style="color: #a44185;">"https://hitwebcounter.com/counter/id=123456"</span> <span style="color: #1857a4;">alt</span>=<span style="color: #a44185;">"Contador de visitas"</span>&gt;
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org9856cde" class="outline-3">
-<h3 id="org9856cde">Paso 2: Integrarlo en tu blog con Org Mode</h3>
-<div class="outline-text-3" id="text-org9856cde">
+<div id="outline-container-org4ee184a" class="outline-3">
+<h3 id="org4ee184a">Paso 2: Integrarlo en tu blog con Org Mode</h3>
+<div class="outline-text-3" id="text-org4ee184a">
 <p>
 Si usas Hugo con Org Mode, puedes añadir el contador en tu plantilla base o en un archivo específico. Por ejemplo:
 </p>
@@ -61,16 +61,16 @@ En Org Mode, si prefieres incluirlo directamente en un post o en una página est
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-size: 80%; font-style: italic;">EXPORT</span><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;"> html</span>
-<span style="background-color: #E9E9F2;">&lt;</span><span style="color: #AF8700; background-color: #E9E9F2;">img</span><span style="background-color: #E9E9F2;"> </span><span style="color: #004651; background-color: #E9E9F2;">src</span><span style="background-color: #E9E9F2;">=</span><span style="color: #005F00; background-color: #E9E9F2;">"<a href="https://hitwebcounter.com/counter/id=123456">https://hitwebcounter.com/counter/id=123456</a>"</span><span style="background-color: #E9E9F2;"> </span><span style="color: #004651; background-color: #E9E9F2;">alt</span><span style="background-color: #E9E9F2;">=</span><span style="color: #005F00; background-color: #E9E9F2;">"Contador de visitas"</span><span style="background-color: #E9E9F2;">&gt;</span>
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-size: 80%; font-style: italic;">EXPORT</span>
+<pre class="src src-org"><span style="color: #8195b0; background-color: #9fafc4; font-size: 80%;">EXPORT</span><span style="color: #8195b0; background-color: #9fafc4;"> html</span>
+<span style="background-color: #9fafc4;">&lt;</span><span style="color: #dc3eb7; background-color: #9fafc4;">img</span><span style="background-color: #9fafc4;"> </span><span style="color: #1857a4; background-color: #9fafc4;">src</span><span style="background-color: #9fafc4;">=</span><span style="color: #a44185; background-color: #9fafc4;">"<a href="https://hitwebcounter.com/counter/id=123456">https://hitwebcounter.com/counter/id=123456</a>"</span><span style="background-color: #9fafc4;"> </span><span style="color: #1857a4; background-color: #9fafc4;">alt</span><span style="background-color: #9fafc4;">=</span><span style="color: #a44185; background-color: #9fafc4;">"Contador de visitas"</span><span style="background-color: #9fafc4;">&gt;</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-size: 80%;">EXPORT</span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgec6127e" class="outline-3">
-<h3 id="orgec6127e">Paso 3: Configurar Emacs para automatizar</h3>
-<div class="outline-text-3" id="text-orgec6127e">
+<div id="outline-container-orge46acba" class="outline-3">
+<h3 id="orge46acba">Paso 3: Configurar Emacs para automatizar</h3>
+<div class="outline-text-3" id="text-orge46acba">
 <p>
 ¿Por qué no hacer esto más "Emacs"? Crea un snippet en <code>yasnippet</code> para insertar contadores rápidamente. Por ejemplo:
 </p>
@@ -79,13 +79,13 @@ En Org Mode, si prefieres incluirlo directamente en un post o en una página est
 <li>Abre tu archivo de snippets (<code>yasnippet-snippets-dir</code>) y crea uno nuevo en <code>org-mode/</code> llamado <code>contador</code>:</li>
 </ul>
 <div class="org-src-container">
-<pre class="src src-snippet"><span style="color: #4E4E4E; font-style: italic;"># -*- mode: snippet -*-</span>
-<span style="color: #4E4E4E; font-style: italic;"># name: contador</span>
-<span style="color: #4E4E4E; font-style: italic;"># key: contador</span>
-<span style="color: #4E4E4E; font-style: italic;"># --</span>
-<span style="color: #4E4E4E; font-style: italic;">#+BEGIN_EXPORT html</span>
-&lt;img src=<span style="color: #005F00;">"https://hitwebcounter.com/counter/id=${</span><span style="color: #D75F00;">1</span><span style="color: #005F00;">:123456}"</span> alt=<span style="color: #005F00;">"Contador de visitas"</span>&gt;
-<span style="color: #4E4E4E; font-style: italic;">#+END_EXPORT</span>
+<pre class="src src-snippet"><span style="color: #8195b0; font-style: italic;"># -*- mode: snippet -*-</span>
+<span style="color: #8195b0; font-style: italic;"># name: contador</span>
+<span style="color: #8195b0; font-style: italic;"># key: contador</span>
+<span style="color: #8195b0; font-style: italic;"># --</span>
+<span style="color: #8195b0; font-style: italic;">#+BEGIN_EXPORT html</span>
+&lt;img src=<span style="color: #a44185;">"https://hitwebcounter.com/counter/id=${</span><span style="color: #fa841d;">1</span><span style="color: #a44185;">:123456}"</span> alt=<span style="color: #a44185;">"Contador de visitas"</span>&gt;
+<span style="color: #8195b0; font-style: italic;">#+END_EXPORT</span>
 </pre>
 </div>
 
@@ -94,9 +94,9 @@ Ahora, al escribir <code>contador</code> y presionar <code>TAB</code>, tendrás 
 </p>
 </div>
 </div>
-<div id="outline-container-orge948d22" class="outline-3">
-<h3 id="orge948d22">Paso 4: Desplegar con GitHub</h3>
-<div class="outline-text-3" id="text-orge948d22">
+<div id="outline-container-org35fd2fb" class="outline-3">
+<h3 id="org35fd2fb">Paso 4: Desplegar con GitHub</h3>
+<div class="outline-text-3" id="text-org35fd2fb">
 <p>
 Una vez que hayas añadido el contador:
 </p>
@@ -107,7 +107,7 @@ Haz commit de los cambios:
 </p>
 <div class="org-src-container">
 <pre class="src src-sh">git add .
-git commit -m <span style="color: #005F00;">"A&#241;adir contador de visitantes al blog"</span>
+git commit -m <span style="color: #a44185;">"A&#241;adir contador de visitantes al blog"</span>
 git push origin main
 </pre>
 </div></li>
@@ -115,28 +115,28 @@ git push origin main
 </ol>
 </div>
 </div>
-<div id="outline-container-org31f9e86" class="outline-3">
-<h3 id="org31f9e86">Bonus: Monitoreo con Emacs</h3>
-<div class="outline-text-3" id="text-org31f9e86">
+<div id="outline-container-orgcfab956" class="outline-3">
+<h3 id="orgcfab956">Bonus: Monitoreo con Emacs</h3>
+<div class="outline-text-3" id="text-orgcfab956">
 <p>
 Si quieres ver estadísticas desde Emacs, considera usar un paquete como <code>request.el</code> para consultar APIs de contadores (si el servicio lo ofrece). Por ejemplo:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">request</span>)
+<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">require</span> '<span style="color: #2f86d2;">request</span>)
 (request
- <span style="color: #005F00;">"https://api.hitwebcounter.com/stats?id=123456"</span>
- <span style="color: #1F55A0;">:parser</span> 'json-read
- <span style="color: #1F55A0;">:success</span> (<span style="color: #D70000;">cl-function</span>
-           (<span style="color: #D70000;">lambda</span> (<span style="color: #1F55A0;">&amp;key</span> data <span style="color: #1F55A0;">&amp;allow-other-keys</span>)
-             (message <span style="color: #005F00;">"Visitantes: %s"</span> (alist-get 'visits data)))))
+ <span style="color: #a44185;">"https://api.hitwebcounter.com/stats?id=123456"</span>
+ <span style="color: #dc3eb7;">:parser</span> 'json-read
+ <span style="color: #dc3eb7;">:success</span> (<span style="color: #219fd5; font-style: italic;">cl-function</span>
+           (<span style="color: #219fd5; font-style: italic;">lambda</span> (<span style="color: #dc3eb7;">&amp;key</span> data <span style="color: #dc3eb7;">&amp;allow-other-keys</span>)
+             (message <span style="color: #a44185;">"Visitantes: %s"</span> (alist-get 'visits data)))))
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org0cf7e48" class="outline-3">
-<h3 id="org0cf7e48">Conclusión</h3>
-<div class="outline-text-3" id="text-org0cf7e48">
+<div id="outline-container-orgd838752" class="outline-3">
+<h3 id="orgd838752">Conclusión</h3>
+<div class="outline-text-3" id="text-orgd838752">
 <p>
 Con unas pocas líneas de código y la potencia de Org Mode, hemos añadido un contador de visitantes a nuestro blog estático. Emacs no solo nos ayuda a escribir, sino también a personalizar y automatizar nuestro flujo de trabajo. ¿Qué más puedes añadir con Emacs a tu blog? ¡Déjame tus ideas en los comentarios (si tu blog los tiene)!
 </p>
