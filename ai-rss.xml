@@ -4,7 +4,322 @@
 <title><![CDATA[Example.com - ai]]></title>
 <description><![CDATA[Example.com - ai]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-ai.html</link>
-<lastBuildDate>Sun, 23 Mar 2025 15:19:14 +0100</lastBuildDate>
+<lastBuildDate>Sun, 23 Mar 2025 16:52:05 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Conceptos Fundamentales de Inteligencia Artificial: Un Glosario Detallado]]></title>
+  <description><![CDATA[
+<div id="outline-container-org4bbfaaf" class="outline-2">
+<h2 id="org4bbfaaf"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+La Inteligencia Artificial (IA) es un campo en constante evolución que abarca una amplia gama de conceptos y tecnologías. Este glosario detallado tiene como objetivo proporcionar una comprensión clara y concisa de los términos clave en IA, organizados alfabéticamente para facilitar su consulta.
+</p>
+</div>
+</div>
+<div id="outline-container-org3423f2d" class="outline-2">
+<h2 id="org3423f2d"><span class="section-number-2">2.</span> A</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org6d39d32" class="outline-3">
+<h3 id="org6d39d32"><span class="section-number-3">2.1.</span> Algoritmo</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Definición: Un proceso metódico o ecuación para resolver un problema.</li>
+<li>Uso en IA: En IA y aprendizaje automático, los algoritmos se utilizan para procesar datos y producir predicciones o conclusiones.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf24bae0" class="outline-3">
+<h3 id="orgf24bae0"><span class="section-number-3">2.2.</span> Aprendizaje Automático (Machine Learning)</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Definición: Una rama de la IA que se centra en el desarrollo de algoritmos y modelos estadísticos.</li>
+<li>Objetivo: Permitir a los sistemas informáticos mejorar su rendimiento en una tarea específica a través de la experiencia, sin ser programados explícitamente.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org415649a" class="outline-3">
+<h3 id="org415649a"><span class="section-number-3">2.3.</span> Aprendizaje Profundo (Deep Learning)</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>Definición: Un subconjunto del aprendizaje automático basado en redes neuronales artificiales con múltiples capas.</li>
+<li>Aplicaciones: Particularmente eficaz en tareas como el reconocimiento de imágenes y el procesamiento del lenguaje natural.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf58b00a" class="outline-3">
+<h3 id="orgf58b00a"><span class="section-number-3">2.4.</span> Aprendizaje por Refuerzo</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>Definición: Un tipo de aprendizaje automático donde un agente aprende a tomar decisiones.</li>
+<li>Proceso: El agente interactúa con un entorno y recibe recompensas o penalizaciones basadas en sus acciones.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org209fa48" class="outline-3">
+<h3 id="org209fa48"><span class="section-number-3">2.5.</span> Arquitectura de Agente</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li>Definición: Un plano para agentes de software y sistemas de control inteligente.</li>
+<li>Componentes: Describe la disposición de los componentes en agentes inteligentes.</li>
+<li>Término relacionado: Las arquitecturas implementadas por agentes inteligentes se denominan arquitecturas cognitivas.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9e4b6ff" class="outline-3">
+<h3 id="org9e4b6ff"><span class="section-number-3">2.6.</span> Autocodificador</h3>
+<div class="outline-text-3" id="text-2-6">
+<ul class="org-ul">
+<li>Definición: Un tipo de red neuronal artificial.</li>
+<li>Uso: Utilizada para aprender codificaciones eficientes de datos no etiquetados (aprendizaje no supervisado).</li>
+<li>Ejemplo: Una implementación común es el autocodificador variacional (VAE).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf80989d" class="outline-2">
+<h2 id="orgf80989d"><span class="section-number-2">3.</span> B</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org4fd9c73" class="outline-3">
+<h3 id="org4fd9c73"><span class="section-number-3">3.1.</span> Batch Normalization</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>Definición: Una técnica para mejorar el rendimiento y la estabilidad de las redes neuronales artificiales.</li>
+<li>Función: Se utiliza para normalizar la capa de entrada ajustando y escalando las activaciones.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdc178c8" class="outline-2">
+<h2 id="orgdc178c8"><span class="section-number-2">4.</span> C</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org8ccafa0" class="outline-3">
+<h3 id="org8ccafa0"><span class="section-number-3">4.1.</span> Chatbot</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>Definición: Un programa de software de IA que simula conversaciones humanas.</li>
+<li>Tecnología: Utiliza procesamiento de lenguaje natural.</li>
+<li>Aplicaciones: Frecuentemente usado para asistencia al cliente, participación y servicio.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2cdd654" class="outline-3">
+<h3 id="org2cdd654"><span class="section-number-3">4.2.</span> Clasificación</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>Definición: Un tipo de aprendizaje supervisado.</li>
+<li>Objetivo: Asignar una etiqueta de categoría a los datos de entrada.</li>
+<li>Ejemplo: Clasificar correos electrónicos como 'spam' o 'no spam'.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgac9c141" class="outline-3">
+<h3 id="orgac9c141"><span class="section-number-3">4.3.</span> Computación Afectiva</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>Definición: El estudio y desarrollo de sistemas y dispositivos que pueden reconocer, interpretar, procesar y simular los afectos humanos.</li>
+<li>Naturaleza: Campo interdisciplinario que abarca la informática, la psicología y la ciencia cognitiva.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1dea180" class="outline-3">
+<h3 id="org1dea180"><span class="section-number-3">4.4.</span> Computación Cognitiva</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li>Definición: Un área de la IA centrada en simular procesos de pensamiento humano en un modelo computarizado.</li>
+<li>Objetivo: Permitir a los sistemas resolver problemas complejos de una manera que imita el razonamiento humano.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd579350" class="outline-2">
+<h2 id="orgd579350"><span class="section-number-2">5.</span> D</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org27a0ae9" class="outline-3">
+<h3 id="org27a0ae9"><span class="section-number-3">5.1.</span> Deriva Conceptual (Concept Drift)</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Definición: Un fenómeno en el aprendizaje automático.</li>
+<li>Descripción: Ocurre cuando las características estadísticas de la variable objetivo cambian con el tiempo.</li>
+<li>Implicación: Requiere un reentrenamiento del modelo para mantener la precisión.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org35f5bee" class="outline-2">
+<h2 id="org35f5bee"><span class="section-number-2">6.</span> E</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org0a9a28d" class="outline-3">
+<h3 id="org0a9a28d"><span class="section-number-3">6.1.</span> Ética en IA</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>Definición: El estudio y la práctica de diseñar y desplegar sistemas de IA alineados con valores humanos y principios éticos.</li>
+<li>Objetivos:
+<ul class="org-ul">
+<li>Asegurar la equidad</li>
+<li>Garantizar la transparencia</li>
+<li>Proteger la privacidad</li>
+<li>Mantener la responsabilidad</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbe06253" class="outline-2">
+<h2 id="orgbe06253"><span class="section-number-2">7.</span> I</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org7a693ae" class="outline-3">
+<h3 id="org7a693ae"><span class="section-number-3">7.1.</span> Inteligencia Artificial (IA)</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li>Definición general: Cualquier inteligencia demostrada por máquinas, en contraste con la inteligencia natural mostrada por humanos y otros animales.</li>
+<li>Definición en informática: El estudio de "agentes inteligentes" - cualquier dispositivo que percibe su entorno y toma acciones que maximizan sus posibilidades de alcanzar sus objetivos con éxito.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgca79b06" class="outline-3">
+<h3 id="orgca79b06"><span class="section-number-3">7.2.</span> Inteligencia Artificial General (AGI)</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li>Definición: Un tipo de IA que iguala o supera las capacidades cognitivas humanas.</li>
+<li>Alcance: Abarca una amplia gama de tareas cognitivas.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3e07627" class="outline-3">
+<h3 id="org3e07627"><span class="section-number-3">7.3.</span> Inteligencia Artificial Estrecha (ANI)</h3>
+<div class="outline-text-3" id="text-7-3">
+<ul class="org-ul">
+<li>Definición: Un tipo de IA creada para realizar una tarea específica o resolver un problema particular.</li>
+<li>Características:
+<ul class="org-ul">
+<li>Especializada y limitada en lo que puede hacer</li>
+<li>La mayoría de los sistemas de IA en uso hoy en día son ANI</li>
+</ul></li>
+<li>Ejemplos: Motores de recomendación, asistentes virtuales</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1196498" class="outline-2">
+<h2 id="org1196498"><span class="section-number-2">8.</span> P</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-orge015f2b" class="outline-3">
+<h3 id="orge015f2b"><span class="section-number-3">8.1.</span> Procesamiento del Lenguaje Natural (NLP)</h3>
+<div class="outline-text-3" id="text-8-1">
+<ul class="org-ul">
+<li>Definición: Una rama de la IA que se ocupa de la interacción entre las computadoras y el lenguaje humano.</li>
+<li>Objetivo: Permitir a las máquinas entender, interpretar y generar lenguaje humano.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgeebbe1f" class="outline-2">
+<h2 id="orgeebbe1f"><span class="section-number-2">9.</span> R</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-orge416e53" class="outline-3">
+<h3 id="orge416e53"><span class="section-number-3">9.1.</span> Red Neuronal Artificial (ANN)</h3>
+<div class="outline-text-3" id="text-9-1">
+<ul class="org-ul">
+<li>Definición: Una estructura inspirada en la arquitectura del cerebro humano.</li>
+<li>Componentes: Capas de nodos interconectados que procesan datos, también conocidos como "neuronas".</li>
+<li>Función: Aprenden a reconocer patrones y tomar decisiones basadas en los datos de entrada.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5ff84a7" class="outline-3">
+<h3 id="org5ff84a7"><span class="section-number-3">9.2.</span> Red Neuronal Convolucional (CNN)</h3>
+<div class="outline-text-3" id="text-9-2">
+<ul class="org-ul">
+<li>Definición: Un algoritmo de aprendizaje profundo.</li>
+<li>Uso principal: Procesar datos de cuadrícula estructurados como imágenes.</li>
+<li>Aplicaciones:
+<ul class="org-ul">
+<li>Clasificación de imágenes</li>
+<li>Detección de objetos</li>
+<li>Reconocimiento facial</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org70336b7" class="outline-2">
+<h2 id="org70336b7"><span class="section-number-2">10.</span> S</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-org89498ea" class="outline-3">
+<h3 id="org89498ea"><span class="section-number-3">10.1.</span> Sistema Inmune Artificial (AIS)</h3>
+<div class="outline-text-3" id="text-10-1">
+<ul class="org-ul">
+<li>Definición: Una clase de sistemas de aprendizaje automático basados en reglas e inteligencia computacional.</li>
+<li>Inspiración: Principios y procesos del sistema inmune de los vertebrados.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge79c0b5" class="outline-2">
+<h2 id="orge79c0b5"><span class="section-number-2">11.</span> V</h2>
+<div class="outline-text-2" id="text-11">
+</div>
+<div id="outline-container-orgad582aa" class="outline-3">
+<h3 id="orgad582aa"><span class="section-number-3">11.1.</span> Visión por Computadora</h3>
+<div class="outline-text-3" id="text-11-1">
+<ul class="org-ul">
+<li>Definición: Una rama de la inteligencia artificial.</li>
+<li>Función: Permite a las computadoras reconocer y analizar datos visuales del mundo exterior.</li>
+<li>Tipos de datos: Incluye imágenes y videos.</li>
+<li>Tareas:
+<ul class="org-ul">
+<li>Identificación de objetos</li>
+<li>Reconocimiento de imágenes</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org79c7d95" class="outline-2">
+<h2 id="org79c7d95"><span class="section-number-2">12.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-12">
+<p>
+Este glosario proporciona una visión general de los conceptos clave en el campo de la Inteligencia Artificial. A medida que la IA continúa evolucionando, es crucial mantenerse actualizado con estos términos y sus aplicaciones en el mundo real. La comprensión de estos conceptos es fundamental para navegar el paisaje en constante cambio de la tecnología de IA y sus implicaciones para nuestra sociedad.
+</p>
+
+<blockquote>
+<p>
+"La inteligencia artificial es el futuro, no solo para Rusia, sino para toda la humanidad. Viene con colosales oportunidades, pero también amenazas que son difíciles de predecir. Quien se convierta en el líder en esta esfera se convertirá en el gobernante del mundo." - Vladimir Putin
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-orgf5e7a6b" class="outline-2">
+<h2 id="orgf5e7a6b"><span class="section-number-2">13.</span> Referencias</h2>
+<div class="outline-text-2" id="text-13">
+<ol class="org-ol">
+<li>Wikipedia: Glossary of artificial intelligence</li>
+<li>Rezo.ai: A to Z Glossary: Simplifying the Complex World of Artificial Intelligence</li>
+</ol>
+
+<p>
+&#x2014;
+Answer from Perplexity: pplx.ai/share
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-conceptos.html">conceptos</a> </div>]]></description>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[ai]]></category>
+  <category><![CDATA[conceptos]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-23-conceptos-fundamentales-de-inteligencia-artificial:-un-glosario-detallado.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-23-conceptos-fundamentales-de-inteligencia-artificial:-un-glosario-detallado.html</guid>
+  <pubDate>Sun, 23 Mar 2025 15:24:00 +0100</pubDate>
+</item>
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - VI]]></title>
   <description><![CDATA[
