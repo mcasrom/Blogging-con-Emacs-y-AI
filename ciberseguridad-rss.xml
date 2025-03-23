@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - ciberseguridad]]></title>
 <description><![CDATA[Example.com - ciberseguridad]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-ciberseguridad.html</link>
-<lastBuildDate>Sun, 23 Mar 2025 13:26:03 +0100</lastBuildDate>
+<lastBuildDate>Sun, 23 Mar 2025 15:19:12 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Botnets, Antibotnets y un Script en Bash para Detección de Botnets en Linux]]></title>
   <description><![CDATA[
@@ -275,13 +275,13 @@ La ciberseguridad es una responsabilidad compartida entre el usuario y el sistem
 <item>
   <title><![CDATA[Tutorial de Ciberseguridad Básica para Equipos Linux y Otros Sistemas Operativos II]]></title>
   <description><![CDATA[
-<div id="outline-container-orge9bab04" class="outline-2">
-<h2 id="orge9bab04">Capítulo 2: Configuración y Prácticas de Seguridad en Linux</h2>
-<div class="outline-text-2" id="text-orge9bab04">
+<div id="outline-container-org8ac4bc0" class="outline-2">
+<h2 id="org8ac4bc0">Capítulo 2: Configuración y Prácticas de Seguridad en Linux</h2>
+<div class="outline-text-2" id="text-org8ac4bc0">
 </div>
-<div id="outline-container-org977949f" class="outline-3">
-<h3 id="org977949f">2.1 Ventajas de Linux en términos de seguridad**</h3>
-<div class="outline-text-3" id="text-org977949f">
+<div id="outline-container-org64f1593" class="outline-3">
+<h3 id="org64f1593">2.1 Ventajas de Linux en términos de seguridad**</h3>
+<div class="outline-text-3" id="text-org64f1593">
 <p>
 Linux es conocido por su robustez y flexibilidad en términos de seguridad. Algunas de sus ventajas incluyen:
 </p>
@@ -293,13 +293,13 @@ Linux es conocido por su robustez y flexibilidad en términos de seguridad. Algu
 </ul>
 </div>
 </div>
-<div id="outline-container-org2bbb8a8" class="outline-3">
-<h3 id="org2bbb8a8">Configuración inicial de seguridad en Linux**</h3>
-<div class="outline-text-3" id="text-org2bbb8a8">
+<div id="outline-container-org26fba5e" class="outline-3">
+<h3 id="org26fba5e">2.2 Configuración inicial de seguridad en Linux**</h3>
+<div class="outline-text-3" id="text-org26fba5e">
 </div>
-<div id="outline-container-orgec4fff4" class="outline-4">
-<h4 id="orgec4fff4">Actualización del sistema***</h4>
-<div class="outline-text-4" id="text-orgec4fff4">
+<div id="outline-container-orge584a19" class="outline-4">
+<h4 id="orge584a19">Actualización del sistema***</h4>
+<div class="outline-text-4" id="text-orge584a19">
 <p>
 Asegúrate de que tu distribución de Linux esté completamente actualizada. Usa los siguientes comandos dependiendo de tu gestor de paquetes:
 </p>
@@ -312,9 +312,9 @@ sudo pacman -Syu                       <span style="color: #8195b0; font-style: 
 </div>
 </div>
 </div>
-<div id="outline-container-org3cc3ee0" class="outline-4">
-<h4 id="org3cc3ee0">Creación de un usuario no root***</h4>
-<div class="outline-text-4" id="text-org3cc3ee0">
+<div id="outline-container-org651309b" class="outline-4">
+<h4 id="org651309b">Creación de un usuario no root***</h4>
+<div class="outline-text-4" id="text-org651309b">
 <p>
 Es una mala práctica usar el usuario "root" para tareas diarias. Crea un usuario estándar y otórgale privilegios de superusuario cuando sea necesario:
 </p>
@@ -327,9 +327,9 @@ sudo usermod -aG wheel nombreusuario    <span style="color: #8195b0; font-style:
 </div>
 </div>
 </div>
-<div id="outline-container-org893c5cd" class="outline-4">
-<h4 id="org893c5cd">Configuración del firewall***</h4>
-<div class="outline-text-4" id="text-org893c5cd">
+<div id="outline-container-org463bd22" class="outline-4">
+<h4 id="org463bd22">Configuración del firewall***</h4>
+<div class="outline-text-4" id="text-org463bd22">
 <p>
 El firewall es esencial para bloquear accesos no deseados. Usa `ufw` (Uncomplicated Firewall) para configurarlo fácilmente:
 </p>
@@ -344,13 +344,13 @@ sudo ufw status                         <span style="color: #8195b0; font-style:
 </div>
 </div>
 </div>
-<div id="outline-container-org0ff691e" class="outline-3">
-<h3 id="org0ff691e">Herramientas de seguridad recomendadas para Linux**</h3>
-<div class="outline-text-3" id="text-org0ff691e">
+<div id="outline-container-orgd9df97a" class="outline-3">
+<h3 id="orgd9df97a">2.3 Herramientas de seguridad recomendadas para Linux**</h3>
+<div class="outline-text-3" id="text-orgd9df97a">
 </div>
-<div id="outline-container-orgcc5ba80" class="outline-4">
-<h4 id="orgcc5ba80">Antivirus***</h4>
-<div class="outline-text-4" id="text-orgcc5ba80">
+<div id="outline-container-org76ccf16" class="outline-4">
+<h4 id="org76ccf16">Antivirus***</h4>
+<div class="outline-text-4" id="text-org76ccf16">
 <p>
 Aunque Linux es menos propenso a malware, no está exento de riesgos. Usa herramientas como ClamAV para escanear archivos:
 </p>
@@ -362,9 +362,9 @@ clamscan -r /ruta/a/escanear            <span style="color: #8195b0; font-style:
 </div>
 </div>
 </div>
-<div id="outline-container-org58a379d" class="outline-4">
-<h4 id="org58a379d">Auditoría de seguridad***</h4>
-<div class="outline-text-4" id="text-org58a379d">
+<div id="outline-container-orgaec8e48" class="outline-4">
+<h4 id="orgaec8e48">Auditoría de seguridad***</h4>
+<div class="outline-text-4" id="text-orgaec8e48">
 <p>
 Herramientas como Lynis pueden ayudarte a realizar auditorías de seguridad y detectar vulnerabilidades:
 </p>
@@ -377,9 +377,9 @@ sudo lynis audit system                 <span style="color: #8195b0; font-style:
 </div>
 </div>
 </div>
-<div id="outline-container-org9a56434" class="outline-3">
-<h3 id="org9a56434">Buenas prácticas adicionales en Linux**</h3>
-<div class="outline-text-3" id="text-org9a56434">
+<div id="outline-container-org0ad79f0" class="outline-3">
+<h3 id="org0ad79f0">2.4 Buenas prácticas adicionales en Linux**</h3>
+<div class="outline-text-3" id="text-org0ad79f0">
 <ul class="org-ul">
 <li><b><b>SSH seguro</b></b>: Cambia el puerto predeterminado (22), deshabilita el inicio de sesión como root y usa autenticación por clave en lugar de contraseñas.</li>
 <li><b><b>Cifrado de disco</b></b>: Activa el cifrado de disco durante la instalación para proteger tus datos en caso de robo.</li>
