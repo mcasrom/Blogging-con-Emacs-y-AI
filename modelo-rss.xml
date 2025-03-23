@@ -4,24 +4,24 @@
 <title><![CDATA[Example.com - modelo]]></title>
 <description><![CDATA[Example.com - modelo]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-modelo.html</link>
-<lastBuildDate>Sun, 23 Mar 2025 17:45:25 +0100</lastBuildDate>
+<lastBuildDate>Sun, 23 Mar 2025 18:06:44 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Deep Learning: El Corazón de la IA Moderna - Una Guía]]></title>
   <description><![CDATA[
-<div id="outline-container-org5faacb4" class="outline-2">
-<h2 id="org5faacb4"><span class="section-number-2">1.</span> Deep Learning: El Corazón de la IA Moderna - Una Guía Completa</h2>
+<div id="outline-container-orgc701790" class="outline-2">
+<h2 id="orgc701790"><span class="section-number-2">1.</span> Deep Learning: El Corazón de la IA Moderna - Una Guía Completa</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org0f139b2" class="outline-3">
-<h3 id="org0f139b2"><span class="section-number-3">1.1.</span> Introducción</h3>
+<div id="outline-container-org10eab74" class="outline-3">
+<h3 id="org10eab74"><span class="section-number-3">1.1.</span> Introducción</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Bienvenidos a <b>Emacs con Esteroides</b>, donde exploramos tecnologías que potencian nuestras herramientas y mentes. Hoy nos sumergimos en el <b>Deep Learning</b> (Aprendizaje Profundo), una rama revolucionaria de la inteligencia artificial (IA) que ha transformado desde el reconocimiento de imágenes hasta la generación de texto (¡como este post!). En este artículo, detallaremos su definición, historia, evolución, estado actual en marzo de 2025, usos prácticos y más. Si eres un usuario de Emacs buscando entender esta tecnología o aplicarla en tus flujos de trabajo, ¡este post es para ti!
 </p>
 </div>
 </div>
-<div id="outline-container-org15aaa13" class="outline-3">
-<h3 id="org15aaa13"><span class="section-number-3">1.2.</span> ¿Qué es el Deep Learning? Definición y Concepto</h3>
+<div id="outline-container-orgf9a07bc" class="outline-3">
+<h3 id="orgf9a07bc"><span class="section-number-3">1.2.</span> ¿Qué es el Deep Learning? Definición y Concepto</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 El <b>Deep Learning</b> es una subdisciplina del aprendizaje automático (<b>Machine Learning</b>) que utiliza redes neuronales artificiales con múltiples capas (de ahí lo "profundo") para modelar y resolver problemas complejos. Inspirado en el cerebro humano, el Deep Learning permite a las máquinas aprender patrones a partir de datos crudos sin necesidad de reglas explícitas.
@@ -38,8 +38,8 @@ En esencia, el Deep Learning es la magia detrás de sistemas como los asistentes
 </p>
 </div>
 </div>
-<div id="outline-container-org6cc8678" class="outline-3">
-<h3 id="org6cc8678"><span class="section-number-3">1.3.</span> Historia del Deep Learning</h3>
+<div id="outline-container-orgc866fb4" class="outline-3">
+<h3 id="orgc866fb4"><span class="section-number-3">1.3.</span> Historia del Deep Learning</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 El Deep Learning no surgió de la noche a la mañana; su historia es un viaje de ideas, fracasos y avances tecnológicos:
@@ -59,8 +59,8 @@ Desde entonces, el Deep Learning ha crecido exponencialmente, impulsado por hard
 </p>
 </div>
 </div>
-<div id="outline-container-orgc89c394" class="outline-3">
-<h3 id="orgc89c394"><span class="section-number-3">1.4.</span> Evolución del Deep Learning</h3>
+<div id="outline-container-org3cce0a4" class="outline-3">
+<h3 id="org3cce0a4"><span class="section-number-3">1.4.</span> Evolución del Deep Learning</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 La evolución del Deep Learning refleja avances en tres pilares: teoría, tecnología y aplicaciones:
@@ -95,8 +95,8 @@ El Deep Learning pasó de ser un nicho académico a un pilar de la IA moderna en
 </p>
 </div>
 </div>
-<div id="outline-container-org2381a08" class="outline-3">
-<h3 id="org2381a08"><span class="section-number-3">1.5.</span> Estado Actual del Deep Learning (Marzo 2025)</h3>
+<div id="outline-container-orgc067906" class="outline-3">
+<h3 id="orgc067906"><span class="section-number-3">1.5.</span> Estado Actual del Deep Learning (Marzo 2025)</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 A marzo de 2025, el Deep Learning está en su apogeo, pero enfrenta retos y oportunidades:
@@ -126,8 +126,8 @@ El Deep Learning sigue siendo el motor de la IA, pero la comunidad busca equilib
 </p>
 </div>
 </div>
-<div id="outline-container-org732e588" class="outline-3">
-<h3 id="org732e588"><span class="section-number-3">1.6.</span> Usos Prácticos del Deep Learning</h3>
+<div id="outline-container-org7bc0e31" class="outline-3">
+<h3 id="org7bc0e31"><span class="section-number-3">1.6.</span> Usos Prácticos del Deep Learning</h3>
 <div class="outline-text-3" id="text-1-6">
 <p>
 El Deep Learning tiene aplicaciones en casi todos los ámbitos:
@@ -151,8 +151,8 @@ Un ejemplo personal: este post fue estructurado y parcialmente redactado con té
 </p>
 </div>
 </div>
-<div id="outline-container-org38636a2" class="outline-3">
-<h3 id="org38636a2"><span class="section-number-3">1.7.</span> Deep Learning y Emacs</h3>
+<div id="outline-container-orgc706272" class="outline-3">
+<h3 id="orgc706272"><span class="section-number-3">1.7.</span> Deep Learning y Emacs</h3>
 <div class="outline-text-3" id="text-1-7">
 <p>
 Para los usuarios de Emacs, el Deep Learning puede potenciar flujos de trabajo:
@@ -165,8 +165,8 @@ Para los usuarios de Emacs, el Deep Learning puede potenciar flujos de trabajo:
 </ul>
 </div>
 </div>
-<div id="outline-container-org76bea27" class="outline-3">
-<h3 id="org76bea27"><span class="section-number-3">1.8.</span> Diagrama Conceptual de Deep Learning</h3>
+<div id="outline-container-org7804ace" class="outline-3">
+<h3 id="org7804ace"><span class="section-number-3">1.8.</span> Diagrama Conceptual de Deep Learning</h3>
 <div class="outline-text-3" id="text-1-8">
 <p>
 A continuación, se presenta un diagrama que explica los conceptos fundamentales del Deep Learning (DL), sus tipos de redes neuronales y aplicaciones principales.
@@ -206,8 +206,8 @@ A continuación, se presenta un diagrama que explica los conceptos fundamentales
 </pre>
 </div>
 </div>
-<div id="outline-container-org5b3fa22" class="outline-4">
-<h4 id="org5b3fa22"><span class="section-number-4">1.8.1.</span> Explicación del Diagrama</h4>
+<div id="outline-container-orga7548a0" class="outline-4">
+<h4 id="orga7548a0"><span class="section-number-4">1.8.1.</span> Explicación del Diagrama</h4>
 <div class="outline-text-4" id="text-1-8-1">
 <p>
 El diagrama muestra las tres áreas principales del Deep Learning:
@@ -220,8 +220,8 @@ El diagrama muestra las tres áreas principales del Deep Learning:
 </div>
 </div>
 </div>
-<div id="outline-container-org7089904" class="outline-3">
-<h3 id="org7089904"><span class="section-number-3">1.9.</span> Referencias</h3>
+<div id="outline-container-orga8a47ac" class="outline-3">
+<h3 id="orga8a47ac"><span class="section-number-3">1.9.</span> Referencias</h3>
 <div class="outline-text-3" id="text-1-9">
 <ul class="org-ul">
 <li>McCulloch, W. S., &amp; Pitts, W. "A Logical Calculus of the Ideas Immanent in Nervous Activity". <b>Bulletin of Mathematical Biophysics</b>, 1943.</li>
@@ -236,8 +236,8 @@ El diagrama muestra las tres áreas principales del Deep Learning:
 </ul>
 </div>
 </div>
-<div id="outline-container-org3970632" class="outline-3">
-<h3 id="org3970632"><span class="section-number-3">1.10.</span> Conclusión</h3>
+<div id="outline-container-orgf40bac2" class="outline-3">
+<h3 id="orgf40bac2"><span class="section-number-3">1.10.</span> Conclusión</h3>
 <div class="outline-text-3" id="text-1-10">
 <p>
 El Deep Learning ha recorrido un largo camino desde las neuronas artificiales de 1943 hasta los modelos multimodales de 2025. Su capacidad para aprender de datos complejos lo ha convertido en un pilar de la IA, con aplicaciones que van desde la medicina hasta la creatividad. Para los usuarios de Emacs, es una herramienta poderosa para integrar en flujos de trabajo, ya sea analizando datos o generando contenido. ¿Qué opinas de esta tecnología? ¿La usarías en tu Emacs? ¡Déjalo en los comentarios de <b>Emacs con Esteroides</b>! Próximamente: cómo entrenar un modelo simple en Org Mode.

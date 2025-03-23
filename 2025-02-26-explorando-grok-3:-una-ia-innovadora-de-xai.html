@@ -29,20 +29,22 @@
          .blog-header {
            display: flex;
            align-items: center;
-           justify-content: flex-start;
-           text-align: left;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
            padding: 15px 0;
            border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
          }
          .blog-header img {
-           max-width: 70px;
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
            height: auto;
-           margin-right: 20px;
+           margin-bottom: 10px; /* Espacio debajo del logo */
            border-radius: 5px; /* Suaviza el logo */
          }
          .blog-header-content {
            display: flex;
            flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
          }
          .blog-title {
            font-size: 2em;
@@ -128,47 +130,47 @@
 <div id="preamble" class="status"></div>
 <div id="content">
 <div class="post-date">26/02/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-02-26-explorando-grok-3:-una-ia-innovadora-de-xai.html">Explorando Grok 3: Una IA Innovadora de xAI</a></h1>
-<div id="outline-container-org6ed8aa2" class="outline-2">
-<h2 id="org6ed8aa2"><span class="section-number-2">1.</span> Introducción a Grok 3</h2>
+<div id="outline-container-org14dda3b" class="outline-2">
+<h2 id="org14dda3b"><span class="section-number-2">1.</span> Introducción a Grok 3</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Grok 3 es la tercera iteración de un modelo de inteligencia artificial desarrollado por xAI, una empresa enfocada en acelerar el descubrimiento científico humano. Diseñado para ser una herramienta versátil, Grok 3 promete asistir a los usuarios en una amplia gama de tareas, desde responder preguntas complejas hasta analizar contenido en línea. En este post, exploraremos sus características, ventajas, inconvenientes y algunos detalles que podrían interesar a quienes usamos herramientas como Emacs en Linux.
 </p>
 </div>
 </div>
-<div id="outline-container-orgabaf7e2" class="outline-2">
-<h2 id="orgabaf7e2"><span class="section-number-2">2.</span> Ventajas de Grok 3</h2>
+<div id="outline-container-org587d4cd" class="outline-2">
+<h2 id="org587d4cd"><span class="section-number-2">2.</span> Ventajas de Grok 3</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Grok 3 destaca por varias razones que lo hacen un compañero útil tanto para usuarios casuales como para aquellos con intereses más técnicos. Aquí algunas de sus fortalezas:
 </p>
 </div>
-<div id="outline-container-org2769ba3" class="outline-3">
-<h3 id="org2769ba3"><span class="section-number-3">2.1.</span> Conocimiento actualizado y flexible</h3>
+<div id="outline-container-org1916c87" class="outline-3">
+<h3 id="org1916c87"><span class="section-number-3">2.1.</span> Conocimiento actualizado y flexible</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 A diferencia de otros modelos de IA que tienen un punto de corte en su base de conocimiento, Grok 3 parece tener una capacidad notable para mantenerse al día. Esto lo hace ideal para temas que evolucionan rápidamente, como tecnología o ciencia. Por ejemplo, hoy, 25 de febrero de 2025, puedo preguntarle sobre las últimas tendencias en Linux y esperar una respuesta relevante.
 </p>
 </div>
 </div>
-<div id="outline-container-org8f1536f" class="outline-3">
-<h3 id="org8f1536f"><span class="section-number-3">2.2.</span> Herramientas adicionales para análisis</h3>
+<div id="outline-container-orgca4908a" class="outline-3">
+<h3 id="orgca4908a"><span class="section-number-3">2.2.</span> Herramientas adicionales para análisis</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Una de las características más interesantes es su capacidad para analizar perfiles de usuarios en redes sociales, publicaciones y hasta contenido multimedia como imágenes o PDFs. Esto podría ser útil para investigadores o cualquier persona que necesite desentrañar información en línea de manera rápida y precisa.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd1105d0" class="outline-3">
-<h3 id="orgd1105d0"><span class="section-number-3">2.3.</span> Respuestas naturales y adaptadas</h3>
+<div id="outline-container-org4939a14" class="outline-3">
+<h3 id="org4939a14"><span class="section-number-3">2.3.</span> Respuestas naturales y adaptadas</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 Grok 3 tiene un tono conversacional que se siente menos robótico que otros modelos. Puede ajustar sus respuestas según el contexto, lo que lo hace agradable de usar. Como alguien que pasa tiempo en Emacs, aprecio que pueda formatear texto en Org-mode sin complicaciones, como este mismo post.
 </p>
 </div>
 </div>
-<div id="outline-container-org7cb00ab" class="outline-3">
-<h3 id="org7cb00ab"><span class="section-number-3">2.4.</span> Enfoque ético en temas delicados</h3>
+<div id="outline-container-org6a8be1d" class="outline-3">
+<h3 id="org6a8be1d"><span class="section-number-3">2.4.</span> Enfoque ético en temas delicados</h3>
 <div class="outline-text-3" id="text-2-4">
 <p>
 El modelo tiene límites claros en cuestiones éticas. Por ejemplo, si le pregunto quién merece un castigo extremo, me responde que no está autorizado para tomar ese tipo de decisiones. Esto refleja un diseño responsable, algo que valoro en una IA.
@@ -176,31 +178,31 @@ El modelo tiene límites claros en cuestiones éticas. Por ejemplo, si le pregun
 </div>
 </div>
 </div>
-<div id="outline-container-orgb63aac3" class="outline-2">
-<h2 id="orgb63aac3"><span class="section-number-2">3.</span> Inconvenientes de Grok 3</h2>
+<div id="outline-container-org8618bb0" class="outline-2">
+<h2 id="org8618bb0"><span class="section-number-2">3.</span> Inconvenientes de Grok 3</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Como cualquier tecnología, Grok 3 no está exento de limitaciones. Aquí algunos puntos que podrían ser considerados desventajas:
 </p>
 </div>
-<div id="outline-container-org4dbd668" class="outline-3">
-<h3 id="org4dbd668"><span class="section-number-3">3.1.</span> Dependencia del contexto proporcionado</h3>
+<div id="outline-container-org75f1495" class="outline-3">
+<h3 id="org75f1495"><span class="section-number-3">3.1.</span> Dependencia del contexto proporcionado</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Aunque es versátil, Grok 3 depende en gran medida de la claridad de las instrucciones del usuario. Si no especifico que quiero algo en formato Org-mode, por ejemplo, podría darme una respuesta genérica en texto plano. Esto requiere que el usuario sea preciso, lo cual no siempre es intuitivo.
 </p>
 </div>
 </div>
-<div id="outline-container-org04dcf1d" class="outline-3">
-<h3 id="org04dcf1d"><span class="section-number-3">3.2.</span> Limitaciones en generación de imágenes</h3>
+<div id="outline-container-org53fa781" class="outline-3">
+<h3 id="org53fa781"><span class="section-number-3">3.2.</span> Limitaciones en generación de imágenes</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Si quiero una imagen, Grok 3 no la genera directamente; primero me pide confirmación. Además, solo puede editar imágenes que haya creado previamente, lo que limita su utilidad en comparación con otros modelos más enfocados en multimedia.
 </p>
 </div>
 </div>
-<div id="outline-container-org67e7abd" class="outline-3">
-<h3 id="org67e7abd"><span class="section-number-3">3.3.</span> Recursos y accesibilidad</h3>
+<div id="outline-container-orgbf3a070" class="outline-3">
+<h3 id="orgbf3a070"><span class="section-number-3">3.3.</span> Recursos y accesibilidad</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Aunque no tengo datos específicos sobre su infraestructura, modelos como Grok 3 suelen requerir una conexión constante a servidores potentes. Para alguien en una distro ligera de Linux con recursos limitados, esto podría ser un inconveniente si no hay una versión local disponible.
@@ -208,31 +210,31 @@ Aunque no tengo datos específicos sobre su infraestructura, modelos como Grok 3
 </div>
 </div>
 </div>
-<div id="outline-container-orgb5214c2" class="outline-2">
-<h2 id="orgb5214c2"><span class="section-number-2">4.</span> Detalles de interés</h2>
+<div id="outline-container-org28bfad4" class="outline-2">
+<h2 id="org28bfad4"><span class="section-number-2">4.</span> Detalles de interés</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Hay algunos aspectos adicionales que hacen de Grok 3 una IA intrigante:
 </p>
 </div>
-<div id="outline-container-org8171653" class="outline-3">
-<h3 id="org8171653"><span class="section-number-3">4.1.</span> Integración con el ecosistema xAI</h3>
+<div id="outline-container-org46c3c3d" class="outline-3">
+<h3 id="org46c3c3d"><span class="section-number-3">4.1.</span> Integración con el ecosistema xAI</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Dado que xAI está detrás de su desarrollo, Grok 3 parece estar alineado con una misión más amplia de avanzar en el conocimiento humano. Esto podría significar futuras integraciones con herramientas científicas o plataformas de código abierto, algo que me encantaría ver en mi flujo de trabajo con Emacs.
 </p>
 </div>
 </div>
-<div id="outline-container-org437e1ee" class="outline-3">
-<h3 id="org437e1ee"><span class="section-number-3">4.2.</span> Potencial para usuarios técnicos</h3>
+<div id="outline-container-org6e3975c" class="outline-3">
+<h3 id="org6e3975c"><span class="section-number-3">4.2.</span> Potencial para usuarios técnicos</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Para quienes usamos Linux y herramientas como Emacs, Grok 3 podría convertirse en un asistente valioso. Imagina pedirle que genere un script en Bash o que organice notas en Org-mode automáticamente. Aunque aún no exploro todo su potencial, las posibilidades son emocionantes.
 </p>
 </div>
 </div>
-<div id="outline-container-org96c22b0" class="outline-3">
-<h3 id="org96c22b0"><span class="section-number-3">4.3.</span> Enfoque en la privacidad</h3>
+<div id="outline-container-orgbf20f41" class="outline-3">
+<h3 id="orgbf20f41"><span class="section-number-3">4.3.</span> Enfoque en la privacidad</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 No está claro cómo maneja los datos de los usuarios, pero su capacidad para analizar contenido subido (como PDFs o imágenes) sugiere que xAI ha considerado la utilidad para tareas locales. Sería ideal que ofrecieran más transparencia sobre este tema.
@@ -240,16 +242,16 @@ No está claro cómo maneja los datos de los usuarios, pero su capacidad para an
 </div>
 </div>
 </div>
-<div id="outline-container-org343b80a" class="outline-2">
-<h2 id="org343b80a"><span class="section-number-2">5.</span> Conclusión</h2>
+<div id="outline-container-org980e1ea" class="outline-2">
+<h2 id="org980e1ea"><span class="section-number-2">5.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Grok 3 es un modelo de IA prometedor con un equilibrio entre funcionalidad avanzada y responsabilidad ética. Sus ventajas, como el conocimiento actualizado y la capacidad de análisis, lo hacen atractivo para usuarios curiosos y técnicos por igual. Sin embargo, sus limitaciones, como la dependencia del contexto y las restricciones en la generación de imágenes, indican que aún hay espacio para mejorar. Como usuario de Linux y Emacs, veo en Grok 3 una herramienta con potencial para integrarse en mi día a día, siempre que siga evolucionando. ¿Qué opinas tú?
 </p>
 </div>
 </div>
-<div id="outline-container-org19fdfb3" class="outline-2">
-<h2 id="org19fdfb3"><span class="section-number-2">6.</span> <span class="todo TODO">TODO</span> Próximos pasos</h2>
+<div id="outline-container-org0890d8b" class="outline-2">
+<h2 id="org0890d8b"><span class="section-number-2">6.</span> <span class="todo TODO">TODO</span> Próximos pasos</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> Probar Grok 3 con un script en Bash para automatizar tareas en Emacs.</li>
