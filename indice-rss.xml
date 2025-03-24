@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - indice]]></title>
 <description><![CDATA[Example.com - indice]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-indice.html</link>
-<lastBuildDate>Sun, 23 Mar 2025 18:06:39 +0100</lastBuildDate>
+<lastBuildDate>Mon, 24 Mar 2025 08:08:17 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -302,6 +302,12 @@
 </tr>
 
 <tr>
+<td class="org-right">2025-03-24</td>
+<td class="org-left">Geopolítica vs. Geoestrategia: Una mirada detallada desde Emacs con Esteroides</td>
+<td class="org-left"><a href="2025-03-24-geopolítica-vs.-geoestrategia:-una-mirada-detallada-desde-emacs-con-esteroides.html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
@@ -331,7 +337,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Sun, 23 Mar 2025 17:44:00 +0100</pubDate>
+  <pubDate>Mon, 24 Mar 2025 08:07:00 +0100</pubDate>
 </item>
 </channel>
 </rss>

@@ -8,61 +8,112 @@
       title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
 <title>Example.com</title>
 <meta charset='UTF-8'>
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
        <style>
          body {
-           font-family: 'Arial', sans-serif;
-           line-height: 1.6;
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
            color: #333;
-           max-width: 800px;
+           max-width: 900px;
            margin: 0 auto;
            padding: 20px;
-           background-color: #f5f5f5;
+           background-color: #f9f9f9;
          }
-         h1, h2, h3 { color: #2c3e50; font-family: 'Helvetica', sans-serif; }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
          .blog-header {
            display: flex;
            align-items: center;
-           justify-content: center;
-           flex-direction: column;
+           justify-content: center; /* Centrar todo */
            text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
          }
          .blog-header img {
-           max-height: 50px;
-           margin-bottom: 10px;
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+           font-size: 2em;
+           margin: 0;
          }
          .blog-subtitle {
-           font-size: 1.2em;
-           color: #555;
+           font-size: 1.1em;
+           color: #666;
+           margin-top: 5px;
          }
-         .img-standard {
-           max-width: 600px;
-           height: auto;
-           display: block;
-           margin: 10px auto;
+         .blog-email {
+           font-size: 0.9em;
+           color: #777;
+           margin-top: 8px;
          }
-         .img-logo {
-           max-width: 80px;
-           height: auto;
-           display: inline-block;
+         .blog-email a {
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
          }
          nav {
            text-align: center;
            font-size: 1em;
-           margin-top: 10px;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
          }
          nav a {
-           margin: 0 10px;
+           color: white;
+           margin: 0 15px;
            text-decoration: none;
-           color: #2c3e50;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.85em;
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
          }
        </style>
+       
        <div class='blog-header'>
-         <img src='logo.png' alt='Logo' class='img-logo'>
-         <h1>Mi Blog con Emacs y Esteroides</h1>
-         <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
-         <p style='font-size: 0.8em;'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
        </div>
-       <hr>
+       
        <nav>
          <a href='index.html'>Inicio</a> |
          <a href='tags.html'>Tags</a> |
@@ -70,22 +121,35 @@
          <a href='contacto.html'>Contacto</a> |
          <a href='nosotros.html'>Nosotros</a> |
          <a href='proyectos.html'>Proyectos</a>
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a>
        </nav>
-       <hr></head>
+        <hr></head>
 <body>
 <div id="preamble" class="status"></div>
 <div id="content">
-<h1 class="title">Artículos de la categoría "política":</h1><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-11-análisis-de-los-votantes-de-donald-trump-en-las-elecciones-de-2024-por-deepseek.html">Análisis de los Votantes de Donald Trump en las Elecciones de 2024 por Deepseek</a></h2><div class="post-date">11/03/2025</div><p>
-Las elecciones presidenciales de 2024 en Estados Unidos han puesto nuevamente en el centro de la discusión política a Donald Trump y su base de votantes. Este post analiza en profundidad las características demográficas, creencias, y motivaciones de los votantes de Trump, con el objetivo de entender su impacto en el panorama político actual.
-</p>(...)<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-deepseek.html">deepseek</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-trump.html">trump</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-elecciones.html">elecciones</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-política.html">política</a> </div><div id="archive">
+<h1 class="title">Artículos de la categoría "política":</h1><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-24-geopolítica-vs.-geoestrategia:-una-mirada-detallada-desde-emacs-con-esteroides.html">Geopolítica vs. Geoestrategia: Una mirada detallada desde Emacs con Esteroides</a></h2><div class="post-date">24/03/2025</div><p>
+En el mundo del análisis internacional, los términos <b>geopolítica</b> y <b>geoestrategia</b> suelen aparecer juntos, pero no son sinónimos. Desde mi flujo de trabajo en Emacs, donde organizo ideas con Org Mode y exploro conceptos complejos, me propuse desentrañar estas nociones. Este post busca aclarar sus diferencias, sus intersecciones y cómo se aplican en el contexto global actual. Además, incluiremos un diagrama para visualizar las relaciones entre ambos conceptos.
+</p>(...)<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-política.html">política</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-estrategia.html">estrategia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-opiniones.html">opiniones</a> </div><div id="archive">
 <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/archive.html">Otros artículos</a>
 </div>
 </div>
-<div id="postamble" class="status"><div id='postamble' class='status'>
+<div id="postamble" class="status"><div class='postamble'>
          <hr class='footer-hr'>
-         <div style='text-align: center; color: #777; font-size: 0.9em; padding-top: 20px;'>
-           <p>© 2025 M.Castillo | Hecho con Emacs y org-static-blog</p>
-         </div>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
        </div></div>
 </body>
 </html>
