@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title><![CDATA[Example.com - index]]></title>
+<description><![CDATA[Example.com - index]]></description>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-index.html</link>
+<lastBuildDate>Mon, 24 Mar 2025 14:32:24 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Emacs con Esteroides]]></title>
+  <description><![CDATA[
+<p>
+Bienvenidos a <b>Emacs con Esteroides</b>, un blog donde exploramos cómo potenciar Emacs con Org Mode y otras herramientas para analizar el mundo, desde la geopolítica hasta la productividad personal. Aquí combinamos la flexibilidad del texto plano con el poder del pensamiento estructurado para desentrañar temas complejos y ofrecer perspectivas únicas. Si te apasiona Emacs, la organización o el análisis profundo, ¡este es tu lugar!
+</p>
+<div id="outline-container-org4fafb0d" class="outline-2">
+<h2 id="org4fafb0d">Últimos posts</h2>
+<div class="outline-text-2" id="text-org4fafb0d">
+<!-- Este bloque será reemplazado por org-static-blog con la lista de posts -->
+
+<!-- Este bloque será reemplazado por org-static-blog con los últimos posts -->
+<div id="recent-posts">
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-index.html">index</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-indice.html">indice</a> </div>]]></description>
+  <category><![CDATA[index]]></category>
+  <category><![CDATA[indice]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/index.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/index.html</guid>
+  <pubDate>Mon, 24 Mar 2025 13:27:00 +0100</pubDate>
+</item>
+</channel>
+</rss>

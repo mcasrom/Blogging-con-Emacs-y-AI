@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Mon, 24 Mar 2025 09:07:51 +0100</lastBuildDate>
+<lastBuildDate>Mon, 24 Mar 2025 16:46:37 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Explorando Shima Spain Village: Un Rincón Español en Japón]]></title>
   <description><![CDATA[
@@ -130,7 +130,7 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[españa]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</guid>
-  <pubDate>Mon, 24 Mar 2025 09:07:51 +0100</pubDate>
+  <pubDate>Mon, 24 Mar 2025 16:46:37 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
@@ -9490,16 +9490,16 @@ Así que, ponte cómodo, abre tu Emacs (o instálalo si aún no lo tienes), y ac
 <item>
   <title><![CDATA[Gestionando Dos Blogs Diferentes con org-static-blog en Emacs]]></title>
   <description><![CDATA[
-<div id="outline-container-org56d01a8" class="outline-2">
-<h2 id="org56d01a8"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org80378d5" class="outline-2">
+<h2 id="org80378d5"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 `org-static-blog` es una herramienta poderosa para crear blogs estáticos desde Emacs, pero por defecto está diseñada para manejar un solo blog. Si quieres trabajar con dos blogs diferentes (por ejemplo, uno personal y otro profesional), necesitas ajustar tu configuración en Emacs 28 para que soporte múltiples instancias. En este artículo, te guiaré paso a paso para lograrlo.
 </p>
 </div>
 </div>
-<div id="outline-container-orgf048b5b" class="outline-2">
-<h2 id="orgf048b5b"><span class="section-number-2">2.</span> Estrategia general</h2>
+<div id="outline-container-org86d4db5" class="outline-2">
+<h2 id="org86d4db5"><span class="section-number-2">2.</span> Estrategia general</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 La clave para manejar dos blogs con `org-static-blog` es usar configuraciones separadas para cada uno, almacenadas en variables distintas, y luego alternar entre ellas según el blog que estés editando o publicando. Esto implica:
@@ -9511,8 +9511,8 @@ La clave para manejar dos blogs con `org-static-blog` es usar configuraciones se
 </ul>
 </div>
 </div>
-<div id="outline-container-org9a2fbf3" class="outline-2">
-<h2 id="org9a2fbf3"><span class="section-number-2">3.</span> Configuración inicial</h2>
+<div id="outline-container-org3a30d71" class="outline-2">
+<h2 id="org3a30d71"><span class="section-number-2">3.</span> Configuración inicial</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Primero, asegúrate de tener `org-static-blog` instalado en Emacs 28 (instálalo con `M-x package-install RET org-static-blog` si no lo has hecho). Luego, organiza tus directorios. Por ejemplo:
@@ -9531,8 +9531,8 @@ Dentro de cada directorio, crea subdirectorios para posts y publicaciones:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgeaadaf0" class="outline-2">
-<h2 id="orgeaadaf0"><span class="section-number-2">4.</span> Configurar las variables para cada blog</h2>
+<div id="outline-container-org7c27211" class="outline-2">
+<h2 id="org7c27211"><span class="section-number-2">4.</span> Configurar las variables para cada blog</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 En tu `init.el`, define las configuraciones de ambos blogs usando variables personalizadas. Aquí un ejemplo:
@@ -9599,8 +9599,8 @@ M-x my-set-blog-pro hace lo mismo para el blog profesional.
 Crear posts para cada blog Ahora puedes crear posts en los directorios correspondientes. Por ejemplo:
 </p>
 </div>
-<div id="outline-container-orgf9a71ee" class="outline-3">
-<h3 id="orgf9a71ee"><span class="section-number-3">4.1.</span> Post para el Blog Personal (~/blog-personal/posts/2025-02-25-viaje.org):</h3>
+<div id="outline-container-org18e7e4d" class="outline-3">
+<h3 id="org18e7e4d"><span class="section-number-3">4.1.</span> Post para el Blog Personal (~/blog-personal/posts/2025-02-25-viaje.org):</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 org
@@ -9608,15 +9608,15 @@ org
 </div>
 </div>
 </div>
-<div id="outline-container-org27fde10" class="outline-2">
-<h2 id="org27fde10"><span class="section-number-2">5.</span> Reflexiones</h2>
+<div id="outline-container-orgb43fc7e" class="outline-2">
+<h2 id="orgb43fc7e"><span class="section-number-2">5.</span> Reflexiones</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Hoy escribo sobre un viaje reciente que hice&#x2026;
 </p>
 </div>
-<div id="outline-container-org6d931ad" class="outline-3">
-<h3 id="org6d931ad"><span class="section-number-3">5.1.</span> Post para el Blog Profesional (~/blog-profesional/posts/2025-02-25-proyecto.org):</h3>
+<div id="outline-container-org5d1d03c" class="outline-3">
+<h3 id="org5d1d03c"><span class="section-number-3">5.1.</span> Post para el Blog Profesional (~/blog-profesional/posts/2025-02-25-proyecto.org):</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 org
@@ -9624,8 +9624,8 @@ org
 </div>
 </div>
 </div>
-<div id="outline-container-org9e51599" class="outline-2">
-<h2 id="org9e51599"><span class="section-number-2">6.</span> Detalles</h2>
+<div id="outline-container-org5311826" class="outline-2">
+<h2 id="org5311826"><span class="section-number-2">6.</span> Detalles</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Este post detalla un proyecto técnico en el que estoy trabajando&#x2026;
@@ -9697,47 +9697,47 @@ Explorar cómo sincronizar cada blog con un repositorio Git diferente.
 <item>
   <title><![CDATA[Explorando Grok 3: Una IA Innovadora de xAI]]></title>
   <description><![CDATA[
-<div id="outline-container-org14dda3b" class="outline-2">
-<h2 id="org14dda3b"><span class="section-number-2">1.</span> Introducción a Grok 3</h2>
+<div id="outline-container-org0d4d152" class="outline-2">
+<h2 id="org0d4d152"><span class="section-number-2">1.</span> Introducción a Grok 3</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Grok 3 es la tercera iteración de un modelo de inteligencia artificial desarrollado por xAI, una empresa enfocada en acelerar el descubrimiento científico humano. Diseñado para ser una herramienta versátil, Grok 3 promete asistir a los usuarios en una amplia gama de tareas, desde responder preguntas complejas hasta analizar contenido en línea. En este post, exploraremos sus características, ventajas, inconvenientes y algunos detalles que podrían interesar a quienes usamos herramientas como Emacs en Linux.
 </p>
 </div>
 </div>
-<div id="outline-container-org587d4cd" class="outline-2">
-<h2 id="org587d4cd"><span class="section-number-2">2.</span> Ventajas de Grok 3</h2>
+<div id="outline-container-org52e1e83" class="outline-2">
+<h2 id="org52e1e83"><span class="section-number-2">2.</span> Ventajas de Grok 3</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Grok 3 destaca por varias razones que lo hacen un compañero útil tanto para usuarios casuales como para aquellos con intereses más técnicos. Aquí algunas de sus fortalezas:
 </p>
 </div>
-<div id="outline-container-org1916c87" class="outline-3">
-<h3 id="org1916c87"><span class="section-number-3">2.1.</span> Conocimiento actualizado y flexible</h3>
+<div id="outline-container-orgce8feb8" class="outline-3">
+<h3 id="orgce8feb8"><span class="section-number-3">2.1.</span> Conocimiento actualizado y flexible</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 A diferencia de otros modelos de IA que tienen un punto de corte en su base de conocimiento, Grok 3 parece tener una capacidad notable para mantenerse al día. Esto lo hace ideal para temas que evolucionan rápidamente, como tecnología o ciencia. Por ejemplo, hoy, 25 de febrero de 2025, puedo preguntarle sobre las últimas tendencias en Linux y esperar una respuesta relevante.
 </p>
 </div>
 </div>
-<div id="outline-container-orgca4908a" class="outline-3">
-<h3 id="orgca4908a"><span class="section-number-3">2.2.</span> Herramientas adicionales para análisis</h3>
+<div id="outline-container-org4df349e" class="outline-3">
+<h3 id="org4df349e"><span class="section-number-3">2.2.</span> Herramientas adicionales para análisis</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Una de las características más interesantes es su capacidad para analizar perfiles de usuarios en redes sociales, publicaciones y hasta contenido multimedia como imágenes o PDFs. Esto podría ser útil para investigadores o cualquier persona que necesite desentrañar información en línea de manera rápida y precisa.
 </p>
 </div>
 </div>
-<div id="outline-container-org4939a14" class="outline-3">
-<h3 id="org4939a14"><span class="section-number-3">2.3.</span> Respuestas naturales y adaptadas</h3>
+<div id="outline-container-orge3d1125" class="outline-3">
+<h3 id="orge3d1125"><span class="section-number-3">2.3.</span> Respuestas naturales y adaptadas</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 Grok 3 tiene un tono conversacional que se siente menos robótico que otros modelos. Puede ajustar sus respuestas según el contexto, lo que lo hace agradable de usar. Como alguien que pasa tiempo en Emacs, aprecio que pueda formatear texto en Org-mode sin complicaciones, como este mismo post.
 </p>
 </div>
 </div>
-<div id="outline-container-org6a8be1d" class="outline-3">
-<h3 id="org6a8be1d"><span class="section-number-3">2.4.</span> Enfoque ético en temas delicados</h3>
+<div id="outline-container-org2b21a4e" class="outline-3">
+<h3 id="org2b21a4e"><span class="section-number-3">2.4.</span> Enfoque ético en temas delicados</h3>
 <div class="outline-text-3" id="text-2-4">
 <p>
 El modelo tiene límites claros en cuestiones éticas. Por ejemplo, si le pregunto quién merece un castigo extremo, me responde que no está autorizado para tomar ese tipo de decisiones. Esto refleja un diseño responsable, algo que valoro en una IA.
@@ -9745,31 +9745,31 @@ El modelo tiene límites claros en cuestiones éticas. Por ejemplo, si le pregun
 </div>
 </div>
 </div>
-<div id="outline-container-org8618bb0" class="outline-2">
-<h2 id="org8618bb0"><span class="section-number-2">3.</span> Inconvenientes de Grok 3</h2>
+<div id="outline-container-org9ecdb75" class="outline-2">
+<h2 id="org9ecdb75"><span class="section-number-2">3.</span> Inconvenientes de Grok 3</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Como cualquier tecnología, Grok 3 no está exento de limitaciones. Aquí algunos puntos que podrían ser considerados desventajas:
 </p>
 </div>
-<div id="outline-container-org75f1495" class="outline-3">
-<h3 id="org75f1495"><span class="section-number-3">3.1.</span> Dependencia del contexto proporcionado</h3>
+<div id="outline-container-org1812eee" class="outline-3">
+<h3 id="org1812eee"><span class="section-number-3">3.1.</span> Dependencia del contexto proporcionado</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Aunque es versátil, Grok 3 depende en gran medida de la claridad de las instrucciones del usuario. Si no especifico que quiero algo en formato Org-mode, por ejemplo, podría darme una respuesta genérica en texto plano. Esto requiere que el usuario sea preciso, lo cual no siempre es intuitivo.
 </p>
 </div>
 </div>
-<div id="outline-container-org53fa781" class="outline-3">
-<h3 id="org53fa781"><span class="section-number-3">3.2.</span> Limitaciones en generación de imágenes</h3>
+<div id="outline-container-orga67f18f" class="outline-3">
+<h3 id="orga67f18f"><span class="section-number-3">3.2.</span> Limitaciones en generación de imágenes</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Si quiero una imagen, Grok 3 no la genera directamente; primero me pide confirmación. Además, solo puede editar imágenes que haya creado previamente, lo que limita su utilidad en comparación con otros modelos más enfocados en multimedia.
 </p>
 </div>
 </div>
-<div id="outline-container-orgbf3a070" class="outline-3">
-<h3 id="orgbf3a070"><span class="section-number-3">3.3.</span> Recursos y accesibilidad</h3>
+<div id="outline-container-org57970fa" class="outline-3">
+<h3 id="org57970fa"><span class="section-number-3">3.3.</span> Recursos y accesibilidad</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Aunque no tengo datos específicos sobre su infraestructura, modelos como Grok 3 suelen requerir una conexión constante a servidores potentes. Para alguien en una distro ligera de Linux con recursos limitados, esto podría ser un inconveniente si no hay una versión local disponible.
@@ -9777,31 +9777,31 @@ Aunque no tengo datos específicos sobre su infraestructura, modelos como Grok 3
 </div>
 </div>
 </div>
-<div id="outline-container-org28bfad4" class="outline-2">
-<h2 id="org28bfad4"><span class="section-number-2">4.</span> Detalles de interés</h2>
+<div id="outline-container-orgf8b10cf" class="outline-2">
+<h2 id="orgf8b10cf"><span class="section-number-2">4.</span> Detalles de interés</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Hay algunos aspectos adicionales que hacen de Grok 3 una IA intrigante:
 </p>
 </div>
-<div id="outline-container-org46c3c3d" class="outline-3">
-<h3 id="org46c3c3d"><span class="section-number-3">4.1.</span> Integración con el ecosistema xAI</h3>
+<div id="outline-container-orga57397b" class="outline-3">
+<h3 id="orga57397b"><span class="section-number-3">4.1.</span> Integración con el ecosistema xAI</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Dado que xAI está detrás de su desarrollo, Grok 3 parece estar alineado con una misión más amplia de avanzar en el conocimiento humano. Esto podría significar futuras integraciones con herramientas científicas o plataformas de código abierto, algo que me encantaría ver en mi flujo de trabajo con Emacs.
 </p>
 </div>
 </div>
-<div id="outline-container-org6e3975c" class="outline-3">
-<h3 id="org6e3975c"><span class="section-number-3">4.2.</span> Potencial para usuarios técnicos</h3>
+<div id="outline-container-orgc44e58c" class="outline-3">
+<h3 id="orgc44e58c"><span class="section-number-3">4.2.</span> Potencial para usuarios técnicos</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Para quienes usamos Linux y herramientas como Emacs, Grok 3 podría convertirse en un asistente valioso. Imagina pedirle que genere un script en Bash o que organice notas en Org-mode automáticamente. Aunque aún no exploro todo su potencial, las posibilidades son emocionantes.
 </p>
 </div>
 </div>
-<div id="outline-container-orgbf20f41" class="outline-3">
-<h3 id="orgbf20f41"><span class="section-number-3">4.3.</span> Enfoque en la privacidad</h3>
+<div id="outline-container-org58c11fb" class="outline-3">
+<h3 id="org58c11fb"><span class="section-number-3">4.3.</span> Enfoque en la privacidad</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 No está claro cómo maneja los datos de los usuarios, pero su capacidad para analizar contenido subido (como PDFs o imágenes) sugiere que xAI ha considerado la utilidad para tareas locales. Sería ideal que ofrecieran más transparencia sobre este tema.
@@ -9809,16 +9809,16 @@ No está claro cómo maneja los datos de los usuarios, pero su capacidad para an
 </div>
 </div>
 </div>
-<div id="outline-container-org980e1ea" class="outline-2">
-<h2 id="org980e1ea"><span class="section-number-2">5.</span> Conclusión</h2>
+<div id="outline-container-orgc8481a7" class="outline-2">
+<h2 id="orgc8481a7"><span class="section-number-2">5.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Grok 3 es un modelo de IA prometedor con un equilibrio entre funcionalidad avanzada y responsabilidad ética. Sus ventajas, como el conocimiento actualizado y la capacidad de análisis, lo hacen atractivo para usuarios curiosos y técnicos por igual. Sin embargo, sus limitaciones, como la dependencia del contexto y las restricciones en la generación de imágenes, indican que aún hay espacio para mejorar. Como usuario de Linux y Emacs, veo en Grok 3 una herramienta con potencial para integrarse en mi día a día, siempre que siga evolucionando. ¿Qué opinas tú?
 </p>
 </div>
 </div>
-<div id="outline-container-org0890d8b" class="outline-2">
-<h2 id="org0890d8b"><span class="section-number-2">6.</span> <span class="todo TODO">TODO</span> Próximos pasos</h2>
+<div id="outline-container-org3c2f2e3" class="outline-2">
+<h2 id="org3c2f2e3"><span class="section-number-2">6.</span> <span class="todo TODO">TODO</span> Próximos pasos</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> Probar Grok 3 con un script en Bash para automatizar tareas en Emacs.</li>
