@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - blog]]></title>
 <description><![CDATA[Example.com - blog]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-blog.html</link>
-<lastBuildDate>Mon, 24 Mar 2025 16:46:44 +0100</lastBuildDate>
+<lastBuildDate>Mon, 24 Mar 2025 19:00:15 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -308,13 +308,19 @@
 </tr>
 
 <tr>
+<td class="org-right">2025-03-24</td>
+<td class="org-left">Las Mejores Herramientas de IA Gratuitas en 2025 (país)</td>
+<td class="org-left"><a href="2025-03-24-las-mejores-herramientas-de-ia-gratuitas-en-2025.html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
 </tr>
 
 <tr>
-<td class="org-right">2025-03-23</td>
+<td class="org-right">2025-03-24</td>
 <td class="org-left">Índice de Publicaciones del Blog</td>
 <td class="org-left"><a href="indice-posts.html">Enlace</a></td>
 </tr>
@@ -337,7 +343,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Mon, 24 Mar 2025 08:07:00 +0100</pubDate>
+  <pubDate>Mon, 24 Mar 2025 18:56:00 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Emacs con Esteroides: Configurar un Contador de Visitantes para el Blog]]></title>

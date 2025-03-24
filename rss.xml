@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Mon, 24 Mar 2025 16:46:37 +0100</lastBuildDate>
+<lastBuildDate>Mon, 24 Mar 2025 19:00:09 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Explorando Shima Spain Village: Un Rincón Español en Japón]]></title>
   <description><![CDATA[
@@ -130,7 +130,7 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[españa]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</guid>
-  <pubDate>Mon, 24 Mar 2025 16:46:37 +0100</pubDate>
+  <pubDate>Mon, 24 Mar 2025 19:00:09 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
@@ -435,13 +435,19 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
 </tr>
 
 <tr>
+<td class="org-right">2025-03-24</td>
+<td class="org-left">Las Mejores Herramientas de IA Gratuitas en 2025 (país)</td>
+<td class="org-left"><a href="2025-03-24-las-mejores-herramientas-de-ia-gratuitas-en-2025.html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
 </tr>
 
 <tr>
-<td class="org-right">2025-03-23</td>
+<td class="org-right">2025-03-24</td>
 <td class="org-left">Índice de Publicaciones del Blog</td>
 <td class="org-left"><a href="indice-posts.html">Enlace</a></td>
 </tr>
@@ -464,7 +470,91 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Mon, 24 Mar 2025 08:07:00 +0100</pubDate>
+  <pubDate>Mon, 24 Mar 2025 18:56:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Las Mejores Herramientas de IA Gratuitas en 2025 (país)]]></title>
+  <description><![CDATA[
+<div id="outline-container-orgae58c10" class="outline-2">
+<h2 id="orgae58c10"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+La inteligencia artificial (IA) ha revolucionado la productividad, la creatividad y la automatización. En este post, exploramos las mejores herramientas gratuitas de IA disponibles en 2025, clasificadas según su potencia, casos de uso y país de origen.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfc73a49" class="outline-2">
+<h2 id="orgfc73a49"><span class="section-number-2">2.</span> Mejores Herramientas de IA Gratuitas</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgb4413f9" class="outline-3">
+<h3 id="orgb4413f9"><span class="section-number-3">2.1.</span> Asistentes de Escritura y Texto</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li><b>ChatGPT</b> (EE.UU.): Desarrollado por OpenAI, uno de los asistentes de IA más avanzados para generación de texto.</li>
+<li><b>Claude</b> (EE.UU.): IA conversacional avanzada que compite con otros modelos líderes.</li>
+<li><b>Rytr</b> (India): Herramienta de escritura asistida por IA para generar contenido de calidad.</li>
+<li><b>Grammarly</b> (EE.UU.): Corrector gramatical con IA que mejora la claridad y precisión del texto.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7c4a567" class="outline-3">
+<h3 id="org7c4a567"><span class="section-number-3">2.2.</span> Generadores de Contenido Visual</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li><b>Midjourney</b> (EE.UU.): Generador de imágenes a partir de descripciones textuales.</li>
+<li><b>Runway</b> (EE.UU.): Plataforma de edición y creación de videos con IA.</li>
+<li><b>Canva Magic Studio</b> (Australia): Herramienta de diseño gráfico con IA para crear presentaciones y gráficos.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5c39344" class="outline-3">
+<h3 id="org5c39344"><span class="section-number-3">2.3.</span> Herramientas de Productividad</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li><b>Notion AI Q&amp;A</b> (EE.UU.): Asistente integrado en Notion para organizar información y gestionar conocimiento.</li>
+<li><b>TOME</b> (EE.UU.): Generador de presentaciones con storytelling basado en IA.</li>
+<li><b>Fathom</b> (EE.UU.): IA para la toma de notas y gestión de reuniones.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org44255e4" class="outline-3">
+<h3 id="org44255e4"><span class="section-number-3">2.4.</span> Motores de Búsqueda Inteligentes</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li><b>Perplexity.ai</b> (EE.UU.): Motor de búsqueda con IA que responde preguntas complejas con precisión.</li>
+<li><b>Mytelai</b> (España): Plataforma que ofrece acceso a diversas herramientas y recursos de IA.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org741b9f6" class="outline-3">
+<h3 id="org741b9f6"><span class="section-number-3">2.5.</span> Automatización y Notificaciones</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li><b>DeepSeek</b> (China): IA autónoma desarrollada en China, alternativa gratuita a ChatGPT.</li>
+<li><b>Synthesia</b> (Reino Unido): Herramienta para generar videos a partir de texto y presentaciones.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfa3dd0b" class="outline-2">
+<h2 id="orgfa3dd0b"><span class="section-number-2">3.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Las herramientas de IA gratuita han evolucionado enormemente, ofreciendo soluciones para escribir, diseñar, investigar y automatizar tareas. ¿Cuál es tu favorita? ¡Déjala en los comentarios!
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ai.html">ai</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gratuita.html">gratuita</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-2025.html">2025</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-herramientas.html">herramientas</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-productividad.html">productividad</a> </div>]]></description>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[ai]]></category>
+  <category><![CDATA[gratuita]]></category>
+  <category><![CDATA[2025]]></category>
+  <category><![CDATA[herramientas]]></category>
+  <category><![CDATA[productividad]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-24-las-mejores-herramientas-de-ia-gratuitas-en-2025.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-24-las-mejores-herramientas-de-ia-gratuitas-en-2025.html</guid>
+  <pubDate>Mon, 24 Mar 2025 18:49:00 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Geopolítica vs. Geoestrategia: Una mirada detallada desde Emacs con Esteroides]]></title>
@@ -6652,9 +6742,9 @@ La expresión <span class="underline">"free as in beer"</span> (libre como una c
 <item>
   <title><![CDATA[Análisis Demográfico de los Votantes de Donald Trump en las Elecciones 2024 - Perplexity]]></title>
   <description><![CDATA[
-<div id="outline-container-org18c0bb6" class="outline-2">
-<h2 id="org18c0bb6">Introducción: El Fenómeno Trump en la Política Contemporánea</h2>
-<div class="outline-text-2" id="text-org18c0bb6">
+<div id="outline-container-orge7b9f0f" class="outline-2">
+<h2 id="orge7b9f0f">Introducción: El Fenómeno Trump en la Política Contemporánea</h2>
+<div class="outline-text-2" id="text-orge7b9f0f">
 <p>
 La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el mapa político estadounidense. Este análisis examina los patrones demográficos, creencias y factores socioeconómicos de su base electoral, utilizando datos recientes de:
 </p>
@@ -6665,9 +6755,9 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 <li>Estudios del Brookings Institution</li>
 </ul>
 </div>
-<div id="outline-container-org0417fdf" class="outline-3">
-<h3 id="org0417fdf">Metodología:</h3>
-<div class="outline-text-3" id="text-org0417fdf">
+<div id="outline-container-org6764f03" class="outline-3">
+<h3 id="org6764f03">Metodología:</h3>
+<div class="outline-text-3" id="text-org6764f03">
 <ul class="org-ul">
 <li>Muestra: 15,000 votantes registrados en 12 estados clave</li>
 <li>Margen de error: ±2.5 puntos porcentuales</li>
@@ -6676,13 +6766,13 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </div>
 </div>
 </div>
-<div id="outline-container-org5f2bf49" class="outline-2">
-<h2 id="org5f2bf49">Perfil Demográfico del Votante Trumpista</h2>
-<div class="outline-text-2" id="text-org5f2bf49">
+<div id="outline-container-org64323ab" class="outline-2">
+<h2 id="org64323ab">Perfil Demográfico del Votante Trumpista</h2>
+<div class="outline-text-2" id="text-org64323ab">
 </div>
-<div id="outline-container-org462e135" class="outline-3">
-<h3 id="org462e135">Edad y Género</h3>
-<div class="outline-text-3" id="text-org462e135">
+<div id="outline-container-orgd3e64c3" class="outline-3">
+<h3 id="orgd3e64c3">Edad y Género</h3>
+<div class="outline-text-3" id="text-orgd3e64c3">
 <table>
 
 
@@ -6726,9 +6816,9 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </p>
 </div>
 </div>
-<div id="outline-container-org4ed21b6" class="outline-3">
-<h3 id="org4ed21b6">Distribución Geográfica</h3>
-<div class="outline-text-3" id="text-org4ed21b6">
+<div id="outline-container-org52a7272" class="outline-3">
+<h3 id="org52a7272">Distribución Geográfica</h3>
+<div class="outline-text-3" id="text-org52a7272">
 <ul class="org-ul">
 <li>72% proceden de áreas rurales/suburbanas</li>
 <li>55% concentrados en Sun Belt (TX, FL, AZ)</li>
@@ -6737,13 +6827,13 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </div>
 </div>
 </div>
-<div id="outline-container-orgd9c6d17" class="outline-2">
-<h2 id="orgd9c6d17">Factores Ideológicos Clave</h2>
-<div class="outline-text-2" id="text-orgd9c6d17">
+<div id="outline-container-org6d7d57c" class="outline-2">
+<h2 id="org6d7d57c">Factores Ideológicos Clave</h2>
+<div class="outline-text-2" id="text-org6d7d57c">
 </div>
-<div id="outline-container-org6a7bb7f" class="outline-3">
-<h3 id="org6a7bb7f">Posiciones Políticas Prioritarias</h3>
-<div class="outline-text-3" id="text-org6a7bb7f">
+<div id="outline-container-org5aa2c25" class="outline-3">
+<h3 id="org5aa2c25">Posiciones Políticas Prioritarias</h3>
+<div class="outline-text-3" id="text-org5aa2c25">
 <ol class="org-ol">
 <li>Control migratorio (89%)</li>
 <li>Política energética tradicional (78%)</li>
@@ -6752,9 +6842,9 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </ol>
 </div>
 </div>
-<div id="outline-container-org6b2f39e" class="outline-3">
-<h3 id="org6b2f39e">Creencia en Teorías Conspirativas</h3>
-<div class="outline-text-3" id="text-org6b2f39e">
+<div id="outline-container-orgb4a42c3" class="outline-3">
+<h3 id="orgb4a42c3">Creencia en Teorías Conspirativas</h3>
+<div class="outline-text-3" id="text-orgb4a42c3">
 <ul class="org-ul">
 <li>63% cree en fraude electoral 2020</li>
 <li>41% apoya teorías QAnon</li>
@@ -6763,13 +6853,13 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </div>
 </div>
 </div>
-<div id="outline-container-orgb2d639c" class="outline-2">
-<h2 id="orgb2d639c">Religión y Educación</h2>
-<div class="outline-text-2" id="text-orgb2d639c">
+<div id="outline-container-orgfb3985f" class="outline-2">
+<h2 id="orgfb3985f">Religión y Educación</h2>
+<div class="outline-text-2" id="text-orgfb3985f">
 </div>
-<div id="outline-container-orgff8ad93" class="outline-3">
-<h3 id="orgff8ad93">Afiliación Religiosa</h3>
-<div class="outline-text-3" id="text-orgff8ad93">
+<div id="outline-container-orgaaaf65b" class="outline-3">
+<h3 id="orgaaaf65b">Afiliación Religiosa</h3>
+<div class="outline-text-3" id="text-orgaaaf65b">
 <table>
 
 
@@ -6813,9 +6903,9 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </p>
 </div>
 </div>
-<div id="outline-container-org3c85964" class="outline-3">
-<h3 id="org3c85964">Nivel Educativo</h3>
-<div class="outline-text-3" id="text-org3c85964">
+<div id="outline-container-orgc471f9c" class="outline-3">
+<h3 id="orgc471f9c">Nivel Educativo</h3>
+<div class="outline-text-3" id="text-orgc471f9c">
 <table>
 
 
@@ -6856,13 +6946,13 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </div>
 </div>
 </div>
-<div id="outline-container-orgf36a8d6" class="outline-2">
-<h2 id="orgf36a8d6">Análisis Socioeconómico</h2>
-<div class="outline-text-2" id="text-orgf36a8d6">
+<div id="outline-container-orgaf3c99c" class="outline-2">
+<h2 id="orgaf3c99c">Análisis Socioeconómico</h2>
+<div class="outline-text-2" id="text-orgaf3c99c">
 </div>
-<div id="outline-container-org05df0b4" class="outline-3">
-<h3 id="org05df0b4">Factores de Riesgo Económico</h3>
-<div class="outline-text-3" id="text-org05df0b4">
+<div id="outline-container-org4573c81" class="outline-3">
+<h3 id="org4573c81">Factores de Riesgo Económico</h3>
+<div class="outline-text-3" id="text-org4573c81">
 <ul class="org-ul">
 <li>58% trabajan en sectores amenazados por automatización</li>
 <li>43% sin seguro médico privado</li>
@@ -6870,9 +6960,9 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </ul>
 </div>
 </div>
-<div id="outline-container-org4aa8c0a" class="outline-3">
-<h3 id="org4aa8c0a">Percepción de Movilidad Social</h3>
-<div class="outline-text-3" id="text-org4aa8c0a">
+<div id="outline-container-orgf2dca77" class="outline-3">
+<h3 id="orgf2dca77">Percepción de Movilidad Social</h3>
+<div class="outline-text-3" id="text-orgf2dca77">
 <ul class="org-ul">
 <li>Solo 29% cree en el "sueño americano" tradicional</li>
 <li>63% considera que "el sistema está en su contra"</li>
@@ -6880,13 +6970,13 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </div>
 </div>
 </div>
-<div id="outline-container-org857f115" class="outline-2">
-<h2 id="org857f115">Estudio de Caso: Condado de Jefferson (Ohio)</h2>
-<div class="outline-text-2" id="text-org857f115">
+<div id="outline-container-org4e28f0c" class="outline-2">
+<h2 id="org4e28f0c">Estudio de Caso: Condado de Jefferson (Ohio)</h2>
+<div class="outline-text-2" id="text-org4e28f0c">
 </div>
-<div id="outline-container-org5a00ff4" class="outline-3">
-<h3 id="org5a00ff4">Características Clave</h3>
-<div class="outline-text-3" id="text-org5a00ff4">
+<div id="outline-container-org36844c1" class="outline-3">
+<h3 id="org36844c1">Características Clave</h3>
+<div class="outline-text-3" id="text-org36844c1">
 <ul class="org-ul">
 <li>Población: 230,000 habitantes</li>
 <li>Industria principal: Manufactura automotriz</li>
@@ -6894,9 +6984,9 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbea24d8" class="outline-3">
-<h3 id="orgbea24d8">Resultados Electorales 2024</h3>
-<div class="outline-text-3" id="text-orgbea24d8">
+<div id="outline-container-org2998c79" class="outline-3">
+<h3 id="org2998c79">Resultados Electorales 2024</h3>
+<div class="outline-text-3" id="text-org2998c79">
 <ul class="org-ul">
 <li>Trump: 64% (+7% vs 2020)</li>
 <li>Biden: 34% (-9% vs 2020)</li>
@@ -6904,19 +6994,25 @@ La cuarta candidatura presidencial de Donald Trump en 2024 ha reconfigurado el m
 </div>
 </div>
 </div>
-<div id="outline-container-org5491493" class="outline-2">
-<h2 id="org5491493">Gráfico Comparativo: Educación vs Apoyo a Trump</h2>
-<div class="outline-text-2" id="text-org5491493">
+<div id="outline-container-orgefb2e35" class="outline-2">
+<h2 id="orgefb2e35">Gráfico Comparativo: Educación vs Apoyo a Trump</h2>
+<div class="outline-text-2" id="text-orgefb2e35">
 
-<figure id="orgb57e056">
+<figure id="org4b49f1d">
 <img src="trump_voters_education.png" alt="trump_voters_education.png">
+
+</figure>
+
+
+<figure id="orga1c8889">
+<img src="../myblog/images/emacs.png" alt="emacs.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-orgd16f3e4" class="outline-2">
-<h2 id="orgd16f3e4">Conclusión: La Nueva Geografía Política</h2>
-<div class="outline-text-2" id="text-orgd16f3e4">
+<div id="outline-container-org11fc7f3" class="outline-2">
+<h2 id="org11fc7f3">Conclusión: La Nueva Geografía Política</h2>
+<div class="outline-text-2" id="text-org11fc7f3">
 <p>
 Los datos revelan una base electoral envejecida, menos educada y concentrada en sectores económicos tradicionales. El éxito de Trump se sustenta en:
 </p>
@@ -6932,9 +7028,9 @@ Sin embargo, su creciente desconexión con votantes jóvenes (&lt;30 años solo 
 </p>
 </div>
 </div>
-<div id="outline-container-orgaadcb51" class="outline-2">
-<h2 id="orgaadcb51">Referencias</h2>
-<div class="outline-text-2" id="text-orgaadcb51">
+<div id="outline-container-org96b0429" class="outline-2">
+<h2 id="org96b0429">Referencias</h2>
+<div class="outline-text-2" id="text-org96b0429">
 <p>
 Brenan, M. (2024). <span class="underline">U.S. Political Ideology Trends, 2024</span>. Gallup. <a href="https://www.gallup.com">https://www.gallup.com</a>
 </p>
@@ -7060,16 +7156,16 @@ Para ponerte en contacto, envíanos un email a <a href="mailto:mybloggingnotes@g
 <item>
   <title><![CDATA[Nosotros]]></title>
   <description><![CDATA[
-<div id="outline-container-org9aeba90" class="outline-2">
-<h2 id="org9aeba90">Sobre Nosotros</h2>
-<div class="outline-text-2" id="text-org9aeba90">
+<div id="outline-container-org13368f8" class="outline-2">
+<h2 id="org13368f8">Sobre Nosotros</h2>
+<div class="outline-text-2" id="text-org13368f8">
 <p>
 Bienvenido a <b>Emacs con Esteroides</b>, un espacio donde combinamos la potencia de Emacs con las capacidades de la <b>IA Generativa</b> para crear un flujo de trabajo optimizado en la gestión y generación de contenido. Este blog es coordinado por <b>M. Castillo</b>, un entusiasta del software libre, la automatización y la productividad extrema.
 </p>
 </div>
-<div id="outline-container-orgba1f182" class="outline-3">
-<h3 id="orgba1f182">¿Qué es Emacs con Esteroides? **</h3>
-<div class="outline-text-3" id="text-orgba1f182">
+<div id="outline-container-orga96c95d" class="outline-3">
+<h3 id="orga96c95d">¿Qué es Emacs con Esteroides?</h3>
+<div class="outline-text-3" id="text-orga96c95d">
 <p>
 Es un blog dedicado a explorar cómo llevar a <b>Emacs</b> al siguiente nivel con herramientas avanzadas. Aquí documentamos técnicas, configuraciones y scripts que permiten convertir Emacs en un entorno ultrapotente para la creación de contenido, el desarrollo de software y la productividad en general.
 </p>
@@ -7085,9 +7181,9 @@ Nuestro enfoque se centra en tres pilares principales:
 </ol>
 </div>
 </div>
-<div id="outline-container-org9c16871" class="outline-3">
-<h3 id="org9c16871">La IA y Emacs: Un dúo imparable **</h3>
-<div class="outline-text-3" id="text-org9c16871">
+<div id="outline-container-orgf6c3793" class="outline-3">
+<h3 id="orgf6c3793">La IA y Emacs: Un dúo imparable</h3>
+<div class="outline-text-3" id="text-orgf6c3793">
 <p>
 La combinación de <b>Emacs</b> con <b>IA Generativa</b> nos permite:
 </p>
@@ -7104,15 +7200,15 @@ La combinación de <b>Emacs</b> con <b>IA Generativa</b> nos permite:
 </p>
 </div>
 </div>
-<div id="outline-container-org422d959" class="outline-3">
-<h3 id="org422d959">Actores clave en la creación del blog **</h3>
-<div class="outline-text-3" id="text-org422d959">
+<div id="outline-container-org9167d7a" class="outline-3">
+<h3 id="org9167d7a">Actores clave en la creación del blog</h3>
+<div class="outline-text-3" id="text-org9167d7a">
 <p>
 Para ilustrar el ecosistema de trabajo en <b>Emacs con Esteroides</b>, aquí tienes un diagrama con los actores principales:
 </p>
 
 
-<figure id="orga897d2a">
+<figure id="org15c4222">
 <img src="images/diagrama_actores.png" alt="diagrama_actores.png">
 
 </figure>
