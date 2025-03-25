@@ -4,7 +4,163 @@
 <title><![CDATA[Example.com - opiniones]]></title>
 <description><![CDATA[Example.com - opiniones]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-opiniones.html</link>
-<lastBuildDate>Tue, 25 Mar 2025 16:07:02 +0100</lastBuildDate>
+<lastBuildDate>Tue, 25 Mar 2025 16:17:03 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Diagrama de Relaciones Geoestratégicas y Geopolíticas de los Grandes Bloques Mundiales]]></title>
+  <description><![CDATA[
+<div id="outline-container-org3bd3070" class="outline-2">
+<h2 id="org3bd3070"><span class="section-number-2">1.</span> Contexto del análisis</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+La dinámica geopolítica global en 2025 está marcada por la interacción estratégica entre los principales bloques de poder: Estados Unidos, Unión Europea, China, Rusia, India y América Latina. Este diagrama busca ilustrar las relaciones clave entre estos actores, destacando alianzas, tensiones y estrategias en curso. Utilizando herramientas de visualización como PlantUML en Emacs, hemos sintetizado las complejidades del sistema internacional en un formato gráfico accesible.
+</p>
+</div>
+<div id="outline-container-org925651a" class="outline-3">
+<h3 id="org925651a"><span class="section-number-3">1.1.</span> Objetivos del diagrama</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Representar las principales alianzas y tensiones entre los bloques.</li>
+<li>Identificar herramientas estratégicas empleadas por cada actor.</li>
+<li>Facilitar el análisis comparativo de prioridades y estrategias geopolíticas.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org25762f1" class="outline-2">
+<h2 id="org25762f1"><span class="section-number-2">2.</span> Elementos destacados del diagrama</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org57ed261" class="outline-3">
+<h3 id="org57ed261"><span class="section-number-3">2.1.</span> Estados Unidos</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Enfoque en "América Primero 2.0" bajo la administración Trump.</li>
+<li>Contención tecnológica frente a China mediante sanciones y alianzas tecnológicas como AUKUS+.</li>
+<li>Relación transaccional con América Latina bajo la Doctrina Monroe 2.0</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgaabf4db" class="outline-3">
+<h3 id="orgaabf4db"><span class="section-number-3">2.2.</span> Unión Europea</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Búsqueda de autonomía estratégica tras las tensiones con EE.UU.</li>
+<li>Dependencia energética de Rusia y esfuerzos por diversificar fuentes.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge2f5083" class="outline-3">
+<h3 id="orge2f5083"><span class="section-number-3">2.3.</span> China</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>Expansión global a través de la Iniciativa de la Franja y la Ruta (BRI).</li>
+<li>Competencia regional con India y creciente influencia en América Latina.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd88ff65" class="outline-3">
+<h3 id="orgd88ff65"><span class="section-number-3">2.4.</span> Rusia</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>Cooperación estratégica con China frente a sanciones occidentales.</li>
+<li>Gestión de tensiones energéticas con Europa.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org75803ed" class="outline-3">
+<h3 id="org75803ed"><span class="section-number-3">2.5.</span> India</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li>Alianza tecnológica con EE.UU. para contrarrestar la influencia china.</li>
+<li>Competencia activa con China en Asia Central.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5150a3a" class="outline-3">
+<h3 id="org5150a3a"><span class="section-number-3">2.6.</span> América Latina</h3>
+<div class="outline-text-3" id="text-2-6">
+<ul class="org-ul">
+<li>Creciente influencia china mediante inversiones en infraestructura.</li>
+<li>Relación ambivalente con EE.UU., marcada por presiones migratorias y económicas.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf77db38" class="outline-2">
+<h2 id="orgf77db38"><span class="section-number-2">3.</span> Impacto gráfico del diagrama</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+El diagrama generado en PlantUML permite visualizar las interacciones clave entre los bloques, destacando:
+</p>
+<ol class="org-ol">
+<li>Las alianzas estratégicas (EE.UU.-India, Rusia-China).</li>
+<li>Las tensiones geopolíticas (EE.UU.-China, UE-Rusia).</li>
+<li>Las herramientas empleadas por cada bloque (sanciones, inversiones, alianzas).</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgaa21953" class="outline-2">
+<h2 id="orgaa21953"><span class="section-number-2">4.</span> Referencias utilizadas para el análisis</h2>
+<div class="outline-text-2" id="text-4">
+<ol class="org-ol">
+<li><a href="https://www.clacso.org/wp-content/uploads/2024/06/China-nuevo-mapa.pdf">CLACSO: China y el nuevo mapa del poder mundial</a></li>
+<li><a href="https://digital.csic.es/bitstream/10261/335803/1/Posici%C3%B3n_geoestrat%C3%A9gica_Espa%C3%B1a.pdf">CSIC: La posición geoestratégica de España</a></li>
+<li><a href="https://www.realinstitutoelcano.org/analisis/europa-ante-el-desafio-de-trump-acomodacion-o-autonomia/">Real Instituto Elcano: Europa ante el desafío de Trump</a></li>
+<li><a href="https://www.lisainstitute.com/blogs/blog/lista-10-riesgos-geopoliticos-tendencias-seguridad-2019-2025">LISA Institute: 10 principales riesgos geopolíticos hasta 2025</a></li>
+<li><a href="https://www.cidob.org/publicaciones/el-mundo-en-2025-diez-temas-que-marcaran-la-agenda-internacional">CIDOB: El mundo en 2025</a></li>
+<li><a href="https://www.fundacioncarolina.es/wp-content/uploads/2025/01/ANUARIO-2024.pdf">Fundación Carolina: América Latina en un mundo perplejo</a></li>
+</ol>
+
+
+<p>
+Este post introductorio busca contextualizar el diagrama dentro del marco geoestratégico actual, proporcionando una herramienta útil para el análisis global desde una perspectiva visual e interactiva.
+</p>
+
+
+
+<figure id="orge481331">
+<img src="diagrama_bloques_mundiales.png" alt="diagrama_bloques_mundiales.png">
+
+</figure>
+
+<p>
+Referencias
+</p>
+
+<p>
+<a href="https://www.clacso.org/wp-content/uploads/2024/06/China-nuevo-mapa.pdf">CLACSO: China y el nuevo mapa del poder mundial</a>
+</p>
+
+<p>
+<a href="https://digital.csic.es/bitstream/10261/335803/1/Posici%C3%B3n_geoestrat%C3%A9gica_Espa%C3%B1a.pdf">CSIC: La posición geoestratégica de España</a>
+</p>
+
+<p>
+<a href="https://www.realinstitutoelcano.org/analisis/europa-ante-el-desafio-de-trump-acomodacion-o-autonomia/">Real Instituto Elcano: Europa ante el desafío de Trump</a>
+</p>
+
+<p>
+<a href="https://www.lisainstitute.com/blogs/blog/lista-10-riesgos-geopoliticos-tendencias-seguridad-2019-2025">LISA Institute: 10 principales riesgos geopolíticos hasta 2025</a>
+</p>
+
+<p>
+<a href="https://www.cidob.org/publicaciones/el-mundo-en-2025-diez-temas-que-marcaran-la-agenda-internacional">CIDOB: El mundo en 2025</a>
+</p>
+
+<p>
+<a href="https://www.fundacioncarolina.es/wp-content/uploads/2025/01/ANUARIO-2024.pdf">Fundación Carolina: América Latina en un mundo perplejo</a>
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-diagrama.html">diagrama</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-geoestrategia.html">geoestrategia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-opiniones.html">opiniones</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-geopolítica.html">geopolítica</a> </div>]]></description>
+  <category><![CDATA[diagrama]]></category>
+  <category><![CDATA[geoestrategia]]></category>
+  <category><![CDATA[opiniones]]></category>
+  <category><![CDATA[geopolítica]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-25-diagrama-de-relaciones-geoestrat%C3%A9gicas-y-geopol%C3%ADticas-de-los-grandes-bloques-mundiales.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-25-diagrama-de-relaciones-geoestrat%C3%A9gicas-y-geopol%C3%ADticas-de-los-grandes-bloques-mundiales.html</guid>
+  <pubDate>Tue, 25 Mar 2025 16:10:00 +0100</pubDate>
+</item>
 <item>
   <title><![CDATA[Visiones geoestratégicas contemporáneas: Rusia, China y EE.UU. (2025) ]]></title>
   <description><![CDATA[
