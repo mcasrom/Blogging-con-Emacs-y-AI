@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title><![CDATA[Example.com - lenguaje]]></title>
+<description><![CDATA[Example.com - lenguaje]]></description>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-lenguaje.html</link>
+<lastBuildDate>Tue, 25 Mar 2025 22:09:18 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Rust: El lenguaje de sistemas que está revolucionando el desarrollo seguro]]></title>
+  <description><![CDATA[
+<div id="outline-container-orgc52db87" class="outline-2">
+<h2 id="orgc52db87"><span class="section-number-2">1.</span> Rust: Origen y Filosofía</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org1929073" class="outline-3">
+<h3 id="org1929073"><span class="section-number-3">1.1.</span> Historia y Contexto</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Rust nació en 2006 como un proyecto personal de Graydon Hoare, un empleado de Mozilla. El objetivo era crear un lenguaje que combinara:
+</p>
+<ul class="org-ul">
+<li>El control de bajo nivel de C/C++</li>
+<li>La seguridad memoria de lenguajes modernos</li>
+<li>La concurrencia sin data races</li>
+</ul>
+
+<p>
+Mozilla adoptó el proyecto en 2009 y lo anunció públicamente en 2010. La primera versión estable (1.0) llegó en mayo de 2015.
+</p>
+</div>
+</div>
+<div id="outline-container-org47fa84d" class="outline-3">
+<h3 id="org47fa84d"><span class="section-number-3">1.2.</span> Influencias y Diseño</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Rust tomó ideas de varios lenguajes:
+</p>
+<ul class="org-ul">
+<li>Sistemas: C++, Cyclone</li>
+<li>Funcionales: Haskell, OCaml</li>
+<li>Modernos: Swift, C#</li>
+</ul>
+
+<p>
+Principios clave:
+</p>
+<ol class="org-ol">
+<li><b>Seguridad memoria sin GC</b>: Ownership system</li>
+<li><b>Concurrencia segura</b>: Borrow checker</li>
+<li><b>Abstracción sin costo</b>: Zero-cost abstractions</li>
+<li><b>Interoperabilidad</b>: FFI con C</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb0f100f" class="outline-2">
+<h2 id="orgb0f100f"><span class="section-number-2">2.</span> Características Técnicas</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org73be1f6" class="outline-3">
+<h3 id="org73be1f6"><span class="section-number-3">2.1.</span> Sistema de Tipos y Ownership</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgb88bf63" class="outline-4">
+<h4 id="orgb88bf63"><span class="section-number-4">2.1.1.</span> Ownership Rules</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ol class="org-ol">
+<li>Cada valor tiene un dueño (owner)</li>
+<li>Solo un dueño a la vez</li>
+<li>Cuando el dueño sale de scope, el valor se libera</li>
+</ol>
+
+<p>
+Ejemplo básico:
+</p>
+<div class="org-src-container">
+<pre class="src src-rust">fn main() {
+    let s = String::from("hello"); // s es el dueño
+    takes_ownership(s);            // s se mueve a la función
+    // println!("{}", s);          // Error! s ya no es válido aquí
+}
+
+fn takes_ownership(some_string: String) {
+    println!("{}", some_string);
+} // some_string sale de scope y se libera memoria
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc4a446b" class="outline-4">
+<h4 id="orgc4a446b"><span class="section-number-4">2.1.2.</span> Borrowing y Lifetimes</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<p>
+Permite referencias temporales:
+</p>
+<div class="org-src-container">
+<pre class="src src-rust">fn main() {
+    let s1 = String::from("hello");
+    let len = calculate_length(&amp;s1); // Prestamo inmutable
+    println!("'{}' tiene {} caracteres", s1, len);
+}
+
+fn calculate_length(s: &amp;String) -&gt; usize {
+    s.len()
+} // s no es dueño, no se libera memoria
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org24ad802" class="outline-3">
+<h3 id="org24ad802"><span class="section-number-3">2.2.</span> Concurrencia Segura</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+El sistema de ownership previte data races en tiempo de compilación:
+</p>
+<div class="org-src-container">
+<pre class="src src-rust">use std::thread;
+
+fn main() {
+    let v = vec![1, 2, 3];
+
+    let handle = thread::spawn(move || { // move transfiere ownership
+        println!("Vector: {:?}", v);
+    });
+
+    handle.join().unwrap();
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org2924759" class="outline-3">
+<h3 id="org2924759"><span class="section-number-3">2.3.</span> Cargo y Gestión de Paquetes</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Rust incluye:
+</p>
+<ul class="org-ul">
+<li>Cargo: Build system y gestor de paquetes</li>
+<li>Crates.io: Repositorio central de librerías</li>
+<li>Testing integrado</li>
+</ul>
+
+<p>
+Ejemplo de <code>Cargo.toml</code>:
+</p>
+<div class="org-src-container">
+<pre class="src src-toml">[<span style="color: #1F55A0;">package</span>]
+<span style="color: #004651;">name</span> = <span style="color: #005F00;">"mi_proyecto"</span>
+<span style="color: #004651;">version</span> = <span style="color: #005F00;">"0.1.0"</span>
+<span style="color: #004651;">edition</span> = <span style="color: #005F00;">"2021"</span>
+
+[<span style="color: #1F55A0;">dependencies</span>]
+<span style="color: #004651;">serde</span> = <span style="color: #005F00;">"1.0"</span> <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Popular librer&#237;a de serializaci&#243;n</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org4834824" class="outline-2">
+<h2 id="org4834824"><span class="section-number-2">3.</span> Ejemplo Práctico: Web Server Básico</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org0fc996f" class="outline-3">
+<h3 id="org0fc996f"><span class="section-number-3">3.1.</span> Configuración Inicial</h3>
+<div class="outline-text-3" id="text-3-1">
+<ol class="org-ol">
+<li>Crear proyecto:</li>
+</ol>
+<div class="org-src-container">
+<pre class="src src-sh">cargo new webserver
+<span style="color: #1F55A0;">cd</span> webserver
+</pre>
+</div>
+
+<ol class="org-ol">
+<li>Añadir dependencias (<code>Cargo.toml</code>):</li>
+</ol>
+<div class="org-src-container">
+<pre class="src src-toml">[<span style="color: #1F55A0;">dependencies</span>]
+<span style="color: #004651;">actix-web</span> = <span style="color: #005F00;">"4.0"</span> // Framework web popular
+<span style="color: #004651;">tokio</span> = { version = <span style="color: #005F00;">"1.0"</span>, features = [<span style="color: #005F00;">"full"</span>] } // Runtime async
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org72e14d9" class="outline-3">
+<h3 id="org72e14d9"><span class="section-number-3">3.2.</span> Implementación</h3>
+<div class="outline-text-3" id="text-3-2">
+<div class="org-src-container">
+<pre class="src src-rust">use actix_web::{get, web, App, HttpServer, Responder};
+
+#[get("/{name}")]
+async fn greet(name: web::Path&lt;String&gt;) -&gt; impl Responder {
+    format!("Hola {}!", name)
+}
+
+#[actix_web::main]
+async fn main() -&gt; std::io::Result&lt;()&gt; {
+    HttpServer::new(|| {
+        App::new()
+            .service(greet)
+    })
+    .bind(("127.0.0.1", 8080))?
+    .run()
+    .await
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org11de3e3" class="outline-3">
+<h3 id="org11de3e3"><span class="section-number-3">3.3.</span> Ejecución</h3>
+<div class="outline-text-3" id="text-3-3">
+<div class="org-src-container">
+<pre class="src src-sh">cargo run
+</pre>
+</div>
+
+<p>
+Visitar <code>http://localhost:8080/Mundo</code> muestra "Hola Mundo!"
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org997f07f" class="outline-2">
+<h2 id="org997f07f"><span class="section-number-2">4.</span> Evolución y Adopción</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org2437dee" class="outline-3">
+<h3 id="org2437dee"><span class="section-number-3">4.1.</span> Estadísticas Clave (2023)</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>Top 1 en "lenguajes más amados" en Stack Overflow Survey (7 años consecutivos)</li>
+<li>Usado en:
+<ul class="org-ul">
+<li>Navegadores (Servo)</li>
+<li>Sistemas operativos (Linux kernel desde 6.1)</li>
+<li>Blockchain (Solana, Polkadot)</li>
+<li>Infraestructura cloud (Firecracker de AWS)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1bf02ec" class="outline-3">
+<h3 id="org1bf02ec"><span class="section-number-3">4.2.</span> Comunidad y Desarrollo</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>Gobernanza abierta a través del Rust Foundation (miembros: AWS, Google, Microsoft, Mozilla)</li>
+<li>Proceso RFC para cambios importantes</li>
+<li>Release cadence de 6 semanas</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3d7ef54" class="outline-2">
+<h2 id="org3d7ef54"><span class="section-number-2">5.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Rust ofrece una combinación única de:
+✓ Seguridad memoria sin garbage collector
+✓ Concurrencia sin data races
+✓ Performance comparable a C++
+✓ Modernas abstracciones
+</p>
+
+<p>
+Su adopción creciente en sistemas críticos demuestra que está cumpliendo su promesa de hacer la programación de sistemas más segura sin sacrificar control o performance.
+</p>
+</div>
+</div>
+<div id="outline-container-org298313a" class="outline-2">
+<h2 id="org298313a"><span class="section-number-2">6.</span> Diagrama: Sistema de Ownership en Rust</h2>
+<div class="outline-text-2" id="text-6">
+
+<figure id="org2cc87c3">
+<img src="rust_ownership.png" alt="rust_ownership.png">
+
+<figcaption><span class="figure-number">Figure 1: </span>Diagrama del sistema de Ownership en Rust</figcaption>
+</figure>
+</div>
+</div>
+<div id="outline-container-org49440a9" class="outline-2">
+<h2 id="org49440a9"><span class="section-number-2">7.</span> Código correspondiente al diagrama:</h2>
+<div class="outline-text-2" id="text-7">
+<div class="org-src-container">
+<pre class="src src-rust">fn main() {
+    let s = String::from("hola"); // rule1: s es dueño
+    takes_ownership(s);           // move a función
+    // println!("{}", s);        // rule2: s inválido (error!)
+}
+
+fn takes_ownership(some_string: String) { // param recibe ownership
+    println!("{}", some_string);
+} // rule3: some_string liberado
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org9089417" class="outline-2">
+<h2 id="org9089417"><span class="section-number-2">8.</span> Explicación del diagrama:</h2>
+<div class="outline-text-2" id="text-8">
+<ol class="org-ol">
+<li><b><b>Reglas de Ownership</b></b> (cuadro izquierdo):
+<ul class="org-ul">
+<li>Cada valor tiene exactamente un dueño</li>
+<li>Solo un binding puede ser dueño a la vez</li>
+<li>Cuando el dueño sale de scope, Rust libera la memoria</li>
+</ul></li>
+
+<li><b><b>Flujo del ejemplo</b></b> (cuadro derecho):
+<ul class="org-ul">
+<li>Creación de <code>String</code> en <code>main()</code></li>
+<li>Transferencia de ownership a la función</li>
+<li>La función se convierte en nuevo dueño</li>
+<li>Al terminar la función, se libera la memoria automáticamente</li>
+</ul></li>
+
+<li><b><b>Errores prevenidos</b></b>:
+<ul class="org-ul">
+<li>El intento de usar <code>s</code> después del move se marca como error</li>
+<li>No hay necesidad de liberación manual (sin risk de leaks)</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org031ac0d" class="outline-2">
+<h2 id="org031ac0d"><span class="section-number-2">9.</span> Recursos para Aprender</h2>
+<div class="outline-text-2" id="text-9">
+<ol class="org-ol">
+<li>Libro Oficial: <a href="https://doc.rust-lang.org/book/">https://doc.rust-lang.org/book/</a></li>
+<li>Rust by Example: <a href="https://doc.rust-lang.org/rust-by-example/">https://doc.rust-lang.org/rust-by-example/</a></li>
+<li>Rustlings: Ejercicios interactivos</li>
+<li>Crates.io: Ecosistema de paquetes</li>
+</ol>
+
+
+
+<p>
+¿Has probado Rust? ¡Comparte tus experiencias en los comentarios!
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-programación.html">programación</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-lenguaje.html">lenguaje</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguro.html">seguro</a> </div>]]></description>
+  <category><![CDATA[programación]]></category>
+  <category><![CDATA[lenguaje]]></category>
+  <category><![CDATA[seguro]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-25-rust:-el-lenguaje-de-sistemas-que-est%C3%A1-revolucionando-el-desarrollo-seguro.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-25-rust:-el-lenguaje-de-sistemas-que-est%C3%A1-revolucionando-el-desarrollo-seguro.html</guid>
+  <pubDate>Tue, 25 Mar 2025 21:56:00 +0100</pubDate>
+</item>
+</channel>
+</rss>

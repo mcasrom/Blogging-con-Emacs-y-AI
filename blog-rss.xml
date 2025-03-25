@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - blog]]></title>
 <description><![CDATA[Example.com - blog]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-blog.html</link>
-<lastBuildDate>Tue, 25 Mar 2025 18:28:57 +0100</lastBuildDate>
+<lastBuildDate>Tue, 25 Mar 2025 22:09:20 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -333,6 +333,12 @@
 
 <tr>
 <td class="org-right">2025-03-25</td>
+<td class="org-left">Rust: El lenguaje de sistemas que está revolucionando el desarrollo seguro</td>
+<td class="org-left"><a href="2025-03-25-rust:-el-lenguaje-de-sistemas-que-está-revolucionando-el-desarrollo-seguro.html">Enlace</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-03-25</td>
 <td class="org-left">Visiones geoestratégicas contemporáneas: Rusia, China y EE.UU. (2025)</td>
 <td class="org-left"><a href="2025-03-25-visiones-geoestratégicas-contemporáneas:-rusia,-china-y-ee.uu, I (2025).html">Enlace</a></td>
 </tr>
@@ -379,7 +385,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Tue, 25 Mar 2025 18:27:00 +0100</pubDate>
+  <pubDate>Tue, 25 Mar 2025 22:07:00 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Emacs con Esteroides: Configurar un Contador de Visitantes para el Blog]]></title>
