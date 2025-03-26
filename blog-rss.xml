@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - blog]]></title>
 <description><![CDATA[Example.com - blog]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-blog.html</link>
-<lastBuildDate>Wed, 26 Mar 2025 19:16:47 +0100</lastBuildDate>
+<lastBuildDate>Wed, 26 Mar 2025 21:30:05 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -363,6 +363,12 @@
 
 <tr>
 <td class="org-right">2025-03-26</td>
+<td class="org-left">El Putinismo: Análisis del Sistema Político de Vladimir Putin (Perplexity)</td>
+<td class="org-left"><a href="2025-03-26-el-putinismo:-análisis-del-sistema-político-de-vladimir-putin-(perplexity).html">Enlace</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-03-26</td>
 <td class="org-left">El Trumpismo: Origen, Historia y Evolución de un Fenómeno Político (perplexity)</td>
 <td class="org-left"><a href="2025-03-26-el-trumpismo:-origen,-historia-y-evolución-de-un-fenómeno-político-(perplexity).html">Enlace</a></td>
 </tr>
@@ -409,7 +415,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Wed, 26 Mar 2025 19:16:00 +0100</pubDate>
+  <pubDate>Wed, 26 Mar 2025 21:29:00 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Emacs con Esteroides: Configurar un Contador de Visitantes para el Blog]]></title>
