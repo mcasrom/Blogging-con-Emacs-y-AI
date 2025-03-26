@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Guía Completa para Iniciarse en Emacs (ii)">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Guía Completa para Iniciarse en Emacs (ii)</title>
+<meta charset='UTF-8'>
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+           font-size: 2em;
+           margin: 0;
+         }
+         .blog-subtitle {
+           font-size: 1.1em;
+           color: #666;
+           margin-top: 5px;
+         }
+         .blog-email {
+           font-size: 0.9em;
+           color: #777;
+           margin-top: 8px;
+         }
+         .blog-email a {
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.85em;
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+       </style>
+       
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>
+       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+	 <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a>
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a>
+       </nav>
+        <hr></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">26/03/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-26-guía-completa-para-iniciarse-en-emacs-(ii).html">Guía Completa para Iniciarse en Emacs (ii)</a></h1>
+<div id="outline-container-org5036653" class="outline-2">
+<h2 id="org5036653"><span class="section-number-2">1.</span> Introducción a Emacs</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org1ec2c2a" class="outline-3">
+<h3 id="org1ec2c2a"><span class="section-number-3">1.1.</span> ¿Qué es Emacs?</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Emacs es un editor de texto altamente personalizable y entorno de desarrollo integrado. Más que un simple editor, es una plataforma completa para trabajar con texto, código, documentos y más.
+</p>
+</div>
+</div>
+<div id="outline-container-orge0ed118" class="outline-3">
+<h3 id="orge0ed118"><span class="section-number-3">1.2.</span> Primeros Pasos</h3>
+<div class="outline-text-3" id="text-1-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Para empezar r&#225;pidamente:</span>
+(menu-bar-mode 1)   <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Activar barra de men&#250; (recomendado para principiantes)</span>
+(tool-bar-mode 0)   <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Desactivar barra de herramientas</span>
+(scroll-bar-mode 0) <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Desactivar barra de desplazamiento</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org58b2bf1" class="outline-2">
+<h2 id="org58b2bf1"><span class="section-number-2">2.</span> Diagrama: Ruta de Aprendizaje Emacs</h2>
+<div class="outline-text-2" id="text-2">
+
+<figure id="orge2d4243">
+<img src="emacs_learning_path_corrected.png" alt="emacs_learning_path_corrected.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orgc02ea3c" class="outline-2">
+<h2 id="orgc02ea3c"><span class="section-number-2">3.</span> Sección 1: Fundamentos Esenciales</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgd1ba2ed" class="outline-3">
+<h3 id="orgd1ba2ed"><span class="section-number-3">3.1.</span> Movimiento Básico</h3>
+<div class="outline-text-3" id="text-3-1">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Comando</th>
+<th scope="col" class="org-left">Tecla</th>
+<th scope="col" class="org-left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Avanzar carácter</td>
+<td class="org-left">C-f</td>
+<td class="org-left">Mover derecha</td>
+</tr>
+
+<tr>
+<td class="org-left">Retroceder</td>
+<td class="org-left">C-b</td>
+<td class="org-left">Mover izquierda</td>
+</tr>
+
+<tr>
+<td class="org-left">Siguiente línea</td>
+<td class="org-left">C-n</td>
+<td class="org-left">Mover abajo</td>
+</tr>
+
+<tr>
+<td class="org-left">Línea anterior</td>
+<td class="org-left">C-p</td>
+<td class="org-left">Mover arriba</td>
+</tr>
+
+<tr>
+<td class="org-left">Inicio línea</td>
+<td class="org-left">C-a</td>
+<td class="org-left">Ir al inicio</td>
+</tr>
+
+<tr>
+<td class="org-left">Fin línea</td>
+<td class="org-left">C-e</td>
+<td class="org-left">Ir al final</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgfc9123e" class="outline-3">
+<h3 id="orgfc9123e"><span class="section-number-3">3.2.</span> Comandos Vitales</h3>
+<div class="outline-text-3" id="text-3-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Guardar archivo: C-x C-s</span>
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Salir de Emacs: C-x C-c</span>
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Abrir archivo: C-x C-f</span>
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Guardar como: C-x C-w</span>
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Cortar texto: C-w</span>
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Pegar texto: C-y</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd5c7697" class="outline-2">
+<h2 id="orgd5c7697"><span class="section-number-2">4.</span> Sección 2: Personalización Básica</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgaebf588" class="outline-3">
+<h3 id="orgaebf588"><span class="section-number-3">4.1.</span> Archivo de Configuración</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Tu archivo ~/.emacs.d/init.el es el corazón de tu configuración:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Ejemplo b&#225;sico de init.el</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> inhibit-startup-screen t)  <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Desactivar pantalla de inicio</span>
+(global-linum-mode t)           <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Mostrar n&#250;meros de l&#237;nea</span>
+(load-theme 'modus-vivendi t)   <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Tema oscuro</span>
+(<span style="color: #219fd5; font-style: italic;">setq-default</span> indent-tabs-mode nil) <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Usar espacios, no tabs</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgadcffa4" class="outline-3">
+<h3 id="orgadcffa4"><span class="section-number-3">4.2.</span> Gestión de Paquetes</h3>
+<div class="outline-text-3" id="text-4-2">
+<ol class="org-ol">
+<li>Configurar MELPA (repositorio de paquetes):</li>
+</ol>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">require</span> '<span style="color: #2f86d2;">package</span>)
+(add-to-list 'package-archives '(<span style="color: #a44185;">"melpa"</span> . <span style="color: #a44185;">"https://melpa.org/packages/"</span>) t)
+(package-initialize)
+</pre>
+</div>
+
+<ol class="org-ol">
+<li>Instalar paquetes:</li>
+<li>M-x package-install RET [nombre-paquete]</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org6b97945" class="outline-2">
+<h2 id="org6b97945"><span class="section-number-2">5.</span> Sección 3: Org Mode - Tu Nuevo Mejor Amigo</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org31c0cc9" class="outline-3">
+<h3 id="org31c0cc9"><span class="section-number-3">5.1.</span> Conceptos Básicos</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Jerarquía con * (asteriscos)</li>
+<li>Listas con - o +</li>
+<li>Código fuente con #+BEGIN<sub>SRC</sub></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge27f83e" class="outline-3">
+<h3 id="orge27f83e"><span class="section-number-3">5.2.</span> Ejemplo de Documento Org</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+#+BEGIN<sub>SRC</sub> org
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc3675fb" class="outline-2">
+<h2 id="orgc3675fb"><span class="section-number-2">6.</span> Tareas Pendientes</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org22760d8" class="outline-3">
+<h3 id="org22760d8"><span class="section-number-3">6.1.</span> Trabajo</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Revisar informe</li>
+<li class="off"><code>[&#xa0;]</code> Enviar correo a cliente</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7bf37c8" class="outline-3">
+<h3 id="org7bf37c8"><span class="section-number-3">6.2.</span> Personal</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Comprar víveres</li>
+</ul>
+<p>
+#+END<sub>SRC</sub>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge4c2b92" class="outline-2">
+<h2 id="orge4c2b92"><span class="section-number-2">7.</span> Recursos Recomendados</h2>
+<div class="outline-text-2" id="text-7">
+<ol class="org-ol">
+<li>Manual oficial: C-h r</li>
+<li>Tutorial interactivo: C-h t</li>
+<li>Comunidad: /r/emacs en Reddit</li>
+<li>Libro: "Mastering Emacs" - Mickey Petersen</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd5f0488" class="outline-2">
+<h2 id="orgd5f0488"><span class="section-number-2">8.</span> Próximos Pasos</h2>
+<div class="outline-text-2" id="text-8">
+<ol class="org-ol">
+<li>Practicar 15 min/día los atajos básicos</li>
+<li>Personalizar tu init.el gradualmente</li>
+<li>Explorar Org Mode para organización personal</li>
+<li>Unirte a la comunidad Emacs</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">&#218;ltimo consejo: Paciencia y pr&#225;ctica constante</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> learning-curve 'steep-but-rewarding)
+</pre>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>

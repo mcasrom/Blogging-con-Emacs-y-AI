@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - indice]]></title>
 <description><![CDATA[Example.com - indice]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-indice.html</link>
-<lastBuildDate>Tue, 25 Mar 2025 22:23:53 +0100</lastBuildDate>
+<lastBuildDate>Wed, 26 Mar 2025 08:49:40 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -350,6 +350,24 @@
 </tr>
 
 <tr>
+<td class="org-right">2025-03-26</td>
+<td class="org-left">Configuración básica y mínima para empezar con Emacs (i)</td>
+<td class="org-left"><a href="2025-03-26-configuración-básica-y-mínima-para-empezar-con-emacs-(i).html">Enlace</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-03-26</td>
+<td class="org-left">El Trumpismo: Origen, Historia y Evolución de un Fenómeno Político (perplexity)</td>
+<td class="org-left"><a href="2025-03-26-el-trumpismo:-origen,-historia-y-evolución-de-un-fenómeno-político-(perplexity).html">Enlace</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-03-26</td>
+<td class="org-left">Guía Completa para Iniciarse en Emacs (ii)</td>
+<td class="org-left"><a href="2025-03-26-guía-completa-para-iniciarse-en-emacs-(ii).html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
@@ -385,7 +403,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Tue, 25 Mar 2025 22:23:00 +0100</pubDate>
+  <pubDate>Wed, 26 Mar 2025 08:48:00 +0100</pubDate>
 </item>
 </channel>
 </rss>

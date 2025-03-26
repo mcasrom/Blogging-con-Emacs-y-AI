@@ -4,7 +4,353 @@
 <title><![CDATA[Example.com - tutoriales]]></title>
 <description><![CDATA[Example.com - tutoriales]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-tutoriales.html</link>
-<lastBuildDate>Tue, 25 Mar 2025 22:23:56 +0100</lastBuildDate>
+<lastBuildDate>Wed, 26 Mar 2025 08:49:43 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Guía Completa para Iniciarse en Emacs (ii)]]></title>
+  <description><![CDATA[
+<div id="outline-container-org5036653" class="outline-2">
+<h2 id="org5036653"><span class="section-number-2">1.</span> Introducción a Emacs</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org1ec2c2a" class="outline-3">
+<h3 id="org1ec2c2a"><span class="section-number-3">1.1.</span> ¿Qué es Emacs?</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Emacs es un editor de texto altamente personalizable y entorno de desarrollo integrado. Más que un simple editor, es una plataforma completa para trabajar con texto, código, documentos y más.
+</p>
+</div>
+</div>
+<div id="outline-container-orge0ed118" class="outline-3">
+<h3 id="orge0ed118"><span class="section-number-3">1.2.</span> Primeros Pasos</h3>
+<div class="outline-text-3" id="text-1-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Para empezar r&#225;pidamente:</span>
+(menu-bar-mode 1)   <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Activar barra de men&#250; (recomendado para principiantes)</span>
+(tool-bar-mode 0)   <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Desactivar barra de herramientas</span>
+(scroll-bar-mode 0) <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Desactivar barra de desplazamiento</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org58b2bf1" class="outline-2">
+<h2 id="org58b2bf1"><span class="section-number-2">2.</span> Diagrama: Ruta de Aprendizaje Emacs</h2>
+<div class="outline-text-2" id="text-2">
+
+<figure id="orge2d4243">
+<img src="emacs_learning_path_corrected.png" alt="emacs_learning_path_corrected.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orgc02ea3c" class="outline-2">
+<h2 id="orgc02ea3c"><span class="section-number-2">3.</span> Sección 1: Fundamentos Esenciales</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgd1ba2ed" class="outline-3">
+<h3 id="orgd1ba2ed"><span class="section-number-3">3.1.</span> Movimiento Básico</h3>
+<div class="outline-text-3" id="text-3-1">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Comando</th>
+<th scope="col" class="org-left">Tecla</th>
+<th scope="col" class="org-left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Avanzar carácter</td>
+<td class="org-left">C-f</td>
+<td class="org-left">Mover derecha</td>
+</tr>
+
+<tr>
+<td class="org-left">Retroceder</td>
+<td class="org-left">C-b</td>
+<td class="org-left">Mover izquierda</td>
+</tr>
+
+<tr>
+<td class="org-left">Siguiente línea</td>
+<td class="org-left">C-n</td>
+<td class="org-left">Mover abajo</td>
+</tr>
+
+<tr>
+<td class="org-left">Línea anterior</td>
+<td class="org-left">C-p</td>
+<td class="org-left">Mover arriba</td>
+</tr>
+
+<tr>
+<td class="org-left">Inicio línea</td>
+<td class="org-left">C-a</td>
+<td class="org-left">Ir al inicio</td>
+</tr>
+
+<tr>
+<td class="org-left">Fin línea</td>
+<td class="org-left">C-e</td>
+<td class="org-left">Ir al final</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgfc9123e" class="outline-3">
+<h3 id="orgfc9123e"><span class="section-number-3">3.2.</span> Comandos Vitales</h3>
+<div class="outline-text-3" id="text-3-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Guardar archivo: C-x C-s</span>
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Salir de Emacs: C-x C-c</span>
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Abrir archivo: C-x C-f</span>
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Guardar como: C-x C-w</span>
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Cortar texto: C-w</span>
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Pegar texto: C-y</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd5c7697" class="outline-2">
+<h2 id="orgd5c7697"><span class="section-number-2">4.</span> Sección 2: Personalización Básica</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgaebf588" class="outline-3">
+<h3 id="orgaebf588"><span class="section-number-3">4.1.</span> Archivo de Configuración</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Tu archivo ~/.emacs.d/init.el es el corazón de tu configuración:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Ejemplo b&#225;sico de init.el</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> inhibit-startup-screen t)  <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Desactivar pantalla de inicio</span>
+(global-linum-mode t)           <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Mostrar n&#250;meros de l&#237;nea</span>
+(load-theme 'modus-vivendi t)   <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Tema oscuro</span>
+(<span style="color: #219fd5; font-style: italic;">setq-default</span> indent-tabs-mode nil) <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Usar espacios, no tabs</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgadcffa4" class="outline-3">
+<h3 id="orgadcffa4"><span class="section-number-3">4.2.</span> Gestión de Paquetes</h3>
+<div class="outline-text-3" id="text-4-2">
+<ol class="org-ol">
+<li>Configurar MELPA (repositorio de paquetes):</li>
+</ol>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">require</span> '<span style="color: #2f86d2;">package</span>)
+(add-to-list 'package-archives '(<span style="color: #a44185;">"melpa"</span> . <span style="color: #a44185;">"https://melpa.org/packages/"</span>) t)
+(package-initialize)
+</pre>
+</div>
+
+<ol class="org-ol">
+<li>Instalar paquetes:</li>
+<li>M-x package-install RET [nombre-paquete]</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org6b97945" class="outline-2">
+<h2 id="org6b97945"><span class="section-number-2">5.</span> Sección 3: Org Mode - Tu Nuevo Mejor Amigo</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org31c0cc9" class="outline-3">
+<h3 id="org31c0cc9"><span class="section-number-3">5.1.</span> Conceptos Básicos</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Jerarquía con * (asteriscos)</li>
+<li>Listas con - o +</li>
+<li>Código fuente con #+BEGIN<sub>SRC</sub></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge27f83e" class="outline-3">
+<h3 id="orge27f83e"><span class="section-number-3">5.2.</span> Ejemplo de Documento Org</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+#+BEGIN<sub>SRC</sub> org
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc3675fb" class="outline-2">
+<h2 id="orgc3675fb"><span class="section-number-2">6.</span> Tareas Pendientes</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org22760d8" class="outline-3">
+<h3 id="org22760d8"><span class="section-number-3">6.1.</span> Trabajo</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Revisar informe</li>
+<li class="off"><code>[&#xa0;]</code> Enviar correo a cliente</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7bf37c8" class="outline-3">
+<h3 id="org7bf37c8"><span class="section-number-3">6.2.</span> Personal</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Comprar víveres</li>
+</ul>
+<p>
+#+END<sub>SRC</sub>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge4c2b92" class="outline-2">
+<h2 id="orge4c2b92"><span class="section-number-2">7.</span> Recursos Recomendados</h2>
+<div class="outline-text-2" id="text-7">
+<ol class="org-ol">
+<li>Manual oficial: C-h r</li>
+<li>Tutorial interactivo: C-h t</li>
+<li>Comunidad: /r/emacs en Reddit</li>
+<li>Libro: "Mastering Emacs" - Mickey Petersen</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd5f0488" class="outline-2">
+<h2 id="orgd5f0488"><span class="section-number-2">8.</span> Próximos Pasos</h2>
+<div class="outline-text-2" id="text-8">
+<ol class="org-ol">
+<li>Practicar 15 min/día los atajos básicos</li>
+<li>Personalizar tu init.el gradualmente</li>
+<li>Explorar Org Mode para organización personal</li>
+<li>Unirte a la comunidad Emacs</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">&#218;ltimo consejo: Paciencia y pr&#225;ctica constante</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> learning-curve 'steep-but-rewarding)
+</pre>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-26-gu%C3%ADa-completa-para-iniciarse-en-emacs-(ii).html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-26-gu%C3%ADa-completa-para-iniciarse-en-emacs-(ii).html</guid>
+  <pubDate>Wed, 26 Mar 2025 08:06:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Configuración básica y mínima para empezar con Emacs (i)]]></title>
+  <description><![CDATA[
+<div id="outline-container-org9fa2658" class="outline-2">
+<h2 id="org9fa2658"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Emacs es más que un editor: es un entorno poderoso y personalizable. Si estás empezando, una configuración mínima te permite trabajar cómodamente sin abrumarte. Aquí te presento una setup básica, observaciones y un pequeño "how-to" para arrancar con Emacs y esteroides.
+</p>
+</div>
+</div>
+<div id="outline-container-org065beec" class="outline-2">
+<h2 id="org065beec"><span class="section-number-2">2.</span> Configuración mínima</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Para empezar, crea o edita tu archivo de configuración en <code>~/.emacs.d/init.el</code>. Aquí tienes un ejemplo básico:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n b&#225;sica de Emacs</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> inhibit-startup-message t)         <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Desactiva la pantalla de bienvenida</span>
+(tool-bar-mode -1)                       <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Oculta la barra de herramientas</span>
+(menu-bar-mode -1)                       <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Oculta la barra de men&#250;s</span>
+(scroll-bar-mode -1)                     <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Oculta la barra de desplazamiento</span>
+(global-display-line-numbers-mode t)     <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Muestra n&#250;meros de l&#237;nea</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> make-backup-files nil)             <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Desactiva archivos de respaldo (~)</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> auto-save-default nil)             <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Desactiva guardado autom&#225;tico</span>
+
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Fuentes y apariencia</span>
+(set-face-attribute 'default nil <span style="color: #dc3eb7;">:font</span> <span style="color: #a44185;">"DejaVu Sans Mono-12"</span>) <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Fuente b&#225;sica</span>
+
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Paquetes b&#225;sicos (usando use-package)</span>
+(package-initialize)
+(<span style="color: #219fd5; font-style: italic;">unless</span> package-archive-contents
+  (package-refresh-contents))
+(<span style="color: #219fd5; font-style: italic;">setq</span> package-archives '((<span style="color: #a44185;">"gnu"</span> . <span style="color: #a44185;">"https://elpa.gnu.org/packages/"</span>)
+                         (<span style="color: #a44185;">"melpa"</span> . <span style="color: #a44185;">"https://melpa.org/packages/"</span>)))
+(<span style="color: #219fd5; font-style: italic;">unless</span> (package-installed-p 'use-package)
+  (package-install 'use-package))
+(<span style="color: #219fd5; font-style: italic;">require</span> '<span style="color: #2f86d2;">use-package</span>)
+
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Org Mode b&#225;sico</span>
+(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">org</span>
+  <span style="color: #dc3eb7;">:ensure</span> t
+  <span style="color: #dc3eb7;">:config</span>
+  (<span style="color: #219fd5; font-style: italic;">setq</span> org-startup-indented t))         <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Indentaci&#243;n autom&#225;tica en Org Mode</span>
+</pre>
+</div>
+
+<p>
+Esto te da un Emacs limpio, con números de línea, sin distracciones y Org Mode listo para usar.
+</p>
+</div>
+</div>
+<div id="outline-container-org2c9501c" class="outline-2">
+<h2 id="org2c9501c"><span class="section-number-2">3.</span> How-to: Empezar a trabajar</h2>
+<div class="outline-text-2" id="text-3">
+<ol class="org-ol">
+<li>Abre Emacs: <code>emacs &amp;</code> en la terminal o usa el ícono si lo instalaste gráficamente.</li>
+<li>Si no existe, crea <code>~/.emacs.d/init.el</code> con <code>C-x C-f ~/.emacs.d/init.el</code>.</li>
+<li>Copia y pega el código anterior.</li>
+<li>Guarda con <code>C-x C-s</code> y reinicia Emacs (<code>C-x C-c</code> y vuelve a abrirlo).</li>
+<li>Prueba Org Mode: abre un archivo <code>.org</code> (<code>C-x C-f prueba.org</code>) y escribe algo como <code>* Tarea 1</code>.</li>
+</ol>
+
+<p>
+¡Ya estás trabajando con Emacs!
+</p>
+</div>
+</div>
+<div id="outline-container-orgfdbcd19" class="outline-2">
+<h2 id="orgfdbcd19"><span class="section-number-2">4.</span> Observaciones</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li><b><b>Ligereza</b></b>: Esta configuración es mínima y rápida, ideal para principiantes.</li>
+<li><b><b>Escalabilidad</b></b>: Puedes añadir más paquetes (como <code>magit</code> o <code>evil</code>) con <code>use-package</code> cuando estés listo.</li>
+<li><b><b>Aprendizaje</b></b>: Los atajos (<code>C-x</code> significa Ctrl+x) son clave; practica con <code>C-h t</code> (tutorial integrado).</li>
+<li><b><b>Flexibilidad</b></b>: Cambia la fuente o ajustes según tu gusto en <code>init.el</code>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org84e6940" class="outline-2">
+<h2 id="org84e6940"><span class="section-number-2">5.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Con esta base, tienes un Emacs funcional para escribir, organizar y experimentar. Es el primer paso para dominar esta herramienta legendaria. ¿Listo para trabajar con esteroides? ¡Emacs te espera!
+</p>
+
+<blockquote>
+<p>
+"Emacs: donde cada tecla es una puerta a la productividad."
+</p>
+</blockquote>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-inicio.html">inicio</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-programacion.html">programacion</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-lenguaje.html">lenguaje</a> </div>]]></description>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <category><![CDATA[inicio]]></category>
+  <category><![CDATA[programacion]]></category>
+  <category><![CDATA[lenguaje]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-26-configuraci%C3%B3n-b%C3%A1sica-y-m%C3%ADnima-para-empezar-con-emacs-(i).html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-26-configuraci%C3%B3n-b%C3%A1sica-y-m%C3%ADnima-para-empezar-con-emacs-(i).html</guid>
+  <pubDate>Wed, 26 Mar 2025 07:50:00 +0100</pubDate>
+</item>
 <item>
   <title><![CDATA[Inteligencia Artificial: Guía desde Conceptos hasta Aplicaciones - VI]]></title>
   <description><![CDATA[

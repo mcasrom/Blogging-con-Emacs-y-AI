@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Configuración básica y mínima para empezar con Emacs">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Configuración básica y mínima para empezar con Emacs (i)</title>
+<meta charset='UTF-8'>
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+           font-size: 2em;
+           margin: 0;
+         }
+         .blog-subtitle {
+           font-size: 1.1em;
+           color: #666;
+           margin-top: 5px;
+         }
+         .blog-email {
+           font-size: 0.9em;
+           color: #777;
+           margin-top: 8px;
+         }
+         .blog-email a {
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.85em;
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+       </style>
+       
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>
+       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+	 <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a>
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a>
+       </nav>
+        <hr></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">26/03/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-26-configuración-básica-y-mínima-para-empezar-con-emacs-(i).html">Configuración básica y mínima para empezar con Emacs (i)</a></h1>
+<div id="outline-container-org9fa2658" class="outline-2">
+<h2 id="org9fa2658"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Emacs es más que un editor: es un entorno poderoso y personalizable. Si estás empezando, una configuración mínima te permite trabajar cómodamente sin abrumarte. Aquí te presento una setup básica, observaciones y un pequeño "how-to" para arrancar con Emacs y esteroides.
+</p>
+</div>
+</div>
+<div id="outline-container-org065beec" class="outline-2">
+<h2 id="org065beec"><span class="section-number-2">2.</span> Configuración mínima</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Para empezar, crea o edita tu archivo de configuración en <code>~/.emacs.d/init.el</code>. Aquí tienes un ejemplo básico:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n b&#225;sica de Emacs</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> inhibit-startup-message t)         <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Desactiva la pantalla de bienvenida</span>
+(tool-bar-mode -1)                       <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Oculta la barra de herramientas</span>
+(menu-bar-mode -1)                       <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Oculta la barra de men&#250;s</span>
+(scroll-bar-mode -1)                     <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Oculta la barra de desplazamiento</span>
+(global-display-line-numbers-mode t)     <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Muestra n&#250;meros de l&#237;nea</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> make-backup-files nil)             <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Desactiva archivos de respaldo (~)</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> auto-save-default nil)             <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Desactiva guardado autom&#225;tico</span>
+
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Fuentes y apariencia</span>
+(set-face-attribute 'default nil <span style="color: #dc3eb7;">:font</span> <span style="color: #a44185;">"DejaVu Sans Mono-12"</span>) <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Fuente b&#225;sica</span>
+
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Paquetes b&#225;sicos (usando use-package)</span>
+(package-initialize)
+(<span style="color: #219fd5; font-style: italic;">unless</span> package-archive-contents
+  (package-refresh-contents))
+(<span style="color: #219fd5; font-style: italic;">setq</span> package-archives '((<span style="color: #a44185;">"gnu"</span> . <span style="color: #a44185;">"https://elpa.gnu.org/packages/"</span>)
+                         (<span style="color: #a44185;">"melpa"</span> . <span style="color: #a44185;">"https://melpa.org/packages/"</span>)))
+(<span style="color: #219fd5; font-style: italic;">unless</span> (package-installed-p 'use-package)
+  (package-install 'use-package))
+(<span style="color: #219fd5; font-style: italic;">require</span> '<span style="color: #2f86d2;">use-package</span>)
+
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Org Mode b&#225;sico</span>
+(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">org</span>
+  <span style="color: #dc3eb7;">:ensure</span> t
+  <span style="color: #dc3eb7;">:config</span>
+  (<span style="color: #219fd5; font-style: italic;">setq</span> org-startup-indented t))         <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">Indentaci&#243;n autom&#225;tica en Org Mode</span>
+</pre>
+</div>
+
+<p>
+Esto te da un Emacs limpio, con números de línea, sin distracciones y Org Mode listo para usar.
+</p>
+</div>
+</div>
+<div id="outline-container-org2c9501c" class="outline-2">
+<h2 id="org2c9501c"><span class="section-number-2">3.</span> How-to: Empezar a trabajar</h2>
+<div class="outline-text-2" id="text-3">
+<ol class="org-ol">
+<li>Abre Emacs: <code>emacs &amp;</code> en la terminal o usa el ícono si lo instalaste gráficamente.</li>
+<li>Si no existe, crea <code>~/.emacs.d/init.el</code> con <code>C-x C-f ~/.emacs.d/init.el</code>.</li>
+<li>Copia y pega el código anterior.</li>
+<li>Guarda con <code>C-x C-s</code> y reinicia Emacs (<code>C-x C-c</code> y vuelve a abrirlo).</li>
+<li>Prueba Org Mode: abre un archivo <code>.org</code> (<code>C-x C-f prueba.org</code>) y escribe algo como <code>* Tarea 1</code>.</li>
+</ol>
+
+<p>
+¡Ya estás trabajando con Emacs!
+</p>
+</div>
+</div>
+<div id="outline-container-orgfdbcd19" class="outline-2">
+<h2 id="orgfdbcd19"><span class="section-number-2">4.</span> Observaciones</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li><b><b>Ligereza</b></b>: Esta configuración es mínima y rápida, ideal para principiantes.</li>
+<li><b><b>Escalabilidad</b></b>: Puedes añadir más paquetes (como <code>magit</code> o <code>evil</code>) con <code>use-package</code> cuando estés listo.</li>
+<li><b><b>Aprendizaje</b></b>: Los atajos (<code>C-x</code> significa Ctrl+x) son clave; practica con <code>C-h t</code> (tutorial integrado).</li>
+<li><b><b>Flexibilidad</b></b>: Cambia la fuente o ajustes según tu gusto en <code>init.el</code>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org84e6940" class="outline-2">
+<h2 id="org84e6940"><span class="section-number-2">5.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Con esta base, tienes un Emacs funcional para escribir, organizar y experimentar. Es el primer paso para dominar esta herramienta legendaria. ¿Listo para trabajar con esteroides? ¡Emacs te espera!
+</p>
+
+<blockquote>
+<p>
+"Emacs: donde cada tecla es una puerta a la productividad."
+</p>
+</blockquote>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-inicio.html">inicio</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-programacion.html">programacion</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-lenguaje.html">lenguaje</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>
