@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - indice]]></title>
 <description><![CDATA[Example.com - indice]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-indice.html</link>
-<lastBuildDate>Thu, 27 Mar 2025 16:11:22 +0100</lastBuildDate>
+<lastBuildDate>Thu, 27 Mar 2025 23:16:51 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -386,6 +386,12 @@
 </tr>
 
 <tr>
+<td class="org-right">2025-03-27</td>
+<td class="org-left">Configuración Básica de Emacs con Org-mode: Guía Completa</td>
+<td class="org-left"><a href="2025-03-27-configuración-básica-de-emacs-con-org-mode:-guía-completa.html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
@@ -421,7 +427,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Thu, 27 Mar 2025 16:09:00 +0100</pubDate>
+  <pubDate>Thu, 27 Mar 2025 23:15:00 +0100</pubDate>
 </item>
 </channel>
 </rss>

@@ -4,7 +4,397 @@
 <title><![CDATA[Example.com - emacs]]></title>
 <description><![CDATA[Example.com - emacs]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-emacs.html</link>
-<lastBuildDate>Thu, 27 Mar 2025 16:11:26 +0100</lastBuildDate>
+<lastBuildDate>Thu, 27 Mar 2025 23:17:06 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Configuración Básica de Emacs con Org-mode: Guía Completa]]></title>
+  <description><![CDATA[
+<div id="outline-container-org11174f6" class="outline-2">
+<h2 id="org11174f6">Configuración Básica de Emacs con Org-mode: Guía Completa</h2>
+<div class="outline-text-2" id="text-org11174f6">
+<p>
+Este documento es una guía extensa para configurar Emacs con Org-mode desde cero, optimizando tu productividad con una herramienta poderosa y flexible. Incluye gráficos, diagramas y un ejemplo básico de `org-capture`. Si eres nuevo en Emacs o quieres perfeccionar tu setup, ¡este es tu punto de partida!
+</p>
+</div>
+</div>
+<div id="outline-container-org5836464" class="outline-2">
+<h2 id="org5836464">1. Introducción a Emacs y Org-mode</h2>
+<div class="outline-text-2" id="text-org5836464">
+<p>
+Emacs es un editor de texto extensible y personalizable, mientras que Org-mode es un paquete integrado que transforma Emacs en un sistema de organización, toma de notas, gestión de proyectos y más. Juntos, forman una combinación imbatible para flujos de trabajo modernos.
+</p>
+</div>
+<div id="outline-container-org01926f3" class="outline-3">
+<h3 id="org01926f3">¿Por qué usar Org-mode?</h3>
+<div class="outline-text-3" id="text-org01926f3">
+<ul class="org-ul">
+<li>Estructura jerárquica para notas y tareas.</li>
+<li>Integración con agendas, capturas rápidas y exportación (HTML, PDF, etc.).</li>
+<li>Código ejecutable en bloques fuente (literate programming).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc86d67a" class="outline-3">
+<h3 id="orgc86d67a">Flujo de trabajo típico</h3>
+<div class="outline-text-3" id="text-orgc86d67a">
+<p>
+Aquí hay un diagrama simple del flujo básico con Org-mode:
+</p>
+
+
+<figure id="orgbb31241">
+<img src="images/workflow.png" alt="workflow.png">
+
+</figure>
+
+
+<ul class="org-ul">
+<li><b>Renderiza</b>: Si tienes PlantUML instalado, usa `C-c C-c` en este bloque para generar `workflow.png`.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb5f8073" class="outline-2">
+<h2 id="orgb5f8073">2. Instalación Básica de Emacs</h2>
+<div class="outline-text-2" id="text-orgb5f8073">
+</div>
+<div id="outline-container-orgdf505c8" class="outline-3">
+<h3 id="orgdf505c8">Requisitos</h3>
+<div class="outline-text-3" id="text-orgdf505c8">
+<ul class="org-ul">
+<li>Sistema operativo: Linux, macOS o Windows (WSL recomendado en Windows).</li>
+<li>Espacio: ~50 MB para Emacs básico.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org609d2fe" class="outline-3">
+<h3 id="org609d2fe">Instalación en Linux</h3>
+<div class="outline-text-3" id="text-org609d2fe">
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Ubuntu/Debian</span>
+sudo apt update
+sudo apt install emacs
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verifica versi&#243;n</span>
+emacs --version
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Versión recomendada: 27.1 o superior (marzo 2025: 29.x probable).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1e8e72c" class="outline-3">
+<h3 id="org1e8e72c">Instalación en macOS</h3>
+<div class="outline-text-3" id="text-org1e8e72c">
+<div class="org-src-container">
+<pre class="src src-bash">brew install emacs
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org3a2e4ee" class="outline-2">
+<h2 id="org3a2e4ee">3. Configuración Inicial de Emacs</h2>
+<div class="outline-text-2" id="text-org3a2e4ee">
+<p>
+Emacs usa un archivo de configuración en `~/.emacs.d/init.el`. Vamos a crear uno básico.
+</p>
+</div>
+<div id="outline-container-org81a67c0" class="outline-3">
+<h3 id="org81a67c0">Estructura de directorios</h3>
+<div class="outline-text-3" id="text-org81a67c0">
+
+<figure id="org9b03bd0">
+<img src="images/emacs_dirs.png" alt="emacs_dirs.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org5ee316e" class="outline-3">
+<h3 id="org5ee316e">Configuración mínima en init.el</h3>
+<div class="outline-text-3" id="text-org5ee316e">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n b&#225;sica de Emacs</span>
+(<span style="color: #D70000;">setq</span> inhibit-startup-message t)  <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Sin pantalla de bienvenida</span>
+(tool-bar-mode -1)                <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Sin barra de herramientas</span>
+(menu-bar-mode -1)                <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Sin barra de men&#250;</span>
+(scroll-bar-mode -1)              <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Sin barras de desplazamiento</span>
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n de paquetes</span>
+(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">package</span>)
+(add-to-list 'package-archives '(<span style="color: #005F00;">"melpa"</span> . <span style="color: #005F00;">"https://melpa.org/packages/"</span>) t)
+(package-initialize)
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Instalar use-package si no est&#225; presente</span>
+(<span style="color: #D70000;">unless</span> (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">use-package</span>)
+(<span style="color: #D70000;">setq</span> use-package-always-ensure t)  <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Descarga autom&#225;tica</span>
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><b>Ejecuta</b>: Guarda esto en `~/.emacs.d/init.el` y reinicia Emacs (`C-x C-c` y vuelve a abrir).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1c5bd95" class="outline-2">
+<h2 id="org1c5bd95">4. Configuración de Org-mode</h2>
+<div class="outline-text-2" id="text-org1c5bd95">
+<p>
+Org-mode viene integrado en Emacs, pero podemos mejorarlo con ajustes y paquetes adicionales.
+</p>
+</div>
+<div id="outline-container-orgb09f522" class="outline-3">
+<h3 id="orgb09f522">Configuración básica de Org-mode</h3>
+<div class="outline-text-3" id="text-orgb09f522">
+<p>
+Añade esto a `init.el`:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n de Org-mode</span>
+(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">org</span>
+  <span style="color: #1F55A0;">:config</span>
+  (<span style="color: #D70000;">setq</span> org-startup-indented t)        <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Indentaci&#243;n autom&#225;tica</span>
+  (<span style="color: #D70000;">setq</span> org-directory <span style="color: #005F00;">"~/org"</span>)         <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Directorio para archivos .org</span>
+  (<span style="color: #D70000;">setq</span> org-default-notes-file <span style="color: #005F00;">"~/org/notes.org"</span>)  <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Archivo por defecto</span>
+  (<span style="color: #D70000;">setq</span> org-agenda-files '(<span style="color: #005F00;">"~/org"</span>))   <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Archivos para agenda</span>
+  (global-set-key (kbd <span style="color: #005F00;">"C-c a"</span>) 'org-agenda)  <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Atajo para agenda</span>
+  (global-set-key (kbd <span style="color: #005F00;">"C-c c"</span>) 'org-capture))  <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Atajo para captura</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcbc5e79" class="outline-3">
+<h3 id="orgcbc5e79">Directorios sugeridos</h3>
+<div class="outline-text-3" id="text-orgcbc5e79">
+<div class="org-src-container">
+<pre class="src src-bash">mkdir -p ~/org
+touch ~/org/notes.org
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orga0a74a8" class="outline-3">
+<h3 id="orga0a74a8">Estructura de Org-mode</h3>
+<div class="outline-text-3" id="text-orga0a74a8">
+
+<figure id="org05828d7">
+<img src="images/org_structure.png" alt="org_structure.png">
+
+</figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org0e50722" class="outline-2">
+<h2 id="org0e50722">5. Ejemplo Básico de Org-capture</h2>
+<div class="outline-text-2" id="text-org0e50722">
+<p>
+`org-capture` te permite capturar ideas rápidamente sin interrumpir tu flujo. Configurémoslo.
+</p>
+</div>
+<div id="outline-container-orgd3f39c7" class="outline-3">
+<h3 id="orgd3f39c7">Configuración de captura en init.el</h3>
+<div class="outline-text-3" id="text-orgd3f39c7">
+<p>
+Añade esto a tu `init.el`:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n de org-capture</span>
+(<span style="color: #D70000;">setq</span> org-capture-templates
+      '((<span style="color: #005F00;">"t"</span> <span style="color: #005F00;">"Tarea"</span> entry (file <span style="color: #005F00;">"~/org/notes.org"</span>)
+         <span style="color: #005F00;">"* TODO %?\n  %U\n  %a"</span>)
+        (<span style="color: #005F00;">"n"</span> <span style="color: #005F00;">"Nota"</span> entry (file <span style="color: #005F00;">"~/org/notes.org"</span>)
+         <span style="color: #005F00;">"* %?\n  %U\n  %a"</span>)))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><b>Explicación</b>:
+<ul class="org-ul">
+<li>`"t"`: Plantilla para tareas (TODO).</li>
+<li>`"n"`: Plantilla para notas.</li>
+<li>`%?`: Cursor aquí tras capturar.</li>
+<li>`%U`: Fecha/hora de creación.</li>
+<li>`%a`: Enlace al contexto actual.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org402ff78" class="outline-3">
+<h3 id="org402ff78">Uso de org-capture</h3>
+<div class="outline-text-3" id="text-org402ff78">
+<ol class="org-ol">
+<li>Presiona `C-c c`.</li>
+<li>Elige `t` (tarea) o `n` (nota).</li>
+<li>Escribe y finaliza con `C-c C-c`.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgc14bb2e" class="outline-3">
+<h3 id="orgc14bb2e">Ejemplo de captura</h3>
+<div class="outline-text-3" id="text-orgc14bb2e">
+<p>
+Imagina que estás trabajando y tienes una idea. Presionas `C-c c n`, escribes "Reunión con equipo", y el resultado en `~/org/notes.org` será:
+</p>
+
+
+<pre class="example" id="org2833642">
+- **Reunión con equipo**
+  SCHEDULED: &lt;2025-03-27 Thu 10:15&gt;
+  :PROPERTIES:
+  :CATEGORY: REUNIÓN
+  :END:
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org31c3ac6" class="outline-2">
+<h2 id="org31c3ac6">6. Personalización Adicional</h2>
+<div class="outline-text-2" id="text-org31c3ac6">
+</div>
+<div id="outline-container-org74698db" class="outline-3">
+<h3 id="org74698db">Temas visuales</h3>
+<div class="outline-text-3" id="text-org74698db">
+<p>
+Instala un tema para mejorar la experiencia:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">doom-themes</span>
+  <span style="color: #1F55A0;">:config</span>
+  (load-theme 'doom-one t))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org4b4f51a" class="outline-3">
+<h3 id="org4b4f51a">Atajos útiles</h3>
+<div class="outline-text-3" id="text-org4b4f51a">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="color: #005F00;">"C-c l"</span>) 'org-store-link)  <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Guardar enlace</span>
+(global-set-key (kbd <span style="color: #005F00;">"C-c o"</span>) 'org-open-at-point)  <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Abrir enlace</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6ba9645" class="outline-3">
+<h3 id="org6ba9645">Exportación</h3>
+<div class="outline-text-3" id="text-org6ba9645">
+<p>
+Org-mode exporta a múltiples formatos. Prueba:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #004700;">#+EXPORT_FILE_NAME: mi_documento.html</span>
+Crea un documento y usa `C-c C-e h o` para exportar a HTML y abrirlo.
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org9e62f15" class="outline-2">
+<h2 id="org9e62f15">7. Ejemplo Completo de Archivo Org</h2>
+<div class="outline-text-2" id="text-org9e62f15">
+<p>
+Aquí hay un archivo de ejemplo para `~/org/notes.org`:
+</p>
+
+<p>
+#+BEGIN<sub>SRC</sub> org :tangle ~/org/notes.org
+</p>
+</div>
+</div>
+<div id="outline-container-orgd799957" class="outline-2">
+<h2 id="orgd799957">Tareas</h2>
+<div class="outline-text-2" id="text-orgd799957">
+</div>
+<div id="outline-container-org1fa14fc" class="outline-3">
+<h3 id="org1fa14fc"><span class="todo TODO">TODO</span> Comprar víveres</h3>
+<div class="outline-text-3" id="text-org1fa14fc">
+</div>
+</div>
+<div id="outline-container-org4ef4be4" class="outline-3">
+<h3 id="org4ef4be4"><span class="done DONE">DONE</span> Configurar Emacs</h3>
+<div class="outline-text-3" id="text-org4ef4be4">
+</div>
+</div>
+</div>
+<div id="outline-container-org0b1a89d" class="outline-2">
+<h2 id="org0b1a89d">Notas</h2>
+<div class="outline-text-2" id="text-org0b1a89d">
+</div>
+<div id="outline-container-orga26946a" class="outline-3">
+<h3 id="orga26946a">Reunión con equipo</h3>
+<div class="outline-text-3" id="text-orga26946a">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2025-03-27 jue 10:15]</span></span>
+</p>
+<ul class="org-ul">
+<li>Discutir proyecto Emacs.</li>
+<li>Planificar siguiente semana.</li>
+</ul>
+<p>
+#+END<sub>SRC</sub>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga849acf" class="outline-2">
+<h2 id="orga849acf">8. Gráficos y Diagramas Avanzados</h2>
+<div class="outline-text-2" id="text-orga849acf">
+</div>
+<div id="outline-container-org6695ead" class="outline-3">
+<h3 id="org6695ead">Diagrama de configuración completa</h3>
+<div class="outline-text-3" id="text-org6695ead">
+
+<figure id="org2e8ba04">
+<img src="images/full_config.png" alt="full_config.png">
+
+</figure>
+
+<ul class="org-ul">
+<li><b>Renderiza</b>: `C-c C-c` para ver cómo fluye todo.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfd2ac62" class="outline-2">
+<h2 id="orgfd2ac62">9. Consejos y Trucos</h2>
+<div class="outline-text-2" id="text-orgfd2ac62">
+<ul class="org-ul">
+<li><b>Navegación</b>: `C-c C-n` (siguiente encabezado), `C-c C-p` (anterior).</li>
+<li><b>Tareas</b>: `C-c C-t` para cambiar estado (TODO/DONE).</li>
+<li><b>Agenda</b>: `C-c a a` para vista semanal.</li>
+<li><b>Tangle</b>: `C-c C-v t` para extraer código a archivos.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4070fe4" class="outline-2">
+<h2 id="org4070fe4">10. Conclusión</h2>
+<div class="outline-text-2" id="text-org4070fe4">
+<p>
+Con esta configuración básica, tienes un Emacs funcional con Org-mode listo para tomar notas, gestionar tareas y generar contenido. Personalízalo según tus necesidades y explora paquetes como `org-roam` o `org-static-blog` para más potencia. ¿Listo para empezar? Abre Emacs, aplica esta guía y captura tu primera idea con `C-c c`.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #009B7C; font-weight: bold; text-decoration: underline;"><a href="https://orgmode.org/">Documentaci&#243;n oficial de Org-mode</a></span>
+</pre>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-guía.html">guía</a> </div>]]></description>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <category><![CDATA[guía]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-27-configuraci%C3%B3n-b%C3%A1sica-de-emacs-con-org-mode:-gu%C3%ADa-completa.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-27-configuraci%C3%B3n-b%C3%A1sica-de-emacs-con-org-mode:-gu%C3%ADa-completa.html</guid>
+  <pubDate>Thu, 27 Mar 2025 21:44:00 +0100</pubDate>
+</item>
 <item>
   <title><![CDATA[Guía Completa para Iniciarse en Emacs (ii)]]></title>
   <description><![CDATA[
