@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - indice]]></title>
 <description><![CDATA[Example.com - indice]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-indice.html</link>
-<lastBuildDate>Fri, 28 Mar 2025 09:03:27 +0100</lastBuildDate>
+<lastBuildDate>Fri, 28 Mar 2025 16:15:18 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -392,6 +392,12 @@
 </tr>
 
 <tr>
+<td class="org-right">2025-03-28</td>
+<td class="org-left">Régimen de Xi Jinping y su Visión Geoestratégica, China (2025)</td>
+<td class="org-left"><a href="2025-03-28-régimen-de-xi-jinping-y-su-visión-geoestratégica,-china-(2025).html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
@@ -427,7 +433,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Fri, 28 Mar 2025 09:02:00 +0100</pubDate>
+  <pubDate>Fri, 28 Mar 2025 16:14:00 +0100</pubDate>
 </item>
 </channel>
 </rss>
