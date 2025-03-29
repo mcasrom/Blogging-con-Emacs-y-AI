@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title><![CDATA[Example.com - tutorial]]></title>
-<description><![CDATA[Example.com - tutorial]]></description>
-<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-tutorial.html</link>
-<lastBuildDate>Sat, 29 Mar 2025 20:02:22 +0100</lastBuildDate>
+<title><![CDATA[Example.com - vibe-coding]]></title>
+<description><![CDATA[Example.com - vibe-coding]]></description>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-vibe-coding.html</link>
+<lastBuildDate>Sat, 29 Mar 2025 20:02:20 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Vibe Coding: Programación con Esteroides]]></title>
   <description><![CDATA[
@@ -247,152 +247,6 @@ El <b>vibe coding</b> es una supernova en la programación, expandiendo quién p
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-29-vibe-coding-programaci%C3%B3n-con-esteroides.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-29-vibe-coding-programaci%C3%B3n-con-esteroides.html</guid>
   <pubDate>Sat, 29 Mar 2025 19:44:00 +0100</pubDate>
-</item>
-<item>
-  <title><![CDATA[Emacs con Esteroides: Configurar un Contador de Visitantes para el Blog]]></title>
-  <description><![CDATA[
-<div id="outline-container-orgf12764e" class="outline-2">
-<h2 id="orgf12764e">Emacs con Esteroides: Configurar un Contador de Visitantes para tu Blog</h2>
-<div class="outline-text-2" id="text-orgf12764e">
-<p>
-¡Bienvenidos a una nueva entrega de <b>Emacs con Esteroides</b>! Hoy vamos a añadir un toque de funcionalidad a nuestro blog estático generado con Emacs y desplegado en GitHub: un contador de visitantes. Si usas Org Mode para escribir tus posts y un generador de sitios estáticos como Hugo o Jekyll, esto te permitirá saber cuántas personas visitan tu sitio sin complicaciones. ¡Vamos a ello!
-</p>
-</div>
-<div id="outline-container-orgc27f90b" class="outline-3">
-<h3 id="orgc27f90b">Por qué un contador de visitantes</h3>
-<div class="outline-text-3" id="text-orgc27f90b">
-<p>
-Un contador de visitantes no solo es una curiosidad divertida, sino que también te da una idea de quién está leyendo tu contenido. Para un blog minimalista y sin servidor, necesitamos una solución ligera que no dependa de bases de datos ni scripts pesados. Aquí entra en juego una herramienta externa como <b>Hit Counter</b> o una integración simple con servicios como GitHub Pages.
-</p>
-</div>
-</div>
-<div id="outline-container-org3897367" class="outline-3">
-<h3 id="org3897367">Paso 1: Elegir un servicio de contador</h3>
-<div class="outline-text-3" id="text-org3897367">
-<p>
-Para mantenerlo simple, usaremos un servicio gratuito como <b>HitWebCounter</b> o <b>Simple Counter</b>. Alternativamente, si prefieres algo más personalizado, puedes usar una función Lambda en AWS o un script en Cloudflare Workers, pero hoy nos quedaremos con la opción más directa.
-</p>
-
-<ul class="org-ul">
-<li>Visita <a href="https://www.hitwebcounter.com">HitWebCounter</a> o un servicio similar.</li>
-<li>Registra tu sitio y obtén un fragmento de código HTML (normalmente un `&lt;script&gt;` o una imagen `&lt;img&gt;`).</li>
-</ul>
-
-<p>
-Por ejemplo, el código podría verse así:
-</p>
-<div class="org-src-container">
-<pre class="src src-html">&lt;<span style="color: #dc3eb7;">img</span> <span style="color: #1857a4;">src</span>=<span style="color: #a44185;">"https://hitwebcounter.com/counter/id=123456"</span> <span style="color: #1857a4;">alt</span>=<span style="color: #a44185;">"Contador de visitas"</span>&gt;
-</pre>
-</div>
-</div>
-</div>
-<div id="outline-container-org4ee184a" class="outline-3">
-<h3 id="org4ee184a">Paso 2: Integrarlo en tu blog con Org Mode</h3>
-<div class="outline-text-3" id="text-org4ee184a">
-<p>
-Si usas Hugo con Org Mode, puedes añadir el contador en tu plantilla base o en un archivo específico. Por ejemplo:
-</p>
-
-<ol class="org-ol">
-<li>Abre tu archivo de plantilla (e.g., <code>themes/mi-tema/layouts/partials/footer.html</code>).</li>
-<li>Pega el fragmento HTML donde quieras que aparezca el contador (como el pie de página).</li>
-</ol>
-
-<p>
-En Org Mode, si prefieres incluirlo directamente en un post o en una página estática, usa un bloque HTML:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-org"><span style="color: #8195b0; background-color: #9fafc4; font-size: 80%;">EXPORT</span><span style="color: #8195b0; background-color: #9fafc4;"> html</span>
-<span style="background-color: #9fafc4;">&lt;</span><span style="color: #dc3eb7; background-color: #9fafc4;">img</span><span style="background-color: #9fafc4;"> </span><span style="color: #1857a4; background-color: #9fafc4;">src</span><span style="background-color: #9fafc4;">=</span><span style="color: #a44185; background-color: #9fafc4;">"<a href="https://hitwebcounter.com/counter/id=123456">https://hitwebcounter.com/counter/id=123456</a>"</span><span style="background-color: #9fafc4;"> </span><span style="color: #1857a4; background-color: #9fafc4;">alt</span><span style="background-color: #9fafc4;">=</span><span style="color: #a44185; background-color: #9fafc4;">"Contador de visitas"</span><span style="background-color: #9fafc4;">&gt;</span>
-<span style="color: #8195b0; background-color: #9fafc4; font-size: 80%;">EXPORT</span>
-</pre>
-</div>
-</div>
-</div>
-<div id="outline-container-orge46acba" class="outline-3">
-<h3 id="orge46acba">Paso 3: Configurar Emacs para automatizar</h3>
-<div class="outline-text-3" id="text-orge46acba">
-<p>
-¿Por qué no hacer esto más "Emacs"? Crea un snippet en <code>yasnippet</code> para insertar contadores rápidamente. Por ejemplo:
-</p>
-
-<ul class="org-ul">
-<li>Abre tu archivo de snippets (<code>yasnippet-snippets-dir</code>) y crea uno nuevo en <code>org-mode/</code> llamado <code>contador</code>:</li>
-</ul>
-<div class="org-src-container">
-<pre class="src src-snippet"><span style="color: #8195b0; font-style: italic;"># -*- mode: snippet -*-</span>
-<span style="color: #8195b0; font-style: italic;"># name: contador</span>
-<span style="color: #8195b0; font-style: italic;"># key: contador</span>
-<span style="color: #8195b0; font-style: italic;"># --</span>
-<span style="color: #8195b0; font-style: italic;">#+BEGIN_EXPORT html</span>
-&lt;img src=<span style="color: #a44185;">"https://hitwebcounter.com/counter/id=${</span><span style="color: #fa841d;">1</span><span style="color: #a44185;">:123456}"</span> alt=<span style="color: #a44185;">"Contador de visitas"</span>&gt;
-<span style="color: #8195b0; font-style: italic;">#+END_EXPORT</span>
-</pre>
-</div>
-
-<p>
-Ahora, al escribir <code>contador</code> y presionar <code>TAB</code>, tendrás el código listo para personalizar.
-</p>
-</div>
-</div>
-<div id="outline-container-org35fd2fb" class="outline-3">
-<h3 id="org35fd2fb">Paso 4: Desplegar con GitHub</h3>
-<div class="outline-text-3" id="text-org35fd2fb">
-<p>
-Una vez que hayas añadido el contador:
-</p>
-<ol class="org-ol">
-<li>Ejecuta tu comando habitual para generar el sitio (e.g., <code>hugo</code>).</li>
-<li><p>
-Haz commit de los cambios:
-</p>
-<div class="org-src-container">
-<pre class="src src-sh">git add .
-git commit -m <span style="color: #a44185;">"A&#241;adir contador de visitantes al blog"</span>
-git push origin main
-</pre>
-</div></li>
-<li>GitHub Pages actualizará tu sitio automáticamente.</li>
-</ol>
-</div>
-</div>
-<div id="outline-container-orgcfab956" class="outline-3">
-<h3 id="orgcfab956">Bonus: Monitoreo con Emacs</h3>
-<div class="outline-text-3" id="text-orgcfab956">
-<p>
-Si quieres ver estadísticas desde Emacs, considera usar un paquete como <code>request.el</code> para consultar APIs de contadores (si el servicio lo ofrece). Por ejemplo:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">require</span> '<span style="color: #2f86d2;">request</span>)
-(request
- <span style="color: #a44185;">"https://api.hitwebcounter.com/stats?id=123456"</span>
- <span style="color: #dc3eb7;">:parser</span> 'json-read
- <span style="color: #dc3eb7;">:success</span> (<span style="color: #219fd5; font-style: italic;">cl-function</span>
-           (<span style="color: #219fd5; font-style: italic;">lambda</span> (<span style="color: #dc3eb7;">&amp;key</span> data <span style="color: #dc3eb7;">&amp;allow-other-keys</span>)
-             (message <span style="color: #a44185;">"Visitantes: %s"</span> (alist-get 'visits data)))))
-</pre>
-</div>
-</div>
-</div>
-<div id="outline-container-orgd838752" class="outline-3">
-<h3 id="orgd838752">Conclusión</h3>
-<div class="outline-text-3" id="text-orgd838752">
-<p>
-Con unas pocas líneas de código y la potencia de Org Mode, hemos añadido un contador de visitantes a nuestro blog estático. Emacs no solo nos ayuda a escribir, sino también a personalizar y automatizar nuestro flujo de trabajo. ¿Qué más puedes añadir con Emacs a tu blog? ¡Déjame tus ideas en los comentarios (si tu blog los tiene)!
-</p>
-</div>
-</div>
-</div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-blog.html">blog</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-contador.html">contador</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutorial.html">tutorial</a> </div>]]></description>
-  <category><![CDATA[blog]]></category>
-  <category><![CDATA[contador]]></category>
-  <category><![CDATA[tutorial]]></category>
-  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-emacs-con-esteroides:-configurar-un-contador-de-visitantes-para-el-blog.html</link>
-  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-22-emacs-con-esteroides:-configurar-un-contador-de-visitantes-para-el-blog.html</guid>
-  <pubDate>Sat, 22 Mar 2025 19:58:00 +0100</pubDate>
 </item>
 </channel>
 </rss>

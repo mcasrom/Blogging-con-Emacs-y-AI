@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - indice]]></title>
 <description><![CDATA[Example.com - indice]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-indice.html</link>
-<lastBuildDate>Sat, 29 Mar 2025 18:31:55 +0100</lastBuildDate>
+<lastBuildDate>Sat, 29 Mar 2025 20:02:20 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -411,6 +411,12 @@
 
 <tr>
 <td class="org-right">2025-03-29</td>
+<td class="org-left">Vibe Coding: Programación con Esteroides</td>
+<td class="org-left"><a href="2025-03-29-vibe-coding-programación-con-esteroides.html">Enlace</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-03-29</td>
 <td class="org-left">Visión Política de Alberto Núñez Feijóo y el Partido Popular en la Actualidad</td>
 <td class="org-left"><a href="2025-03-29-visión-política-de-alberto-núñez-feijóo-y-el-partido-popular-en-la-actualidad.html">Enlace</a></td>
 </tr>
@@ -451,7 +457,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Sat, 29 Mar 2025 18:30:00 +0100</pubDate>
+  <pubDate>Sat, 29 Mar 2025 20:01:00 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Creación Indicador de Calidad de Libertad y su Aplicación KPI (i)]]></title>

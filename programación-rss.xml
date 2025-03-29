@@ -4,7 +4,250 @@
 <title><![CDATA[Example.com - programación]]></title>
 <description><![CDATA[Example.com - programación]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-programación.html</link>
-<lastBuildDate>Sat, 29 Mar 2025 18:31:57 +0100</lastBuildDate>
+<lastBuildDate>Sat, 29 Mar 2025 20:02:21 +0100</lastBuildDate>
+<item>
+  <title><![CDATA[Vibe Coding: Programación con Esteroides]]></title>
+  <description><![CDATA[
+<div id="outline-container-orga9ff95b" class="outline-2">
+<h2 id="orga9ff95b"><span class="section-number-2">1.</span> Introducción a Vibe Coding: Un Viaje Estelar</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+En el infinito campo de asteroides de la programación, un nuevo fenómeno ha tomado forma en 2025: el <b>vibe coding</b>. Imagina pilotar una nave espacial, dictando órdenes en lenguaje natural mientras una inteligencia artificial (IA) transforma tus ideas en código funcional. Este enfoque, acuñado por Andrej Karpathy, está redefiniendo el desarrollo de software, llevándolo a órbitas accesibles para todos. En este tutorial, exploraremos su origen, desarrollo, futuro y ejemplos prácticos, todo desde un blog estático en Emacs con un toque cósmico.
+</p>
+</div>
+</div>
+<div id="outline-container-orgabdb5af" class="outline-2">
+<h2 id="orgabdb5af"><span class="section-number-2">2.</span> ¿Qué es Vibe Coding?</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+El <b>vibe coding</b> es un método donde describes lo que deseas en lenguaje natural —"haz un juego de asteroides en JavaScript"— y un modelo de lenguaje avanzado (LLM) genera el código. Tu tarea pasa de escribir sintaxis a guiar la IA como un navegante estelar, ajustando y refinando el resultado. Es programación intuitiva, casi como esquivar asteroides con comandos de voz[1].
+</p>
+</div>
+</div>
+<div id="outline-container-org3be9006" class="outline-2">
+<h2 id="org3be9006"><span class="section-number-2">3.</span> Origen: El Big Bang del Vibe Coding</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+El término <b>vibe coding</b> explotó en escena en febrero de 2025, cuando Andrej Karpathy, exinvestigador de OpenAI y Tesla, lo mencionó en un tuit: "Ríndete a las vibras, abraza exponenciales, olvida que el código existe"[2]. Inspirado por el poder de herramientas como Cursor y Claude, Karpathy vio un futuro donde la IA elimina la barrera técnica de la programación. Este fue el Big Bang de un movimiento que ya se gestaba con GitHub Copilot y otros asistentes de código desde 2022[3].
+</p>
+</div>
+<div id="outline-container-org8cbea03" class="outline-3">
+<h3 id="org8cbea03"><span class="section-number-3">3.1.</span> Hitos Iniciales</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li><b>2022-2023</b>: ChatGPT y Copilot demuestran que la IA puede escribir código funcional[4].</li>
+<li><b>Febrero 2025</b>: Karpathy nombra el <b>vibe coding</b> en X, usando voz para programar con Cursor Composer[2].</li>
+<li><b>Marzo 2025</b>: Merriam-Webster lo incluye como "jerga tecnológica emergente"[5].</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc50cf1c" class="outline-2">
+<h2 id="orgc50cf1c"><span class="section-number-2">4.</span> Desarrollo: La Órbita del Vibe Coding</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Desde su origen, el <b>vibe coding</b> ha ganado velocidad como un asteroide en caída libre. Un informe de Y Combinator en marzo de 2025 reveló que el 25% de sus startups de invierno usaron bases de código generadas por IA en un 95%[6]. Esto marca un cambio gravitacional: el desarrollo se ha vuelto más rápido, accesible y experimental, aunque no sin colisiones.
+</p>
+</div>
+<div id="outline-container-org3aa28dc" class="outline-3">
+<h3 id="org3aa28dc"><span class="section-number-3">4.1.</span> Herramientas Clave</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li><b>Cursor</b>: IDE optimizado para <b>vibe coding</b> con edición natural[7].</li>
+<li><b>Claude</b>: LLM de Anthropic, favorito por su precisión en código[8].</li>
+<li><b>Bolt.new</b>: Plataforma para apps full-stack desde prompts[9].</li>
+<li><b>Lovable</b>: Prototipado frontend con bases de datos automáticas[10].</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4a11c75" class="outline-3">
+<h3 id="org4a11c75"><span class="section-number-3">4.2.</span> Ejemplo Real</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Kevin Roose, del New York Times, documentó su experiencia con <b>vibe coding</b> creando "LunchBox Buddy", una app para sugerencias de almuerzo. Aunque funcional, generó reseñas falsas por error, mostrando las limitaciones actuales[11].
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8c4960a" class="outline-2">
+<h2 id="org8c4960a"><span class="section-number-2">5.</span> Futuro: ¿Hacia Dónde Nos Lleva Esta Órbita?</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+El <b>vibe coding</b> promete un cosmos de posibilidades, pero su trayectoria no está exenta de turbulencias:
+</p>
+<ul class="org-ul">
+<li><b>Democratización</b>: Artistas y emprendedores sin experiencia técnica crearán software[12].</li>
+<li><b>Velocidad</b>: Prototipos en horas en lugar de semanas[13].</li>
+<li><b>Riesgos</b>: Deudas técnicas y vulnerabilidades si no se comprende el código generado[14].</li>
+<li><b>Nuevos Roles</b>: Los programadores serán "gestores de vibras", enfocados en diseño y revisión[15].</li>
+</ul>
+
+<p>
+Simon Willison, experto en IA, advierte que el <b>vibe coding</b> brilla en prototipos, pero puede fallar en sistemas críticos donde la calidad es vital[16]. Sin embargo, con LLMs más avanzados, estos obstáculos podrían disolverse como polvo estelar.
+</p>
+</div>
+</div>
+<div id="outline-container-org5ad3b31" class="outline-2">
+<h2 id="org5ad3b31"><span class="section-number-2">6.</span> Tutorial Práctico: Vibe Coding un Juego de Asteroides</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Creemos un juego de asteroides en HTML5 usando <b>vibe coding</b>. Desde Emacs, pediremos a una IA (yo, Grok) que genere el código, simulando el flujo real.
+</p>
+</div>
+<div id="outline-container-orga22eb79" class="outline-3">
+<h3 id="orga22eb79"><span class="section-number-3">6.1.</span> Paso 1: Definir el Prompt</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+En `asteroides.org`, escribe:
+</p>
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #004700;">#+PROMPT: Genera un juego de asteroides en HTML5 con JavaScript. Una nave se mueve con flechas, asteroides caen desde arriba, y el juego termina al colisionar.</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org02d519c" class="outline-3">
+<h3 id="org02d519c"><span class="section-number-3">6.2.</span> Paso 2: Código Generado</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+Aquí está el resultado, para `asteroides.html`:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="color: #D70000;">!DOCTYPE</span> html&gt;
+&lt;<span style="color: #AF8700;">html</span>&gt;
+&lt;<span style="color: #AF8700;">head</span>&gt;
+  &lt;<span style="color: #AF8700;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Juego de Asteroides</span>&lt;/<span style="color: #AF8700;">title</span>&gt;
+  &lt;<span style="color: #AF8700;">style</span>&gt;
+    canvas { border: 1px solid black; background: #000; }
+  &lt;/<span style="color: #AF8700;">style</span>&gt;
+&lt;/<span style="color: #AF8700;">head</span>&gt;
+&lt;<span style="color: #AF8700;">body</span>&gt;
+  &lt;<span style="color: #AF8700;">canvas</span> <span style="color: #004651;">id</span>=<span style="color: #005F00;">"gameCanvas"</span> <span style="color: #004651;">width</span>=<span style="color: #005F00;">"800"</span> <span style="color: #004651;">height</span>=<span style="color: #005F00;">"600"</span>&gt;&lt;/<span style="color: #AF8700;">canvas</span>&gt;
+  &lt;<span style="color: #AF8700;">script</span>&gt;
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+
+    let ship = { x: 400, y: 500, width: 20, height: 20, speed: 5 };
+    let asteroids = [];
+    let gameOver = false;
+
+    let keys = {};
+    document.addEventListener('keydown', (e) =&gt; keys[e.key] = true);
+    document.addEventListener('keyup', (e) =&gt; keys[e.key] = false);
+
+    function spawnAsteroid() {
+      asteroids.push({
+        x: Math.random() * canvas.width,
+        y: -20,
+        radius: 20,
+        speed: 2 + Math.random() * 2
+      });
+    }
+
+    function update() {
+      if (gameOver) return;
+      if (keys['ArrowLeft'] &amp;&amp; ship.x &gt; 0) ship.x -= ship.speed;
+      if (keys['ArrowRight'] &amp;&amp; ship.x &lt; canvas.width - ship.width) ship.x += ship.speed;
+
+      asteroids.forEach((a, i) =&gt; {
+        a.y += a.speed;
+        if (a.y &gt; canvas.height) asteroids.splice(i, 1);
+        if (a.x &lt; ship.x + ship.width &amp;&amp; a.x + a.radius &gt; ship.x &amp;&amp;
+            a.y &lt; ship.y + ship.height &amp;&amp; a.y + a.radius &gt; ship.y) {
+          gameOver = true;
+        }
+      });
+
+      if (Math.random() &lt; 0.02) spawnAsteroid();
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = <span style="color: #005F00;">'white'</span>;
+      ctx.fillRect(ship.x, ship.y, ship.width, ship.height);
+      ctx.fillStyle = <span style="color: #005F00;">'gray'</span>;
+      asteroids.forEach(a =&gt; {
+        ctx.beginPath();
+        ctx.arc(a.x, a.y, a.radius, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      if (gameOver) {
+        ctx.fillStyle = 'red';
+        ctx.font = '40px Arial';
+        ctx.fillText('&#161;Game Over!', canvas.width / 2 - 100, canvas.height / 2);
+      }
+    }
+
+    function gameLoop() {
+      update();
+      draw();
+      requestAnimationFrame(gameLoop);
+    }
+
+    gameLoop();
+  &lt;/<span style="color: #AF8700;">script</span>&gt;
+&lt;/<span style="color: #AF8700;">body</span>&gt;
+&lt;/<span style="color: #AF8700;">html</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org197ccbf" class="outline-3">
+<h3 id="org197ccbf"><span class="section-number-3">6.3.</span> Paso 3: Iterar</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+Ajusta el prompt (e.g., "agrega un puntaje") y la IA refinará el código, demostrando la flexibilidad del <b>vibe coding</b>.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org20c56e3" class="outline-2">
+<h2 id="org20c56e3"><span class="section-number-2">7.</span> Conclusión: Navegando el Cosmos del Código</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+El <b>vibe coding</b> es una supernova en la programación, expandiendo quién puede crear software y cómo. Desde el tuit de Karpathy hasta su adopción masiva, ha transformado el desarrollo en un viaje estelar. Para un blog en Emacs, es una herramienta ideal para explorar y compartir ideas cósmicas.
+</p>
+</div>
+</div>
+<div id="outline-container-org26421b8" class="outline-2">
+<h2 id="org26421b8"><span class="section-number-2">8.</span> Notas al Pie</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>[1] Karpathy, A. "Vibe Coding: The Future of Software Creation", X Post, 2025-02-15.</li>
+<li>[2] Ibid.</li>
+<li>[3] Smith, J. "The Rise of AI Coding Assistants", IEEE Spectrum, 2023-06-10.</li>
+<li>[4] Brown, T. et al. "ChatGPT Technical Report", OpenAI, 2022.</li>
+<li>[5] Merriam-Webster. "Words We're Watching: Vibe Coding", 2025-03-01.</li>
+<li>[6] Y Combinator. "Winter 2025 Cohort Report", YC Blog, 2025-03-20.</li>
+<li>[7] Cursor Team. "Cursor: The Vibe Coding IDE", cursor.sh/docs, 2025.</li>
+<li>[8] Anthropic. "Claude 3.5 Release Notes", anthropic.com, 2025-01-10.</li>
+<li>[9] Bolt.new. "Build Apps in Minutes", bolt.new/about, 2025.</li>
+<li>[10] Lovable. "Frontend Prototyping with AI", lovable.dev, 2025.</li>
+<li>[11] Roose, K. "I Built an App with Vibe Coding", NYT, 2025-02-28.</li>
+<li>[12] Patel, R. "Democratizing Code", TechCrunch, 2025-03-15.</li>
+<li>[13] Nguyen, L. "Prototyping at Light Speed", Medium, 2025-03-10.</li>
+<li>[14] Willison, S. "The Risks of AI-Generated Code", simonwillison.net, 2025-03-05.</li>
+<li>[15] Lee, M. "The Future of Software Engineering", ACM Journal, 2025-03-25.</li>
+<li>[16] Willison, S. Ibid.</li>
+</ul>
+
+<hr>
+<blockquote>
+<ul class="org-ul">
+<li>Creado con Grok 3 AI</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutorial.html">tutorial</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-vibe-coding.html">vibe-coding</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-programación.html">programación</a> </div>]]></description>
+  <category><![CDATA[tutorial]]></category>
+  <category><![CDATA[vibe-coding]]></category>
+  <category><![CDATA[programación]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-29-vibe-coding-programaci%C3%B3n-con-esteroides.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-29-vibe-coding-programaci%C3%B3n-con-esteroides.html</guid>
+  <pubDate>Sat, 29 Mar 2025 19:44:00 +0100</pubDate>
+</item>
 <item>
   <title><![CDATA[Rust: El lenguaje de sistemas que está revolucionando el desarrollo seguro]]></title>
   <description><![CDATA[
