@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Sat, 29 Mar 2025 16:49:09 +0100</lastBuildDate>
+<lastBuildDate>Sat, 29 Mar 2025 17:00:22 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Explorando Shima Spain Village: Un Rincón Español en Japón]]></title>
   <description><![CDATA[
@@ -130,7 +130,7 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[españa]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</guid>
-  <pubDate>Sat, 29 Mar 2025 16:49:09 +0100</pubDate>
+  <pubDate>Sat, 29 Mar 2025 17:00:21 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
@@ -572,7 +572,7 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Sat, 29 Mar 2025 16:46:00 +0100</pubDate>
+  <pubDate>Sat, 29 Mar 2025 16:59:00 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Creación Indicador de Calidad de Libertad y su Aplicación KPI (i)]]></title>
@@ -11435,14 +11435,40 @@ Para ponerte en contacto, envíanos un email a <a href="mailto:mybloggingnotes@g
 <p>
 Puedes enviarme un correo electrónico a: <a href="mailto:tu.email@ejemplo.com">mybloggingnotes@gmail.com</a>. Trataré de responder lo antes posible.
 </p>
-<div id="outline-container-orgb7db6aa" class="outline-2">
-<h2 id="orgb7db6aa">¿Qué puedes escribir?</h2>
-<div class="outline-text-2" id="text-orgb7db6aa">
+<div id="outline-container-orgcc25846" class="outline-2">
+<h2 id="orgcc25846">¿Qué puedes escribir?</h2>
+<div class="outline-text-2" id="text-orgcc25846">
 <ul class="org-ul">
 <li>Preguntas sobre los temas tratados en el blog.</li>
 <li>Ideas para futuros <b>posts</b> o colaboraciones.</li>
 <li>Comentarios o feedback sobre el contenido.</li>
 </ul>
+</div>
+</div>
+<div id="outline-container-org97f0a8a" class="outline-2">
+<h2 id="org97f0a8a">Comentarios</h2>
+<div class="outline-text-2" id="text-org97f0a8a">
+<!-- Disqus Embed Code -->
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = https://mcasrom.github.io/Blogging-con-Emacs-y-AI/contacto.html;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = Contacto; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://mcasrom.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<!-- End Disqus Embed Code -->
 
 <hr>
 <p>
