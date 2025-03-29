@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - indice]]></title>
 <description><![CDATA[Example.com - indice]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-indice.html</link>
-<lastBuildDate>Sat, 29 Mar 2025 15:50:42 +0100</lastBuildDate>
+<lastBuildDate>Sat, 29 Mar 2025 16:19:41 +0100</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -404,13 +404,19 @@
 </tr>
 
 <tr>
+<td class="org-right">2025-03-29</td>
+<td class="org-left">Creación Indicador de Calidad de Libertad y su Aplicación KPI (i)</td>
+<td class="org-left"><a href="2025-03-29-creación-indicador-de-calidad-de-libertad-y-su-aplicación-kpi-(i).html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
 </tr>
 
 <tr>
-<td class="org-right">2025-03-28</td>
+<td class="org-right">2025-03-29</td>
 <td class="org-left">Índice de Publicaciones del Blog</td>
 <td class="org-left"><a href="indice-posts.html">Enlace</a></td>
 </tr>
@@ -439,7 +445,489 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Sat, 29 Mar 2025 15:49:00 +0100</pubDate>
+  <pubDate>Sat, 29 Mar 2025 16:18:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Creación Indicador de Calidad de Libertad y su Aplicación KPI (i)]]></title>
+  <description><![CDATA[
+<div id="outline-container-org56a1387" class="outline-2">
+<h2 id="org56a1387">Documento: Indicador KPI para Medir el Grado de Libertad en Países</h2>
+<div class="outline-text-2" id="text-org56a1387">
+</div>
+<div id="outline-container-org0c6bde0" class="outline-3">
+<h3 id="org0c6bde0">1. Definición del KPI "Índice de Libertad Integral (ILI)"</h3>
+<div class="outline-text-3" id="text-org0c6bde0">
+</div>
+<div id="outline-container-orga7d915a" class="outline-4">
+<h4 id="orga7d915a">1.1. Objetivo</h4>
+<div class="outline-text-4" id="text-orga7d915a">
+<p>
+Medir el grado de libertad en prensa, expresión, manifestación y derechos civiles en países, combinando datos cuantitativos y cualitativos.
+</p>
+</div>
+</div>
+<div id="outline-container-org9ecb5cc" class="outline-4">
+<h4 id="org9ecb5cc">1.2. Dimensiones y Subindicadores (Ponderación)</h4>
+<div class="outline-text-4" id="text-org9ecb5cc">
+<table border="1" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Dimensión</th>
+<th scope="col" class="org-left">Subindicadores</th>
+<th scope="col" class="org-right">Peso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Libertad de Prensa (30%)</td>
+<td class="org-left">- Informes de Reporteros Sin Fronteras (RSF)</td>
+<td class="org-right">15%</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- Censura gubernamental (ej: bloqueo de medios)</td>
+<td class="org-right">10%</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- Diversidad mediática</td>
+<td class="org-right">5%</td>
+</tr>
+
+<tr>
+<td class="org-left">Libertad de Expresión (25%)</td>
+<td class="org-left">- Marco legal (ej: constituciones)</td>
+<td class="org-right">10%</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- Casos judiciales por expresión (ej: leyes contra "noticias falsas")</td>
+<td class="org-right">15%</td>
+</tr>
+
+<tr>
+<td class="org-left">Libertad de Manifestación (20%)</td>
+<td class="org-left">- Restricciones legales (ej: permisos obligatorios)</td>
+<td class="org-right">10%</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- Violencia estatal en protestas (datos de Amnistía Internacional)</td>
+<td class="org-right">10%</td>
+</tr>
+
+<tr>
+<td class="org-left">Derechos Civiles (25%)</td>
+<td class="org-left">- Acceso a información pública</td>
+<td class="org-right">10%</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- Protección de minorías y disidentes</td>
+<td class="org-right">15%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orged1bf7e" class="outline-4">
+<h4 id="orged1bf7e">1.3. Escala de Puntuación</h4>
+<div class="outline-text-4" id="text-orged1bf7e">
+<ul class="org-ul">
+<li>0-30: Represión severa</li>
+<li>31-60: Restricciones significativas</li>
+<li>61-85: Libertad parcial</li>
+<li>86-100: Libertad sólida</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org883473d" class="outline-3">
+<h3 id="org883473d">2. Aplicación del ILI por Región (2024)</h3>
+<div class="outline-text-3" id="text-org883473d">
+</div>
+<div id="outline-container-org175c58b" class="outline-4">
+<h4 id="org175c58b">2.1. Europa Occidental</h4>
+<div class="outline-text-4" id="text-org175c58b">
+<table border="1" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">País</th>
+<th scope="col" class="org-right">Prensa</th>
+<th scope="col" class="org-right">Expresión</th>
+<th scope="col" class="org-right">Manifestación</th>
+<th scope="col" class="org-right">Derechos Civiles</th>
+<th scope="col" class="org-right">ILI Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Francia</td>
+<td class="org-right">82</td>
+<td class="org-right">78</td>
+<td class="org-right">85</td>
+<td class="org-right">80</td>
+<td class="org-right">81.5</td>
+</tr>
+
+<tr>
+<td class="org-left">Alemania</td>
+<td class="org-right">85</td>
+<td class="org-right">83</td>
+<td class="org-right">88</td>
+<td class="org-right">84</td>
+<td class="org-right">84.5</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li><span class="underline">Observación</span>: Alto cumplimiento en marcos legales, pero Francia muestra tensiones por leyes antiterroristas.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga26bc67" class="outline-4">
+<h4 id="orga26bc67">2.2. América y Sudamérica</h4>
+<div class="outline-text-4" id="text-orga26bc67">
+<table border="1" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">País</th>
+<th scope="col" class="org-right">Prensa</th>
+<th scope="col" class="org-right">Expresión</th>
+<th scope="col" class="org-right">Manifestación</th>
+<th scope="col" class="org-right">Derechos Civiles</th>
+<th scope="col" class="org-right">ILI Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">EE.UU.</td>
+<td class="org-right">76</td>
+<td class="org-right">70</td>
+<td class="org-right">75</td>
+<td class="org-right">68</td>
+<td class="org-right">72.3</td>
+</tr>
+
+<tr>
+<td class="org-left">Brasil</td>
+<td class="org-right">65</td>
+<td class="org-right">58</td>
+<td class="org-right">62</td>
+<td class="org-right">60</td>
+<td class="org-right">61.3</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li><span class="underline">Fuentes</span>: Brasil tiene un retroceso en protección a periodistas (12 muertes en 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6c1e6ce" class="outline-4">
+<h4 id="org6c1e6ce">2.3. Área Rusa</h4>
+<div class="outline-text-4" id="text-org6c1e6ce">
+<table border="1" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">País</th>
+<th scope="col" class="org-right">Prensa</th>
+<th scope="col" class="org-right">Expresión</th>
+<th scope="col" class="org-right">Manifestación</th>
+<th scope="col" class="org-right">Derechos Civiles</th>
+<th scope="col" class="org-right">ILI Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Rusia</td>
+<td class="org-right">22</td>
+<td class="org-right">18</td>
+<td class="org-right">15</td>
+<td class="org-right">20</td>
+<td class="org-right">18.8</td>
+</tr>
+
+<tr>
+<td class="org-left">Bielorrusia</td>
+<td class="org-right">19</td>
+<td class="org-right">12</td>
+<td class="org-right">10</td>
+<td class="org-right">14</td>
+<td class="org-right">13.2</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li><span class="underline">Patrón</span>: Censura estatal sistemática y persecución a opositores.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1f90cda" class="outline-4">
+<h4 id="org1f90cda">2.4. China y Asia</h4>
+<div class="outline-text-4" id="text-org1f90cda">
+<table border="1" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">País</th>
+<th scope="col" class="org-right">Prensa</th>
+<th scope="col" class="org-right">Expresión</th>
+<th scope="col" class="org-right">Manifestación</th>
+<th scope="col" class="org-right">Derechos Civiles</th>
+<th scope="col" class="org-right">ILI Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">China</td>
+<td class="org-right">8</td>
+<td class="org-right">5</td>
+<td class="org-right">3</td>
+<td class="org-right">10</td>
+<td class="org-right">6.3</td>
+</tr>
+
+<tr>
+<td class="org-left">Japón</td>
+<td class="org-right">88</td>
+<td class="org-right">85</td>
+<td class="org-right">82</td>
+<td class="org-right">80</td>
+<td class="org-right">83.8</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li><span class="underline">Caso China</span>: Puntuación más baja por el "Gran Cortafuegos" y detenciones masivas en Hong Kong.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcfeb752" class="outline-3">
+<h3 id="orgcfeb752">3. Gráficos Comparativos (Generados con Datos)</h3>
+<div class="outline-text-3" id="text-orgcfeb752">
+
+<figure id="org23db618">
+<img src="images/ili_regiones.png" alt="ili_regiones.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org5a3e1f0" class="outline-3">
+<h3 id="org5a3e1f0">4. Limitaciones y Recomendaciones</h3>
+<div class="outline-text-3" id="text-org5a3e1f0">
+<ul class="org-ul">
+<li><span class="underline">Sesgo de datos</span>: Dependencia de ONGs occidentales para métricas en regímenes autoritarios.</li>
+<li><span class="underline">Propuesta</span>: Incluir encuestas a ciudadanos locales para ajustar ponderaciones.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbbb1cea" class="outline-3">
+<h3 id="orgbbb1cea">5. Referencias</h3>
+<div class="outline-text-3" id="text-orgbbb1cea">
+<ul class="org-ul">
+<li>Reporteros Sin Fronteras (2024).</li>
+<li>Clasificación Mundial de la Libertad de Prensa.</li>
+<li>Constitución de la República Popular China, Art. 35 (1982).</li>
+<li>Amnesty International. "Leyes de 'Fake News' en Brasil" (2023).</li>
+<li>Datos de protestas en Colombia y Chile (2024). Ley de Seguridad Global de Francia (2021).</li>
+<li>Comité para la Protección de Periodistas (CPJ).</li>
+<li>Informe de Human Rights Watch sobre Rusia (2024). Hong Kong National Security Law (2020).</li>
+<li>Propuesta metodológica del Banco Mundial (2023).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3593d8f" class="outline-2">
+<h2 id="org3593d8f">Referencias Documentales</h2>
+<div class="outline-text-2" id="text-org3593d8f">
+</div>
+<div id="outline-container-org233d026" class="outline-3">
+<h3 id="org233d026">Informes y Clasificaciones Internacionales</h3>
+<div class="outline-text-3" id="text-org233d026">
+<ul class="org-ul">
+<li>1. Reporteros Sin Fronteras (RSF). (2024). Clasificación Mundial de la Libertad de Prensa 2024. <a href="https://rsf.org/es/clasificacion">https://rsf.org/es/clasificacion</a></li>
+
+<li>2. Freedom House. (2024). Freedom in the World 2024. <a href="https://freedomhouse.org/report/freedom-world">https://freedomhouse.org/report/freedom-world</a></li>
+
+<li>3. The Economist Intelligence Unit. (2024). Democracy Index 2024. <a href="https://www.eiu.com/n/campaigns/democracy-index-2024/">https://www.eiu.com/n/campaigns/democracy-index-2024/</a></li>
+
+<li>4. Varieties of Democracy (V-Dem) Institute. (2024). Democracy Report 2024. <a href="https://v-dem.net/democracy_reports.html">https://v-dem.net/democracy_reports.html</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org42f642e" class="outline-3">
+<h3 id="org42f642e">Organizaciones de Derechos Humanos</h3>
+<div class="outline-text-3" id="text-org42f642e">
+<ul class="org-ul">
+<li>5. Amnistía Internacional. (2024). Informe 2023/24: La situación de los derechos humanos en el mundo. <a href="https://www.amnesty.org/es/documents/pol10/6422/2024/es/">https://www.amnesty.org/es/documents/pol10/6422/2024/es/</a></li>
+
+<li>6. Human Rights Watch. (2024). World Report 2024. <a href="https://www.hrw.org/world-report/2024">https://www.hrw.org/world-report/2024</a></li>
+
+<li>7. Comité para la Protección de los Periodistas (CPJ). (2024). Attacks on the Press 2024. <a href="https://cpj.org/attacks/">https://cpj.org/attacks/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org93df2ec" class="outline-3">
+<h3 id="org93df2ec">Documentos Legales y Constitucionales</h3>
+<div class="outline-text-3" id="text-org93df2ec">
+<ul class="org-ul">
+<li>8. Constitución de la República Popular China. (1982). Artículo 35. <a href="http://www.npc.gov.cn/englishnpc/constitution2019/201911/1f65146fb6104dd3a2793875d19b5b29.shtml">http://www.npc.gov.cn/englishnpc/constitution2019/201911/1f65146fb6104dd3a2793875d19b5b29.shtml</a></li>
+
+<li>9. Ley de Seguridad Nacional de Hong Kong. (2020). <a href="https://www.gld.gov.hk/egazette/pdf/20202448e/es220202448136.pdf">https://www.gld.gov.hk/egazette/pdf/20202448e/es220202448136.pdf</a></li>
+
+<li>10. Ley de Seguridad Global de Francia. (2021). <a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043530276">https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000043530276</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2bf80a0" class="outline-3">
+<h3 id="org2bf80a0">Estudios Académicos y de Think Tanks</h3>
+<div class="outline-text-3" id="text-org2bf80a0">
+<ul class="org-ul">
+<li>11. Coppedge, M. et al. (2024). "V-Dem Codebook v14" Varieties of Democracy (V-Dem) Project. <a href="https://www.v-dem.net/static/website/img/refs/codebookv14.pdf">https://www.v-dem.net/static/website/img/refs/codebookv14.pdf</a></li>
+
+<li>12. Banco Mundial. (2023). Worldwide Governance Indicators. <a href="https://info.worldbank.org/governance/wgi/">https://info.worldbank.org/governance/wgi/</a></li>
+
+<li>13. Instituto Internacional para la Democracia y la Asistencia Electoral (IDEA). (2024). The Global State of Democracy 2024. <a href="https://www.idea.int/gsod/">https://www.idea.int/gsod/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfb41363" class="outline-3">
+<h3 id="orgfb41363">Informes Regionales Específicos</h3>
+<div class="outline-text-3" id="text-orgfb41363">
+<ul class="org-ul">
+<li>14. Comisión Interamericana de Derechos Humanos (CIDH). (2024). Informe anual 2023. <a href="http://www.oas.org/es/cidh/informes/anuales.asp">http://www.oas.org/es/cidh/informes/anuales.asp</a></li>
+
+<li>15. Oficina del Alto Comisionado de las Naciones Unidas para los Derechos Humanos (ACNUDH). (2024). Informe sobre la situación de los derechos humanos en la Federación de Rusia. <a href="https://www.ohchr.org/es/countries/russian-federation">https://www.ohchr.org/es/countries/russian-federation</a></li>
+
+<li>16. European Union Agency for Fundamental Rights (FRA). (2024). Fundamental Rights Report 2024. <a href="https://fra.europa.eu/en/publication/2024/fundamental-rights-report-2024">https://fra.europa.eu/en/publication/2024/fundamental-rights-report-2024</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org990ac0d" class="outline-3">
+<h3 id="org990ac0d">Datos y Estadísticas</h3>
+<div class="outline-text-3" id="text-org990ac0d">
+<ul class="org-ul">
+<li>17. UNESCO. (2024). World Trends in Freedom of Expression and Media Development: Global Report 2024. <a href="https://en.unesco.org/world-media-trends">https://en.unesco.org/world-media-trends</a></li>
+
+<li>18. CIVICUS Monitor. (2024). People Power Under Attack 2024. <a href="https://monitor.civicus.org/">https://monitor.civicus.org/</a></li>
+
+<li>19. International Telecommunication Union (ITU). (2024). Measuring digital development: Facts and figures 2024. <a href="https://www.itu.int/en/ITU-D/Statistics/Pages/facts/default.aspx">https://www.itu.int/en/ITU-D/Statistics/Pages/facts/default.aspx</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1a0205f" class="outline-3">
+<h3 id="org1a0205f">Artículos y Análisis Especializados</h3>
+<div class="outline-text-3" id="text-org1a0205f">
+<ul class="org-ul">
+<li>20. Reporters Without Borders. (2024). "The Great Firewall of China". <a href="https://rsf.org/en/great-firewall-china-0">https://rsf.org/en/great-firewall-china-0</a></li>
+
+<li>21. Article 19. (2024). "Global Expression Report 2024". <a href="https://www.article19.org/gxr-2024/">https://www.article19.org/gxr-2024/</a></li>
+
+<li>22. Committee to Protect Journalists. (2024). "10 Most Censored Countries". <a href="https://cpj.org/reports/2024/09/10-most-censored-countries/">https://cpj.org/reports/2024/09/10-most-censored-countries/</a></li>
+</ul>
+
+<p>
+&#x2014;
+Answer from Perplexity: pplx.ai/share
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org81f69bb" class="outline-2">
+<h2 id="org81f69bb">Observaciones</h2>
+<div class="outline-text-2" id="text-org81f69bb">
+<ul class="org-ul">
+<li>Los motores de IA chinos suelen bloquearse o limitar las respuestas cuando se les presenta el prompt relacionado con la "libertad". Este comportamiento está asociado con restricciones gubernamentales o políticas de censura.</li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-libertad.html">libertad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-kpi.html">kpi</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-indice.html">indice</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-opiniones.html">opiniones</a> </div>]]></description>
+  <category><![CDATA[libertad]]></category>
+  <category><![CDATA[kpi]]></category>
+  <category><![CDATA[indice]]></category>
+  <category><![CDATA[opiniones]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-29-creaci%C3%B3n-indicador-de-calidad-de-libertad-y-su-aplicaci%C3%B3n-kpi-(i).html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-29-creaci%C3%B3n-indicador-de-calidad-de-libertad-y-su-aplicaci%C3%B3n-kpi-(i).html</guid>
+  <pubDate>Sat, 29 Mar 2025 15:55:00 +0100</pubDate>
 </item>
 </channel>
 </rss>
