@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title><![CDATA[Example.com - draft]]></title>
+<description><![CDATA[Example.com - draft]]></description>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-draft.html</link>
+<lastBuildDate>Tue, 01 Apr 2025 16:32:26 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[new draft testing foot]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org07c0888">1. Testing foot </a>
+<ul>
+<li><a href="#orgf7df6bd">1.1. Tetsing foot</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-org07c0888" class="outline-2">
+<h2 id="org07c0888"><span class="section-number-2">1.</span> Testing foot <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup></h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgf7df6bd" class="outline-3">
+<h3 id="orgf7df6bd"><span class="section-number-3">1.1.</span> Tetsing foot</h3>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Testing foot 
+</p></div></div>
+
+
+</div>
+</div><div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-draft.html">draft</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-test.html">test</a> </div>]]></description>
+  <category><![CDATA[draft]]></category>
+  <category><![CDATA[test]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-01-new-draft-testing-foot.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-01-new-draft-testing-foot.html</guid>
+  <pubDate>Tue, 01 Apr 2025 16:30:00 +0200</pubDate>
+</item>
+</channel>
+</rss>

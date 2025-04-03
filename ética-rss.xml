@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title><![CDATA[Example.com - ética]]></title>
+<description><![CDATA[Example.com - ética]]></description>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-ética.html</link>
+<lastBuildDate>Thu, 03 Apr 2025 14:10:48 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Algoritmos Afectivos: La Cibernética de las Emociones  ]]></title>
+  <description><![CDATA[
+<div id="outline-container-orgaa1f6a4" class="outline-2">
+<h2 id="orgaa1f6a4">1. Origen y Contexto Histórico</h2>
+<div class="outline-text-2" id="text-orgaa1f6a4">
+<ul class="org-ul">
+<li>1.1. Raíces Disciplinares  
+<ul class="org-ul">
+<li>Combinación de:  
+<ul class="org-ul">
+<li><b>Cibernética</b> (Wiener, 1948): Feedback loops en sistemas.</li>
+<li><b>Psicología Affective</b> (Ekman, 1978): Taxonomía de emociones básicas.</li>
+<li><b>HCI</b> (Norman, 2004): Diseño emocional en interfaces.</li>
+</ul></li>
+</ul></li>
+
+<li>1.2. Primer Implementación Práctica  
+<ul class="org-ul">
+<li>Proyecto <b>"Affective Computing"</b> (MIT Media Lab, 1995) liderado por Rosalind Picard.</li>
+<li>Objetivo inicial: Ayudar a personas con autismo a interpretar emociones.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga5f4569" class="outline-2">
+<h2 id="orga5f4569">2. Arquitectura Técnica: Flujos Internos vs. Externos</h2>
+<div class="outline-text-2" id="text-orga5f4569">
+<ul class="org-ul">
+<li><p>
+2.1. Tabla Comparativa  
+</p>
+<table border="2" rules="all" frame="border">
+<caption class="t-above"><span class="table-number">Table 1:</span> Capas de Procesamiento en Algoritmos Afectivos</caption>
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Capa</th>
+<th scope="col" class="org-left">Componentes Internos</th>
+<th scope="col" class="org-left">Interacción Externa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Detección</b></td>
+<td class="org-left">- Sensores biométricos (ECG, EEG, cámara)</td>
+<td class="org-left">Usuario → Señales fisiológicas</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- NLP para análisis de texto (sentimiento)</td>
+<td class="org-left">Interacción verbal/escrita</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Procesamiento</b></td>
+<td class="org-left">- Modelos ML (CNN para rostros, RNN para voz)</td>
+<td class="org-left">Cloud → Edge computing</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- Bases de datos emocionales (ej.: AffectNet)</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Adaptación</b></td>
+<td class="org-left">- Rules engines (ej.: "Si estrés &gt; 70%, reducir dificultad")</td>
+<td class="org-left">App cambia interfaz/contenido</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Feedback</b></td>
+<td class="org-left">- A/B testing emocional</td>
+<td class="org-left">Usuario evalúa experiencia</td>
+</tr>
+</tbody>
+</table></li>
+
+<li><p>
+2.2. Diagrama de Flujo (Simplificado)  
+</p>
+
+<figure id="org8ccd7c8">
+<img src="diagrama_flujo.png" alt="diagrama_flujo.png">
+
+</figure>
+
+
+<figure id="org344ca27">
+<img src="images/diagrama_flujo.png" alt="diagrama_flujo.png">
+
+</figure></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org94d6e64" class="outline-2">
+<h2 id="org94d6e64">3. Evolución Crítica (2010-2024)</h2>
+<div class="outline-text-2" id="text-org94d6e64">
+<ul class="org-ul">
+<li><p>
+3.1. Fases Clave
+</p>
+
+<table border="2" rules="all" frame="border" class="&quot;with-lines&quot;">
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Año</th>
+<th scope="col" class="org-left">Hito</th>
+<th scope="col" class="org-left">Impacto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">2010</td>
+<td class="org-left">API de reconocimiento facial (Microsoft)</td>
+<td class="org-left">Standardización industrial</td>
+</tr>
+
+<tr>
+<td class="org-right">2016</td>
+<td class="org-left">Spotify "emocional" (patente US20160358527A1)</td>
+<td class="org-left">Personalización masiva</td>
+</tr>
+
+<tr>
+<td class="org-right">2021</td>
+<td class="org-left">GPT-3 + modulación emocional</td>
+<td class="org-left">Chatbots "empáticos"</td>
+</tr>
+
+<tr>
+<td class="org-right">2023</td>
+<td class="org-left">UE regula "emociones biométricas" (AI Act)</td>
+<td class="org-left">Limitaciones éticas</td>
+</tr>
+</tbody>
+</table></li>
+
+<li>3.2. Caso de Estudio: <b>Replika AI</b>  
+<ul class="org-ul">
+<li><b>Mecanismo</b>: Usa transformers para detectar depresión en mensajes.</li>
+<li><b>Polémica</b>: En 2023, usuarios reportaron dependencia emocional del bot.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org586c05f" class="outline-2">
+<h2 id="org586c05f">4. Controversias Éticas</h2>
+<div class="outline-text-2" id="text-org586c05f">
+<ul class="org-ul">
+<li>4.1. Riesgos Documentados  
+<ul class="org-ul">
+<li><b>"Dark Patterns" Emocionales</b>:  
+<ul class="org-ul">
+<li>Ej.: Redes sociales que exacerban ansiedad para aumentar engagement (ref: Zuboff, 2019).</li>
+</ul></li>
+<li><b>Sesgos Raciales</b>:  
+<ul class="org-ul">
+<li>Estudio de 2022 (Buolamwini &amp; Gebru) muestra error del 34% en rostros oscuros vs. 0.8% en claros.</li>
+</ul></li>
+</ul></li>
+
+<li>4.2. Posiciones Académicas  
+<ul class="org-ul">
+<li><b>Optimistas</b> (Picard, 2023): "Pueden reducir el suicidio con detección temprana".</li>
+<li><b>Críticos</b> (Stark, 2024): "Capitalismo de vigilancia 2.0: ahora roban tus emociones".</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf4ba43a" class="outline-2">
+<h2 id="orgf4ba43a">5. Futuro: 3 Escenarios Probables (2025-2030)</h2>
+<div class="outline-text-2" id="text-orgf4ba43a">
+<table border="2" rules="all" frame="border" class="&quot;with-lines&quot;">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Escenario</th>
+<th scope="col" class="org-left">Tecnología Involucrada</th>
+<th scope="col" class="org-left">Impacto Social</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Utopía</b></td>
+<td class="org-left">IA emocional en salud mental</td>
+<td class="org-left">Reducción del 40% en depresión</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Distopía</b></td>
+<td class="org-left">Publicidad afectiva en metaverso</td>
+<td class="org-left">Manipulación política</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Híbrido</b></td>
+<td class="org-left">Regulaciones "emocionales" globales</td>
+<td class="org-left">Equilibrio inestable</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org6128aab" class="outline-2">
+<h2 id="org6128aab">6. Referencias Documentales</h2>
+<div class="outline-text-2" id="text-org6128aab">
+<ul class="org-ul">
+<li>Libros:  
+<ul class="org-ul">
+<li>Picard, R. (1997). <b>Affective Computing</b>. MIT Press.</li>
+<li>Zuboff, S. (2019). <b>The Age of Surveillance Capitalism</b>.</li>
+</ul></li>
+<li>Papers:  
+<ul class="org-ul">
+<li>Buolamwini, J. (2018). <b>Gender Shades</b>. MIT Media Lab.</li>
+<li>EU AI Act (2023). <b>Regulación de Emociones Biométricas</b>.</li>
+</ul></li>
+<li>Patentes:  
+<ul class="org-ul">
+<li>US20160358527A1 (2016). <b>System for mood-based content selection</b>.</li>
+</ul></li>
+<li>Estudios:  
+<ul class="org-ul">
+<li>IEEE (2024). <b>Ethical Guidelines for Affective AI</b>.</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>
+"La pregunta no es si las máquinas pueden sentir emociones, sino cómo usan las nuestras contra nosotros." — Bruce Sterling (2024)  
+</p>
+</blockquote>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-algoritmos.html">algoritmos</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ética.html">ética</a> </div>]]></description>
+  <category><![CDATA[algoritmos]]></category>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[ética]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-03-algoritmos-afectivos:-la-cibern%C3%A9tica-de-las-emociones--.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-03-algoritmos-afectivos:-la-cibern%C3%A9tica-de-las-emociones--.html</guid>
+  <pubDate>Thu, 03 Apr 2025 12:47:00 +0200</pubDate>
+</item>
+</channel>
+</rss>
