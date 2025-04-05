@@ -4,7 +4,239 @@
 <title><![CDATA[Example.com - programacion]]></title>
 <description><![CDATA[Example.com - programacion]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-programacion.html</link>
-<lastBuildDate>Thu, 03 Apr 2025 14:17:57 +0200</lastBuildDate>
+<lastBuildDate>Sat, 05 Apr 2025 22:34:19 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[30 Términos de IA que Están Transformando la Programación en 2025]]></title>
+  <description><![CDATA[
+<div id="outline-container-org4ebfa5c" class="outline-2">
+<h2 id="org4ebfa5c">30 Términos de IA que Están Transformando la Programación en 2025</h2>
+<div class="outline-text-2" id="text-org4ebfa5c">
+<p>
+La inteligencia artificial (IA) está redefiniendo la programación en 2025, con términos como "vibe-coding" liderando el camino. Desde Emacs hasta herramientas como Grok o Copilot, la IA nos permite crear código de manera más intuitiva, rápida y creativa. En este post, exploramos 30 conceptos clave que están moldeando esta era de programación asistida por IA, ideales para potenciar tu flujo de trabajo en Emacs y más allá.
+</p>
+</div>
+<div id="outline-container-orgcb11a5e" class="outline-3">
+<h3 id="orgcb11a5e">Lista de Términos</h3>
+<div class="outline-text-3" id="text-orgcb11a5e">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Término</th>
+<th scope="col" class="org-left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Vibe-Coding</td>
+<td class="org-left">Programación asistida por IA donde describes en lenguaje natural lo que quieres, y la IA genera el código. Popularizado por Andrej Karpathy en 2025.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Prompt Engineering</td>
+<td class="org-left">Diseñar instrucciones precisas para obtener respuestas útiles de modelos de IA.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">LLM (Large Language Model)</td>
+<td class="org-left">Modelos de lenguaje masivos, como Grok, base de herramientas de generación de código.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">AI-Assisted Programming</td>
+<td class="org-left">Programación con ayuda de IA, como GitHub Copilot, para sugerencias y automatización.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Natural Language Programming</td>
+<td class="org-left">Codificar describiendo intenciones en lenguaje natural, sin sintaxis técnica estricta.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Code Generation</td>
+<td class="org-left">Generación automática de código a partir de descripciones o ejemplos.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">AI Agent</td>
+<td class="org-left">Entidades de IA autónomas que escriben código o gestionan tareas.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Low-Code/No-Code</td>
+<td class="org-left">Crear aplicaciones con mínima codificación, potenciadas por IA.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Copilot</td>
+<td class="org-left">Asistente de IA que sugiere código en tiempo real, popularizado por GitHub Copilot.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">AutoML</td>
+<td class="org-left">Automatización de procesos de aprendizaje automático con IA.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Hallucination</td>
+<td class="org-left">Cuando la IA genera información incorrecta o inventada, un reto en la generación de código.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Context Window</td>
+<td class="org-left">Límite de texto que un modelo de IA puede procesar a la vez.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">SuperWhisper</td>
+<td class="org-left">Herramienta de voz a texto para dictar instrucciones a modelos de IA.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Iterative Refinement</td>
+<td class="org-left">Mejorar resultados de IA mediante iteraciones de prompts y retroalimentación.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">AI-Driven Development</td>
+<td class="org-left">Desarrollo guiado por IA en todas las etapas del software.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Code Review by AI</td>
+<td class="org-left">Revisión de código por IA para detectar errores o sugerir mejoras.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Conversational Coding</td>
+<td class="org-left">Programar "hablando" con la IA, describiendo problemas y recibiendo soluciones.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">AI Wrapper</td>
+<td class="org-left">Aplicaciones que simplifican el uso de modelos de IA para tareas específicas.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Exponential Coding</td>
+<td class="org-left">Velocidad exponencial en desarrollo gracias a la IA, ligada a vibe-coding.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Software for One</td>
+<td class="org-left">Crear herramientas personalizadas con IA para necesidades individuales.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Few-Shot Learning</td>
+<td class="org-left">Técnica donde la IA aprende de pocos ejemplos, útil para personalizar generadores de código.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Zero-Shot Learning</td>
+<td class="org-left">Capacidad de la IA para realizar tareas sin entrenamiento previo, aplicada a programación.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Fine-Tuning</td>
+<td class="org-left">Ajustar un modelo de IA con datos específicos para mejorar su precisión en tareas como coding.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">AI Pair Programming</td>
+<td class="org-left">Colaboración en tiempo real entre humanos y IA para escribir código, como un "compañero".</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Semantic Code Search</td>
+<td class="org-left">Búsqueda de código basada en significado, no solo palabras clave, potenciada por IA.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Synthetic Data</td>
+<td class="org-left">Datos generados por IA para entrenar modelos o probar software, complementando vibe-coding.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Explainable AI (XAI)</td>
+<td class="org-left">IA que explica sus decisiones, útil para depurar código generado automáticamente.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Neural Code Completion</td>
+<td class="org-left">Autocompletado de código basado en redes neuronales, más avanzado que reglas estáticas.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">AI-Augmented Debugging</td>
+<td class="org-left">Depuración asistida por IA que identifica errores y sugiere correcciones automáticamente.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Hyperautomation</td>
+<td class="org-left">Automatización extrema de procesos, incluyendo desarrollo de software, con IA.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgc9156e6" class="outline-3">
+<h3 id="orgc9156e6">Reflexión</h3>
+<div class="outline-text-3" id="text-orgc9156e6">
+<p>
+Con 30 términos en la lista, queda claro que la IA no solo acelera la programación, sino que cambia cómo pensamos el código. En Emacs, podemos integrar estas ideas con herramientas como `org-babel` para ejecutar código generado por IA o `org-static-blog` para documentar experimentos. "Vibe-coding" sigue siendo mi favorito por su enfoque en la creatividad, pero ¿cuál te inspira más a ti?
+</p>
+
+<p>
+[1] Experimenta vibe-coding: describe un script en un bloque de código y pide a Grok que lo genere por ti.
+</p>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">ia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-vibe-coding.html">vibe-coding</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-programacion.html">programacion</a> </div>]]></description>
+  <category><![CDATA[ia]]></category>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[vibe-coding]]></category>
+  <category><![CDATA[programacion]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-05-30-t%C3%A9rminos-de-ia-que-est%C3%A1n-transformando-la-programaci%C3%B3n-en-2025.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-05-30-t%C3%A9rminos-de-ia-que-est%C3%A1n-transformando-la-programaci%C3%B3n-en-2025.html</guid>
+  <pubDate>Sat, 05 Apr 2025 14:42:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[Configuración básica y mínima para empezar con Emacs (i)]]></title>
   <description><![CDATA[

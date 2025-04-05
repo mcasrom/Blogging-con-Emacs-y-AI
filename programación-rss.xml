@@ -4,35 +4,35 @@
 <title><![CDATA[Example.com - programación]]></title>
 <description><![CDATA[Example.com - programación]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-programación.html</link>
-<lastBuildDate>Thu, 03 Apr 2025 14:17:58 +0200</lastBuildDate>
+<lastBuildDate>Sat, 05 Apr 2025 22:34:20 +0200</lastBuildDate>
 <item>
-  <title><![CDATA[Vibe Coding: Programación con ]]></title>
+  <title><![CDATA[Vibe Coding: Programación con Esteroides]]></title>
   <description><![CDATA[
-<div id="outline-container-orgd251e6c" class="outline-2">
-<h2 id="orgd251e6c"><span class="section-number-2">1.</span> Introducción a Vibe Coding: Un Viaje Estelar</h2>
+<div id="outline-container-org2047f88" class="outline-2">
+<h2 id="org2047f88"><span class="section-number-2">1.</span> Introducción a Vibe Coding: Un Viaje Estelar</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 En el infinito campo de asteroides de la programación, un nuevo fenómeno ha tomado forma en 2025: el <b>vibe coding</b>. Imagina pilotar una nave espacial, dictando órdenes en lenguaje natural mientras una inteligencia artificial (IA) transforma tus ideas en código funcional. Este enfoque, acuñado por Andrej Karpathy, está redefiniendo el desarrollo de software, llevándolo a órbitas accesibles para todos. En este tutorial, exploraremos su origen, desarrollo, futuro y ejemplos prácticos, todo desde un blog estático en Emacs con un toque cósmico.
 </p>
 </div>
 </div>
-<div id="outline-container-orgfb4223e" class="outline-2">
-<h2 id="orgfb4223e"><span class="section-number-2">2.</span> ¿Qué es Vibe Coding?</h2>
+<div id="outline-container-org7e13faf" class="outline-2">
+<h2 id="org7e13faf"><span class="section-number-2">2.</span> ¿Qué es Vibe Coding?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 El <b>vibe coding</b> es un método donde describes lo que deseas en lenguaje natural —"haz un juego de asteroides en JavaScript"— y un modelo de lenguaje avanzado (LLM) genera el código. Tu tarea pasa de escribir sintaxis a guiar la IA como un navegante estelar, ajustando y refinando el resultado. Es programación intuitiva, casi como esquivar asteroides con comandos de voz[1].
 </p>
 </div>
 </div>
-<div id="outline-container-orgeeedc7d" class="outline-2">
-<h2 id="orgeeedc7d"><span class="section-number-2">3.</span> Origen: El Big Bang del Vibe Coding</h2>
+<div id="outline-container-org13e4976" class="outline-2">
+<h2 id="org13e4976"><span class="section-number-2">3.</span> Origen: El Big Bang del Vibe Coding</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 El término <b>vibe coding</b> explotó en escena en febrero de 2025, cuando Andrej Karpathy, exinvestigador de OpenAI y Tesla, lo mencionó en un tuit: "Ríndete a las vibras, abraza exponenciales, olvida que el código existe"[2]. Inspirado por el poder de herramientas como Cursor y Claude, Karpathy vio un futuro donde la IA elimina la barrera técnica de la programación. Este fue el Big Bang de un movimiento que ya se gestaba con GitHub Copilot y otros asistentes de código desde 2022[3].
 </p>
 </div>
-<div id="outline-container-org00bb2f0" class="outline-3">
-<h3 id="org00bb2f0"><span class="section-number-3">3.1.</span> Hitos Iniciales</h3>
+<div id="outline-container-org8688341" class="outline-3">
+<h3 id="org8688341"><span class="section-number-3">3.1.</span> Hitos Iniciales</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li><b>2022-2023</b>: ChatGPT y Copilot demuestran que la IA puede escribir código funcional[4].</li>
@@ -42,15 +42,15 @@ El término <b>vibe coding</b> explotó en escena en febrero de 2025, cuando And
 </div>
 </div>
 </div>
-<div id="outline-container-org0acc4ae" class="outline-2">
-<h2 id="org0acc4ae"><span class="section-number-2">4.</span> Desarrollo: La Órbita del Vibe Coding</h2>
+<div id="outline-container-org7d84b0d" class="outline-2">
+<h2 id="org7d84b0d"><span class="section-number-2">4.</span> Desarrollo: La Órbita del Vibe Coding</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Desde su origen, el <b>vibe coding</b> ha ganado velocidad como un asteroide en caída libre. Un informe de Y Combinator en marzo de 2025 reveló que el 25% de sus startups de invierno usaron bases de código generadas por IA en un 95%[6]. Esto marca un cambio gravitacional: el desarrollo se ha vuelto más rápido, accesible y experimental, aunque no sin colisiones.
 </p>
 </div>
-<div id="outline-container-orgff69602" class="outline-3">
-<h3 id="orgff69602"><span class="section-number-3">4.1.</span> Herramientas Clave</h3>
+<div id="outline-container-orgf415b6f" class="outline-3">
+<h3 id="orgf415b6f"><span class="section-number-3">4.1.</span> Herramientas Clave</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li><b>Cursor</b>: IDE optimizado para <b>vibe coding</b> con edición natural[7].</li>
@@ -60,8 +60,8 @@ Desde su origen, el <b>vibe coding</b> ha ganado velocidad como un asteroide en 
 </ul>
 </div>
 </div>
-<div id="outline-container-org26ced3a" class="outline-3">
-<h3 id="org26ced3a"><span class="section-number-3">4.2.</span> Ejemplo Real</h3>
+<div id="outline-container-org92d7ae4" class="outline-3">
+<h3 id="org92d7ae4"><span class="section-number-3">4.2.</span> Ejemplo Real</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Kevin Roose, del New York Times, documentó su experiencia con <b>vibe coding</b> creando "LunchBox Buddy", una app para sugerencias de almuerzo. Aunque funcional, generó reseñas falsas por error, mostrando las limitaciones actuales[11].
@@ -69,8 +69,8 @@ Kevin Roose, del New York Times, documentó su experiencia con <b>vibe coding</b
 </div>
 </div>
 </div>
-<div id="outline-container-org56f2800" class="outline-2">
-<h2 id="org56f2800"><span class="section-number-2">5.</span> Futuro: ¿Hacia Dónde Nos Lleva Esta Órbita?</h2>
+<div id="outline-container-orged7dd4b" class="outline-2">
+<h2 id="orged7dd4b"><span class="section-number-2">5.</span> Futuro: ¿Hacia Dónde Nos Lleva Esta Órbita?</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 El <b>vibe coding</b> promete un cosmos de posibilidades, pero su trayectoria no está exenta de turbulencias:
@@ -87,15 +87,15 @@ Simon Willison, experto en IA, advierte que el <b>vibe coding</b> brilla en prot
 </p>
 </div>
 </div>
-<div id="outline-container-orge578d9c" class="outline-2">
-<h2 id="orge578d9c"><span class="section-number-2">6.</span> Tutorial Práctico: Vibe Coding un Juego de Asteroides</h2>
+<div id="outline-container-orga61f9b6" class="outline-2">
+<h2 id="orga61f9b6"><span class="section-number-2">6.</span> Tutorial Práctico: Vibe Coding un Juego de Asteroides</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Creemos un juego de asteroides en HTML5 usando <b>vibe coding</b>. Desde Emacs, pediremos a una IA (yo, Grok) que genere el código, simulando el flujo real.
 </p>
 </div>
-<div id="outline-container-org3577f6d" class="outline-3">
-<h3 id="org3577f6d"><span class="section-number-3">6.1.</span> Paso 1: Definir el Prompt</h3>
+<div id="outline-container-org4af84e7" class="outline-3">
+<h3 id="org4af84e7"><span class="section-number-3">6.1.</span> Paso 1: Definir el Prompt</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 En `asteroides.org`, escribe:
@@ -106,8 +106,8 @@ En `asteroides.org`, escribe:
 </div>
 </div>
 </div>
-<div id="outline-container-org2c718cf" class="outline-3">
-<h3 id="org2c718cf"><span class="section-number-3">6.2.</span> Paso 2: Código Generado</h3>
+<div id="outline-container-org265a225" class="outline-3">
+<h3 id="org265a225"><span class="section-number-3">6.2.</span> Paso 2: Código Generado</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 Aquí está el resultado, para `asteroides.html`:
@@ -193,8 +193,8 @@ Aquí está el resultado, para `asteroides.html`:
 </div>
 </div>
 </div>
-<div id="outline-container-orgd1512ec" class="outline-3">
-<h3 id="orgd1512ec"><span class="section-number-3">6.3.</span> Paso 3: Iterar</h3>
+<div id="outline-container-org67a4524" class="outline-3">
+<h3 id="org67a4524"><span class="section-number-3">6.3.</span> Paso 3: Iterar</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
 Ajusta el prompt (e.g., "agrega un puntaje") y la IA refinará el código, demostrando la flexibilidad del <b>vibe coding</b>.
@@ -202,16 +202,16 @@ Ajusta el prompt (e.g., "agrega un puntaje") y la IA refinará el código, demos
 </div>
 </div>
 </div>
-<div id="outline-container-org7459e81" class="outline-2">
-<h2 id="org7459e81"><span class="section-number-2">7.</span> Conclusión: Navegando el Cosmos del Código</h2>
+<div id="outline-container-org163b53a" class="outline-2">
+<h2 id="org163b53a"><span class="section-number-2">7.</span> Conclusión: Navegando el Cosmos del Código</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 El <b>vibe coding</b> es una supernova en la programación, expandiendo quién puede crear software y cómo. Desde el tuit de Karpathy hasta su adopción masiva, ha transformado el desarrollo en un viaje estelar. Para un blog en Emacs, es una herramienta ideal para explorar y compartir ideas cósmicas.
 </p>
 </div>
 </div>
-<div id="outline-container-org5c8fd57" class="outline-2">
-<h2 id="org5c8fd57"><span class="section-number-2">8.</span> Notas al Pie</h2>
+<div id="outline-container-org9b813a1" class="outline-2">
+<h2 id="org9b813a1"><span class="section-number-2">8.</span> Notas al Pie</h2>
 <div class="outline-text-2" id="text-8">
 <ul class="org-ul">
 <li>[1] Karpathy, A. "Vibe Coding: The Future of Software Creation", X Post, 2025-02-15.</li>
