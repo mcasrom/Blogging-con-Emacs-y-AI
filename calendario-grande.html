@@ -41,20 +41,7 @@
            text-align: center; /* Asegurar que el texto esté centrado */
          }
          .blog-title {
-           font-size: 2em;
-           margin: 0;
-         }
-         .blog-subtitle {
-           font-size: 1.1em;
-           color: #666;
-           margin-top: 5px;
-         }
-         .blog-email {
-           font-size: 0.9em;
-           color: #777;
-           margin-top: 8px;
-         }
-         .blog-email a {
+
            color: #2980b9;
            text-decoration: none;
          }
@@ -100,7 +87,7 @@
          }
           /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
          a {
-           font-size: 1.3em;          /* Tamaño más grande */
+           font-size: 1em;          /* Tamaño más grande */
            color: #1a73e8;           /* Color más visible */
            text-decoration: underline; /* Subrayado para destacar */
            font-weight: bold;         /* Negritas para resaltar */
@@ -109,6 +96,32 @@
            color: #ff4500;           /* Color al pasar el ratón */
            background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
          }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .8em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .8em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
        </style>
        
        <div class='blog-header'>
@@ -118,15 +131,15 @@
            <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
            <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
          </div>
-       </div>
-       
+       </div>       
        <nav>
          <a href='index.html'>Inicio</a> |
-	 <a href='viajes.html'>Viajes</a> |
+         <a href='viajes.html'>Viajes</a> |
          <a href='archive.html'>Archivo</a> |
          <a href='contacto.html'>Contacto</a> |
          <a href='nosotros.html'>Nosotros</a> |
-         <a href='proyectos.html'>Proyectos</a>
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
          <a href='tag-tutoriales.html'>Tutoriales</a> |
          <a href='tag-opiniones.html'>Opiniones</a>
        </nav>
@@ -134,17 +147,17 @@
 </head>
 <body>
 <!-- Esto asegura que no se trate como un post en org-static-blog -->
-<div id="outline-container-orgc087f64" class="outline-2">
-<h2 id="orgc087f64">Introducción</h2>
-<div class="outline-text-2" id="text-orgc087f64">
+<div id="outline-container-orga7c2ce0" class="outline-2">
+<h2 id="orga7c2ce0">Introducción</h2>
+<div class="outline-text-2" id="text-orga7c2ce0">
 <p>
 Esta página muestra un calendario mensual del mes actual, generado con Emacs y Org-mode como una página estática en mi blog con `org-static-blog`. Usa un CSS específico que no afecta al resto del sitio.
 </p>
 </div>
 </div>
-<div id="outline-container-orgde2c29d" class="outline-2">
-<h2 id="orgde2c29d">Calendario mensual grande</h2>
-<div class="outline-text-2" id="text-orgde2c29d">
+<div id="outline-container-org2b5f8ab" class="outline-2">
+<h2 id="org2b5f8ab">Calendario mensual</h2>
+<div class="outline-text-2" id="text-org2b5f8ab">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" class="calendar-large">
 
 
@@ -228,9 +241,9 @@ Esta página muestra un calendario mensual del mes actual, generado con Emacs y 
 </table>
 </div>
 </div>
-<div id="outline-container-org2916cdd" class="outline-2">
-<h2 id="org2916cdd">Nota interactiva</h2>
-<div class="outline-text-2" id="text-org2916cdd">
+<div id="outline-container-org5a2cc63" class="outline-2">
+<h2 id="org5a2cc63">Nota interactiva</h2>
+<div class="outline-text-2" id="text-org5a2cc63">
 <p>
 En Emacs, usa `M-x mi-calendario-org` para una vista interactiva con `calfw`.
 </p>

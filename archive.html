@@ -46,20 +46,7 @@
            text-align: center; /* Asegurar que el texto esté centrado */
          }
          .blog-title {
-           font-size: 2em;
-           margin: 0;
-         }
-         .blog-subtitle {
-           font-size: 1.1em;
-           color: #666;
-           margin-top: 5px;
-         }
-         .blog-email {
-           font-size: 0.9em;
-           color: #777;
-           margin-top: 8px;
-         }
-         .blog-email a {
+
            color: #2980b9;
            text-decoration: none;
          }
@@ -105,7 +92,7 @@
          }
           /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
          a {
-           font-size: 1.3em;          /* Tamaño más grande */
+           font-size: 1em;          /* Tamaño más grande */
            color: #1a73e8;           /* Color más visible */
            text-decoration: underline; /* Subrayado para destacar */
            font-weight: bold;         /* Negritas para resaltar */
@@ -114,6 +101,32 @@
            color: #ff4500;           /* Color al pasar el ratón */
            background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
          }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .8em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .8em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
        </style>
        
        <div class='blog-header'>
@@ -123,15 +136,15 @@
            <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
            <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
          </div>
-       </div>
-       
+       </div>       
        <nav>
          <a href='index.html'>Inicio</a> |
-	 <a href='viajes.html'>Viajes</a> |
+         <a href='viajes.html'>Viajes</a> |
          <a href='archive.html'>Archivo</a> |
          <a href='contacto.html'>Contacto</a> |
          <a href='nosotros.html'>Nosotros</a> |
-         <a href='proyectos.html'>Proyectos</a>
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
          <a href='tag-tutoriales.html'>Tutoriales</a> |
          <a href='tag-opiniones.html'>Opiniones</a>
        </nav>
@@ -140,8 +153,8 @@
 <div id="preamble" class="status"></div>
 <div id="content">
 <h1 class="title">Archivo</h1>
-<div class="post-date">08/04/2025</div><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rincón-español-en-japón.html">Explorando Shima Spain Village: Un Rincón Español en Japón</a></h2>
 <div class="post-date">08/04/2025</div><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html">Índice de Publicaciones del Blog</a></h2>
+<div class="post-date">08/04/2025</div><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-08--aranceles-de-ee.uu.-bajo-donald-trump-(marzo-2025).html">Aranceles de EE.UU. bajo Donald Trump (Marzo 2025)</a></h2>
 <div class="post-date">08/04/2025</div><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-08-detección-de-vulnerabilidades-en-linux-con-bash-y-org-mode.html">Detección de Vulnerabilidades en Linux con Bash y Org Mode</a></h2>
 <div class="post-date">06/04/2025</div><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-06-la-nueva-situación-geoestratégica-mundial-tras-la-llegada-de-trump-como-47º-presidente-de-ee.uu..html">La nueva situación geoestratégica mundial tras la llegada de Trump como 47º presidente de EE.UU.</a></h2>
 <div class="post-date">06/04/2025</div><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-06-la-anormalidad-política-de-donald-trump:-un-análisis-(ii).html">La anormalidad política de Donald Trump: un análisis (ii)</a></h2>
@@ -194,6 +207,7 @@
 <div class="post-date">18/03/2025</div><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-tutorial-de-seguridad-en-linux:-mínimo-de-protección-ante-ataques-informáticos-(i).html">Tutorial de Seguridad en Linux: Mínimo de Protección ante Ataques Informáticos (I)</a></h2>
 <div class="post-date">18/03/2025</div><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-configuración-mínima-de-seguridad-con-scripts-bash-y-python.html">Configuración Mínima de Seguridad con Scripts Bash y Python</a></h2>
 <div class="post-date">18/03/2025</div><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-índice-de-indicadores-clave-(kpi)-para-la-evaluación-integral-de-un-país.html">Índice de Indicadores Clave (KPI) para la Evaluación Integral de un País</a></h2>
+<div class="post-date">18/03/2025</div><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rincón-español-en-japón.html">Explorando Shima Spain Village: Un Rincón Español en Japón</a></h2>
 <div class="post-date">17/03/2025</div><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-17-opciones-para-ordenar-downloads-en-linux-oss.html">Opciones para Ordenar Downloads en Linux OSs</a></h2>
 <div class="post-date">15/03/2025</div><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-15-renombrando-archivos-pdf-con-fecha-de-modificación-en-linux.html">Renombrando Archivos PDF con Fecha de Modificación en Linux</a></h2>
 <div class="post-date">15/03/2025</div><h2 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-15-cómo-limpiar-archivos-y-carpetas-vacías-en-linux-con-un-script-bash.html">Cómo limpiar archivos y carpetas vacías en Linux con un script Bash</a></h2>
