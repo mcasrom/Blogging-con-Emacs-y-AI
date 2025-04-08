@@ -1,0 +1,21 @@
+/* ~/myblog/public/calendar-large.css */
+table.calendar-large {
+    width: 100%;
+    max-width: 600px; /* Reducir el ancho total */
+    border-collapse: collapse;
+    margin: 10px auto; /* Menos margen */
+}
+table.calendar-large th, table.calendar-large td {
+    font-size: 16px; /* Reducir tamaño de fuente de 24px a 16px */
+    padding: 10px;   /* Reducir padding de 20px a 10px */
+    text-align: center;
+    border: 1px solid #ccc;
+    min-height: 40px; /* Reducir altura mínima de 80px a 40px */
+    white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+    overflow: hidden;    /* Cortar texto largo */
+    text-overflow: ellipsis; /* Mostrar "..." si el texto es muy largo */
+}
+table.calendar-large th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}

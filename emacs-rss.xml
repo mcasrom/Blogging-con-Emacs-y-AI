@@ -4,7 +4,252 @@
 <title><![CDATA[Example.com - emacs]]></title>
 <description><![CDATA[Example.com - emacs]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-emacs.html</link>
-<lastBuildDate>Sun, 06 Apr 2025 04:59:19 +0200</lastBuildDate>
+<lastBuildDate>Tue, 08 Apr 2025 07:02:15 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Detección de Vulnerabilidades en Linux con Bash y Org Mode]]></title>
+  <description><![CDATA[
+<div id="outline-container-org9ce4c31" class="outline-2">
+<h2 id="org9ce4c31">Introducción</h2>
+<div class="outline-text-2" id="text-org9ce4c31">
+<p>
+En la administración de sistemas Linux, una de las tareas más críticas es mantener actualizado el sistema y mitigar cualquier <b>vulnerabilidad</b> presente. Una vulnerabilidad es una debilidad en el sistema que puede ser explotada para ganar acceso no autorizado, ejecutar código malicioso o afectar la disponibilidad y confidencialidad del sistema.
+</p>
+
+<p>
+Este artículo documenta un método simple pero efectivo para identificar vulnerabilidades conocidas (CVE) en paquetes instalados en una distribución basada en Debian/Ubuntu, utilizando:
+</p>
+
+<ul class="org-ul">
+<li>Herramientas de línea de comandos (Bash, `dpkg`, `curl`)</li>
+<li>Consulta a la API de Vulners.com</li>
+<li>Documentación automática en formato Org Mode para su exportación a PDF o HTML</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org57862a5" class="outline-2">
+<h2 id="org57862a5">Herramientas necesarias</h2>
+<div class="outline-text-2" id="text-org57862a5">
+<p>
+Antes de comenzar, asegúrate de tener instaladas las siguientes utilidades:
+</p>
+
+<ul class="org-ul">
+<li>`dpkg` (instalado por defecto en Ubuntu)</li>
+<li>`curl` para realizar peticiones web</li>
+<li>Editor Emacs con soporte para Org Mode</li>
+</ul>
+
+<p>
+Puedes instalar `curl` así:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt update
+sudo apt install curl
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf2320d0" class="outline-2">
+<h2 id="orgf2320d0">Extracción del listado de software instalado</h2>
+<div class="outline-text-2" id="text-orgf2320d0">
+<p>
+Primero generamos un listado de los paquetes instalados con sus versiones:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">dpkg-query -W -f=<span style="color: #005F00;">'${binary:Package} ${Version}\n'</span> &gt; paquetes_instalados.txt
+</pre>
+</div>
+
+<p>
+Este archivo será leído por nuestro script de análisis de vulnerabilidades.
+</p>
+</div>
+</div>
+<div id="outline-container-org76a2eb3" class="outline-2">
+<h2 id="org76a2eb3">Script de análisis con Bash</h2>
+<div class="outline-text-2" id="text-org76a2eb3">
+<p>
+A continuación, presentamos el script en Bash que se encarga de:
+</p>
+
+<ol class="org-ol">
+<li>Leer el archivo de paquetes instalados</li>
+<li>Buscar cada paquete en la API pública de <a href="https://vulners.com">Vulners</a></li>
+<li>Extraer posibles CVEs relacionados</li>
+<li>Generar automáticamente un informe en formato Org Mode</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+
+<span style="color: #004651;">OUTPUT</span>=<span style="color: #005F00;">"vulnerabilidades.org"</span>
+<span style="color: #004651;">PACKAGE_LIST</span>=<span style="color: #005F00;">"paquetes_instalados.txt"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verifica dependencias</span>
+<span style="color: #D70000;">if ! </span><span style="color: #1F55A0;">command</span> -v curl &amp;&gt; /dev/null; <span style="color: #D70000;">then</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Este script requiere 'curl'. Inst&#225;lalo con: sudo apt install curl"</span>
+    <span style="color: #D70000;">exit</span> 1
+<span style="color: #D70000;">fi</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">T&#237;tulo del archivo Org</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"#+TITLE: An&#225;lisis de Vulnerabilidades del Sistema"</span> &gt; <span style="color: #005F00;">"$OUTPUT"</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"#+DATE: $(</span><span style="color: #1F55A0; font-weight: bold;">date '+%Y-%m-%d'</span><span style="color: #005F00;">)"</span> &gt;&gt; <span style="color: #005F00;">"$OUTPUT"</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"* Resultados de escaneo de vulnerabilidades"</span> &gt;&gt; <span style="color: #005F00;">"$OUTPUT"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Obtener lista de paquetes instalados</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"[*] Obteniendo lista de paquetes..."</span>
+dpkg-query -W -f=<span style="color: #005F00;">'${binary:Package} ${Version}\n'</span> &gt; <span style="color: #005F00;">"$PACKAGE_LIST"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Buscar vulnerabilidades por paquete</span>
+<span style="color: #D70000;">while</span> <span style="color: #004651;">IFS</span>= read -r line; <span style="color: #D70000;">do</span>
+    <span style="color: #004651;">nombre</span>=$(<span style="color: #1F55A0; font-weight: bold;">echo "$line" | awk '{print $1}'</span>)
+    <span style="color: #004651;">version</span>=$(<span style="color: #1F55A0; font-weight: bold;">echo "$line" | awk '{print $2}'</span>)
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"[+] Buscando CVEs para: $nombre $version"</span>
+
+    <span style="color: #004651;">query</span>=<span style="color: #005F00;">"${nombre}%20${version}"</span>
+    <span style="color: #004651;">response</span>=$(<span style="color: #1F55A0; font-weight: bold;">curl -s "https://vulners.com/api/v3/search/lucene/?query=$query&amp;size=3"</span>)
+
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"** $nombre $version"</span> &gt;&gt; <span style="color: #005F00;">"$OUTPUT"</span>
+
+    <span style="color: #D70000;">if </span><span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"$response"</span> | grep -q <span style="color: #005F00;">'"cvelist":'</span>; <span style="color: #D70000;">then</span>
+        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"   &#8594; Vulnerabilidades encontradas."</span>
+        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"   - Vulnerabilidades encontradas:"</span> &gt;&gt; <span style="color: #005F00;">"$OUTPUT"</span>
+        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"$response"</span> | grep -oP <span style="color: #005F00;">'"id":\s*"\K(CVE-[0-9\-]+)'</span> | uniq | sed <span style="color: #005F00;">'s/^/     - /'</span> &gt;&gt; <span style="color: #005F00;">"$OUTPUT"</span>
+    <span style="color: #D70000;">else</span>
+        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"   &#8594; Sin vulnerabilidades encontradas."</span>
+        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"   - Sin vulnerabilidades encontradas."</span> &gt;&gt; <span style="color: #005F00;">"$OUTPUT"</span>
+    <span style="color: #D70000;">fi</span>
+
+    sleep 1  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Para no sobrecargar el servidor</span>
+<span style="color: #D70000;">done</span> &lt; <span style="color: #005F00;">"$PACKAGE_LIST"</span>
+
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"[&#10004;] An&#225;lisis completado. Archivo generado: $OUTPUT"</span>
+</pre>
+</div>
+
+<p>
+Para usarlo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">chmod +x check_vulnerabilities_org.sh
+./check_vulnerabilities_org.sh
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1e11a39" class="outline-2">
+<h2 id="org1e11a39">Ejemplo de resultados</h2>
+<div class="outline-text-2" id="text-org1e11a39">
+<p>
+A continuación se muestra un extracto real generado automáticamente con el script:
+</p>
+
+<p>
+#+begin<sub>example</sub>
+</p>
+</div>
+<div id="outline-container-orgac93d32" class="outline-3">
+<h3 id="orgac93d32">openssl 3.0.2-0ubuntu1.15</h3>
+<div class="outline-text-3" id="text-orgac93d32">
+<ul class="org-ul">
+<li>Vulnerabilidades encontradas:
+<ul class="org-ul">
+<li>CVE-2022-0778</li>
+<li>CVE-2023-0464</li>
+<li>CVE-2023-2650</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5e1cb18" class="outline-3">
+<h3 id="org5e1cb18">firefox 124.0</h3>
+<div class="outline-text-3" id="text-org5e1cb18">
+<ul class="org-ul">
+<li>Vulnerabilidades encontradas:
+<ul class="org-ul">
+<li>CVE-2024-29943</li>
+<li>CVE-2024-29944</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org51f7d0f" class="outline-3">
+<h3 id="org51f7d0f">vlc 3.0.16</h3>
+<div class="outline-text-3" id="text-org51f7d0f">
+<ul class="org-ul">
+<li>Sin vulnerabilidades encontradas.</li>
+</ul>
+<p>
+#+end<sub>example</sub>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd156269" class="outline-2">
+<h2 id="orgd156269">Exportar resultados a PDF o HTML</h2>
+<div class="outline-text-2" id="text-orgd156269">
+<p>
+Desde Emacs, abre el archivo generado `vulnerabilidades.org` y presiona:
+</p>
+
+<ul class="org-ul">
+<li>`C-c C-e l o` → Exportar a PDF</li>
+<li>`C-c C-e h o` → Exportar a HTML</li>
+</ul>
+
+<p>
+Esto genera un informe profesional que puedes archivar, compartir o añadir a tu blog.
+</p>
+</div>
+</div>
+<div id="outline-container-orgcdbb603" class="outline-2">
+<h2 id="orgcdbb603">Recomendaciones</h2>
+<div class="outline-text-2" id="text-orgcdbb603">
+<ul class="org-ul">
+<li>Ejecutar este script regularmente como parte de tus tareas de mantenimiento.</li>
+<li>Configurar alertas automáticas de CVE con herramientas como `apticron`, `unattended-upgrades` o `lynis`.</li>
+<li>Complementar con escáneres más avanzados como <b>OpenVAS</b> o <b>Lynis</b> para auditorías completas.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgca61169" class="outline-2">
+<h2 id="orgca61169">Conclusión</h2>
+<div class="outline-text-2" id="text-orgca61169">
+<p>
+La seguridad no es un estado, es un proceso. Automatizar la detección de vulnerabilidades con herramientas simples como Bash, APIs públicas y Org Mode nos permite mantenernos al tanto de riesgos sin depender de soluciones comerciales complejas.
+</p>
+
+<p>
+Este enfoque demuestra el poder de las herramientas libres combinadas: un sistema Linux, un script Bash y la flexibilidad de Emacs.
+</p>
+</div>
+</div>
+<div id="outline-container-org574fc33" class="outline-2">
+<h2 id="org574fc33">Recursos</h2>
+<div class="outline-text-2" id="text-org574fc33">
+<ul class="org-ul">
+<li><a href="https://vulners.com">Vulners API</a></li>
+<li><a href="https://nvd.nist.gov">National Vulnerability Database</a></li>
+<li><a href="https://cve.mitre.org">CVE Mitre</a></li>
+<li><a href="https://cisofy.com/lynis/">Lynis Auditor</a></li>
+<li><a href="https://www.greenbone.net/">Greenbone/OpenVAS</a></li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-orgmode.html">orgmode</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[bash]]></category>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[orgmode]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-08-detecci%C3%B3n-de-vulnerabilidades-en-linux-con-bash-y-org-mode.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-08-detecci%C3%B3n-de-vulnerabilidades-en-linux-con-bash-y-org-mode.html</guid>
+  <pubDate>Tue, 08 Apr 2025 04:55:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[30 Términos de IA que Están Transformando la Programación en 2025]]></title>
   <description><![CDATA[

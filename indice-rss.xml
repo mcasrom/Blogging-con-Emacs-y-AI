@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - indice]]></title>
 <description><![CDATA[Example.com - indice]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-indice.html</link>
-<lastBuildDate>Sun, 06 Apr 2025 04:59:14 +0200</lastBuildDate>
+<lastBuildDate>Tue, 08 Apr 2025 07:02:10 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -446,13 +446,25 @@
 </tr>
 
 <tr>
+<td class="org-right">2025-04-06</td>
+<td class="org-left">La nueva situación geoestratégica mundial tras la llegada de Trump como 47º presidente de EE.UU.</td>
+<td class="org-left"><a href="2025-04-06-la-nueva-situación-geoestratégica-mundial-tras-la-llegada-de-trump-como-47º-presidente-de-ee.uu..html">Enlace</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-04-08</td>
+<td class="org-left">Detección de Vulnerabilidades en Linux con Bash y Org Mode</td>
+<td class="org-left"><a href="2025-04-08-detección-de-vulnerabilidades-en-linux-con-bash-y-org-mode.html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
 </tr>
 
 <tr>
-<td class="org-right">2025-04-06</td>
+<td class="org-right">2025-04-07</td>
 <td class="org-left">Índice de Publicaciones del Blog</td>
 <td class="org-left"><a href="indice-posts.html">Enlace</a></td>
 </tr>
@@ -481,7 +493,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Sun, 06 Apr 2025 04:55:00 +0200</pubDate>
+  <pubDate>Tue, 08 Apr 2025 05:00:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Creación Indicador de Calidad de Libertad y su Aplicación KPI (i)]]></title>
