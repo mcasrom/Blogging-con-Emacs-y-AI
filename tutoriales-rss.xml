@@ -4,7 +4,237 @@
 <title><![CDATA[Example.com - tutoriales]]></title>
 <description><![CDATA[Example.com - tutoriales]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-tutoriales.html</link>
-<lastBuildDate>Wed, 09 Apr 2025 08:18:55 +0200</lastBuildDate>
+<lastBuildDate>Wed, 09 Apr 2025 09:51:35 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Analizando Vulnerabilidades como un Pro: Un Script Potenciado para Emacs Org-mode (ii)]]></title>
+  <description><![CDATA[
+<div id="outline-container-org5870351" class="outline-2">
+<h2 id="org5870351">Introducción</h2>
+<div class="outline-text-2" id="text-org5870351">
+<p>
+¿Alguna vez te has preguntado qué tan seguro está tu laptop? En este post, te llevo de la mano para transformar un script básico de detección de vulnerabilidades en una herramienta poderosa que no solo encuentra CVEs, sino que también evalúa amenazas y las presenta en el glorioso formato Org-mode de Emacs. ¡Prepárate para darle esteroides a tu análisis de seguridad!
+</p>
+
+<p>
+El reto comenzó con un script que escaneaba paquetes en busca de vulnerabilidades usando la API de Vulners. Pero queríamos más: un reporte detallado con niveles de amenaza y estadísticas, todo listo para brillar en Emacs. Aquí te cuento cómo lo hice, cómo usarlo y qué resultados obtendrás.
+</p>
+</div>
+</div>
+<div id="outline-container-org5a48d84" class="outline-2">
+<h2 id="org5a48d84">El Punto de Partida</h2>
+<div class="outline-text-2" id="text-org5a48d84">
+<p>
+Primero, teníamos este script básico:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #219fd5; font-style: italic;">while</span> <span style="color: #1857a4;">IFS</span>= read -r line; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #1857a4;">nombre</span>=$(<span style="color: #219fd5; font-weight: bold;">echo "$line" | awk '{print $1}'</span>)
+    <span style="color: #1857a4;">version</span>=$(<span style="color: #219fd5; font-weight: bold;">echo "$line" | awk '{print $2}'</span>)
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"[+] Buscando CVEs para: $nombre $version"</span>
+    <span style="color: #1857a4;">query</span>=<span style="color: #a44185;">"${nombre}%20${version}"</span>
+    <span style="color: #1857a4;">response</span>=$(<span style="color: #219fd5; font-weight: bold;">curl -s "https://vulners.com/api/v3/search/lucene/?query=$query&amp;size=3"</span>)
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">... resto del script ...</span>
+<span style="color: #219fd5; font-style: italic;">done</span> &lt; <span style="color: #a44185;">"$PACKAGE_LIST"</span>
+</pre>
+</div>
+
+<p>
+Este script lee una lista de paquetes, busca CVEs y genera un archivo con resultados. Funciona, pero le falta punch: no clasifica amenazas ni da detalles jugosos. ¡Hora de mejorarlo!
+</p>
+</div>
+</div>
+<div id="outline-container-org9083bb6" class="outline-2">
+<h2 id="org9083bb6">Creación del Nuevo Script: Un Monstruo de Seguridad</h2>
+<div class="outline-text-2" id="text-org9083bb6">
+<p>
+Tomé el output del script original y creé un nuevo beast que procesa los CVEs encontrados. Aquí está el resultado:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #1857a4;">OUTPUT</span>=<span style="color: #a44185;">"vulnerability_report.org"</span>
+<span style="color: #1857a4;">INPUT_FILE</span>=<span style="color: #a44185;">"$1"</span>
+
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"#+TITLE: Reporte de Amenazas Actuales"</span> &gt; <span style="color: #a44185;">"$OUTPUT"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"#+DATE: $(</span><span style="color: #219fd5; font-weight: bold;">date '+%Y-%m-%d %H:%M'</span><span style="color: #a44185;">)"</span> &gt;&gt; <span style="color: #a44185;">"$OUTPUT"</span>
+
+<span style="color: #219fd5; font-style: italic;">while</span> <span style="color: #1857a4;">IFS</span>= read -r line; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [[ <span style="color: #a44185;">"$line"</span> =~ ^<span style="color: #a44185;">\*\*</span> ]]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #1857a4;">package_info</span>=$(<span style="color: #219fd5; font-weight: bold;">echo "$line" | sed 's/\*\* //'</span>)
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"** Paquete: $package_info"</span> &gt;&gt; <span style="color: #a44185;">"$OUTPUT"</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"   :PROPERTIES:"</span> &gt;&gt; <span style="color: #a44185;">"$OUTPUT"</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"   :ANALISIS: $(</span><span style="color: #219fd5; font-weight: bold;">date '+%Y-%m-%d'</span><span style="color: #a44185;">)"</span> &gt;&gt; <span style="color: #a44185;">"$OUTPUT"</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"   :END:"</span> &gt;&gt; <span style="color: #a44185;">"$OUTPUT"</span>
+    <span style="color: #219fd5; font-style: italic;">elif</span> [[ <span style="color: #a44185;">"$line"</span> =~ ^\s*-.*CVE-[0-9]{4}-[0-9]+ ]]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #1857a4;">cve</span>=$(<span style="color: #219fd5; font-weight: bold;">echo "$line" | grep -o 'CVE-[0-9]\{4\}-[0-9]\+'</span>)
+        <span style="color: #1857a4;">response</span>=$(<span style="color: #219fd5; font-weight: bold;">curl -s "https://vulners.com/api/v3/search/id/?id=$cve"</span>)
+        <span style="color: #1857a4;">severity</span>=$(<span style="color: #219fd5; font-weight: bold;">echo "$response" | grep -oP '"cvss_score":\s*"\K[0-9.]+' || echo "N/A"</span>)
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">... l&#243;gica de amenaza y detalles ...</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+    sleep 1
+<span style="color: #219fd5; font-style: italic;">done</span> &lt; <span style="color: #a44185;">"$INPUT_FILE"</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Estad&#237;sticas</span>
+<span style="color: #1857a4;">critical</span>=$(<span style="color: #219fd5; font-weight: bold;">grep -c "CR&#205;TICA" "$OUTPUT"</span>)
+<span style="color: #1857a4;">medium</span>=$(<span style="color: #219fd5; font-weight: bold;">grep -c "MEDIA" "$OUTPUT"</span>)
+<span style="color: #1857a4;">low</span>=$(<span style="color: #219fd5; font-weight: bold;">grep -c "BAJA" "$OUTPUT"</span>)
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"* Estad&#237;sticas"</span> &gt;&gt; <span style="color: #a44185;">"$OUTPUT"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"- Amenazas Cr&#237;ticas: $critical"</span> &gt;&gt; <span style="color: #a44185;">"$OUTPUT"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"- Amenazas Medias: $medium"</span> &gt;&gt; <span style="color: #a44185;">"$OUTPUT"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"- Amenazas Bajas: $low"</span> &gt;&gt; <span style="color: #a44185;">"$OUTPUT"</span>
+</pre>
+</div>
+</div>
+<div id="outline-container-org1138057" class="outline-3">
+<h3 id="org1138057">¿Qué hace este script?**</h3>
+<div class="outline-text-3" id="text-org1138057">
+<ol class="org-ol">
+<li>Toma el archivo generado por el script original como entrada.</li>
+<li>Consulta detalles de cada CVE usando la API de Vulners.</li>
+<li>Clasifica amenazas según el puntaje CVSS:
+<ul class="org-ul">
+<li>≥ 7.0: <b>CRÍTICA</b></li>
+<li>≥ 4.0: <b>MEDIA</b></li>
+<li>&lt; 4.0: <b>BAJA</b></li>
+</ul></li>
+<li>Genera un reporte en Org-mode con secciones, propiedades y estadísticas.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org514a1ad" class="outline-2">
+<h2 id="org514a1ad">Cómo Usarlo</h2>
+<div class="outline-text-2" id="text-org514a1ad">
+<p>
+Es tan fácil que hasta tu abuela podría ejecutarlo (si usa Emacs, claro):
+</p>
+
+<ol class="org-ol">
+<li><p>
+<b><b>Ejecuta el script original</b></b> para generar tu lista de vulnerabilidades:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">./scan_vulnerabilities.sh &gt; vuln_output.txt
+</pre>
+</div></li>
+
+<li><p>
+<b><b>Lanza el nuevo script</b></b> pasándole el archivo generado:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">./threat_analysis.sh vuln_output.txt
+</pre>
+</div></li>
+
+<li><p>
+<b><b>Abre el resultado en Emacs</b></b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">emacs vulnerability_report.org
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org945543c" class="outline-2">
+<h2 id="org945543c">Características Estelares</h2>
+<div class="outline-text-2" id="text-org945543c">
+<ul class="org-ul">
+<li><b><b>Formato Org-mode Nativo</b></b>: Listo para navegar con <code>C-c C-n</code> o exportar a HTML/PDF.</li>
+<li><b><b>Clasificación de Amenazas</b></b>: Separa lo crítico de lo trivial.</li>
+<li><b><b>Detalles Ricos</b></b>: Severidad, fechas, descripciones por CVE.</li>
+<li><b><b>Estadísticas</b></b>: Resumen claro de cuántas amenazas enfrentas.</li>
+<li><b><b>Personalizable</b></b>: Ajusta los umbrales de CVSS o añade más campos según necesites.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org08709cc" class="outline-2">
+<h2 id="org08709cc">Resultados que Obtendrás</h2>
+<div class="outline-text-2" id="text-org08709cc">
+<p>
+El output es un archivo <code>vulnerability_report.org</code> que luce así:
+</p>
+
+<p>
+#+BEGIN<sub>SRC</sub> org
+</p>
+</div>
+</div>
+<div id="outline-container-org9a0c987" class="outline-2">
+<h2 id="org9a0c987">Resumen de Amenazas</h2>
+<div class="outline-text-2" id="text-org9a0c987">
+</div>
+<div id="outline-container-org1389943" class="outline-3">
+<h3 id="org1389943">Paquete: openssl 1.1.1</h3>
+<div class="outline-text-3" id="text-org1389943">
+<ul class="org-ul">
+<li>CVE Analizado: CVE-2023-1234
+<ul class="org-ul">
+<li>Nivel de Amenaza: CRÍTICA</li>
+<li>Severidad CVSS: 7.8</li>
+<li>Publicado: 2023-05-01</li>
+<li>Descripción: Remote code execution&#x2026;</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1977b47" class="outline-2">
+<h2 id="org1977b47">Estadísticas</h2>
+<div class="outline-text-2" id="text-org1977b47">
+<ul class="org-ul">
+<li>Amenazas Críticas: 1</li>
+<li>Amenazas Medias: 0</li>
+<li>Amenazas Bajas: 0</li>
+</ul>
+<p>
+#+END<sub>SRC</sub>
+</p>
+
+<p>
+En Emacs, puedes colapsar secciones con <code>TAB</code>, buscar con <code>C-s</code>, o incluso ejecutar comandos desde el buffer con <code>org-babel</code>. ¡Es seguridad con estilo!
+</p>
+</div>
+</div>
+<div id="outline-container-org03f123b" class="outline-2">
+<h2 id="org03f123b">Conclusión</h2>
+<div class="outline-text-2" id="text-org03f123b">
+<p>
+Con este script, transformamos un escaneo básico en un análisis profesional que vive feliz en Emacs. Ya no solo sabes qué vulnerabilidades tienes, sino qué tan malas son y qué hacer al respecto. ¿Listo para poner tu laptop a prueba? Descarga el script, dale caña y comparte tus resultados en los comentarios.
+</p>
+
+<blockquote>
+<p>
+"La seguridad no es un destino, es un viaje&#x2026; con Org-mode" - Grok 3
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org5b0b31e" class="outline-2">
+<h2 id="org5b0b31e">Recursos</h2>
+<div class="outline-text-2" id="text-org5b0b31e">
+<ul class="org-ul">
+<li>[API de Vulners](<a href="https://vulners.com/api/">https://vulners.com/api/</a>)</li>
+<li>[Manual de Org-mode](<a href="https://orgmode.org/manual/">https://orgmode.org/manual/</a>)</li>
+</ul>
+
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-08-detecci%C3%B3n-de-vulnerabilidades-en-linux-con-bash-y-org-mode">2025-04-08-detección-de-vulnerabilidades-en-linux-con-bash-y-org-mode</a>
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-script.html">script</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-org-mode.html">org-mode</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[script]]></category>
+  <category><![CDATA[bash]]></category>
+  <category><![CDATA[org-mode]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-09-analizando-vulnerabilidades-como-un-pro:-un-script-potenciado-para-emacs-org-mode-(ii).html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-09-analizando-vulnerabilidades-como-un-pro:-un-script-potenciado-para-emacs-org-mode-(ii).html</guid>
+  <pubDate>Wed, 09 Apr 2025 09:45:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[Detección de Vulnerabilidades en Linux con Bash y Org Mode]]></title>
   <description><![CDATA[

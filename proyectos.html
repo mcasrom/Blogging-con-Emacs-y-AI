@@ -28,36 +28,27 @@
          .blog-header {
            display: flex;
            align-items: center;
-           justify-content: flex-start;
-           text-align: left;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
            padding: 15px 0;
            border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
          }
          .blog-header img {
-           max-width: 70px;
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
            height: auto;
-           margin-right: 20px;
+           margin-bottom: 10px; /* Espacio debajo del logo */
            border-radius: 5px; /* Suaviza el logo */
+           order: 2; despues
          }
          .blog-header-content {
            display: flex;
            flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+           order:1 ;
          }
          .blog-title {
-           font-size: 2em;
-           margin: 0;
-         }
-         .blog-subtitle {
-           font-size: 1.1em;
-           color: #666;
-           margin-top: 5px;
-         }
-         .blog-email {
-           font-size: 0.9em;
-           color: #777;
-           margin-top: 8px;
-         }
-         .blog-email a {
+
            color: #2980b9;
            text-decoration: none;
          }
@@ -101,8 +92,44 @@
            margin: 10px auto;
            border-radius: 5px;
          }
-       </style>
-       
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .8em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .8em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
        <div class='blog-header'>
          <img src='logo.png' alt='Logo'>
          <div class='blog-header-content'>
@@ -110,19 +137,20 @@
            <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
            <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
          </div>
-       </div>
-       
+       </div>       
        <nav>
          <a href='index.html'>Inicio</a> |
-         <a href='tags.html'>Tags</a> |
+         <a href='viajes.html'>Viajes</a> |
          <a href='archive.html'>Archivo</a> |
          <a href='contacto.html'>Contacto</a> |
          <a href='nosotros.html'>Nosotros</a> |
-         <a href='proyectos.html'>Proyectos</a>
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
          <a href='tag-tutoriales.html'>Tutoriales</a> |
          <a href='tag-opiniones.html'>Opiniones</a>
        </nav>
-        <hr></head>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
 <body>
 <div id="preamble" class="status"></div>
 <div id="content">
@@ -130,9 +158,9 @@
 <p>
 ¡Bienvenidos a la página de <b>Proyectos</b>! En este espacio comparto algunos de los trabajos que he desarrollado, desde experimentos personales hasta iniciativas más ambiciosas. Esta página estática, generada con Org-mode y `org-static-blog`, es un reflejo de mi interés por la tecnología, la creatividad y el aprendizaje continuo. A continuación, encontrarás una descripción de lo que puedes explorar aquí y algunos ejemplos destacados.
 </p>
-<div id="outline-container-org6080797" class="outline-2">
-<h2 id="org6080797">¿Qué encontrarás en la página de Proyectos?</h2>
-<div class="outline-text-2" id="text-org6080797">
+<div id="outline-container-org565ef62" class="outline-2">
+<h2 id="org565ef62">¿Qué encontrarás en la página de Proyectos?</h2>
+<div class="outline-text-2" id="text-org565ef62">
 <p>
 La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pero funcional de mis esfuerzos. Aquí algunos aspectos clave:
 </p>
@@ -145,13 +173,13 @@ La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pe
 </ul>
 </div>
 </div>
-<div id="outline-container-orga26121e" class="outline-2">
-<h2 id="orga26121e">Ejemplos de Proyectos</h2>
-<div class="outline-text-2" id="text-orga26121e">
+<div id="outline-container-orgb030672" class="outline-2">
+<h2 id="orgb030672">Ejemplos de Proyectos</h2>
+<div class="outline-text-2" id="text-orgb030672">
 </div>
-<div id="outline-container-org627546b" class="outline-3">
-<h3 id="org627546b">1. Generador de Blog Estático con Org-mode</h3>
-<div class="outline-text-3" id="text-org627546b">
+<div id="outline-container-org012f169" class="outline-3">
+<h3 id="org012f169">1. Generador de Blog Estático con Org-mode</h3>
+<div class="outline-text-3" id="text-org012f169">
 <ul class="org-ul">
 <li><b>Descripción</b>: Una herramienta para convertir archivos Org en un blog HTML estático, usando `org-static-blog`.</li>
 <li><b>Tecnologías</b>: Emacs, Org-mode, Gnuplot (para gráficos), CSS.</li>
@@ -160,9 +188,9 @@ La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pe
 </ul>
 </div>
 </div>
-<div id="outline-container-orga263220" class="outline-3">
-<h3 id="orga263220">3. Escritura Creativa Automatizada</h3>
-<div class="outline-text-3" id="text-orga263220">
+<div id="outline-container-org3f2e082" class="outline-3">
+<h3 id="org3f2e082">3. Escritura Creativa Automatizada</h3>
+<div class="outline-text-3" id="text-org3f2e082">
 <ul class="org-ul">
 <li><b>Descripción</b>: Un experimento para generar relatos cortos usando IA y publicarlos en este blog.</li>
 <li><b>Tecnologías</b>: Emacs, GPT (simulado), Org-mode.</li>
@@ -172,9 +200,9 @@ La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pe
 </div>
 </div>
 </div>
-<div id="outline-container-org568915f" class="outline-2">
-<h2 id="org568915f">¿Cómo interactuar con los Proyectos?</h2>
-<div class="outline-text-2" id="text-org568915f">
+<div id="outline-container-orgc0ec8d2" class="outline-2">
+<h2 id="orgc0ec8d2">¿Cómo interactuar con los Proyectos?</h2>
+<div class="outline-text-2" id="text-orgc0ec8d2">
 <p>
 Me encantaría que esta página no sea solo un escaparate, sino un punto de partida para colaboración o inspiración:
 </p>
@@ -186,9 +214,9 @@ Me encantaría que esta página no sea solo un escaparate, sino un punto de part
 </ul>
 </div>
 </div>
-<div id="outline-container-org584957a" class="outline-2">
-<h2 id="org584957a">Conclusión</h2>
-<div class="outline-text-2" id="text-org584957a">
+<div id="outline-container-orgbfa9483" class="outline-2">
+<h2 id="orgbfa9483">Conclusión</h2>
+<div class="outline-text-2" id="text-orgbfa9483">
 <p>
 La página de <b>Proyectos</b> es un espacio vivo que iré actualizando con nuevas ideas y trabajos. Usar Org-mode para mantenerla me permite combinar escritura, código y datos en un formato simple y portátil. Espero que encuentres algo que te inspire o motive a experimentar por tu cuenta. ¡No dudes en dejar tus comentarios o contactarme para charlar sobre ello!
 </p>
@@ -222,6 +250,7 @@ Para ponerte en contacto, envíanos un email a <a href="mailto:mybloggingnotes@g
            </a>
          </p>
          <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
          <!-- hitwebcounter Code START -->
          <a href="https://www.hitwebcounter.com" target="_blank">
            <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />

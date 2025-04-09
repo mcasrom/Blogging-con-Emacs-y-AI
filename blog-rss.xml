@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - blog]]></title>
 <description><![CDATA[Example.com - blog]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-blog.html</link>
-<lastBuildDate>Wed, 09 Apr 2025 08:18:53 +0200</lastBuildDate>
+<lastBuildDate>Wed, 09 Apr 2025 09:51:34 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -476,6 +476,12 @@
 </tr>
 
 <tr>
+<td class="org-right">2025-04-09</td>
+<td class="org-left">Analizando Vulnerabilidades como un Pro: Un Script Potenciado para Emacs Org-mode (ii)</td>
+<td class="org-left"><a href="2025-04-09-analizando-vulnerabilidades-como-un-pro:-un-script-potenciado-para-emacs-org-mode-(ii).html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
@@ -511,7 +517,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Wed, 09 Apr 2025 08:17:00 +0200</pubDate>
+  <pubDate>Wed, 09 Apr 2025 09:49:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Emacs con Esteroides: Configurar un Contador de Visitantes para el Blog]]></title>
