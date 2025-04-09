@@ -1,20 +1,36 @@
 /* ~/myblog/public/calendar-large.css */
+
+/* Estilo para la cabecera del mes (h2 generado por * Abril 2025 en Org-mode) */
+h2 {
+    font-size: 24px;          /* Tamaño de fuente más grande para destacar */
+    font-weight: bold;        /* Negrita para énfasis */
+    text-align: center;       /* Centrado para alinearse con la tabla */
+    color: #333;              /* Color oscuro para contraste */
+    margin: 20px auto 10px;   /* Margen superior e inferior, centrado horizontalmente */
+    max-width: 600px;         /* Coincide con el ancho máximo de la tabla */
+}
+
+/* Estilo general de la tabla del calendario */
 table.calendar-large {
     width: 100%;
-    max-width: 600px; /* Reducir el ancho total */
+    max-width: 600px;         /* Reducir el ancho total, consistente con h2 */
     border-collapse: collapse;
-    margin: 10px auto; /* Menos margen */
+    margin: 10px auto;        /* Menos margen, centrado horizontalmente */
 }
+
+/* Estilo para las celdas de encabezado (días de la semana) y datos (números) */
 table.calendar-large th, table.calendar-large td {
-    font-size: 16px; /* Reducir tamaño de fuente de 24px a 16px */
-    padding: 10px;   /* Reducir padding de 20px a 10px */
+    font-size: 16px;          /* Reducir tamaño de fuente de 24px a 16px */
+    padding: 10px;            /* Reducir padding de 20px a 10px */
     text-align: center;
     border: 1px solid #ccc;
-    min-height: 40px; /* Reducir altura mínima de 80px a 40px */
-    white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
-    overflow: hidden;    /* Cortar texto largo */
-    text-overflow: ellipsis; /* Mostrar "..." si el texto es muy largo */
+    min-height: 40px;         /* Reducir altura mínima de 80px a 40px */
+    white-space: nowrap;      /* Evitar que el texto se divida en varias líneas */
+    overflow: hidden;         /* Cortar texto largo */
+    text-overflow: ellipsis;  /* Mostrar "..." si el texto es muy largo */
 }
+
+/* Estilo específico para los encabezados de la tabla (Lun, Mar, etc.) */
 table.calendar-large th {
     background-color: #f2f2f2;
     font-weight: bold;
