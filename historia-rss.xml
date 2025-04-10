@@ -4,7 +4,220 @@
 <title><![CDATA[Example.com - historia]]></title>
 <description><![CDATA[Example.com - historia]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-historia.html</link>
-<lastBuildDate>Thu, 10 Apr 2025 10:41:26 +0200</lastBuildDate>
+<lastBuildDate>Thu, 10 Apr 2025 10:56:35 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Emacs con Esteroides: Origen, Evolución y Cronología de un Titán del Código]]></title>
+  <description><![CDATA[
+<div id="outline-container-org9f74d10" class="outline-2">
+<h2 id="org9f74d10">Introducción</h2>
+<div class="outline-text-2" id="text-org9f74d10">
+<p>
+Emacs no es solo un editor de texto; es una filosofía, una herramienta viva y un ecosistema que ha evolucionado durante casi cinco décadas. Desde sus humildes comienzos en los años 70 hasta su papel actual como un entorno de productividad <b>con esteroides</b>, Emacs ha dejado una huella imborrable en el mundo del software. En este post, exploraremos su origen, su evolución cronológica, su uso práctico y cómo sigue siendo relevante en 2025. Además, incluiremos un diagrama cronológico para visualizar su historia.
+</p>
+</div>
+</div>
+<div id="outline-container-orga97026a" class="outline-2">
+<h2 id="orga97026a">Origen de Emacs</h2>
+<div class="outline-text-2" id="text-orga97026a">
+<p>
+Emacs nació en el corazón del MIT, en una era donde los hackers no eran villanos, sino innovadores apasionados por el código. Su creador, Richard Stallman (RMS), lo concibió como una herramienta extensible y personalizable, inspirada por el editor TECO.
+</p>
+
+<ul class="org-ul">
+<li><b>Contexto</b>: En los años 70, los editores de texto eran rígidos y limitados. TECO, aunque poderoso, usaba comandos crípticos.</li>
+<li><b>Nacimiento</b>: En 1976, Stallman desarrolló la primera versión de Emacs como un conjunto de macros para TECO, añadiendo capacidades de edición en tiempo real.</li>
+<li><b>Filosofía</b>: Emacs fue diseñado para ser un editor <b>vivo</b>, donde los usuarios pudieran modificarlo mientras lo usaban, sentando las bases del software libre.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1b6e508" class="outline-2">
+<h2 id="org1b6e508">Evolución de Emacs</h2>
+<div class="outline-text-2" id="text-org1b6e508">
+<p>
+La historia de Emacs es una mezcla de innovación técnica, bifurcaciones y comunidad. A continuación, desglosamos su evolución en etapas clave.
+</p>
+</div>
+<div id="outline-container-org520fa9a" class="outline-3">
+<h3 id="org520fa9a">Emacs Original (1976)</h3>
+<div class="outline-text-3" id="text-org520fa9a">
+<ul class="org-ul">
+<li>Primera implementación en TECO.</li>
+<li>Características: Edición en tiempo real, comandos básicos.</li>
+<li>Limitaciones: Dependiente de TECO, no portátil.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge4c5365" class="outline-3">
+<h3 id="orge4c5365">Gosling Emacs (1981)</h3>
+<div class="outline-text-3" id="text-orge4c5365">
+<ul class="org-ul">
+<li>James Gosling (futuro creador de Java) escribió una versión en C, más portable.</li>
+<li>Primer Emacs independiente de TECO.</li>
+<li>Controversia: Se volvió propietario tras ser comprado por UniPress.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgadadc88" class="outline-3">
+<h3 id="orgadadc88">GNU Emacs (1984)</h3>
+<div class="outline-text-3" id="text-orgadadc88">
+<ul class="org-ul">
+<li>Stallman lanzó GNU Emacs como respuesta al Gosling Emacs propietario.</li>
+<li>Hito: Primera versión del proyecto GNU, bajo la licencia GPL.</li>
+<li>Innovación: Introducción de Emacs Lisp como lenguaje de extensión.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org24055a4" class="outline-3">
+<h3 id="org24055a4">Lucid Emacs / XEmacs (1991)</h3>
+<div class="outline-text-3" id="text-org24055a4">
+<ul class="org-ul">
+<li>Bifurcación de GNU Emacs por diferencias en desarrollo.</li>
+<li>Enfoque: Mejor integración con interfaces gráficas (X11).</li>
+<li>Resultado: Competencia que enriqueció ambos proyectos, aunque XEmacs perdió relevancia con el tiempo.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd1aa5b6" class="outline-3">
+<h3 id="orgd1aa5b6">Emacs Moderno (2000s - 2025)</h3>
+<div class="outline-text-3" id="text-orgd1aa5b6">
+<ul class="org-ul">
+<li>Consolidación de GNU Emacs como estándar.</li>
+<li>Hitos:
+<ul class="org-ul">
+<li>2008: Soporte Unicode completo (Emacs 23).</li>
+<li>2012: Paquetes con ELPA (Emacs Lisp Package Archive).</li>
+<li>2020s: Mejoras en rendimiento (nativo JSON, compilación nativa en Emacs 28 y 29).</li>
+</ul></li>
+<li>Uso actual: Desde edición de código hasta gestión de correo, Org-mode y más.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbbe99b8" class="outline-2">
+<h2 id="orgbbe99b8">Cronología: Diagrama de la Evolución de Emacs</h2>
+<div class="outline-text-2" id="text-orgbbe99b8">
+
+<figure id="orga007b3c">
+<img src="images/emacs-timeline.png" alt="emacs-timeline.png">
+
+</figure>
+
+<ul class="org-ul">
+<li><b>Instrucción</b>: Renderiza este diagrama con PlantUML en Emacs para ver la línea temporal. Muestra la progresión y las bifurcaciones clave.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8b4976e" class="outline-2">
+<h2 id="org8b4976e">Uso de Emacs: Más Allá de un Editor</h2>
+<div class="outline-text-2" id="text-org8b4976e">
+<p>
+Emacs ha trascendido su propósito original gracias a su extensibilidad. Aquí algunos usos emblemáticos:
+</p>
+</div>
+<div id="outline-container-orge85319a" class="outline-3">
+<h3 id="orge85319a">Edición de Código</h3>
+<div class="outline-text-3" id="text-orge85319a">
+<ul class="org-ul">
+<li>Lenguajes soportados: Prácticamente todos, gracias a modos como `python-mode`, `lsp-mode`, etc.</li>
+<li><p>
+Ejemplo: Configuración para Python:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">python-mode</span>
+  <span style="color: #dc3eb7;">:ensure</span> t
+  <span style="color: #dc3eb7;">:mode</span> <span style="color: #a44185;">"\\.py\\'"</span>
+  <span style="color: #dc3eb7;">:hook</span> (python-mode . lsp))
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd0392e4" class="outline-3">
+<h3 id="orgd0392e4">Org-mode: Productividad con Esteroides</h3>
+<div class="outline-text-3" id="text-orgd0392e4">
+<ul class="org-ul">
+<li>Gestión de tareas, notas, agendas y más.</li>
+<li>Ejemplo: Este post está escrito en Org-mode.</li>
+<li>Popularidad: Desde académicos hasta desarrolladores lo usan para organizar su vida.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9aaa90c" class="outline-3">
+<h3 id="org9aaa90c">Correo, IRC y Más</h3>
+<div class="outline-text-3" id="text-org9aaa90c">
+<ul class="org-ul">
+<li>Herramientas como `mu4e` (correo) o `erc` (chat IRC) convierten a Emacs en un centro de comunicaciones.</li>
+<li>Filosofía: "Todo en un solo lugar".</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3bbe518" class="outline-3">
+<h3 id="org3bbe518">Personalización</h3>
+<div class="outline-text-3" id="text-org3bbe518">
+<ul class="org-ul">
+<li>Emacs Lisp permite a cada usuario moldear su entorno.</li>
+<li><p>
+Ejemplo: Tema oscuro básico:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(load-theme 'wombat t)
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9129c44" class="outline-2">
+<h2 id="org9129c44">Emacs en 2025: Relevancia y Futuro</h2>
+<div class="outline-text-2" id="text-org9129c44">
+<ul class="org-ul">
+<li><b>Comunidad</b>: Sigue activa, con actualizaciones regulares (Emacs 29 en desarrollo).
+<ul class="org-ul">
+<li><b>Tendencias</b>: Integración con IA (ej. Copilot-mode), soporte para herramientas modernas (Docker, Git).</li>
+<li><b>Visión</b>: Seguirá siendo el editor elegido por quienes valoran la libertad y el control total.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0665f6c" class="outline-2">
+<h2 id="org0665f6c">Tareas para el Lector</h2>
+<div class="outline-text-2" id="text-org0665f6c">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Instalar Emacs y probar Org-mode con este archivo.</li>
+<li class="off"><code>[&#xa0;]</code> Renderizar el diagrama cronológico con PlantUML.</li>
+<li class="off"><code>[&#xa0;]</code> Explorar un paquete nuevo (sugerencia: `magit` para Git).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge7374cd" class="outline-2">
+<h2 id="orge7374cd">Referencias</h2>
+<div class="outline-text-2" id="text-orge7374cd">
+<ul class="org-ul">
+<li>Stallman, R. (1981). "EMACS: The Extensible, Customizable Display Editor". MIT AI Lab Memo.</li>
+<li>GNU Project. (2025). "GNU Emacs Manual". Disponible en: <a href="https://www.gnu.org/software/emacs/manual/">https://www.gnu.org/software/emacs/manual/</a>.</li>
+<li>Chacon, S. (2018). "A Brief History of Emacs". Blog de GitHub.</li>
+<li>FSF. (2024). "Emacs Timeline". Free Software Foundation Archives.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org76cb1ad" class="outline-2">
+<h2 id="org76cb1ad">Conclusión</h2>
+<div class="outline-text-2" id="text-org76cb1ad">
+<p>
+Emacs es más que un editor: es un testimonio del poder del software libre y la creatividad humana. Desde 1976 hasta 2025, ha evolucionado de un conjunto de macros a un entorno <b>con esteroides</b> que sigue inspirando. ¿Listo para sumergirte? Abre Emacs, carga este archivo y empieza a explorar.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-historia.html">historia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-software-libre.html">software-libre</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-cronologia.html">cronologia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[historia]]></category>
+  <category><![CDATA[software-libre]]></category>
+  <category><![CDATA[cronologia]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-10--emacs-con-esteroides:-origen,-evoluci%C3%B3n-y-cronolog%C3%ADa-de-un-tit%C3%A1n-del-c%C3%B3digo.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-10--emacs-con-esteroides:-origen,-evoluci%C3%B3n-y-cronolog%C3%ADa-de-un-tit%C3%A1n-del-c%C3%B3digo.html</guid>
+  <pubDate>Thu, 10 Apr 2025 10:49:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[Geopolítica: Una Visión Integral de su Definición, Historia, Evolución y Actualidad]]></title>
   <description><![CDATA[
