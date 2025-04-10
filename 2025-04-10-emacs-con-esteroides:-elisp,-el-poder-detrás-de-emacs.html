@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Elisp, el Poder Detrás de Emacs">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Emacs con Esteroides: Elisp, el Poder Detrás de Emacs</title>
+<meta charset='UTF-8'>
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.8em; .85
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a>
+       </nav>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">10/04/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-10-emacs-con-esteroides:-elisp,-el-poder-detrás-de-emacs.html">Emacs con Esteroides: Elisp, el Poder Detrás de Emacs</a></h1>
+<div id="outline-container-org9baf7eb" class="outline-2">
+<h2 id="org9baf7eb">Introducción</h2>
+<div class="outline-text-2" id="text-org9baf7eb">
+<p>
+Si Emacs es un titán del software libre, Emacs Lisp (Elisp) es el corazón que lo mantiene latiendo. Este lenguaje de programación, creado específicamente para Emacs, es lo que permite a los usuarios transformar un editor de texto en una herramienta <b>con esteroides</b>: personalizable, extensible y prácticamente ilimitada. En este post, exploraremos el origen de Elisp, su evolución cronológica, su uso práctico y cómo sigue siendo la clave del poder de Emacs en 2025. Incluiremos un diagrama cronológico para visualizar su desarrollo.
+</p>
+</div>
+</div>
+<div id="outline-container-orge9b2b0a" class="outline-2">
+<h2 id="orge9b2b0a">Origen de Emacs Lisp</h2>
+<div class="outline-text-2" id="text-orge9b2b0a">
+<p>
+Elisp nació junto con GNU Emacs, como una evolución de las ideas de extensibilidad que Richard Stallman (RMS) había explorado en el Emacs original.
+</p>
+
+<ul class="org-ul">
+<li><b>Contexto</b>: En los años 70, el Emacs original usaba macros TECO, un sistema limitado y poco legible. Stallman buscaba algo más potente y accesible.</li>
+<li><b>Nacimiento</b>: En 1984, con el lanzamiento de GNU Emacs, Stallman introdujo Elisp como un dialecto de Lisp adaptado para Emacs.</li>
+<li><b>Filosofía</b>: Elisp fue diseñado para ser interpretado en tiempo real, permitiendo a los usuarios modificar Emacs mientras lo usaban, un concepto revolucionario en su época.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org53f0ca8" class="outline-2">
+<h2 id="org53f0ca8">Características Clave de Elisp</h2>
+<div class="outline-text-2" id="text-org53f0ca8">
+<p>
+Elisp es un dialecto de Lisp, pero con peculiaridades que lo hacen único:
+</p>
+<ul class="org-ul">
+<li><b>Dinámico</b>: Variables y funciones se pueden redefinir al vuelo.</li>
+<li><b>Interactivo</b>: Usa el bucle REPL (`ielm`) para probar código en vivo.</li>
+<li><b>Integrado</b>: Todo en Emacs (comandos, modos, configuraciones) está escrito o accesible vía Elisp.</li>
+<li><b>Extensible</b>: Los usuarios pueden añadir funcionalidades sin tocar el código fuente.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3bd4a51" class="outline-2">
+<h2 id="org3bd4a51">Evolución de Emacs Lisp</h2>
+<div class="outline-text-2" id="text-org3bd4a51">
+<p>
+Elisp ha evolucionado junto con Emacs, adaptándose a nuevas necesidades y tecnologías. Aquí están las etapas clave:
+</p>
+</div>
+<div id="outline-container-org23fd31d" class="outline-3">
+<h3 id="org23fd31d">Elisp en GNU Emacs (1984)</h3>
+<div class="outline-text-3" id="text-org23fd31d">
+<ul class="org-ul">
+<li>Primera versión integrada en GNU Emacs.</li>
+<li>Funcionalidades: Comandos básicos, personalización simple (ej. keybindings).</li>
+<li>Limitaciones: Sin soporte gráfico, herramientas rudimentarias.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5d29553" class="outline-3">
+<h3 id="org5d29553">Soporte Gráfico y Nuevas Librerías (1990s)</h3>
+<div class="outline-text-3" id="text-org5d29553">
+<ul class="org-ul">
+<li>Con la llegada de XEmacs y mejoras en GNU Emacs, Elisp incorporó soporte para interfaces gráficas (X11).</li>
+<li>Nuevas funciones: Manipulación de ventanas, menús y barras de herramientas.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org13c0849" class="outline-3">
+<h3 id="org13c0849">Elisp Moderno (2000s)</h3>
+<div class="outline-text-3" id="text-org13c0849">
+<ul class="org-ul">
+<li>Mejoras en rendimiento y estabilidad.</li>
+<li>Hitos:
+<ul class="org-ul">
+<li>2008: Soporte Unicode en Emacs 23, ampliando las capacidades de Elisp con texto internacional.</li>
+<li>2012: Introducción de ELPA, facilitando la distribución de paquetes en Elisp.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org789a1a3" class="outline-3">
+<h3 id="org789a1a3">Compilación Nativa y Más Allá (2020s)</h3>
+<div class="outline-text-3" id="text-org789a1a3">
+<ul class="org-ul">
+<li>2021: Emacs 28 introduce compilación nativa, acelerando el rendimiento de Elisp.</li>
+<li>2025: Emacs 29 mejora el soporte para concurrencia ligera y JSON nativo.</li>
+<li>Tendencia: Integración con herramientas modernas (ej. LSP, IA).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0990ef8" class="outline-2">
+<h2 id="org0990ef8">Cronología: Diagrama de la Evolución de Elisp</h2>
+<div class="outline-text-2" id="text-org0990ef8">
+
+<figure id="orga1a6e7d">
+<img src="images/elisp-timeline.png" alt="elisp-timeline.png">
+
+</figure>
+
+<ul class="org-ul">
+<li><b>Instrucción</b>: Renderiza este diagrama con PlantUML en Emacs para visualizar la evolución de Elisp. Requiere `plantuml-mode`.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbcb077e" class="outline-2">
+<h2 id="orgbcb077e">Uso Práctico de Elisp</h2>
+<div class="outline-text-2" id="text-orgbcb077e">
+<p>
+Elisp es el pegamento que une las funcionalidades de Emacs. Aquí algunos ejemplos de su poder:
+</p>
+</div>
+<div id="outline-container-orgbc78696" class="outline-3">
+<h3 id="orgbc78696">Personalización Básica</h3>
+<div class="outline-text-3" id="text-orgbc78696">
+<ul class="org-ul">
+<li><p>
+Cambiar un atajo de teclado:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="color: #a44185;">"C-c h"</span>) 'hello-world)
+(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">hello-world</span> ()
+  (<span style="color: #219fd5; font-style: italic;">interactive</span>)
+  (message <span style="color: #a44185;">"&#161;Hola, Emacs con Esteroides!"</span>))
+</pre>
+</div></li>
+<li>Resultado: Presiona `C-c h` y verás un mensaje en la minibuffer.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org43a211f" class="outline-3">
+<h3 id="org43a211f">Creación de Comandos Interactivos</h3>
+<div class="outline-text-3" id="text-org43a211f">
+<ul class="org-ul">
+<li><p>
+Ejemplo: Contar palabras en una región:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">count-words-region</span> (start end)
+  (<span style="color: #219fd5; font-style: italic;">interactive</span> <span style="color: #a44185;">"r"</span>)
+  (message <span style="color: #a44185;">"La regi&#243;n tiene %d palabras"</span> 
+           (count-words start end)))
+</pre>
+</div></li>
+<li>Uso: Selecciona texto y ejecuta `M-x count-words-region`.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf725f4f" class="outline-3">
+<h3 id="orgf725f4f">Automatización con Org-mode</h3>
+<div class="outline-text-3" id="text-orgf725f4f">
+<ul class="org-ul">
+<li><p>
+Generar una tabla dinámica:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">org-insert-date-table</span> ()
+  (<span style="color: #219fd5; font-style: italic;">interactive</span>)
+  (org-table-create <span style="color: #a44185;">"3x2"</span>)
+  (insert <span style="color: #a44185;">"| Fecha | Tarea |\n|-+-|\n| "</span> (format-time-string <span style="color: #a44185;">"%Y-%m-%d"</span>) <span style="color: #a44185;">" | Pendiente |"</span>))
+</pre>
+</div></li>
+<li>Uso: Ejecuta `M-x org-insert-date-table` en un archivo Org.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge0d31ea" class="outline-3">
+<h3 id="orge0d31ea">Integración Moderna</h3>
+<div class="outline-text-3" id="text-orge0d31ea">
+<ul class="org-ul">
+<li><p>
+Conectar con una API (ejemplo ficticio):
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">fetch-weather</span> ()
+  (<span style="color: #219fd5; font-style: italic;">interactive</span>)
+  (url-retrieve <span style="color: #a44185;">"http://api.weather.example"</span>
+                (<span style="color: #219fd5; font-style: italic;">lambda</span> (status)
+                  (message <span style="color: #a44185;">"Temperatura: %s"</span> (json-read)))))
+</pre>
+</div></li>
+<li>Nota: Requiere ajustes para una API real.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga46fc4b" class="outline-2">
+<h2 id="orga46fc4b">Elisp en 2025: Poder y Relevancia</h2>
+<div class="outline-text-2" id="text-orga46fc4b">
+<ul class="org-ul">
+<li><b>Rendimiento</b>: La compilación nativa ha hecho que Elisp sea más rápido que nunca.</li>
+<li><b>Ecosistema</b>: Miles de paquetes en MELPA y ELPA, todos escritos en Elisp.</li>
+<li><b>Futuro</b>: Integración con IA (ej. asistentes como Copilot) y soporte para paradigmas modernos como programación funcional ligera.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orged63096" class="outline-2">
+<h2 id="orged63096">Tareas para el Lector</h2>
+<div class="outline-text-2" id="text-orged63096">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Prueba el comando `hello-world` en tu Emacs.</li>
+<li class="off"><code>[&#xa0;]</code> Crea tu propio comando en Elisp y compártelo en los comentarios.</li>
+<li class="off"><code>[&#xa0;]</code> Renderiza el diagrama cronológico con PlantUML.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6a5fa23" class="outline-2">
+<h2 id="org6a5fa23">Referencias</h2>
+<div class="outline-text-2" id="text-org6a5fa23">
+<ul class="org-ul">
+<li>Stallman, R. (1987). "GNU Emacs Lisp Reference Manual". GNU Project.</li>
+<li>Chassell, R. (2009). "An Introduction to Programming in Emacs Lisp". Free Software Foundation.</li>
+<li>Blog: "Elisp: The Magic of Emacs" (2023). Disponible en: <a href="https://emacsrocks.com/elisp-magic">https://emacsrocks.com/elisp-magic</a>.</li>
+<li>GNU Emacs. (2025). "Emacs Lisp Documentation". <a href="https://www.gnu.org/software/emacs/elisp">https://www.gnu.org/software/emacs/elisp</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org29af6b7" class="outline-2">
+<h2 id="org29af6b7">Conclusión</h2>
+<div class="outline-text-2" id="text-org29af6b7">
+<p>
+Emacs Lisp es el alma de Emacs, un lenguaje que transforma un editor en una plataforma <b>con esteroides</b>. Desde sus inicios en 1984 hasta las mejoras de 2025, Elisp sigue siendo el secreto detrás de la flexibilidad y el poder de Emacs. ¿Listo para programar tu propio Emacs? Abre un buffer, escribe `(message "¡Empecemos!")` y evalúa con `C-x C-e`.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-elisp.html">elisp</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-programacion.html">programacion</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-software-libre.html">software-libre</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-cronologia.html">cronologia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>
