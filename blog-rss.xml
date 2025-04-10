@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - blog]]></title>
 <description><![CDATA[Example.com - blog]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-blog.html</link>
-<lastBuildDate>Thu, 10 Apr 2025 11:05:36 +0200</lastBuildDate>
+<lastBuildDate>Thu, 10 Apr 2025 11:21:01 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -512,6 +512,12 @@
 </tr>
 
 <tr>
+<td class="org-right">2025-04-10</td>
+<td class="org-left">Poderío Militar de los Grandes Actores del Tablero Mundial</td>
+<td class="org-left"><a href="2025-04-10-poderío-militar-de-los-grandes-actores-del-tablero-mundial.html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
@@ -547,7 +553,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Thu, 10 Apr 2025 11:04:00 +0200</pubDate>
+  <pubDate>Thu, 10 Apr 2025 11:20:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Emacs con Esteroides: Configurar un Contador de Visitantes para el Blog]]></title>
