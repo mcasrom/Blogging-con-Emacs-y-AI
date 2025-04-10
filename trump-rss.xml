@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - trump]]></title>
 <description><![CDATA[Example.com - trump]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-trump.html</link>
-<lastBuildDate>Wed, 09 Apr 2025 12:48:47 +0200</lastBuildDate>
+<lastBuildDate>Thu, 10 Apr 2025 07:33:14 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Perfil comparativo del votante de Donald Trump (2016 vs 2024)]]></title>
   <description><![CDATA[
@@ -224,17 +224,17 @@ Ejemplo para generar gráfico en gnuplot si se desea evolución del apoyo por gr
 <item>
   <title><![CDATA[Análisis de la Nueva Estrategia de Donald Trump frente a la OTAN en 2025]]></title>
   <description><![CDATA[
-<div id="outline-container-orgd0eafc5" class="outline-2">
-<h2 id="orgd0eafc5">Introducción</h2>
-<div class="outline-text-2" id="text-orgd0eafc5">
+<div id="outline-container-orgdc17e4e" class="outline-2">
+<h2 id="orgdc17e4e">Introducción</h2>
+<div class="outline-text-2" id="text-orgdc17e4e">
 <p>
 El 20 de enero de 2025, Donald Trump asumió su segundo mandato como presidente de Estados Unidos, prometiendo una política exterior disruptiva. Su enfoque hacia la Organización del Tratado del Atlántico Norte (OTAN) ha evolucionado desde las críticas de su primer mandato hacia una estrategia más compleja en 2025, marcada por la presión económica, renegociaciones estratégicas y un posible replanteamiento del rol estadounidense. Este análisis explora los componentes de esta nueva postura, sus implicaciones y su impacto global, acompañado por un diagrama que ilustra las dinámicas clave. La fecha actual es 9 de abril de 2025.
 </p>
 </div>
 </div>
-<div id="outline-container-org3111c57" class="outline-2">
-<h2 id="org3111c57">Contexto Histórico: Trump y la OTAN (2017-2021)</h2>
-<div class="outline-text-2" id="text-org3111c57">
+<div id="outline-container-orge36e92c" class="outline-2">
+<h2 id="orge36e92c">Contexto Histórico: Trump y la OTAN (2017-2021)</h2>
+<div class="outline-text-2" id="text-orge36e92c">
 <p>
 Durante su primer mandato, Trump marcó su relación con la OTAN con:
 </p>
@@ -249,9 +249,9 @@ A pesar de esto, la OTAN sobrevivió, y el gasto militar europeo aumentó bajo s
 </p>
 </div>
 </div>
-<div id="outline-container-org0249da0" class="outline-2">
-<h2 id="org0249da0">La Estrategia de Trump en 2025: Elementos Clave</h2>
-<div class="outline-text-2" id="text-org0249da0">
+<div id="outline-container-orgc7509b5" class="outline-2">
+<h2 id="orgc7509b5">La Estrategia de Trump en 2025: Elementos Clave</h2>
+<div class="outline-text-2" id="text-orgc7509b5">
 <p>
 La estrategia actual de Trump combina continuidad y nuevas prioridades:
 </p>
@@ -288,30 +288,24 @@ La estrategia actual de Trump combina continuidad y nuevas prioridades:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf5a0206" class="outline-2">
-<h2 id="orgf5a0206">Diagrama: Dinámicas de la Estrategia de Trump hacia la OTAN</h2>
-<div class="outline-text-2" id="text-orgf5a0206">
+<div id="outline-container-org6b99d09" class="outline-2">
+<h2 id="org6b99d09">Diagrama: Dinámicas de la Estrategia de Trump hacia la OTAN</h2>
+<div class="outline-text-2" id="text-org6b99d09">
 <p>
 A continuación, un diagrama en PlantUML que resume las interacciones clave. Renderízalo en Emacs con el paquete `org-plantuml` activado.
 </p>
 
 
-<figure id="orgfea0eab">
-<img src="trump-nato-2025.png exports: none" alt="trump-nato-2025.png exports: none">
-
-</figure>
-
-
-<figure id="orgaf12f18">
+<figure id="org21d66bf">
 <img src="images/trump-nato-2025.png" alt="Diagrama PlantUML de la estrategia de Trump" style="width:600px">
 
 <figcaption><span class="figure-number">Figure 1: </span>Diagrama de la estrategia de Trump hacia la OTAN en 2025.</figcaption>
 </figure>
 </div>
 </div>
-<div id="outline-container-orgddfa5be" class="outline-2">
-<h2 id="orgddfa5be">Implicaciones para los Aliados Europeos</h2>
-<div class="outline-text-2" id="text-orgddfa5be">
+<div id="outline-container-org23e3b6e" class="outline-2">
+<h2 id="org23e3b6e">Implicaciones para los Aliados Europeos</h2>
+<div class="outline-text-2" id="text-org23e3b6e">
 <ul class="org-ul">
 <li><b><b>Gasto Militar</b></b>: Europa aumenta presupuestos, pero el 5% es un desafío.</li>
 <li><b><b>Autonomía</b></b>: Macron aboga por una defensa europea, aunque limitada sin EE.UU.</li>
@@ -319,18 +313,18 @@ A continuación, un diagrama en PlantUML que resume las interacciones clave. Ren
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf5e1e6e" class="outline-2">
-<h2 id="orgf5e1e6e">Impacto en el Conflicto de Ucrania</h2>
-<div class="outline-text-2" id="text-orgf5e1e6e">
+<div id="outline-container-orgb51f756" class="outline-2">
+<h2 id="orgb51f756">Impacto en el Conflicto de Ucrania</h2>
+<div class="outline-text-2" id="text-orgb51f756">
 <ul class="org-ul">
 <li><b><b>Reducción de Apoyo</b></b>: Un acuerdo con Rusia podría cortar la ayuda de EE.UU. a Ucrania.</li>
 <li><b><b>Membresía</b></b>: La exclusión de Ucrania de la OTAN divide a la alianza.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orge94822f" class="outline-2">
-<h2 id="orge94822f">Perspectivas a Largo Plazo</h2>
-<div class="outline-text-2" id="text-orge94822f">
+<div id="outline-container-orga8e29ad" class="outline-2">
+<h2 id="orga8e29ad">Perspectivas a Largo Plazo</h2>
+<div class="outline-text-2" id="text-orga8e29ad">
 <ol class="org-ol">
 <li><b><b>OTAN Europea</b></b>: Mayor rol europeo si EE.UU. se retrae.</li>
 <li><b><b>Debilitamiento</b></b>: Fracturas posibles si la credibilidad falla.</li>
@@ -338,17 +332,17 @@ A continuación, un diagrama en PlantUML que resume las interacciones clave. Ren
 </ol>
 </div>
 </div>
-<div id="outline-container-org4e7e182" class="outline-2">
-<h2 id="org4e7e182">Conclusión</h2>
-<div class="outline-text-2" id="text-org4e7e182">
+<div id="outline-container-org24494ed" class="outline-2">
+<h2 id="org24494ed">Conclusión</h2>
+<div class="outline-text-2" id="text-org24494ed">
 <p>
 La estrategia de Trump en 2025 busca redefinir la OTAN mediante presión financiera y un rol estadounidense reducido, mientras negocia con Rusia y mira al Ártico. El diagrama muestra cómo estos elementos interactúan, destacando los riesgos y oportunidades para la alianza en un contexto geopolítico volátil.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc374574" class="outline-2">
-<h2 id="orgc374574">Notas al Pie</h2>
-<div class="outline-text-2" id="text-orgc374574">
+<div id="outline-container-orgabc74f0" class="outline-2">
+<h2 id="orgabc74f0">Notas al Pie</h2>
+<div class="outline-text-2" id="text-orgabc74f0">
 <ul class="org-ul">
 <li>CNBC (23 de enero de 2025): Declaraciones sobre el 5%.</li>
 <li>NBC News (18 de marzo de 2025): Planes del Pentágono.</li>
@@ -704,24 +698,24 @@ La política arancelaria de Trump en 2025 marca un retorno a la confrontación c
 <item>
   <title><![CDATA[La nueva situación geoestratégica mundial tras la llegada de Trump como 47º presidente de EE.UU.]]></title>
   <description><![CDATA[
-<div id="outline-container-org12bf8ae" class="outline-2">
-<h2 id="org12bf8ae">Introducción</h2>
-<div class="outline-text-2" id="text-org12bf8ae">
+<div id="outline-container-org3510a78" class="outline-2">
+<h2 id="org3510a78">Introducción</h2>
+<div class="outline-text-2" id="text-org3510a78">
 <p>
 La reelección de Donald Trump como el 47º presidente de Estados Unidos, asumiendo el cargo el 20 de enero de 2025, ha marcado un punto de inflexión en la geoestrategia mundial. Su enfoque "America First" y su estilo transaccional han reconfigurado las relaciones entre bloques geopolíticos, intensificando la multipolaridad y desafiando el orden global previo. Este post analiza cómo su presidencia está moldeando las dinámicas entre Estados Unidos, China, Rusia, la Unión Europea y potencias emergentes, con un gráfico de apoyo que ilustra los cambios en la influencia relativa.
 </p>
 </div>
 </div>
-<div id="outline-container-orgb889282" class="outline-2">
-<h2 id="orgb889282">Contexto geoestratégico post-inauguración</h2>
-<div class="outline-text-2" id="text-orgb889282">
+<div id="outline-container-org9c4479d" class="outline-2">
+<h2 id="org9c4479d">Contexto geoestratégico post-inauguración</h2>
+<div class="outline-text-2" id="text-org9c4479d">
 <p>
 Desde su toma de posesión, Trump ha implementado políticas que priorizan la soberanía económica y la seguridad nacional de EE.UU., como la imposición de aranceles del 25% a importaciones de Canadá y México (febrero 2025) y del 60% a China (marzo 2025). Estas medidas, combinadas con una retórica de negociación directa con líderes como Putin y Xi Jinping, han acelerado la fragmentación del sistema global hacia bloques más definidos.
 </p>
 </div>
-<div id="outline-container-org063d0e5" class="outline-3">
-<h3 id="org063d0e5">Principales bloques geopolíticos</h3>
-<div class="outline-text-3" id="text-org063d0e5">
+<div id="outline-container-orgbc0ccd6" class="outline-3">
+<h3 id="orgbc0ccd6">Principales bloques geopolíticos</h3>
+<div class="outline-text-3" id="text-orgbc0ccd6">
 <ul class="org-ul">
 <li><b>EE.UU. y aliados tradicionales</b>: Incluye a Canadá, México (a pesar de tensiones comerciales) y partes de la OTAN, aunque con una relación más pragmática bajo Trump.</li>
 <li><b>China y su esfera</b>: Abarca la Iniciativa de la Franja y la Ruta (BRI), con creciente influencia en Asia-Pacífico y África.</li>
@@ -732,55 +726,55 @@ Desde su toma de posesión, Trump ha implementado políticas que priorizan la so
 </div>
 </div>
 </div>
-<div id="outline-container-orgdd34396" class="outline-2">
-<h2 id="orgdd34396">Relación entre bloques</h2>
-<div class="outline-text-2" id="text-orgdd34396">
+<div id="outline-container-org934b601" class="outline-2">
+<h2 id="org934b601">Relación entre bloques</h2>
+<div class="outline-text-2" id="text-org934b601">
 </div>
-<div id="outline-container-orgf2beabc" class="outline-3">
-<h3 id="orgf2beabc">EE.UU. vs. China: Una nueva guerra fría económica</h3>
-<div class="outline-text-3" id="text-orgf2beabc">
+<div id="outline-container-orgbc0d737" class="outline-3">
+<h3 id="orgbc0d737">EE.UU. vs. China: Una nueva guerra fría económica</h3>
+<div class="outline-text-3" id="text-orgbc0d737">
 <p>
 La política de aranceles de Trump ha intensificado la rivalidad con China, que responde con restricciones a exportaciones de tierras raras y avances en su "yuan digital". La competencia por la supremacía en IA y biotecnología se ha convertido en un campo de batalla clave, fragmentando aún más las cadenas de suministro globales.
 </p>
 </div>
 </div>
-<div id="outline-container-org9a78635" class="outline-3">
-<h3 id="org9a78635">Rusia y el conflicto en Ucrania</h3>
-<div class="outline-text-3" id="text-org9a78635">
+<div id="outline-container-org22b2dde" class="outline-3">
+<h3 id="org22b2dde">Rusia y el conflicto en Ucrania</h3>
+<div class="outline-text-3" id="text-org22b2dde">
 <p>
 Trump ha presionado por un acuerdo de "tierra por paz" en Ucrania, negociado directamente con Putin en febrero de 2025. Esto ha debilitado la cohesión de la OTAN, con países como Alemania y Francia buscando una postura más independiente frente a Rusia.
 </p>
 </div>
 </div>
-<div id="outline-container-org8bcbba6" class="outline-3">
-<h3 id="org8bcbba6">La UE en la encrucijada</h3>
-<div class="outline-text-3" id="text-org8bcbba6">
+<div id="outline-container-org58ee891" class="outline-3">
+<h3 id="org58ee891">La UE en la encrucijada</h3>
+<div class="outline-text-3" id="text-org58ee891">
 <p>
 La UE enfrenta dilemas: los aranceles de Trump afectan sus exportaciones (automotriz, maquinaria), mientras que la dependencia energética de Rusia y la competencia china en tecnología la obligan a buscar una "autonomía estratégica" que aún no logra consolidar.
 </p>
 </div>
 </div>
-<div id="outline-container-org93a6e5b" class="outline-3">
-<h3 id="org93a6e5b">BRICS+ y el Sur Global</h3>
-<div class="outline-text-3" id="text-org93a6e5b">
+<div id="outline-container-org8bdbd1b" class="outline-3">
+<h3 id="org8bdbd1b">BRICS+ y el Sur Global</h3>
+<div class="outline-text-3" id="text-org8bdbd1b">
 <p>
 India emerge como líder potencial de un tercer bloque, aprovechando su crecimiento demográfico y económico. El BRICS+ (con Arabia Saudita y Emiratos Árabes Unidos desde enero 2025) prioriza la soberanía económica sobre la globalización occidental.
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orge7a145e" class="outline-2">
-<h2 id="orge7a145e">Influencia relativa de los bloques (2016-2025)</h2>
-<div class="outline-text-2" id="text-orge7a145e">
+<div id="outline-container-orgc728728" class="outline-2">
+<h2 id="orgc728728">Influencia relativa de los bloques (2016-2025)</h2>
+<div class="outline-text-2" id="text-orgc728728">
 
-<figure id="org73f22be">
+<figure id="org119c078">
 <img src="images/geostrategic_influence_fixed.png" alt="geostrategic_influence_fixed.png">
 
 </figure>
-
-<p>
-** Descripción del gráfico
-</p>
+</div>
+<div id="outline-container-org0bb8fba" class="outline-3">
+<h3 id="org0bb8fba">Descripción del gráfico</h3>
+<div class="outline-text-3" id="text-org0bb8fba">
 <ul class="org-ul">
 <li><b>Índice de influencia</b>: Estimación cualitativa (0-100) basada en poder económico, militar y diplomático.</li>
 <li><b>Tendencias</b>: EE.UU. recupera influencia en 2025 tras un declive relativo; China crece sostenidamente; Rusia se estabiliza; la UE declina; BRICS+ gana terreno.</li>
@@ -788,9 +782,10 @@ India emerge como líder potencial de un tercer bloque, aprovechando su crecimie
 </ul>
 </div>
 </div>
-<div id="outline-container-org6c9d13e" class="outline-2">
-<h2 id="org6c9d13e">Implicaciones para el futuro</h2>
-<div class="outline-text-2" id="text-org6c9d13e">
+</div>
+<div id="outline-container-org3d54106" class="outline-2">
+<h2 id="org3d54106">Implicaciones para el futuro</h2>
+<div class="outline-text-2" id="text-org3d54106">
 <ul class="org-ul">
 <li><b>Multipolaridad consolidada</b>: La presidencia de Trump refuerza un mundo de bloques en competencia, alejándose de la cooperación global.</li>
 <li><b>Tensiones comerciales</b>: Los aranceles y las represalias fragmentan el comercio, beneficiando a economías autárquicas o regionales.</li>
@@ -798,17 +793,17 @@ India emerge como líder potencial de un tercer bloque, aprovechando su crecimie
 </ul>
 </div>
 </div>
-<div id="outline-container-org0d51d96" class="outline-2">
-<h2 id="org0d51d96">Conclusión</h2>
-<div class="outline-text-2" id="text-org0d51d96">
+<div id="outline-container-org396de90" class="outline-2">
+<h2 id="org396de90">Conclusión</h2>
+<div class="outline-text-2" id="text-org396de90">
 <p>
 La llegada de Trump en 2025 ha acelerado la transición hacia un orden geoestratégico multipolar, donde la influencia de EE.UU. se reafirma a corto plazo, pero a costa de tensiones con aliados y rivales. El gráfico evidencia esta dinámica, mostrando un mundo más fragmentado y competitivo. Las empresas y gobiernos deberán adaptarse a esta nueva realidad de bloques en pugna.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd958bba" class="outline-2">
-<h2 id="orgd958bba">Referencias</h2>
-<div class="outline-text-2" id="text-orgd958bba">
+<div id="outline-container-orgb88eef8" class="outline-2">
+<h2 id="orgb88eef8">Referencias</h2>
+<div class="outline-text-2" id="text-orgb88eef8">
 <ul class="org-ul">
 <li>EY Geostrategic Outlook 2025: "Top 10 geopolitical risks in 2025".</li>
 <li>Chatham House: "The world in 2025".</li>
@@ -828,9 +823,9 @@ La llegada de Trump en 2025 ha acelerado la transición hacia un orden geoestrat
 <item>
   <title><![CDATA[La anormalidad política de Donald Trump: un análisis (ii)]]></title>
   <description><![CDATA[
-<div id="outline-container-orgf917c1c" class="outline-2">
-<h2 id="orgf917c1c">Introducción</h2>
-<div class="outline-text-2" id="text-orgf917c1c">
+<div id="outline-container-org4d8a634" class="outline-2">
+<h2 id="org4d8a634">Introducción</h2>
+<div class="outline-text-2" id="text-org4d8a634">
 <p>
 Desde su irrupción en la escena política estadounidense, Donald J. Trump ha representado una figura profundamente disruptiva. Su presidencia (2017–2021) no solo alteró el estilo presidencial tradicional, sino que también puso en entredicho pilares fundamentales del sistema democrático.
 </p>
@@ -840,9 +835,9 @@ Este post examina la <b>anormalidad estructural y discursiva</b> de su mandato, 
 </p>
 </div>
 </div>
-<div id="outline-container-org6a3888b" class="outline-2">
-<h2 id="org6a3888b">1. Ruptura con la política tradicional</h2>
-<div class="outline-text-2" id="text-org6a3888b">
+<div id="outline-container-org96029d4" class="outline-2">
+<h2 id="org96029d4">1. Ruptura con la política tradicional</h2>
+<div class="outline-text-2" id="text-org96029d4">
 <p>
 <b><b>Donald Trump como "outsider" político</b></b>
 </p>
@@ -873,43 +868,43 @@ La retórica del "enemigo interno" (prensa, inmigrantes, instituciones) reforzó
 </blockquote>
 </div>
 </div>
-<div id="outline-container-org4fa788d" class="outline-2">
-<h2 id="org4fa788d">2. Ejes políticos anómalos</h2>
-<div class="outline-text-2" id="text-org4fa788d">
-<p>
-<b><b>2.1 Nacionalismo económico</b></b>
-</p>
-
+<div id="outline-container-org0ee2b73" class="outline-2">
+<h2 id="org0ee2b73">2. Ejes políticos anómalos</h2>
+<div class="outline-text-2" id="text-org0ee2b73">
+</div>
+<div id="outline-container-orga37e5ad" class="outline-3">
+<h3 id="orga37e5ad">Nacionalismo económico**</h3>
+<div class="outline-text-3" id="text-orga37e5ad">
 <ul class="org-ul">
 <li>Retiro de tratados multilaterales (TPP, NAFTA renegociado).</li>
 <li>Guerra comercial con China.</li>
 <li>Enfoque proteccionista con fuerte carga simbólica de “recuperar lo americano”.</li>
 </ul>
-
-<p>
-<b><b>2.2 Política migratoria extrema</b></b>
-</p>
-
+</div>
+</div>
+<div id="outline-container-orgb15a594" class="outline-3">
+<h3 id="orgb15a594">Política migratoria extrema**</h3>
+<div class="outline-text-3" id="text-orgb15a594">
 <ul class="org-ul">
 <li>Construcción del muro fronterizo.</li>
 <li>Separación de familias y detención masiva de migrantes.</li>
 <li>Restricciones a visados incluso a profesionales cualificados.</li>
 </ul>
-
-<p>
-<b><b>2.3 Negacionismo climático y científico</b></b>
-</p>
-
+</div>
+</div>
+<div id="outline-container-orgc16ae9e" class="outline-3">
+<h3 id="orgc16ae9e">Negacionismo climático y científico**</h3>
+<div class="outline-text-3" id="text-orgc16ae9e">
 <ul class="org-ul">
 <li>Retiro del Acuerdo de París.</li>
 <li>Nombramientos de escépticos del cambio climático en agencias clave.</li>
 <li>Minimización de la pandemia de COVID-19 y promoción de desinformación.</li>
 </ul>
-
-<p>
-<b><b>2.4 Deslegitimación del proceso democrático</b></b>
-</p>
-
+</div>
+</div>
+<div id="outline-container-org3fe158c" class="outline-3">
+<h3 id="org3fe158c">Deslegitimación del proceso democrático**</h3>
+<div class="outline-text-3" id="text-org3fe158c">
 <ul class="org-ul">
 <li>Declaraciones infundadas sobre fraude electoral masivo.</li>
 <li>No reconocimiento explícito de la derrota en 2020.</li>
@@ -917,11 +912,12 @@ La retórica del "enemigo interno" (prensa, inmigrantes, instituciones) reforzó
 </ul>
 </div>
 </div>
-<div id="outline-container-org9660c87" class="outline-2">
-<h2 id="org9660c87">3. Un modelo gráfico: Erosión institucional</h2>
-<div class="outline-text-2" id="text-org9660c87">
+</div>
+<div id="outline-container-org642ec08" class="outline-2">
+<h2 id="org642ec08">3. Un modelo gráfico: Erosión institucional</h2>
+<div class="outline-text-2" id="text-org642ec08">
 
-<figure id="org88cef8d">
+<figure id="orgffafcca">
 <img src="images/erosion.png" alt="erosion.png">
 
 </figure>
@@ -931,9 +927,9 @@ Este diagrama ilustra la relación entre ciudadanía, instituciones y poder ejec
 </p>
 </div>
 </div>
-<div id="outline-container-orgb0663f2" class="outline-2">
-<h2 id="orgb0663f2">4. Consecuencias a largo plazo</h2>
-<div class="outline-text-2" id="text-orgb0663f2">
+<div id="outline-container-orgcd4648d" class="outline-2">
+<h2 id="orgcd4648d">4. Consecuencias a largo plazo</h2>
+<div class="outline-text-2" id="text-orgcd4648d">
 <ul class="org-ul">
 <li>Radicalización del Partido Republicano.</li>
 <li>Normalización del discurso conspirativo.</li>
@@ -942,9 +938,9 @@ Este diagrama ilustra la relación entre ciudadanía, instituciones y poder ejec
 </ul>
 </div>
 </div>
-<div id="outline-container-org7ca979c" class="outline-2">
-<h2 id="org7ca979c">5. Referencias y fuentes</h2>
-<div class="outline-text-2" id="text-org7ca979c">
+<div id="outline-container-orgd5a297b" class="outline-2">
+<h2 id="orgd5a297b">5. Referencias y fuentes</h2>
+<div class="outline-text-2" id="text-orgd5a297b">
 <ol class="org-ol">
 <li>Levitsky, Steven &amp; Ziblatt, Daniel. <b>Cómo mueren las democracias</b>. Ariel, 2018.</li>
 <li>Mounk, Yascha. <b>El pueblo contra la democracia</b>. Paidós, 2018.</li>
@@ -957,9 +953,9 @@ Este diagrama ilustra la relación entre ciudadanía, instituciones y poder ejec
 </ol>
 </div>
 </div>
-<div id="outline-container-orgdb1729c" class="outline-2">
-<h2 id="orgdb1729c">Conclusión</h2>
-<div class="outline-text-2" id="text-orgdb1729c">
+<div id="outline-container-orgd816805" class="outline-2">
+<h2 id="orgd816805">6. Conclusión</h2>
+<div class="outline-text-2" id="text-orgd816805">
 <p>
 La presidencia de Donald Trump no fue simplemente “diferente”; fue profundamente anómala en términos de discurso, método de gobernanza y consecuencias institucionales. Su legado continúa influyendo en la política nacional e internacional, y plantea preguntas fundamentales sobre el futuro de las democracias liberales.
 </p>

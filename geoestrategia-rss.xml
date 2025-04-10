@@ -4,21 +4,21 @@
 <title><![CDATA[Example.com - geoestrategia]]></title>
 <description><![CDATA[Example.com - geoestrategia]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-geoestrategia.html</link>
-<lastBuildDate>Wed, 09 Apr 2025 12:48:44 +0200</lastBuildDate>
+<lastBuildDate>Thu, 10 Apr 2025 07:33:10 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Análisis de la Nueva Estrategia de Donald Trump frente a la OTAN en 2025]]></title>
   <description><![CDATA[
-<div id="outline-container-orgd0eafc5" class="outline-2">
-<h2 id="orgd0eafc5">Introducción</h2>
-<div class="outline-text-2" id="text-orgd0eafc5">
+<div id="outline-container-orgdc17e4e" class="outline-2">
+<h2 id="orgdc17e4e">Introducción</h2>
+<div class="outline-text-2" id="text-orgdc17e4e">
 <p>
 El 20 de enero de 2025, Donald Trump asumió su segundo mandato como presidente de Estados Unidos, prometiendo una política exterior disruptiva. Su enfoque hacia la Organización del Tratado del Atlántico Norte (OTAN) ha evolucionado desde las críticas de su primer mandato hacia una estrategia más compleja en 2025, marcada por la presión económica, renegociaciones estratégicas y un posible replanteamiento del rol estadounidense. Este análisis explora los componentes de esta nueva postura, sus implicaciones y su impacto global, acompañado por un diagrama que ilustra las dinámicas clave. La fecha actual es 9 de abril de 2025.
 </p>
 </div>
 </div>
-<div id="outline-container-org3111c57" class="outline-2">
-<h2 id="org3111c57">Contexto Histórico: Trump y la OTAN (2017-2021)</h2>
-<div class="outline-text-2" id="text-org3111c57">
+<div id="outline-container-orge36e92c" class="outline-2">
+<h2 id="orge36e92c">Contexto Histórico: Trump y la OTAN (2017-2021)</h2>
+<div class="outline-text-2" id="text-orge36e92c">
 <p>
 Durante su primer mandato, Trump marcó su relación con la OTAN con:
 </p>
@@ -33,9 +33,9 @@ A pesar de esto, la OTAN sobrevivió, y el gasto militar europeo aumentó bajo s
 </p>
 </div>
 </div>
-<div id="outline-container-org0249da0" class="outline-2">
-<h2 id="org0249da0">La Estrategia de Trump en 2025: Elementos Clave</h2>
-<div class="outline-text-2" id="text-org0249da0">
+<div id="outline-container-orgc7509b5" class="outline-2">
+<h2 id="orgc7509b5">La Estrategia de Trump en 2025: Elementos Clave</h2>
+<div class="outline-text-2" id="text-orgc7509b5">
 <p>
 La estrategia actual de Trump combina continuidad y nuevas prioridades:
 </p>
@@ -72,30 +72,24 @@ La estrategia actual de Trump combina continuidad y nuevas prioridades:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf5a0206" class="outline-2">
-<h2 id="orgf5a0206">Diagrama: Dinámicas de la Estrategia de Trump hacia la OTAN</h2>
-<div class="outline-text-2" id="text-orgf5a0206">
+<div id="outline-container-org6b99d09" class="outline-2">
+<h2 id="org6b99d09">Diagrama: Dinámicas de la Estrategia de Trump hacia la OTAN</h2>
+<div class="outline-text-2" id="text-org6b99d09">
 <p>
 A continuación, un diagrama en PlantUML que resume las interacciones clave. Renderízalo en Emacs con el paquete `org-plantuml` activado.
 </p>
 
 
-<figure id="orgfea0eab">
-<img src="trump-nato-2025.png exports: none" alt="trump-nato-2025.png exports: none">
-
-</figure>
-
-
-<figure id="orgaf12f18">
+<figure id="org21d66bf">
 <img src="images/trump-nato-2025.png" alt="Diagrama PlantUML de la estrategia de Trump" style="width:600px">
 
 <figcaption><span class="figure-number">Figure 1: </span>Diagrama de la estrategia de Trump hacia la OTAN en 2025.</figcaption>
 </figure>
 </div>
 </div>
-<div id="outline-container-orgddfa5be" class="outline-2">
-<h2 id="orgddfa5be">Implicaciones para los Aliados Europeos</h2>
-<div class="outline-text-2" id="text-orgddfa5be">
+<div id="outline-container-org23e3b6e" class="outline-2">
+<h2 id="org23e3b6e">Implicaciones para los Aliados Europeos</h2>
+<div class="outline-text-2" id="text-org23e3b6e">
 <ul class="org-ul">
 <li><b><b>Gasto Militar</b></b>: Europa aumenta presupuestos, pero el 5% es un desafío.</li>
 <li><b><b>Autonomía</b></b>: Macron aboga por una defensa europea, aunque limitada sin EE.UU.</li>
@@ -103,18 +97,18 @@ A continuación, un diagrama en PlantUML que resume las interacciones clave. Ren
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf5e1e6e" class="outline-2">
-<h2 id="orgf5e1e6e">Impacto en el Conflicto de Ucrania</h2>
-<div class="outline-text-2" id="text-orgf5e1e6e">
+<div id="outline-container-orgb51f756" class="outline-2">
+<h2 id="orgb51f756">Impacto en el Conflicto de Ucrania</h2>
+<div class="outline-text-2" id="text-orgb51f756">
 <ul class="org-ul">
 <li><b><b>Reducción de Apoyo</b></b>: Un acuerdo con Rusia podría cortar la ayuda de EE.UU. a Ucrania.</li>
 <li><b><b>Membresía</b></b>: La exclusión de Ucrania de la OTAN divide a la alianza.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orge94822f" class="outline-2">
-<h2 id="orge94822f">Perspectivas a Largo Plazo</h2>
-<div class="outline-text-2" id="text-orge94822f">
+<div id="outline-container-orga8e29ad" class="outline-2">
+<h2 id="orga8e29ad">Perspectivas a Largo Plazo</h2>
+<div class="outline-text-2" id="text-orga8e29ad">
 <ol class="org-ol">
 <li><b><b>OTAN Europea</b></b>: Mayor rol europeo si EE.UU. se retrae.</li>
 <li><b><b>Debilitamiento</b></b>: Fracturas posibles si la credibilidad falla.</li>
@@ -122,17 +116,17 @@ A continuación, un diagrama en PlantUML que resume las interacciones clave. Ren
 </ol>
 </div>
 </div>
-<div id="outline-container-org4e7e182" class="outline-2">
-<h2 id="org4e7e182">Conclusión</h2>
-<div class="outline-text-2" id="text-org4e7e182">
+<div id="outline-container-org24494ed" class="outline-2">
+<h2 id="org24494ed">Conclusión</h2>
+<div class="outline-text-2" id="text-org24494ed">
 <p>
 La estrategia de Trump en 2025 busca redefinir la OTAN mediante presión financiera y un rol estadounidense reducido, mientras negocia con Rusia y mira al Ártico. El diagrama muestra cómo estos elementos interactúan, destacando los riesgos y oportunidades para la alianza en un contexto geopolítico volátil.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc374574" class="outline-2">
-<h2 id="orgc374574">Notas al Pie</h2>
-<div class="outline-text-2" id="text-orgc374574">
+<div id="outline-container-orgabc74f0" class="outline-2">
+<h2 id="orgabc74f0">Notas al Pie</h2>
+<div class="outline-text-2" id="text-orgabc74f0">
 <ul class="org-ul">
 <li>CNBC (23 de enero de 2025): Declaraciones sobre el 5%.</li>
 <li>NBC News (18 de marzo de 2025): Planes del Pentágono.</li>
@@ -283,24 +277,24 @@ La política arancelaria de Trump en 2025 marca un retorno a la confrontación c
 <item>
   <title><![CDATA[La nueva situación geoestratégica mundial tras la llegada de Trump como 47º presidente de EE.UU.]]></title>
   <description><![CDATA[
-<div id="outline-container-org12bf8ae" class="outline-2">
-<h2 id="org12bf8ae">Introducción</h2>
-<div class="outline-text-2" id="text-org12bf8ae">
+<div id="outline-container-org3510a78" class="outline-2">
+<h2 id="org3510a78">Introducción</h2>
+<div class="outline-text-2" id="text-org3510a78">
 <p>
 La reelección de Donald Trump como el 47º presidente de Estados Unidos, asumiendo el cargo el 20 de enero de 2025, ha marcado un punto de inflexión en la geoestrategia mundial. Su enfoque "America First" y su estilo transaccional han reconfigurado las relaciones entre bloques geopolíticos, intensificando la multipolaridad y desafiando el orden global previo. Este post analiza cómo su presidencia está moldeando las dinámicas entre Estados Unidos, China, Rusia, la Unión Europea y potencias emergentes, con un gráfico de apoyo que ilustra los cambios en la influencia relativa.
 </p>
 </div>
 </div>
-<div id="outline-container-orgb889282" class="outline-2">
-<h2 id="orgb889282">Contexto geoestratégico post-inauguración</h2>
-<div class="outline-text-2" id="text-orgb889282">
+<div id="outline-container-org9c4479d" class="outline-2">
+<h2 id="org9c4479d">Contexto geoestratégico post-inauguración</h2>
+<div class="outline-text-2" id="text-org9c4479d">
 <p>
 Desde su toma de posesión, Trump ha implementado políticas que priorizan la soberanía económica y la seguridad nacional de EE.UU., como la imposición de aranceles del 25% a importaciones de Canadá y México (febrero 2025) y del 60% a China (marzo 2025). Estas medidas, combinadas con una retórica de negociación directa con líderes como Putin y Xi Jinping, han acelerado la fragmentación del sistema global hacia bloques más definidos.
 </p>
 </div>
-<div id="outline-container-org063d0e5" class="outline-3">
-<h3 id="org063d0e5">Principales bloques geopolíticos</h3>
-<div class="outline-text-3" id="text-org063d0e5">
+<div id="outline-container-orgbc0ccd6" class="outline-3">
+<h3 id="orgbc0ccd6">Principales bloques geopolíticos</h3>
+<div class="outline-text-3" id="text-orgbc0ccd6">
 <ul class="org-ul">
 <li><b>EE.UU. y aliados tradicionales</b>: Incluye a Canadá, México (a pesar de tensiones comerciales) y partes de la OTAN, aunque con una relación más pragmática bajo Trump.</li>
 <li><b>China y su esfera</b>: Abarca la Iniciativa de la Franja y la Ruta (BRI), con creciente influencia en Asia-Pacífico y África.</li>
@@ -311,55 +305,55 @@ Desde su toma de posesión, Trump ha implementado políticas que priorizan la so
 </div>
 </div>
 </div>
-<div id="outline-container-orgdd34396" class="outline-2">
-<h2 id="orgdd34396">Relación entre bloques</h2>
-<div class="outline-text-2" id="text-orgdd34396">
+<div id="outline-container-org934b601" class="outline-2">
+<h2 id="org934b601">Relación entre bloques</h2>
+<div class="outline-text-2" id="text-org934b601">
 </div>
-<div id="outline-container-orgf2beabc" class="outline-3">
-<h3 id="orgf2beabc">EE.UU. vs. China: Una nueva guerra fría económica</h3>
-<div class="outline-text-3" id="text-orgf2beabc">
+<div id="outline-container-orgbc0d737" class="outline-3">
+<h3 id="orgbc0d737">EE.UU. vs. China: Una nueva guerra fría económica</h3>
+<div class="outline-text-3" id="text-orgbc0d737">
 <p>
 La política de aranceles de Trump ha intensificado la rivalidad con China, que responde con restricciones a exportaciones de tierras raras y avances en su "yuan digital". La competencia por la supremacía en IA y biotecnología se ha convertido en un campo de batalla clave, fragmentando aún más las cadenas de suministro globales.
 </p>
 </div>
 </div>
-<div id="outline-container-org9a78635" class="outline-3">
-<h3 id="org9a78635">Rusia y el conflicto en Ucrania</h3>
-<div class="outline-text-3" id="text-org9a78635">
+<div id="outline-container-org22b2dde" class="outline-3">
+<h3 id="org22b2dde">Rusia y el conflicto en Ucrania</h3>
+<div class="outline-text-3" id="text-org22b2dde">
 <p>
 Trump ha presionado por un acuerdo de "tierra por paz" en Ucrania, negociado directamente con Putin en febrero de 2025. Esto ha debilitado la cohesión de la OTAN, con países como Alemania y Francia buscando una postura más independiente frente a Rusia.
 </p>
 </div>
 </div>
-<div id="outline-container-org8bcbba6" class="outline-3">
-<h3 id="org8bcbba6">La UE en la encrucijada</h3>
-<div class="outline-text-3" id="text-org8bcbba6">
+<div id="outline-container-org58ee891" class="outline-3">
+<h3 id="org58ee891">La UE en la encrucijada</h3>
+<div class="outline-text-3" id="text-org58ee891">
 <p>
 La UE enfrenta dilemas: los aranceles de Trump afectan sus exportaciones (automotriz, maquinaria), mientras que la dependencia energética de Rusia y la competencia china en tecnología la obligan a buscar una "autonomía estratégica" que aún no logra consolidar.
 </p>
 </div>
 </div>
-<div id="outline-container-org93a6e5b" class="outline-3">
-<h3 id="org93a6e5b">BRICS+ y el Sur Global</h3>
-<div class="outline-text-3" id="text-org93a6e5b">
+<div id="outline-container-org8bdbd1b" class="outline-3">
+<h3 id="org8bdbd1b">BRICS+ y el Sur Global</h3>
+<div class="outline-text-3" id="text-org8bdbd1b">
 <p>
 India emerge como líder potencial de un tercer bloque, aprovechando su crecimiento demográfico y económico. El BRICS+ (con Arabia Saudita y Emiratos Árabes Unidos desde enero 2025) prioriza la soberanía económica sobre la globalización occidental.
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orge7a145e" class="outline-2">
-<h2 id="orge7a145e">Influencia relativa de los bloques (2016-2025)</h2>
-<div class="outline-text-2" id="text-orge7a145e">
+<div id="outline-container-orgc728728" class="outline-2">
+<h2 id="orgc728728">Influencia relativa de los bloques (2016-2025)</h2>
+<div class="outline-text-2" id="text-orgc728728">
 
-<figure id="org73f22be">
+<figure id="org119c078">
 <img src="images/geostrategic_influence_fixed.png" alt="geostrategic_influence_fixed.png">
 
 </figure>
-
-<p>
-** Descripción del gráfico
-</p>
+</div>
+<div id="outline-container-org0bb8fba" class="outline-3">
+<h3 id="org0bb8fba">Descripción del gráfico</h3>
+<div class="outline-text-3" id="text-org0bb8fba">
 <ul class="org-ul">
 <li><b>Índice de influencia</b>: Estimación cualitativa (0-100) basada en poder económico, militar y diplomático.</li>
 <li><b>Tendencias</b>: EE.UU. recupera influencia en 2025 tras un declive relativo; China crece sostenidamente; Rusia se estabiliza; la UE declina; BRICS+ gana terreno.</li>
@@ -367,9 +361,10 @@ India emerge como líder potencial de un tercer bloque, aprovechando su crecimie
 </ul>
 </div>
 </div>
-<div id="outline-container-org6c9d13e" class="outline-2">
-<h2 id="org6c9d13e">Implicaciones para el futuro</h2>
-<div class="outline-text-2" id="text-org6c9d13e">
+</div>
+<div id="outline-container-org3d54106" class="outline-2">
+<h2 id="org3d54106">Implicaciones para el futuro</h2>
+<div class="outline-text-2" id="text-org3d54106">
 <ul class="org-ul">
 <li><b>Multipolaridad consolidada</b>: La presidencia de Trump refuerza un mundo de bloques en competencia, alejándose de la cooperación global.</li>
 <li><b>Tensiones comerciales</b>: Los aranceles y las represalias fragmentan el comercio, beneficiando a economías autárquicas o regionales.</li>
@@ -377,17 +372,17 @@ India emerge como líder potencial de un tercer bloque, aprovechando su crecimie
 </ul>
 </div>
 </div>
-<div id="outline-container-org0d51d96" class="outline-2">
-<h2 id="org0d51d96">Conclusión</h2>
-<div class="outline-text-2" id="text-org0d51d96">
+<div id="outline-container-org396de90" class="outline-2">
+<h2 id="org396de90">Conclusión</h2>
+<div class="outline-text-2" id="text-org396de90">
 <p>
 La llegada de Trump en 2025 ha acelerado la transición hacia un orden geoestratégico multipolar, donde la influencia de EE.UU. se reafirma a corto plazo, pero a costa de tensiones con aliados y rivales. El gráfico evidencia esta dinámica, mostrando un mundo más fragmentado y competitivo. Las empresas y gobiernos deberán adaptarse a esta nueva realidad de bloques en pugna.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd958bba" class="outline-2">
-<h2 id="orgd958bba">Referencias</h2>
-<div class="outline-text-2" id="text-orgd958bba">
+<div id="outline-container-orgb88eef8" class="outline-2">
+<h2 id="orgb88eef8">Referencias</h2>
+<div class="outline-text-2" id="text-orgb88eef8">
 <ul class="org-ul">
 <li>EY Geostrategic Outlook 2025: "Top 10 geopolitical risks in 2025".</li>
 <li>Chatham House: "The world in 2025".</li>
@@ -778,12 +773,12 @@ Referencias
 <item>
   <title><![CDATA[Evolución de la visión geoestratégica estadounidense (2021-2025)]]></title>
   <description><![CDATA[
-<div id="outline-container-org5c95056" class="outline-2">
-<h2 id="org5c95056"><span class="section-number-2">1.</span> Doctrina estratégica actualizada (2025)</h2>
+<div id="outline-container-orgdf9a029" class="outline-2">
+<h2 id="orgdf9a029"><span class="section-number-2">1.</span> Doctrina estratégica actualizada (2025)</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgd344b8f" class="outline-3">
-<h3 id="orgd344b8f"><span class="section-number-3">1.1.</span> Fundamentos conceptuales</h3>
+<div id="outline-container-orge723721" class="outline-3">
+<h3 id="orge723721"><span class="section-number-3">1.1.</span> Fundamentos conceptuales</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>Transición del "territorialismo" al "poder económico-tecnológico" <a href="https://justtwothings.substack.com/p/18-march-2025-geopolitics-systems">1</a></li>
@@ -796,10 +791,10 @@ Referencias
 </ul>
 </div>
 </div>
-<div id="outline-container-org0e80118" class="outline-3">
-<h3 id="org0e80118"><span class="section-number-3">1.2.</span> Cambios doctrinales recientes</h3>
+<div id="outline-container-orgab970cb" class="outline-3">
+<h3 id="orgab970cb"><span class="section-number-3">1.2.</span> Cambios doctrinales recientes</h3>
 <div class="outline-text-3" id="text-1-2">
-<table>
+<table border="2" rules="all" frame="border">
 
 
 <colgroup>
@@ -845,12 +840,12 @@ Referencias
 </div>
 </div>
 </div>
-<div id="outline-container-org7facb60" class="outline-2">
-<h2 id="org7facb60"><span class="section-number-2">2.</span> Estrategias clave bajo Trump (2025)</h2>
+<div id="outline-container-org685044e" class="outline-2">
+<h2 id="org685044e"><span class="section-number-2">2.</span> Estrategias clave bajo Trump (2025)</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org7b857ec" class="outline-3">
-<h3 id="org7b857ec"><span class="section-number-3">2.1.</span> Enfoque transaccional</h3>
+<div id="outline-container-org210e8a2" class="outline-3">
+<h3 id="org210e8a2"><span class="section-number-3">2.1.</span> Enfoque transaccional</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>Política "América Primero 2.0":
@@ -865,8 +860,8 @@ Referencias
 </ul>
 </div>
 </div>
-<div id="outline-container-org1e5ee7f" class="outline-3">
-<h3 id="org1e5ee7f"><span class="section-number-3">2.2.</span> Contención tecnológica</h3>
+<div id="outline-container-orgc6974c2" class="outline-3">
+<h3 id="orgc6974c2"><span class="section-number-3">2.2.</span> Contención tecnológica</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li>Restricciones a China:
@@ -883,18 +878,18 @@ Referencias
 </div>
 </div>
 </div>
-<div id="outline-container-orge2e3dc9" class="outline-2">
-<h2 id="orge2e3dc9"><span class="section-number-2">3.</span> Impacto Trump en relaciones clave</h2>
+<div id="outline-container-orgc426f13" class="outline-2">
+<h2 id="orgc426f13"><span class="section-number-2">3.</span> Impacto Trump en relaciones clave</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgecdda8e" class="outline-3">
-<h3 id="orgecdda8e"><span class="section-number-3">3.1.</span> China-EE.UU.</h3>
+<div id="outline-container-org9f66b49" class="outline-3">
+<h3 id="org9f66b49"><span class="section-number-3">3.1.</span> China-EE.UU.</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li><p>
 Nueva dinámica de "cooperación conflictiva":
 </p>
-<table>
+<table border="2" rules="all" frame="border">
 
 
 <colgroup>
@@ -934,8 +929,8 @@ Nueva dinámica de "cooperación conflictiva":
 </ul>
 </div>
 </div>
-<div id="outline-container-orgccc0b3c" class="outline-3">
-<h3 id="orgccc0b3c"><span class="section-number-3">3.2.</span> Rusia-EE.UU.</h3>
+<div id="outline-container-org3b9d2ea" class="outline-3">
+<h3 id="org3b9d2ea"><span class="section-number-3">3.2.</span> Rusia-EE.UU.</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li>Estrategia de "desacople controlado":
@@ -951,12 +946,12 @@ Nueva dinámica de "cooperación conflictiva":
 </div>
 </div>
 </div>
-<div id="outline-container-orgafe57d5" class="outline-2">
-<h2 id="orgafe57d5"><span class="section-number-2">4.</span> Prioridades regionales actuales</h2>
+<div id="outline-container-orgddeae58" class="outline-2">
+<h2 id="orgddeae58"><span class="section-number-2">4.</span> Prioridades regionales actuales</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org138de2f" class="outline-3">
-<h3 id="org138de2f"><span class="section-number-3">4.1.</span> Hemisferio Occidental</h3>
+<div id="outline-container-org0fca2c4" class="outline-3">
+<h3 id="org0fca2c4"><span class="section-number-3">4.1.</span> Hemisferio Occidental</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li>Nueva doctrina Monroe 2.0:
@@ -968,8 +963,8 @@ Nueva dinámica de "cooperación conflictiva":
 </ul>
 </div>
 </div>
-<div id="outline-container-org53b55fc" class="outline-3">
-<h3 id="org53b55fc"><span class="section-number-3">4.2.</span> Indo-Pacífico</h3>
+<div id="outline-container-org5eec859" class="outline-3">
+<h3 id="org5eec859"><span class="section-number-3">4.2.</span> Indo-Pacífico</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li>Estrategia "Erizo Tecnológico":
@@ -982,12 +977,12 @@ Nueva dinámica de "cooperación conflictiva":
 </div>
 </div>
 </div>
-<div id="outline-container-org77ac9c9" class="outline-2">
-<h2 id="org77ac9c9"><span class="section-number-2">5.</span> Riesgos y desafíos (marzo 2025)</h2>
+<div id="outline-container-org0ce2aba" class="outline-2">
+<h2 id="org0ce2aba"><span class="section-number-2">5.</span> Riesgos y desafíos (marzo 2025)</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-orgd12b323" class="outline-3">
-<h3 id="orgd12b323"><span class="section-number-3">5.1.</span> Contradicciones estratégicas</h3>
+<div id="outline-container-orgeb3be47" class="outline-3">
+<h3 id="orgeb3be47"><span class="section-number-3">5.1.</span> Contradicciones estratégicas</h3>
 <div class="outline-text-3" id="text-5-1">
 <ul class="org-ul">
 <li>Tensión contención China vs necesidad cooperación climática</li>
@@ -996,8 +991,8 @@ Nueva dinámica de "cooperación conflictiva":
 </ul>
 </div>
 </div>
-<div id="outline-container-org3e3b50d" class="outline-3">
-<h3 id="org3e3b50d"><span class="section-number-3">5.2.</span> Escenarios de crisis</h3>
+<div id="outline-container-orgb623820" class="outline-3">
+<h3 id="orgb623820"><span class="section-number-3">5.2.</span> Escenarios de crisis</h3>
 <div class="outline-text-3" id="text-5-2">
 <ol class="org-ol">
 <li>Conflicto Taiwan (probabilidad 38% según ECFR)</li>
@@ -1007,18 +1002,18 @@ Nueva dinámica de "cooperación conflictiva":
 </div>
 </div>
 </div>
-<div id="outline-container-orgcfecbbb" class="outline-2">
-<h2 id="orgcfecbbb"><span class="section-number-2">6.</span> Diagrama estratégico</h2>
+<div id="outline-container-orga092456" class="outline-2">
+<h2 id="orga092456"><span class="section-number-2">6.</span> Diagrama estratégico</h2>
 <div class="outline-text-2" id="text-6">
 
-<figure id="orge19c101">
+<figure id="org12097a6">
 <img src="diagrama_geoestrategia_usa_2025.png" alt="diagrama_geoestrategia_usa_2025.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-orge83de2e" class="outline-2">
-<h2 id="orge83de2e"><span class="section-number-2">7.</span> Referencias documentales</h2>
+<div id="outline-container-org9ac68ff" class="outline-2">
+<h2 id="org9ac68ff"><span class="section-number-2">7.</span> Referencias documentales</h2>
 <div class="outline-text-2" id="text-7">
 <ol class="org-ol">
 <li><a href="https://justtwothings.substack.com/p/18-march-2025-geopolitics-systems">Análisis transición estratégica EE.UU.</a></li>
@@ -1044,12 +1039,12 @@ Nueva dinámica de "cooperación conflictiva":
 <item>
   <title><![CDATA[Visiones geoestratégicas contemporáneas: Rusia, China y EE.UU. (2025)]]></title>
   <description><![CDATA[
-<div id="outline-container-orgf72c8a1" class="outline-2">
-<h2 id="orgf72c8a1"><span class="section-number-2">1.</span> Visión geoestratégica rusa</h2>
+<div id="outline-container-org4172a80" class="outline-2">
+<h2 id="org4172a80"><span class="section-number-2">1.</span> Visión geoestratégica rusa</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgc2aaeb5" class="outline-3">
-<h3 id="orgc2aaeb5"><span class="section-number-3">1.1.</span> Fundamentos doctrinales</h3>
+<div id="outline-container-orge143152" class="outline-3">
+<h3 id="orge143152"><span class="section-number-3">1.1.</span> Fundamentos doctrinales</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>Teoría del "Estado-civilización" como eje central <a href="https://securityconference.org/publikationen/munich-security-report-2025/russia/">1</a></li>
@@ -1062,15 +1057,16 @@ Nueva dinámica de "cooperación conflictiva":
 </ul>
 </div>
 </div>
-<div id="outline-container-org9aadc63" class="outline-3">
-<h3 id="org9aadc63"><span class="section-number-3">1.2.</span> Estrategias clave (2024-2025)</h3>
+<div id="outline-container-orgdd7d71b" class="outline-3">
+<h3 id="orgdd7d71b"><span class="section-number-3">1.2.</span> Estrategias clave (2024-2025)</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
 <li>Expansión BRICS+: incorporación de Egipto, Etiopía, Indonesia, Irán y Emiratos Árabes <a href="https://securityconference.org/publikationen/munich-security-report-2025/russia/">1</a></li>
 <li><p>
 Operaciones de influencia en elecciones occidentales:
 </p>
-<table>
+
+<table border="2" rules="all" frame="border">
 
 
 <colgroup>
@@ -1111,12 +1107,12 @@ Operaciones de influencia en elecciones occidentales:
 </div>
 </div>
 </div>
-<div id="outline-container-orgafcc829" class="outline-2">
-<h2 id="orgafcc829"><span class="section-number-2">2.</span> Estrategia china en el nuevo orden global</h2>
+<div id="outline-container-org3dff358" class="outline-2">
+<h2 id="org3dff358"><span class="section-number-2">2.</span> Estrategia china en el nuevo orden global</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org7c8cb0c" class="outline-3">
-<h3 id="org7c8cb0c"><span class="section-number-3">2.1.</span> Pilares conceptuales</h3>
+<div id="outline-container-org3d410c8" class="outline-3">
+<h3 id="org3d410c8"><span class="section-number-3">2.1.</span> Pilares conceptuales</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>"Seguridad como base del desarrollo" - Discurso XI Jinping NPC 2023 <a href="https://natoassociation.ca/the-geostrategy-of-chinas-belt-and-road-initiative-policy-options-for-nato-member-states-and-global-partners-in-the-indo-pacific/">5</a></li>
@@ -1124,8 +1120,8 @@ Operaciones de influencia en elecciones occidentales:
 </ul>
 </div>
 </div>
-<div id="outline-container-org45ad50d" class="outline-3">
-<h3 id="org45ad50d"><span class="section-number-3">2.2.</span> Implementación 2025</h3>
+<div id="outline-container-org3593b60" class="outline-3">
+<h3 id="org3593b60"><span class="section-number-3">2.2.</span> Implementación 2025</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li>Iniciativas multilaterales:
@@ -1143,12 +1139,12 @@ Operaciones de influencia en elecciones occidentales:
 </div>
 </div>
 </div>
-<div id="outline-container-org44aa54f" class="outline-2">
-<h2 id="org44aa54f"><span class="section-number-2">3.</span> Enfoque geoestratégico estadounidense</h2>
+<div id="outline-container-orgcec4bb5" class="outline-2">
+<h2 id="orgcec4bb5"><span class="section-number-2">3.</span> Enfoque geoestratégico estadounidense</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org0556a66" class="outline-3">
-<h3 id="org0556a66"><span class="section-number-3">3.1.</span> Prioridades de la administración actual</h3>
+<div id="outline-container-org69064df" class="outline-3">
+<h3 id="org69064df"><span class="section-number-3">3.1.</span> Prioridades de la administración actual</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li>Contención tecnológica:
@@ -1165,8 +1161,8 @@ Operaciones de influencia en elecciones occidentales:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb805a30" class="outline-3">
-<h3 id="orgb805a30"><span class="section-number-3">3.2.</span> Desafíos operativos</h3>
+<div id="outline-container-orgcfdeba7" class="outline-3">
+<h3 id="orgcfdeba7"><span class="section-number-3">3.2.</span> Desafíos operativos</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li>Tensión entre seguridad climática y competencia con China</li>
@@ -1175,10 +1171,10 @@ Operaciones de influencia en elecciones occidentales:
 </div>
 </div>
 </div>
-<div id="outline-container-org762edf0" class="outline-2">
-<h2 id="org762edf0"><span class="section-number-2">4.</span> Análisis comparativo (2025)</h2>
+<div id="outline-container-orgf5a9ad9" class="outline-2">
+<h2 id="orgf5a9ad9"><span class="section-number-2">4.</span> Análisis comparativo (2025)</h2>
 <div class="outline-text-2" id="text-4">
-<table>
+<table border="2" rules="all" frame="border">
 
 
 <colgroup>
@@ -1230,18 +1226,18 @@ Operaciones de influencia en elecciones occidentales:
 </table>
 </div>
 </div>
-<div id="outline-container-org3ff50c8" class="outline-2">
-<h2 id="org3ff50c8"><span class="section-number-2">5.</span> Diagrama de interacciones geoestratégicas</h2>
+<div id="outline-container-orgb24c635" class="outline-2">
+<h2 id="orgb24c635"><span class="section-number-2">5.</span> Diagrama de interacciones geoestratégicas</h2>
 <div class="outline-text-2" id="text-5">
 
-<figure id="orgd6d90c7">
+<figure id="orged77bfe">
 <img src="diagrama_geoestrategico.png" alt="diagrama_geoestrategico.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org4df975a" class="outline-2">
-<h2 id="org4df975a"><span class="section-number-2">6.</span> Referencias documentales</h2>
+<div id="outline-container-org3e5f092" class="outline-2">
+<h2 id="org3e5f092"><span class="section-number-2">6.</span> Referencias documentales</h2>
 <div class="outline-text-2" id="text-6">
 <ol class="org-ol">
 <li><a href="https://securityconference.org/publikationen/munich-security-report-2025/russia/">Munich Security Report 2025: Capítulo Rusia</a></li>

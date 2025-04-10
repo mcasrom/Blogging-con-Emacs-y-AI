@@ -4,21 +4,21 @@
 <title><![CDATA[Example.com - nato]]></title>
 <description><![CDATA[Example.com - nato]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-nato.html</link>
-<lastBuildDate>Wed, 09 Apr 2025 12:48:43 +0200</lastBuildDate>
+<lastBuildDate>Thu, 10 Apr 2025 07:33:08 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Análisis de la Nueva Estrategia de Donald Trump frente a la OTAN en 2025]]></title>
   <description><![CDATA[
-<div id="outline-container-orgd0eafc5" class="outline-2">
-<h2 id="orgd0eafc5">Introducción</h2>
-<div class="outline-text-2" id="text-orgd0eafc5">
+<div id="outline-container-orgdc17e4e" class="outline-2">
+<h2 id="orgdc17e4e">Introducción</h2>
+<div class="outline-text-2" id="text-orgdc17e4e">
 <p>
 El 20 de enero de 2025, Donald Trump asumió su segundo mandato como presidente de Estados Unidos, prometiendo una política exterior disruptiva. Su enfoque hacia la Organización del Tratado del Atlántico Norte (OTAN) ha evolucionado desde las críticas de su primer mandato hacia una estrategia más compleja en 2025, marcada por la presión económica, renegociaciones estratégicas y un posible replanteamiento del rol estadounidense. Este análisis explora los componentes de esta nueva postura, sus implicaciones y su impacto global, acompañado por un diagrama que ilustra las dinámicas clave. La fecha actual es 9 de abril de 2025.
 </p>
 </div>
 </div>
-<div id="outline-container-org3111c57" class="outline-2">
-<h2 id="org3111c57">Contexto Histórico: Trump y la OTAN (2017-2021)</h2>
-<div class="outline-text-2" id="text-org3111c57">
+<div id="outline-container-orge36e92c" class="outline-2">
+<h2 id="orge36e92c">Contexto Histórico: Trump y la OTAN (2017-2021)</h2>
+<div class="outline-text-2" id="text-orge36e92c">
 <p>
 Durante su primer mandato, Trump marcó su relación con la OTAN con:
 </p>
@@ -33,9 +33,9 @@ A pesar de esto, la OTAN sobrevivió, y el gasto militar europeo aumentó bajo s
 </p>
 </div>
 </div>
-<div id="outline-container-org0249da0" class="outline-2">
-<h2 id="org0249da0">La Estrategia de Trump en 2025: Elementos Clave</h2>
-<div class="outline-text-2" id="text-org0249da0">
+<div id="outline-container-orgc7509b5" class="outline-2">
+<h2 id="orgc7509b5">La Estrategia de Trump en 2025: Elementos Clave</h2>
+<div class="outline-text-2" id="text-orgc7509b5">
 <p>
 La estrategia actual de Trump combina continuidad y nuevas prioridades:
 </p>
@@ -72,30 +72,24 @@ La estrategia actual de Trump combina continuidad y nuevas prioridades:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf5a0206" class="outline-2">
-<h2 id="orgf5a0206">Diagrama: Dinámicas de la Estrategia de Trump hacia la OTAN</h2>
-<div class="outline-text-2" id="text-orgf5a0206">
+<div id="outline-container-org6b99d09" class="outline-2">
+<h2 id="org6b99d09">Diagrama: Dinámicas de la Estrategia de Trump hacia la OTAN</h2>
+<div class="outline-text-2" id="text-org6b99d09">
 <p>
 A continuación, un diagrama en PlantUML que resume las interacciones clave. Renderízalo en Emacs con el paquete `org-plantuml` activado.
 </p>
 
 
-<figure id="orgfea0eab">
-<img src="trump-nato-2025.png exports: none" alt="trump-nato-2025.png exports: none">
-
-</figure>
-
-
-<figure id="orgaf12f18">
+<figure id="org21d66bf">
 <img src="images/trump-nato-2025.png" alt="Diagrama PlantUML de la estrategia de Trump" style="width:600px">
 
 <figcaption><span class="figure-number">Figure 1: </span>Diagrama de la estrategia de Trump hacia la OTAN en 2025.</figcaption>
 </figure>
 </div>
 </div>
-<div id="outline-container-orgddfa5be" class="outline-2">
-<h2 id="orgddfa5be">Implicaciones para los Aliados Europeos</h2>
-<div class="outline-text-2" id="text-orgddfa5be">
+<div id="outline-container-org23e3b6e" class="outline-2">
+<h2 id="org23e3b6e">Implicaciones para los Aliados Europeos</h2>
+<div class="outline-text-2" id="text-org23e3b6e">
 <ul class="org-ul">
 <li><b><b>Gasto Militar</b></b>: Europa aumenta presupuestos, pero el 5% es un desafío.</li>
 <li><b><b>Autonomía</b></b>: Macron aboga por una defensa europea, aunque limitada sin EE.UU.</li>
@@ -103,18 +97,18 @@ A continuación, un diagrama en PlantUML que resume las interacciones clave. Ren
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf5e1e6e" class="outline-2">
-<h2 id="orgf5e1e6e">Impacto en el Conflicto de Ucrania</h2>
-<div class="outline-text-2" id="text-orgf5e1e6e">
+<div id="outline-container-orgb51f756" class="outline-2">
+<h2 id="orgb51f756">Impacto en el Conflicto de Ucrania</h2>
+<div class="outline-text-2" id="text-orgb51f756">
 <ul class="org-ul">
 <li><b><b>Reducción de Apoyo</b></b>: Un acuerdo con Rusia podría cortar la ayuda de EE.UU. a Ucrania.</li>
 <li><b><b>Membresía</b></b>: La exclusión de Ucrania de la OTAN divide a la alianza.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orge94822f" class="outline-2">
-<h2 id="orge94822f">Perspectivas a Largo Plazo</h2>
-<div class="outline-text-2" id="text-orge94822f">
+<div id="outline-container-orga8e29ad" class="outline-2">
+<h2 id="orga8e29ad">Perspectivas a Largo Plazo</h2>
+<div class="outline-text-2" id="text-orga8e29ad">
 <ol class="org-ol">
 <li><b><b>OTAN Europea</b></b>: Mayor rol europeo si EE.UU. se retrae.</li>
 <li><b><b>Debilitamiento</b></b>: Fracturas posibles si la credibilidad falla.</li>
@@ -122,17 +116,17 @@ A continuación, un diagrama en PlantUML que resume las interacciones clave. Ren
 </ol>
 </div>
 </div>
-<div id="outline-container-org4e7e182" class="outline-2">
-<h2 id="org4e7e182">Conclusión</h2>
-<div class="outline-text-2" id="text-org4e7e182">
+<div id="outline-container-org24494ed" class="outline-2">
+<h2 id="org24494ed">Conclusión</h2>
+<div class="outline-text-2" id="text-org24494ed">
 <p>
 La estrategia de Trump en 2025 busca redefinir la OTAN mediante presión financiera y un rol estadounidense reducido, mientras negocia con Rusia y mira al Ártico. El diagrama muestra cómo estos elementos interactúan, destacando los riesgos y oportunidades para la alianza en un contexto geopolítico volátil.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc374574" class="outline-2">
-<h2 id="orgc374574">Notas al Pie</h2>
-<div class="outline-text-2" id="text-orgc374574">
+<div id="outline-container-orgabc74f0" class="outline-2">
+<h2 id="orgabc74f0">Notas al Pie</h2>
+<div class="outline-text-2" id="text-orgabc74f0">
 <ul class="org-ul">
 <li>CNBC (23 de enero de 2025): Declaraciones sobre el 5%.</li>
 <li>NBC News (18 de marzo de 2025): Planes del Pentágono.</li>

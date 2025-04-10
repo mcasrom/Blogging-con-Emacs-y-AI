@@ -47,20 +47,7 @@
            text-align: center; /* Asegurar que el texto esté centrado */
          }
          .blog-title {
-           font-size: 2em;
-           margin: 0;
-         }
-         .blog-subtitle {
-           font-size: 1.1em;
-           color: #666;
-           margin-top: 5px;
-         }
-         .blog-email {
-           font-size: 0.9em;
-           color: #777;
-           margin-top: 8px;
-         }
-         .blog-email a {
+
            color: #2980b9;
            text-decoration: none;
          }
@@ -104,8 +91,44 @@
            margin: 10px auto;
            border-radius: 5px;
          }
-       </style>
-       
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .8em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .8em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
        <div class='blog-header'>
          <img src='logo.png' alt='Logo'>
          <div class='blog-header-content'>
@@ -113,37 +136,38 @@
            <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
            <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
          </div>
-       </div>
-       
+       </div>       
        <nav>
          <a href='index.html'>Inicio</a> |
-	 <a href='viajes.html'>Viajes</a> |
+         <a href='viajes.html'>Viajes</a> |
          <a href='archive.html'>Archivo</a> |
          <a href='contacto.html'>Contacto</a> |
          <a href='nosotros.html'>Nosotros</a> |
-         <a href='proyectos.html'>Proyectos</a>
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
          <a href='tag-tutoriales.html'>Tutoriales</a> |
          <a href='tag-opiniones.html'>Opiniones</a>
        </nav>
-        <hr></head>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
 <body>
 <div id="preamble" class="status"></div>
 <div id="content">
 <div class="post-date">26/03/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-26-guía-completa-para-iniciarse-en-emacs-(ii).html">Guía Completa para Iniciarse en Emacs (ii)</a></h1>
-<div id="outline-container-org5036653" class="outline-2">
-<h2 id="org5036653"><span class="section-number-2">1.</span> Introducción a Emacs</h2>
+<div id="outline-container-org2390b18" class="outline-2">
+<h2 id="org2390b18"><span class="section-number-2">1.</span> Introducción a Emacs</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org1ec2c2a" class="outline-3">
-<h3 id="org1ec2c2a"><span class="section-number-3">1.1.</span> ¿Qué es Emacs?</h3>
+<div id="outline-container-org438f690" class="outline-3">
+<h3 id="org438f690"><span class="section-number-3">1.1.</span> ¿Qué es Emacs?</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Emacs es un editor de texto altamente personalizable y entorno de desarrollo integrado. Más que un simple editor, es una plataforma completa para trabajar con texto, código, documentos y más.
 </p>
 </div>
 </div>
-<div id="outline-container-orge0ed118" class="outline-3">
-<h3 id="orge0ed118"><span class="section-number-3">1.2.</span> Primeros Pasos</h3>
+<div id="outline-container-org577c775" class="outline-3">
+<h3 id="org577c775"><span class="section-number-3">1.2.</span> Primeros Pasos</h3>
 <div class="outline-text-3" id="text-1-2">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Para empezar r&#225;pidamente:</span>
@@ -155,22 +179,22 @@ Emacs es un editor de texto altamente personalizable y entorno de desarrollo int
 </div>
 </div>
 </div>
-<div id="outline-container-org58b2bf1" class="outline-2">
-<h2 id="org58b2bf1"><span class="section-number-2">2.</span> Diagrama: Ruta de Aprendizaje Emacs</h2>
+<div id="outline-container-org38eea4d" class="outline-2">
+<h2 id="org38eea4d"><span class="section-number-2">2.</span> Diagrama: Ruta de Aprendizaje Emacs</h2>
 <div class="outline-text-2" id="text-2">
 
-<figure id="orge2d4243">
-<img src="emacs_learning_path_corrected.png" alt="emacs_learning_path_corrected.png">
+<figure id="org855b8b8">
+<img src="images/emacs_learning_path_corrected.png" alt="emacs_learning_path_corrected.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-orgc02ea3c" class="outline-2">
-<h2 id="orgc02ea3c"><span class="section-number-2">3.</span> Sección 1: Fundamentos Esenciales</h2>
+<div id="outline-container-org03f4c08" class="outline-2">
+<h2 id="org03f4c08"><span class="section-number-2">3.</span> Sección 1: Fundamentos Esenciales</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgd1ba2ed" class="outline-3">
-<h3 id="orgd1ba2ed"><span class="section-number-3">3.1.</span> Movimiento Básico</h3>
+<div id="outline-container-org81ac3de" class="outline-3">
+<h3 id="org81ac3de"><span class="section-number-3">3.1.</span> Movimiento Básico</h3>
 <div class="outline-text-3" id="text-3-1">
 <table border="2" rules="all" frame="border">
 
@@ -229,8 +253,8 @@ Emacs es un editor de texto altamente personalizable y entorno de desarrollo int
 </table>
 </div>
 </div>
-<div id="outline-container-orgfc9123e" class="outline-3">
-<h3 id="orgfc9123e"><span class="section-number-3">3.2.</span> Comandos Vitales</h3>
+<div id="outline-container-org5700597" class="outline-3">
+<h3 id="org5700597"><span class="section-number-3">3.2.</span> Comandos Vitales</h3>
 <div class="outline-text-3" id="text-3-2">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Guardar archivo: C-x C-s</span>
@@ -244,12 +268,12 @@ Emacs es un editor de texto altamente personalizable y entorno de desarrollo int
 </div>
 </div>
 </div>
-<div id="outline-container-orgd5c7697" class="outline-2">
-<h2 id="orgd5c7697"><span class="section-number-2">4.</span> Sección 2: Personalización Básica</h2>
+<div id="outline-container-org4fdbd24" class="outline-2">
+<h2 id="org4fdbd24"><span class="section-number-2">4.</span> Sección 2: Personalización Básica</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-orgaebf588" class="outline-3">
-<h3 id="orgaebf588"><span class="section-number-3">4.1.</span> Archivo de Configuración</h3>
+<div id="outline-container-org2d24ea8" class="outline-3">
+<h3 id="org2d24ea8"><span class="section-number-3">4.1.</span> Archivo de Configuración</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Tu archivo ~/.emacs.d/init.el es el corazón de tu configuración:
@@ -265,8 +289,8 @@ Tu archivo ~/.emacs.d/init.el es el corazón de tu configuración:
 </div>
 </div>
 </div>
-<div id="outline-container-orgadcffa4" class="outline-3">
-<h3 id="orgadcffa4"><span class="section-number-3">4.2.</span> Gestión de Paquetes</h3>
+<div id="outline-container-org5ae8e33" class="outline-3">
+<h3 id="org5ae8e33"><span class="section-number-3">4.2.</span> Gestión de Paquetes</h3>
 <div class="outline-text-3" id="text-4-2">
 <ol class="org-ol">
 <li>Configurar MELPA (repositorio de paquetes):</li>
@@ -285,12 +309,12 @@ Tu archivo ~/.emacs.d/init.el es el corazón de tu configuración:
 </div>
 </div>
 </div>
-<div id="outline-container-org6b97945" class="outline-2">
-<h2 id="org6b97945"><span class="section-number-2">5.</span> Sección 3: Org Mode - Tu Nuevo Mejor Amigo</h2>
+<div id="outline-container-org0528160" class="outline-2">
+<h2 id="org0528160"><span class="section-number-2">5.</span> Sección 3: Org Mode - Tu Nuevo Mejor Amigo</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org31c0cc9" class="outline-3">
-<h3 id="org31c0cc9"><span class="section-number-3">5.1.</span> Conceptos Básicos</h3>
+<div id="outline-container-orga0f1d0f" class="outline-3">
+<h3 id="orga0f1d0f"><span class="section-number-3">5.1.</span> Conceptos Básicos</h3>
 <div class="outline-text-3" id="text-5-1">
 <ul class="org-ul">
 <li>Jerarquía con * (asteriscos)</li>
@@ -299,8 +323,8 @@ Tu archivo ~/.emacs.d/init.el es el corazón de tu configuración:
 </ul>
 </div>
 </div>
-<div id="outline-container-orge27f83e" class="outline-3">
-<h3 id="orge27f83e"><span class="section-number-3">5.2.</span> Ejemplo de Documento Org</h3>
+<div id="outline-container-orgadcc374" class="outline-3">
+<h3 id="orgadcc374"><span class="section-number-3">5.2.</span> Ejemplo de Documento Org</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 #+BEGIN<sub>SRC</sub> org
@@ -308,12 +332,12 @@ Tu archivo ~/.emacs.d/init.el es el corazón de tu configuración:
 </div>
 </div>
 </div>
-<div id="outline-container-orgc3675fb" class="outline-2">
-<h2 id="orgc3675fb"><span class="section-number-2">6.</span> Tareas Pendientes</h2>
+<div id="outline-container-org3084399" class="outline-2">
+<h2 id="org3084399"><span class="section-number-2">6.</span> Tareas Pendientes</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-org22760d8" class="outline-3">
-<h3 id="org22760d8"><span class="section-number-3">6.1.</span> Trabajo</h3>
+<div id="outline-container-orgf3a72c3" class="outline-3">
+<h3 id="orgf3a72c3"><span class="section-number-3">6.1.</span> Trabajo</h3>
 <div class="outline-text-3" id="text-6-1">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> Revisar informe</li>
@@ -321,8 +345,8 @@ Tu archivo ~/.emacs.d/init.el es el corazón de tu configuración:
 </ul>
 </div>
 </div>
-<div id="outline-container-org7bf37c8" class="outline-3">
-<h3 id="org7bf37c8"><span class="section-number-3">6.2.</span> Personal</h3>
+<div id="outline-container-org3bc28b2" class="outline-3">
+<h3 id="org3bc28b2"><span class="section-number-3">6.2.</span> Personal</h3>
 <div class="outline-text-3" id="text-6-2">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> Comprar víveres</li>
@@ -333,8 +357,8 @@ Tu archivo ~/.emacs.d/init.el es el corazón de tu configuración:
 </div>
 </div>
 </div>
-<div id="outline-container-orge4c2b92" class="outline-2">
-<h2 id="orge4c2b92"><span class="section-number-2">7.</span> Recursos Recomendados</h2>
+<div id="outline-container-org1d2d0c0" class="outline-2">
+<h2 id="org1d2d0c0"><span class="section-number-2">7.</span> Recursos Recomendados</h2>
 <div class="outline-text-2" id="text-7">
 <ol class="org-ol">
 <li>Manual oficial: C-h r</li>
@@ -344,8 +368,8 @@ Tu archivo ~/.emacs.d/init.el es el corazón de tu configuración:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgd5f0488" class="outline-2">
-<h2 id="orgd5f0488"><span class="section-number-2">8.</span> Próximos Pasos</h2>
+<div id="outline-container-org649cd41" class="outline-2">
+<h2 id="org649cd41"><span class="section-number-2">8.</span> Próximos Pasos</h2>
 <div class="outline-text-2" id="text-8">
 <ol class="org-ol">
 <li>Practicar 15 min/día los atajos básicos</li>
@@ -374,6 +398,7 @@ Tu archivo ~/.emacs.d/init.el es el corazón de tu configuración:
            </a>
          </p>
          <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
          <!-- hitwebcounter Code START -->
          <a href="https://www.hitwebcounter.com" target="_blank">
            <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
