@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - blog]]></title>
 <description><![CDATA[Example.com - blog]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-blog.html</link>
-<lastBuildDate>Thu, 10 Apr 2025 11:26:41 +0200</lastBuildDate>
+<lastBuildDate>Fri, 11 Apr 2025 07:29:55 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -524,7 +524,13 @@
 </tr>
 
 <tr>
-<td class="org-right">2025-04-10</td>
+<td class="org-right">Fecha desconocida</td>
+<td class="org-left">Artículos recientes sobre geopolítica y estrategia</td>
+<td class="org-left"><a href="geopolitica.html">Enlace</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-04-11</td>
 <td class="org-left">Índice de Publicaciones del Blog</td>
 <td class="org-left"><a href="indice-posts.html">Enlace</a></td>
 </tr>
@@ -553,7 +559,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Thu, 10 Apr 2025 11:25:00 +0200</pubDate>
+  <pubDate>Fri, 11 Apr 2025 07:29:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Emacs con Esteroides: Configurar un Contador de Visitantes para el Blog]]></title>
