@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Cronología y Desarrollo de Emacs con Desarrollos Paralelos">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Cronología y Desarrollo de Emacs</title>
+<meta charset='UTF-8'>
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.8em; .85
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
+       </nav>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">11/04/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-11-cronología-y-desarrollo-de-emacs.html">Cronología y Desarrollo de Emacs</a></h1>
+<div id="outline-container-orga125495" class="outline-2">
+<h2 id="orga125495">Cronología y Desarrollo de Emacs</h2>
+<div class="outline-text-2" id="text-orga125495">
+</div>
+<div id="outline-container-orgea9a2db" class="outline-3">
+<h3 id="orgea9a2db">Orígenes (1970s)</h3>
+<div class="outline-text-3" id="text-orgea9a2db">
+<ul class="org-ul">
+<li>1976: Richard Stallman crea el primer Emacs en MIT.
+<ul class="org-ul">
+<li>Escrito en TECO (Text Editor and Corrector).</li>
+<li>Diseñado como un editor extensible para el sistema ITS.</li>
+</ul></li>
+<li>Características iniciales:
+<ul class="org-ul">
+<li>Macros en TECO para personalización.</li>
+<li>Comandos interactivos básicos.</li>
+</ul></li>
+<li>Contexto: No existía el concepto de software libre aún.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5957d97" class="outline-3">
+<h3 id="org5957d97">Emacs en Lisp (1980s)</h3>
+<div class="outline-text-3" id="text-org5957d97">
+<ul class="org-ul">
+<li>1981: Stallman reescribe Emacs en Lisp (Gosling Emacs).
+<ul class="org-ul">
+<li>Introducción de Mocklisp, un dialecto inicial de Lisp.</li>
+<li>Mayor extensibilidad mediante scripts.</li>
+</ul></li>
+<li>1984: Lanzamiento de GNU Emacs.
+<ul class="org-ul">
+<li>Primer proyecto oficial de GNU.</li>
+<li>Escrito en C con Emacs Lisp (Elisp) como lenguaje de extensión.</li>
+<li>Licencia libre (precursora de GPL).</li>
+</ul></li>
+<li>Características clave:
+<ul class="org-ul">
+<li>Modos mayores/menores para diferentes lenguajes.</li>
+<li>Integración con herramientas Unix (shell, compiladores).</li>
+<li>Sistema de ayuda interactivo (`C-h`).</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0ecfff0" class="outline-3">
+<h3 id="org0ecfff0">Consolidación y Expansión (1990s)</h3>
+<div class="outline-text-3" id="text-org0ecfff0">
+<ul class="org-ul">
+<li>1991: Emacs 19.
+<ul class="org-ul">
+<li>Soporte para múltiples plataformas (Unix, VMS, Windows).</li>
+<li>Introducción de faces para resaltado de sintaxis.</li>
+</ul></li>
+<li>1994: XEmacs se separa de GNU Emacs.
+<ul class="org-ul">
+<li>Enfocado en interfaces gráficas y características experimentales.</li>
+<li>Divergencia en la comunidad (XEmacs vs GNU Emacs).</li>
+</ul></li>
+<li>Características notables:
+<ul class="org-ul">
+<li>Paquetes externos comienzan a surgir.</li>
+<li>Soporte para internacionalización (MULE).</li>
+<li>Buffers múltiples y ventanas.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd090a72" class="outline-3">
+<h3 id="orgd090a72">Modernización (2000s)</h3>
+<div class="outline-text-3" id="text-orgd090a72">
+<ul class="org-ul">
+<li>2008: Emacs 23.
+<ul class="org-ul">
+<li>Soporte nativo para Unicode.</li>
+<li>Integración con sistemas gráficos (X11, Windows, macOS).</li>
+<li>Primeros pasos hacia entornos multimedia.</li>
+</ul></li>
+<li>Características:
+<ul class="org-ul">
+<li>Modo Org (2003, oficial en 2008): gestión de tareas, notas y literacidad.</li>
+<li>Personalización avanzada mediante temas.</li>
+<li>Paquetes como `package.el` (gestor de paquetes inicial).</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org98765a1" class="outline-3">
+<h3 id="org98765a1">Emacs Actual (2010s - 2025)</h3>
+<div class="outline-text-3" id="text-org98765a1">
+<ul class="org-ul">
+<li>2012: Emacs 24.
+<ul class="org-ul">
+<li>Gestor de paquetes oficial (`package.el`).</li>
+<li>Soporte para temas gráficos avanzados.</li>
+<li>Integración con servidores de paquetes (MELPA, ELPA).</li>
+</ul></li>
+<li>2014-2016: Surgimiento de distribuciones modernas.
+<ul class="org-ul">
+<li>Spacemacs (2014): Combina Emacs con Vim, enfoque en ergonomía.</li>
+<li>Doom Emacs (2016): Optimizado para rendimiento y simplicidad.</li>
+</ul></li>
+<li>2019: Emacs 27.
+<ul class="org-ul">
+<li>JSON nativo y mejor rendimiento.</li>
+<li>Soporte para pestañas.</li>
+</ul></li>
+<li>2023: Emacs 29.
+<ul class="org-ul">
+<li>Compilación nativa de Elisp (más velocidad).</li>
+<li>Integración con LSP (Language Server Protocol) para desarrollo moderno.</li>
+</ul></li>
+<li>Características actuales:
+<ul class="org-ul">
+<li>Ecosistema masivo de paquetes (MELPA, NonGNU ELPA).</li>
+<li>Modo Org evolucionado: planificación, publicación, código ejecutable.</li>
+<li>Integración con Git, Magit (interfaz para Git).</li>
+<li>Soporte para entornos remotos (Tramp).</li>
+<li>Comunidades activas: Spacemacs, Doom Emacs.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf2e37c5" class="outline-3">
+<h3 id="orgf2e37c5">Futuro (Especulativo)</h3>
+<div class="outline-text-3" id="text-orgf2e37c5">
+<ul class="org-ul">
+<li>Mayor integración con IA y herramientas modernas.</li>
+<li>Mejoras en rendimiento (compilación nativa, multihilo).</li>
+<li>Posible soporte oficial para entornos web (Emacs en navegadores).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org4e6d040" class="outline-2">
+<h2 id="org4e6d040">Características Clave por Década</h2>
+<div class="outline-text-2" id="text-org4e6d040">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Década</th>
+<th scope="col" class="org-left">Hitos Principales</th>
+<th scope="col" class="org-left">Características Innovadoras</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">1970s</td>
+<td class="org-left">Creación en TECO</td>
+<td class="org-left">Extensibilidad básica, macros</td>
+</tr>
+
+<tr>
+<td class="org-left">1980s</td>
+<td class="org-left">GNU Emacs, Elisp</td>
+<td class="org-left">Modos, integración Unix, licencia libre</td>
+</tr>
+
+<tr>
+<td class="org-left">1990s</td>
+<td class="org-left">Emacs 19, XEmacs</td>
+<td class="org-left">Resaltado de sintaxis, internacionalización</td>
+</tr>
+
+<tr>
+<td class="org-left">2000s</td>
+<td class="org-left">Emacs 23, Unicode</td>
+<td class="org-left">Modo Org, temas gráficos</td>
+</tr>
+
+<tr>
+<td class="org-left">2010s</td>
+<td class="org-left">Emacs 24-27, gestor de paquetes</td>
+<td class="org-left">Paquetes modernos, Spacemacs, Doom Emacs</td>
+</tr>
+
+<tr>
+<td class="org-left">2020s</td>
+<td class="org-left">Emacs 29, compilación nativa</td>
+<td class="org-left">LSP, rendimiento mejorado, ecosistema amplio</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org63019d6" class="outline-2">
+<h2 id="org63019d6">Diagrama de Evolución con Desarrollos Paralelos (PlantUML)</h2>
+<div class="outline-text-2" id="text-org63019d6">
+
+<figure id="orgaad033a">
+<img src="images/emacs_evolution_parallel.png" alt="emacs_evolution_parallel.png">
+
+</figure>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-cronología.html">cronología</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-evolución.html">evolución</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>
