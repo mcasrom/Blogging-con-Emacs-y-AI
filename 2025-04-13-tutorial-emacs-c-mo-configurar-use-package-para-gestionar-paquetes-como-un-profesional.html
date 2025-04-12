@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Tutorial Emacs">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Tutorial Emacs: Cómo Configurar use-package para Gestionar Paquetes como un Profesional</title>
+<meta charset='UTF-8'>
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.8em; .85
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
+       </nav>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">13/04/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-13-tutorial-emacs-c-mo-configurar-use-package-para-gestionar-paquetes-como-un-profesional.html">Tutorial Emacs: Cómo Configurar use-package para Gestionar Paquetes como un Profesional</a></h1>
+<div id="outline-container-org0129451" class="outline-2">
+<h2 id="org0129451">Introducción a use-package: Tu Mejor Amigo en Emacs</h2>
+<div class="outline-text-2" id="text-org0129451">
+<p>
+Si estás empezando con Emacs, probablemente te has dado cuenta de que es un editor <b>increíblemente</b> personalizable, pero también puede ser abrumador. Una de las primeras cosas que querrás dominar es cómo instalar y configurar paquetes (extensiones que añaden funcionalidades). Aquí es donde entra <b><b>use-package</b></b>, una herramienta poderosa que simplifica la gestión de paquetes, organiza tu configuración y hace que Emacs sea más rápido y eficiente.
+</p>
+
+<p>
+En este tutorial, te guiaré paso a paso para:
+</p>
+
+<ul class="org-ul">
+<li>Entender qué es `use-package` y por qué es útil.</li>
+<li>Configurar `use-package` en tu archivo de configuración de Emacs (<code>init.el</code> o <code>early-init.el</code>).</li>
+<li>Instalar paquetes populares con ejemplos prácticos.</li>
+<li>Personalizar configuraciones con opciones avanzadas de `use-package`.</li>
+<li>Evitar errores comunes para principiantes.</li>
+</ul>
+
+<p>
+No necesitas ser un experto en Emacs ni saber programar en Lisp. Este tutorial está diseñado para principiantes, con explicaciones claras y ejemplos que puedes copiar y pegar. ¡Vamos a convertir tu Emacs en una máquina bien organizada!
+</p>
+</div>
+</div>
+<div id="outline-container-org24499fc" class="outline-2">
+<h2 id="org24499fc">¿Qué es use-package?</h2>
+<div class="outline-text-2" id="text-org24499fc">
+<p>
+<b><b>use-package</b></b> es una macro (una especie de atajo en Emacs Lisp) que te permite instalar, configurar y gestionar paquetes de manera sencilla. En lugar de escribir largas líneas de código para cargar paquetes, `use-package` te ofrece una sintaxis clara y estructurada. Sus principales ventajas son:
+</p>
+
+<ul class="org-ul">
+<li><b><b>Organización</b></b>: Agrupa toda la configuración de un paquete en un solo bloque.</li>
+<li><b><b>Carga diferida</b></b>: Solo carga paquetes cuando los necesitas, haciendo que Emacs inicie más rápido.</li>
+<li><b><b>Instalación automática</b></b>: Descarga e instala paquetes si no están presentes.</li>
+<li><b><b>Flexibilidad</b></b>: Permite personalizar teclas, ajustes y comportamientos fácilmente.</li>
+</ul>
+
+<p>
+Por ejemplo, sin `use-package`, instalar y configurar el paquete <code>ivy</code> (un sistema de autocompletado) podría requerir varias líneas de código dispersas. Con `use-package`, todo queda limpio y en un solo lugar.
+</p>
+</div>
+</div>
+<div id="outline-container-org10c4934" class="outline-2">
+<h2 id="org10c4934">Prerrequisitos</h2>
+<div class="outline-text-2" id="text-org10c4934">
+<p>
+Antes de empezar, asegúrate de tener lo siguiente:
+</p>
+
+<ol class="org-ol">
+<li><b><b>Emacs instalado</b></b>: Este tutorial asume que tienes Emacs 26.1 o superior (puedes verificarlo con <code>M-x emacs-version</code>).</li>
+<li><b><b>Acceso al archivo de configuración</b></b>: Normalmente es <code>~/.emacs.d/init.el</code> o <code>~/.config/emacs/init.el</code>. Si no existe, lo crearemos.</li>
+<li><b><b>Conexión a internet</b></b>: Necesaria para descargar paquetes.</li>
+<li><b><b>Conocimiento básico de Emacs</b></b>: Saber cómo abrir Emacs, guardar archivos (<code>C-x C-s</code>) y evaluar código (<code>M-x eval-buffer</code>) es suficiente.</li>
+</ol>
+
+<p>
+Si no estás familiarizado con estos conceptos, no te preocupes: explicaré cada paso con detalle.
+</p>
+</div>
+</div>
+<div id="outline-container-orge5d726d" class="outline-2">
+<h2 id="orge5d726d">Paso 1: Configurar el Sistema de Paquetes de Emacs</h2>
+<div class="outline-text-2" id="text-orge5d726d">
+<p>
+Emacs usa repositorios de paquetes como MELPA, ELPA y Org para descargar extensiones. Antes de usar `use-package`, debemos asegurarnos de que Emacs pueda acceder a estos repositorios.
+</p>
+
+<p>
+Abre tu archivo de configuración (<code>init.el</code>). Puedes hacerlo con:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">emacs ~/.emacs.d/init.el
+</pre>
+</div>
+
+<p>
+Añade el siguiente código al principio de tu <code>init.el</code> para configurar los repositorios de paquetes:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Configurar repositorios de paquetes</span>
+(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">package</span>)
+(add-to-list 'package-archives '(<span style="color: #005F00;">"melpa"</span> . <span style="color: #005F00;">"https://melpa.org/packages/"</span>) t)
+(add-to-list 'package-archives '(<span style="color: #005F00;">"org"</span> . <span style="color: #005F00;">"https://orgmode.org/elpa/"</span>) t)
+(package-initialize)
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Refrescar la lista de paquetes (solo necesario la primera vez)</span>
+(<span style="color: #D70000;">unless</span> package-archive-contents
+  (package-refresh-contents))
+</pre>
+</div>
+
+<p>
+<b><b>Explicación</b></b>:
+</p>
+<ul class="org-ul">
+<li><code>require 'package</code>: Carga el sistema de paquetes de Emacs.</li>
+<li><code>add-to-list 'package-archives</code>: Añade MELPA y Org como fuentes de paquetes. MELPA tiene miles de paquetes modernos.</li>
+<li><code>package-initialize</code>: Inicia el sistema de paquetes.</li>
+<li><code>package-refresh-contents</code>: Descarga la lista de paquetes disponibles si es la primera vez.</li>
+</ul>
+
+<p>
+Guarda el archivo (<code>C-x C-s</code>) y evalúa el código con <code>M-x eval-buffer</code> (o reinicia Emacs). Esto prepara el terreno para instalar `use-package`.
+</p>
+</div>
+</div>
+<div id="outline-container-org431ca7f" class="outline-2">
+<h2 id="org431ca7f">Paso 2: Instalar use-package</h2>
+<div class="outline-text-2" id="text-org431ca7f">
+<p>
+Aunque `use-package` es una herramienta poderosa, no viene incluida en Emacs por defecto. Vamos a instalarla automáticamente.
+</p>
+
+<p>
+Añade este código justo después del bloque anterior en tu <code>init.el</code>:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Instalar use-package si no est&#225; presente</span>
+(<span style="color: #D70000;">unless</span> (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Cargar use-package</span>
+(<span style="color: #D70000;">eval-when-compile</span>
+  (<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">use-package</span>))
+</pre>
+</div>
+
+<p>
+<b><b>Explicación</b></b>:
+</p>
+<ul class="org-ul">
+<li><code>package-installed-p</code>: Verifica si `use-package` ya está instalado.</li>
+<li><code>package-install</code>: Lo instala desde MELPA si no está presente.</li>
+<li><code>eval-when-compile</code>: Optimiza la carga de `use-package` para que sea eficiente.</li>
+</ul>
+
+<p>
+Guarda el archivo y evalúa con <code>M-x eval-buffer</code>. Ahora tienes `use-package` listo para usar.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf8dad44" class="outline-2">
+<h2 id="orgf8dad44">Paso 3: Usar use-package para Instalar un Paquete</h2>
+<div class="outline-text-2" id="text-orgf8dad44">
+<p>
+Para probar `use-package`, vamos a instalar y configurar <b><b>ivy</b></b>, un paquete popular que mejora el autocompletado en Emacs. Añade este bloque a tu <code>init.el</code>:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">ivy</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:demand</span> t
+  <span style="color: #1F55A0;">:config</span>
+  (ivy-mode 1)
+  (<span style="color: #D70000;">setq</span> ivy-use-virtual-buffers t)
+  (<span style="color: #D70000;">setq</span> enable-recursive-minibuffers t))
+</pre>
+</div>
+
+<p>
+<b><b>Explicación del bloque</b></b>:
+</p>
+<ul class="org-ul">
+<li><code>use-package ivy</code>: Indica que vamos a configurar el paquete <code>ivy</code>.</li>
+<li><code>:ensure t</code>: Descarga e instala <code>ivy</code> automáticamente si no está presente.</li>
+<li><code>:demand t</code>: Fuerza la carga de <code>ivy</code> al iniciar Emacs (normalmente, `use-package` intenta cargar paquetes solo cuando se necesitan).</li>
+<li><code>:config</code>: Contiene comandos que se ejecutan <b>después</b> de cargar el paquete.</li>
+<li><code>ivy-mode 1</code>: Activa el modo Ivy para autocompletado.</li>
+<li><code>setq</code>: Configura opciones de Ivy, como mostrar buffers recientes y permitir minibuffers anidados.</li>
+</ul>
+
+<p>
+Guarda el archivo (<code>C-x C-s</code>) y evalúa con <code>M-x eval-buffer</code>. Ahora, cuando uses comandos como <code>M-x</code> o <code>C-x C-f</code>, notarás que el autocompletado es más rápido y visual gracias a Ivy.
+</p>
+</div>
+</div>
+<div id="outline-container-org003467d" class="outline-2">
+<h2 id="org003467d">Paso 4: Ejemplo Práctico – Configurar Magit con use-package</h2>
+<div class="outline-text-2" id="text-org003467d">
+<p>
+Vamos a configurar otro paquete útil: <b><b>Magit</b></b>, una interfaz para Git dentro de Emacs. Este ejemplo incluye teclas personalizadas y carga diferida para optimizar el inicio.
+</p>
+
+<p>
+Añade este bloque a tu <code>init.el</code>:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">magit</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:bind</span> ((<span style="color: #005F00;">"C-x g"</span> . magit-status))
+  <span style="color: #1F55A0;">:config</span>
+  (<span style="color: #D70000;">setq</span> magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1))
+</pre>
+</div>
+
+<p>
+<b><b>Explicación</b></b>:
+</p>
+<ul class="org-ul">
+<li><code>:ensure t</code>: Instala <code>magit</code> si no está presente.</li>
+<li><code>:bind</code>: Asigna la tecla <code>C-x g</code> para abrir <code>magit-status</code>, la ventana principal de Magit.</li>
+<li><code>:config</code>: Personaliza cómo se muestran las ventanas de Magit (en este caso, ocupando toda la pantalla).</li>
+<li><b>Carga diferida</b>: Por defecto, `use-package` no carga Magit hasta que uses <code>C-x g</code>, lo que acelera el inicio de Emacs.</li>
+</ul>
+
+<p>
+Guarda, evalúa (<code>M-x eval-buffer</code>) y prueba presionando <code>C-x g</code> en un proyecto con Git. Verás una interfaz limpia para gestionar commits, ramas y más.
+</p>
+</div>
+</div>
+<div id="outline-container-org959f9e4" class="outline-2">
+<h2 id="org959f9e4">Paso 5: Personalización Avanzada con use-package</h2>
+<div class="outline-text-2" id="text-org959f9e4">
+<p>
+Ahora que entiendes lo básico, exploremos opciones avanzadas de `use-package` para hacer tu configuración más poderosa.
+</p>
+
+<p>
+<b><b>Carga condicional</b></b>:
+Supongamos que quieres cargar el paquete <code>org</code> (para Org-mode) solo si estás editando un archivo `.org`. Usa esto:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">org</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:mode</span> (<span style="color: #005F00;">"\\.org\\'"</span> . org-mode)
+  <span style="color: #1F55A0;">:config</span>
+  (<span style="color: #D70000;">setq</span> org-startup-folded t)
+  (<span style="color: #D70000;">setq</span> org-hide-emphasis-markers t))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><code>:mode</code>: Activa <code>org-mode</code> automáticamente para archivos con extensión `.org`.</li>
+<li><code>:config</code>: Personaliza Org-mode (por ejemplo, oculta marcadores de formato como * o /).</li>
+</ul>
+
+<p>
+<b><b>Atajos globales</b></b>:
+Para añadir teclas globales, usa <code>:bind</code> en un bloque vacío:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">general</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:config</span>
+  (global-set-key (kbd <span style="color: #005F00;">"C-c t"</span>) 'org-todo))
+</pre>
+</div>
+
+<p>
+<b><b>Carga diferida con comandos</b></b>:
+Para paquetes que solo usas ocasionalmente, como <code>helm</code>, configura la carga al invocar un comando:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">helm</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:commands</span> helm-M-x
+  <span style="color: #1F55A0;">:bind</span> ((<span style="color: #005F00;">"M-x"</span> . helm-M-x)))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><code>:commands</code>: Solo carga <code>helm</code> cuando ejecutas <code>helm-M-x</code>.</li>
+<li><code>:bind</code>: Reemplaza el <code>M-x</code> estándar con la versión de Helm.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge38f28f" class="outline-2">
+<h2 id="orge38f28f">Consejos para Mantener tu Configuración Limpia</h2>
+<div class="outline-text-2" id="text-orge38f28f">
+<ol class="org-ol">
+<li><p>
+<b><b>Organiza tu init.el</b></b>:
+Divide tu archivo en secciones con comentarios:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Paquetes de interfaz</span>
+(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">ivy</span> ...)
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Paquetes de productividad</span>
+(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">org</span> ...)
+</pre>
+</div></li>
+
+<li><p>
+<b><b>Usa :diminish o :delight</b></b>:
+Algunos paquetes llenan la barra de modos. Oculta sus nombres:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">diminish</span>
+  <span style="color: #1F55A0;">:ensure</span> t)
+(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">ivy</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:diminish</span> ivy-mode)
+</pre>
+</div></li>
+
+<li><b><b>Prueba tu configuración</b></b>:
+Evalúa bloques individuales con <code>C-c C-c</code> (en Org-mode) o <code>M-x eval-region</code> para evitar errores.</li>
+
+<li><b><b>Haz respaldo</b></b>:
+Guarda tu <code>init.el</code> en un repositorio Git para no perder tu configuración.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgdb6741a" class="outline-2">
+<h2 id="orgdb6741a">Errores Comunes y Cómo Solucionarlos</h2>
+<div class="outline-text-2" id="text-orgdb6741a">
+<ul class="org-ul">
+<li><b><b>"Paquete no encontrado"</b></b>:
+Asegúrate de que <code>package-refresh-contents</code> se ejecute al menos una vez (<code>M-x package-refresh-contents</code>).</li>
+<li><b><b>Emacs inicia lento</b></b>:
+Usa <code>:defer t</code> o <code>:commands</code> en paquetes pesados para retrasar su carga.</li>
+<li><b><b>Configuraciones no aplicadas</b></b>:
+Verifica que estás guardando (<code>C-x C-s</code>) y evaluando (<code>M-x eval-buffer</code>) tu <code>init.el</code>.</li>
+<li><b><b>Errores de sintaxis</b></b>:
+Usa <code>M-x check-parens</code> para encontrar paréntesis desbalanceados en tu código.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org25e5738" class="outline-2">
+<h2 id="org25e5738">Conclusión</h2>
+<div class="outline-text-2" id="text-org25e5738">
+<p>
+¡Felicidades! Ahora sabes cómo configurar `use-package` para gestionar paquetes en Emacs como un profesional. Hemos cubierto desde la instalación básica hasta ejemplos prácticos con Ivy, Magit y Org-mode, además de trucos avanzados para personalizar tu flujo de trabajo. Con `use-package`, tu configuración será más limpia, rápida y fácil de mantener.
+</p>
+
+<p>
+Si quieres explorar más, prueba estos paquetes con `use-package`:
+</p>
+<ul class="org-ul">
+<li><code>which-key</code>: Muestra sugerencias de teclas.</li>
+<li><code>company</code>: Autocompletado para código.</li>
+<li><code>org-roam</code>: Notas interconectadas al estilo Zettelkasten.</li>
+</ul>
+
+<p>
+¿Tienes preguntas o quieres un tutorial sobre otro aspecto de Emacs? Déjame un comentario en el blog o prueba estos comandos en tu Emacs y comparte tu experiencia. ¡Que disfrutes personalizando tu Emacs con esteroides!
+</p>
+</div>
+</div>
+<div id="outline-container-org8e575db" class="outline-2">
+<h2 id="org8e575db">Recursos Adicionales</h2>
+<div class="outline-text-2" id="text-org8e575db">
+<ul class="org-ul">
+<li>Documentación oficial de `use-package`: <a href="https://github.com/jwiegley/use-package">GitHub - use-package</a></li>
+<li>Tutoriales de Emacs: <a href="https://www.gnu.org/software/emacs/manual/">Manual de Emacs</a></li>
+<li>Comunidad: <a href="https://www.reddit.com/r/emacs/">r/emacs</a> y <a href="https://emacs.stackexchange.com/">Emacs StackExchange</a></li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">&#161;Sigue hackeando y que la fuerza de Emacs est&#233; contigo!</span>
+</pre>
+</div>
+
+<p>
+&lt;!&#x2013; SEO-TIPS &#x2013;&gt;
+</p>
+</div>
+</div>
+<div class="taglist"></div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>

@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - indice]]></title>
 <description><![CDATA[Example.com - indice]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-indice.html</link>
-<lastBuildDate>Sat, 12 Apr 2025 23:51:59 +0200</lastBuildDate>
+<lastBuildDate>Sun, 13 Apr 2025 01:25:38 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -554,6 +554,12 @@
 </tr>
 
 <tr>
+<td class="org-right">Fecha desconocida</td>
+<td class="org-left">Tutorial Emacs: Cómo Configurar use-package para Gestionar Paquetes como un Profesional</td>
+<td class="org-left"><a href="2025-04-13-tutorial-emacs-c-mo-configurar-use-package-para-gestionar-paquetes-como-un-profesional.html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
@@ -595,7 +601,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Sat, 12 Apr 2025 23:51:00 +0200</pubDate>
+  <pubDate>Sun, 13 Apr 2025 01:20:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Creación Indicador de Calidad de Libertad y su Aplicación KPI (i)]]></title>
