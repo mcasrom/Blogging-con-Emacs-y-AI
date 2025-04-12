@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - indice]]></title>
 <description><![CDATA[Example.com - indice]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-indice.html</link>
-<lastBuildDate>Sat, 12 Apr 2025 09:56:32 +0200</lastBuildDate>
+<lastBuildDate>Sat, 12 Apr 2025 23:51:59 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -405,6 +405,12 @@
 
 <tr>
 <td class="org-right">2025-03-29</td>
+<td class="org-left">Configurar Emacs para creación de Graficos</td>
+<td class="org-left"><a href="2025-03-29-configurar-emacs-para-creación-de-graficos.html">Enlace</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-03-29</td>
 <td class="org-left">Creación Indicador de Calidad de Libertad y su Aplicación KPI (i)</td>
 <td class="org-left"><a href="2025-03-29-creación-indicador-de-calidad-de-libertad-y-su-aplicación-kpi-(i).html">Enlace</a></td>
 </tr>
@@ -419,6 +425,12 @@
 <td class="org-right">2025-03-29</td>
 <td class="org-left">Visión Política de Alberto Núñez Feijóo y el Partido Popular en la Actualidad</td>
 <td class="org-left"><a href="2025-03-29-visión-política-de-alberto-núñez-feijóo-y-el-partido-popular-en-la-actualidad.html">Enlace</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-04-12</td>
+<td class="org-left">Resumen del Mes - March 2025</td>
+<td class="org-left"><a href="2025-03-Resumen-del-Mes.html">Enlace</a></td>
 </tr>
 
 <tr>
@@ -583,7 +595,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Sat, 12 Apr 2025 09:55:00 +0200</pubDate>
+  <pubDate>Sat, 12 Apr 2025 23:51:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Creación Indicador de Calidad de Libertad y su Aplicación KPI (i)]]></title>

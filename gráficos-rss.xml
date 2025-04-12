@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title><![CDATA[Example.com - gráficos]]></title>
+<description><![CDATA[Example.com - gráficos]]></description>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-gráficos.html</link>
+<lastBuildDate>Sat, 12 Apr 2025 23:51:59 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Configurar Emacs para creación de Graficos]]></title>
+  <description><![CDATA[
+<div id="outline-container-org56d3dd3" class="outline-2">
+<h2 id="org56d3dd3"><span class="section-number-2">1.</span> 📌 Configuración esencial</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgfad4b98" class="outline-3">
+<h3 id="orgfad4b98"><span class="section-number-3">1.1.</span> 1. Instalación de dependencias</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+```
+</p>
+
+<p>
+sudo apt install gnuplot plantuml graphviz ditaa
+</p>
+
+<p>
+brew install gnuplot plantuml graphviz ditaa
+```
+</p>
+</div>
+</div>
+<div id="outline-container-orgd981238" class="outline-3">
+<h3 id="orgd981238"><span class="section-number-3">1.2.</span> 2. Configuración de Emacs (<code>/.emacs.d/init.el</code>)</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+```
+;; Activar lenguajes de Org-babel
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((gnuplot . t)
+   (plantuml . t)
+   (dot . t)
+   (ditaa . t)))
+</p>
+
+<p>
+;; Rutas específicas para Java (necesario para PlantUML/Ditaa)
+(setq org-plantuml-jar-path "/usr/share/plantuml/plantuml.jar")
+(setq org-ditaa-jar-path "/usr/share/ditaa/ditaa.jar")
+</p>
+
+<p>
+;; Configuración avanzada de Gnuplot
+(setq org-plot/gnuplot-terminal "pngcairo enhanced font 'Verdana,10'")
+```
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6662877" class="outline-2">
+<h2 id="org6662877"><span class="section-number-2">2.</span> 📊 Ejemplo 1: Gráfico estadístico con Gnuplot</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgb7c971b" class="outline-3">
+<h3 id="orgb7c971b"><span class="section-number-3">2.1.</span> Tabla de datos climáticos</h3>
+<div class="outline-text-3" id="text-2-1">
+<table id="orgc62d9f0">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Mes</th>
+<th scope="col" class="org-right">Temp (°C)</th>
+<th scope="col" class="org-right">Lluvia (mm)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Enero</td>
+<td class="org-right">15.2</td>
+<td class="org-right">82.4</td>
+</tr>
+
+<tr>
+<td class="org-left">Febrero</td>
+<td class="org-right">16.8</td>
+<td class="org-right">45.1</td>
+</tr>
+
+<tr>
+<td class="org-left">Marzo</td>
+<td class="org-right">19.3</td>
+<td class="org-right">30.6</td>
+</tr>
+
+<tr>
+<td class="org-left">Abril</td>
+<td class="org-right">22.1</td>
+<td class="org-right">18.9</td>
+</tr>
+</tbody>
+</table>
+
+
+<figure id="orgd0ca3b9">
+<img src="grafico-clima.png" alt="grafico-clima.png">
+
+</figure>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcfca41c" class="outline-2">
+<h2 id="orgcfca41c"><span class="section-number-2">3.</span> 🌳 Ejemplo 2: Diagrama con PlantUML</h2>
+<div class="outline-text-2" id="text-3">
+
+<figure id="orgd9dc70a">
+<img src="diagrama-clases.png" alt="diagrama-clases.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org7639084" class="outline-2">
+<h2 id="org7639084"><span class="section-number-2">4.</span> 🛠 Personalización avanzada</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org086e090" class="outline-3">
+<h3 id="org086e090"><span class="section-number-3">4.1.</span> Temas visuales para Gnuplot</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+```
+</p>
+
+<p>
+set style line 1 lc rgb '#8b1a0e' pt 7 ps 1 lt 1 lw 2
+set style line 2 lc rgb '#5e9c36' pt 5 ps 1 lt 1 lw 2
+set style increment user
+```
+</p>
+</div>
+</div>
+<div id="outline-container-org2af363c" class="outline-3">
+<h3 id="org2af363c"><span class="section-number-3">4.2.</span> Configuración de tamaño para PlantUML</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+```
+;; Tamaño predeterminado imágenes
+(setq org-plantuml-args '("-pipe" "-tsvg" "-width 1920" "-height 1080"))
+```
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org44131b9" class="outline-2">
+<h2 id="org44131b9"><span class="section-number-2">5.</span> ⚡ Flujo de trabajo optimizado</h2>
+<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li>Crear tabla de datos con <code>org-table-create</code></li>
+<li>Insertar bloque de código (<code>C-c C-, g</code> para Gnuplot)</li>
+<li>Ejecutar con <code>C-c C-c</code></li>
+<li>Previsualizar con <code>C-c C-x C-v</code></li>
+<li>Exportar a HTML/PDF (<code>C-c C-e</code>)</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org59e44a8" class="outline-2">
+<h2 id="org59e44a8"><span class="section-number-2">6.</span> 🔍 Solución de problemas comunes</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgeac742d" class="outline-3">
+<h3 id="orgeac742d"><span class="section-number-3">6.1.</span> Error "Command not found"</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+```
+;; Verificar rutas ejecutables
+(executable-find "gnuplot")  ; Debe retornar ruta correcta
+```
+</p>
+</div>
+</div>
+<div id="outline-container-orgdf5ae3c" class="outline-3">
+<h3 id="orgdf5ae3c"><span class="section-number-3">6.2.</span> Gráficos no actualizados</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>Ejecutar <code>org-babel-execute-buffer</code> (C-c C-v b)</li>
+<li>Borrar caché con <code>org-babel-remove-result</code></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd0585a7" class="outline-3">
+<h3 id="orgd0585a7"><span class="section-number-3">6.3.</span> Configuración multi-plataforma</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+```
+;; Ejemplo Windows
+(when (eq system-type 'windows-nt)
+  (setq org-plantuml-jar-path "C:/tools/plantuml.jar"))
+```
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6a5b4af" class="outline-2">
+<h2 id="org6a5b4af"><span class="section-number-2">7.</span> 💡 Consejos profesionales</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>Usar <code>org-plot</code> para gráficos rápidos desde tablas</li>
+<li>Combinar gráficos con <code>:results graphics file</code></li>
+<li>Automatizar generación con <code>org-babel-tangle</code></li>
+</ul>
+
+<blockquote>
+<p>
+💻 "Org-mode transforma Emacs en un laboratorio de visualización de datos completo, manteniendo todo en texto plano y totalmente versionable" - Experto en Emacs
+</p>
+</blockquote>
+<p>
+```
+</p>
+
+<p>
+Citations:
+</p>
+<ul class="org-ul">
+<li>[1] <a href="https://lapipaplena.wordpress.com/2017/02/05/graficos-con-org-mode-ditaa-y-plantuml/">https://lapipaplena.wordpress.com/2017/02/05/graficos-con-org-mode-ditaa-y-plantuml/</a></li>
+<li>[2] <a href="https://osiux.com/visualizando-org-mode-con-gnuplot.html">https://osiux.com/visualizando-org-mode-con-gnuplot.html</a></li>
+<li>[3] <a href="https://www.blackhats.es/wordpress/?p=109">https://www.blackhats.es/wordpress/?p=109</a></li>
+<li>[4] <a href="https://blog-antiguo.nueva-actitud.org/graficos-en-org-mode.html">https://blog-antiguo.nueva-actitud.org/graficos-en-org-mode.html</a></li>
+<li>[5] <a href="https://gewhere.github.io/gnuplot-orgmode">https://gewhere.github.io/gnuplot-orgmode</a></li>
+<li>[6] <a href="https://orgmode.org/manual/Org-Plot.html">https://orgmode.org/manual/Org-Plot.html</a></li>
+<li>[7] <a href="https://www.medialab-matadero.es/actividades/organiza-tu-vida-con-emacs-y-org-mode">https://www.medialab-matadero.es/actividades/organiza-tu-vida-con-emacs-y-org-mode</a></li>
+<li>[8] <a href="https://www.reddit.com/r/emacs/comments/vfldyd/issue_with_setting_up_plantuml/?tl=es-es">https://www.reddit.com/r/emacs/comments/vfldyd/issue_with_setting_up_plantuml/?tl=es-es</a></li>
+<li>[9] <a href="https://www.reddit.com/r/emacs/comments/m0ysb5/how_do_you_organize_your_org_mode_files/?tl=es-es">https://www.reddit.com/r/emacs/comments/m0ysb5/how_do_you_organize_your_org_mode_files/?tl=es-es</a></li>
+<li>[10] <a href="https://pdf.plantuml.net/1.2019.4/PlantUML_Language_Reference_Guide_es.pdf">https://pdf.plantuml.net/1.2019.4/PlantUML_Language_Reference_Guide_es.pdf</a></li>
+<li>[11] <a href="https://traficantes.net/sites/default/files/pdfs/orgguide.es_.pdf">https://traficantes.net/sites/default/files/pdfs/orgguide.es_.pdf</a></li>
+<li>[12] <a href="https://github.com/skuro/plantuml-mode">https://github.com/skuro/plantuml-mode</a></li>
+<li>[13] <a href="https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-plantuml.html">https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-plantuml.html</a></li>
+<li>[14] <a href="https://comacero.gitlab.io/notes_orgmode/">https://comacero.gitlab.io/notes_orgmode/</a></li>
+<li>[15] <a href="https://pdf.plantuml.net/PlantUML_Language_Reference_Guide_es.pdf">https://pdf.plantuml.net/PlantUML_Language_Reference_Guide_es.pdf</a></li>
+<li>[16] <a href="https://www.youtube.com/watch?v=OI4x5a_mxKA">https://www.youtube.com/watch?v=OI4x5a_mxKA</a></li>
+<li>[17] <a href="https://elbauldelprogramador.com/chuleta-org-mode/">https://elbauldelprogramador.com/chuleta-org-mode/</a></li>
+</ul>
+
+<p>
+&#x2014;
+Answer from Perplexity: pplx.ai/share
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutorial.html">tutorial</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gráficos.html">gráficos</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gnuplot.html">gnuplot</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-plantuml.html">plantuml</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-org-mode.html">org-mode</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-draft.html">draft</a> </div>]]></description>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[tutorial]]></category>
+  <category><![CDATA[gráficos]]></category>
+  <category><![CDATA[gnuplot]]></category>
+  <category><![CDATA[plantuml]]></category>
+  <category><![CDATA[org-mode]]></category>
+  <category><![CDATA[draft]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-29-configurar-emacs-para-creaci%C3%B3n-de-graficos.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-29-configurar-emacs-para-creaci%C3%B3n-de-graficos.html</guid>
+  <pubDate>Sat, 29 Mar 2025 18:56:00 +0100</pubDate>
+</item>
+</channel>
+</rss>
