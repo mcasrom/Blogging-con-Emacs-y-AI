@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - blog]]></title>
 <description><![CDATA[Example.com - blog]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-blog.html</link>
-<lastBuildDate>Sun, 13 Apr 2025 08:51:08 +0200</lastBuildDate>
+<lastBuildDate>Mon, 14 Apr 2025 00:10:55 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -555,6 +555,12 @@
 
 <tr>
 <td class="org-right">2025-04-13</td>
+<td class="org-left">Las Tierras Raras: Elementos Estratégicos en el Tablero Global</td>
+<td class="org-left"><a href="2025-04-13-las-tierras-raras-elementos-estrat-gicos-en-el-tablero-global.html">Enlace</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-04-13</td>
 <td class="org-left">Tutorial Emacs: Cómo Configurar use-package para Gestionar Paquetes como un Profesional</td>
 <td class="org-left"><a href="2025-04-13-tutorial-emacs-c-mo-configurar-use-package-para-gestionar-paquetes-como-un-profesional.html">Enlace</a></td>
 </tr>
@@ -572,7 +578,7 @@
 </tr>
 
 <tr>
-<td class="org-right">2025-04-12</td>
+<td class="org-right">2025-04-13</td>
 <td class="org-left">Artículos recientes sobre geopolítica y estrategia</td>
 <td class="org-left"><a href="geopolitica.html">Enlace</a></td>
 </tr>
@@ -607,7 +613,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Sun, 13 Apr 2025 08:45:00 +0200</pubDate>
+  <pubDate>Sun, 13 Apr 2025 23:35:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Emacs con Esteroides: Configurar un Contador de Visitantes para el Blog]]></title>
