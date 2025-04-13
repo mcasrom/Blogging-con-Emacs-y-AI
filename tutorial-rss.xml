@@ -4,13 +4,13 @@
 <title><![CDATA[Example.com - tutorial]]></title>
 <description><![CDATA[Example.com - tutorial]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-tutorial.html</link>
-<lastBuildDate>Sun, 13 Apr 2025 01:33:42 +0200</lastBuildDate>
+<lastBuildDate>Sun, 13 Apr 2025 08:28:26 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Tutorial Emacs: Cómo Configurar use-package para Gestionar Paquetes como un Profesional]]></title>
   <description><![CDATA[
-<div id="outline-container-org5cfefa0" class="outline-2">
-<h2 id="org5cfefa0">Introducción a use-package: Tu Mejor Amigo en Emacs</h2>
-<div class="outline-text-2" id="text-org5cfefa0">
+<div id="outline-container-orgb6ba867" class="outline-2">
+<h2 id="orgb6ba867">Introducción a use-package: Tu Mejor Amigo en Emacs</h2>
+<div class="outline-text-2" id="text-orgb6ba867">
 <p>
 Si estás empezando con Emacs, probablemente te has dado cuenta de que es un editor <b>increíblemente</b> personalizable, pero también puede ser abrumador. Una de las primeras cosas que querrás dominar es cómo instalar y configurar paquetes (extensiones que añaden funcionalidades). Aquí es donde entra <b><b>use-package</b></b>, una herramienta poderosa que simplifica la gestión de paquetes, organiza tu configuración y hace que Emacs sea más rápido y eficiente.
 </p>
@@ -32,9 +32,9 @@ No necesitas ser un experto en Emacs ni saber programar en Lisp. Este tutorial e
 </p>
 </div>
 </div>
-<div id="outline-container-org894dcb5" class="outline-2">
-<h2 id="org894dcb5">¿Qué es use-package?</h2>
-<div class="outline-text-2" id="text-org894dcb5">
+<div id="outline-container-orgac0a603" class="outline-2">
+<h2 id="orgac0a603">¿Qué es use-package?</h2>
+<div class="outline-text-2" id="text-orgac0a603">
 <p>
 <b><b>use-package</b></b> es una macro (una especie de atajo en Emacs Lisp) que te permite instalar, configurar y gestionar paquetes de manera sencilla. En lugar de escribir largas líneas de código para cargar paquetes, `use-package` te ofrece una sintaxis clara y estructurada. Sus principales ventajas son:
 </p>
@@ -51,9 +51,9 @@ Por ejemplo, sin `use-package`, instalar y configurar el paquete <code>ivy</code
 </p>
 </div>
 </div>
-<div id="outline-container-org43936ca" class="outline-2">
-<h2 id="org43936ca">Prerrequisitos</h2>
-<div class="outline-text-2" id="text-org43936ca">
+<div id="outline-container-org18c6d6f" class="outline-2">
+<h2 id="org18c6d6f">Prerrequisitos</h2>
+<div class="outline-text-2" id="text-org18c6d6f">
 <p>
 Antes de empezar, asegúrate de tener lo siguiente:
 </p>
@@ -70,9 +70,9 @@ Si no estás familiarizado con estos conceptos, no te preocupes: explicaré cada
 </p>
 </div>
 </div>
-<div id="outline-container-org771ec32" class="outline-2">
-<h2 id="org771ec32">Paso 1: Configurar el Sistema de Paquetes de Emacs</h2>
-<div class="outline-text-2" id="text-org771ec32">
+<div id="outline-container-orgcaeb76f" class="outline-2">
+<h2 id="orgcaeb76f">Paso 1: Configurar el Sistema de Paquetes de Emacs</h2>
+<div class="outline-text-2" id="text-orgcaeb76f">
 <p>
 Emacs usa repositorios de paquetes como MELPA, ELPA y Org para descargar extensiones. Antes de usar `use-package`, debemos asegurarnos de que Emacs pueda acceder a estos repositorios.
 </p>
@@ -91,14 +91,14 @@ Añade el siguiente código al principio de tu <code>init.el</code> para configu
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Configurar repositorios de paquetes</span>
-(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">package</span>)
-(add-to-list 'package-archives '(<span style="color: #005F00;">"melpa"</span> . <span style="color: #005F00;">"https://melpa.org/packages/"</span>) t)
-(add-to-list 'package-archives '(<span style="color: #005F00;">"org"</span> . <span style="color: #005F00;">"https://orgmode.org/elpa/"</span>) t)
+<pre class="src src-elisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Configurar repositorios de paquetes</span>
+(<span style="color: #219fd5; font-style: italic;">require</span> '<span style="color: #2f86d2;">package</span>)
+(add-to-list 'package-archives '(<span style="color: #a44185;">"melpa"</span> . <span style="color: #a44185;">"https://melpa.org/packages/"</span>) t)
+(add-to-list 'package-archives '(<span style="color: #a44185;">"org"</span> . <span style="color: #a44185;">"https://orgmode.org/elpa/"</span>) t)
 (package-initialize)
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Refrescar la lista de paquetes (solo necesario la primera vez)</span>
-(<span style="color: #D70000;">unless</span> package-archive-contents
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Refrescar la lista de paquetes (solo necesario la primera vez)</span>
+(<span style="color: #219fd5; font-style: italic;">unless</span> package-archive-contents
   (package-refresh-contents))
 </pre>
 </div>
@@ -118,9 +118,9 @@ Guarda el archivo (<code>C-x C-s</code>) y evalúa el código con <code>M-x eval
 </p>
 </div>
 </div>
-<div id="outline-container-org64b7a9e" class="outline-2">
-<h2 id="org64b7a9e">Paso 2: Instalar use-package</h2>
-<div class="outline-text-2" id="text-org64b7a9e">
+<div id="outline-container-org8300882" class="outline-2">
+<h2 id="org8300882">Paso 2: Instalar use-package</h2>
+<div class="outline-text-2" id="text-org8300882">
 <p>
 Aunque `use-package` es una herramienta poderosa, no viene incluida en Emacs por defecto. Vamos a instalarla automáticamente.
 </p>
@@ -130,14 +130,14 @@ Añade este código justo después del bloque anterior en tu <code>init.el</code
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Instalar use-package si no est&#225; presente</span>
-(<span style="color: #D70000;">unless</span> (package-installed-p 'use-package)
+<pre class="src src-elisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Instalar use-package si no est&#225; presente</span>
+(<span style="color: #219fd5; font-style: italic;">unless</span> (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Cargar use-package</span>
-(<span style="color: #D70000;">eval-when-compile</span>
-  (<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">use-package</span>))
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Cargar use-package</span>
+(<span style="color: #219fd5; font-style: italic;">eval-when-compile</span>
+  (<span style="color: #219fd5; font-style: italic;">require</span> '<span style="color: #2f86d2;">use-package</span>))
 </pre>
 </div>
 
@@ -155,21 +155,21 @@ Guarda el archivo y evalúa con <code>M-x eval-buffer</code>. Ahora tienes `use-
 </p>
 </div>
 </div>
-<div id="outline-container-org04475d8" class="outline-2">
-<h2 id="org04475d8">Paso 3: Usar use-package para Instalar un Paquete</h2>
-<div class="outline-text-2" id="text-org04475d8">
+<div id="outline-container-orgb34f685" class="outline-2">
+<h2 id="orgb34f685">Paso 3: Usar use-package para Instalar un Paquete</h2>
+<div class="outline-text-2" id="text-orgb34f685">
 <p>
 Para probar `use-package`, vamos a instalar y configurar <b><b>ivy</b></b>, un paquete popular que mejora el autocompletado en Emacs. Añade este bloque a tu <code>init.el</code>:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">ivy</span>
-  <span style="color: #1F55A0;">:ensure</span> t
-  <span style="color: #1F55A0;">:demand</span> t
-  <span style="color: #1F55A0;">:config</span>
+<pre class="src src-elisp">(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">ivy</span>
+  <span style="color: #dc3eb7;">:ensure</span> t
+  <span style="color: #dc3eb7;">:demand</span> t
+  <span style="color: #dc3eb7;">:config</span>
   (ivy-mode 1)
-  (<span style="color: #D70000;">setq</span> ivy-use-virtual-buffers t)
-  (<span style="color: #D70000;">setq</span> enable-recursive-minibuffers t))
+  (<span style="color: #219fd5; font-style: italic;">setq</span> ivy-use-virtual-buffers t)
+  (<span style="color: #219fd5; font-style: italic;">setq</span> enable-recursive-minibuffers t))
 </pre>
 </div>
 
@@ -190,9 +190,9 @@ Guarda el archivo (<code>C-x C-s</code>) y evalúa con <code>M-x eval-buffer</co
 </p>
 </div>
 </div>
-<div id="outline-container-orgd1f2afe" class="outline-2">
-<h2 id="orgd1f2afe">Paso 4: Ejemplo Práctico – Configurar Magit con use-package</h2>
-<div class="outline-text-2" id="text-orgd1f2afe">
+<div id="outline-container-org01b79e6" class="outline-2">
+<h2 id="org01b79e6">Paso 4: Ejemplo Práctico – Configurar Magit con use-package</h2>
+<div class="outline-text-2" id="text-org01b79e6">
 <p>
 Vamos a configurar otro paquete útil: <b><b>Magit</b></b>, una interfaz para Git dentro de Emacs. Este ejemplo incluye teclas personalizadas y carga diferida para optimizar el inicio.
 </p>
@@ -202,11 +202,11 @@ Añade este bloque a tu <code>init.el</code>:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">magit</span>
-  <span style="color: #1F55A0;">:ensure</span> t
-  <span style="color: #1F55A0;">:bind</span> ((<span style="color: #005F00;">"C-x g"</span> . magit-status))
-  <span style="color: #1F55A0;">:config</span>
-  (<span style="color: #D70000;">setq</span> magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1))
+<pre class="src src-elisp">(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">magit</span>
+  <span style="color: #dc3eb7;">:ensure</span> t
+  <span style="color: #dc3eb7;">:bind</span> ((<span style="color: #a44185;">"C-x g"</span> . magit-status))
+  <span style="color: #dc3eb7;">:config</span>
+  (<span style="color: #219fd5; font-style: italic;">setq</span> magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1))
 </pre>
 </div>
 
@@ -225,9 +225,9 @@ Guarda, evalúa (<code>M-x eval-buffer</code>) y prueba presionando <code>C-x g<
 </p>
 </div>
 </div>
-<div id="outline-container-org721532a" class="outline-2">
-<h2 id="org721532a">Paso 5: Personalización Avanzada con use-package</h2>
-<div class="outline-text-2" id="text-org721532a">
+<div id="outline-container-org4bc1bbf" class="outline-2">
+<h2 id="org4bc1bbf">Paso 5: Personalización Avanzada con use-package</h2>
+<div class="outline-text-2" id="text-org4bc1bbf">
 <p>
 Ahora que entiendes lo básico, exploremos opciones avanzadas de `use-package` para hacer tu configuración más poderosa.
 </p>
@@ -238,12 +238,12 @@ Supongamos que quieres cargar el paquete <code>org</code> (para Org-mode) solo s
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">org</span>
-  <span style="color: #1F55A0;">:ensure</span> t
-  <span style="color: #1F55A0;">:mode</span> (<span style="color: #005F00;">"\\.org\\'"</span> . org-mode)
-  <span style="color: #1F55A0;">:config</span>
-  (<span style="color: #D70000;">setq</span> org-startup-folded t)
-  (<span style="color: #D70000;">setq</span> org-hide-emphasis-markers t))
+<pre class="src src-elisp">(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">org</span>
+  <span style="color: #dc3eb7;">:ensure</span> t
+  <span style="color: #dc3eb7;">:mode</span> (<span style="color: #a44185;">"\\.org\\'"</span> . org-mode)
+  <span style="color: #dc3eb7;">:config</span>
+  (<span style="color: #219fd5; font-style: italic;">setq</span> org-startup-folded t)
+  (<span style="color: #219fd5; font-style: italic;">setq</span> org-hide-emphasis-markers t))
 </pre>
 </div>
 
@@ -258,10 +258,10 @@ Para añadir teclas globales, usa <code>:bind</code> en un bloque vacío:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">general</span>
-  <span style="color: #1F55A0;">:ensure</span> t
-  <span style="color: #1F55A0;">:config</span>
-  (global-set-key (kbd <span style="color: #005F00;">"C-c t"</span>) 'org-todo))
+<pre class="src src-elisp">(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">general</span>
+  <span style="color: #dc3eb7;">:ensure</span> t
+  <span style="color: #dc3eb7;">:config</span>
+  (global-set-key (kbd <span style="color: #a44185;">"C-c t"</span>) 'org-todo))
 </pre>
 </div>
 
@@ -271,10 +271,10 @@ Para paquetes que solo usas ocasionalmente, como <code>helm</code>, configura la
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">helm</span>
-  <span style="color: #1F55A0;">:ensure</span> t
-  <span style="color: #1F55A0;">:commands</span> helm-M-x
-  <span style="color: #1F55A0;">:bind</span> ((<span style="color: #005F00;">"M-x"</span> . helm-M-x)))
+<pre class="src src-elisp">(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">helm</span>
+  <span style="color: #dc3eb7;">:ensure</span> t
+  <span style="color: #dc3eb7;">:commands</span> helm-M-x
+  <span style="color: #dc3eb7;">:bind</span> ((<span style="color: #a44185;">"M-x"</span> . helm-M-x)))
 </pre>
 </div>
 
@@ -284,9 +284,9 @@ Para paquetes que solo usas ocasionalmente, como <code>helm</code>, configura la
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcfb0ed5" class="outline-2">
-<h2 id="orgcfb0ed5">Consejos para Mantener tu Configuración Limpia</h2>
-<div class="outline-text-2" id="text-orgcfb0ed5">
+<div id="outline-container-org0421550" class="outline-2">
+<h2 id="org0421550">Consejos para Mantener tu Configuración Limpia</h2>
+<div class="outline-text-2" id="text-org0421550">
 <ol class="org-ol">
 <li><p>
 <b><b>Organiza tu init.el</b></b>:
@@ -294,10 +294,10 @@ Divide tu archivo en secciones con comentarios:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Paquetes de interfaz</span>
-(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">ivy</span> ...)
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Paquetes de productividad</span>
-(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">org</span> ...)
+<pre class="src src-elisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Paquetes de interfaz</span>
+(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">ivy</span> ...)
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Paquetes de productividad</span>
+(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">org</span> ...)
 </pre>
 </div></li>
 
@@ -307,11 +307,11 @@ Algunos paquetes llenan la barra de modos. Oculta sus nombres:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">diminish</span>
-  <span style="color: #1F55A0;">:ensure</span> t)
-(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">ivy</span>
-  <span style="color: #1F55A0;">:ensure</span> t
-  <span style="color: #1F55A0;">:diminish</span> ivy-mode)
+<pre class="src src-elisp">(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">diminish</span>
+  <span style="color: #dc3eb7;">:ensure</span> t)
+(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">ivy</span>
+  <span style="color: #dc3eb7;">:ensure</span> t
+  <span style="color: #dc3eb7;">:diminish</span> ivy-mode)
 </pre>
 </div></li>
 
@@ -323,9 +323,9 @@ Guarda tu <code>init.el</code> en un repositorio Git para no perder tu configura
 </ol>
 </div>
 </div>
-<div id="outline-container-orgff08ef8" class="outline-2">
-<h2 id="orgff08ef8">Errores Comunes y Cómo Solucionarlos</h2>
-<div class="outline-text-2" id="text-orgff08ef8">
+<div id="outline-container-org3efc4b1" class="outline-2">
+<h2 id="org3efc4b1">Errores Comunes y Cómo Solucionarlos</h2>
+<div class="outline-text-2" id="text-org3efc4b1">
 <ul class="org-ul">
 <li><b><b>"Paquete no encontrado"</b></b>:
 Asegúrate de que <code>package-refresh-contents</code> se ejecute al menos una vez (<code>M-x package-refresh-contents</code>).</li>
@@ -338,9 +338,9 @@ Usa <code>M-x check-parens</code> para encontrar paréntesis desbalanceados en t
 </ul>
 </div>
 </div>
-<div id="outline-container-orge611511" class="outline-2">
-<h2 id="orge611511">Conclusión</h2>
-<div class="outline-text-2" id="text-orge611511">
+<div id="outline-container-orge9202f2" class="outline-2">
+<h2 id="orge9202f2">Conclusión</h2>
+<div class="outline-text-2" id="text-orge9202f2">
 <p>
 ¡Felicidades! Ahora sabes cómo configurar `use-package` para gestionar paquetes en Emacs como un profesional. Hemos cubierto desde la instalación básica hasta ejemplos prácticos con Ivy, Magit y Org-mode, además de trucos avanzados para personalizar tu flujo de trabajo. Con `use-package`, tu configuración será más limpia, rápida y fácil de mantener.
 </p>
@@ -359,9 +359,9 @@ Si quieres explorar más, prueba estos paquetes con `use-package`:
 </p>
 </div>
 </div>
-<div id="outline-container-org135931a" class="outline-2">
-<h2 id="org135931a">Recursos Adicionales</h2>
-<div class="outline-text-2" id="text-org135931a">
+<div id="outline-container-org8c0a183" class="outline-2">
+<h2 id="org8c0a183">Recursos Adicionales</h2>
+<div class="outline-text-2" id="text-org8c0a183">
 <ul class="org-ul">
 <li>Documentación oficial de `use-package`: <a href="https://github.com/jwiegley/use-package">GitHub - use-package</a></li>
 <li>Tutoriales de Emacs: <a href="https://www.gnu.org/software/emacs/manual/">Manual de Emacs</a></li>
@@ -369,7 +369,7 @@ Si quieres explorar más, prueba estos paquetes con `use-package`:
 </ul>
 
 <div class="org-src-container">
-<pre class="src src-elisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">&#161;Sigue hackeando y que la fuerza de Emacs est&#233; contigo!</span>
+<pre class="src src-elisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">&#161;Sigue hackeando y que la fuerza de Emacs est&#233; contigo!</span>
 </pre>
 </div>
 
