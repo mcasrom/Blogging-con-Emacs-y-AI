@@ -29,36 +29,25 @@
          .blog-header {
            display: flex;
            align-items: center;
-           justify-content: flex-start;
-           text-align: left;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
            padding: 15px 0;
            border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
          }
          .blog-header img {
-           max-width: 70px;
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
            height: auto;
-           margin-right: 20px;
+           margin-bottom: 10px; /* Espacio debajo del logo */
            border-radius: 5px; /* Suaviza el logo */
          }
          .blog-header-content {
            display: flex;
            flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
          }
          .blog-title {
-           font-size: 2em;
-           margin: 0;
-         }
-         .blog-subtitle {
-           font-size: 1.1em;
-           color: #666;
-           margin-top: 5px;
-         }
-         .blog-email {
-           font-size: 0.9em;
-           color: #777;
-           margin-top: 8px;
-         }
-         .blog-email a {
+
            color: #2980b9;
            text-decoration: none;
          }
@@ -91,7 +80,7 @@
 	 }
          .postamble {
            text-align: center;
-           font-size: 0.85em;
+           font-size: 0.8em; .85
            color: #666;
          }
 	 /* Estilos para imágenes agregados aquí */
@@ -102,8 +91,44 @@
            margin: 10px auto;
            border-radius: 5px;
          }
-       </style>
-       
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
        <div class='blog-header'>
          <img src='logo.png' alt='Logo'>
          <div class='blog-header-content'>
@@ -111,19 +136,21 @@
            <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
            <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
          </div>
-       </div>
-       
+       </div>       
        <nav>
          <a href='index.html'>Inicio</a> |
-         <a href='tags.html'>Tags</a> |
+         <a href='viajes.html'>Viajes</a> |
          <a href='archive.html'>Archivo</a> |
          <a href='contacto.html'>Contacto</a> |
          <a href='nosotros.html'>Nosotros</a> |
-         <a href='proyectos.html'>Proyectos</a>
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
          <a href='tag-tutoriales.html'>Tutoriales</a> |
-         <a href='tag-opiniones.html'>Opiniones</a>
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
        </nav>
-        <hr></head>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
 <body>
 <div id="preamble" class="status"></div>
 <div id="content">
@@ -177,7 +204,7 @@ EOD
 </div>
 
 
-<figure id="org541c894">
+<figure id="orgdfaff2a">
 <img src="images/welcome-graph.png" alt="welcome-graph.png">
 
 </figure>
@@ -292,6 +319,7 @@ Para publicar este post, simplemente guárdalo en tu directorio <code>~/myblog/p
            </a>
          </p>
          <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
          <!-- hitwebcounter Code START -->
          <a href="https://www.hitwebcounter.com" target="_blank">
            <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />

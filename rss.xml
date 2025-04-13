@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Sun, 13 Apr 2025 08:28:00 +0200</lastBuildDate>
+<lastBuildDate>Sun, 13 Apr 2025 08:50:35 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -607,7 +607,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Sun, 13 Apr 2025 08:24:00 +0200</pubDate>
+  <pubDate>Sun, 13 Apr 2025 08:45:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Vibe Hacking: Personalizando tu Experiencia Digital]]></title>
@@ -17548,181 +17548,19 @@ Para ponerte en contacto, envía un email a <a href="mailto:mybloggingnotes@gmai
   <pubDate>Tue, 11 Mar 2025 00:00:00 +0100</pubDate>
 </item>
 <item>
-  <title><![CDATA[Bienvenida a Mi Blog - Grafico]]></title>
-  <description><![CDATA[
-<div id="outline-container-welcome" class="outline-2">
-<h2 id="welcome">Bienvenida a Mi Blog con Emacs y Esteroides</h2>
-<div class="outline-text-2" id="text-welcome">
-<p>
-Bienvenidos a mi blog estático generado con Org Mode y publicado en GitHub Pages.
-Este es un ejemplo de cómo integrar gráficos en nuestros posts.
-</p>
-</div>
-<div id="outline-container-welcome-graphic" class="outline-3">
-<h3 id="welcome-graphic">Creación del gráfico de bienvenida</h3>
-<div class="outline-text-3" id="text-welcome-graphic">
-<p>
-A continuación, crearemos un gráfico usando Org Babel con Gnuplot:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-gnuplot"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n general</span>
-<span style="color: #2f86d2;">set</span> terminal png size 800,500 enhanced font <span style="color: #a44185;">"Helvetica,14"</span>
-<span style="color: #2f86d2;">set</span> output <span style="color: #a44185;">"~/myblog/images/welcome-graph.png"</span>
-<span style="color: #2f86d2;">set</span> <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Bienvenida a Mi Blog con Emacs y Org Static"</span> font <span style="color: #a44185;">"Helvetica,18"</span>
-<span style="color: #2f86d2;">set</span> style fill solid 0.5
-<span style="color: #2f86d2;">set</span> style data histogram
-<span style="color: #2f86d2;">set</span> style histogram cluster gap 1
-<span style="color: #2f86d2;">set</span> boxwidth 0.9
-<span style="color: #2f86d2;">set</span> grid ytics
-<span style="color: #2f86d2;">set</span> xtics rotate by -45
-<span style="color: #2f86d2;">set</span> xlabel <span style="color: #a44185;">"Tecnolog&#237;as"</span> font <span style="color: #a44185;">"Helvetica,14"</span>
-<span style="color: #2f86d2;">set</span> ylabel <span style="color: #a44185;">"Nivel de Potencia"</span> font <span style="color: #a44185;">"Helvetica,14"</span>
-<span style="color: #2f86d2;">set</span> yrange [<span style="color: #2f86d2;">0:10</span>]
-<span style="color: #2f86d2;">set</span> palette <span style="color: #dc3eb7;">defined</span> (0 <span style="color: #a44185;">"skyblue"</span>, 1 <span style="color: #a44185;">"royalblue"</span>, 2 <span style="color: #a44185;">"dark-blue"</span>)
-
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Datos para el gr&#225;fico</span>
-$DATA &lt;&lt; EOD
-Tecnolog&#237;a Potencia Flexibilidad Productividad
-<span style="color: #a44185;">"Emacs"</span>     9.2     9.5          8.7
-<span style="color: #a44185;">"Org Mode"</span>  9.0     9.8          9.2
-<span style="color: #a44185;">"GitHub"</span>    8.5     8.0          8.8
-<span style="color: #a44185;">"Markdown"</span>  7.0     6.5          7.5
-<span style="color: #a44185;">"HTML"</span>      8.0     7.2          7.0
-EOD
-
-<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generaci&#243;n del gr&#225;fico</span>
-<span style="color: #219fd5; font-style: italic;">plot</span> $DATA <span style="color: #dc3eb7;">using</span> 2:xtic(1) <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Potencia"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#3498db"</span>, \
-     $DATA <span style="color: #dc3eb7;">using</span> 3 <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Flexibilidad"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#2980b9"</span>, \
-     $DATA <span style="color: #dc3eb7;">using</span> 4 <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Productividad"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#1f618d"</span>
-</pre>
-</div>
-
-
-<figure id="org541c894">
-<img src="images/welcome-graph.png" alt="welcome-graph.png">
-
-</figure>
-
-<img src='/images/welcome-graph.png' alt='Welcome to my Blog' />
-
-
-<img src="/images/welcome-graph.png" alt="Gráfico de bienvenida al blog" width="800px" />
-</div>
-</div>
-<div id="outline-container-analysis" class="outline-3">
-<h3 id="analysis">Análisis del gráfico</h3>
-<div class="outline-text-3" id="text-analysis">
-<p>
-El gráfico anterior muestra una comparativa entre diferentes tecnologías utilizadas para blogging, destacando tres dimensiones clave:
-</p>
-
-<ol class="org-ol">
-<li><b>Potencia</b>: Capacidad para realizar tareas complejas</li>
-<li><b>Flexibilidad</b>: Adaptabilidad a diferentes necesidades</li>
-<li><b>Productividad</b>: Eficiencia en el flujo de trabajo</li>
-</ol>
-
-<p>
-Como podemos observar, Emacs y Org Mode destacan en todas las dimensiones, lo que los convierte en herramientas ideales para la creación y gestión de blogs estáticos.
-</p>
-</div>
-</div>
-<div id="outline-container-image-config" class="outline-3">
-<h3 id="image-config">Configuración para mostrar imágenes correctamente</h3>
-<div class="outline-text-3" id="text-image-config">
-<p>
-Para asegurar que las imágenes se muestran correctamente en nuestro blog:
-</p>
-
-<ol class="org-ol">
-<li>Las imágenes deben estar en el directorio <code>~/myblog/images/</code></li>
-<li>Al referenciarlas en el HTML generado, usamos la ruta <code>/images/nombre-imagen.png</code></li>
-<li>Nuestra configuración se encarga de copiarlas al directorio público durante la exportación</li>
-</ol>
-
-<div class="org-src-container">
-<pre class="src src-elisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Ejemplo de la configuraci&#243;n para im&#225;genes</span>
-(<span style="color: #a44185;">"blog-images"</span>
- <span style="color: #dc3eb7;">:base-directory</span> <span style="color: #a44185;">"~/myblog/images/"</span>
- <span style="color: #dc3eb7;">:base-extension</span> <span style="color: #a44185;">"png</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">jpg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">jpeg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">gif</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">svg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">webp"</span>
- <span style="color: #dc3eb7;">:publishing-directory</span> <span style="color: #a44185;">"~/myblog/public/images/"</span>
- <span style="color: #dc3eb7;">:publishing-function</span> org-publish-attachment
- <span style="color: #dc3eb7;">:recursive</span> t)
-</pre>
-</div>
-</div>
-</div>
-<div id="outline-container-next-steps" class="outline-3">
-<h3 id="next-steps">Próximos pasos</h3>
-<div class="outline-text-3" id="text-next-steps">
-<p>
-En futuros posts exploraremos:
-</p>
-
-<ul class="org-ul">
-<li>Creación de visualizaciones avanzadas con Org Babel</li>
-<li>Integración de gráficos interactivos con JavaScript</li>
-<li>Optimización de imágenes para rendimiento web</li>
-<li>Consejos para mejorar la experiencia visual del blog</li>
-</ul>
-</div>
-</div>
-</div>
-<div id="outline-container-technical-notes" class="outline-2">
-<h2 id="technical-notes">Notas técnicas</h2>
-<div class="outline-text-2" id="text-technical-notes">
-<p>
-Para generar este gráfico he utilizado Gnuplot a través de Org Babel. Si quieres reproducirlo, necesitas:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-org"><span style="color: #8195b0; font-style: italic;"># Requisitos:</span>
-<span style="color: #8195b0; font-style: italic;"># 1. Gnuplot instalado en tu sistema</span>
-<span style="color: #8195b0; font-style: italic;"># 2. Configuraci&#243;n de Org Babel para Gnuplot</span>
-
-(require 'ob-gnuplot)
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((gnuplot . t)))
-</pre>
-</div>
-
-<p>
-Para publicar este post, simplemente guárdalo en tu directorio <code>~/myblog/posts/</code> con un nombre como <code>bienvenida-con-grafico.org</code> y ejecuta <code>org-static-blog-publish-to-github</code>.
-</p>
-</div>
-</div>
-<div id="outline-container-footer" class="outline-2">
-<h2 id="footer">Pie de página</h2>
-<div class="outline-text-2" id="text-footer">
-<div style="border-top: 1px solid #ddd; margin-top: 30px; padding-top: 10px; font-size: 0.9em; color: #777;">
-  <p>Este post fue creado con Emacs 28 y Org Mode. El gráfico fue generado con Gnuplot.</p>
-</div>
-</div>
-</div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bienvenida.html">bienvenida</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gráfico.html">gráfico</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-inicio.html">inicio</a> </div>]]></description>
-  <category><![CDATA[bienvenida]]></category>
-  <category><![CDATA[gráfico]]></category>
-  <category><![CDATA[inicio]]></category>
-  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-08-bienvenida-a-mi-blog---grafico.html</link>
-  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-08-bienvenida-a-mi-blog---grafico.html</guid>
-  <pubDate>Sat, 08 Mar 2025 15:29:00 +0100</pubDate>
-</item>
-<item>
   <title><![CDATA[Cómo Generar un Prompt en IA: Guía Detallada, Ventajas e Inconvenientes]]></title>
   <description><![CDATA[
-<div id="outline-container-org3751d94" class="outline-2">
-<h2 id="org3751d94">Introducción</h2>
-<div class="outline-text-2" id="text-org3751d94">
+<div id="outline-container-org7a96519" class="outline-2">
+<h2 id="org7a96519">Introducción</h2>
+<div class="outline-text-2" id="text-org7a96519">
 <p>
 La inteligencia artificial (IA) ha revolucionado la forma en que interactuamos con la tecnología. Desde chatbots hasta herramientas de generación de contenido, la IA se ha convertido en una aliada indispensable para profesionales, creativos y entusiastas de la tecnología. Sin embargo, para aprovechar al máximo estas herramientas, es fundamental entender cómo <b><b>generar un prompt efectivo</b></b>. En este artículo, exploraremos en detalle qué es un prompt, cómo crearlo, sus ventajas, inconvenientes y ejemplos prácticos para que puedas dominar esta habilidad.
 </p>
 </div>
 </div>
-<div id="outline-container-org082ca93" class="outline-2">
-<h2 id="org082ca93">¿Qué es un Prompt en IA?</h2>
-<div class="outline-text-2" id="text-org082ca93">
+<div id="outline-container-org272dc56" class="outline-2">
+<h2 id="org272dc56">¿Qué es un Prompt en IA?</h2>
+<div class="outline-text-2" id="text-org272dc56">
 <p>
 Un <b><b>prompt</b></b> es una instrucción, pregunta o conjunto de indicaciones que se le proporciona a un modelo de inteligencia artificial para que genere una respuesta o realice una tarea específica. Es la forma en que nos comunicamos con la IA y le decimos qué queremos que haga.
 </p>
@@ -17732,52 +17570,52 @@ Por ejemplo, si le pides a ChatGPT que "escriba un poema sobre el océano", esa 
 </p>
 </div>
 </div>
-<div id="outline-container-orgcc18a77" class="outline-2">
-<h2 id="orgcc18a77">¿Cómo Generar un Prompt Efectivo?</h2>
-<div class="outline-text-2" id="text-orgcc18a77">
+<div id="outline-container-orgefcab57" class="outline-2">
+<h2 id="orgefcab57">¿Cómo Generar un Prompt Efectivo?</h2>
+<div class="outline-text-2" id="text-orgefcab57">
 <p>
 Crear un prompt efectivo requiere claridad, precisión y contexto. A continuación, te explicamos los pasos clave para generar un prompt que obtenga los mejores resultados:
 </p>
 </div>
-<div id="outline-container-org3eea11c" class="outline-3">
-<h3 id="org3eea11c">1. Define el Objetivo</h3>
-<div class="outline-text-3" id="text-org3eea11c">
+<div id="outline-container-org50cc001" class="outline-3">
+<h3 id="org50cc001">1. Define el Objetivo</h3>
+<div class="outline-text-3" id="text-org50cc001">
 <ul class="org-ul">
 <li>Antes de escribir el prompt, pregúntate: ¿Qué quiero lograr con la IA? ¿Necesito información, un texto creativo, un análisis de datos o una solución a un problema?</li>
 <li>Ejemplo: Si quieres que la IA te ayude a redactar un correo electrónico, tu objetivo es claro: generar un mensaje profesional y efectivo.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga38691b" class="outline-3">
-<h3 id="orga38691b">2. Sé Específico</h3>
-<div class="outline-text-3" id="text-orga38691b">
+<div id="outline-container-org2700f97" class="outline-3">
+<h3 id="org2700f97">2. Sé Específico</h3>
+<div class="outline-text-3" id="text-org2700f97">
 <ul class="org-ul">
 <li>Cuanto más específico seas, mejor será la respuesta. Incluye detalles como el tono, el estilo, la longitud o el formato que deseas.</li>
 <li>Ejemplo: En lugar de decir "escribe un correo", podrías decir: "Escribe un correo electrónico formal de 150 palabras para solicitar una reunión con un cliente potencial".</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2ab2cf4" class="outline-3">
-<h3 id="org2ab2cf4">3. Proporciona Contexto</h3>
-<div class="outline-text-3" id="text-org2ab2cf4">
+<div id="outline-container-orgded4078" class="outline-3">
+<h3 id="orgded4078">3. Proporciona Contexto</h3>
+<div class="outline-text-3" id="text-orgded4078">
 <ul class="org-ul">
 <li>La IA funciona mejor cuando tiene suficiente información. Si el prompt requiere conocimientos específicos, inclúyelos.</li>
 <li>Ejemplo: Si pides un análisis de mercado, proporciona datos como el sector, la ubicación geográfica y el público objetivo.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb613a51" class="outline-3">
-<h3 id="orgb613a51">4. Usa un Lenguaje Claro y Directo</h3>
-<div class="outline-text-3" id="text-orgb613a51">
+<div id="outline-container-orge7d9ced" class="outline-3">
+<h3 id="orge7d9ced">4. Usa un Lenguaje Claro y Directo</h3>
+<div class="outline-text-3" id="text-orge7d9ced">
 <ul class="org-ul">
 <li>Evita ambigüedades. Usa un lenguaje sencillo y evita frases confusas.</li>
 <li>Ejemplo: En lugar de "haz algo sobre marketing", di: "Genera una estrategia de marketing digital para una tienda de ropa sostenible".</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org91fca45" class="outline-3">
-<h3 id="org91fca45">5. Itera y Ajusta</h3>
-<div class="outline-text-3" id="text-org91fca45">
+<div id="outline-container-orgd5f9998" class="outline-3">
+<h3 id="orgd5f9998">5. Itera y Ajusta</h3>
+<div class="outline-text-3" id="text-orgd5f9998">
 <ul class="org-ul">
 <li>Si la respuesta no es lo que esperabas, ajusta el prompt. Prueba diferentes enfoques hasta obtener el resultado deseado.</li>
 <li>Ejemplo: Si la IA genera un texto demasiado formal, puedes pedirle: "Reescribe el texto con un tono más casual y amigable".</li>
@@ -17785,9 +17623,9 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </div>
 </div>
 </div>
-<div id="outline-container-org2f02a67" class="outline-2">
-<h2 id="org2f02a67">Ventajas de Usar Prompts en IA</h2>
-<div class="outline-text-2" id="text-org2f02a67">
+<div id="outline-container-org6d9e347" class="outline-2">
+<h2 id="org6d9e347">Ventajas de Usar Prompts en IA</h2>
+<div class="outline-text-2" id="text-org6d9e347">
 <ol class="org-ol">
 <li><b><b>Ahorro de Tiempo</b></b>: Los prompts permiten automatizar tareas repetitivas, como redactar textos, generar ideas o analizar datos.</li>
 <li><b><b>Creatividad ilimitada</b></b>: La IA puede generar ideas y soluciones innovadoras que quizás no habías considerado.</li>
@@ -17797,9 +17635,9 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </ol>
 </div>
 </div>
-<div id="outline-container-orgad47c81" class="outline-2">
-<h2 id="orgad47c81">Inconvenientes y Desafíos</h2>
-<div class="outline-text-2" id="text-orgad47c81">
+<div id="outline-container-org4695da2" class="outline-2">
+<h2 id="org4695da2">Inconvenientes y Desafíos</h2>
+<div class="outline-text-2" id="text-org4695da2">
 <ol class="org-ol">
 <li><b><b>Dependencia de la Calidad del Prompt</b></b>: Si el prompt no está bien formulado, la respuesta puede ser irrelevante o de baja calidad.</li>
 <li><b><b>Sesgos en la IA</b></b>: Los modelos de IA pueden reflejar sesgos presentes en los datos con los que fueron entrenados.</li>
@@ -17809,34 +17647,34 @@ Crear un prompt efectivo requiere claridad, precisión y contexto. A continuaci�
 </ol>
 </div>
 </div>
-<div id="outline-container-org93b9e2d" class="outline-2">
-<h2 id="org93b9e2d">Ejemplos Prácticos de Prompts</h2>
-<div class="outline-text-2" id="text-org93b9e2d">
+<div id="outline-container-org48ed603" class="outline-2">
+<h2 id="org48ed603">Ejemplos Prácticos de Prompts</h2>
+<div class="outline-text-2" id="text-org48ed603">
 <p>
 A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas generadas por IA:
 </p>
 </div>
-<div id="outline-container-org0a49f77" class="outline-3">
-<h3 id="org0a49f77">Ejemplo 1: Generación de Contenido</h3>
-<div class="outline-text-3" id="text-org0a49f77">
+<div id="outline-container-org6526674" class="outline-3">
+<h3 id="org6526674">Ejemplo 1: Generación de Contenido</h3>
+<div class="outline-text-3" id="text-org6526674">
 <ul class="org-ul">
 <li><b><b>Prompt</b></b>: "Escribe un blog de 500 palabras sobre los beneficios del ejercicio físico para la salud mental, con un tono motivacional y dirigido a jóvenes adultos."</li>
 <li><b><b>Respuesta de la IA</b></b>: La IA generará un texto estructurado, con introducción, desarrollo y conclusión, destacando cómo el ejercicio reduce el estrés y mejora el estado de ánimo.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org0d37522" class="outline-3">
-<h3 id="org0d37522">Ejemplo 2: Análisis de Datos</h3>
-<div class="outline-text-3" id="text-org0d37522">
+<div id="outline-container-orgb12f22d" class="outline-3">
+<h3 id="orgb12f22d">Ejemplo 2: Análisis de Datos</h3>
+<div class="outline-text-3" id="text-orgb12f22d">
 <ul class="org-ul">
 <li><b><b>Prompt</b></b>: "Analiza los siguientes datos de ventas mensuales y sugiere estrategias para aumentar las ventas en el próximo trimestre: [datos]."</li>
 <li><b><b>Respuesta de la IA</b></b>: La IA identificará patrones, como meses con bajas ventas, y propondrá acciones como promociones o campañas publicitarias.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf8ad2bc" class="outline-3">
-<h3 id="orgf8ad2bc">Ejemplo 3: Creatividad</h3>
-<div class="outline-text-3" id="text-orgf8ad2bc">
+<div id="outline-container-org3aa9cc7" class="outline-3">
+<h3 id="org3aa9cc7">Ejemplo 3: Creatividad</h3>
+<div class="outline-text-3" id="text-org3aa9cc7">
 <ul class="org-ul">
 <li><b><b>Prompt</b></b>: "Inventa una historia corta de ciencia ficción sobre un viajero del tiempo que intenta salvar el futuro."</li>
 <li><b><b>Respuesta de la IA</b></b>: La IA creará una narrativa con personajes, conflicto y resolución, ambientada en un futuro distópico.</li>
@@ -17844,9 +17682,9 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </div>
 </div>
 </div>
-<div id="outline-container-org5e34c81" class="outline-2">
-<h2 id="org5e34c81">Consejos Avanzados para Mejorar tus Prompts</h2>
-<div class="outline-text-2" id="text-org5e34c81">
+<div id="outline-container-org71904fa" class="outline-2">
+<h2 id="org71904fa">Consejos Avanzados para Mejorar tus Prompts</h2>
+<div class="outline-text-2" id="text-org71904fa">
 <ol class="org-ol">
 <li><b><b>Usa Ejemplos</b></b>: Proporciona ejemplos de lo que buscas. Por ejemplo: "Escribe un poema como este: [ejemplo]."</li>
 <li><b><b>Divide Tareas Complejas</b></b>: Si el prompt es muy amplio, divídelo en partes. Por ejemplo: "Primero, describe el problema. Luego, sugiere soluciones."</li>
@@ -17855,9 +17693,9 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </ol>
 </div>
 </div>
-<div id="outline-container-orgd86e2c1" class="outline-2">
-<h2 id="orgd86e2c1">Herramientas Populares para Generar Prompts</h2>
-<div class="outline-text-2" id="text-orgd86e2c1">
+<div id="outline-container-org28aab8f" class="outline-2">
+<h2 id="org28aab8f">Herramientas Populares para Generar Prompts</h2>
+<div class="outline-text-2" id="text-org28aab8f">
 <ol class="org-ol">
 <li><b><b>ChatGPT</b></b>: Ideal para textos, ideas y conversaciones.</li>
 <li><b><b>MidJourney</b></b>: Perfecto para generar imágenes a partir de prompts visuales.</li>
@@ -17866,9 +17704,9 @@ A continuación, te presentamos ejemplos gráficos de prompts y sus respuestas g
 </ol>
 </div>
 </div>
-<div id="outline-container-org9632dc8" class="outline-2">
-<h2 id="org9632dc8">Conclusión</h2>
-<div class="outline-text-2" id="text-org9632dc8">
+<div id="outline-container-orga56be0c" class="outline-2">
+<h2 id="orga56be0c">Conclusión</h2>
+<div class="outline-text-2" id="text-orga56be0c">
 <p>
 Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo las herramientas de IA. Con un enfoque claro, específico y contextualizado, puedes obtener respuestas de alta calidad que te ayuden a ahorrar tiempo, potenciar tu creatividad y resolver problemas complejos. Sin embargo, es importante recordar que la IA es una herramienta, no un reemplazo para el pensamiento crítico y la creatividad humana.
 </p>
@@ -17878,14 +17716,14 @@ Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo 
 </p>
 </div>
 </div>
-<div id="outline-container-org15ba2ed" class="outline-2">
-<h2 id="org15ba2ed">Gráficos Sugeridos</h2>
-<div class="outline-text-2" id="text-org15ba2ed">
+<div id="outline-container-orgce022cb" class="outline-2">
+<h2 id="orgce022cb">Gráficos Sugeridos</h2>
+<div class="outline-text-2" id="text-orgce022cb">
 <ol class="org-ol">
 <li>Diagrama de flujo: "Pasos para crear un prompt efectivo".</li>
 </ol>
 
-<figure id="org537d8fb">
+<figure id="org95f7e55">
 <img src="images/diagrama_flujo_prompt.png" alt="diagrama_flujo_prompt.png">
 
 </figure>
@@ -17896,7 +17734,7 @@ Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo 
 </ol>
 
 
-<figure id="org5add3d3">
+<figure id="org0563f25">
 <img src="images/comparacion_prompt_ditaa.png" alt="comparacion_prompt_ditaa.png">
 
 </figure>
@@ -18015,7 +17853,169 @@ Generar un prompt efectivo es una habilidad esencial para aprovechar al máximo 
   <category><![CDATA[tutoriales]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-08-c%C3%B3mo-generar-un-prompt-en-ia:-gu%C3%ADa-detallada,-ventajas-e-inconvenientes.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-08-c%C3%B3mo-generar-un-prompt-en-ia:-gu%C3%ADa-detallada,-ventajas-e-inconvenientes.html</guid>
-  <pubDate>Sat, 08 Mar 2025 08:19:00 +0100</pubDate>
+  <pubDate>Sat, 08 Mar 2025 00:00:00 +0100</pubDate>
+</item>
+<item>
+  <title><![CDATA[Bienvenida a Mi Blog - Grafico]]></title>
+  <description><![CDATA[
+<div id="outline-container-welcome" class="outline-2">
+<h2 id="welcome">Bienvenida a Mi Blog con Emacs y Esteroides</h2>
+<div class="outline-text-2" id="text-welcome">
+<p>
+Bienvenidos a mi blog estático generado con Org Mode y publicado en GitHub Pages.
+Este es un ejemplo de cómo integrar gráficos en nuestros posts.
+</p>
+</div>
+<div id="outline-container-welcome-graphic" class="outline-3">
+<h3 id="welcome-graphic">Creación del gráfico de bienvenida</h3>
+<div class="outline-text-3" id="text-welcome-graphic">
+<p>
+A continuación, crearemos un gráfico usando Org Babel con Gnuplot:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-gnuplot"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n general</span>
+<span style="color: #2f86d2;">set</span> terminal png size 800,500 enhanced font <span style="color: #a44185;">"Helvetica,14"</span>
+<span style="color: #2f86d2;">set</span> output <span style="color: #a44185;">"~/myblog/images/welcome-graph.png"</span>
+<span style="color: #2f86d2;">set</span> <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Bienvenida a Mi Blog con Emacs y Org Static"</span> font <span style="color: #a44185;">"Helvetica,18"</span>
+<span style="color: #2f86d2;">set</span> style fill solid 0.5
+<span style="color: #2f86d2;">set</span> style data histogram
+<span style="color: #2f86d2;">set</span> style histogram cluster gap 1
+<span style="color: #2f86d2;">set</span> boxwidth 0.9
+<span style="color: #2f86d2;">set</span> grid ytics
+<span style="color: #2f86d2;">set</span> xtics rotate by -45
+<span style="color: #2f86d2;">set</span> xlabel <span style="color: #a44185;">"Tecnolog&#237;as"</span> font <span style="color: #a44185;">"Helvetica,14"</span>
+<span style="color: #2f86d2;">set</span> ylabel <span style="color: #a44185;">"Nivel de Potencia"</span> font <span style="color: #a44185;">"Helvetica,14"</span>
+<span style="color: #2f86d2;">set</span> yrange [<span style="color: #2f86d2;">0:10</span>]
+<span style="color: #2f86d2;">set</span> palette <span style="color: #dc3eb7;">defined</span> (0 <span style="color: #a44185;">"skyblue"</span>, 1 <span style="color: #a44185;">"royalblue"</span>, 2 <span style="color: #a44185;">"dark-blue"</span>)
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Datos para el gr&#225;fico</span>
+$DATA &lt;&lt; EOD
+Tecnolog&#237;a Potencia Flexibilidad Productividad
+<span style="color: #a44185;">"Emacs"</span>     9.2     9.5          8.7
+<span style="color: #a44185;">"Org Mode"</span>  9.0     9.8          9.2
+<span style="color: #a44185;">"GitHub"</span>    8.5     8.0          8.8
+<span style="color: #a44185;">"Markdown"</span>  7.0     6.5          7.5
+<span style="color: #a44185;">"HTML"</span>      8.0     7.2          7.0
+EOD
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generaci&#243;n del gr&#225;fico</span>
+<span style="color: #219fd5; font-style: italic;">plot</span> $DATA <span style="color: #dc3eb7;">using</span> 2:xtic(1) <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Potencia"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#3498db"</span>, \
+     $DATA <span style="color: #dc3eb7;">using</span> 3 <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Flexibilidad"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#2980b9"</span>, \
+     $DATA <span style="color: #dc3eb7;">using</span> 4 <span style="color: #dc3eb7;">title</span> <span style="color: #a44185;">"Productividad"</span> <span style="color: #dc3eb7;">linecolor</span> rgb <span style="color: #a44185;">"#1f618d"</span>
+</pre>
+</div>
+
+
+<figure id="orgdfaff2a">
+<img src="images/welcome-graph.png" alt="welcome-graph.png">
+
+</figure>
+
+<img src='/images/welcome-graph.png' alt='Welcome to my Blog' />
+
+
+<img src="/images/welcome-graph.png" alt="Gráfico de bienvenida al blog" width="800px" />
+</div>
+</div>
+<div id="outline-container-analysis" class="outline-3">
+<h3 id="analysis">Análisis del gráfico</h3>
+<div class="outline-text-3" id="text-analysis">
+<p>
+El gráfico anterior muestra una comparativa entre diferentes tecnologías utilizadas para blogging, destacando tres dimensiones clave:
+</p>
+
+<ol class="org-ol">
+<li><b>Potencia</b>: Capacidad para realizar tareas complejas</li>
+<li><b>Flexibilidad</b>: Adaptabilidad a diferentes necesidades</li>
+<li><b>Productividad</b>: Eficiencia en el flujo de trabajo</li>
+</ol>
+
+<p>
+Como podemos observar, Emacs y Org Mode destacan en todas las dimensiones, lo que los convierte en herramientas ideales para la creación y gestión de blogs estáticos.
+</p>
+</div>
+</div>
+<div id="outline-container-image-config" class="outline-3">
+<h3 id="image-config">Configuración para mostrar imágenes correctamente</h3>
+<div class="outline-text-3" id="text-image-config">
+<p>
+Para asegurar que las imágenes se muestran correctamente en nuestro blog:
+</p>
+
+<ol class="org-ol">
+<li>Las imágenes deben estar en el directorio <code>~/myblog/images/</code></li>
+<li>Al referenciarlas en el HTML generado, usamos la ruta <code>/images/nombre-imagen.png</code></li>
+<li>Nuestra configuración se encarga de copiarlas al directorio público durante la exportación</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Ejemplo de la configuraci&#243;n para im&#225;genes</span>
+(<span style="color: #a44185;">"blog-images"</span>
+ <span style="color: #dc3eb7;">:base-directory</span> <span style="color: #a44185;">"~/myblog/images/"</span>
+ <span style="color: #dc3eb7;">:base-extension</span> <span style="color: #a44185;">"png</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">jpg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">jpeg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">gif</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">svg</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">webp"</span>
+ <span style="color: #dc3eb7;">:publishing-directory</span> <span style="color: #a44185;">"~/myblog/public/images/"</span>
+ <span style="color: #dc3eb7;">:publishing-function</span> org-publish-attachment
+ <span style="color: #dc3eb7;">:recursive</span> t)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-next-steps" class="outline-3">
+<h3 id="next-steps">Próximos pasos</h3>
+<div class="outline-text-3" id="text-next-steps">
+<p>
+En futuros posts exploraremos:
+</p>
+
+<ul class="org-ul">
+<li>Creación de visualizaciones avanzadas con Org Babel</li>
+<li>Integración de gráficos interactivos con JavaScript</li>
+<li>Optimización de imágenes para rendimiento web</li>
+<li>Consejos para mejorar la experiencia visual del blog</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-technical-notes" class="outline-2">
+<h2 id="technical-notes">Notas técnicas</h2>
+<div class="outline-text-2" id="text-technical-notes">
+<p>
+Para generar este gráfico he utilizado Gnuplot a través de Org Babel. Si quieres reproducirlo, necesitas:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #8195b0; font-style: italic;"># Requisitos:</span>
+<span style="color: #8195b0; font-style: italic;"># 1. Gnuplot instalado en tu sistema</span>
+<span style="color: #8195b0; font-style: italic;"># 2. Configuraci&#243;n de Org Babel para Gnuplot</span>
+
+(require 'ob-gnuplot)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((gnuplot . t)))
+</pre>
+</div>
+
+<p>
+Para publicar este post, simplemente guárdalo en tu directorio <code>~/myblog/posts/</code> con un nombre como <code>bienvenida-con-grafico.org</code> y ejecuta <code>org-static-blog-publish-to-github</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-footer" class="outline-2">
+<h2 id="footer">Pie de página</h2>
+<div class="outline-text-2" id="text-footer">
+<div style="border-top: 1px solid #ddd; margin-top: 30px; padding-top: 10px; font-size: 0.9em; color: #777;">
+  <p>Este post fue creado con Emacs 28 y Org Mode. El gráfico fue generado con Gnuplot.</p>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bienvenida.html">bienvenida</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gráfico.html">gráfico</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-inicio.html">inicio</a> </div>]]></description>
+  <category><![CDATA[bienvenida]]></category>
+  <category><![CDATA[gráfico]]></category>
+  <category><![CDATA[inicio]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-08-bienvenida-a-mi-blog---grafico.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-08-bienvenida-a-mi-blog---grafico.html</guid>
+  <pubDate>Sat, 08 Mar 2025 00:00:00 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Herramientas de IA Generativa Mejor Valoradas en 2025]]></title>
@@ -18509,16 +18509,16 @@ La Ley de Parkinson es una herramienta poderosa para entender cómo gestionamos 
 <item>
   <title><![CDATA[Comparativa de Modelos de IA Generativa en 2025 (Grok)]]></title>
   <description><![CDATA[
-<div id="outline-container-orgfc83277" class="outline-2">
-<h2 id="orgfc83277"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org04e2a80" class="outline-2">
+<h2 id="org04e2a80"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Este documento presenta una tabla vertical detallada en Org-mode que compara modelos de IA generativa: DeepSeek, Grok, OpenAI (ChatGPT), GitHub Copilot y alternativas gratuitas (Claude, Gemini). Se valoran aspectos clave de 1 a 10, con justificaciones basadas en su desempeño, accesibilidad y tendencias al 2 de marzo de 2025.
 </p>
 </div>
 </div>
-<div id="outline-container-orgec7c428" class="outline-2">
-<h2 id="orgec7c428"><span class="section-number-2">2.</span> Tabla Comparativa Vertical de Modelos de IA Generativa</h2>
+<div id="outline-container-orga75467f" class="outline-2">
+<h2 id="orga75467f"><span class="section-number-2">2.</span> Tabla Comparativa Vertical de Modelos de IA Generativa</h2>
 <div class="outline-text-2" id="text-2">
 <table>
 
@@ -18763,8 +18763,8 @@ Este documento presenta una tabla vertical detallada en Org-mode que compara mod
 </table>
 </div>
 </div>
-<div id="outline-container-org3ac6a69" class="outline-2">
-<h2 id="org3ac6a69"><span class="section-number-2">3.</span> Notas sobre la Valoración</h2>
+<div id="outline-container-org2f3e21f" class="outline-2">
+<h2 id="org2f3e21f"><span class="section-number-2">3.</span> Notas sobre la Valoración</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li><b><b>DeepSeek</b></b>: Destaca en accesibilidad (10) y eficiencia (9), pero creativity (6) y privacidad (6) son débiles por su enfoque técnico y origen.</li>
@@ -18776,8 +18776,8 @@ Este documento presenta una tabla vertical detallada en Org-mode que compara mod
 </ul>
 </div>
 </div>
-<div id="outline-container-org543075d" class="outline-2">
-<h2 id="org543075d"><span class="section-number-2">4.</span> Metodología</h2>
+<div id="outline-container-org272b166" class="outline-2">
+<h2 id="org272b166"><span class="section-number-2">4.</span> Metodología</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li><b><b>Escala</b></b>: 1 (muy deficiente) a 10 (excelente).</li>
@@ -18786,8 +18786,8 @@ Este documento presenta una tabla vertical detallada en Org-mode que compara mod
 </ul>
 </div>
 </div>
-<div id="outline-container-org465ca3f" class="outline-2">
-<h2 id="org465ca3f"><span class="section-number-2">5.</span> Conclusión</h2>
+<div id="outline-container-org039e518" class="outline-2">
+<h2 id="org039e518"><span class="section-number-2">5.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 OpenAI lidera con 79/100 por su versatilidad, seguido de cerca por DeepSeek y Grok (78/100) por su eficiencia técnica y accesibilidad. Copilot (72/100) es ideal para codificación, mientras Claude (71/100) y Gemini (74/100) ofrecen opciones gratuitas sólidas pero limitadas en ciertas áreas.
@@ -18800,25 +18800,25 @@ OpenAI lidera con 79/100 por su versatilidad, seguido de cerca por DeepSeek y Gr
   <category><![CDATA[comparativa]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-02-comparativa-de-modelos-de-ia-generativa-en-2025-(grok).html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-02-comparativa-de-modelos-de-ia-generativa-en-2025-(grok).html</guid>
-  <pubDate>Sun, 02 Mar 2025 11:15:00 +0100</pubDate>
+  <pubDate>Sun, 02 Mar 2025 00:00:00 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Análisis IA Generativa por DeepSeek]]></title>
   <description><![CDATA[
-<div id="outline-container-org4c51828" class="outline-2">
-<h2 id="org4c51828"><span class="section-number-2">1.</span> INTRODUCCIÓN</h2>
+<div id="outline-container-org64e9000" class="outline-2">
+<h2 id="org64e9000"><span class="section-number-2">1.</span> INTRODUCCIÓN</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgbed306a" class="outline-3">
-<h3 id="orgbed306a"><span class="section-number-3">1.1.</span> Objetivo</h3>
+<div id="outline-container-orgaf7ec8a" class="outline-3">
+<h3 id="orgaf7ec8a"><span class="section-number-3">1.1.</span> Objetivo</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gemini Ultra (Google) y Grok-3 (xAI), evaluando sus capacidades técnicas, rendimiento práctico y viabilidad comercial.  
 </p>
 </div>
 </div>
-<div id="outline-container-orgdf2c44a" class="outline-3">
-<h3 id="orgdf2c44a"><span class="section-number-3">1.2.</span> Metodología</h3>
+<div id="outline-container-org7e4dfac" class="outline-3">
+<h3 id="org7e4dfac"><span class="section-number-3">1.2.</span> Metodología</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
 <li>Revisión de papers técnicos (2023-2024).</li>
@@ -18829,12 +18829,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-orgffc814c" class="outline-2">
-<h2 id="orgffc814c"><span class="section-number-2">2.</span> ESPECIFICACIONES TÉCNICAS</h2>
+<div id="outline-container-org09b11ef" class="outline-2">
+<h2 id="org09b11ef"><span class="section-number-2">2.</span> ESPECIFICACIONES TÉCNICAS</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org63012ea" class="outline-3">
-<h3 id="org63012ea"><span class="section-number-3">2.1.</span> Parámetros Clave por Modelo</h3>
+<div id="outline-container-org057f5f4" class="outline-3">
+<h3 id="org057f5f4"><span class="section-number-3">2.1.</span> Parámetros Clave por Modelo</h3>
 <div class="outline-text-3" id="text-2-1">
 <table>
 
@@ -18911,8 +18911,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org8325080" class="outline-2">
-<h2 id="org8325080"><span class="section-number-2">3.</span> COMPARATIVA DETALLADA (1-10)</h2>
+<div id="outline-container-org33d0c4a" class="outline-2">
+<h2 id="org33d0c4a"><span class="section-number-2">3.</span> COMPARATIVA DETALLADA (1-10)</h2>
 <div class="outline-text-2" id="text-3">
 <table>
 
@@ -19069,16 +19069,16 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </table>
 </div>
 </div>
-<div id="outline-container-orgbb6bf31" class="outline-2">
-<h2 id="orgbb6bf31"><span class="section-number-2">4.</span> ANÁLISIS POR MODELO</h2>
+<div id="outline-container-orgd33cbed" class="outline-2">
+<h2 id="orgd33cbed"><span class="section-number-2">4.</span> ANÁLISIS POR MODELO</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org0f1a70e" class="outline-3">
-<h3 id="org0f1a70e"><span class="section-number-3">4.1.</span> GPT-4 (OpenAI)</h3>
+<div id="outline-container-orgc048b95" class="outline-3">
+<h3 id="orgc048b95"><span class="section-number-3">4.1.</span> GPT-4 (OpenAI)</h3>
 <div class="outline-text-3" id="text-4-1">
 </div>
-<div id="outline-container-org29fc73d" class="outline-4">
-<h4 id="org29fc73d"><span class="section-number-4">4.1.1.</span> Ventajas</h4>
+<div id="outline-container-orgda59370" class="outline-4">
+<h4 id="orgda59370"><span class="section-number-4">4.1.1.</span> Ventajas</h4>
 <div class="outline-text-4" id="text-4-1-1">
 <ul class="org-ul">
 <li>Soporta plugins para matemáticas (Wolfram), búsquedas (Bing) y código (Code Interpreter).</li>
@@ -19087,8 +19087,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc78234b" class="outline-4">
-<h4 id="orgc78234b"><span class="section-number-4">4.1.2.</span> Desventajas</h4>
+<div id="outline-container-org36fbdad" class="outline-4">
+<h4 id="org36fbdad"><span class="section-number-4">4.1.2.</span> Desventajas</h4>
 <div class="outline-text-4" id="text-4-1-2">
 <ul class="org-ul">
 <li>Coste elevado para alto volumen (~$6 por millón tokens en entrada).</li>
@@ -19097,12 +19097,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org042f4b6" class="outline-3">
-<h3 id="org042f4b6"><span class="section-number-3">4.2.</span> DeepSeek-MoE</h3>
+<div id="outline-container-org04f8b47" class="outline-3">
+<h3 id="org04f8b47"><span class="section-number-3">4.2.</span> DeepSeek-MoE</h3>
 <div class="outline-text-3" id="text-4-2">
 </div>
-<div id="outline-container-orga4f4b5e" class="outline-4">
-<h4 id="orga4f4b5e"><span class="section-number-4">4.2.1.</span> Casos de Uso Ideales</h4>
+<div id="outline-container-org749b061" class="outline-4">
+<h4 id="org749b061"><span class="section-number-4">4.2.1.</span> Casos de Uso Ideales</h4>
 <div class="outline-text-4" id="text-4-2-1">
 <ul class="org-ul">
 <li>Generación de código Python/JavaScript con bajo consumo de recursos.</li>
@@ -19110,8 +19110,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbf5e254" class="outline-4">
-<h4 id="orgbf5e254"><span class="section-number-4">4.2.2.</span> Limitaciones</h4>
+<div id="outline-container-org82a1061" class="outline-4">
+<h4 id="org82a1061"><span class="section-number-4">4.2.2.</span> Limitaciones</h4>
 <div class="outline-text-4" id="text-4-2-2">
 <ul class="org-ul">
 <li>Rendimiento pobre en español (precisión ~68% vs 92% en inglés).</li>
@@ -19120,12 +19120,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org58ff93e" class="outline-3">
-<h3 id="org58ff93e"><span class="section-number-3">4.3.</span> Gemini Ultra</h3>
+<div id="outline-container-orgb9e3a01" class="outline-3">
+<h3 id="orgb9e3a01"><span class="section-number-3">4.3.</span> Gemini Ultra</h3>
 <div class="outline-text-3" id="text-4-3">
 </div>
-<div id="outline-container-org84919b0" class="outline-4">
-<h4 id="org84919b0"><span class="section-number-4">4.3.1.</span> Fortalezas Multimodales</h4>
+<div id="outline-container-org625e3b3" class="outline-4">
+<h4 id="org625e3b3"><span class="section-number-4">4.3.1.</span> Fortalezas Multimodales</h4>
 <div class="outline-text-4" id="text-4-3-1">
 <ul class="org-ul">
 <li>Análisis de vídeo (extracción de frames + transcripción).</li>
@@ -19134,8 +19134,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-orge0320fc" class="outline-4">
-<h4 id="orge0320fc"><span class="section-number-4">4.3.2.</span> Debilidades</h4>
+<div id="outline-container-org5416ae5" class="outline-4">
+<h4 id="org5416ae5"><span class="section-number-4">4.3.2.</span> Debilidades</h4>
 <div class="outline-text-4" id="text-4-3-2">
 <ul class="org-ul">
 <li>Inconsistencias en razonamiento lógico (ej: silogismos).</li>
@@ -19144,12 +19144,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org0a8c02c" class="outline-3">
-<h3 id="org0a8c02c"><span class="section-number-3">4.4.</span> Grok-3</h3>
+<div id="outline-container-org1894e93" class="outline-3">
+<h3 id="org1894e93"><span class="section-number-3">4.4.</span> Grok-3</h3>
 <div class="outline-text-3" id="text-4-4">
 </div>
-<div id="outline-container-orgd115f15" class="outline-4">
-<h4 id="orgd115f15"><span class="section-number-4">4.4.1.</span> Diferenciadores</h4>
+<div id="outline-container-org87fbd83" class="outline-4">
+<h4 id="org87fbd83"><span class="section-number-4">4.4.1.</span> Diferenciadores</h4>
 <div class="outline-text-4" id="text-4-4-1">
 <ul class="org-ul">
 <li>Entrenado con datos de 𝕏 (Twitter) hasta Q1 2024.</li>
@@ -19157,8 +19157,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-org2ce330c" class="outline-4">
-<h4 id="org2ce330c"><span class="section-number-4">4.4.2.</span> Riesgos</h4>
+<div id="outline-container-orge1529d3" class="outline-4">
+<h4 id="orge1529d3"><span class="section-number-4">4.4.2.</span> Riesgos</h4>
 <div class="outline-text-4" id="text-4-4-2">
 <ul class="org-ul">
 <li>Alucinaciones frecuentes en temas técnicos (ej: código).</li>
@@ -19168,12 +19168,12 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-org9f5c516" class="outline-2">
-<h2 id="org9f5c516"><span class="section-number-2">5.</span> TAREAS PENDIENTES</h2>
+<div id="outline-container-orgf2216e2" class="outline-2">
+<h2 id="orgf2216e2"><span class="section-number-2">5.</span> TAREAS PENDIENTES</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org0407846" class="outline-3">
-<h3 id="org0407846"><span class="section-number-3">5.1.</span> Prioridad Alta</h3>
+<div id="outline-container-org64031ee" class="outline-3">
+<h3 id="org64031ee"><span class="section-number-3">5.1.</span> Prioridad Alta</h3>
 <div class="outline-text-3" id="text-5-1">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> Probar Gemini Ultra en análisis de vídeos educativos (deadline: 2024-05-25).</li>
@@ -19182,8 +19182,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </ul>
 </div>
 </div>
-<div id="outline-container-org8a4f285" class="outline-3">
-<h3 id="org8a4f285"><span class="section-number-3">5.2.</span> Prioridad Media</h3>
+<div id="outline-container-orge7b104e" class="outline-3">
+<h3 id="orge7b104e"><span class="section-number-3">5.2.</span> Prioridad Media</h3>
 <div class="outline-text-3" id="text-5-2">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> Crear script Emacs para automatizar tablas comparativas (elisp).</li>
@@ -19192,8 +19192,8 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
 </div>
 </div>
 </div>
-<div id="outline-container-orgb0d9ce7" class="outline-2">
-<h2 id="orgb0d9ce7"><span class="section-number-2">6.</span> CONCLUSIONES</h2>
+<div id="outline-container-org5a4e197" class="outline-2">
+<h2 id="org5a4e197"><span class="section-number-2">6.</span> CONCLUSIONES</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li><b><b>Mejor generalista</b></b>: GPT-4 (9.1/10) para equilibrio entre calidad y herramientas.</li>
@@ -19209,7 +19209,7 @@ Analizar en profundidad los modelos GPT-4 (OpenAI), DeepSeek-MoE (DeepSeek), Gem
   <category><![CDATA[modelo]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-02-an%C3%A1lisis-ia-generativa-pr-deepseek.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-02-an%C3%A1lisis-ia-generativa-pr-deepseek.html</guid>
-  <pubDate>Sun, 02 Mar 2025 08:48:00 +0100</pubDate>
+  <pubDate>Sun, 02 Mar 2025 00:00:00 +0100</pubDate>
 </item>
 <item>
   <title><![CDATA[Emacs: Historia, Evolución y Futuro]]></title>

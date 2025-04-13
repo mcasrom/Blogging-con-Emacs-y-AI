@@ -4,20 +4,20 @@
 <title><![CDATA[Example.com - grok]]></title>
 <description><![CDATA[Example.com - grok]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-grok.html</link>
-<lastBuildDate>Sun, 13 Apr 2025 08:28:39 +0200</lastBuildDate>
+<lastBuildDate>Sun, 13 Apr 2025 08:51:16 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Comparativa de Modelos de IA Generativa en 2025 (Grok)]]></title>
   <description><![CDATA[
-<div id="outline-container-orgfc83277" class="outline-2">
-<h2 id="orgfc83277"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org04e2a80" class="outline-2">
+<h2 id="org04e2a80"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Este documento presenta una tabla vertical detallada en Org-mode que compara modelos de IA generativa: DeepSeek, Grok, OpenAI (ChatGPT), GitHub Copilot y alternativas gratuitas (Claude, Gemini). Se valoran aspectos clave de 1 a 10, con justificaciones basadas en su desempeño, accesibilidad y tendencias al 2 de marzo de 2025.
 </p>
 </div>
 </div>
-<div id="outline-container-orgec7c428" class="outline-2">
-<h2 id="orgec7c428"><span class="section-number-2">2.</span> Tabla Comparativa Vertical de Modelos de IA Generativa</h2>
+<div id="outline-container-orga75467f" class="outline-2">
+<h2 id="orga75467f"><span class="section-number-2">2.</span> Tabla Comparativa Vertical de Modelos de IA Generativa</h2>
 <div class="outline-text-2" id="text-2">
 <table>
 
@@ -262,8 +262,8 @@ Este documento presenta una tabla vertical detallada en Org-mode que compara mod
 </table>
 </div>
 </div>
-<div id="outline-container-org3ac6a69" class="outline-2">
-<h2 id="org3ac6a69"><span class="section-number-2">3.</span> Notas sobre la Valoración</h2>
+<div id="outline-container-org2f3e21f" class="outline-2">
+<h2 id="org2f3e21f"><span class="section-number-2">3.</span> Notas sobre la Valoración</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li><b><b>DeepSeek</b></b>: Destaca en accesibilidad (10) y eficiencia (9), pero creativity (6) y privacidad (6) son débiles por su enfoque técnico y origen.</li>
@@ -275,8 +275,8 @@ Este documento presenta una tabla vertical detallada en Org-mode que compara mod
 </ul>
 </div>
 </div>
-<div id="outline-container-org543075d" class="outline-2">
-<h2 id="org543075d"><span class="section-number-2">4.</span> Metodología</h2>
+<div id="outline-container-org272b166" class="outline-2">
+<h2 id="org272b166"><span class="section-number-2">4.</span> Metodología</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li><b><b>Escala</b></b>: 1 (muy deficiente) a 10 (excelente).</li>
@@ -285,8 +285,8 @@ Este documento presenta una tabla vertical detallada en Org-mode que compara mod
 </ul>
 </div>
 </div>
-<div id="outline-container-org465ca3f" class="outline-2">
-<h2 id="org465ca3f"><span class="section-number-2">5.</span> Conclusión</h2>
+<div id="outline-container-org039e518" class="outline-2">
+<h2 id="org039e518"><span class="section-number-2">5.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 OpenAI lidera con 79/100 por su versatilidad, seguido de cerca por DeepSeek y Grok (78/100) por su eficiencia técnica y accesibilidad. Copilot (72/100) es ideal para codificación, mientras Claude (71/100) y Gemini (74/100) ofrecen opciones gratuitas sólidas pero limitadas en ciertas áreas.
@@ -299,7 +299,7 @@ OpenAI lidera con 79/100 por su versatilidad, seguido de cerca por DeepSeek y Gr
   <category><![CDATA[comparativa]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-02-comparativa-de-modelos-de-ia-generativa-en-2025-(grok).html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-02-comparativa-de-modelos-de-ia-generativa-en-2025-(grok).html</guid>
-  <pubDate>Sun, 02 Mar 2025 11:15:00 +0100</pubDate>
+  <pubDate>Sun, 02 Mar 2025 00:00:00 +0100</pubDate>
 </item>
 </channel>
 </rss>

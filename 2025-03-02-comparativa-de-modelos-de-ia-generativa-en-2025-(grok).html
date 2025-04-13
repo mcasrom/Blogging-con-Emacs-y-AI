@@ -29,36 +29,25 @@
          .blog-header {
            display: flex;
            align-items: center;
-           justify-content: flex-start;
-           text-align: left;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
            padding: 15px 0;
            border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
          }
          .blog-header img {
-           max-width: 70px;
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
            height: auto;
-           margin-right: 20px;
+           margin-bottom: 10px; /* Espacio debajo del logo */
            border-radius: 5px; /* Suaviza el logo */
          }
          .blog-header-content {
            display: flex;
            flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
          }
          .blog-title {
-           font-size: 2em;
-           margin: 0;
-         }
-         .blog-subtitle {
-           font-size: 1.1em;
-           color: #666;
-           margin-top: 5px;
-         }
-         .blog-email {
-           font-size: 0.9em;
-           color: #777;
-           margin-top: 8px;
-         }
-         .blog-email a {
+
            color: #2980b9;
            text-decoration: none;
          }
@@ -91,7 +80,7 @@
 	 }
          .postamble {
            text-align: center;
-           font-size: 0.85em;
+           font-size: 0.8em; .85
            color: #666;
          }
 	 /* Estilos para imágenes agregados aquí */
@@ -102,8 +91,44 @@
            margin: 10px auto;
            border-radius: 5px;
          }
-       </style>
-       
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
        <div class='blog-header'>
          <img src='logo.png' alt='Logo'>
          <div class='blog-header-content'>
@@ -111,33 +136,35 @@
            <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
            <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
          </div>
-       </div>
-       
+       </div>       
        <nav>
          <a href='index.html'>Inicio</a> |
-         <a href='tags.html'>Tags</a> |
+         <a href='viajes.html'>Viajes</a> |
          <a href='archive.html'>Archivo</a> |
          <a href='contacto.html'>Contacto</a> |
          <a href='nosotros.html'>Nosotros</a> |
-         <a href='proyectos.html'>Proyectos</a>
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
          <a href='tag-tutoriales.html'>Tutoriales</a> |
-         <a href='tag-opiniones.html'>Opiniones</a>
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
        </nav>
-        <hr></head>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
 <body>
 <div id="preamble" class="status"></div>
 <div id="content">
 <div class="post-date">02/03/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-02-comparativa-de-modelos-de-ia-generativa-en-2025-(grok).html">Comparativa de Modelos de IA Generativa en 2025 (Grok)</a></h1>
-<div id="outline-container-orgfc83277" class="outline-2">
-<h2 id="orgfc83277"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org04e2a80" class="outline-2">
+<h2 id="org04e2a80"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Este documento presenta una tabla vertical detallada en Org-mode que compara modelos de IA generativa: DeepSeek, Grok, OpenAI (ChatGPT), GitHub Copilot y alternativas gratuitas (Claude, Gemini). Se valoran aspectos clave de 1 a 10, con justificaciones basadas en su desempeño, accesibilidad y tendencias al 2 de marzo de 2025.
 </p>
 </div>
 </div>
-<div id="outline-container-orgec7c428" class="outline-2">
-<h2 id="orgec7c428"><span class="section-number-2">2.</span> Tabla Comparativa Vertical de Modelos de IA Generativa</h2>
+<div id="outline-container-orga75467f" class="outline-2">
+<h2 id="orga75467f"><span class="section-number-2">2.</span> Tabla Comparativa Vertical de Modelos de IA Generativa</h2>
 <div class="outline-text-2" id="text-2">
 <table>
 
@@ -382,8 +409,8 @@ Este documento presenta una tabla vertical detallada en Org-mode que compara mod
 </table>
 </div>
 </div>
-<div id="outline-container-org3ac6a69" class="outline-2">
-<h2 id="org3ac6a69"><span class="section-number-2">3.</span> Notas sobre la Valoración</h2>
+<div id="outline-container-org2f3e21f" class="outline-2">
+<h2 id="org2f3e21f"><span class="section-number-2">3.</span> Notas sobre la Valoración</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li><b><b>DeepSeek</b></b>: Destaca en accesibilidad (10) y eficiencia (9), pero creativity (6) y privacidad (6) son débiles por su enfoque técnico y origen.</li>
@@ -395,8 +422,8 @@ Este documento presenta una tabla vertical detallada en Org-mode que compara mod
 </ul>
 </div>
 </div>
-<div id="outline-container-org543075d" class="outline-2">
-<h2 id="org543075d"><span class="section-number-2">4.</span> Metodología</h2>
+<div id="outline-container-org272b166" class="outline-2">
+<h2 id="org272b166"><span class="section-number-2">4.</span> Metodología</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li><b><b>Escala</b></b>: 1 (muy deficiente) a 10 (excelente).</li>
@@ -405,8 +432,8 @@ Este documento presenta una tabla vertical detallada en Org-mode que compara mod
 </ul>
 </div>
 </div>
-<div id="outline-container-org465ca3f" class="outline-2">
-<h2 id="org465ca3f"><span class="section-number-2">5.</span> Conclusión</h2>
+<div id="outline-container-org039e518" class="outline-2">
+<h2 id="org039e518"><span class="section-number-2">5.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 OpenAI lidera con 79/100 por su versatilidad, seguido de cerca por DeepSeek y Grok (78/100) por su eficiencia técnica y accesibilidad. Copilot (72/100) es ideal para codificación, mientras Claude (71/100) y Gemini (74/100) ofrecen opciones gratuitas sólidas pero limitadas en ciertas áreas.
@@ -426,6 +453,7 @@ OpenAI lidera con 79/100 por su versatilidad, seguido de cerca por DeepSeek y Gr
            </a>
          </p>
          <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
          <!-- hitwebcounter Code START -->
          <a href="https://www.hitwebcounter.com" target="_blank">
            <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
