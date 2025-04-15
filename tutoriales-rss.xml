@@ -4,7 +4,1162 @@
 <title><![CDATA[Example.com - tutoriales]]></title>
 <description><![CDATA[Example.com - tutoriales]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-tutoriales.html</link>
-<lastBuildDate>Tue, 15 Apr 2025 02:31:41 +0200</lastBuildDate>
+<lastBuildDate>Tue, 15 Apr 2025 08:58:10 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Detectando actividad maliciosa en nuestro sistema Linux: ¿Somos parte de una botnet?]]></title>
+  <description><![CDATA[
+<div id="outline-container-orgcf593ec" class="outline-2">
+<h2 id="orgcf593ec">Introducción</h2>
+<div class="outline-text-2" id="text-orgcf593ec">
+<p>
+En la era actual de amenazas cibernéticas cada vez más sofisticadas, uno de los riesgos más preocupantes es que nuestros sistemas sean comprometidos y utilizados como parte de una botnet sin nuestro conocimiento. Estas redes de equipos infectados pueden ser utilizadas para realizar ataques DDoS, minería de criptomonedas, envío de spam, o robo de datos, entre otras actividades maliciosas.
+</p>
+
+<p>
+En este artículo del blog <b>Emacs con Esteroides</b>, presentaremos un script en Bash para detectar posibles señales de que nuestro sistema Linux está siendo utilizado como parte de una botnet o está bajo ataque. El script realiza comprobaciones exhaustivas del sistema y genera un informe detallado que podemos analizar para determinar si hay actividad sospechosa.
+</p>
+</div>
+</div>
+<div id="outline-container-org962e718" class="outline-2">
+<h2 id="org962e718">¿Qué es una botnet?</h2>
+<div class="outline-text-2" id="text-org962e718">
+<p>
+Una botnet es una red de equipos infectados con malware que son controlados remotamente por un atacante, conocido como "botmaster". Los equipos comprometidos, llamados "zombies" o "bots", ejecutan comandos sin el conocimiento de sus propietarios.
+</p>
+
+<p>
+Señales comunes de que un sistema puede formar parte de una botnet:
+</p>
+
+<ul class="org-ul">
+<li>Conexiones de red inusuales o no autorizadas</li>
+<li>Procesos desconocidos con alto consumo de recursos</li>
+<li>Tráfico de red anómalo</li>
+<li>Servicios o puertos abiertos inesperados</li>
+<li>Modificaciones en archivos críticos del sistema</li>
+<li>Entradas sospechosas en la tabla de rutas</li>
+<li>Tareas programadas desconocidas</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgba6c6cc" class="outline-2">
+<h2 id="orgba6c6cc">El script de detección de botnets</h2>
+<div class="outline-text-2" id="text-orgba6c6cc">
+<p>
+Nuestro script realiza múltiples comprobaciones para identificar posibles indicios de compromiso:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">botnet_detector.sh - Script para detectar posibles indicios de botnet en sistemas Linux</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Blog: Emacs con Esteroides</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Autor: Emacs con Esteroides</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Fecha: 15/04/2025</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Licencia: GPL v3</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Colores para mejor visualizaci&#243;n</span>
+<span style="color: #1857a4;">RED</span>=<span style="color: #a44185;">'\033[0;31m'</span>
+<span style="color: #1857a4;">GREEN</span>=<span style="color: #a44185;">'\033[0;32m'</span>
+<span style="color: #1857a4;">YELLOW</span>=<span style="color: #a44185;">'\033[0;33m'</span>
+<span style="color: #1857a4;">BLUE</span>=<span style="color: #a44185;">'\033[0;34m'</span>
+<span style="color: #1857a4;">PURPLE</span>=<span style="color: #a44185;">'\033[0;35m'</span>
+<span style="color: #1857a4;">CYAN</span>=<span style="color: #a44185;">'\033[0;36m'</span>
+<span style="color: #1857a4;">NC</span>=<span style="color: #a44185;">'\033[0m'</span> <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">No Color</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Funci&#243;n para imprimir encabezados</span>
+<span style="color: #dc3eb7;">print_header</span>() {
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${BLUE}====================================${NC}"</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${BLUE}$1${NC}"</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${BLUE}====================================${NC}\n"</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Funci&#243;n para imprimir mensajes de alerta</span>
+<span style="color: #dc3eb7;">print_alert</span>() {
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${RED}[ALERTA] $1${NC}"</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Funci&#243;n para imprimir mensajes de advertencia</span>
+<span style="color: #dc3eb7;">print_warning</span>() {
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${YELLOW}[ADVERTENCIA] $1${NC}"</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Funci&#243;n para imprimir mensajes informativos</span>
+<span style="color: #dc3eb7;">print_info</span>() {
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}[INFO] $1${NC}"</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar si se est&#225; ejecutando como root</span>
+<span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$(</span><span style="color: #219fd5; font-weight: bold;">id -u</span><span style="color: #a44185;">)"</span> != <span style="color: #a44185;">"0"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${RED}Este script debe ejecutarse como root${NC}"</span>
+  <span style="color: #219fd5; font-style: italic;">exit</span> 1
+<span style="color: #219fd5; font-style: italic;">fi</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear directorio para informes si no existe</span>
+<span style="color: #1857a4;">REPORT_DIR</span>=<span style="color: #a44185;">"/var/log/security_checks"</span>
+<span style="color: #1857a4;">TIMESTAMP</span>=$(<span style="color: #219fd5; font-weight: bold;">date +"%Y%m%d_%H%M%S"</span>)
+<span style="color: #1857a4;">REPORT_FILE</span>=<span style="color: #a44185;">"${REPORT_DIR}/botnet_check_${TIMESTAMP}.log"</span>
+
+<span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #219fd5; font-weight: bold;">!</span> -d <span style="color: #a44185;">"$REPORT_DIR"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+  mkdir -p <span style="color: #a44185;">"$REPORT_DIR"</span>
+<span style="color: #219fd5; font-style: italic;">fi</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Funci&#243;n para registrar en el archivo de informe</span>
+<span style="color: #dc3eb7;">log</span>() {
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"$1"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"$1"</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Redireccionar la salida al archivo de registro y a la consola</span>
+<span style="color: #219fd5; font-style: italic;">exec</span> &gt; &gt;(tee -a <span style="color: #a44185;">"$REPORT_FILE"</span>) 2&gt;&amp;1
+
+print_header <span style="color: #a44185;">"DETECTOR DE BOTNETS Y ACTIVIDAD MALICIOSA"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Iniciando an&#225;lisis: $(</span><span style="color: #219fd5; font-weight: bold;">date</span><span style="color: #a44185;">)"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Sistema: $(</span><span style="color: #219fd5; font-weight: bold;">uname -a</span><span style="color: #a44185;">)"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Usuario: $(</span><span style="color: #219fd5; font-weight: bold;">whoami</span><span style="color: #a44185;">)"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Informe guardado en: $REPORT_FILE"</span>
+<span style="color: #dc3eb7;">echo</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Comprobar herramientas necesarias e instalarlas si faltan</span>
+<span style="color: #dc3eb7;">check_tools</span>() {
+  print_header <span style="color: #a44185;">"Verificando herramientas necesarias"</span>
+
+  <span style="color: #1857a4;">TOOLS</span>=(<span style="color: #a44185;">"lsof"</span> <span style="color: #a44185;">"netstat"</span> <span style="color: #a44185;">"tcpdump"</span> <span style="color: #a44185;">"htop"</span> <span style="color: #a44185;">"iftop"</span> <span style="color: #a44185;">"rkhunter"</span> <span style="color: #a44185;">"chkrootkit"</span> <span style="color: #a44185;">"lynis"</span> <span style="color: #a44185;">"clamav"</span> <span style="color: #a44185;">"sysstat"</span>)
+  <span style="color: #1857a4;">PACKAGES</span>=(<span style="color: #a44185;">"lsof"</span> <span style="color: #a44185;">"net-tools"</span> <span style="color: #a44185;">"tcpdump"</span> <span style="color: #a44185;">"htop"</span> <span style="color: #a44185;">"iftop"</span> <span style="color: #a44185;">"rkhunter"</span> <span style="color: #a44185;">"chkrootkit"</span> <span style="color: #a44185;">"lynis"</span> <span style="color: #a44185;">"clamav"</span> <span style="color: #a44185;">"sysstat"</span>)
+
+  <span style="color: #1857a4;">MISSING</span>=()
+
+  <span style="color: #219fd5; font-style: italic;">for</span> i<span style="color: #219fd5; font-style: italic;"> in</span> <span style="color: #a44185;">"${!TOOLS[@]}"</span>; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #219fd5; font-style: italic;">if ! </span><span style="color: #dc3eb7;">command</span> -v <span style="color: #a44185;">"${TOOLS[$i]}"</span> &amp;&gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+      <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${YELLOW}Herramienta ${TOOLS[$i]} no encontrada${NC}"</span>
+      <span style="color: #1857a4;">MISSING</span>+=(<span style="color: #a44185;">"${PACKAGES[$i]}"</span>)
+    <span style="color: #219fd5; font-style: italic;">else</span>
+      <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}&#10003; ${TOOLS[$i]} instalado${NC}"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+  <span style="color: #219fd5; font-style: italic;">done</span>
+
+  <span style="color: #219fd5; font-style: italic;">if</span> [ ${#<span style="color: #1857a4;">MISSING</span>[@]} -gt 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${YELLOW}Instalando herramientas faltantes...${NC}"</span>
+    apt-get update
+    apt-get install -y <span style="color: #a44185;">"${MISSING[@]}"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar si hubo alg&#250;n error en la instalaci&#243;n</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [ $<span style="color: #1857a4;">?</span> -ne 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+      <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${RED}Error al instalar algunas herramientas. El script puede no funcionar correctamente.${NC}"</span>
+    <span style="color: #219fd5; font-style: italic;">else</span>
+      <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}Todas las herramientas necesarias han sido instaladas.${NC}"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+  <span style="color: #219fd5; font-style: italic;">else</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}Todas las herramientas necesarias est&#225;n instaladas.${NC}"</span>
+  <span style="color: #219fd5; font-style: italic;">fi</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">1. Comprobar procesos sospechosos (alto uso de CPU/memoria)</span>
+<span style="color: #dc3eb7;">check_suspicious_processes</span>() {
+  print_header <span style="color: #a44185;">"Comprobando procesos sospechosos"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Procesos con mayor consumo de CPU</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${CYAN}Procesos con mayor consumo de CPU:${NC}"</span>
+  ps aux --sort=-%cpu | head -11
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Procesos con mayor consumo de memoria</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Procesos con mayor consumo de memoria:${NC}"</span>
+  ps aux --sort=-%mem | head -11
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Buscar nombres de procesos sospechosos (mineros comunes, etc.)</span>
+  <span style="color: #1857a4;">SUSPICIOUS_PROCESS_NAMES</span>=(<span style="color: #a44185;">"miner"</span> <span style="color: #a44185;">"xmr"</span> <span style="color: #a44185;">"monero"</span> <span style="color: #a44185;">"cryptonight"</span> <span style="color: #a44185;">"stratum"</span> <span style="color: #a44185;">"coinhive"</span> <span style="color: #a44185;">"xmrig"</span> <span style="color: #a44185;">"cpuminer"</span> <span style="color: #a44185;">"nanopool"</span> <span style="color: #a44185;">"minergate"</span>)
+
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Buscando procesos con nombres sospechosos:${NC}"</span>
+  <span style="color: #1857a4;">FOUND</span>=0
+  <span style="color: #219fd5; font-style: italic;">for</span> name<span style="color: #219fd5; font-style: italic;"> in</span> <span style="color: #a44185;">"${SUSPICIOUS_PROCESS_NAMES[@]}"</span>; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #1857a4;">RESULT</span>=$(<span style="color: #219fd5; font-weight: bold;">pgrep -l -f "$name"</span>)
+    <span style="color: #219fd5; font-style: italic;">if</span> [ -n <span style="color: #a44185;">"$RESULT"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+      print_alert <span style="color: #a44185;">"Posible proceso de miner&#237;a detectado: $RESULT"</span>
+      <span style="color: #1857a4;">FOUND</span>=1
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+  <span style="color: #219fd5; font-style: italic;">done</span>
+
+  <span style="color: #219fd5; font-style: italic;">if</span> [ $<span style="color: #1857a4;">FOUND</span> -eq 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    print_info <span style="color: #a44185;">"No se encontraron procesos con nombres sospechosos."</span>
+  <span style="color: #219fd5; font-style: italic;">fi</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar procesos ocultos (con caracteres especiales o espacios en blanco)</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Buscando procesos con nombres ocultos o sospechosos:${NC}"</span>
+  ps aux | grep -E <span style="color: #a44185;">'[ ]{2,}[^ ]+$|[.][^ ]|^ '</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Procesos sin binarios en disco (posible indicaci&#243;n de malware en memoria)</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Procesos sin binarios en disco (posible malware en memoria):${NC}"</span>
+  <span style="color: #219fd5; font-style: italic;">for</span> pid<span style="color: #219fd5; font-style: italic;"> in</span> $(<span style="color: #219fd5; font-weight: bold;">ls /proc/ | grep -E '^[0-9]+$'</span>); <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [ -d <span style="color: #a44185;">"/proc/$pid"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+      <span style="color: #1857a4;">BINARY</span>=$(<span style="color: #219fd5; font-weight: bold;">ls -l /proc/$pid/exe 2&gt;/dev/null | awk '{print $NF}'</span>)
+      <span style="color: #219fd5; font-style: italic;">if</span> [[ <span style="color: #a44185;">"$BINARY"</span> == *<span style="color: #a44185;">"(deleted)"</span>* || -z <span style="color: #a44185;">"$BINARY"</span> ]]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #1857a4;">PROCESS_NAME</span>=$(<span style="color: #219fd5; font-weight: bold;">cat /proc/$pid/comm 2&gt;/dev/null</span>)
+        <span style="color: #1857a4;">CMDLINE</span>=$(<span style="color: #219fd5; font-weight: bold;">cat /proc/$pid/cmdline 2&gt;/dev/null | tr '\0' ' '</span>)
+        <span style="color: #219fd5; font-style: italic;">if</span> [ -n <span style="color: #a44185;">"$PROCESS_NAME"</span> ] &amp;&amp; [ <span style="color: #a44185;">"$PROCESS_NAME"</span> != <span style="color: #a44185;">"ps"</span> ] &amp;&amp; [ <span style="color: #a44185;">"$PROCESS_NAME"</span> != <span style="color: #a44185;">"grep"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+          print_warning <span style="color: #a44185;">"Proceso sin binario en disco: PID=$pid NOMBRE=$PROCESS_NAME CMDLINE=$CMDLINE"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+      <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+  <span style="color: #219fd5; font-style: italic;">done</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">2. Comprobar conexiones de red sospechosas</span>
+<span style="color: #dc3eb7;">check_suspicious_connections</span>() {
+  print_header <span style="color: #a44185;">"Comprobando conexiones de red sospechosas"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Listar todas las conexiones</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${CYAN}Todas las conexiones activas:${NC}"</span>
+  netstat -tunapl
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Conexiones establecidas</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Conexiones establecidas:${NC}"</span>
+  netstat -tunapl | grep ESTABLISHED
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Puertos en escucha</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Puertos en escucha:${NC}"</span>
+  netstat -tunapl | grep LISTEN
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Puertos com&#250;nmente asociados con botnets y malware</span>
+  <span style="color: #1857a4;">SUSPICIOUS_PORTS</span>=(4444 5555 6666 6667 6697 8080 9999 1080 11111 1337 31337 34567 65535)
+
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Buscando puertos sospechosos:${NC}"</span>
+  <span style="color: #1857a4;">FOUND</span>=0
+  <span style="color: #219fd5; font-style: italic;">for</span> port<span style="color: #219fd5; font-style: italic;"> in</span> <span style="color: #a44185;">"${SUSPICIOUS_PORTS[@]}"</span>; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #1857a4;">RESULT</span>=$(<span style="color: #219fd5; font-weight: bold;">netstat -tunapl | grep ":$port "</span>)
+    <span style="color: #219fd5; font-style: italic;">if</span> [ -n <span style="color: #a44185;">"$RESULT"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+      print_alert <span style="color: #a44185;">"Puerto sospechoso $port en uso: $RESULT"</span>
+      <span style="color: #1857a4;">FOUND</span>=1
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+  <span style="color: #219fd5; font-style: italic;">done</span>
+
+  <span style="color: #219fd5; font-style: italic;">if</span> [ $<span style="color: #1857a4;">FOUND</span> -eq 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    print_info <span style="color: #a44185;">"No se encontraron puertos sospechosos comunes en uso."</span>
+  <span style="color: #219fd5; font-style: italic;">fi</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Comprobar conexiones a IPs sospechosas (servidores C&amp;C conocidos)</span>
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Esta lista deber&#237;a ser actualizada peri&#243;dicamente con IPs conocidas de C&amp;C</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Comprobando conexiones a posibles servidores C&amp;C:${NC}"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejemplo simple - en una implementaci&#243;n real, esta lista deber&#237;a ser m&#225;s extensa</span>
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">y actualizada desde una fuente confiable</span>
+  <span style="color: #1857a4;">SUSPICIOUS_IPS</span>=(<span style="color: #a44185;">"185.26.205."</span> <span style="color: #a44185;">"91.121."</span> <span style="color: #a44185;">"212.83."</span> <span style="color: #a44185;">"88.208."</span>)
+
+  <span style="color: #1857a4;">FOUND</span>=0
+  <span style="color: #219fd5; font-style: italic;">for</span> ip_pattern<span style="color: #219fd5; font-style: italic;"> in</span> <span style="color: #a44185;">"${SUSPICIOUS_IPS[@]}"</span>; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #1857a4;">RESULT</span>=$(<span style="color: #219fd5; font-weight: bold;">netstat -tunapl | grep "$ip_pattern"</span>)
+    <span style="color: #219fd5; font-style: italic;">if</span> [ -n <span style="color: #a44185;">"$RESULT"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+      print_alert <span style="color: #a44185;">"Conexi&#243;n a posible servidor C&amp;C detectada: $RESULT"</span>
+      <span style="color: #1857a4;">FOUND</span>=1
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+  <span style="color: #219fd5; font-style: italic;">done</span>
+
+  <span style="color: #219fd5; font-style: italic;">if</span> [ $<span style="color: #1857a4;">FOUND</span> -eq 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    print_info <span style="color: #a44185;">"No se encontraron conexiones a servidores C&amp;C conocidos."</span>
+  <span style="color: #219fd5; font-style: italic;">fi</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Analizar cantidad de conexiones por IP</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}IPs con m&#250;ltiples conexiones (posible comunicaci&#243;n con C&amp;C):${NC}"</span>
+  netstat -ntu | awk <span style="color: #a44185;">'{print $5}'</span> | cut -d: -f1 | sort | uniq -c | sort -nr | head -n 10
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar conexiones salientes inusuales</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Conexiones salientes posiblemente sospechosas:${NC}"</span>
+  <span style="color: #1857a4;">OUTBOUND</span>=$(<span style="color: #219fd5; font-weight: bold;">netstat -tun | grep -v "127.0.0.1" | grep -v "LISTEN" | grep "ESTABLISHED"</span>)
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"$OUTBOUND"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">An&#225;lisis de tr&#225;fico en tiempo real (muestra limitada)</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Captura de tr&#225;fico en tiempo real (10 segundos):${NC}"</span>
+  timeout 10 tcpdump -nn -c 100 2&gt;/dev/null || print_warning <span style="color: #a44185;">"No se pudo ejecutar tcpdump"</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">3. Comprobar archivos y directorios sospechosos</span>
+<span style="color: #dc3eb7;">check_suspicious_files</span>() {
+  print_header <span style="color: #a44185;">"Comprobando archivos y directorios sospechosos"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Archivos modificados recientemente</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${CYAN}Archivos del sistema modificados en las &#250;ltimas 24 horas:${NC}"</span>
+  find /bin /usr/bin /sbin /usr/sbin -type f -mtime -1 -ls | grep -v <span style="color: #a44185;">"\.git"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Buscar archivos setuid/setgid (potencialmente peligrosos)</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Archivos con permisos SUID/SGID (verificar si son leg&#237;timos):${NC}"</span>
+  find / -type f <span style="color: #a44185;">\(</span> -perm -4000 -o -perm -2000 <span style="color: #a44185;">\)</span> -ls 2&gt;/dev/null | grep -v -E <span style="color: #a44185;">"/snap/|/var/lib/snapd/"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Buscar archivos ejecutables en /tmp y /var/tmp</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Archivos ejecutables en directorios temporales:${NC}"</span>
+  find /tmp /var/tmp /dev/shm -type f -perm -100 -ls 2&gt;/dev/null
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Buscar scripts de inicio sospechosos</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Scripts de inicio potencialmente sospechosos:${NC}"</span>
+  <span style="color: #219fd5; font-style: italic;">for</span> dir<span style="color: #219fd5; font-style: italic;"> in</span> /etc/init.d /etc/init /etc/rc*.d /etc/systemd/system /usr/lib/systemd/system; <span style="color: #219fd5; font-style: italic;">do</span>
+    find <span style="color: #a44185;">"$dir"</span> -type f -mtime -7 -ls 2&gt;/dev/null
+  <span style="color: #219fd5; font-style: italic;">done</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Buscar archivos ocultos en el directorio home</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Archivos ocultos recientes en directorios home:${NC}"</span>
+  find /home -type f -name <span style="color: #a44185;">".*"</span> -mtime -7 -ls 2&gt;/dev/null | grep -v -E <span style="color: #a44185;">"\.cache|\.config|\.local|\.dbus|\.mozilla|\.bash_history"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Buscar archivos con nombres sospechosos</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Archivos con nombres potencialmente sospechosos:${NC}"</span>
+  find / -type f -name <span style="color: #a44185;">"*backdoor*"</span> -o -name <span style="color: #a44185;">"*rootkit*"</span> -o -name <span style="color: #a44185;">"*trojan*"</span> -o -name <span style="color: #a44185;">"*miner*"</span> -o -name <span style="color: #a44185;">"*xmr*"</span> -o -name <span style="color: #a44185;">"*monero*"</span> 2&gt;/dev/null
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">4. Comprobar tareas programadas</span>
+<span style="color: #dc3eb7;">check_scheduled_tasks</span>() {
+  print_header <span style="color: #a44185;">"Comprobando tareas programadas"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crontabs del sistema</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${CYAN}Crontabs del sistema:${NC}"</span>
+  <span style="color: #219fd5; font-style: italic;">for</span> user<span style="color: #219fd5; font-style: italic;"> in</span> $(<span style="color: #219fd5; font-weight: bold;">cut -f1 -d: /etc/passwd</span>); <span style="color: #219fd5; font-style: italic;">do</span>
+    crontab -l -u <span style="color: #a44185;">"$user"</span> 2&gt;/dev/null
+    <span style="color: #219fd5; font-style: italic;">if</span> [ $<span style="color: #1857a4;">?</span> -eq 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+      <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"Crontab del usuario $user:"</span>
+      crontab -l -u <span style="color: #a44185;">"$user"</span>
+      <span style="color: #dc3eb7;">echo</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+  <span style="color: #219fd5; font-style: italic;">done</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Otros archivos cron</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Otros archivos cron:${NC}"</span>
+  <span style="color: #219fd5; font-style: italic;">for</span> dir<span style="color: #219fd5; font-style: italic;"> in</span> /etc/cron.d /etc/cron.daily /etc/cron.hourly /etc/cron.monthly /etc/cron.weekly; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"Contenido de $dir:"</span>
+    ls -la <span style="color: #a44185;">"$dir"</span> 2&gt;/dev/null
+    <span style="color: #dc3eb7;">echo</span>
+  <span style="color: #219fd5; font-style: italic;">done</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Comprobar /etc/crontab</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Contenido de /etc/crontab:${NC}"</span>
+  cat /etc/crontab
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Comprobar systemd timers</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Systemd timers:${NC}"</span>
+  systemctl list-timers --all
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">5. Comprobar usuarios y permisos</span>
+<span style="color: #dc3eb7;">check_users_and_permissions</span>() {
+  print_header <span style="color: #a44185;">"Comprobando usuarios y permisos"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Listar usuarios</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${CYAN}Lista de usuarios en el sistema:${NC}"</span>
+  cut -d: -f1,3,7 /etc/passwd | sort
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Usuarios con UID 0 (root)</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Usuarios con privilegios de root (UID 0):${NC}"</span>
+  grep <span style="color: #a44185;">":0:"</span> /etc/passwd
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Usuarios que pueden usar sudo</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Usuarios que pueden usar sudo:${NC}"</span>
+  grep -Po <span style="color: #a44185;">'^sudo.+:\K.*$'</span> /etc/group
+  cat /etc/sudoers.d/* /etc/sudoers 2&gt;/dev/null | grep -v <span style="color: #a44185;">"^#"</span> | grep -v <span style="color: #a44185;">"^$"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">&#218;ltimos inicios de sesi&#243;n</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}&#218;ltimos inicios de sesi&#243;n:${NC}"</span>
+  last | head -20
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Sesiones activas</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Sesiones activas:${NC}"</span>
+  w
+  who
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Comprobar usuarios conectados por SSH</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Usuarios conectados por SSH:${NC}"</span>
+  netstat -tnpa | grep <span style="color: #a44185;">"ESTABLISHED.*sshd"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Archivos de autorizaci&#243;n SSH</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Archivos authorized_keys (verificar claves no autorizadas):${NC}"</span>
+  find /home -name <span style="color: #a44185;">"authorized_keys"</span> -exec ls -la {} <span style="color: #a44185;">\;</span> -exec cat {} <span style="color: #a44185;">\;</span> 2&gt;/dev/null
+  find /root -name <span style="color: #a44185;">"authorized_keys"</span> -exec ls -la {} <span style="color: #a44185;">\;</span> -exec cat {} <span style="color: #a44185;">\;</span> 2&gt;/dev/null
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">6. Comprobar servicios y daemons</span>
+<span style="color: #dc3eb7;">check_services</span>() {
+  print_header <span style="color: #a44185;">"Comprobando servicios y daemons"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Servicios activos</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${CYAN}Servicios systemd activos:${NC}"</span>
+  systemctl list-units --type=service --state=running
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Todos los servicios</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Todos los servicios systemd:${NC}"</span>
+  systemctl list-unit-files --type=service
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Servicios iniciados recientemente</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Servicios iniciados en los &#250;ltimos 3 d&#237;as:${NC}"</span>
+  find /etc/systemd/system /usr/lib/systemd/system -type f -name <span style="color: #a44185;">"*.service"</span> -mtime -3 -ls
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Servicios no est&#225;ndar</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Servicios potencialmente no est&#225;ndar:${NC}"</span>
+  systemctl list-units --type=service | grep -v -E <span style="color: #a44185;">"systemd|dbus|getty|ssh|network|ifup|rpc|nfs|syslog|cron|anacron|atd|udev|acpid|rsyslog|logind|getty|apache|nginx|mariadb|mysql|postgresql"</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">7. Realizar escaneos con herramientas de seguridad</span>
+<span style="color: #dc3eb7;">security_scans</span>() {
+  print_header <span style="color: #a44185;">"Ejecutando escaneos de seguridad"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar rkhunter para buscar rootkits</span>
+  <span style="color: #219fd5; font-style: italic;">if </span><span style="color: #dc3eb7;">command</span> -v rkhunter &amp;&gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${CYAN}Ejecutando rkhunter (escaneo de rootkits):${NC}"</span>
+    rkhunter --check --sk || print_warning <span style="color: #a44185;">"rkhunter fall&#243; o encontr&#243; problemas"</span>
+  <span style="color: #219fd5; font-style: italic;">else</span>
+    print_warning <span style="color: #a44185;">"rkhunter no est&#225; instalado"</span>
+  <span style="color: #219fd5; font-style: italic;">fi</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar chkrootkit</span>
+  <span style="color: #219fd5; font-style: italic;">if </span><span style="color: #dc3eb7;">command</span> -v chkrootkit &amp;&gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Ejecutando chkrootkit:${NC}"</span>
+    chkrootkit -q || print_warning <span style="color: #a44185;">"chkrootkit fall&#243; o encontr&#243; problemas"</span>
+  <span style="color: #219fd5; font-style: italic;">else</span>
+    print_warning <span style="color: #a44185;">"chkrootkit no est&#225; instalado"</span>
+  <span style="color: #219fd5; font-style: italic;">fi</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar lynis para auditor&#237;a de seguridad</span>
+  <span style="color: #219fd5; font-style: italic;">if </span><span style="color: #dc3eb7;">command</span> -v lynis &amp;&gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Ejecutando lynis (auditor&#237;a b&#225;sica):${NC}"</span>
+    lynis audit system --quick || print_warning <span style="color: #a44185;">"lynis fall&#243; o encontr&#243; problemas"</span>
+  <span style="color: #219fd5; font-style: italic;">else</span>
+    print_warning <span style="color: #a44185;">"lynis no est&#225; instalado"</span>
+  <span style="color: #219fd5; font-style: italic;">fi</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar ClamAV para buscar malware</span>
+  <span style="color: #219fd5; font-style: italic;">if </span><span style="color: #dc3eb7;">command</span> -v clamscan &amp;&gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Ejecutando ClamAV en directorios cr&#237;ticos:${NC}"</span>
+    clamscan --recursive --suppress-ok-results /etc /tmp /var/tmp /home/*/.ssh /root || print_warning <span style="color: #a44185;">"clamscan fall&#243; o encontr&#243; problemas"</span>
+  <span style="color: #219fd5; font-style: italic;">else</span>
+    print_warning <span style="color: #a44185;">"ClamAV no est&#225; instalado"</span>
+  <span style="color: #219fd5; font-style: italic;">fi</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">8. Comprobar registros del sistema</span>
+<span style="color: #dc3eb7;">check_logs</span>() {
+  print_header <span style="color: #a44185;">"Analizando registros del sistema"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar intentos de inicio de sesi&#243;n fallidos</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${CYAN}Intentos de inicio de sesi&#243;n fallidos:${NC}"</span>
+  grep <span style="color: #a44185;">"Failed password"</span> /var/log/auth.log* | tail -n 20
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Comprobaci&#243;n de conexiones rechazadas</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Conexiones rechazadas:${NC}"</span>
+  grep -i <span style="color: #a44185;">"connection refused\|failed to connect"</span> /var/log/syslog* | tail -n 20
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Mensajes de error cr&#237;ticos</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Mensajes de error cr&#237;ticos:${NC}"</span>
+  grep -i <span style="color: #a44185;">"error\|critical\|warning\|fail"</span> /var/log/syslog* | tail -n 50
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Buscar IPs que intentan m&#250;ltiples inicios de sesi&#243;n</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}IPs con m&#250;ltiples intentos de inicio de sesi&#243;n:${NC}"</span>
+  grep <span style="color: #a44185;">"Failed password"</span> /var/log/auth.log* | grep -E -o <span style="color: #a44185;">"([0-9]{1,3}[\.]){3}[0-9]{1,3}"</span> | sort | uniq -c | sort -nr | head -n 10
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">9. Comprobar volumen de tr&#225;fico de red</span>
+<span style="color: #dc3eb7;">check_network_traffic</span>() {
+  print_header <span style="color: #a44185;">"Analizando tr&#225;fico de red"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Estad&#237;sticas de uso de red</span>
+  <span style="color: #219fd5; font-style: italic;">if </span><span style="color: #dc3eb7;">command</span> -v vnstat &amp;&gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${CYAN}Estad&#237;sticas de tr&#225;fico de red:${NC}"</span>
+    vnstat
+  <span style="color: #219fd5; font-style: italic;">else</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${CYAN}Estad&#237;sticas de interfaces de red:${NC}"</span>
+    ip -s link
+  <span style="color: #219fd5; font-style: italic;">fi</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Mostrar tabla de rutas</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Tabla de rutas:${NC}"</span>
+  ip route
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Mostrar puertos abiertos</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Puertos abiertos:${NC}"</span>
+  ss -tuln
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Capturar y analizar una muestra de tr&#225;fico</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}An&#225;lisis de muestra de tr&#225;fico (5 segundos):${NC}"</span>
+  timeout 5 tcpdump -nn -q -i any 2&gt;/dev/null || print_warning <span style="color: #a44185;">"No se pudo ejecutar tcpdump"</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">10. Comprobaci&#243;n del rendimiento del sistema</span>
+<span style="color: #dc3eb7;">check_system_performance</span>() {
+  print_header <span style="color: #a44185;">"Analizando rendimiento del sistema"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Uso de CPU y memoria</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${CYAN}Uso de CPU y memoria:${NC}"</span>
+  top -bn 1 | head -20
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Comprobaci&#243;n de la carga del sistema</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Carga del sistema:${NC}"</span>
+  uptime
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Uso de disco</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Uso de disco:${NC}"</span>
+  df -h
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Directorios que ocupan m&#225;s espacio</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Directorios que ocupan m&#225;s espacio:${NC}"</span>
+  du -sh /* 2&gt;/dev/null | sort -hr | head -10
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Comprobar swap</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Uso de swap:${NC}"</span>
+  free -h
+  swapon --show
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Comprobar si hay procesos zombies</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}Procesos zombie:${NC}"</span>
+  ps aux | awk <span style="color: #a44185;">'$8=="Z"'</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">11. Generar resumen e informe final</span>
+<span style="color: #dc3eb7;">generate_summary</span>() {
+  print_header <span style="color: #a44185;">"RESUMEN DE LA DETECCI&#211;N"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Comprobar indicadores clave de compromiso</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${CYAN}Indicadores clave revisados:${NC}"</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">1. Procesos sospechosos</span>
+  <span style="color: #1857a4;">SUSPICIOUS_PROCS</span>=$(<span style="color: #219fd5; font-weight: bold;">ps aux | grep -E 'miner|xmr|monero|cryptonight|stratum' | grep -v grep | wc -l</span>)
+  <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$SUSPICIOUS_PROCS"</span> -gt 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    print_alert <span style="color: #a44185;">"&#9888;&#65039; Se encontraron $SUSPICIOUS_PROCS procesos con nombres sospechosos"</span>
+  <span style="color: #219fd5; font-style: italic;">else</span>
+    print_info <span style="color: #a44185;">"&#10003; No se encontraron procesos con nombres asociados a miner&#237;a/botnet"</span>
+  <span style="color: #219fd5; font-style: italic;">fi</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">2. Puertos sospechosos</span>
+  <span style="color: #1857a4;">SUSPICIOUS_PORTS_COUNT</span>=$(<span style="color: #219fd5; font-weight: bold;">netstat -tunapl 2&gt;/dev/null | grep -E ':(4444|5555|6666|6667|8080|9999|1080|1337|31337</span><span style="color: #a44185;">)'</span> | grep -v <span style="color: #a44185;">"127.0.0.1"</span> | wc -l)
+  <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$SUSPICIOUS_PORTS_COUNT"</span> -gt 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    print_alert <span style="color: #a44185;">"&#9888;&#65039; Se encontraron $SUSPICIOUS_PORTS_COUNT puertos sospechosos en uso"</span>
+  <span style="color: #219fd5; font-style: italic;">else</span>
+    print_info <span style="color: #a44185;">"&#10003; No se encontraron puertos com&#250;nmente asociados con malware"</span>
+  <span style="color: #219fd5; font-style: italic;">fi</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">3. Archivos sospechosos</span>
+  <span style="color: #1857a4;">SUSPICIOUS_FILES</span>=$(<span style="color: #219fd5; font-weight: bold;">find /tmp /var/tmp /dev/shm -type f -perm -100 2&gt;/dev/null | wc -l</span>)
+  <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$SUSPICIOUS_FILES"</span> -gt 3 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    print_warning <span style="color: #a44185;">"&#9888;&#65039; Se encontraron $SUSPICIOUS_FILES archivos ejecutables en directorios temporales"</span>
+  <span style="color: #219fd5; font-style: italic;">else</span>
+    print_info <span style="color: #a44185;">"&#10003; N&#250;mero normal de ejecutables en directorios temporales"</span>
+  <span style="color: #219fd5; font-style: italic;">fi</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">4. Tareas cron sospechosas</span>
+  <span style="color: #1857a4;">SUSPICIOUS_CRON</span>=$(<span style="color: #219fd5; font-weight: bold;">grep -r "curl\|wget\|nc\|netcat\|bash -i\|python -c\|perl -e" /etc/cron* /var/spool/cron/ 2&gt;/dev/null | wc -l</span>)
+  <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$SUSPICIOUS_CRON"</span> -gt 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    print_alert <span style="color: #a44185;">"&#9888;&#65039; Se encontraron $SUSPICIOUS_CRON tareas cron potencialmente sospechosas"</span>
+  <span style="color: #219fd5; font-style: italic;">else</span>
+    print_info <span style="color: #a44185;">"&#10003; No se encontraron tareas cron sospechosas"</span>
+  <span style="color: #219fd5; font-style: italic;">fi</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">5. Usuarios con UID 0 distintos de root</span>
+  <span style="color: #1857a4;">ROOT_USERS</span>=$(<span style="color: #219fd5; font-weight: bold;">grep ":0:" /etc/passwd | grep -v "^root:" | wc -l</span>)
+  <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$ROOT_USERS"</span> -gt 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    print_alert <span style="color: #a44185;">"&#9888;&#65039; Se encontraron $ROOT_USERS usuarios adicionales con privilegios de root (UID 0)"</span>
+  <span style="color: #219fd5; font-style: italic;">else</span>
+    print_info <span style="color: #a44185;">"&#10003; Solo el usuario root tiene UID 0"</span>
+  <span style="color: #219fd5; font-style: italic;">fi</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Evaluaci&#243;n final</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${BLUE}EVALUACI&#211;N FINAL:${NC}"</span>
+
+  <span style="color: #1857a4;">TOTAL_ALERTS</span>=$(<span style="color: #219fd5; font-weight: bold;">grep -c "\[ALERTA\]" "$REPORT_FILE"</span>)
+  <span style="color: #1857a4;">TOTAL_WARNINGS</span>=$(<span style="color: #219fd5; font-weight: bold;">grep -c "\[ADVERTENCIA\]" "$REPORT_FILE"</span>)
+
+  <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$TOTAL_ALERTS"</span> -gt 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${RED}&#9888;&#65039; Se encontraron $TOTAL_ALERTS alertas y $TOTAL_WARNINGS advertencias que requieren investigaci&#243;n inmediata.${NC}"</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${RED}El sistema podr&#237;a estar comprometido. Revise el informe completo y tome medidas.${NC}"</span>
+  <span style="color: #219fd5; font-style: italic;">elif</span> [ <span style="color: #a44185;">"$TOTAL_WARNINGS"</span> -gt 3 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${YELLOW}&#9888;&#65039; Se encontraron $TOTAL_WARNINGS advertencias que requieren atenci&#243;n.${NC}"</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${YELLOW}El sistema podr&#237;a tener actividad sospechosa. Revise el informe completo.${NC}"</span>
+  <span style="color: #219fd5; font-style: italic;">else</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}&#10003; No se encontraron indicios claros de compromiso en el sistema.${NC}"</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}Contin&#250;e monitoreando regularmente.${NC}"</span>
+  <span style="color: #219fd5; font-style: italic;">fi</span>
+
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Recomendaciones</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${CYAN}RECOMENDACIONES:${NC}"</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"1. Ejecute este script peri&#243;dicamente para monitorear cambios"</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"2. Configure un sistema de monitoreo de integridad (como AIDE o Tripwire)"</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"3. Actualice regularmente el sistema y las aplicaciones"</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"4. Configure correctamente el firewall"</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"5. Implemente detecci&#243;n de intrusiones con herramientas como Snort o Suricata"</span>
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"6. Siga las pr&#225;cticas recomendadas de seguridad para servidores Linux"</span>
+
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${BLUE}Informe completo guardado en: $REPORT_FILE${NC}"</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar todas las comprobaciones</span>
+<span style="color: #dc3eb7;">main</span>() {
+  check_tools
+  check_suspicious_processes
+  check_suspicious_connections
+  check_suspicious_files
+  check_scheduled_tasks
+  check_users_and_permissions
+  check_services
+  security_scans
+  check_logs
+  check_network_traffic
+  check_system_performance
+  generate_summary
+
+  print_header <span style="color: #a44185;">"FINALIZADO"</span>
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"An&#225;lisis completado: $(</span><span style="color: #219fd5; font-weight: bold;">date</span><span style="color: #a44185;">)"</span>
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Informe guardado en: $REPORT_FILE"</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar el script principal</span>
+main
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfa45e69" class="outline-2">
+<h2 id="orgfa45e69">¿Cómo funciona el script?</h2>
+<div class="outline-text-2" id="text-orgfa45e69">
+<p>
+El script realiza una serie de verificaciones exhaustivas para detectar posibles signos de compromiso en el sistema:
+</p>
+
+
+<figure id="org95bad73">
+<img src="images/botnet_detection_flow.png" alt="botnet_detection_flow.png">
+
+</figure>
+
+<p>
+<a href="images/botnet_detection_flow.png">botnet<sub>detection</sub><sub>flow.png</sub></a>
+</p>
+</div>
+<div id="outline-container-orgfd207c2" class="outline-3">
+<h3 id="orgfd207c2">Descripción de los módulos principales</h3>
+<div class="outline-text-3" id="text-orgfd207c2">
+</div>
+<div id="outline-container-org1d49734" class="outline-4">
+<h4 id="org1d49734">1. Verificación de procesos sospechosos</h4>
+<div class="outline-text-4" id="text-org1d49734">
+<p>
+Este módulo examina los procesos en ejecución para detectar:
+</p>
+<ul class="org-ul">
+<li>Procesos con alto consumo de CPU o memoria</li>
+<li>Procesos con nombres asociados a minería de criptomonedas o malware</li>
+<li>Procesos sin archivos binarios en disco (posible indicación de malware en memoria)</li>
+<li>Procesos con nombres ocultos o irreconocibles</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7b63dc2" class="outline-4">
+<h4 id="org7b63dc2">2. Análisis de conexiones de red</h4>
+<div class="outline-text-4" id="text-org7b63dc2">
+<p>
+Esta sección examina las conexiones de red para identificar:
+</p>
+<ul class="org-ul">
+<li>Puertos conocidos por ser utilizados por botnets y malware</li>
+<li>Conexiones a direcciones IP asociadas con servidores de comando y control (C&amp;C)</li>
+<li>Patrones de tráfico inusuales o sospechosos</li>
+<li>Comunicaciones no autorizadas con el exterior</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgace7d74" class="outline-4">
+<h4 id="orgace7d74">3. Verificación de archivos y directorios</h4>
+<div class="outline-text-4" id="text-orgace7d74">
+<p>
+El script busca:
+</p>
+<ul class="org-ul">
+<li>Archivos ejecutables en ubicaciones temporales</li>
+<li>Archivos del sistema modificados recientemente</li>
+<li>Archivos con permisos SUID/SGID sospechosos</li>
+<li>Archivos ocultos con nombres o comportamientos inusuales</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org207ce7b" class="outline-4">
+<h4 id="org207ce7b">4. Análisis de tareas programadas</h4>
+<div class="outline-text-4" id="text-org207ce7b">
+<p>
+Se examinan:
+</p>
+<ul class="org-ul">
+<li>Tareas cron para todos los usuarios</li>
+<li>Archivos cron del sistema</li>
+<li>Timers de systemd</li>
+<li>Scripts de inicio modificados recientemente</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org16d5a45" class="outline-4">
+<h4 id="org16d5a45">5. Verificación de usuarios y permisos</h4>
+<div class="outline-text-4" id="text-org16d5a45">
+<p>
+El script revisa:
+</p>
+<ul class="org-ul">
+<li>Usuarios con privilegios elevados (UID 0)</li>
+<li>Usuarios que pueden ejecutar comandos con sudo</li>
+<li>Sesiones SSH activas y recientes</li>
+<li>Claves de autorización SSH no autorizadas</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org47b312a" class="outline-4">
+<h4 id="org47b312a">6. Análisis de servicios</h4>
+<div class="outline-text-4" id="text-org47b312a">
+<p>
+Esta sección examina:
+</p>
+<ul class="org-ul">
+<li>Servicios activos en el sistema</li>
+<li>Servicios configurados para iniciar automáticamente</li>
+<li>Servicios no estándar o sospechosos</li>
+<li>Servicios añadidos o modificados recientemente</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org11647c6" class="outline-4">
+<h4 id="org11647c6">7. Escaneos de seguridad</h4>
+<div class="outline-text-4" id="text-org11647c6">
+<p>
+El script utiliza herramientas especializadas:
+</p>
+<ul class="org-ul">
+<li>RKHunter para detectar rootkits</li>
+<li>ChkRootkit como método adicional de detección</li>
+<li>Lynis para auditoría de seguridad general</li>
+<li>ClamAV para escaneo de malware</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge84ed99" class="outline-4">
+<h4 id="orge84ed99">8. Análisis de logs</h4>
+<div class="outline-text-4" id="text-orge84ed99">
+<p>
+Se analizan los registros del sistema para identificar:
+</p>
+<ul class="org-ul">
+<li>Intentos de inicio de sesión fallidos</li>
+<li>Conexiones rechazadas</li>
+<li>Mensajes de error críticos</li>
+<li>Patrones de actividad sospechosa</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcf0e469" class="outline-4">
+<h4 id="orgcf0e469">9. Análisis de tráfico de red</h4>
+<div class="outline-text-4" id="text-orgcf0e469">
+<p>
+El script examina:
+</p>
+<ul class="org-ul">
+<li>Estadísticas de uso de red</li>
+<li>Tabla de rutas para identificar redirecciones sospechosas</li>
+<li>Puertos abiertos y servicios escuchando</li>
+<li>Muestras de tráfico de red en tiempo real</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org79767db" class="outline-4">
+<h4 id="org79767db">10. Verificación del rendimiento</h4>
+<div class="outline-text-4" id="text-org79767db">
+<p>
+Se analiza:
+</p>
+<ul class="org-ul">
+<li>Uso de CPU y memoria</li>
+<li>Carga del sistema</li>
+<li>Uso de disco</li>
+<li>Procesos zombie y otros indicadores de actividad anómala</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9da23ac" class="outline-3">
+<h3 id="org9da23ac">Informe y resumen final</h3>
+<div class="outline-text-3" id="text-org9da23ac">
+<p>
+Al finalizar todas las verificaciones, el script genera un informe detallado y un resumen que clasifica el estado del sistema en tres categorías:
+</p>
+
+<ol class="org-ol">
+<li><b>Sistema comprometido</b>: Se detectaron alertas graves que indican alta probabilidad de infección.</li>
+<li><b>Actividad sospechosa</b>: Se encontraron advertencias que requieren investigación adicional.</li>
+<li><b>Sistema limpio</b>: No se detectaron indicios claros de compromiso.</li>
+</ol>
+
+<p>
+El informe completo se guarda en el directorio <code>/var/log/security_checks/</code> con una marca de tiempo para referencia futura y análisis comparativo.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org4f369b7" class="outline-2">
+<h2 id="org4f369b7">Uso práctico del script</h2>
+<div class="outline-text-2" id="text-org4f369b7">
+</div>
+<div id="outline-container-org53820ad" class="outline-3">
+<h3 id="org53820ad">Requisitos previos</h3>
+<div class="outline-text-3" id="text-org53820ad">
+<p>
+Antes de ejecutar el script, asegúrate de tener:
+</p>
+
+<ul class="org-ul">
+<li>Un sistema Linux (preferiblemente Ubuntu o una distribución basada en Debian)</li>
+<li>Acceso root o permisos de sudo</li>
+<li>Conexión a Internet (para instalar las herramientas faltantes)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbb4eacc" class="outline-3">
+<h3 id="orgbb4eacc">Instalación y ejecución</h3>
+<div class="outline-text-3" id="text-orgbb4eacc">
+<ol class="org-ol">
+<li>Copia el script completo en un archivo llamado <code>botnet_detector.sh</code></li>
+<li>Dale permisos de ejecución:</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-bash">chmod +x botnet_detector.sh
+</pre>
+</div>
+
+<ol class="org-ol">
+<li>Ejecuta el script como root:</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo ./botnet_detector.sh
+</pre>
+</div>
+
+<ol class="org-ol">
+<li>El script automáticamente instalará las herramientas necesarias si no están presentes.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgf8dba33" class="outline-3">
+<h3 id="orgf8dba33">Automatización</h3>
+<div class="outline-text-3" id="text-orgf8dba33">
+<p>
+Para monitorear regularmente tu sistema, puedes configurar el script como una tarea programada:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Editar crontab</span>
+sudo crontab -e
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">A&#241;adir una l&#237;nea para ejecutar el script semanalmente (por ejemplo, cada domingo a las 3:00 AM)</span>
+0 3 * * 0 /ruta/al/botnet_detector.sh
+</pre>
+</div>
+
+<p>
+El informe se guardará con la fecha y hora de ejecución, permitiéndote comparar resultados a lo largo del tiempo.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8da5376" class="outline-2">
+<h2 id="org8da5376">Signos comunes de infección por botnet</h2>
+<div class="outline-text-2" id="text-org8da5376">
+<p>
+Además de las verificaciones realizadas por el script, estos son signos adicionales que podrían indicar que tu sistema está comprometido:
+</p>
+</div>
+<div id="outline-container-org340ca59" class="outline-3">
+<h3 id="org340ca59">Signos a nivel de sistema</h3>
+<div class="outline-text-3" id="text-org340ca59">
+<ul class="org-ul">
+<li>Tiempos de arranque o apagado inusualmente largos</li>
+<li>El sistema se vuelve significativamente más lento sin razón aparente</li>
+<li>Crasheos frecuentes o pantallas azules (en Windows)</li>
+<li>Programas que se cierran o abren solos</li>
+<li>Cambios en la página de inicio del navegador o redirecciones web</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9ad489c" class="outline-3">
+<h3 id="org9ad489c">Signos a nivel de red</h3>
+<div class="outline-text-3" id="text-org9ad489c">
+<ul class="org-ul">
+<li>Uso de red elevado incluso cuando no estás utilizando activamente Internet</li>
+<li>Quejas de tu proveedor de Internet sobre tráfico sospechoso</li>
+<li>Tu dirección IP aparece en listas negras de spam</li>
+<li>Tu router tiene configuraciones que no recuerdas haber cambiado</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf10aaff" class="outline-3">
+<h3 id="orgf10aaff">Signos a nivel de usuario</h3>
+<div class="outline-text-3" id="text-orgf10aaff">
+<ul class="org-ul">
+<li>Cuentas de correo electrónico enviando spam sin tu conocimiento</li>
+<li>Actividad en tus cuentas que no reconoces</li>
+<li>Nuevos programas o extensiones del navegador que no instalaste</li>
+<li>Antivirus o firewalls desactivados sin tu intervención</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org493a5e1" class="outline-2">
+<h2 id="org493a5e1">Mejores prácticas para prevenir infecciones</h2>
+<div class="outline-text-2" id="text-org493a5e1">
+<p>
+La prevención es siempre la mejor estrategia. Estas son algunas recomendaciones para mantener tu sistema seguro:
+</p>
+
+<ol class="org-ol">
+<li><b>Mantén tu sistema actualizado</b>
+<ul class="org-ul">
+<li>Aplica parches de seguridad tan pronto como estén disponibles</li>
+<li>Actualiza regularmente todas las aplicaciones</li>
+</ul></li>
+
+<li><b>Configura un firewall robusto</b>
+<ul class="org-ul">
+<li><p>
+Utiliza UFW (Uncomplicated Firewall) en Ubuntu:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">sudo ufw enable
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow ssh
+</pre>
+</div></li>
+</ul></li>
+
+<li><b>Implementa un sistema de detección de intrusiones</b>
+<ul class="org-ul">
+<li>Considera herramientas como Snort, Suricata o OSSEC</li>
+</ul></li>
+
+<li><b>Monitorea la integridad del sistema</b>
+<ul class="org-ul">
+<li><p>
+Instala AIDE (Advanced Intrusion Detection Environment):
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt install aide
+sudo aideinit
+</pre>
+</div></li>
+</ul></li>
+
+<li><b>Refuerza la seguridad SSH</b>
+<ul class="org-ul">
+<li>Desactiva el login como root</li>
+<li>Utiliza autenticación por clave en lugar de contraseñas</li>
+<li>Cambia el puerto por defecto</li>
+</ul></li>
+
+<li><b>Implementa el principio de mínimo privilegio</b>
+<ul class="org-ul">
+<li>Crea usuarios con los permisos mínimos necesarios</li>
+<li>Utiliza sudo para tareas específicas en lugar de login como root</li>
+</ul></li>
+
+<li><b>Realiza backups regularmente</b>
+<ul class="org-ul">
+<li>Mantén copias de seguridad offline o en ubicaciones aisladas</li>
+<li>Verifica periódicamente que los backups funcionen correctamente</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd7a69d0" class="outline-2">
+<h2 id="orgd7a69d0">Qué hacer si encuentras un sistema comprometido</h2>
+<div class="outline-text-2" id="text-orgd7a69d0">
+<p>
+Si el script detecta signos de compromiso o tienes razones para creer que tu sistema es parte de una botnet:
+</p>
+
+<ol class="org-ol">
+<li><b>No apagues el sistema inmediatamente</b>
+<ul class="org-ul">
+<li>El análisis forense podría requerir información volátil en memoria</li>
+</ul></li>
+
+<li><b>Aísla el sistema de la red</b>
+<ul class="org-ul">
+<li>Desconecta físicamente el cable de red o desactiva la wifi</li>
+</ul></li>
+
+<li><b>Documenta todo</b>
+<ul class="org-ul">
+<li>Toma notas detalladas de lo que observas</li>
+<li>Guarda los informes generados por el script</li>
+</ul></li>
+
+<li><b>Preserva evidencia</b>
+<ul class="org-ul">
+<li>Crea una imagen forense si es posible</li>
+<li>Guarda logs y archivos relevantes</li>
+</ul></li>
+
+<li><b>Evalúa el impacto</b>
+<ul class="org-ul">
+<li>Determina qué datos o sistemas podrían estar comprometidos</li>
+<li>Verifica cuentas y servicios críticos</li>
+</ul></li>
+
+<li><b>Reconstruye desde cero</b>
+<ul class="org-ul">
+<li>La reinstalación completa es generalmente más segura que intentar limpiar</li>
+<li>Restaura datos desde backups verificados como limpios</li>
+</ul></li>
+
+<li><b>Aprende y mejora</b>
+<ul class="org-ul">
+<li>Analiza cómo ocurrió la intrusión</li>
+<li>Implementa medidas adicionales para prevenir futuros incidentes</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd21c3ba" class="outline-2">
+<h2 id="orgd21c3ba">Conclusión</h2>
+<div class="outline-text-2" id="text-orgd21c3ba">
+<p>
+La seguridad informática es un proceso continuo, no un estado final. Este script puede ayudarte a detectar posibles compromisos en tu sistema Linux, pero debe ser parte de una estrategia de seguridad más amplia que incluya buenas prácticas preventivas, monitoreo regular, y planes de respuesta a incidentes.
+</p>
+
+<p>
+Utilizando Emacs y org-mode, puedes adaptar y mejorar este script según tus necesidades específicas, programar su ejecución regular, y documentar y analizar sus resultados de manera organizada.
+</p>
+
+<p>
+Recuerda que ninguna herramienta automatizada puede reemplazar el conocimiento y la vigilancia humana. Mantente informado sobre nuevas amenazas y técnicas de ataque, y adapta tus defensas en consecuencia.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-botnet.html">botnet</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-malware.html">malware</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-scripting.html">scripting</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[bash]]></category>
+  <category><![CDATA[botnet]]></category>
+  <category><![CDATA[malware]]></category>
+  <category><![CDATA[scripting]]></category>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-15--detectando-actividad-maliciosa-en-nuestro-sistema-linux-somos-parte-de-una-botnet-.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-15--detectando-actividad-maliciosa-en-nuestro-sistema-linux-somos-parte-de-una-botnet-.html</guid>
+  <pubDate>Tue, 15 Apr 2025 08:20:00 +0200</pubDate>
+</item>
+<item>
+  <title><![CDATA[Cómo crear alias en Gmail usando el signo (+)]]></title>
+  <description><![CDATA[
+<div id="outline-container-org58b9ce2" class="outline-2">
+<h2 id="org58b9ce2">Introducción</h2>
+<div class="outline-text-2" id="text-org58b9ce2">
+<p>
+¿Sabías que puedes crear alias infinitos de tu correo Gmail usando el signo + sin necesidad de crear nuevas cuentas?
+</p>
+
+<p>
+Esto puede ser especialmente útil si gestionas múltiples registros, newsletters, suscripciones, filtros o incluso formularios desde Emacs y quieres mantener tu bandeja de entrada organizada. Vamos a ver cómo funciona.
+</p>
+
+<p>
+<b><b>¿Qué es un alias con + en Gmail?</b></b>
+</p>
+
+<p>
+Gmail permite añadir texto adicional a tu dirección usando el signo `+`, lo que genera un alias que redirige los correos a tu cuenta principal.
+</p>
+
+<p>
+Por ejemplo, si tu correo es:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">mikeblog@gmail.com
+</pre>
+</div>
+
+<p>
+Puedes crear alias como:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">mikeblog+newsletter@gmail.com
+mikeblog+emacs@gmail.com
+mikeblog+blogcomments@gmail.com
+</pre>
+</div>
+
+<p>
+Todos estos correos llegarán a tu bandeja principal de <code>mikeblog@gmail.com</code>, pero puedes identificarlos y filtrarlos fácilmente.
+</p>
+
+<p>
+<b><b>¿Para qué sirve esto en la práctica?</b></b>
+</p>
+
+<ol class="org-ol">
+<li><b><b>Filtros personalizados</b></b> en Gmail:
+Puedes crear reglas automáticas para que los correos enviados a `mikeblog+emacs@gmail.com` se archiven, etiqueten o se reenvíen.</li>
+
+<li><b><b>Evitar spam</b></b>:
+Si te registras en un sitio sospechoso con un alias como `mikeblog+promoX@gmail.com` y luego recibes spam a esa dirección, sabes de dónde vino.</li>
+
+<li><b><b>Usos temáticos</b></b>:
+Organiza tus registros y tareas:
+
+<ul class="org-ul">
+<li>`mikeblog+proyectos@gmail.com` para colaboraciones</li>
+<li>`mikeblog+facturas@gmail.com` para servicios</li>
+<li>`mikeblog+contactoform@gmail.com` para formularios de tu blog</li>
+</ul></li>
+
+<li><b><b>Integración con Emacs</b></b>:
+Si usas paquetes como `mu4e`, `gnus` o `notmuch`, puedes filtrar por alias desde tu configuración de correo en Emacs.</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Ejemplo en mu4e para detectar correos de formularios</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> mu4e-maildir-shortcuts
+      '( (<span style="color: #a44185;">"/inbox"</span>            . ?i)
+         (<span style="color: #a44185;">"/inbox/BlogForm"</span>  . ?f)))
+
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Filtro basado en alias</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> mu4e-bookmarks
+      '( (<span style="color: #a44185;">"to:mikeblog+contactoform@gmail.com"</span> <span style="color: #a44185;">"Formularios del blog"</span> ?c)))
+</pre>
+</div>
+
+<p>
+<b><b>Limitaciones</b></b>
+</p>
+
+<ul class="org-ul">
+<li>El sistema depende de que el servicio donde introduzcas el alias respete la dirección. Algunos formularios rechazan correos con `+`.</li>
+<li>Aunque Gmail lo acepta, otros proveedores pueden no reconocerlo.</li>
+<li>No es seguridad real, solo una forma de organización y trazabilidad.</li>
+</ul>
+
+<p>
+<b><b>Conclusión</b></b>
+</p>
+
+<p>
+El uso de alias con `+` en Gmail es una herramienta poderosa, especialmente si automatizas y gestionas muchas entradas desde Emacs o tu blog. Aprovecha esta funcionalidad para mantener orden, control y claridad en tu comunicación digital.
+</p>
+
+<blockquote>
+<p>
+Alias no es solo una máscara, es una forma de pensar en estructura desde tu bandeja de entrada. —Mike, desde Emacs con esteroides.
+</p>
+</blockquote>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gmail.html">gmail</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-correo.html">correo</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-alias.html">alias</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-org-static-blog.html">org-static-blog</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-consejos.html">consejos</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[gmail]]></category>
+  <category><![CDATA[correo]]></category>
+  <category><![CDATA[alias]]></category>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[org-static-blog]]></category>
+  <category><![CDATA[consejos]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-15-c-mo-crear-alias-en-gmail-usando-el-signo-.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-15-c-mo-crear-alias-en-gmail-usando-el-signo-.html</guid>
+  <pubDate>Tue, 15 Apr 2025 07:41:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[Cronología y Desarrollo de Emacs]]></title>
   <description><![CDATA[

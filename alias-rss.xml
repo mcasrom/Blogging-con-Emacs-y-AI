@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title><![CDATA[Example.com - alias]]></title>
+<description><![CDATA[Example.com - alias]]></description>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-alias.html</link>
+<lastBuildDate>Tue, 15 Apr 2025 08:57:26 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Cómo crear alias en Gmail usando el signo (+)]]></title>
+  <description><![CDATA[
+<div id="outline-container-org58b9ce2" class="outline-2">
+<h2 id="org58b9ce2">Introducción</h2>
+<div class="outline-text-2" id="text-org58b9ce2">
+<p>
+¿Sabías que puedes crear alias infinitos de tu correo Gmail usando el signo + sin necesidad de crear nuevas cuentas?
+</p>
+
+<p>
+Esto puede ser especialmente útil si gestionas múltiples registros, newsletters, suscripciones, filtros o incluso formularios desde Emacs y quieres mantener tu bandeja de entrada organizada. Vamos a ver cómo funciona.
+</p>
+
+<p>
+<b><b>¿Qué es un alias con + en Gmail?</b></b>
+</p>
+
+<p>
+Gmail permite añadir texto adicional a tu dirección usando el signo `+`, lo que genera un alias que redirige los correos a tu cuenta principal.
+</p>
+
+<p>
+Por ejemplo, si tu correo es:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">mikeblog@gmail.com
+</pre>
+</div>
+
+<p>
+Puedes crear alias como:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">mikeblog+newsletter@gmail.com
+mikeblog+emacs@gmail.com
+mikeblog+blogcomments@gmail.com
+</pre>
+</div>
+
+<p>
+Todos estos correos llegarán a tu bandeja principal de <code>mikeblog@gmail.com</code>, pero puedes identificarlos y filtrarlos fácilmente.
+</p>
+
+<p>
+<b><b>¿Para qué sirve esto en la práctica?</b></b>
+</p>
+
+<ol class="org-ol">
+<li><b><b>Filtros personalizados</b></b> en Gmail:
+Puedes crear reglas automáticas para que los correos enviados a `mikeblog+emacs@gmail.com` se archiven, etiqueten o se reenvíen.</li>
+
+<li><b><b>Evitar spam</b></b>:
+Si te registras en un sitio sospechoso con un alias como `mikeblog+promoX@gmail.com` y luego recibes spam a esa dirección, sabes de dónde vino.</li>
+
+<li><b><b>Usos temáticos</b></b>:
+Organiza tus registros y tareas:
+
+<ul class="org-ul">
+<li>`mikeblog+proyectos@gmail.com` para colaboraciones</li>
+<li>`mikeblog+facturas@gmail.com` para servicios</li>
+<li>`mikeblog+contactoform@gmail.com` para formularios de tu blog</li>
+</ul></li>
+
+<li><b><b>Integración con Emacs</b></b>:
+Si usas paquetes como `mu4e`, `gnus` o `notmuch`, puedes filtrar por alias desde tu configuración de correo en Emacs.</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Ejemplo en mu4e para detectar correos de formularios</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> mu4e-maildir-shortcuts
+      '( (<span style="color: #a44185;">"/inbox"</span>            . ?i)
+         (<span style="color: #a44185;">"/inbox/BlogForm"</span>  . ?f)))
+
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Filtro basado en alias</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> mu4e-bookmarks
+      '( (<span style="color: #a44185;">"to:mikeblog+contactoform@gmail.com"</span> <span style="color: #a44185;">"Formularios del blog"</span> ?c)))
+</pre>
+</div>
+
+<p>
+<b><b>Limitaciones</b></b>
+</p>
+
+<ul class="org-ul">
+<li>El sistema depende de que el servicio donde introduzcas el alias respete la dirección. Algunos formularios rechazan correos con `+`.</li>
+<li>Aunque Gmail lo acepta, otros proveedores pueden no reconocerlo.</li>
+<li>No es seguridad real, solo una forma de organización y trazabilidad.</li>
+</ul>
+
+<p>
+<b><b>Conclusión</b></b>
+</p>
+
+<p>
+El uso de alias con `+` en Gmail es una herramienta poderosa, especialmente si automatizas y gestionas muchas entradas desde Emacs o tu blog. Aprovecha esta funcionalidad para mantener orden, control y claridad en tu comunicación digital.
+</p>
+
+<blockquote>
+<p>
+Alias no es solo una máscara, es una forma de pensar en estructura desde tu bandeja de entrada. —Mike, desde Emacs con esteroides.
+</p>
+</blockquote>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gmail.html">gmail</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-correo.html">correo</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-alias.html">alias</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-org-static-blog.html">org-static-blog</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-consejos.html">consejos</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[gmail]]></category>
+  <category><![CDATA[correo]]></category>
+  <category><![CDATA[alias]]></category>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[org-static-blog]]></category>
+  <category><![CDATA[consejos]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-15-c-mo-crear-alias-en-gmail-usando-el-signo-.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-15-c-mo-crear-alias-en-gmail-usando-el-signo-.html</guid>
+  <pubDate>Tue, 15 Apr 2025 07:41:00 +0200</pubDate>
+</item>
+</channel>
+</rss>
