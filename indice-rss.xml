@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - indice]]></title>
 <description><![CDATA[Example.com - indice]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-indice.html</link>
-<lastBuildDate>Mon, 14 Apr 2025 07:56:41 +0200</lastBuildDate>
+<lastBuildDate>Tue, 15 Apr 2025 02:20:50 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -578,6 +578,24 @@
 </tr>
 
 <tr>
+<td class="org-right">2025-04-14</td>
+<td class="org-left">La disrupción como concepto político: origen, evolución y dimensiones</td>
+<td class="org-left"><a href="2025-04-14-la-disrupci-n-como-concepto-pol-tico-origen-evoluci-n-y-dimensiones.html">Enlace</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-04-15</td>
+<td class="org-left">En memoria de Mario Vargas Llosa: El último gran escritor del boom latinoamericano (i)</td>
+<td class="org-left"><a href="2025-04-15-en-memoria-de-mario-vargas-llosa-el-ltimo-gran-escritor-del-boom-latinoamericano-i-.html">Enlace</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-04-15</td>
+<td class="org-left">Obras esenciales de Mario Vargas Llosa (ii)</td>
+<td class="org-left"><a href="2025-04-15-obras-esenciales-de-mario-vargas-llosa-ii-.html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
@@ -619,30 +637,30 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Mon, 14 Apr 2025 06:05:00 +0200</pubDate>
+  <pubDate>Tue, 15 Apr 2025 02:14:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Creación Indicador de Calidad de Libertad y su Aplicación KPI (i)]]></title>
   <description><![CDATA[
-<div id="outline-container-org56a1387" class="outline-2">
-<h2 id="org56a1387">Documento: Indicador KPI para Medir el Grado de Libertad en Países</h2>
-<div class="outline-text-2" id="text-org56a1387">
+<div id="outline-container-orga481466" class="outline-2">
+<h2 id="orga481466">Documento: Indicador KPI para Medir el Grado de Libertad en Países</h2>
+<div class="outline-text-2" id="text-orga481466">
 </div>
-<div id="outline-container-org0c6bde0" class="outline-3">
-<h3 id="org0c6bde0">1. Definición del KPI "Índice de Libertad Integral (ILI)"</h3>
-<div class="outline-text-3" id="text-org0c6bde0">
+<div id="outline-container-orgeeb04b3" class="outline-3">
+<h3 id="orgeeb04b3">1. Definición del KPI "Índice de Libertad Integral (ILI)"</h3>
+<div class="outline-text-3" id="text-orgeeb04b3">
 </div>
-<div id="outline-container-orga7d915a" class="outline-4">
-<h4 id="orga7d915a">1.1. Objetivo</h4>
-<div class="outline-text-4" id="text-orga7d915a">
+<div id="outline-container-org26cdd45" class="outline-4">
+<h4 id="org26cdd45">1.1. Objetivo</h4>
+<div class="outline-text-4" id="text-org26cdd45">
 <p>
 Medir el grado de libertad en prensa, expresión, manifestación y derechos civiles en países, combinando datos cuantitativos y cualitativos.
 </p>
 </div>
 </div>
-<div id="outline-container-org9ecb5cc" class="outline-4">
-<h4 id="org9ecb5cc">1.2. Dimensiones y Subindicadores (Ponderación)</h4>
-<div class="outline-text-4" id="text-org9ecb5cc">
+<div id="outline-container-orge4f4c36" class="outline-4">
+<h4 id="orge4f4c36">1.2. Dimensiones y Subindicadores (Ponderación)</h4>
+<div class="outline-text-4" id="text-orge4f4c36">
 <table border="1" rules="all" frame="border">
 
 
@@ -718,9 +736,9 @@ Medir el grado de libertad en prensa, expresión, manifestación y derechos civi
 </table>
 </div>
 </div>
-<div id="outline-container-orged1bf7e" class="outline-4">
-<h4 id="orged1bf7e">1.3. Escala de Puntuación</h4>
-<div class="outline-text-4" id="text-orged1bf7e">
+<div id="outline-container-org11b917f" class="outline-4">
+<h4 id="org11b917f">1.3. Escala de Puntuación</h4>
+<div class="outline-text-4" id="text-org11b917f">
 <ul class="org-ul">
 <li>0-30: Represión severa</li>
 <li>31-60: Restricciones significativas</li>
@@ -730,13 +748,13 @@ Medir el grado de libertad en prensa, expresión, manifestación y derechos civi
 </div>
 </div>
 </div>
-<div id="outline-container-org883473d" class="outline-3">
-<h3 id="org883473d">2. Aplicación del ILI por Región (2024)</h3>
-<div class="outline-text-3" id="text-org883473d">
+<div id="outline-container-orge316f82" class="outline-3">
+<h3 id="orge316f82">2. Aplicación del ILI por Región (2024)</h3>
+<div class="outline-text-3" id="text-orge316f82">
 </div>
-<div id="outline-container-org175c58b" class="outline-4">
-<h4 id="org175c58b">2.1. Europa Occidental</h4>
-<div class="outline-text-4" id="text-org175c58b">
+<div id="outline-container-orgcb63b25" class="outline-4">
+<h4 id="orgcb63b25">2.1. Europa Occidental</h4>
+<div class="outline-text-4" id="text-orgcb63b25">
 <table border="1" rules="all" frame="border">
 
 
@@ -789,9 +807,9 @@ Medir el grado de libertad en prensa, expresión, manifestación y derechos civi
 </ul>
 </div>
 </div>
-<div id="outline-container-orga26bc67" class="outline-4">
-<h4 id="orga26bc67">2.2. América y Sudamérica</h4>
-<div class="outline-text-4" id="text-orga26bc67">
+<div id="outline-container-org700c95c" class="outline-4">
+<h4 id="org700c95c">2.2. América y Sudamérica</h4>
+<div class="outline-text-4" id="text-org700c95c">
 <table border="1" rules="all" frame="border">
 
 
@@ -844,9 +862,9 @@ Medir el grado de libertad en prensa, expresión, manifestación y derechos civi
 </ul>
 </div>
 </div>
-<div id="outline-container-org6c1e6ce" class="outline-4">
-<h4 id="org6c1e6ce">2.3. Área Rusa</h4>
-<div class="outline-text-4" id="text-org6c1e6ce">
+<div id="outline-container-org46ef282" class="outline-4">
+<h4 id="org46ef282">2.3. Área Rusa</h4>
+<div class="outline-text-4" id="text-org46ef282">
 <table border="1" rules="all" frame="border">
 
 
@@ -899,9 +917,9 @@ Medir el grado de libertad en prensa, expresión, manifestación y derechos civi
 </ul>
 </div>
 </div>
-<div id="outline-container-org1f90cda" class="outline-4">
-<h4 id="org1f90cda">2.4. China y Asia</h4>
-<div class="outline-text-4" id="text-org1f90cda">
+<div id="outline-container-org202989b" class="outline-4">
+<h4 id="org202989b">2.4. China y Asia</h4>
+<div class="outline-text-4" id="text-org202989b">
 <table border="1" rules="all" frame="border">
 
 
@@ -955,28 +973,28 @@ Medir el grado de libertad en prensa, expresión, manifestación y derechos civi
 </div>
 </div>
 </div>
-<div id="outline-container-orgcfeb752" class="outline-3">
-<h3 id="orgcfeb752">3. Gráficos Comparativos (Generados con Datos)</h3>
-<div class="outline-text-3" id="text-orgcfeb752">
+<div id="outline-container-org2095bff" class="outline-3">
+<h3 id="org2095bff">3. Gráficos Comparativos (Generados con Datos)</h3>
+<div class="outline-text-3" id="text-org2095bff">
 
-<figure id="org23db618">
+<figure id="orge1aaf39">
 <img src="images/ili_regiones.png" alt="ili_regiones.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org5a3e1f0" class="outline-3">
-<h3 id="org5a3e1f0">4. Limitaciones y Recomendaciones</h3>
-<div class="outline-text-3" id="text-org5a3e1f0">
+<div id="outline-container-org84b2aa3" class="outline-3">
+<h3 id="org84b2aa3">4. Limitaciones y Recomendaciones</h3>
+<div class="outline-text-3" id="text-org84b2aa3">
 <ul class="org-ul">
 <li><span class="underline">Sesgo de datos</span>: Dependencia de ONGs occidentales para métricas en regímenes autoritarios.</li>
 <li><span class="underline">Propuesta</span>: Incluir encuestas a ciudadanos locales para ajustar ponderaciones.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbbb1cea" class="outline-3">
-<h3 id="orgbbb1cea">5. Referencias</h3>
-<div class="outline-text-3" id="text-orgbbb1cea">
+<div id="outline-container-org6400c34" class="outline-3">
+<h3 id="org6400c34">5. Referencias</h3>
+<div class="outline-text-3" id="text-org6400c34">
 <ul class="org-ul">
 <li>Reporteros Sin Fronteras (2024).</li>
 <li>Clasificación Mundial de la Libertad de Prensa.</li>
@@ -990,13 +1008,13 @@ Medir el grado de libertad en prensa, expresión, manifestación y derechos civi
 </div>
 </div>
 </div>
-<div id="outline-container-org3593d8f" class="outline-2">
-<h2 id="org3593d8f">Referencias Documentales</h2>
-<div class="outline-text-2" id="text-org3593d8f">
+<div id="outline-container-org63c0109" class="outline-2">
+<h2 id="org63c0109">Referencias Documentales</h2>
+<div class="outline-text-2" id="text-org63c0109">
 </div>
-<div id="outline-container-org233d026" class="outline-3">
-<h3 id="org233d026">Informes y Clasificaciones Internacionales</h3>
-<div class="outline-text-3" id="text-org233d026">
+<div id="outline-container-orgf89bb05" class="outline-3">
+<h3 id="orgf89bb05">Informes y Clasificaciones Internacionales</h3>
+<div class="outline-text-3" id="text-orgf89bb05">
 <ul class="org-ul">
 <li>1. Reporteros Sin Fronteras (RSF). (2024). Clasificación Mundial de la Libertad de Prensa 2024. <a href="https://rsf.org/es/clasificacion">https://rsf.org/es/clasificacion</a></li>
 
@@ -1008,9 +1026,9 @@ Medir el grado de libertad en prensa, expresión, manifestación y derechos civi
 </ul>
 </div>
 </div>
-<div id="outline-container-org42f642e" class="outline-3">
-<h3 id="org42f642e">Organizaciones de Derechos Humanos</h3>
-<div class="outline-text-3" id="text-org42f642e">
+<div id="outline-container-orga610b28" class="outline-3">
+<h3 id="orga610b28">Organizaciones de Derechos Humanos</h3>
+<div class="outline-text-3" id="text-orga610b28">
 <ul class="org-ul">
 <li>5. Amnistía Internacional. (2024). Informe 2023/24: La situación de los derechos humanos en el mundo. <a href="https://www.amnesty.org/es/documents/pol10/6422/2024/es/">https://www.amnesty.org/es/documents/pol10/6422/2024/es/</a></li>
 
@@ -1020,9 +1038,9 @@ Medir el grado de libertad en prensa, expresión, manifestación y derechos civi
 </ul>
 </div>
 </div>
-<div id="outline-container-org93df2ec" class="outline-3">
-<h3 id="org93df2ec">Documentos Legales y Constitucionales</h3>
-<div class="outline-text-3" id="text-org93df2ec">
+<div id="outline-container-orgb4d8cf5" class="outline-3">
+<h3 id="orgb4d8cf5">Documentos Legales y Constitucionales</h3>
+<div class="outline-text-3" id="text-orgb4d8cf5">
 <ul class="org-ul">
 <li>8. Constitución de la República Popular China. (1982). Artículo 35. <a href="http://www.npc.gov.cn/englishnpc/constitution2019/201911/1f65146fb6104dd3a2793875d19b5b29.shtml">http://www.npc.gov.cn/englishnpc/constitution2019/201911/1f65146fb6104dd3a2793875d19b5b29.shtml</a></li>
 
@@ -1032,9 +1050,9 @@ Medir el grado de libertad en prensa, expresión, manifestación y derechos civi
 </ul>
 </div>
 </div>
-<div id="outline-container-org2bf80a0" class="outline-3">
-<h3 id="org2bf80a0">Estudios Académicos y de Think Tanks</h3>
-<div class="outline-text-3" id="text-org2bf80a0">
+<div id="outline-container-orgd443e4c" class="outline-3">
+<h3 id="orgd443e4c">Estudios Académicos y de Think Tanks</h3>
+<div class="outline-text-3" id="text-orgd443e4c">
 <ul class="org-ul">
 <li>11. Coppedge, M. et al. (2024). "V-Dem Codebook v14" Varieties of Democracy (V-Dem) Project. <a href="https://www.v-dem.net/static/website/img/refs/codebookv14.pdf">https://www.v-dem.net/static/website/img/refs/codebookv14.pdf</a></li>
 
@@ -1044,9 +1062,9 @@ Medir el grado de libertad en prensa, expresión, manifestación y derechos civi
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfb41363" class="outline-3">
-<h3 id="orgfb41363">Informes Regionales Específicos</h3>
-<div class="outline-text-3" id="text-orgfb41363">
+<div id="outline-container-org8a4b455" class="outline-3">
+<h3 id="org8a4b455">Informes Regionales Específicos</h3>
+<div class="outline-text-3" id="text-org8a4b455">
 <ul class="org-ul">
 <li>14. Comisión Interamericana de Derechos Humanos (CIDH). (2024). Informe anual 2023. <a href="http://www.oas.org/es/cidh/informes/anuales.asp">http://www.oas.org/es/cidh/informes/anuales.asp</a></li>
 
@@ -1056,9 +1074,9 @@ Medir el grado de libertad en prensa, expresión, manifestación y derechos civi
 </ul>
 </div>
 </div>
-<div id="outline-container-org990ac0d" class="outline-3">
-<h3 id="org990ac0d">Datos y Estadísticas</h3>
-<div class="outline-text-3" id="text-org990ac0d">
+<div id="outline-container-org55b7e3d" class="outline-3">
+<h3 id="org55b7e3d">Datos y Estadísticas</h3>
+<div class="outline-text-3" id="text-org55b7e3d">
 <ul class="org-ul">
 <li>17. UNESCO. (2024). World Trends in Freedom of Expression and Media Development: Global Report 2024. <a href="https://en.unesco.org/world-media-trends">https://en.unesco.org/world-media-trends</a></li>
 
@@ -1068,9 +1086,9 @@ Medir el grado de libertad en prensa, expresión, manifestación y derechos civi
 </ul>
 </div>
 </div>
-<div id="outline-container-org1a0205f" class="outline-3">
-<h3 id="org1a0205f">Artículos y Análisis Especializados</h3>
-<div class="outline-text-3" id="text-org1a0205f">
+<div id="outline-container-orgb936d57" class="outline-3">
+<h3 id="orgb936d57">Artículos y Análisis Especializados</h3>
+<div class="outline-text-3" id="text-orgb936d57">
 <ul class="org-ul">
 <li>20. Reporters Without Borders. (2024). "The Great Firewall of China". <a href="https://rsf.org/en/great-firewall-china-0">https://rsf.org/en/great-firewall-china-0</a></li>
 
@@ -1086,9 +1104,9 @@ Answer from Perplexity: pplx.ai/share
 </div>
 </div>
 </div>
-<div id="outline-container-org81f69bb" class="outline-2">
-<h2 id="org81f69bb">Observaciones</h2>
-<div class="outline-text-2" id="text-org81f69bb">
+<div id="outline-container-orge5b0e11" class="outline-2">
+<h2 id="orge5b0e11">Observaciones</h2>
+<div class="outline-text-2" id="text-orge5b0e11">
 <ul class="org-ul">
 <li>Los motores de IA chinos suelen bloquearse o limitar las respuestas cuando se les presenta el prompt relacionado con la "libertad". Este comportamiento está asociado con restricciones gubernamentales o políticas de censura.</li>
 </ul>

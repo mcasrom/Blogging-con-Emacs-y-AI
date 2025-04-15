@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - emacs]]></title>
 <description><![CDATA[Example.com - emacs]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-emacs.html</link>
-<lastBuildDate>Mon, 14 Apr 2025 07:57:09 +0200</lastBuildDate>
+<lastBuildDate>Tue, 15 Apr 2025 02:21:19 +0200</lastBuildDate>
 <item>
   <title><![CDATA[La Cultura de la Vibra: Un Glosario de Términos con el Prefijo Vibra]]></title>
   <description><![CDATA[
@@ -2575,252 +2575,565 @@ Con 30 términos en la lista, queda claro que la IA no solo acelera la programac
 <item>
   <title><![CDATA[Configurar Emacs para creación de Graficos]]></title>
   <description><![CDATA[
-<div id="outline-container-org56d3dd3" class="outline-2">
-<h2 id="org56d3dd3"><span class="section-number-2">1.</span> 📌 Configuración esencial</h2>
+<div id="outline-container-org9a98fc1" class="outline-2">
+<h2 id="org9a98fc1"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-orgfad4b98" class="outline-3">
-<h3 id="orgfad4b98"><span class="section-number-3">1.1.</span> 1. Instalación de dependencias</h3>
-<div class="outline-text-3" id="text-1-1">
 <p>
-```
+Uno de los grandes poderes ocultos de Emacs y Org Mode es su capacidad para generar gráficos directamente desde el texto. Esta funcionalidad permite a los usuarios crear visualizaciones sofisticadas sin salir de su editor, manteniendo todo el contenido en archivos de texto plano que son fáciles de versionar y mantener.
 </p>
 
 <p>
-sudo apt install gnuplot plantuml graphviz ditaa
+En este tutorial, exploraremos cómo configurar Emacs para trabajar con diferentes tipos de gráficos directamente desde Org Mode, incluyendo:
 </p>
 
-<p>
-brew install gnuplot plantuml graphviz ditaa
-```
-</p>
-</div>
-</div>
-<div id="outline-container-orgd981238" class="outline-3">
-<h3 id="orgd981238"><span class="section-number-3">1.2.</span> 2. Configuración de Emacs (<code>/.emacs.d/init.el</code>)</h3>
-<div class="outline-text-3" id="text-1-2">
-<p>
-```
-;; Activar lenguajes de Org-babel
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((gnuplot . t)
-   (plantuml . t)
-   (dot . t)
-   (ditaa . t)))
-</p>
+<ul class="org-ul">
+<li>Gnuplot para gráficos científicos y estadísticos</li>
+<li>Ditaa para diagramas ASCII</li>
+<li>Graphviz (DOT) para diagramas estructurales</li>
+<li>PlantUML para diagramas UML</li>
+</ul>
 
 <p>
-;; Rutas específicas para Java (necesario para PlantUML/Ditaa)
-(setq org-plantuml-jar-path "/usr/share/plantuml/plantuml.jar")
-(setq org-ditaa-jar-path "/usr/share/ditaa/ditaa.jar")
-</p>
-
-<p>
-;; Configuración avanzada de Gnuplot
-(setq org-plot/gnuplot-terminal "pngcairo enhanced font 'Verdana,10'")
-```
+Al final de este tutorial, podrás integrar gráficos impresionantes en tus documentos de Org Mode que se exportarán perfectamente a HTML, PDF y otros formatos.
 </p>
 </div>
 </div>
-</div>
-<div id="outline-container-org6662877" class="outline-2">
-<h2 id="org6662877"><span class="section-number-2">2.</span> 📊 Ejemplo 1: Gráfico estadístico con Gnuplot</h2>
+<div id="outline-container-org38a3adf" class="outline-2">
+<h2 id="org38a3adf"><span class="section-number-2">2.</span> Requisitos previos</h2>
 <div class="outline-text-2" id="text-2">
-</div>
-<div id="outline-container-orgb7c971b" class="outline-3">
-<h3 id="orgb7c971b"><span class="section-number-3">2.1.</span> Tabla de datos climáticos</h3>
-<div class="outline-text-3" id="text-2-1">
-<table id="orgc62d9f0">
+<p>
+Antes de comenzar, asegúrate de tener instalado:
+</p>
 
-
-<colgroup>
-<col  class="org-left">
-
-<col  class="org-right">
-
-<col  class="org-right">
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">Mes</th>
-<th scope="col" class="org-right">Temp (°C)</th>
-<th scope="col" class="org-right">Lluvia (mm)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">Enero</td>
-<td class="org-right">15.2</td>
-<td class="org-right">82.4</td>
-</tr>
-
-<tr>
-<td class="org-left">Febrero</td>
-<td class="org-right">16.8</td>
-<td class="org-right">45.1</td>
-</tr>
-
-<tr>
-<td class="org-left">Marzo</td>
-<td class="org-right">19.3</td>
-<td class="org-right">30.6</td>
-</tr>
-
-<tr>
-<td class="org-left">Abril</td>
-<td class="org-right">22.1</td>
-<td class="org-right">18.9</td>
-</tr>
-</tbody>
-</table>
-
-
-<figure id="orgd0ca3b9">
-<img src="grafico-clima.png" alt="grafico-clima.png">
-
-</figure>
+<ul class="org-ul">
+<li>Emacs (versión 27.1 o superior recomendada)</li>
+<li>Org Mode (versión 9.4 o superior)</li>
+<li>Los programas externos correspondientes para cada tipo de gráfico</li>
+</ul>
 </div>
 </div>
-</div>
-<div id="outline-container-orgcfca41c" class="outline-2">
-<h2 id="orgcfca41c"><span class="section-number-2">3.</span> 🌳 Ejemplo 2: Diagrama con PlantUML</h2>
+<div id="outline-container-orge24413d" class="outline-2">
+<h2 id="orge24413d"><span class="section-number-2">3.</span> Configuración básica de Org Babel</h2>
 <div class="outline-text-2" id="text-3">
+<p>
+Lo primero que necesitamos es configurar Org Babel para permitir la ejecución de bloques de código que generarán nuestros gráficos. Añade este código a tu <code>init.el</code> o <code>.emacs</code>:
+</p>
 
-<figure id="orgd9dc70a">
-<img src="diagrama-clases.png" alt="diagrama-clases.png">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Activar Org Babel para los lenguajes que usaremos</span>
+(<span style="color: #D70000;">with-eval-after-load</span> 'org
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((emacs-lisp . t)
+     (gnuplot . t)
+     (ditaa . t)
+     (dot . t)
+     (plantuml . t)
+     (mermaid . t))))
 
-</figure>
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">No pedir confirmaci&#243;n al ejecutar bloques de c&#243;digo</span>
+(<span style="color: #D70000;">setq</span> org-confirm-babel-evaluate nil)
+</pre>
 </div>
 </div>
-<div id="outline-container-org7639084" class="outline-2">
-<h2 id="org7639084"><span class="section-number-2">4.</span> 🛠 Personalización avanzada</h2>
+</div>
+<div id="outline-container-org172b3d3" class="outline-2">
+<h2 id="org172b3d3"><span class="section-number-2">4.</span> Configuración de Gnuplot</h2>
 <div class="outline-text-2" id="text-4">
+<p>
+<a href="https://www.gnuplot.info/">Gnuplot</a> es una herramienta potente para generar gráficos científicos y estadísticos.
+</p>
 </div>
-<div id="outline-container-org086e090" class="outline-3">
-<h3 id="org086e090"><span class="section-number-3">4.1.</span> Temas visuales para Gnuplot</h3>
+<div id="outline-container-org0bd11a7" class="outline-3">
+<h3 id="org0bd11a7"><span class="section-number-3">4.1.</span> Instalación</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
-```
+En sistemas basados en Debian/Ubuntu:
 </p>
 
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt-get install gnuplot
+</pre>
+</div>
+
 <p>
-set style line 1 lc rgb '#8b1a0e' pt 7 ps 1 lt 1 lw 2
-set style line 2 lc rgb '#5e9c36' pt 5 ps 1 lt 1 lw 2
-set style increment user
-```
+En macOS con Homebrew:
 </p>
+
+<div class="org-src-container">
+<pre class="src src-bash">brew install gnuplot
+</pre>
 </div>
 </div>
-<div id="outline-container-org2af363c" class="outline-3">
-<h3 id="org2af363c"><span class="section-number-3">4.2.</span> Configuración de tamaño para PlantUML</h3>
+</div>
+<div id="outline-container-org1a9590f" class="outline-3">
+<h3 id="org1a9590f"><span class="section-number-3">4.2.</span> Configuración en Emacs</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
-```
-;; Tamaño predeterminado imágenes
-(setq org-plantuml-args '("-pipe" "-tsvg" "-width 1920" "-height 1080"))
-```
+Instala el paquete <code>gnuplot-mode</code> usando <code>package.el</code>:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">gnuplot</span>
+  <span style="color: #1F55A0;">:ensure</span> t)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org8ab48f0" class="outline-3">
+<h3 id="org8ab48f0"><span class="section-number-3">4.3.</span> Ejemplo de uso</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+Crea un bloque de código en tu archivo Org Mode:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC gnuplot :file ./images/seno-coseno.png :exports both</span>
+<span style="color: #AF005F; background-color: #E9E9F2;">set</span><span style="background-color: #E9E9F2;"> terminal pngcairo size 800,600 enhanced font </span><span style="color: #005F00; background-color: #E9E9F2;">"Arial,12"</span>
+<span style="color: #AF005F; background-color: #E9E9F2;">set</span><span style="background-color: #E9E9F2;"> </span><span style="color: #1F55A0; background-color: #E9E9F2;">title</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Funciones seno y coseno"</span>
+<span style="color: #AF005F; background-color: #E9E9F2;">set</span><span style="background-color: #E9E9F2;"> xlabel </span><span style="color: #005F00; background-color: #E9E9F2;">"x"</span>
+<span style="color: #AF005F; background-color: #E9E9F2;">set</span><span style="background-color: #E9E9F2;"> ylabel </span><span style="color: #005F00; background-color: #E9E9F2;">"y"</span>
+<span style="color: #AF005F; background-color: #E9E9F2;">set</span><span style="background-color: #E9E9F2;"> grid</span>
+<span style="color: #AF005F; background-color: #E9E9F2;">set</span><span style="background-color: #E9E9F2;"> key right bottom</span>
+<span style="color: #D70000; background-color: #E9E9F2;">plot</span><span style="background-color: #E9E9F2;"> </span><span style="color: #AF8700; background-color: #E9E9F2;">sin</span><span style="background-color: #E9E9F2;">(x) </span><span style="color: #1F55A0; background-color: #E9E9F2;">title</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"sin(x)"</span><span style="background-color: #E9E9F2;"> </span><span style="color: #1F55A0; background-color: #E9E9F2;">with</span><span style="background-color: #E9E9F2;"> </span><span style="color: #AF8700; background-color: #E9E9F2;">lines</span><span style="background-color: #E9E9F2;"> </span><span style="color: #1F55A0; background-color: #E9E9F2;">linewidth</span><span style="background-color: #E9E9F2;"> 2, \</span>
+<span style="background-color: #E9E9F2;">     </span><span style="color: #AF8700; background-color: #E9E9F2;">cos</span><span style="background-color: #E9E9F2;">(x) </span><span style="color: #1F55A0; background-color: #E9E9F2;">title</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"cos(x)"</span><span style="background-color: #E9E9F2;"> </span><span style="color: #1F55A0; background-color: #E9E9F2;">with</span><span style="background-color: #E9E9F2;"> </span><span style="color: #AF8700; background-color: #E9E9F2;">lines</span><span style="background-color: #E9E9F2;"> </span><span style="color: #1F55A0; background-color: #E9E9F2;">linewidth</span><span style="background-color: #E9E9F2;"> 2 </span><span style="color: #1F55A0; background-color: #E9E9F2;">linecolor</span><span style="background-color: #E9E9F2;"> rgb </span><span style="color: #005F00; background-color: #E9E9F2;">"red"</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+</pre>
+</div>
+
+<p>
+Al ejecutar este bloque (con <code>C-c C-c</code>), obtendrás una imagen como esta:
+</p>
+
+
+<figure id="org1d2fd35">
+<img src="images/seno-coseno.png" alt="seno-coseno.png">
+
+<figcaption><span class="figure-number">Figure 1: </span>Gráfico de las funciones seno y coseno</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org56edb83" class="outline-2">
+<h2 id="org56edb83"><span class="section-number-2">5.</span> Configuración de Ditaa</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+<a href="http://ditaa.sourceforge.net/">Ditaa</a> convierte diagramas ASCII en imágenes.
 </p>
 </div>
+<div id="outline-container-org2b1868b" class="outline-3">
+<h3 id="org2b1868b"><span class="section-number-3">5.1.</span> Instalación</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+En sistemas basados en Debian/Ubuntu:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt-get install ditaa
+</pre>
+</div>
+
+<p>
+En macOS con Homebrew:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">brew install ditaa
+</pre>
 </div>
 </div>
-<div id="outline-container-org44131b9" class="outline-2">
-<h2 id="org44131b9"><span class="section-number-2">5.</span> ⚡ Flujo de trabajo optimizado</h2>
-<div class="outline-text-2" id="text-5">
-<ol class="org-ol">
-<li>Crear tabla de datos con <code>org-table-create</code></li>
-<li>Insertar bloque de código (<code>C-c C-, g</code> para Gnuplot)</li>
-<li>Ejecutar con <code>C-c C-c</code></li>
-<li>Previsualizar con <code>C-c C-x C-v</code></li>
-<li>Exportar a HTML/PDF (<code>C-c C-e</code>)</li>
-</ol>
+</div>
+<div id="outline-container-orgf30a3b5" class="outline-3">
+<h3 id="orgf30a3b5"><span class="section-number-3">5.2.</span> Configuración en Emacs</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Debes especificar la ruta al ejecutable de ditaa:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">setq</span> org-ditaa-jar-path <span style="color: #005F00;">"/usr/share/ditaa/ditaa.jar"</span>)  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Ajusta esta ruta seg&#250;n tu sistema</span>
+</pre>
 </div>
 </div>
-<div id="outline-container-org59e44a8" class="outline-2">
-<h2 id="org59e44a8"><span class="section-number-2">6.</span> 🔍 Solución de problemas comunes</h2>
+</div>
+<div id="outline-container-org2d5ba50" class="outline-3">
+<h3 id="org2d5ba50"><span class="section-number-3">5.3.</span> Ejemplo de uso</h3>
+<div class="outline-text-3" id="text-5-3">
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC ditaa :file ./images/diagrama-sistema.png :exports both</span>
+<span style="background-color: #E9E9F2;">+---------------+        +---------------+</span>
+<span style="background-color: #E9E9F2;">|               |        |               |</span>
+<span style="background-color: #E9E9F2;">|  Frontend     +-------&gt;+  API Gateway  |</span>
+<span style="background-color: #E9E9F2;">|  (React)      |        |  (Node.js)    |</span>
+<span style="background-color: #E9E9F2;">|               |        |               |</span>
+<span style="background-color: #E9E9F2;">+-------+-------+        +-------+-------+</span>
+<span style="background-color: #E9E9F2;">        ^                        |</span>
+<span style="background-color: #E9E9F2;">        |                        v</span>
+<span style="background-color: #E9E9F2;">        |                +-------+-------+</span>
+<span style="background-color: #E9E9F2;">        |                |               |</span>
+<span style="background-color: #E9E9F2;">        +----------------+  Database     |</span>
+<span style="background-color: #E9E9F2;">                         |  (PostgreSQL) |</span>
+<span style="background-color: #E9E9F2;">                         |               |</span>
+<span style="background-color: #E9E9F2;">                         +---------------+</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+</pre>
+</div>
+
+<p>
+Esto generará un diagrama como:
+</p>
+
+
+<figure id="orgf5913ed">
+<img src="images/diagrama-sistema.png" alt="diagrama-sistema.png">
+
+</figure>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbd65f89" class="outline-2">
+<h2 id="orgbd65f89"><span class="section-number-2">6.</span> Configuración de Graphviz (DOT)</h2>
 <div class="outline-text-2" id="text-6">
+<p>
+<a href="https://graphviz.org/">Graphviz</a> es excelente para crear diagramas estructurales, como árboles y grafos.
+</p>
 </div>
-<div id="outline-container-orgeac742d" class="outline-3">
-<h3 id="orgeac742d"><span class="section-number-3">6.1.</span> Error "Command not found"</h3>
+<div id="outline-container-org67e27f9" class="outline-3">
+<h3 id="org67e27f9"><span class="section-number-3">6.1.</span> Instalación</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
-```
-;; Verificar rutas ejecutables
-(executable-find "gnuplot")  ; Debe retornar ruta correcta
-```
+En sistemas basados en Debian/Ubuntu:
 </p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt-get install graphviz
+</pre>
+</div>
+
+<p>
+En macOS con Homebrew:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">brew install graphviz
+</pre>
 </div>
 </div>
-<div id="outline-container-orgdf5ae3c" class="outline-3">
-<h3 id="orgdf5ae3c"><span class="section-number-3">6.2.</span> Gráficos no actualizados</h3>
+</div>
+<div id="outline-container-org046cd18" class="outline-3">
+<h3 id="org046cd18"><span class="section-number-3">6.2.</span> Configuración en Emacs</h3>
 <div class="outline-text-3" id="text-6-2">
-<ul class="org-ul">
-<li>Ejecutar <code>org-babel-execute-buffer</code> (C-c C-v b)</li>
-<li>Borrar caché con <code>org-babel-remove-result</code></li>
-</ul>
+<p>
+No se requiere configuración adicional si Graphviz está en tu PATH.
+</p>
 </div>
 </div>
-<div id="outline-container-orgd0585a7" class="outline-3">
-<h3 id="orgd0585a7"><span class="section-number-3">6.3.</span> Configuración multi-plataforma</h3>
+<div id="outline-container-org8aa5bf8" class="outline-3">
+<h3 id="org8aa5bf8"><span class="section-number-3">6.3.</span> Ejemplo de uso</h3>
 <div class="outline-text-3" id="text-6-3">
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC dot :file ./images/arbol-decisiones.png :exports both</span>
+<span style="background-color: #E9E9F2;">digraph G {</span>
+<span style="background-color: #E9E9F2;">  node [shape=box, style="rounded,filled", fillcolor=lightblue];</span>
+
+<span style="background-color: #E9E9F2;">  A [label="&#191;Llueve?"];</span>
+<span style="background-color: #E9E9F2;">  B [label="Llevar paraguas"];</span>
+<span style="background-color: #E9E9F2;">  C [label="&#191;Hace fr&#237;o?"];</span>
+<span style="background-color: #E9E9F2;">  D [label="Llevar abrigo"];</span>
+<span style="background-color: #E9E9F2;">  E [label="Llevar chaqueta ligera"];</span>
+
+<span style="background-color: #E9E9F2;">  A -&gt; B [label="S&#237;"];</span>
+<span style="background-color: #E9E9F2;">  A -&gt; C [label="No"];</span>
+<span style="background-color: #E9E9F2;">  C -&gt; D [label="S&#237;"];</span>
+<span style="background-color: #E9E9F2;">  C -&gt; E [label="No"];</span>
+<span style="background-color: #E9E9F2;">}</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+</pre>
+</div>
+
 <p>
-```
-;; Ejemplo Windows
-(when (eq system-type 'windows-nt)
-  (setq org-plantuml-jar-path "C:/tools/plantuml.jar"))
-```
+Generará:
 </p>
+
+
+<figure id="org0220360">
+<img src="images/arbol-decisiones.png" alt="arbol-decisiones.png">
+
+<figcaption><span class="figure-number">Figure 2: </span>Árbol de decisiones sobre el clima</figcaption>
+</figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org6a5b4af" class="outline-2">
-<h2 id="org6a5b4af"><span class="section-number-2">7.</span> 💡 Consejos profesionales</h2>
+<div id="outline-container-org527e3ce" class="outline-2">
+<h2 id="org527e3ce"><span class="section-number-2">7.</span> Configuración de PlantUML</h2>
 <div class="outline-text-2" id="text-7">
-<ul class="org-ul">
-<li>Usar <code>org-plot</code> para gráficos rápidos desde tablas</li>
-<li>Combinar gráficos con <code>:results graphics file</code></li>
-<li>Automatizar generación con <code>org-babel-tangle</code></li>
-</ul>
-
-<blockquote>
 <p>
-💻 "Org-mode transforma Emacs en un laboratorio de visualización de datos completo, manteniendo todo en texto plano y totalmente versionable" - Experto en Emacs
+<a href="https://plantuml.com/">PlantUML</a> es una herramienta para crear diagramas UML a partir de texto.
 </p>
-</blockquote>
+</div>
+<div id="outline-container-org7b20f7d" class="outline-3">
+<h3 id="org7b20f7d"><span class="section-number-3">7.1.</span> Instalación</h3>
+<div class="outline-text-3" id="text-7-1">
 <p>
-```
+PlantUML requiere Java y Graphviz:
 </p>
 
-<p>
-Citations:
-</p>
-<ul class="org-ul">
-<li>[1] <a href="https://lapipaplena.wordpress.com/2017/02/05/graficos-con-org-mode-ditaa-y-plantuml/">https://lapipaplena.wordpress.com/2017/02/05/graficos-con-org-mode-ditaa-y-plantuml/</a></li>
-<li>[2] <a href="https://osiux.com/visualizando-org-mode-con-gnuplot.html">https://osiux.com/visualizando-org-mode-con-gnuplot.html</a></li>
-<li>[3] <a href="https://www.blackhats.es/wordpress/?p=109">https://www.blackhats.es/wordpress/?p=109</a></li>
-<li>[4] <a href="https://blog-antiguo.nueva-actitud.org/graficos-en-org-mode.html">https://blog-antiguo.nueva-actitud.org/graficos-en-org-mode.html</a></li>
-<li>[5] <a href="https://gewhere.github.io/gnuplot-orgmode">https://gewhere.github.io/gnuplot-orgmode</a></li>
-<li>[6] <a href="https://orgmode.org/manual/Org-Plot.html">https://orgmode.org/manual/Org-Plot.html</a></li>
-<li>[7] <a href="https://www.medialab-matadero.es/actividades/organiza-tu-vida-con-emacs-y-org-mode">https://www.medialab-matadero.es/actividades/organiza-tu-vida-con-emacs-y-org-mode</a></li>
-<li>[8] <a href="https://www.reddit.com/r/emacs/comments/vfldyd/issue_with_setting_up_plantuml/?tl=es-es">https://www.reddit.com/r/emacs/comments/vfldyd/issue_with_setting_up_plantuml/?tl=es-es</a></li>
-<li>[9] <a href="https://www.reddit.com/r/emacs/comments/m0ysb5/how_do_you_organize_your_org_mode_files/?tl=es-es">https://www.reddit.com/r/emacs/comments/m0ysb5/how_do_you_organize_your_org_mode_files/?tl=es-es</a></li>
-<li>[10] <a href="https://pdf.plantuml.net/1.2019.4/PlantUML_Language_Reference_Guide_es.pdf">https://pdf.plantuml.net/1.2019.4/PlantUML_Language_Reference_Guide_es.pdf</a></li>
-<li>[11] <a href="https://traficantes.net/sites/default/files/pdfs/orgguide.es_.pdf">https://traficantes.net/sites/default/files/pdfs/orgguide.es_.pdf</a></li>
-<li>[12] <a href="https://github.com/skuro/plantuml-mode">https://github.com/skuro/plantuml-mode</a></li>
-<li>[13] <a href="https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-plantuml.html">https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-plantuml.html</a></li>
-<li>[14] <a href="https://comacero.gitlab.io/notes_orgmode/">https://comacero.gitlab.io/notes_orgmode/</a></li>
-<li>[15] <a href="https://pdf.plantuml.net/PlantUML_Language_Reference_Guide_es.pdf">https://pdf.plantuml.net/PlantUML_Language_Reference_Guide_es.pdf</a></li>
-<li>[16] <a href="https://www.youtube.com/watch?v=OI4x5a_mxKA">https://www.youtube.com/watch?v=OI4x5a_mxKA</a></li>
-<li>[17] <a href="https://elbauldelprogramador.com/chuleta-org-mode/">https://elbauldelprogramador.com/chuleta-org-mode/</a></li>
-</ul>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Para Debian/Ubuntu</span>
+sudo apt-get install default-jre graphviz
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Descargar PlantUML</span>
+wget https://sourceforge.net/projects/plantuml/files/plantuml.jar
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge16c228" class="outline-3">
+<h3 id="orge16c228"><span class="section-number-3">7.2.</span> Configuración en Emacs</h3>
+<div class="outline-text-3" id="text-7-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">setq</span> org-plantuml-jar-path <span style="color: #005F00;">"~/ruta/a/plantuml.jar"</span>)  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Ajusta esta ruta</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org2804a65" class="outline-3">
+<h3 id="org2804a65"><span class="section-number-3">7.3.</span> Ejemplo de uso</h3>
+<div class="outline-text-3" id="text-7-3">
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC plantuml :file ./images/diagrama-clases.png :exports both</span>
+<span style="background-color: #E9E9F2;">@startuml</span>
+<span style="background-color: #E9E9F2;">class Usuario {</span>
+<span style="background-color: #E9E9F2;">  -id: int</span>
+<span style="background-color: #E9E9F2;">  -nombre: String</span>
+<span style="background-color: #E9E9F2;">  -email: String</span>
+<span style="background-color: #E9E9F2;">  +login(): boolean</span>
+<span style="background-color: #E9E9F2;">  +logout(): void</span>
+<span style="background-color: #E9E9F2;">}</span>
+
+<span style="background-color: #E9E9F2;">class Producto {</span>
+<span style="background-color: #E9E9F2;">  -id: int</span>
+<span style="background-color: #E9E9F2;">  -nombre: String</span>
+<span style="background-color: #E9E9F2;">  -precio: float</span>
+<span style="background-color: #E9E9F2;">  +aplicarDescuento(porcentaje: float): void</span>
+<span style="background-color: #E9E9F2;">}</span>
+
+<span style="background-color: #E9E9F2;">class Carrito {</span>
+<span style="background-color: #E9E9F2;">  -items: List&lt;Producto&gt;</span>
+<span style="background-color: #E9E9F2;">  +agregarProducto(p: Producto): void</span>
+<span style="background-color: #E9E9F2;">  +eliminarProducto(id: int): void</span>
+<span style="background-color: #E9E9F2;">  +calcularTotal(): float</span>
+<span style="background-color: #E9E9F2;">}</span>
+
+<span style="background-color: #E9E9F2;">Usuario "1" -- "0..*" Carrito : tiene &gt;</span>
+<span style="background-color: #E9E9F2;">Carrito "1" o-- "0..*" Producto : contiene &gt;</span>
+<span style="background-color: #E9E9F2;">@enduml</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+</pre>
+</div>
 
 <p>
-&#x2014;
-Answer from Perplexity: pplx.ai/share
+Generará:
+</p>
+
+
+<figure id="org2931953">
+<img src="images/diagrama-clases.png" alt="diagrama-clases.png">
+
+<figcaption><span class="figure-number">Figure 3: </span>Diagrama de clases para una tienda online</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd5d9e80" class="outline-2">
+<h2 id="orgd5d9e80"><span class="section-number-2">8.</span> Configuración de Mermaid</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+<a href="https://mermaid-js.github.io/mermaid/">Mermaid</a> es una herramienta moderna para crear diagramas de flujo, secuencia, Gantt y más.
+</p>
+</div>
+<div id="outline-container-org7ea272d" class="outline-3">
+<h3 id="org7ea272d"><span class="section-number-3">8.1.</span> Instalación</h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+Mermaid requiere Node.js:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Instalar mermaid-cli globalmente</span>
+npm install -g @mermaid-js/mermaid-cli
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1cf1136" class="outline-3">
+<h3 id="org1cf1136"><span class="section-number-3">8.2.</span> Configuración en Emacs</h3>
+<div class="outline-text-3" id="text-8-2">
+<p>
+Primero, instala el paquete <code>ob-mermaid</code>:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">ob-mermaid</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:config</span>
+  (<span style="color: #D70000;">setq</span> ob-mermaid-cli-path <span style="color: #005F00;">"/usr/local/bin/mmdc"</span>))  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Ajusta seg&#250;n tu instalaci&#243;n</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org0c254fe" class="outline-3">
+<h3 id="org0c254fe"><span class="section-number-3">8.3.</span> Ejemplo de uso</h3>
+<div class="outline-text-3" id="text-8-3">
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC mermaid :file ./images/flujo-trabajo.png :exports both</span>
+<span style="color: #D70000; background-color: #E9E9F2;">flowchart</span><span style="background-color: #E9E9F2;"> </span><span style="color: #AF005F; background-color: #E9E9F2;">TD</span>
+<span style="background-color: #E9E9F2;">    A[Inicio] </span><span style="color: #AF8700; background-color: #E9E9F2;">--&gt;</span><span style="background-color: #E9E9F2;"> B{&#191;Es un bug?}</span>
+<span style="background-color: #E9E9F2;">    B </span><span style="color: #AF8700; background-color: #E9E9F2;">--&gt;</span><span style="background-color: #E9E9F2;">|S&#237;| C[Reportar en JIRA]</span>
+<span style="background-color: #E9E9F2;">    B </span><span style="color: #AF8700; background-color: #E9E9F2;">--&gt;</span><span style="background-color: #E9E9F2;">|No| D{&#191;Es una caracter&#237;stica nueva?}</span>
+<span style="background-color: #E9E9F2;">    C </span><span style="color: #AF8700; background-color: #E9E9F2;">--&gt;</span><span style="background-color: #E9E9F2;"> E[Asignar desarrollador]</span>
+<span style="background-color: #E9E9F2;">    D </span><span style="color: #AF8700; background-color: #E9E9F2;">--&gt;</span><span style="background-color: #E9E9F2;">|S&#237;| F[Crear propuesta]</span>
+<span style="background-color: #E9E9F2;">    D </span><span style="color: #AF8700; background-color: #E9E9F2;">--&gt;</span><span style="background-color: #E9E9F2;">|No| G[Documentar como mejora]</span>
+<span style="background-color: #E9E9F2;">    F </span><span style="color: #AF8700; background-color: #E9E9F2;">--&gt;</span><span style="background-color: #E9E9F2;"> H[Revisi&#243;n por el equipo]</span>
+<span style="background-color: #E9E9F2;">    G </span><span style="color: #AF8700; background-color: #E9E9F2;">--&gt;</span><span style="background-color: #E9E9F2;"> H</span>
+<span style="background-color: #E9E9F2;">    E </span><span style="color: #AF8700; background-color: #E9E9F2;">--&gt;</span><span style="background-color: #E9E9F2;"> I[Desarrollo]</span>
+<span style="background-color: #E9E9F2;">    H </span><span style="color: #AF8700; background-color: #E9E9F2;">--&gt;</span><span style="background-color: #E9E9F2;"> I</span>
+<span style="background-color: #E9E9F2;">    I </span><span style="color: #AF8700; background-color: #E9E9F2;">--&gt;</span><span style="background-color: #E9E9F2;"> J[Testing]</span>
+<span style="background-color: #E9E9F2;">    J </span><span style="color: #AF8700; background-color: #E9E9F2;">--&gt;</span><span style="background-color: #E9E9F2;"> K{&#191;Pasa todos los tests?}</span>
+<span style="background-color: #E9E9F2;">    K </span><span style="color: #AF8700; background-color: #E9E9F2;">--&gt;</span><span style="background-color: #E9E9F2;">|No| I</span>
+<span style="background-color: #E9E9F2;">    K </span><span style="color: #AF8700; background-color: #E9E9F2;">--&gt;</span><span style="background-color: #E9E9F2;">|S&#237;| L[Despliegue]</span>
+<span style="background-color: #E9E9F2;">    L </span><span style="color: #AF8700; background-color: #E9E9F2;">--&gt;</span><span style="background-color: #E9E9F2;"> M[Fin]</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1609664" class="outline-2">
+<h2 id="org1609664"><span class="section-number-2">9.</span> Integración con org-static-blog</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Para utilizar estos gráficos en tu blog creado con <code>org-static-blog</code>, asegúrate de:
+</p>
+
+<ol class="org-ol">
+<li>Crear una estructura de directorios adecuada para tus imágenes:</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-bash">mkdir -p ~/ruta/a/tu/blog/images/
+</pre>
+</div>
+
+<ol class="org-ol">
+<li>Configurar <code>org-static-blog</code> para copiar las imágenes al generar el sitio:</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">org-static-blog</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:config</span>
+  (<span style="color: #D70000;">setq</span> org-static-blog-publish-title <span style="color: #005F00;">"Emacs con Esteroides"</span>)
+  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Otras configuraciones...</span>
+
+  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Importante: configurar para que copie las im&#225;genes</span>
+  (<span style="color: #D70000;">setq</span> org-static-blog-publish-url <span style="color: #005F00;">"https://tu-dominio.com/"</span>)
+  (<span style="color: #D70000;">setq</span> org-static-blog-publish-directory <span style="color: #005F00;">"~/ruta/al/directorio/p&#250;blico/"</span>)
+  (<span style="color: #D70000;">setq</span> org-static-blog-posts-directory <span style="color: #005F00;">"~/ruta/a/tus/posts/"</span>)
+  (<span style="color: #D70000;">setq</span> org-static-blog-drafts-directory <span style="color: #005F00;">"~/ruta/a/tus/borradores/"</span>)
+  (<span style="color: #D70000;">setq</span> org-static-blog-enable-tags t)
+
+  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Copiar directorio de im&#225;genes al publicar</span>
+  (<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">copy-images-after-publish</span> ()
+    (copy-directory <span style="color: #005F00;">"~/ruta/a/tu/blog/images/"</span>
+                   (concat org-static-blog-publish-directory <span style="color: #005F00;">"/images/"</span>)
+                   t t t))
+
+  (add-hook 'org-static-blog-publish-after-hook 'copy-images-after-publish))
+</pre>
+</div>
+
+<ol class="org-ol">
+<li>Referencia las imágenes correctamente en tus posts de Org Mode:</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #009B7C; font-weight: bold; text-decoration: underline;"><a href="../images/nombre-del-grafico.png">../images/nombre-del-grafico.png</a></span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org277bc3a" class="outline-2">
+<h2 id="org277bc3a"><span class="section-number-2">10.</span> Consejos avanzados</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-orge7a01a7" class="outline-3">
+<h3 id="orge7a01a7"><span class="section-number-3">10.1.</span> Ejecutar bloques automáticamente al exportar</h3>
+<div class="outline-text-3" id="text-10-1">
+<p>
+Para asegurarte de que los gráficos siempre estén actualizados al exportar:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">setq</span> org-export-babel-evaluate t)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org823235d" class="outline-3">
+<h3 id="org823235d"><span class="section-number-3">10.2.</span> Caché de resultados</h3>
+<div class="outline-text-3" id="text-10-2">
+<p>
+Para evitar regenerar gráficos que no han cambiado:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC gnuplot :file ./images/grafico.png :exports both :cache yes</span>
+<span style="background-color: #E9E9F2;">;; C&#243;digo del gr&#225;fico</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org3a28adf" class="outline-3">
+<h3 id="org3a28adf"><span class="section-number-3">10.3.</span> Personalización de estilos</h3>
+<div class="outline-text-3" id="text-10-3">
+<p>
+Crea un archivo <code>.gnuplot</code> en tu directorio home para personalizar estilos globales:
 </p>
 </div>
 </div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutorial.html">tutorial</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gráficos.html">gráficos</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gnuplot.html">gnuplot</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-plantuml.html">plantuml</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-org-mode.html">org-mode</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-draft.html">draft</a> </div>]]></description>
+</div>
+<div id="outline-container-org97f66d0" class="outline-2">
+<h2 id="org97f66d0"><span class="section-number-2">11.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-11">
+<p>
+Con estas configuraciones, has convertido tu Emacs en una potente herramienta para la creación de gráficos y diagramas integrados directamente en tus documentos de Org Mode. Esta capacidad es especialmente útil para blogs técnicos como "Emacs con Esteroides", permitiéndote mantener todo tu contenido, incluidos los gráficos, como texto plano versionable.
+</p>
+
+<p>
+La combinación de Org Mode con herramientas como Gnuplot, Ditaa, Graphviz, PlantUML y Mermaid te da un control sin precedentes sobre tus visualizaciones, sin necesidad de recurrir a programas externos complejos o formatos binarios que dificultan el versionado.
+</p>
+
+<p>
+¿Qué gráficos crearás para tu próximo artículo?
+</p>
+</div>
+</div>
+<div id="outline-container-org5698df7" class="outline-2">
+<h2 id="org5698df7"><span class="section-number-2">12.</span> Referencias y recursos adicionales</h2>
+<div class="outline-text-2" id="text-12">
+<ul class="org-ul">
+<li><a href="https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-gnuplot.html">Documentación oficial de Org Babel para Gnuplot</a></li>
+<li><a href="https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-ditaa.html">Documentación de Org Babel para Ditaa</a></li>
+<li><a href="https://graphviz.org/documentation/">Documentación oficial de Graphviz</a></li>
+<li><a href="https://plantuml.com/es/">Sitio oficial de PlantUML (en español)</a></li>
+<li><a href="https://mermaid-js.github.io/mermaid/#/">Documentación de Mermaid</a></li>
+<li><a href="https://github.com/bastibe/org-static-blog">Repositorio de org-static-blog en GitHub</a></li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutorial.html">tutorial</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gráficos.html">gráficos</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gnuplot.html">gnuplot</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-plantuml.html">plantuml</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-org-mode.html">org-mode</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-draft.html">draft</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gnuplot.html">gnuplot</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ditaa.html">ditaa</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-graphviz.html">graphviz</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-plantuml.html">plantUML</a> </div>]]></description>
   <category><![CDATA[emacs]]></category>
   <category><![CDATA[tutorial]]></category>
   <category><![CDATA[gráficos]]></category>
@@ -2828,6 +3141,10 @@ Answer from Perplexity: pplx.ai/share
   <category><![CDATA[plantuml]]></category>
   <category><![CDATA[org-mode]]></category>
   <category><![CDATA[draft]]></category>
+  <category><![CDATA[gnuplot]]></category>
+  <category><![CDATA[ditaa]]></category>
+  <category><![CDATA[graphviz]]></category>
+  <category><![CDATA[plantUML]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-29-configurar-emacs-para-creaci%C3%B3n-de-graficos.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-29-configurar-emacs-para-creaci%C3%B3n-de-graficos.html</guid>
   <pubDate>Sat, 29 Mar 2025 18:56:00 +0100</pubDate>
