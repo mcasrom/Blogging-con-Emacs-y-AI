@@ -4,13 +4,13 @@
 <title><![CDATA[Example.com - consejos]]></title>
 <description><![CDATA[Example.com - consejos]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-consejos.html</link>
-<lastBuildDate>Tue, 15 Apr 2025 08:57:26 +0200</lastBuildDate>
+<lastBuildDate>Tue, 15 Apr 2025 23:30:19 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Cómo crear alias en Gmail usando el signo (+)]]></title>
   <description><![CDATA[
-<div id="outline-container-org58b9ce2" class="outline-2">
-<h2 id="org58b9ce2">Introducción</h2>
-<div class="outline-text-2" id="text-org58b9ce2">
+<div id="outline-container-org59a5a57" class="outline-2">
+<h2 id="org59a5a57">Introducción</h2>
+<div class="outline-text-2" id="text-org59a5a57">
 <p>
 ¿Sabías que puedes crear alias infinitos de tu correo Gmail usando el signo + sin necesidad de crear nuevas cuentas?
 </p>
@@ -76,14 +76,14 @@ Si usas paquetes como `mu4e`, `gnus` o `notmuch`, puedes filtrar por alias desde
 </ol>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Ejemplo en mu4e para detectar correos de formularios</span>
-(<span style="color: #219fd5; font-style: italic;">setq</span> mu4e-maildir-shortcuts
-      '( (<span style="color: #a44185;">"/inbox"</span>            . ?i)
-         (<span style="color: #a44185;">"/inbox/BlogForm"</span>  . ?f)))
+<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Ejemplo en mu4e para detectar correos de formularios</span>
+(<span style="color: #D70000;">setq</span> mu4e-maildir-shortcuts
+      '( (<span style="color: #005F00;">"/inbox"</span>            . ?i)
+         (<span style="color: #005F00;">"/inbox/BlogForm"</span>  . ?f)))
 
-<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Filtro basado en alias</span>
-(<span style="color: #219fd5; font-style: italic;">setq</span> mu4e-bookmarks
-      '( (<span style="color: #a44185;">"to:mikeblog+contactoform@gmail.com"</span> <span style="color: #a44185;">"Formularios del blog"</span> ?c)))
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Filtro basado en alias</span>
+(<span style="color: #D70000;">setq</span> mu4e-bookmarks
+      '( (<span style="color: #005F00;">"to:mikeblog+contactoform@gmail.com"</span> <span style="color: #005F00;">"Formularios del blog"</span> ?c)))
 </pre>
 </div>
 

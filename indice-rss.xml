@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - indice]]></title>
 <description><![CDATA[Example.com - indice]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-indice.html</link>
-<lastBuildDate>Tue, 15 Apr 2025 08:57:40 +0200</lastBuildDate>
+<lastBuildDate>Tue, 15 Apr 2025 23:30:35 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -603,6 +603,12 @@
 
 <tr>
 <td class="org-right">2025-04-15</td>
+<td class="org-left">Guía Práctica: Configuración de UFW en Ubuntu con Scripts y Org Mode</td>
+<td class="org-left"><a href="2025-04-15-gu-a-pr-ctica-configuraci-n-de-ufw-en-ubuntu-con-scripts-y-org-mode.html">Enlace</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-04-15</td>
 <td class="org-left">Los Mejores Chats con IA Globales en abril 2025: Valoración y Especialización</td>
 <td class="org-left"><a href="2025-04-15-los-mejores-chats-con-ia-globales-en-abril-2025-valoraci-n-y-especializaci-n.html">Enlace</a></td>
 </tr>
@@ -620,7 +626,7 @@
 </tr>
 
 <tr>
-<td class="org-right">2025-04-14</td>
+<td class="org-right">2025-04-15</td>
 <td class="org-left">Artículos recientes sobre geopolítica y estrategia</td>
 <td class="org-left"><a href="geopolitica.html">Enlace</a></td>
 </tr>
@@ -655,7 +661,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Tue, 15 Apr 2025 08:41:00 +0200</pubDate>
+  <pubDate>Tue, 15 Apr 2025 23:26:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Creación Indicador de Calidad de Libertad y su Aplicación KPI (i)]]></title>

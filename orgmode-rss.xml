@@ -4,7 +4,652 @@
 <title><![CDATA[Example.com - orgmode]]></title>
 <description><![CDATA[Example.com - orgmode]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-orgmode.html</link>
-<lastBuildDate>Tue, 15 Apr 2025 08:57:37 +0200</lastBuildDate>
+<lastBuildDate>Tue, 15 Apr 2025 23:30:31 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Guía Práctica: Configuración de UFW en Ubuntu con Scripts y Org Mode]]></title>
+  <description><![CDATA[
+<div id="outline-container-org58470a7" class="outline-2">
+<h2 id="org58470a7">Introducción</h2>
+<div class="outline-text-2" id="text-org58470a7">
+<p>
+La seguridad es un aspecto crítico para cualquier servidor Linux. UFW (Uncomplicated Firewall) proporciona una interfaz simplificada para configurar un firewall robusto en sistemas Ubuntu. En este artículo, nos centraremos en la parte práctica: cómo crear, configurar y ejecutar un script de configuración de UFW, todo gestionado desde Emacs con Org Mode.
+</p>
+
+<p>
+Este enfoque práctico te permitirá:
+</p>
+<ul class="org-ul">
+<li>Documentar tu configuración de seguridad</li>
+<li>Automatizar la implementación de reglas</li>
+<li>Mantener un registro de los cambios realizados</li>
+<li>Compartir fácilmente tu configuración con otros administradores</li>
+</ul>
+
+<p>
+Está diseñado para administradores de sistemas y entusiastas de Linux que utilizan Emacs como parte de su flujo de trabajo.
+</p>
+</div>
+</div>
+<div id="outline-container-org70b1188" class="outline-2">
+<h2 id="org70b1188">Prerrequisitos</h2>
+<div class="outline-text-2" id="text-org70b1188">
+<p>
+Antes de comenzar, asegúrate de tener:
+</p>
+
+<ul class="org-ul">
+<li>Ubuntu 22.04 LTS o superior</li>
+<li>Emacs 27+ con Org Mode</li>
+<li>Acceso root o privilegios sudo</li>
+<li>UFW instalado (<code>sudo apt install ufw</code>)</li>
+<li>Conexión SSH configurada (si trabajas remotamente)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org40f071b" class="outline-2">
+<h2 id="org40f071b">Creación del Script en Org Mode</h2>
+<div class="outline-text-2" id="text-org40f071b">
+<p>
+Comenzaremos creando un archivo Org Mode que contendrá nuestro script y documentación. En Emacs:
+</p>
+
+<ol class="org-ol">
+<li>Crea un nuevo archivo: <code>C-x C-f ~/firewall-config.org RET</code></li>
+<li>Añade la estructura básica del documento</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #4E4E4E;">#+TITLE:</span> <span style="color: #1F55A0; font-weight: bold;">Configuraci&#243;n de UFW para Servidores Ubuntu</span>
+<span style="color: #4E4E4E;">#+AUTHOR:</span> <span style="color: #1F55A0;">Tu Nombre</span>
+<span style="color: #4E4E4E;">#+DATE:</span> <span style="color: #1F55A0;">2025-04-15</span>
+<span style="color: #004700;">#+PROPERTY: header-args:bash :tangle ufw-secure-config.sh :comments both</span>
+
+<span style="color: #1F55A0; font-weight: bold;">* Descripci&#243;n del Script</span>
+Este script configura UFW en Ubuntu para proteger contra amenazas comunes,
+incluyendo botnets, ataques de fuerza bruta y escaneos de puertos. Est&#225;
+dise&#241;ado para servidores de producci&#243;n con exposici&#243;n a Internet.
+
+<span style="color: #1F55A0; font-weight: bold;">* Script de Configuraci&#243;n</span>
+<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Cabecera y verificaciones iniciales</span>
+</pre>
+</div>
+
+<p>
+El atributo <code>:tangle ufw-secure-config.sh</code> indica a Org Mode que extraiga (tangle) el código en un archivo ejecutable cuando lo solicitemos.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfa545ef" class="outline-2">
+<h2 id="orgfa545ef">Desarrollo del Script de Configuración UFW</h2>
+<div class="outline-text-2" id="text-orgfa545ef">
+<p>
+Ahora desarrollaremos el script por secciones, añadiendo cada parte como un bloque de código Org Babel. Esto nos permite tener el script documentado y listo para ejecutar.
+</p>
+</div>
+<div id="outline-container-orga97a704" class="outline-3">
+<h3 id="orga97a704">Sección 1: Cabecera y verificaciones</h3>
+<div class="outline-text-3" id="text-orga97a704">
+<p>
+Añade este bloque después de la sección "Cabecera y verificaciones iniciales":
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash</span>
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">#</span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">!/bin/bash</span>
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Script: ufw-secure-config.sh</span>
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Descripci&#243;n: Configuraci&#243;n segura de UFW para servidores Ubuntu</span>
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Autor: Tu Nombre</span>
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Fecha: 2025-04-15</span>
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Versi&#243;n: 1.0</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Colores para mejor legibilidad</span>
+<span style="color: #004651; background-color: #E9E9F2;">RED</span><span style="background-color: #E9E9F2;">=</span><span style="color: #005F00; background-color: #E9E9F2;">'\033[0;31m'</span>
+<span style="color: #004651; background-color: #E9E9F2;">GREEN</span><span style="background-color: #E9E9F2;">=</span><span style="color: #005F00; background-color: #E9E9F2;">'\033[0;32m'</span>
+<span style="color: #004651; background-color: #E9E9F2;">YELLOW</span><span style="background-color: #E9E9F2;">=</span><span style="color: #005F00; background-color: #E9E9F2;">'\033[1;33m'</span>
+<span style="color: #004651; background-color: #E9E9F2;">NC</span><span style="background-color: #E9E9F2;">=</span><span style="color: #005F00; background-color: #E9E9F2;">'\033[0m'</span><span style="background-color: #E9E9F2;"> </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Sin Color</span>
+
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${GREEN}=== Script de Configuraci&#243;n Segura de UFW ===${NC}"</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Iniciando configuraci&#243;n en $(</span><span style="color: #1F55A0; background-color: #E9E9F2; font-weight: bold;">date</span><span style="color: #005F00; background-color: #E9E9F2;">)"</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Verificar privilegios de root</span>
+<span style="color: #D70000; background-color: #E9E9F2;">if</span><span style="background-color: #E9E9F2;"> <a href=" $EUID -ne 0 ">[[ $</a></span><span style="color: #004651; background-color: #E9E9F2;"><a href=" $EUID -ne 0 ">EUID</a></span><span style="background-color: #E9E9F2;"><a href=" $EUID -ne 0 "> -ne 0 ]]</a>; </span><span style="color: #D70000; background-color: #E9E9F2;">then</span>
+<span style="background-color: #E9E9F2;">    </span><span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${RED}Este script requiere privilegios de root.${NC}"</span>
+<span style="background-color: #E9E9F2;">    </span><span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Por favor, ejecuta con sudo: sudo bash $0"</span>
+<span style="background-color: #E9E9F2;">    </span><span style="color: #D70000; background-color: #E9E9F2;">exit</span><span style="background-color: #E9E9F2;"> 1</span>
+<span style="color: #D70000; background-color: #E9E9F2;">fi</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Verificar que UFW est&#233; instalado</span>
+<span style="color: #D70000; background-color: #E9E9F2;">if ! </span><span style="color: #1F55A0; background-color: #E9E9F2;">command</span><span style="background-color: #E9E9F2;"> -v ufw &amp;&gt; /dev/null; </span><span style="color: #D70000; background-color: #E9E9F2;">then</span>
+<span style="background-color: #E9E9F2;">    </span><span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${YELLOW}UFW no est&#225; instalado. Instalando...${NC}"</span>
+<span style="background-color: #E9E9F2;">    apt update &amp;&amp; apt install -y ufw</span>
+<span style="background-color: #E9E9F2;">    </span><span style="color: #D70000; background-color: #E9E9F2;">if</span><span style="background-color: #E9E9F2;"> [ $</span><span style="color: #004651; background-color: #E9E9F2;">?</span><span style="background-color: #E9E9F2;"> -ne 0 ]; </span><span style="color: #D70000; background-color: #E9E9F2;">then</span>
+<span style="background-color: #E9E9F2;">        </span><span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${RED}Error instalando UFW. Abortando.${NC}"</span>
+<span style="background-color: #E9E9F2;">        </span><span style="color: #D70000; background-color: #E9E9F2;">exit</span><span style="background-color: #E9E9F2;"> 1</span>
+<span style="background-color: #E9E9F2;">    </span><span style="color: #D70000; background-color: #E9E9F2;">fi</span>
+<span style="background-color: #E9E9F2;">    </span><span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${GREEN}UFW instalado correctamente.${NC}"</span>
+<span style="color: #D70000; background-color: #E9E9F2;">else</span>
+<span style="background-color: #E9E9F2;">    </span><span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${GREEN}UFW ya est&#225; instalado.${NC}"</span>
+<span style="color: #D70000; background-color: #E9E9F2;">fi</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Crear directorio para backups si no existe</span>
+<span style="color: #004651; background-color: #E9E9F2;">BACKUP_DIR</span><span style="background-color: #E9E9F2;">=</span><span style="color: #005F00; background-color: #E9E9F2;">"/root/ufw-backups"</span>
+<span style="color: #D70000; background-color: #E9E9F2;">if</span><span style="background-color: #E9E9F2;"> [ </span><span style="color: #1F55A0; background-color: #E9E9F2; font-weight: bold;">!</span><span style="background-color: #E9E9F2;"> -d </span><span style="color: #005F00; background-color: #E9E9F2;">"$BACKUP_DIR"</span><span style="background-color: #E9E9F2;"> ]; </span><span style="color: #D70000; background-color: #E9E9F2;">then</span>
+<span style="background-color: #E9E9F2;">    mkdir -p </span><span style="color: #005F00; background-color: #E9E9F2;">"$BACKUP_DIR"</span>
+<span style="background-color: #E9E9F2;">    </span><span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Directorio para backups creado: $BACKUP_DIR"</span>
+<span style="color: #D70000; background-color: #E9E9F2;">fi</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+
+<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Secci&#243;n 2: Backup y reinicio de configuraci&#243;n</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org028f803" class="outline-3">
+<h3 id="org028f803">Sección 2: Backup y reinicio de configuración</h3>
+<div class="outline-text-3" id="text-org028f803">
+<p>
+Continuamos con la siguiente sección:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash</span>
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Crear backup de reglas actuales</span>
+<span style="color: #004651; background-color: #E9E9F2;">TIMESTAMP</span><span style="background-color: #E9E9F2;">=$(</span><span style="color: #1F55A0; background-color: #E9E9F2; font-weight: bold;">date +%F-%H%M%S</span><span style="background-color: #E9E9F2;">)</span>
+<span style="color: #004651; background-color: #E9E9F2;">BACKUP_FILE</span><span style="background-color: #E9E9F2;">=</span><span style="color: #005F00; background-color: #E9E9F2;">"$BACKUP_DIR/ufw-backup-$TIMESTAMP.rules"</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${YELLOW}Creando backup de reglas actuales en:${NC} $BACKUP_FILE"</span>
+<span style="background-color: #E9E9F2;">ufw status verbose &gt; </span><span style="color: #005F00; background-color: #E9E9F2;">"$BACKUP_FILE"</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Guardar configuraci&#243;n actual de iptables para referencia</span>
+<span style="background-color: #E9E9F2;">iptables-save &gt; </span><span style="color: #005F00; background-color: #E9E9F2;">"$BACKUP_DIR/iptables-backup-$TIMESTAMP.rules"</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Backup de iptables guardado en: $BACKUP_DIR/iptables-backup-$TIMESTAMP.rules"</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Reiniciar UFW para configuraci&#243;n limpia</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${YELLOW}Reiniciando UFW para iniciar configuraci&#243;n limpia...${NC}"</span>
+<span style="background-color: #E9E9F2;">ufw --force reset</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${GREEN}UFW reiniciado correctamente.${NC}"</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+
+<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Secci&#243;n 3: Configuraci&#243;n de pol&#237;ticas b&#225;sicas</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org2c75be5" class="outline-3">
+<h3 id="org2c75be5">Sección 3: Configuración de políticas básicas</h3>
+<div class="outline-text-3" id="text-org2c75be5">
+<p>
+Configuramos las políticas predeterminadas y activamos el logging:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"\n${GREEN}=== Configurando pol&#237;ticas b&#225;sicas ===${NC}"</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Establecer pol&#237;ticas predeterminadas</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Configurando pol&#237;tica por defecto: denegar tr&#225;fico entrante"</span>
+<span style="background-color: #E9E9F2;">ufw default deny incoming</span>
+
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Configurando pol&#237;tica por defecto: permitir tr&#225;fico saliente"</span>
+<span style="background-color: #E9E9F2;">ufw default allow outgoing</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Configurar nivel de log</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Configurando nivel de logging: medio"</span>
+<span style="background-color: #E9E9F2;">ufw logging medium</span>
+
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${GREEN}Pol&#237;ticas b&#225;sicas configuradas correctamente.${NC}"</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+
+<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Secci&#243;n 4: Reglas para servicios esenciales</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orga930111" class="outline-3">
+<h3 id="orga930111">Sección 4: Reglas para servicios esenciales</h3>
+<div class="outline-text-3" id="text-orga930111">
+<p>
+Configuramos las reglas para los servicios principales:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"\n${GREEN}=== Configurando reglas para servicios esenciales ===${NC}"</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">SSH - Limitar intentos para prevenir ataques de fuerza bruta</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Configurando SSH con l&#237;mite de conexiones..."</span>
+<span style="background-color: #E9E9F2;">ufw limit proto tcp from any to any port 22 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'SSH con l&#237;mite de conexiones'</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">HTTP/HTTPS para servidores web</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Configurando acceso web (HTTP/HTTPS)..."</span>
+<span style="background-color: #E9E9F2;">ufw allow proto tcp from any to any port 80 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'HTTP'</span>
+<span style="background-color: #E9E9F2;">ufw allow proto tcp from any to any port 443 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'HTTPS'</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">DNS para resoluci&#243;n de nombres</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Configurando acceso DNS..."</span>
+<span style="background-color: #E9E9F2;">ufw allow proto udp from any to any port 53 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'DNS'</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">NTP para sincronizaci&#243;n horaria</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Configurando acceso NTP..."</span>
+<span style="background-color: #E9E9F2;">ufw allow proto udp from any to any port 123 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'NTP'</span>
+
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${GREEN}Servicios esenciales configurados.${NC}"</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+
+<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Secci&#243;n 5: Protecci&#243;n contra amenazas comunes</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgee9bb45" class="outline-3">
+<h3 id="orgee9bb45">Sección 5: Protección contra amenazas comunes</h3>
+<div class="outline-text-3" id="text-orgee9bb45">
+<p>
+Añadimos reglas para mitigar amenazas específicas:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"\n${GREEN}=== Configurando protecci&#243;n contra amenazas espec&#237;ficas ===${NC}"</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Limitar intentos de conexi&#243;n para HTTP/HTTPS (protecci&#243;n b&#225;sica contra DDoS)</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Configurando l&#237;mites de conexi&#243;n para servicios web..."</span>
+<span style="background-color: #E9E9F2;">ufw limit proto tcp from any to any port 80 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'Limitar HTTP'</span>
+<span style="background-color: #E9E9F2;">ufw limit proto tcp from any to any port 443 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'Limitar HTTPS'</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Bloquear puertos com&#250;nmente explotados por botnets y malware</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Bloqueando puertos vulnerables com&#250;nmente usados por botnets..."</span>
+<span style="background-color: #E9E9F2;">ufw deny proto tcp from any to any port 23 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'Telnet, usado por botnets'</span>
+<span style="background-color: #E9E9F2;">ufw deny proto tcp from any to any port 445 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'SMB, objetivo de ransomware'</span>
+<span style="background-color: #E9E9F2;">ufw deny proto tcp from any to any port 1433 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'MS-SQL, explotado por botnets'</span>
+<span style="background-color: #E9E9F2;">ufw deny proto tcp from any to any port 3389 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'RDP, objetivo com&#250;n'</span>
+<span style="background-color: #E9E9F2;">ufw deny proto udp from any to any port 1900 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'UPnP, usado en DDoS'</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Bloquear rangos de puertos ef&#237;meros sospechosos</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Bloqueando rangos de puertos sospechosos..."</span>
+<span style="background-color: #E9E9F2;">ufw deny proto tcp from any to any port 49152:65535 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'Puertos ef&#237;meros sospechosos'</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Limitar ICMP para prevenir ataques de flood</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Limitando tr&#225;fico ICMP..."</span>
+<span style="background-color: #E9E9F2;">ufw limit proto icmp from any to any comment </span><span style="color: #005F00; background-color: #E9E9F2;">'Limitar ping'</span>
+
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${GREEN}Protecci&#243;n contra amenazas comunes configurada.${NC}"</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+
+<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Secci&#243;n 6: Bloqueo de IPs maliciosas</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org42f9d0c" class="outline-3">
+<h3 id="org42f9d0c">Sección 6: Bloqueo de IPs maliciosas</h3>
+<div class="outline-text-3" id="text-org42f9d0c">
+<p>
+Bloqueamos rangos de IPs conocidos por actividades maliciosas:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"\n${GREEN}=== Configurando bloqueo de IPs maliciosas ===${NC}"</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Nota: Estas son IPs de ejemplo. En producci&#243;n, usa listas actualizadas.</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Bloqueando rangos de IPs conocidos por actividades maliciosas..."</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Ejemplos de rangos sospechosos (reemplazar con datos actualizados en producci&#243;n)</span>
+<span style="background-color: #E9E9F2;">ufw deny from 185.220.101.0/24 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'Rango de IPs sospechosas - Tor exit nodes'</span>
+<span style="background-color: #E9E9F2;">ufw deny from 45.148.10.0/24 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'Rango de IPs de botnets reportadas'</span>
+<span style="background-color: #E9E9F2;">ufw deny from 91.134.0.0/16 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'Fuente conocida de ataques'</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Opci&#243;n: Descomentar y modificar para actualizar desde fuente externa</span>
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">echo "Descargando lista actualizada de IPs maliciosas..."</span>
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">curl -s <a href="https://ejemplo.com/ip-blocklist.txt">https://ejemplo.com/ip-blocklist.txt</a> | while read ip; do</span>
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">#   </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">ufw deny from $ip comment 'IP maliciosa - lista externa'</span>
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">done</span>
+
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${YELLOW}Nota: Considera actualizar regularmente la lista de IPs bloqueadas.${NC}"</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${GREEN}Bloqueo de IPs maliciosas configurado.${NC}"</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+
+<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Secci&#243;n 7: Activaci&#243;n del firewall</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org397227d" class="outline-3">
+<h3 id="org397227d">Sección 7: Activación del firewall</h3>
+<div class="outline-text-3" id="text-org397227d">
+<p>
+Finalmente, activamos el firewall y mostramos el estado:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"\n${GREEN}=== Activando UFW ===${NC}"</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Habilitar UFW</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Activando firewall..."</span>
+<span style="background-color: #E9E9F2;">ufw --force enable</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Verificar estado</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"\n${GREEN}=== Estado final de UFW ===${NC}"</span>
+<span style="background-color: #E9E9F2;">ufw status verbose</span>
+
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"\n${GREEN}=== Configuraci&#243;n completada exitosamente ===${NC}"</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Fecha y hora: $(</span><span style="color: #1F55A0; background-color: #E9E9F2; font-weight: bold;">date</span><span style="color: #005F00; background-color: #E9E9F2;">)"</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${YELLOW}Recomendaciones:${NC}"</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"1. Revisa peri&#243;dicamente /var/log/ufw.log para detectar actividad sospechosa"</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"2. Considera implementar Fail2Ban como protecci&#243;n adicional"</span>
+<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"3. Actualiza las reglas regularmente seg&#250;n evolucionen las amenazas"</span>
+
+<span style="color: #D70000; background-color: #E9E9F2;">exit</span><span style="background-color: #E9E9F2;"> 0</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+
+<span style="color: #1F55A0; font-weight: bold;">* Utilizaci&#243;n del Script</span>
+<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Generaci&#243;n del script ejecutable</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org24b274b" class="outline-2">
+<h2 id="org24b274b">Utilización del Script desde Org Mode</h2>
+<div class="outline-text-2" id="text-org24b274b">
+<p>
+Ahora que tenemos nuestro script documentado en Org Mode, vamos a ver cómo utilizarlo.
+</p>
+</div>
+<div id="outline-container-org0745927" class="outline-3">
+<h3 id="org0745927">Generación del script ejecutable</h3>
+<div class="outline-text-3" id="text-org0745927">
+<p>
+Para generar el archivo ejecutable a partir de nuestro documento Org:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org">Para extraer (tangle) el script desde este documento Org Mode:
+
+1. Posiciona el cursor en cualquier parte del documento
+2. Ejecuta: <span style="color: #D75F00; background-color: #E9E9F2;">~M-x org-babel-tangle~</span> (o usa el atajo <span style="color: #D75F00; background-color: #E9E9F2;">~C-c C-v t~</span>)
+3. Esto crear&#225; el archivo <span style="color: #D75F00; background-color: #E9E9F2;">~ufw-secure-config.sh~</span> en el mismo directorio
+
+Alternativamente, puedes ejecutar esto directamente como un bloque de c&#243;digo:
+
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC emacs-lisp :results silent</span>
+<span style="background-color: #E9E9F2;">(org-babel-tangle)</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+
+Una vez extra&#237;do, hazlo ejecutable:
+
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash :dir .</span>
+<span style="background-color: #E9E9F2;">chmod +x ufw-secure-config.sh</span>
+<span style="background-color: #E9E9F2;">ls -la ufw-secure-config.sh</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org94f285b" class="outline-3">
+<h3 id="org94f285b">Ejecución del script</h3>
+<div class="outline-text-3" id="text-org94f285b">
+<p>
+Añade esta sección para documentar la ejecución:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Ejecuci&#243;n del script</span>
+
+El script debe ejecutarse con privilegios de superusuario:
+
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash :dir . :results output :eval no</span>
+<span style="background-color: #E9E9F2;">sudo ./ufw-secure-config.sh</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+
+Nota: El script realizar&#225; las siguientes acciones:
+1. Verificar&#225; los privilegios y la instalaci&#243;n de UFW
+2. Crear&#225; un backup de las reglas existentes
+3. Reiniciar&#225; la configuraci&#243;n de UFW
+4. Establecer&#225; pol&#237;ticas predeterminadas seguras
+5. Configurar&#225; reglas para servicios esenciales
+6. Implementar&#225; protecciones contra amenazas comunes
+7. Bloquear&#225; IPs maliciosas conocidas
+8. Activar&#225; el firewall con la nueva configuraci&#243;n
+
+<span style="color: #1F55A0; font-weight: bold;">* Personalizaci&#243;n del Script</span>
+
+Puedes personalizar este script para adaptarlo a tus necesidades espec&#237;ficas:
+
+<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Servicios adicionales</span>
+
+Para a&#241;adir reglas para otros servicios, agrega l&#237;neas como estas en la Secci&#243;n 4:
+
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash :eval no</span>
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">FTP (si es necesario)</span>
+<span style="background-color: #E9E9F2;">ufw allow proto tcp from any to any port 21 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'FTP'</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Correo electr&#243;nico</span>
+<span style="background-color: #E9E9F2;">ufw allow proto tcp from any to any port 25,465,587 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'SMTP'</span>
+<span style="background-color: #E9E9F2;">ufw allow proto tcp from any to any port 110,995 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'POP3'</span>
+<span style="background-color: #E9E9F2;">ufw allow proto tcp from any to any port 143,993 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'IMAP'</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Base de datos (solo desde redes confiables)</span>
+<span style="background-color: #E9E9F2;">ufw allow proto tcp from 192.168.1.0/24 to any port 3306 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'MySQL desde LAN'</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+
+<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Restricci&#243;n por origen</span>
+
+Para permitir servicios solo desde ciertas IPs o redes:
+
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash :eval no</span>
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Acceso SSH solo desde oficina</span>
+<span style="background-color: #E9E9F2;">ufw allow proto tcp from 203.0.113.0/24 to any port 22 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'SSH desde oficina'</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Panel de administraci&#243;n solo desde IPs espec&#237;ficas</span>
+<span style="background-color: #E9E9F2;">ufw allow proto tcp from 203.0.113.10 to any port 8080 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'Admin desde IP confiable'</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbeb4553" class="outline-2">
+<h2 id="orgbeb4553">Monitoreo y Mantenimiento</h2>
+<div class="outline-text-2" id="text-orgbeb4553">
+<p>
+Añade esta sección para completar el post:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span style="color: #1F55A0; font-weight: bold;">* Monitoreo y Mantenimiento</span>
+
+Una vez configurado el firewall, es importante monitorizarlo y mantenerlo:
+
+<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Verificaci&#243;n del estado</span>
+
+Para verificar el estado actual del firewall:
+
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash :eval no</span>
+<span style="background-color: #E9E9F2;">sudo ufw status verbose</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+
+<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Monitoreo de logs</span>
+
+Para monitorizar actividad sospechosa:
+
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash :eval no</span>
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Ver &#250;ltimas entradas del log en tiempo real</span>
+<span style="background-color: #E9E9F2;">sudo tail -f /var/log/ufw.log</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Buscar intentos de conexi&#243;n bloqueados</span>
+<span style="background-color: #E9E9F2;">sudo grep </span><span style="color: #005F00; background-color: #E9E9F2;">"BLOCK"</span><span style="background-color: #E9E9F2;"> /var/log/ufw.log</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Contar intentos bloqueados por IP (TOP 10)</span>
+<span style="background-color: #E9E9F2;">sudo grep </span><span style="color: #005F00; background-color: #E9E9F2;">"BLOCK"</span><span style="background-color: #E9E9F2;"> /var/log/ufw.log | grep -oE </span><span style="color: #005F00; background-color: #E9E9F2;">"SRC=[0-9.]+"</span><span style="background-color: #E9E9F2;"> | sort | uniq -c | sort -nr | head -10</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+
+<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Actualizaci&#243;n de reglas</span>
+
+Cuando necesites actualizar las reglas:
+
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash :eval no</span>
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Ver reglas numeradas</span>
+<span style="background-color: #E9E9F2;">sudo ufw status numbered</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Eliminar una regla espec&#237;fica</span>
+<span style="background-color: #E9E9F2;">sudo ufw delete 3  </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Elimina la regla n&#250;mero 3</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">A&#241;adir una nueva regla</span>
+<span style="background-color: #E9E9F2;">sudo ufw allow proto tcp from any to any port 8443 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'HTTPS alternativo'</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Aplicar cambios</span>
+<span style="background-color: #E9E9F2;">sudo ufw reload</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+
+<span style="color: #1F55A0; font-weight: bold;">* Integraci&#243;n con cron para Actualizaciones Autom&#225;ticas</span>
+
+Para mantener tu lista de IPs bloqueadas actualizada, puedes crear un script separado y programarlo con cron:
+
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC org</span>
+<span style="background-color: #E9E9F2;">#+BEGIN_SRC bash :tangle update-blocklist.sh :comments both</span>
+<span style="background-color: #E9E9F2;">#!/bin/bash</span>
+<span style="background-color: #E9E9F2;"># Script: update-blocklist.sh</span>
+<span style="background-color: #E9E9F2;"># Descripci&#243;n: Actualiza la lista de IPs bloqueadas en UFW</span>
+<span style="background-color: #E9E9F2;"># Autor: Tu Nombre</span>
+<span style="background-color: #E9E9F2;"># Fecha: 2025-04-15</span>
+
+<span style="background-color: #E9E9F2;"># Verificar privilegios</span>
+<span style="background-color: #E9E9F2;">if </span><span style="color: #009B7C; background-color: #E9E9F2; font-weight: bold; text-decoration: underline;"><a href=" $EUID -ne 0 ">[[ $EUID -ne 0 ]]</a></span><span style="background-color: #E9E9F2;">; then</span>
+<span style="background-color: #E9E9F2;">    echo "Este script requiere privilegios de root."</span>
+<span style="background-color: #E9E9F2;">    exit 1</span>
+<span style="background-color: #E9E9F2;">fi</span>
+
+<span style="background-color: #E9E9F2;"># Directorio para logs</span>
+<span style="background-color: #E9E9F2;">LOG_DIR="/var/log/ufw-updates"</span>
+<span style="background-color: #E9E9F2;">mkdir -p "$LOG_DIR"</span>
+<span style="background-color: #E9E9F2;">LOG_FILE="$LOG_DIR/update-$(date +%F).log"</span>
+
+<span style="background-color: #E9E9F2;">echo "Iniciando actualizaci&#243;n de listas de bloqueo en $(date)" &gt;&gt; "$LOG_FILE"</span>
+
+<span style="background-color: #E9E9F2;"># Descargar lista actualizada (ejemplo)</span>
+<span style="background-color: #E9E9F2;">echo "Descargando lista actualizada..." &gt;&gt; "$LOG_FILE"</span>
+<span style="background-color: #E9E9F2;">curl -s </span><span style="color: #009B7C; background-color: #E9E9F2; font-weight: bold; text-decoration: underline;"><a href="https://ejemplo.com/ip-blocklist.txt">https://ejemplo.com/ip-blocklist.txt</a></span><span style="background-color: #E9E9F2;"> &gt; /tmp/new-blocklist.txt</span>
+
+<span style="background-color: #E9E9F2;"># Eliminar reglas antiguas con comentario espec&#237;fico</span>
+<span style="background-color: #E9E9F2;">echo "Eliminando reglas antiguas..." &gt;&gt; "$LOG_FILE"</span>
+<span style="background-color: #E9E9F2;">for ip in $(ufw status | grep "lista externa" | awk '{print $3}'); do</span>
+<span style="background-color: #E9E9F2;">  ufw delete deny from $ip &gt;&gt; "$LOG_FILE" 2&gt;&amp;1</span>
+<span style="background-color: #E9E9F2;">done</span>
+
+<span style="background-color: #E9E9F2;"># A&#241;adir nuevas IPs</span>
+<span style="background-color: #E9E9F2;">echo "A&#241;adiendo nuevas IPs..." &gt;&gt; "$LOG_FILE"</span>
+<span style="background-color: #E9E9F2;">count=0</span>
+<span style="background-color: #E9E9F2;">while read ip; do</span>
+<span style="background-color: #E9E9F2;">  if [[ $ip =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}(/[0-9]{1,2})?$ ]]; then</span>
+<span style="background-color: #E9E9F2;">    ufw deny from $ip comment 'IP maliciosa - lista externa' &gt;&gt; "$LOG_FILE" 2&gt;&amp;1</span>
+<span style="background-color: #E9E9F2;">    ((count++))</span>
+<span style="background-color: #E9E9F2;">  fi</span>
+<span style="background-color: #E9E9F2;">done &lt; /tmp/new-blocklist.txt</span>
+
+<span style="background-color: #E9E9F2;">echo "Actualizaci&#243;n completada. $count IPs bloqueadas." &gt;&gt; "$LOG_FILE"</span>
+<span style="background-color: #E9E9F2;">echo "Fecha y hora de finalizaci&#243;n: $(date)" &gt;&gt; "$LOG_FILE"</span>
+
+<span style="background-color: #E9E9F2;"># Limpiar archivos temporales</span>
+<span style="background-color: #E9E9F2;">rm /tmp/new-blocklist.txt</span>
+
+<span style="background-color: #E9E9F2;">exit 0</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+<span style="color: #004700;">#+END_SRC</span>
+
+Programa la ejecuci&#243;n con cron:
+
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash :eval no</span>
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Editar crontab</span>
+<span style="background-color: #E9E9F2;">sudo crontab -e</span>
+
+<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">A&#241;adir l&#237;nea para ejecutar cada d&#237;a a las 3 AM</span>
+<span style="background-color: #E9E9F2;">0 3 * * * /ruta/a/update-blocklist.sh</span>
+<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org07e5819" class="outline-2">
+<h2 id="org07e5819">Conclusión y Recursos Adicionales</h2>
+<div class="outline-text-2" id="text-org07e5819">
+<p>
+Finalmente, añade una conclusión y recursos adicionales:
+</p>
+
+<p>
+#+BEGIN<sub>SRC</sub> org
+,* Conclusión
+</p>
+
+<p>
+Configurar UFW a través de scripts gestionados con Org Mode en Emacs ofrece varias ventajas:
+</p>
+
+<ol class="org-ol">
+<li><b>Documentación integrada</b>: El código y su explicación se mantienen juntos</li>
+<li><b>Reproducibilidad</b>: Puedes recrear exactamente la misma configuración en diferentes servidores</li>
+<li><b>Control de versiones</b>: Puedes mantener tu configuración en un sistema de control de versiones como Git</li>
+<li><b>Adaptabilidad</b>: Fácil de modificar para diferentes entornos (desarrollo, pruebas, producción)</li>
+</ol>
+
+<p>
+Esta aproximación combina la potencia de Emacs y Org Mode con las necesidades prácticas de la administración de sistemas, creando un flujo de trabajo eficiente y bien documentado para la gestión de la seguridad.
+</p>
+
+<p>
+Recuerda que la seguridad es un proceso continuo, no un estado final. Mantén tus reglas de firewall actualizadas, revisa regularmente los logs y adapta tu configuración según evolucionen las amenazas.
+</p>
+
+<p>
+,* Recursos Adicionales
+</p>
+
+<ul class="org-ul">
+<li><a href="https://help.ubuntu.com/community/UFW">Documentación oficial de UFW en Ubuntu</a></li>
+<li><a href="https://wiki.archlinux.org/title/Uncomplicated_Firewall">Wiki de Arch Linux sobre UFW</a></li>
+<li><a href="https://orgmode.org/worg/org-contrib/babel/">Documentación de Org Babel</a></li>
+<li><a href="https://www.abuseipdb.com/">AbuseIPDB</a> - Base de datos de IPs maliciosas</li>
+</ul>
+
+<p>
+,* Notas de la versión
+</p>
+
+<ul class="org-ul">
+<li><b>Versión 1.0 (2025-04-15)</b>: Publicación inicial</li>
+<li><b>Próximas mejoras planificadas</b>: Integración con Fail2Ban, reglas para Docker, configuración para IPv6</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2acdedd" class="outline-2">
+<h2 id="org2acdedd">Diagrama de Componentes de la Configuración</h2>
+<div class="outline-text-2" id="text-org2acdedd">
+<p>
+Este diagrama muestra los componentes principales que conforman la configuración de seguridad con UFW:
+</p>
+
+
+<figure id="org1694fa8">
+<img src="images/ufw-components.png" alt="ufw-components.png">
+
+</figure>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ubuntu.html">ubuntu</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ufw.html">ufw</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-orgmode.html">orgmode</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[ubuntu]]></category>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[firewall]]></category>
+  <category><![CDATA[ufw]]></category>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[orgmode]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-15-gu-a-pr-ctica-configuraci-n-de-ufw-en-ubuntu-con-scripts-y-org-mode.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-15-gu-a-pr-ctica-configuraci-n-de-ufw-en-ubuntu-con-scripts-y-org-mode.html</guid>
+  <pubDate>Tue, 15 Apr 2025 23:09:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[Detección de Vulnerabilidades en Linux con Bash y Org Mode]]></title>
   <description><![CDATA[
