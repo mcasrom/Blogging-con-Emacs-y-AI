@@ -4,13 +4,13 @@
 <title><![CDATA[Example.com - seguridad]]></title>
 <description><![CDATA[Example.com - seguridad]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-seguridad.html</link>
-<lastBuildDate>Wed, 16 Apr 2025 07:16:59 +0200</lastBuildDate>
+<lastBuildDate>Wed, 16 Apr 2025 07:52:54 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Fortaleciendo la Seguridad Informática con Snort y AIDE: Guía Completa]]></title>
   <description><![CDATA[
-<div id="outline-container-orge8ed29e" class="outline-2">
-<h2 id="orge8ed29e">Introducción</h2>
-<div class="outline-text-2" id="text-orge8ed29e">
+<div id="outline-container-orgc52fbcf" class="outline-2">
+<h2 id="orgc52fbcf">Introducción</h2>
+<div class="outline-text-2" id="text-orgc52fbcf">
 <p>
 La seguridad informática es un aspecto fundamental para cualquier sistema, especialmente en la era digital actual donde las amenazas evolucionan constantemente. En esta guía detallada, exploraremos dos herramientas esenciales para complementar tu estrategia de seguridad: <b>Snort</b> y <b>AIDE</b>.
 </p>
@@ -25,19 +25,19 @@ La combinación de estas herramientas proporciona una defensa en profundidad, pe
 </p>
 
 
-<figure id="orgae815d0">
-<img src="file:///home/mike/myblog/images/arquitectura-seguridad.png" alt="arquitectura-seguridad.png">
+<figure id="org611842f">
+<img src="images/arquitectura-seguridad.png" alt="arquitectura-seguridad.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org7ffc667" class="outline-2">
-<h2 id="org7ffc667">Parte 1: Instalación y Configuración de Snort</h2>
-<div class="outline-text-2" id="text-org7ffc667">
+<div id="outline-container-org55d4434" class="outline-2">
+<h2 id="org55d4434">Parte 1: Instalación y Configuración de Snort</h2>
+<div class="outline-text-2" id="text-org55d4434">
 </div>
-<div id="outline-container-org5e43b5e" class="outline-3">
-<h3 id="org5e43b5e">¿Qué es Snort?</h3>
-<div class="outline-text-3" id="text-org5e43b5e">
+<div id="outline-container-orge3efe91" class="outline-3">
+<h3 id="orge3efe91">¿Qué es Snort?</h3>
+<div class="outline-text-3" id="text-orge3efe91">
 <p>
 Snort es un sistema de detección y prevención de intrusiones (IDS/IPS) de código abierto, creado por Martin Roesch en 1998. Esta poderosa herramienta analiza el tráfico de red en tiempo real, comparándolo con una base de datos de reglas para identificar posibles ataques, escaneos, exploits y otras actividades maliciosas.
 </p>
@@ -53,9 +53,9 @@ Snort puede funcionar en tres modos principales:
 </ol>
 </div>
 </div>
-<div id="outline-container-org21917f5" class="outline-3">
-<h3 id="org21917f5">Requisitos Previos</h3>
-<div class="outline-text-3" id="text-org21917f5">
+<div id="outline-container-org4a543f2" class="outline-3">
+<h3 id="org4a543f2">Requisitos Previos</h3>
+<div class="outline-text-3" id="text-org4a543f2">
 <p>
 Antes de instalar Snort, asegúrate de contar con:
 </p>
@@ -69,18 +69,18 @@ Antes de instalar Snort, asegúrate de contar con:
 </ul>
 </div>
 </div>
-<div id="outline-container-org7eee210" class="outline-3">
-<h3 id="org7eee210">Instalación de Snort en Debian/Ubuntu</h3>
-<div class="outline-text-3" id="text-org7eee210">
+<div id="outline-container-org5fb90e7" class="outline-3">
+<h3 id="org5fb90e7">Instalación de Snort en Debian/Ubuntu</h3>
+<div class="outline-text-3" id="text-org5fb90e7">
 <p>
 Primero, instalemos las dependencias necesarias:
 </p>
 
 <div class="org-src-container">
 <pre class="src src-bash">sudo apt update
-sudo apt install -y build-essential libpcap-dev libpcre3-dev libnet1-dev <span style="color: #005F00;">\</span>
-zlib1g-dev luajit hwloc libdnet-dev libdumbnet-dev bison flex liblzma-dev <span style="color: #005F00;">\</span>
-openssl libssl-dev libnghttp2-dev libluajit-5.1-dev pkg-config libhwloc-dev <span style="color: #005F00;">\</span>
+sudo apt install -y build-essential libpcap-dev libpcre3-dev libnet1-dev <span style="color: #a44185;">\</span>
+zlib1g-dev luajit hwloc libdnet-dev libdumbnet-dev bison flex liblzma-dev <span style="color: #a44185;">\</span>
+openssl libssl-dev libnghttp2-dev libluajit-5.1-dev pkg-config libhwloc-dev <span style="color: #a44185;">\</span>
 cmake cpputest
 </pre>
 </div>
@@ -99,50 +99,50 @@ Durante la instalación, se te pedirá configurar tu red local. Introduce el ran
 </p>
 </div>
 </div>
-<div id="outline-container-org849891b" class="outline-3">
-<h3 id="org849891b">Instalación desde el código fuente (alternativa)</h3>
-<div class="outline-text-3" id="text-org849891b">
+<div id="outline-container-org671a1aa" class="outline-3">
+<h3 id="org671a1aa">Instalación desde el código fuente (alternativa)</h3>
+<div class="outline-text-3" id="text-org671a1aa">
 <p>
 Para tener la versión más reciente, puedes compilar Snort desde el código fuente:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Descargar y compilar DAQ</span>
-<span style="color: #1F55A0;">cd</span> ~/Downloads
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Descargar y compilar DAQ</span>
+<span style="color: #dc3eb7;">cd</span> ~/Downloads
 wget https://github.com/snort3/libdaq/archive/refs/tags/v3.0.12.tar.gz
 tar -xzvf v3.0.12.tar.gz
-<span style="color: #1F55A0;">cd</span> libdaq-3.0.12/
+<span style="color: #dc3eb7;">cd</span> libdaq-3.0.12/
 ./bootstrap
 ./configure
 make
 sudo make install
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Descargar y compilar Snort</span>
-<span style="color: #1F55A0;">cd</span> ~/Downloads
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Descargar y compilar Snort</span>
+<span style="color: #dc3eb7;">cd</span> ~/Downloads
 wget https://github.com/snort3/snort3/archive/refs/tags/3.1.76.0.tar.gz
 tar -xzvf 3.1.76.0.tar.gz
-<span style="color: #1F55A0;">cd</span> snort3-3.1.76.0/
+<span style="color: #dc3eb7;">cd</span> snort3-3.1.76.0/
 ./configure_cmake.sh --prefix=/usr/local --enable-tcmalloc
-<span style="color: #1F55A0;">cd</span> build
+<span style="color: #dc3eb7;">cd</span> build
 make
 sudo make install
 sudo ldconfig
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verificar la instalaci&#243;n</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar la instalaci&#243;n</span>
 snort -V
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orga1a40b5" class="outline-3">
-<h3 id="orga1a40b5">Configuración Básica de Snort</h3>
-<div class="outline-text-3" id="text-orga1a40b5">
+<div id="outline-container-org22a5aac" class="outline-3">
+<h3 id="org22a5aac">Configuración Básica de Snort</h3>
+<div class="outline-text-3" id="text-org22a5aac">
 <p>
 El archivo principal de configuración se encuentra en `/etc/snort/snort.conf` (o en `/usr/local/etc/snort/snort.conf` si compilaste desde el código fuente). Vamos a realizar algunas configuraciones básicas:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-bash">sudo cp /etc/snort/snort.conf /etc/snort/snort.conf.bak  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Crear backup</span>
+<pre class="src src-bash">sudo cp /etc/snort/snort.conf /etc/snort/snort.conf.bak  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear backup</span>
 sudo nano /etc/snort/snort.conf
 </pre>
 </div>
@@ -156,7 +156,7 @@ Dentro del archivo, busca y modifica las siguientes secciones:
 </p>
 <div class="org-src-container">
 <pre class="src src-bash">ipvar HOME_NET 192.168.1.0/24
-ipvar EXTERNAL_NET !$<span style="color: #004651;">HOME_NET</span>
+ipvar EXTERNAL_NET !$<span style="color: #1857a4;">HOME_NET</span>
 </pre>
 </div>
 
@@ -184,17 +184,17 @@ preprocessor stream5_global: track_tcp yes, track_udp yes
 <b>Reglas</b>: Descomenta las reglas que deseas utilizar:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash">include $<span style="color: #004651;">RULE_PATH</span>/local.rules
-include $<span style="color: #004651;">RULE_PATH</span>/bad-traffic.rules
-include $<span style="color: #004651;">RULE_PATH</span>/exploit.rules
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">... otras reglas seg&#250;n necesidades ...</span>
+<pre class="src src-bash">include $<span style="color: #1857a4;">RULE_PATH</span>/local.rules
+include $<span style="color: #1857a4;">RULE_PATH</span>/bad-traffic.rules
+include $<span style="color: #1857a4;">RULE_PATH</span>/exploit.rules
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">... otras reglas seg&#250;n necesidades ...</span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org8e2af84" class="outline-3">
-<h3 id="org8e2af84">Creación de Reglas Personalizadas</h3>
-<div class="outline-text-3" id="text-org8e2af84">
+<div id="outline-container-org3ca258b" class="outline-3">
+<h3 id="org3ca258b">Creación de Reglas Personalizadas</h3>
+<div class="outline-text-3" id="text-org3ca258b">
 <p>
 Las reglas de Snort son extremadamente poderosas y flexibles. Vamos a crear algunas reglas personalizadas en el archivo `/etc/snort/rules/local.rules`:
 </p>
@@ -209,27 +209,27 @@ Añade estas reglas de ejemplo:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Alerta por escaneo de puertos</span>
-alert tcp any any -&gt; $<span style="color: #004651;">HOME_NET</span> any (msg:<span style="color: #005F00;">"Posible escaneo de puertos TCP"</span>; flags:S; threshold: type threshold, track by_src, count 50, seconds 60; sid:1000001; rev:1;)
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Alerta por escaneo de puertos</span>
+alert tcp any any -&gt; $<span style="color: #1857a4;">HOME_NET</span> any (msg:<span style="color: #a44185;">"Posible escaneo de puertos TCP"</span>; flags:S; threshold: type threshold, track by_src, count 50, seconds 60; sid:1000001; rev:1;)
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Alerta por intentos de acceso SSH m&#250;ltiples</span>
-alert tcp any any -&gt; $<span style="color: #004651;">HOME_NET</span> 22 (msg:<span style="color: #005F00;">"Posible ataque de fuerza bruta SSH"</span>; flow:to_server; threshold: type threshold, track by_src, count 5, seconds 60; sid:1000002; rev:1;)
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Alerta por intentos de acceso SSH m&#250;ltiples</span>
+alert tcp any any -&gt; $<span style="color: #1857a4;">HOME_NET</span> 22 (msg:<span style="color: #a44185;">"Posible ataque de fuerza bruta SSH"</span>; flow:to_server; threshold: type threshold, track by_src, count 5, seconds 60; sid:1000002; rev:1;)
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Alerta por acceso a la p&#225;gina de administraci&#243;n</span>
-alert tcp any any -&gt; $<span style="color: #004651;">HOME_NET</span> 80 (msg:<span style="color: #005F00;">"Acceso a panel de administraci&#243;n"</span>; content:<span style="color: #005F00;">"GET /admin"</span>; nocase; sid:1000003; rev:1;)
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Alerta por acceso a la p&#225;gina de administraci&#243;n</span>
+alert tcp any any -&gt; $<span style="color: #1857a4;">HOME_NET</span> 80 (msg:<span style="color: #a44185;">"Acceso a panel de administraci&#243;n"</span>; content:<span style="color: #a44185;">"GET /admin"</span>; nocase; sid:1000003; rev:1;)
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgffe8e22" class="outline-3">
-<h3 id="orgffe8e22">Verificación de la Configuración</h3>
-<div class="outline-text-3" id="text-orgffe8e22">
+<div id="outline-container-orgcb4c5a9" class="outline-3">
+<h3 id="orgcb4c5a9">Verificación de la Configuración</h3>
+<div class="outline-text-3" id="text-orgcb4c5a9">
 <p>
 Antes de iniciar Snort, verifica que tu configuración no tenga errores:
 </p>
@@ -244,9 +244,9 @@ Si todo está correcto, deberías ver "Snort successfully validated the configur
 </p>
 </div>
 </div>
-<div id="outline-container-orgc7e24a3" class="outline-3">
-<h3 id="orgc7e24a3">Ejecución de Snort</h3>
-<div class="outline-text-3" id="text-orgc7e24a3">
+<div id="outline-container-org92320c0" class="outline-3">
+<h3 id="org92320c0">Ejecución de Snort</h3>
+<div class="outline-text-3" id="text-org92320c0">
 <p>
 Para ejecutar Snort en modo IDS:
 </p>
@@ -271,14 +271,14 @@ Para ejecutar Snort en modo IPS (usando NFQ):
 </p>
 
 <div class="org-src-container">
-<pre class="src src-bash">sudo snort -c /etc/snort/snort.conf -Q --daq nfq --daq-var <span style="color: #004651;">queue</span>=1
+<pre class="src src-bash">sudo snort -c /etc/snort/snort.conf -Q --daq nfq --daq-var <span style="color: #1857a4;">queue</span>=1
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org1728710" class="outline-3">
-<h3 id="org1728710">Configuración como Servicio</h3>
-<div class="outline-text-3" id="text-org1728710">
+<div id="outline-container-orgdec95e9" class="outline-3">
+<h3 id="orgdec95e9">Configuración como Servicio</h3>
+<div class="outline-text-3" id="text-orgdec95e9">
 <p>
 Para que Snort se inicie automáticamente al arrancar el sistema:
 </p>
@@ -294,16 +294,16 @@ Añade el siguiente contenido:
 
 <div class="org-src-container">
 <pre class="src src-bash">[Unit]
-<span style="color: #004651;">Description</span>=Snort NIDS Daemon
-<span style="color: #004651;">After</span>=network.target
+<span style="color: #1857a4;">Description</span>=Snort NIDS Daemon
+<span style="color: #1857a4;">After</span>=network.target
 
 [Service]
-<span style="color: #004651;">Type</span>=simple
-<span style="color: #004651;">ExecStart</span>=/usr/sbin/snort -c /etc/snort/snort.conf -D
-<span style="color: #004651;">Restart</span>=on-failure
+<span style="color: #1857a4;">Type</span>=simple
+<span style="color: #1857a4;">ExecStart</span>=/usr/sbin/snort -c /etc/snort/snort.conf -D
+<span style="color: #1857a4;">Restart</span>=on-failure
 
 [Install]
-<span style="color: #004651;">WantedBy</span>=multi-user.target
+<span style="color: #1857a4;">WantedBy</span>=multi-user.target
 </pre>
 </div>
 
@@ -320,28 +320,28 @@ sudo systemctl status snort.service
 </div>
 </div>
 </div>
-<div id="outline-container-orgff00ddf" class="outline-3">
-<h3 id="orgff00ddf">Visualización con diagrama PlantUML</h3>
-<div class="outline-text-3" id="text-orgff00ddf">
+<div id="outline-container-orgdbb5052" class="outline-3">
+<h3 id="orgdbb5052">Visualización con diagrama PlantUML</h3>
+<div class="outline-text-3" id="text-orgdbb5052">
 <p>
 El flujo de trabajo de Snort puede representarse visualmente:
 </p>
 
 
-<figure id="orgc3be191">
-<img src="file:///home/mike/myblog/images/flujo-snort.png" alt="flujo-snort.png">
+<figure id="org02ef8d8">
+<img src="images/flujo-snort.png" alt="flujo-snort.png">
 
 </figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org8560e3d" class="outline-2">
-<h2 id="org8560e3d">Parte 2: Instalación y Configuración de AIDE</h2>
-<div class="outline-text-2" id="text-org8560e3d">
+<div id="outline-container-orgb698de7" class="outline-2">
+<h2 id="orgb698de7">Parte 2: Instalación y Configuración de AIDE</h2>
+<div class="outline-text-2" id="text-orgb698de7">
 </div>
-<div id="outline-container-org3c71329" class="outline-3">
-<h3 id="org3c71329">¿Qué es AIDE?</h3>
-<div class="outline-text-3" id="text-org3c71329">
+<div id="outline-container-org8fbecb6" class="outline-3">
+<h3 id="org8fbecb6">¿Qué es AIDE?</h3>
+<div class="outline-text-3" id="text-org8fbecb6">
 <p>
 AIDE (Advanced Intrusion Detection Environment) es una herramienta de detección de intrusiones basada en host que verifica la integridad de los archivos del sistema. Funciona creando una base de datos de los atributos de los archivos y directorios, como permisos, timestamps, checksums y contenido. Posteriormente, puede detectar cualquier cambio no autorizado en estos atributos.
 </p>
@@ -357,9 +357,9 @@ AIDE es especialmente útil para:
 </ul>
 </div>
 </div>
-<div id="outline-container-org890da46" class="outline-3">
-<h3 id="org890da46">Instalación de AIDE</h3>
-<div class="outline-text-3" id="text-org890da46">
+<div id="outline-container-orgadf285a" class="outline-3">
+<h3 id="orgadf285a">Instalación de AIDE</h3>
+<div class="outline-text-3" id="text-orgadf285a">
 <p>
 En sistemas Debian/Ubuntu:
 </p>
@@ -376,21 +376,21 @@ En sistemas basados en Red Hat (RHEL, CentOS, Fedora):
 
 <div class="org-src-container">
 <pre class="src src-bash">sudo yum install -y aide
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">o con dnf</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">o con dnf</span>
 sudo dnf install -y aide
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org257efca" class="outline-3">
-<h3 id="org257efca">Configuración Básica de AIDE</h3>
-<div class="outline-text-3" id="text-org257efca">
+<div id="outline-container-org1e4fd00" class="outline-3">
+<h3 id="org1e4fd00">Configuración Básica de AIDE</h3>
+<div class="outline-text-3" id="text-org1e4fd00">
 <p>
 El archivo principal de configuración se encuentra en `/etc/aide/aide.conf`. Vamos a realizar una configuración básica:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-bash">sudo cp /etc/aide/aide.conf /etc/aide/aide.conf.bak  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Crear backup</span>
+<pre class="src src-bash">sudo cp /etc/aide/aide.conf /etc/aide/aide.conf.bak  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear backup</span>
 sudo nano /etc/aide/aide.conf
 </pre>
 </div>
@@ -401,30 +401,30 @@ El archivo contiene definiciones de grupos de reglas y los directorios/archivos 
 
 <div class="org-src-container">
 <pre class="src src-bash">
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Definici&#243;n de grupos de reglas</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">NORMAL = checksums + atributos de archivo + permisos</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">DATAONLY = solo checksums</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">LOGS = como NORMAL pero permitiendo cambios en el tama&#241;o</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">...</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Definici&#243;n de grupos de reglas</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">NORMAL = checksums + atributos de archivo + permisos</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">DATAONLY = solo checksums</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">LOGS = como NORMAL pero permitiendo cambios en el tama&#241;o</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">...</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Directorios/archivos a monitorear</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Directorios/archivos a monitorear</span>
 /etc NORMAL
 /bin NORMAL
 /sbin NORMAL
 /usr NORMAL
 /boot NORMAL
 /root NORMAL
-<span style="color: #1F55A0; font-weight: bold;">!</span>/var/log/.*  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Excluir logs - pueden cambiar frecuentemente</span>
-<span style="color: #1F55A0; font-weight: bold;">!</span>/var/spool/.* <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Excluir spool</span>
-<span style="color: #1F55A0; font-weight: bold;">!</span>/var/tmp/.* <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Excluir temporales</span>
+<span style="color: #219fd5; font-weight: bold;">!</span>/var/log/.*  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Excluir logs - pueden cambiar frecuentemente</span>
+<span style="color: #219fd5; font-weight: bold;">!</span>/var/spool/.* <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Excluir spool</span>
+<span style="color: #219fd5; font-weight: bold;">!</span>/var/tmp/.* <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Excluir temporales</span>
 
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org76b9494" class="outline-3">
-<h3 id="org76b9494">Personalización de la Configuración</h3>
-<div class="outline-text-3" id="text-org76b9494">
+<div id="outline-container-orgf7d9ce6" class="outline-3">
+<h3 id="orgf7d9ce6">Personalización de la Configuración</h3>
+<div class="outline-text-3" id="text-orgf7d9ce6">
 <p>
 Vamos a personalizar la configuración para adaptarla a nuestras necesidades:
 </p>
@@ -439,35 +439,35 @@ Añade o modifica estas líneas según tus necesidades:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Definici&#243;n personalizada de grupos de reglas</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Definici&#243;n personalizada de grupos de reglas</span>
 MyGroup = sha256+ftype+p+u+g+n+acl+xattrs
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Directorios espec&#237;ficos a monitorear con mayor atenci&#243;n</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Directorios espec&#237;ficos a monitorear con mayor atenci&#243;n</span>
 /etc/ssh MyGroup
 /etc/pam.d MyGroup
 /etc/sudoers MyGroup
 /etc/shadow MyGroup
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Archivos de configuraci&#243;n de Snort</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Archivos de configuraci&#243;n de Snort</span>
 /etc/snort MyGroup
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Excluir directorios que cambian frecuentemente</span>
-<span style="color: #1F55A0; font-weight: bold;">!</span>/var/lib/mysql/.*
-<span style="color: #1F55A0; font-weight: bold;">!</span>/home/usuario/descargas/.*
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Excluir directorios que cambian frecuentemente</span>
+<span style="color: #219fd5; font-weight: bold;">!</span>/var/lib/mysql/.*
+<span style="color: #219fd5; font-weight: bold;">!</span>/home/usuario/descargas/.*
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org1274708" class="outline-3">
-<h3 id="org1274708">Inicialización de la Base de Datos de AIDE</h3>
-<div class="outline-text-3" id="text-org1274708">
+<div id="outline-container-org1c1ee8b" class="outline-3">
+<h3 id="org1c1ee8b">Inicialización de la Base de Datos de AIDE</h3>
+<div class="outline-text-3" id="text-org1c1ee8b">
 <p>
 Antes de usar AIDE, necesitamos inicializar su base de datos:
 </p>
 
 <div class="org-src-container">
 <pre class="src src-bash">sudo aideinit
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">o alternativamente</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">o alternativamente</span>
 sudo aide --init
 </pre>
 </div>
@@ -482,9 +482,9 @@ Esto puede tomar tiempo dependiendo del tamaño de tu sistema. Una vez completad
 </div>
 </div>
 </div>
-<div id="outline-container-org84dd4d7" class="outline-3">
-<h3 id="org84dd4d7">Ejecución Manual de Verificaciones</h3>
-<div class="outline-text-3" id="text-org84dd4d7">
+<div id="outline-container-orgeec7e3a" class="outline-3">
+<h3 id="orgeec7e3a">Ejecución Manual de Verificaciones</h3>
+<div class="outline-text-3" id="text-orgeec7e3a">
 <p>
 Para ejecutar una verificación manualmente:
 </p>
@@ -499,9 +499,9 @@ Este comando comparará el estado actual del sistema con la base de datos almace
 </p>
 </div>
 </div>
-<div id="outline-container-org8379837" class="outline-3">
-<h3 id="org8379837">Actualización de la Base de Datos</h3>
-<div class="outline-text-3" id="text-org8379837">
+<div id="outline-container-org0f8d893" class="outline-3">
+<h3 id="org0f8d893">Actualización de la Base de Datos</h3>
+<div class="outline-text-3" id="text-org0f8d893">
 <p>
 Después de realizar cambios legítimos en el sistema (como actualizaciones de software), debemos actualizar la base de datos de AIDE:
 </p>
@@ -513,9 +513,9 @@ sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
 </div>
 </div>
 </div>
-<div id="outline-container-orge21c918" class="outline-3">
-<h3 id="orge21c918">Automatización con Cron</h3>
-<div class="outline-text-3" id="text-orge21c918">
+<div id="outline-container-org154d214" class="outline-3">
+<h3 id="org154d214">Automatización con Cron</h3>
+<div class="outline-text-3" id="text-org154d214">
 <p>
 Para automatizar las verificaciones regulares, configuremos una tarea cron:
 </p>
@@ -533,26 +533,26 @@ Añade este contenido:
 bash
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verificaci&#243;n diaria con AIDE</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificaci&#243;n diaria con AIDE</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Ruta para almacenar informes</span>
-<span style="color: #004651;">REPORT_DIR</span>=<span style="color: #005F00;">"/var/log/aide"</span>
-<span style="color: #004651;">REPORT_FILE</span>=<span style="color: #005F00;">"$REPORT_DIR/aide-$(</span><span style="color: #1F55A0; font-weight: bold;">date +%Y%m%d-%H%M%S</span><span style="color: #005F00;">).log"</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ruta para almacenar informes</span>
+<span style="color: #1857a4;">REPORT_DIR</span>=<span style="color: #a44185;">"/var/log/aide"</span>
+<span style="color: #1857a4;">REPORT_FILE</span>=<span style="color: #a44185;">"$REPORT_DIR/aide-$(</span><span style="color: #219fd5; font-weight: bold;">date +%Y%m%d-%H%M%S</span><span style="color: #a44185;">).log"</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Crear directorio si no existe</span>
-mkdir -p $<span style="color: #004651;">REPORT_DIR</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear directorio si no existe</span>
+mkdir -p $<span style="color: #1857a4;">REPORT_DIR</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Ejecutar verificaci&#243;n</span>
-/usr/bin/aide --check &gt; $<span style="color: #004651;">REPORT_FILE</span> 2&gt;&amp;1
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar verificaci&#243;n</span>
+/usr/bin/aide --check &gt; $<span style="color: #1857a4;">REPORT_FILE</span> 2&gt;&amp;1
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Si hay cambios, enviar por correo (opcional)</span>
-<span style="color: #D70000;">if</span> [ $<span style="color: #004651;">?</span> -ne 0 ]; <span style="color: #D70000;">then</span>
-    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Se detectaron cambios en el sistema. Ver $REPORT_FILE para detalles."</span> | <span style="color: #005F00;">\</span>
-    mail -s <span style="color: #005F00;">"Alerta de AIDE: cambios detectados"</span> admin@example.com
-<span style="color: #D70000;">fi</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Si hay cambios, enviar por correo (opcional)</span>
+<span style="color: #219fd5; font-style: italic;">if</span> [ $<span style="color: #1857a4;">?</span> -ne 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Se detectaron cambios en el sistema. Ver $REPORT_FILE para detalles."</span> | <span style="color: #a44185;">\</span>
+    mail -s <span style="color: #a44185;">"Alerta de AIDE: cambios detectados"</span> admin@example.com
+<span style="color: #219fd5; font-style: italic;">fi</span>
 
-<span style="color: #D70000;">exit</span> 0
+<span style="color: #219fd5; font-style: italic;">exit</span> 0
 </pre>
 </div>
 
@@ -582,16 +582,16 @@ Añade este contenido:
 bash
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Actualizaci&#243;n semanal de la base de datos de AIDE</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Actualizaci&#243;n semanal de la base de datos de AIDE</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Ejecutar actualizaci&#243;n</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar actualizaci&#243;n</span>
 /usr/bin/aide --update
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Mover la nueva base de datos</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Mover la nueva base de datos</span>
 mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
 
-<span style="color: #D70000;">exit</span> 0
+<span style="color: #219fd5; font-style: italic;">exit</span> 0
 </pre>
 </div>
 
@@ -605,28 +605,28 @@ Haz el script ejecutable:
 </div>
 </div>
 </div>
-<div id="outline-container-org3886724" class="outline-3">
-<h3 id="org3886724">Visualización con diagrama PlantUML</h3>
-<div class="outline-text-3" id="text-org3886724">
+<div id="outline-container-orgbd39a86" class="outline-3">
+<h3 id="orgbd39a86">Visualización con diagrama PlantUML</h3>
+<div class="outline-text-3" id="text-orgbd39a86">
 <p>
 El flujo de trabajo de AIDE puede representarse visualmente:
 </p>
 
 
-<figure id="orgd6cfbb4">
-<img src="file:///home/mike/myblog/images/flujo-aide.png" alt="flujo-aide.png">
+<figure id="orgf20e6b4">
+<img src="images/flujo-aide.png" alt="flujo-aide.png">
 
 </figure>
 </div>
 </div>
 </div>
-<div id="outline-container-orgeaf8601" class="outline-2">
-<h2 id="orgeaf8601">Parte 3: Integración de Snort y AIDE para una Defensa Completa</h2>
-<div class="outline-text-2" id="text-orgeaf8601">
+<div id="outline-container-org22551e4" class="outline-2">
+<h2 id="org22551e4">Parte 3: Integración de Snort y AIDE para una Defensa Completa</h2>
+<div class="outline-text-2" id="text-org22551e4">
 </div>
-<div id="outline-container-org3b81f1c" class="outline-3">
-<h3 id="org3b81f1c">Estrategia de Defensa en Profundidad</h3>
-<div class="outline-text-3" id="text-org3b81f1c">
+<div id="outline-container-orgc01f187" class="outline-3">
+<h3 id="orgc01f187">Estrategia de Defensa en Profundidad</h3>
+<div class="outline-text-3" id="text-orgc01f187">
 <p>
 La combinación de Snort y AIDE proporciona una defensa en profundidad para tu sistema:
 </p>
@@ -642,9 +642,9 @@ Esta estrategia aplica el principio de defensa en profundidad: múltiples capas 
 </p>
 </div>
 </div>
-<div id="outline-container-orgeb284dc" class="outline-3">
-<h3 id="orgeb284dc">Integración a Nivel de Alertas</h3>
-<div class="outline-text-3" id="text-orgeb284dc">
+<div id="outline-container-orgf6e7931" class="outline-3">
+<h3 id="orgf6e7931">Integración a Nivel de Alertas</h3>
+<div class="outline-text-3" id="text-orgf6e7931">
 <p>
 Podemos integrar las alertas de ambas herramientas para tener una vista unificada de posibles incidentes de seguridad:
 </p>
@@ -662,39 +662,39 @@ Crea un script que combine los resultados:
 bash
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Script para integrar las alertas de Snort y AIDE</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Script para integrar las alertas de Snort y AIDE</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Directorios de logs</span>
-<span style="color: #004651;">SNORT_LOG</span>=<span style="color: #005F00;">"/var/log/snort/alert"</span>
-<span style="color: #004651;">AIDE_LOG</span>=<span style="color: #005F00;">"/var/log/aide/aide-$(</span><span style="color: #1F55A0; font-weight: bold;">date +%Y%m%d</span><span style="color: #005F00;">).log"</span>
-<span style="color: #004651;">COMBINED_LOG</span>=<span style="color: #005F00;">"/var/log/security/combined-$(</span><span style="color: #1F55A0; font-weight: bold;">date +%Y%m%d</span><span style="color: #005F00;">).log"</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Directorios de logs</span>
+<span style="color: #1857a4;">SNORT_LOG</span>=<span style="color: #a44185;">"/var/log/snort/alert"</span>
+<span style="color: #1857a4;">AIDE_LOG</span>=<span style="color: #a44185;">"/var/log/aide/aide-$(</span><span style="color: #219fd5; font-weight: bold;">date +%Y%m%d</span><span style="color: #a44185;">).log"</span>
+<span style="color: #1857a4;">COMBINED_LOG</span>=<span style="color: #a44185;">"/var/log/security/combined-$(</span><span style="color: #219fd5; font-weight: bold;">date +%Y%m%d</span><span style="color: #a44185;">).log"</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Crear directorio si no existe</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear directorio si no existe</span>
 mkdir -p /var/log/security
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Ejecutar verificaci&#243;n de AIDE</span>
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Ejecutando verificaci&#243;n de AIDE..."</span> &gt; $<span style="color: #004651;">COMBINED_LOG</span>
-/usr/bin/aide --check &gt;&gt; $<span style="color: #004651;">COMBINED_LOG</span> 2&gt;&amp;1
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">""</span> &gt;&gt; $<span style="color: #004651;">COMBINED_LOG</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar verificaci&#243;n de AIDE</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Ejecutando verificaci&#243;n de AIDE..."</span> &gt; $<span style="color: #1857a4;">COMBINED_LOG</span>
+/usr/bin/aide --check &gt;&gt; $<span style="color: #1857a4;">COMBINED_LOG</span> 2&gt;&amp;1
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span> &gt;&gt; $<span style="color: #1857a4;">COMBINED_LOG</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">A&#241;adir &#250;ltimas alertas de Snort</span>
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#218;ltimas alertas de Snort:"</span> &gt;&gt; $<span style="color: #004651;">COMBINED_LOG</span>
-tail -n 50 $<span style="color: #004651;">SNORT_LOG</span> &gt;&gt; $<span style="color: #004651;">COMBINED_LOG</span>
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">""</span> &gt;&gt; $<span style="color: #004651;">COMBINED_LOG</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">A&#241;adir &#250;ltimas alertas de Snort</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"&#218;ltimas alertas de Snort:"</span> &gt;&gt; $<span style="color: #1857a4;">COMBINED_LOG</span>
+tail -n 50 $<span style="color: #1857a4;">SNORT_LOG</span> &gt;&gt; $<span style="color: #1857a4;">COMBINED_LOG</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span> &gt;&gt; $<span style="color: #1857a4;">COMBINED_LOG</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Analizar para detectar correlaciones</span>
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"An&#225;lisis de correlaci&#243;n:"</span> &gt;&gt; $<span style="color: #004651;">COMBINED_LOG</span>
-grep -i <span style="color: #005F00;">"modified"</span> $<span style="color: #004651;">AIDE_LOG</span> &gt; /tmp/aide_modified.tmp
-<span style="color: #D70000;">while </span><span style="color: #1F55A0;">read</span> line; <span style="color: #D70000;">do</span>
-    <span style="color: #004651;">file</span>=$(<span style="color: #1F55A0; font-weight: bold;">echo $line | awk '{print $2}'</span>)
-    grep -i <span style="color: #005F00;">"$file"</span> $<span style="color: #004651;">SNORT_LOG</span> &gt;&gt; $<span style="color: #004651;">COMBINED_LOG</span>
-<span style="color: #D70000;">done</span> &lt; /tmp/aide_modified.tmp
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Analizar para detectar correlaciones</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"An&#225;lisis de correlaci&#243;n:"</span> &gt;&gt; $<span style="color: #1857a4;">COMBINED_LOG</span>
+grep -i <span style="color: #a44185;">"modified"</span> $<span style="color: #1857a4;">AIDE_LOG</span> &gt; /tmp/aide_modified.tmp
+<span style="color: #219fd5; font-style: italic;">while </span><span style="color: #dc3eb7;">read</span> line; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #1857a4;">file</span>=$(<span style="color: #219fd5; font-weight: bold;">echo $line | awk '{print $2}'</span>)
+    grep -i <span style="color: #a44185;">"$file"</span> $<span style="color: #1857a4;">SNORT_LOG</span> &gt;&gt; $<span style="color: #1857a4;">COMBINED_LOG</span>
+<span style="color: #219fd5; font-style: italic;">done</span> &lt; /tmp/aide_modified.tmp
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Enviar informe (opcional)</span>
-cat $<span style="color: #004651;">COMBINED_LOG</span> | mail -s <span style="color: #005F00;">"Informe de Seguridad Diario"</span> admin@example.com
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Enviar informe (opcional)</span>
+cat $<span style="color: #1857a4;">COMBINED_LOG</span> | mail -s <span style="color: #a44185;">"Informe de Seguridad Diario"</span> admin@example.com
 
-<span style="color: #D70000;">exit</span> 0
+<span style="color: #219fd5; font-style: italic;">exit</span> 0
 </pre>
 </div>
 
@@ -716,7 +716,7 @@ Añade este contenido:
 bash
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
 /etc/aide/aide.sh
 </pre>
 </div>
@@ -731,28 +731,28 @@ Haz el script ejecutable:
 </div>
 </div>
 </div>
-<div id="outline-container-org2ad7e9a" class="outline-3">
-<h3 id="org2ad7e9a">Visualización con diagrama PlantUML</h3>
-<div class="outline-text-3" id="text-org2ad7e9a">
+<div id="outline-container-orgb0c877a" class="outline-3">
+<h3 id="orgb0c877a">Visualización con diagrama PlantUML</h3>
+<div class="outline-text-3" id="text-orgb0c877a">
 <p>
 La integración entre Snort y AIDE puede representarse visualmente:
 </p>
 
 
-<figure id="org315afc0">
-<img src="file:///home/mike/myblog/images/integracion-snort-aide.png" alt="integracion-snort-aide.png">
+<figure id="orgdd0bbbe">
+<img src="images/integracion-snort-aide.png" alt="integracion-snort-aide.png">
 
 </figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org091dfda" class="outline-2">
-<h2 id="org091dfda">Parte 4: Mejores Prácticas y Mantenimiento</h2>
-<div class="outline-text-2" id="text-org091dfda">
+<div id="outline-container-org8de54e5" class="outline-2">
+<h2 id="org8de54e5">Parte 4: Mejores Prácticas y Mantenimiento</h2>
+<div class="outline-text-2" id="text-org8de54e5">
 </div>
-<div id="outline-container-org5be60ef" class="outline-3">
-<h3 id="org5be60ef">Actualización de Reglas de Snort</h3>
-<div class="outline-text-3" id="text-org5be60ef">
+<div id="outline-container-org9885b7c" class="outline-3">
+<h3 id="org9885b7c">Actualización de Reglas de Snort</h3>
+<div class="outline-text-3" id="text-org9885b7c">
 <p>
 Las reglas de Snort deben actualizarse regularmente para detectar las últimas amenazas:
 </p>
@@ -774,15 +774,15 @@ Las reglas de Snort deben actualizarse regularmente para detectar las últimas a
 bash
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Actualizaci&#243;n diaria de reglas de Snort</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Actualizaci&#243;n diaria de reglas de Snort</span>
 
-<span style="color: #1F55A0;">cd</span> /etc/snort/rules
+<span style="color: #dc3eb7;">cd</span> /etc/snort/rules
 wget -q https://www.snort.org/rules/community -O community.tar.gz
 tar -xzf community.tar.gz
 rm community.tar.gz
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Reiniciar Snort para aplicar las nuevas reglas</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Reiniciar Snort para aplicar las nuevas reglas</span>
 systemctl restart snort.service
 </pre>
 </div>
@@ -797,9 +797,9 @@ Haz el script ejecutable:
 </div>
 </div>
 </div>
-<div id="outline-container-orgbf2fa38" class="outline-3">
-<h3 id="orgbf2fa38">Ajuste y Optimización de Rendimiento</h3>
-<div class="outline-text-3" id="text-orgbf2fa38">
+<div id="outline-container-org4971c25" class="outline-3">
+<h3 id="org4971c25">Ajuste y Optimización de Rendimiento</h3>
+<div class="outline-text-3" id="text-org4971c25">
 <p>
 Para optimizar el rendimiento de Snort:
 </p>
@@ -824,16 +824,16 @@ config detection: max_queue_events 5
 <pre class="src src-bash">config bpf_file: /etc/snort/bpf.conf
 
 
-En <span style="color: #1F55A0; font-weight: bold;">`/etc/snort/bpf.conf`</span>:
+En <span style="color: #219fd5; font-weight: bold;">`/etc/snort/bpf.conf`</span>:
 
 not port 53 and not port 80
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org55e5c6b" class="outline-3">
-<h3 id="org55e5c6b">Copia de Seguridad y Recuperación</h3>
-<div class="outline-text-3" id="text-org55e5c6b">
+<div id="outline-container-org92e7f11" class="outline-3">
+<h3 id="org92e7f11">Copia de Seguridad y Recuperación</h3>
+<div class="outline-text-3" id="text-org92e7f11">
 <p>
 Realizar copias de seguridad regulares de tus configuraciones:
 </p>
@@ -847,23 +847,23 @@ Realizar copias de seguridad regulares de tus configuraciones:
 bash
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Copia de seguridad semanal de configuraciones de seguridad</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Copia de seguridad semanal de configuraciones de seguridad</span>
 
-<span style="color: #004651;">BACKUP_DIR</span>=<span style="color: #005F00;">"/backup/security/$(</span><span style="color: #1F55A0; font-weight: bold;">date +%Y%m%d</span><span style="color: #005F00;">)"</span>
-mkdir -p $<span style="color: #004651;">BACKUP_DIR</span>
+<span style="color: #1857a4;">BACKUP_DIR</span>=<span style="color: #a44185;">"/backup/security/$(</span><span style="color: #219fd5; font-weight: bold;">date +%Y%m%d</span><span style="color: #a44185;">)"</span>
+mkdir -p $<span style="color: #1857a4;">BACKUP_DIR</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Backup de configuraci&#243;n de Snort</span>
-tar -czf $<span style="color: #004651;">BACKUP_DIR</span>/snort-config.tar.gz /etc/snort
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Backup de configuraci&#243;n de Snort</span>
+tar -czf $<span style="color: #1857a4;">BACKUP_DIR</span>/snort-config.tar.gz /etc/snort
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Backup de configuraci&#243;n de AIDE</span>
-cp /etc/aide/aide.conf $<span style="color: #004651;">BACKUP_DIR</span>/
-cp /var/lib/aide/aide.db $<span style="color: #004651;">BACKUP_DIR</span>/
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Backup de configuraci&#243;n de AIDE</span>
+cp /etc/aide/aide.conf $<span style="color: #1857a4;">BACKUP_DIR</span>/
+cp /var/lib/aide/aide.db $<span style="color: #1857a4;">BACKUP_DIR</span>/
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Backup de logs (opcional)</span>
-tar -czf $<span style="color: #004651;">BACKUP_DIR</span>/security-logs.tar.gz /var/log/snort /var/log/aide
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Backup de logs (opcional)</span>
+tar -czf $<span style="color: #1857a4;">BACKUP_DIR</span>/security-logs.tar.gz /var/log/snort /var/log/aide
 
-<span style="color: #D70000;">exit</span> 0
+<span style="color: #219fd5; font-style: italic;">exit</span> 0
 </pre>
 </div>
 
@@ -878,9 +878,9 @@ Haz el script ejecutable:
 </div>
 </div>
 </div>
-<div id="outline-container-org6107b84" class="outline-3">
-<h3 id="org6107b84">Pruebas de Efectividad</h3>
-<div class="outline-text-3" id="text-org6107b84">
+<div id="outline-container-org2f92bbe" class="outline-3">
+<h3 id="org2f92bbe">Pruebas de Efectividad</h3>
+<div class="outline-text-3" id="text-org2f92bbe">
 <p>
 Es importante probar regularmente la efectividad de tu configuración:
 </p>
@@ -890,7 +890,7 @@ Es importante probar regularmente la efectividad de tu configuración:
 </ol>
 
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Desde otra m&#225;quina (&#161;NO desde producci&#243;n!)</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Desde otra m&#225;quina (&#161;NO desde producci&#243;n!)</span>
 sudo nmap -sS -p 1-1000 [IP-objetivo]
 </pre>
 </div>
@@ -900,16 +900,16 @@ sudo nmap -sS -p 1-1000 [IP-objetivo]
 </ol>
 
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Modificar un archivo monitoreado</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Modificar un archivo monitoreado</span>
 sudo touch /etc/test-file
-sudo aide --check  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Deber&#237;a mostrar el cambio</span>
+sudo aide --check  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Deber&#237;a mostrar el cambio</span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orge0739cd" class="outline-3">
-<h3 id="orge0739cd">Plan de Respuesta a Incidentes</h3>
-<div class="outline-text-3" id="text-orge0739cd">
+<div id="outline-container-org2853484" class="outline-3">
+<h3 id="org2853484">Plan de Respuesta a Incidentes</h3>
+<div class="outline-text-3" id="text-org2853484">
 <p>
 Desarrolla un plan simple de respuesta a incidentes:
 </p>
@@ -924,9 +924,9 @@ Desarrolla un plan simple de respuesta a incidentes:
 </div>
 </div>
 </div>
-<div id="outline-container-org8d48d10" class="outline-2">
-<h2 id="org8d48d10">Conclusión</h2>
-<div class="outline-text-2" id="text-org8d48d10">
+<div id="outline-container-org171b1d7" class="outline-2">
+<h2 id="org171b1d7">Conclusión</h2>
+<div class="outline-text-2" id="text-org171b1d7">
 <p>
 La combinación de Snort (IDS/IPS basado en red) y AIDE (verificación de integridad basada en host) proporciona una estrategia de defensa en profundidad para proteger tus sistemas informáticos. Mientras Snort vigila el perímetro y detecta intentos de intrusión, AIDE verifica que ningún archivo crítico haya sido modificado sin autorización.
 </p>
@@ -940,9 +940,9 @@ Recuerda que la seguridad informática es un proceso continuo, no un producto. M
 </p>
 </div>
 </div>
-<div id="outline-container-orgf13903b" class="outline-2">
-<h2 id="orgf13903b">Referencias y Recursos Adicionales</h2>
-<div class="outline-text-2" id="text-orgf13903b">
+<div id="outline-container-orgd7376b9" class="outline-2">
+<h2 id="orgd7376b9">Referencias y Recursos Adicionales</h2>
+<div class="outline-text-2" id="text-orgd7376b9">
 <ul class="org-ul">
 <li><a href="https://www.snort.org/">Sitio oficial de Snort</a></li>
 <li><a href="https://github.com/aide/aide">Repositorio de AIDE en GitHub</a></li>
@@ -952,9 +952,9 @@ Recuerda que la seguridad informática es un proceso continuo, no un producto. M
 </ul>
 </div>
 </div>
-<div id="outline-container-org6984077" class="outline-2">
-<h2 id="org6984077">Notas para el Editor de Emacs</h2>
-<div class="outline-text-2" id="text-org6984077">
+<div id="outline-container-org2b4e454" class="outline-2">
+<h2 id="org2b4e454">Notas para el Editor de Emacs</h2>
+<div class="outline-text-2" id="text-org2b4e454">
 </div>
 </div>
 <div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-informática.html">informática</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-nort.html">nort</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-aide.html">AIDE</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ids.html">IDS</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ips.html">IPS</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-detección.html">detección</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-intrusiones.html">intrusiones</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-monitoreo.html">monitoreo</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-integridad.html">integridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
@@ -978,9 +978,9 @@ Recuerda que la seguridad informática es un proceso continuo, no un producto. M
 <item>
   <title><![CDATA[Guía Práctica: Configuración de UFW en Ubuntu con Scripts y Org Mode]]></title>
   <description><![CDATA[
-<div id="outline-container-org58470a7" class="outline-2">
-<h2 id="org58470a7">Introducción</h2>
-<div class="outline-text-2" id="text-org58470a7">
+<div id="outline-container-org43d23bd" class="outline-2">
+<h2 id="org43d23bd">Introducción</h2>
+<div class="outline-text-2" id="text-org43d23bd">
 <p>
 La seguridad es un aspecto crítico para cualquier servidor Linux. UFW (Uncomplicated Firewall) proporciona una interfaz simplificada para configurar un firewall robusto en sistemas Ubuntu. En este artículo, nos centraremos en la parte práctica: cómo crear, configurar y ejecutar un script de configuración de UFW, todo gestionado desde Emacs con Org Mode.
 </p>
@@ -998,11 +998,17 @@ Este enfoque práctico te permitirá:
 <p>
 Está diseñado para administradores de sistemas y entusiastas de Linux que utilizan Emacs como parte de su flujo de trabajo.
 </p>
+
+
+<figure id="org668b759">
+<img src="images/ufw-components.png" alt="ufw-components.png">
+
+</figure>
 </div>
 </div>
-<div id="outline-container-org70b1188" class="outline-2">
-<h2 id="org70b1188">Prerrequisitos</h2>
-<div class="outline-text-2" id="text-org70b1188">
+<div id="outline-container-orga6af4d7" class="outline-2">
+<h2 id="orga6af4d7">Prerrequisitos</h2>
+<div class="outline-text-2" id="text-orga6af4d7">
 <p>
 Antes de comenzar, asegúrate de tener:
 </p>
@@ -1016,9 +1022,9 @@ Antes de comenzar, asegúrate de tener:
 </ul>
 </div>
 </div>
-<div id="outline-container-org40f071b" class="outline-2">
-<h2 id="org40f071b">Creación del Script en Org Mode</h2>
-<div class="outline-text-2" id="text-org40f071b">
+<div id="outline-container-orgfe01919" class="outline-2">
+<h2 id="orgfe01919">Creación del Script en Org Mode</h2>
+<div class="outline-text-2" id="text-orgfe01919">
 <p>
 Comenzaremos creando un archivo Org Mode que contendrá nuestro script y documentación. En Emacs:
 </p>
@@ -1029,18 +1035,18 @@ Comenzaremos creando un archivo Org Mode que contendrá nuestro script y documen
 </ol>
 
 <div class="org-src-container">
-<pre class="src src-org"><span style="color: #4E4E4E;">#+TITLE:</span> <span style="color: #1F55A0; font-weight: bold;">Configuraci&#243;n de UFW para Servidores Ubuntu</span>
-<span style="color: #4E4E4E;">#+AUTHOR:</span> <span style="color: #1F55A0;">Tu Nombre</span>
-<span style="color: #4E4E4E;">#+DATE:</span> <span style="color: #1F55A0;">2025-04-15</span>
-<span style="color: #004700;">#+PROPERTY: header-args:bash :tangle ufw-secure-config.sh :comments both</span>
+<pre class="src src-org"><span style="color: #637c9d;">#+TITLE:</span> <span style="color: #dc3eb7; font-weight: bold;">Configuraci&#243;n de UFW para Servidores Ubuntu</span>
+<span style="color: #637c9d;">#+AUTHOR:</span> <span style="color: #dc3eb7;">Tu Nombre</span>
+<span style="color: #637c9d;">#+DATE:</span> <span style="color: #dc3eb7;">2025-04-15</span>
+<span style="color: #60a8a1;">#+PROPERTY: header-args:bash :tangle ufw-secure-config.sh :comments both</span>
 
-<span style="color: #1F55A0; font-weight: bold;">* Descripci&#243;n del Script</span>
+<span style="color: #2f86d2; font-weight: bold;">* Descripci&#243;n del Script</span>
 Este script configura UFW en Ubuntu para proteger contra amenazas comunes,
 incluyendo botnets, ataques de fuerza bruta y escaneos de puertos. Est&#225;
 dise&#241;ado para servidores de producci&#243;n con exposici&#243;n a Internet.
 
-<span style="color: #1F55A0; font-weight: bold;">* Script de Configuraci&#243;n</span>
-<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Cabecera y verificaciones iniciales</span>
+<span style="color: #2f86d2; font-weight: bold;">* Script de Configuraci&#243;n</span>
+<span style="color: #ffffff;">*</span><span style="color: #dc3eb7; font-weight: bold;">* Cabecera y verificaciones iniciales</span>
 </pre>
 </div>
 
@@ -1049,287 +1055,287 @@ El atributo <code>:tangle ufw-secure-config.sh</code> indica a Org Mode que extr
 </p>
 </div>
 </div>
-<div id="outline-container-orgfa545ef" class="outline-2">
-<h2 id="orgfa545ef">Desarrollo del Script de Configuración UFW</h2>
-<div class="outline-text-2" id="text-orgfa545ef">
+<div id="outline-container-org024ee21" class="outline-2">
+<h2 id="org024ee21">Desarrollo del Script de Configuración UFW</h2>
+<div class="outline-text-2" id="text-org024ee21">
 <p>
 Ahora desarrollaremos el script por secciones, añadiendo cada parte como un bloque de código Org Babel. Esto nos permite tener el script documentado y listo para ejecutar.
 </p>
 </div>
-<div id="outline-container-orga97a704" class="outline-3">
-<h3 id="orga97a704">Sección 1: Cabecera y verificaciones</h3>
-<div class="outline-text-3" id="text-orga97a704">
+<div id="outline-container-org4e7dc53" class="outline-3">
+<h3 id="org4e7dc53">Sección 1: Cabecera y verificaciones</h3>
+<div class="outline-text-3" id="text-org4e7dc53">
 <p>
 Añade este bloque después de la sección "Cabecera y verificaciones iniciales":
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash</span>
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">#</span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">!/bin/bash</span>
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Script: ufw-secure-config.sh</span>
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Descripci&#243;n: Configuraci&#243;n segura de UFW para servidores Ubuntu</span>
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Autor: Tu Nombre</span>
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Fecha: 2025-04-15</span>
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Versi&#243;n: 1.0</span>
+<pre class="src src-org"><span style="color: #8195b0; background-color: #9fafc4;">#+BEGIN_SRC bash</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">#</span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">!/bin/bash</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Script: ufw-secure-config.sh</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Descripci&#243;n: Configuraci&#243;n segura de UFW para servidores Ubuntu</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Autor: Tu Nombre</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Fecha: 2025-04-15</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Versi&#243;n: 1.0</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Colores para mejor legibilidad</span>
-<span style="color: #004651; background-color: #E9E9F2;">RED</span><span style="background-color: #E9E9F2;">=</span><span style="color: #005F00; background-color: #E9E9F2;">'\033[0;31m'</span>
-<span style="color: #004651; background-color: #E9E9F2;">GREEN</span><span style="background-color: #E9E9F2;">=</span><span style="color: #005F00; background-color: #E9E9F2;">'\033[0;32m'</span>
-<span style="color: #004651; background-color: #E9E9F2;">YELLOW</span><span style="background-color: #E9E9F2;">=</span><span style="color: #005F00; background-color: #E9E9F2;">'\033[1;33m'</span>
-<span style="color: #004651; background-color: #E9E9F2;">NC</span><span style="background-color: #E9E9F2;">=</span><span style="color: #005F00; background-color: #E9E9F2;">'\033[0m'</span><span style="background-color: #E9E9F2;"> </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Sin Color</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Colores para mejor legibilidad</span>
+<span style="color: #1857a4; background-color: #9fafc4;">RED</span><span style="background-color: #9fafc4;">=</span><span style="color: #a44185; background-color: #9fafc4;">'\033[0;31m'</span>
+<span style="color: #1857a4; background-color: #9fafc4;">GREEN</span><span style="background-color: #9fafc4;">=</span><span style="color: #a44185; background-color: #9fafc4;">'\033[0;32m'</span>
+<span style="color: #1857a4; background-color: #9fafc4;">YELLOW</span><span style="background-color: #9fafc4;">=</span><span style="color: #a44185; background-color: #9fafc4;">'\033[1;33m'</span>
+<span style="color: #1857a4; background-color: #9fafc4;">NC</span><span style="background-color: #9fafc4;">=</span><span style="color: #a44185; background-color: #9fafc4;">'\033[0m'</span><span style="background-color: #9fafc4;"> </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Sin Color</span>
 
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${GREEN}=== Script de Configuraci&#243;n Segura de UFW ===${NC}"</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Iniciando configuraci&#243;n en $(</span><span style="color: #1F55A0; background-color: #E9E9F2; font-weight: bold;">date</span><span style="color: #005F00; background-color: #E9E9F2;">)"</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"${GREEN}=== Script de Configuraci&#243;n Segura de UFW ===${NC}"</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"Iniciando configuraci&#243;n en $(</span><span style="color: #219fd5; background-color: #9fafc4; font-weight: bold;">date</span><span style="color: #a44185; background-color: #9fafc4;">)"</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Verificar privilegios de root</span>
-<span style="color: #D70000; background-color: #E9E9F2;">if</span><span style="background-color: #E9E9F2;"> <a href=" $EUID -ne 0 ">[[ $</a></span><span style="color: #004651; background-color: #E9E9F2;"><a href=" $EUID -ne 0 ">EUID</a></span><span style="background-color: #E9E9F2;"><a href=" $EUID -ne 0 "> -ne 0 ]]</a>; </span><span style="color: #D70000; background-color: #E9E9F2;">then</span>
-<span style="background-color: #E9E9F2;">    </span><span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${RED}Este script requiere privilegios de root.${NC}"</span>
-<span style="background-color: #E9E9F2;">    </span><span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Por favor, ejecuta con sudo: sudo bash $0"</span>
-<span style="background-color: #E9E9F2;">    </span><span style="color: #D70000; background-color: #E9E9F2;">exit</span><span style="background-color: #E9E9F2;"> 1</span>
-<span style="color: #D70000; background-color: #E9E9F2;">fi</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Verificar privilegios de root</span>
+<span style="color: #219fd5; background-color: #9fafc4; font-style: italic;">if</span><span style="background-color: #9fafc4;"> <a href=" $EUID -ne 0 ">[[ $</a></span><span style="color: #1857a4; background-color: #9fafc4;"><a href=" $EUID -ne 0 ">EUID</a></span><span style="background-color: #9fafc4;"><a href=" $EUID -ne 0 "> -ne 0 ]]</a>; </span><span style="color: #219fd5; background-color: #9fafc4; font-style: italic;">then</span>
+<span style="background-color: #9fafc4;">    </span><span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"${RED}Este script requiere privilegios de root.${NC}"</span>
+<span style="background-color: #9fafc4;">    </span><span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"Por favor, ejecuta con sudo: sudo bash $0"</span>
+<span style="background-color: #9fafc4;">    </span><span style="color: #219fd5; background-color: #9fafc4; font-style: italic;">exit</span><span style="background-color: #9fafc4;"> 1</span>
+<span style="color: #219fd5; background-color: #9fafc4; font-style: italic;">fi</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Verificar que UFW est&#233; instalado</span>
-<span style="color: #D70000; background-color: #E9E9F2;">if ! </span><span style="color: #1F55A0; background-color: #E9E9F2;">command</span><span style="background-color: #E9E9F2;"> -v ufw &amp;&gt; /dev/null; </span><span style="color: #D70000; background-color: #E9E9F2;">then</span>
-<span style="background-color: #E9E9F2;">    </span><span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${YELLOW}UFW no est&#225; instalado. Instalando...${NC}"</span>
-<span style="background-color: #E9E9F2;">    apt update &amp;&amp; apt install -y ufw</span>
-<span style="background-color: #E9E9F2;">    </span><span style="color: #D70000; background-color: #E9E9F2;">if</span><span style="background-color: #E9E9F2;"> [ $</span><span style="color: #004651; background-color: #E9E9F2;">?</span><span style="background-color: #E9E9F2;"> -ne 0 ]; </span><span style="color: #D70000; background-color: #E9E9F2;">then</span>
-<span style="background-color: #E9E9F2;">        </span><span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${RED}Error instalando UFW. Abortando.${NC}"</span>
-<span style="background-color: #E9E9F2;">        </span><span style="color: #D70000; background-color: #E9E9F2;">exit</span><span style="background-color: #E9E9F2;"> 1</span>
-<span style="background-color: #E9E9F2;">    </span><span style="color: #D70000; background-color: #E9E9F2;">fi</span>
-<span style="background-color: #E9E9F2;">    </span><span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${GREEN}UFW instalado correctamente.${NC}"</span>
-<span style="color: #D70000; background-color: #E9E9F2;">else</span>
-<span style="background-color: #E9E9F2;">    </span><span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${GREEN}UFW ya est&#225; instalado.${NC}"</span>
-<span style="color: #D70000; background-color: #E9E9F2;">fi</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Verificar que UFW est&#233; instalado</span>
+<span style="color: #219fd5; background-color: #9fafc4; font-style: italic;">if ! </span><span style="color: #dc3eb7; background-color: #9fafc4;">command</span><span style="background-color: #9fafc4;"> -v ufw &amp;&gt; /dev/null; </span><span style="color: #219fd5; background-color: #9fafc4; font-style: italic;">then</span>
+<span style="background-color: #9fafc4;">    </span><span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"${YELLOW}UFW no est&#225; instalado. Instalando...${NC}"</span>
+<span style="background-color: #9fafc4;">    apt update &amp;&amp; apt install -y ufw</span>
+<span style="background-color: #9fafc4;">    </span><span style="color: #219fd5; background-color: #9fafc4; font-style: italic;">if</span><span style="background-color: #9fafc4;"> [ $</span><span style="color: #1857a4; background-color: #9fafc4;">?</span><span style="background-color: #9fafc4;"> -ne 0 ]; </span><span style="color: #219fd5; background-color: #9fafc4; font-style: italic;">then</span>
+<span style="background-color: #9fafc4;">        </span><span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"${RED}Error instalando UFW. Abortando.${NC}"</span>
+<span style="background-color: #9fafc4;">        </span><span style="color: #219fd5; background-color: #9fafc4; font-style: italic;">exit</span><span style="background-color: #9fafc4;"> 1</span>
+<span style="background-color: #9fafc4;">    </span><span style="color: #219fd5; background-color: #9fafc4; font-style: italic;">fi</span>
+<span style="background-color: #9fafc4;">    </span><span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"${GREEN}UFW instalado correctamente.${NC}"</span>
+<span style="color: #219fd5; background-color: #9fafc4; font-style: italic;">else</span>
+<span style="background-color: #9fafc4;">    </span><span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"${GREEN}UFW ya est&#225; instalado.${NC}"</span>
+<span style="color: #219fd5; background-color: #9fafc4; font-style: italic;">fi</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Crear directorio para backups si no existe</span>
-<span style="color: #004651; background-color: #E9E9F2;">BACKUP_DIR</span><span style="background-color: #E9E9F2;">=</span><span style="color: #005F00; background-color: #E9E9F2;">"/root/ufw-backups"</span>
-<span style="color: #D70000; background-color: #E9E9F2;">if</span><span style="background-color: #E9E9F2;"> [ </span><span style="color: #1F55A0; background-color: #E9E9F2; font-weight: bold;">!</span><span style="background-color: #E9E9F2;"> -d </span><span style="color: #005F00; background-color: #E9E9F2;">"$BACKUP_DIR"</span><span style="background-color: #E9E9F2;"> ]; </span><span style="color: #D70000; background-color: #E9E9F2;">then</span>
-<span style="background-color: #E9E9F2;">    mkdir -p </span><span style="color: #005F00; background-color: #E9E9F2;">"$BACKUP_DIR"</span>
-<span style="background-color: #E9E9F2;">    </span><span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Directorio para backups creado: $BACKUP_DIR"</span>
-<span style="color: #D70000; background-color: #E9E9F2;">fi</span>
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Crear directorio para backups si no existe</span>
+<span style="color: #1857a4; background-color: #9fafc4;">BACKUP_DIR</span><span style="background-color: #9fafc4;">=</span><span style="color: #a44185; background-color: #9fafc4;">"/root/ufw-backups"</span>
+<span style="color: #219fd5; background-color: #9fafc4; font-style: italic;">if</span><span style="background-color: #9fafc4;"> [ </span><span style="color: #219fd5; background-color: #9fafc4; font-weight: bold;">!</span><span style="background-color: #9fafc4;"> -d </span><span style="color: #a44185; background-color: #9fafc4;">"$BACKUP_DIR"</span><span style="background-color: #9fafc4;"> ]; </span><span style="color: #219fd5; background-color: #9fafc4; font-style: italic;">then</span>
+<span style="background-color: #9fafc4;">    mkdir -p </span><span style="color: #a44185; background-color: #9fafc4;">"$BACKUP_DIR"</span>
+<span style="background-color: #9fafc4;">    </span><span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"Directorio para backups creado: $BACKUP_DIR"</span>
+<span style="color: #219fd5; background-color: #9fafc4; font-style: italic;">fi</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+END_SRC</span>
 
-<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Secci&#243;n 2: Backup y reinicio de configuraci&#243;n</span>
+<span style="color: #ffffff;">*</span><span style="color: #dc3eb7; font-weight: bold;">* Secci&#243;n 2: Backup y reinicio de configuraci&#243;n</span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org028f803" class="outline-3">
-<h3 id="org028f803">Sección 2: Backup y reinicio de configuración</h3>
-<div class="outline-text-3" id="text-org028f803">
+<div id="outline-container-orgf5da726" class="outline-3">
+<h3 id="orgf5da726">Sección 2: Backup y reinicio de configuración</h3>
+<div class="outline-text-3" id="text-orgf5da726">
 <p>
 Continuamos con la siguiente sección:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash</span>
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Crear backup de reglas actuales</span>
-<span style="color: #004651; background-color: #E9E9F2;">TIMESTAMP</span><span style="background-color: #E9E9F2;">=$(</span><span style="color: #1F55A0; background-color: #E9E9F2; font-weight: bold;">date +%F-%H%M%S</span><span style="background-color: #E9E9F2;">)</span>
-<span style="color: #004651; background-color: #E9E9F2;">BACKUP_FILE</span><span style="background-color: #E9E9F2;">=</span><span style="color: #005F00; background-color: #E9E9F2;">"$BACKUP_DIR/ufw-backup-$TIMESTAMP.rules"</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${YELLOW}Creando backup de reglas actuales en:${NC} $BACKUP_FILE"</span>
-<span style="background-color: #E9E9F2;">ufw status verbose &gt; </span><span style="color: #005F00; background-color: #E9E9F2;">"$BACKUP_FILE"</span>
+<pre class="src src-org"><span style="color: #8195b0; background-color: #9fafc4;">#+BEGIN_SRC bash</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Crear backup de reglas actuales</span>
+<span style="color: #1857a4; background-color: #9fafc4;">TIMESTAMP</span><span style="background-color: #9fafc4;">=$(</span><span style="color: #219fd5; background-color: #9fafc4; font-weight: bold;">date +%F-%H%M%S</span><span style="background-color: #9fafc4;">)</span>
+<span style="color: #1857a4; background-color: #9fafc4;">BACKUP_FILE</span><span style="background-color: #9fafc4;">=</span><span style="color: #a44185; background-color: #9fafc4;">"$BACKUP_DIR/ufw-backup-$TIMESTAMP.rules"</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"${YELLOW}Creando backup de reglas actuales en:${NC} $BACKUP_FILE"</span>
+<span style="background-color: #9fafc4;">ufw status verbose &gt; </span><span style="color: #a44185; background-color: #9fafc4;">"$BACKUP_FILE"</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Guardar configuraci&#243;n actual de iptables para referencia</span>
-<span style="background-color: #E9E9F2;">iptables-save &gt; </span><span style="color: #005F00; background-color: #E9E9F2;">"$BACKUP_DIR/iptables-backup-$TIMESTAMP.rules"</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Backup de iptables guardado en: $BACKUP_DIR/iptables-backup-$TIMESTAMP.rules"</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Guardar configuraci&#243;n actual de iptables para referencia</span>
+<span style="background-color: #9fafc4;">iptables-save &gt; </span><span style="color: #a44185; background-color: #9fafc4;">"$BACKUP_DIR/iptables-backup-$TIMESTAMP.rules"</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"Backup de iptables guardado en: $BACKUP_DIR/iptables-backup-$TIMESTAMP.rules"</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Reiniciar UFW para configuraci&#243;n limpia</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${YELLOW}Reiniciando UFW para iniciar configuraci&#243;n limpia...${NC}"</span>
-<span style="background-color: #E9E9F2;">ufw --force reset</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${GREEN}UFW reiniciado correctamente.${NC}"</span>
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Reiniciar UFW para configuraci&#243;n limpia</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"${YELLOW}Reiniciando UFW para iniciar configuraci&#243;n limpia...${NC}"</span>
+<span style="background-color: #9fafc4;">ufw --force reset</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"${GREEN}UFW reiniciado correctamente.${NC}"</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+END_SRC</span>
 
-<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Secci&#243;n 3: Configuraci&#243;n de pol&#237;ticas b&#225;sicas</span>
+<span style="color: #ffffff;">*</span><span style="color: #dc3eb7; font-weight: bold;">* Secci&#243;n 3: Configuraci&#243;n de pol&#237;ticas b&#225;sicas</span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org2c75be5" class="outline-3">
-<h3 id="org2c75be5">Sección 3: Configuración de políticas básicas</h3>
-<div class="outline-text-3" id="text-org2c75be5">
+<div id="outline-container-orga3e5d1f" class="outline-3">
+<h3 id="orga3e5d1f">Sección 3: Configuración de políticas básicas</h3>
+<div class="outline-text-3" id="text-orga3e5d1f">
 <p>
 Configuramos las políticas predeterminadas y activamos el logging:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"\n${GREEN}=== Configurando pol&#237;ticas b&#225;sicas ===${NC}"</span>
+<pre class="src src-org"><span style="color: #8195b0; background-color: #9fafc4;">#+BEGIN_SRC bash</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"\n${GREEN}=== Configurando pol&#237;ticas b&#225;sicas ===${NC}"</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Establecer pol&#237;ticas predeterminadas</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Configurando pol&#237;tica por defecto: denegar tr&#225;fico entrante"</span>
-<span style="background-color: #E9E9F2;">ufw default deny incoming</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Establecer pol&#237;ticas predeterminadas</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"Configurando pol&#237;tica por defecto: denegar tr&#225;fico entrante"</span>
+<span style="background-color: #9fafc4;">ufw default deny incoming</span>
 
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Configurando pol&#237;tica por defecto: permitir tr&#225;fico saliente"</span>
-<span style="background-color: #E9E9F2;">ufw default allow outgoing</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"Configurando pol&#237;tica por defecto: permitir tr&#225;fico saliente"</span>
+<span style="background-color: #9fafc4;">ufw default allow outgoing</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Configurar nivel de log</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Configurando nivel de logging: medio"</span>
-<span style="background-color: #E9E9F2;">ufw logging medium</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Configurar nivel de log</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"Configurando nivel de logging: medio"</span>
+<span style="background-color: #9fafc4;">ufw logging medium</span>
 
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${GREEN}Pol&#237;ticas b&#225;sicas configuradas correctamente.${NC}"</span>
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"${GREEN}Pol&#237;ticas b&#225;sicas configuradas correctamente.${NC}"</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+END_SRC</span>
 
-<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Secci&#243;n 4: Reglas para servicios esenciales</span>
+<span style="color: #ffffff;">*</span><span style="color: #dc3eb7; font-weight: bold;">* Secci&#243;n 4: Reglas para servicios esenciales</span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orga930111" class="outline-3">
-<h3 id="orga930111">Sección 4: Reglas para servicios esenciales</h3>
-<div class="outline-text-3" id="text-orga930111">
+<div id="outline-container-org5c217f6" class="outline-3">
+<h3 id="org5c217f6">Sección 4: Reglas para servicios esenciales</h3>
+<div class="outline-text-3" id="text-org5c217f6">
 <p>
 Configuramos las reglas para los servicios principales:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"\n${GREEN}=== Configurando reglas para servicios esenciales ===${NC}"</span>
+<pre class="src src-org"><span style="color: #8195b0; background-color: #9fafc4;">#+BEGIN_SRC bash</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"\n${GREEN}=== Configurando reglas para servicios esenciales ===${NC}"</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">SSH - Limitar intentos para prevenir ataques de fuerza bruta</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Configurando SSH con l&#237;mite de conexiones..."</span>
-<span style="background-color: #E9E9F2;">ufw limit proto tcp from any to any port 22 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'SSH con l&#237;mite de conexiones'</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">SSH - Limitar intentos para prevenir ataques de fuerza bruta</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"Configurando SSH con l&#237;mite de conexiones..."</span>
+<span style="background-color: #9fafc4;">ufw limit proto tcp from any to any port 22 comment </span><span style="color: #a44185; background-color: #9fafc4;">'SSH con l&#237;mite de conexiones'</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">HTTP/HTTPS para servidores web</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Configurando acceso web (HTTP/HTTPS)..."</span>
-<span style="background-color: #E9E9F2;">ufw allow proto tcp from any to any port 80 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'HTTP'</span>
-<span style="background-color: #E9E9F2;">ufw allow proto tcp from any to any port 443 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'HTTPS'</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">HTTP/HTTPS para servidores web</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"Configurando acceso web (HTTP/HTTPS)..."</span>
+<span style="background-color: #9fafc4;">ufw allow proto tcp from any to any port 80 comment </span><span style="color: #a44185; background-color: #9fafc4;">'HTTP'</span>
+<span style="background-color: #9fafc4;">ufw allow proto tcp from any to any port 443 comment </span><span style="color: #a44185; background-color: #9fafc4;">'HTTPS'</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">DNS para resoluci&#243;n de nombres</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Configurando acceso DNS..."</span>
-<span style="background-color: #E9E9F2;">ufw allow proto udp from any to any port 53 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'DNS'</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">DNS para resoluci&#243;n de nombres</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"Configurando acceso DNS..."</span>
+<span style="background-color: #9fafc4;">ufw allow proto udp from any to any port 53 comment </span><span style="color: #a44185; background-color: #9fafc4;">'DNS'</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">NTP para sincronizaci&#243;n horaria</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Configurando acceso NTP..."</span>
-<span style="background-color: #E9E9F2;">ufw allow proto udp from any to any port 123 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'NTP'</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">NTP para sincronizaci&#243;n horaria</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"Configurando acceso NTP..."</span>
+<span style="background-color: #9fafc4;">ufw allow proto udp from any to any port 123 comment </span><span style="color: #a44185; background-color: #9fafc4;">'NTP'</span>
 
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${GREEN}Servicios esenciales configurados.${NC}"</span>
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"${GREEN}Servicios esenciales configurados.${NC}"</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+END_SRC</span>
 
-<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Secci&#243;n 5: Protecci&#243;n contra amenazas comunes</span>
+<span style="color: #ffffff;">*</span><span style="color: #dc3eb7; font-weight: bold;">* Secci&#243;n 5: Protecci&#243;n contra amenazas comunes</span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgee9bb45" class="outline-3">
-<h3 id="orgee9bb45">Sección 5: Protección contra amenazas comunes</h3>
-<div class="outline-text-3" id="text-orgee9bb45">
+<div id="outline-container-orgb425bf5" class="outline-3">
+<h3 id="orgb425bf5">Sección 5: Protección contra amenazas comunes</h3>
+<div class="outline-text-3" id="text-orgb425bf5">
 <p>
 Añadimos reglas para mitigar amenazas específicas:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"\n${GREEN}=== Configurando protecci&#243;n contra amenazas espec&#237;ficas ===${NC}"</span>
+<pre class="src src-org"><span style="color: #8195b0; background-color: #9fafc4;">#+BEGIN_SRC bash</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"\n${GREEN}=== Configurando protecci&#243;n contra amenazas espec&#237;ficas ===${NC}"</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Limitar intentos de conexi&#243;n para HTTP/HTTPS (protecci&#243;n b&#225;sica contra DDoS)</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Configurando l&#237;mites de conexi&#243;n para servicios web..."</span>
-<span style="background-color: #E9E9F2;">ufw limit proto tcp from any to any port 80 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'Limitar HTTP'</span>
-<span style="background-color: #E9E9F2;">ufw limit proto tcp from any to any port 443 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'Limitar HTTPS'</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Limitar intentos de conexi&#243;n para HTTP/HTTPS (protecci&#243;n b&#225;sica contra DDoS)</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"Configurando l&#237;mites de conexi&#243;n para servicios web..."</span>
+<span style="background-color: #9fafc4;">ufw limit proto tcp from any to any port 80 comment </span><span style="color: #a44185; background-color: #9fafc4;">'Limitar HTTP'</span>
+<span style="background-color: #9fafc4;">ufw limit proto tcp from any to any port 443 comment </span><span style="color: #a44185; background-color: #9fafc4;">'Limitar HTTPS'</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Bloquear puertos com&#250;nmente explotados por botnets y malware</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Bloqueando puertos vulnerables com&#250;nmente usados por botnets..."</span>
-<span style="background-color: #E9E9F2;">ufw deny proto tcp from any to any port 23 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'Telnet, usado por botnets'</span>
-<span style="background-color: #E9E9F2;">ufw deny proto tcp from any to any port 445 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'SMB, objetivo de ransomware'</span>
-<span style="background-color: #E9E9F2;">ufw deny proto tcp from any to any port 1433 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'MS-SQL, explotado por botnets'</span>
-<span style="background-color: #E9E9F2;">ufw deny proto tcp from any to any port 3389 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'RDP, objetivo com&#250;n'</span>
-<span style="background-color: #E9E9F2;">ufw deny proto udp from any to any port 1900 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'UPnP, usado en DDoS'</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Bloquear puertos com&#250;nmente explotados por botnets y malware</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"Bloqueando puertos vulnerables com&#250;nmente usados por botnets..."</span>
+<span style="background-color: #9fafc4;">ufw deny proto tcp from any to any port 23 comment </span><span style="color: #a44185; background-color: #9fafc4;">'Telnet, usado por botnets'</span>
+<span style="background-color: #9fafc4;">ufw deny proto tcp from any to any port 445 comment </span><span style="color: #a44185; background-color: #9fafc4;">'SMB, objetivo de ransomware'</span>
+<span style="background-color: #9fafc4;">ufw deny proto tcp from any to any port 1433 comment </span><span style="color: #a44185; background-color: #9fafc4;">'MS-SQL, explotado por botnets'</span>
+<span style="background-color: #9fafc4;">ufw deny proto tcp from any to any port 3389 comment </span><span style="color: #a44185; background-color: #9fafc4;">'RDP, objetivo com&#250;n'</span>
+<span style="background-color: #9fafc4;">ufw deny proto udp from any to any port 1900 comment </span><span style="color: #a44185; background-color: #9fafc4;">'UPnP, usado en DDoS'</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Bloquear rangos de puertos ef&#237;meros sospechosos</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Bloqueando rangos de puertos sospechosos..."</span>
-<span style="background-color: #E9E9F2;">ufw deny proto tcp from any to any port 49152:65535 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'Puertos ef&#237;meros sospechosos'</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Bloquear rangos de puertos ef&#237;meros sospechosos</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"Bloqueando rangos de puertos sospechosos..."</span>
+<span style="background-color: #9fafc4;">ufw deny proto tcp from any to any port 49152:65535 comment </span><span style="color: #a44185; background-color: #9fafc4;">'Puertos ef&#237;meros sospechosos'</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Limitar ICMP para prevenir ataques de flood</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Limitando tr&#225;fico ICMP..."</span>
-<span style="background-color: #E9E9F2;">ufw limit proto icmp from any to any comment </span><span style="color: #005F00; background-color: #E9E9F2;">'Limitar ping'</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Limitar ICMP para prevenir ataques de flood</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"Limitando tr&#225;fico ICMP..."</span>
+<span style="background-color: #9fafc4;">ufw limit proto icmp from any to any comment </span><span style="color: #a44185; background-color: #9fafc4;">'Limitar ping'</span>
 
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${GREEN}Protecci&#243;n contra amenazas comunes configurada.${NC}"</span>
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"${GREEN}Protecci&#243;n contra amenazas comunes configurada.${NC}"</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+END_SRC</span>
 
-<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Secci&#243;n 6: Bloqueo de IPs maliciosas</span>
+<span style="color: #ffffff;">*</span><span style="color: #dc3eb7; font-weight: bold;">* Secci&#243;n 6: Bloqueo de IPs maliciosas</span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org42f9d0c" class="outline-3">
-<h3 id="org42f9d0c">Sección 6: Bloqueo de IPs maliciosas</h3>
-<div class="outline-text-3" id="text-org42f9d0c">
+<div id="outline-container-org225637b" class="outline-3">
+<h3 id="org225637b">Sección 6: Bloqueo de IPs maliciosas</h3>
+<div class="outline-text-3" id="text-org225637b">
 <p>
 Bloqueamos rangos de IPs conocidos por actividades maliciosas:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"\n${GREEN}=== Configurando bloqueo de IPs maliciosas ===${NC}"</span>
+<pre class="src src-org"><span style="color: #8195b0; background-color: #9fafc4;">#+BEGIN_SRC bash</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"\n${GREEN}=== Configurando bloqueo de IPs maliciosas ===${NC}"</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Nota: Estas son IPs de ejemplo. En producci&#243;n, usa listas actualizadas.</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Bloqueando rangos de IPs conocidos por actividades maliciosas..."</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Nota: Estas son IPs de ejemplo. En producci&#243;n, usa listas actualizadas.</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"Bloqueando rangos de IPs conocidos por actividades maliciosas..."</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Ejemplos de rangos sospechosos (reemplazar con datos actualizados en producci&#243;n)</span>
-<span style="background-color: #E9E9F2;">ufw deny from 185.220.101.0/24 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'Rango de IPs sospechosas - Tor exit nodes'</span>
-<span style="background-color: #E9E9F2;">ufw deny from 45.148.10.0/24 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'Rango de IPs de botnets reportadas'</span>
-<span style="background-color: #E9E9F2;">ufw deny from 91.134.0.0/16 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'Fuente conocida de ataques'</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Ejemplos de rangos sospechosos (reemplazar con datos actualizados en producci&#243;n)</span>
+<span style="background-color: #9fafc4;">ufw deny from 185.220.101.0/24 comment </span><span style="color: #a44185; background-color: #9fafc4;">'Rango de IPs sospechosas - Tor exit nodes'</span>
+<span style="background-color: #9fafc4;">ufw deny from 45.148.10.0/24 comment </span><span style="color: #a44185; background-color: #9fafc4;">'Rango de IPs de botnets reportadas'</span>
+<span style="background-color: #9fafc4;">ufw deny from 91.134.0.0/16 comment </span><span style="color: #a44185; background-color: #9fafc4;">'Fuente conocida de ataques'</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Opci&#243;n: Descomentar y modificar para actualizar desde fuente externa</span>
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">echo "Descargando lista actualizada de IPs maliciosas..."</span>
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">curl -s <a href="https://ejemplo.com/ip-blocklist.txt">https://ejemplo.com/ip-blocklist.txt</a> | while read ip; do</span>
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">#   </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">ufw deny from $ip comment 'IP maliciosa - lista externa'</span>
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">done</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Opci&#243;n: Descomentar y modificar para actualizar desde fuente externa</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">echo "Descargando lista actualizada de IPs maliciosas..."</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">curl -s <a href="https://ejemplo.com/ip-blocklist.txt">https://ejemplo.com/ip-blocklist.txt</a> | while read ip; do</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">#   </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">ufw deny from $ip comment 'IP maliciosa - lista externa'</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">done</span>
 
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${YELLOW}Nota: Considera actualizar regularmente la lista de IPs bloqueadas.${NC}"</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${GREEN}Bloqueo de IPs maliciosas configurado.${NC}"</span>
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"${YELLOW}Nota: Considera actualizar regularmente la lista de IPs bloqueadas.${NC}"</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"${GREEN}Bloqueo de IPs maliciosas configurado.${NC}"</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+END_SRC</span>
 
-<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Secci&#243;n 7: Activaci&#243;n del firewall</span>
+<span style="color: #ffffff;">*</span><span style="color: #dc3eb7; font-weight: bold;">* Secci&#243;n 7: Activaci&#243;n del firewall</span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org397227d" class="outline-3">
-<h3 id="org397227d">Sección 7: Activación del firewall</h3>
-<div class="outline-text-3" id="text-org397227d">
+<div id="outline-container-orga27208d" class="outline-3">
+<h3 id="orga27208d">Sección 7: Activación del firewall</h3>
+<div class="outline-text-3" id="text-orga27208d">
 <p>
 Finalmente, activamos el firewall y mostramos el estado:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"\n${GREEN}=== Activando UFW ===${NC}"</span>
+<pre class="src src-org"><span style="color: #8195b0; background-color: #9fafc4;">#+BEGIN_SRC bash</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"\n${GREEN}=== Activando UFW ===${NC}"</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Habilitar UFW</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Activando firewall..."</span>
-<span style="background-color: #E9E9F2;">ufw --force enable</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Habilitar UFW</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"Activando firewall..."</span>
+<span style="background-color: #9fafc4;">ufw --force enable</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Verificar estado</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"\n${GREEN}=== Estado final de UFW ===${NC}"</span>
-<span style="background-color: #E9E9F2;">ufw status verbose</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Verificar estado</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"\n${GREEN}=== Estado final de UFW ===${NC}"</span>
+<span style="background-color: #9fafc4;">ufw status verbose</span>
 
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"\n${GREEN}=== Configuraci&#243;n completada exitosamente ===${NC}"</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"Fecha y hora: $(</span><span style="color: #1F55A0; background-color: #E9E9F2; font-weight: bold;">date</span><span style="color: #005F00; background-color: #E9E9F2;">)"</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> -e </span><span style="color: #005F00; background-color: #E9E9F2;">"${YELLOW}Recomendaciones:${NC}"</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"1. Revisa peri&#243;dicamente /var/log/ufw.log para detectar actividad sospechosa"</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"2. Considera implementar Fail2Ban como protecci&#243;n adicional"</span>
-<span style="color: #1F55A0; background-color: #E9E9F2;">echo</span><span style="background-color: #E9E9F2;"> </span><span style="color: #005F00; background-color: #E9E9F2;">"3. Actualiza las reglas regularmente seg&#250;n evolucionen las amenazas"</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"\n${GREEN}=== Configuraci&#243;n completada exitosamente ===${NC}"</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"Fecha y hora: $(</span><span style="color: #219fd5; background-color: #9fafc4; font-weight: bold;">date</span><span style="color: #a44185; background-color: #9fafc4;">)"</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> -e </span><span style="color: #a44185; background-color: #9fafc4;">"${YELLOW}Recomendaciones:${NC}"</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"1. Revisa peri&#243;dicamente /var/log/ufw.log para detectar actividad sospechosa"</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"2. Considera implementar Fail2Ban como protecci&#243;n adicional"</span>
+<span style="color: #dc3eb7; background-color: #9fafc4;">echo</span><span style="background-color: #9fafc4;"> </span><span style="color: #a44185; background-color: #9fafc4;">"3. Actualiza las reglas regularmente seg&#250;n evolucionen las amenazas"</span>
 
-<span style="color: #D70000; background-color: #E9E9F2;">exit</span><span style="background-color: #E9E9F2;"> 0</span>
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+<span style="color: #219fd5; background-color: #9fafc4; font-style: italic;">exit</span><span style="background-color: #9fafc4;"> 0</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+END_SRC</span>
 
-<span style="color: #1F55A0; font-weight: bold;">* Utilizaci&#243;n del Script</span>
-<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Generaci&#243;n del script ejecutable</span>
+<span style="color: #2f86d2; font-weight: bold;">* Utilizaci&#243;n del Script</span>
+<span style="color: #ffffff;">*</span><span style="color: #dc3eb7; font-weight: bold;">* Generaci&#243;n del script ejecutable</span>
 </pre>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org24b274b" class="outline-2">
-<h2 id="org24b274b">Utilización del Script desde Org Mode</h2>
-<div class="outline-text-2" id="text-org24b274b">
+<div id="outline-container-orga45b6f8" class="outline-2">
+<h2 id="orga45b6f8">Utilización del Script desde Org Mode</h2>
+<div class="outline-text-2" id="text-orga45b6f8">
 <p>
 Ahora que tenemos nuestro script documentado en Org Mode, vamos a ver cómo utilizarlo.
 </p>
 </div>
-<div id="outline-container-org0745927" class="outline-3">
-<h3 id="org0745927">Generación del script ejecutable</h3>
-<div class="outline-text-3" id="text-org0745927">
+<div id="outline-container-org8121919" class="outline-3">
+<h3 id="org8121919">Generación del script ejecutable</h3>
+<div class="outline-text-3" id="text-org8121919">
 <p>
 Para generar el archivo ejecutable a partir de nuestro documento Org:
 </p>
@@ -1338,40 +1344,40 @@ Para generar el archivo ejecutable a partir de nuestro documento Org:
 <pre class="src src-org">Para extraer (tangle) el script desde este documento Org Mode:
 
 1. Posiciona el cursor en cualquier parte del documento
-2. Ejecuta: <span style="color: #D75F00; background-color: #E9E9F2;">~M-x org-babel-tangle~</span> (o usa el atajo <span style="color: #D75F00; background-color: #E9E9F2;">~C-c C-v t~</span>)
-3. Esto crear&#225; el archivo <span style="color: #D75F00; background-color: #E9E9F2;">~ufw-secure-config.sh~</span> en el mismo directorio
+2. Ejecuta: <span style="color: #fa841d; background-color: #9fafc4;">~M-x org-babel-tangle~</span> (o usa el atajo <span style="color: #fa841d; background-color: #9fafc4;">~C-c C-v t~</span>)
+3. Esto crear&#225; el archivo <span style="color: #fa841d; background-color: #9fafc4;">~ufw-secure-config.sh~</span> en el mismo directorio
 
 Alternativamente, puedes ejecutar esto directamente como un bloque de c&#243;digo:
 
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC emacs-lisp :results silent</span>
-<span style="background-color: #E9E9F2;">(org-babel-tangle)</span>
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+BEGIN_SRC emacs-lisp :results silent</span>
+<span style="background-color: #9fafc4;">(org-babel-tangle)</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+END_SRC</span>
 
 Una vez extra&#237;do, hazlo ejecutable:
 
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash :dir .</span>
-<span style="background-color: #E9E9F2;">chmod +x ufw-secure-config.sh</span>
-<span style="background-color: #E9E9F2;">ls -la ufw-secure-config.sh</span>
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+BEGIN_SRC bash :dir .</span>
+<span style="background-color: #9fafc4;">chmod +x ufw-secure-config.sh</span>
+<span style="background-color: #9fafc4;">ls -la ufw-secure-config.sh</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+END_SRC</span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org94f285b" class="outline-3">
-<h3 id="org94f285b">Ejecución del script</h3>
-<div class="outline-text-3" id="text-org94f285b">
+<div id="outline-container-orga05a8fa" class="outline-3">
+<h3 id="orga05a8fa">Ejecución del script</h3>
+<div class="outline-text-3" id="text-orga05a8fa">
 <p>
 Añade esta sección para documentar la ejecución:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Ejecuci&#243;n del script</span>
+<pre class="src src-org"><span style="color: #ffffff;">*</span><span style="color: #dc3eb7; font-weight: bold;">* Ejecuci&#243;n del script</span>
 
 El script debe ejecutarse con privilegios de superusuario:
 
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash :dir . :results output :eval no</span>
-<span style="background-color: #E9E9F2;">sudo ./ufw-secure-config.sh</span>
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+BEGIN_SRC bash :dir . :results output :eval no</span>
+<span style="background-color: #9fafc4;">sudo ./ufw-secure-config.sh</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+END_SRC</span>
 
 Nota: El script realizar&#225; las siguientes acciones:
 1. Verificar&#225; los privilegios y la instalaci&#243;n de UFW
@@ -1383,167 +1389,167 @@ Nota: El script realizar&#225; las siguientes acciones:
 7. Bloquear&#225; IPs maliciosas conocidas
 8. Activar&#225; el firewall con la nueva configuraci&#243;n
 
-<span style="color: #1F55A0; font-weight: bold;">* Personalizaci&#243;n del Script</span>
+<span style="color: #2f86d2; font-weight: bold;">* Personalizaci&#243;n del Script</span>
 
 Puedes personalizar este script para adaptarlo a tus necesidades espec&#237;ficas:
 
-<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Servicios adicionales</span>
+<span style="color: #ffffff;">*</span><span style="color: #dc3eb7; font-weight: bold;">* Servicios adicionales</span>
 
 Para a&#241;adir reglas para otros servicios, agrega l&#237;neas como estas en la Secci&#243;n 4:
 
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash :eval no</span>
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">FTP (si es necesario)</span>
-<span style="background-color: #E9E9F2;">ufw allow proto tcp from any to any port 21 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'FTP'</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+BEGIN_SRC bash :eval no</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">FTP (si es necesario)</span>
+<span style="background-color: #9fafc4;">ufw allow proto tcp from any to any port 21 comment </span><span style="color: #a44185; background-color: #9fafc4;">'FTP'</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Correo electr&#243;nico</span>
-<span style="background-color: #E9E9F2;">ufw allow proto tcp from any to any port 25,465,587 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'SMTP'</span>
-<span style="background-color: #E9E9F2;">ufw allow proto tcp from any to any port 110,995 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'POP3'</span>
-<span style="background-color: #E9E9F2;">ufw allow proto tcp from any to any port 143,993 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'IMAP'</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Correo electr&#243;nico</span>
+<span style="background-color: #9fafc4;">ufw allow proto tcp from any to any port 25,465,587 comment </span><span style="color: #a44185; background-color: #9fafc4;">'SMTP'</span>
+<span style="background-color: #9fafc4;">ufw allow proto tcp from any to any port 110,995 comment </span><span style="color: #a44185; background-color: #9fafc4;">'POP3'</span>
+<span style="background-color: #9fafc4;">ufw allow proto tcp from any to any port 143,993 comment </span><span style="color: #a44185; background-color: #9fafc4;">'IMAP'</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Base de datos (solo desde redes confiables)</span>
-<span style="background-color: #E9E9F2;">ufw allow proto tcp from 192.168.1.0/24 to any port 3306 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'MySQL desde LAN'</span>
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Base de datos (solo desde redes confiables)</span>
+<span style="background-color: #9fafc4;">ufw allow proto tcp from 192.168.1.0/24 to any port 3306 comment </span><span style="color: #a44185; background-color: #9fafc4;">'MySQL desde LAN'</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+END_SRC</span>
 
-<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Restricci&#243;n por origen</span>
+<span style="color: #ffffff;">*</span><span style="color: #dc3eb7; font-weight: bold;">* Restricci&#243;n por origen</span>
 
 Para permitir servicios solo desde ciertas IPs o redes:
 
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash :eval no</span>
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Acceso SSH solo desde oficina</span>
-<span style="background-color: #E9E9F2;">ufw allow proto tcp from 203.0.113.0/24 to any port 22 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'SSH desde oficina'</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+BEGIN_SRC bash :eval no</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Acceso SSH solo desde oficina</span>
+<span style="background-color: #9fafc4;">ufw allow proto tcp from 203.0.113.0/24 to any port 22 comment </span><span style="color: #a44185; background-color: #9fafc4;">'SSH desde oficina'</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Panel de administraci&#243;n solo desde IPs espec&#237;ficas</span>
-<span style="background-color: #E9E9F2;">ufw allow proto tcp from 203.0.113.10 to any port 8080 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'Admin desde IP confiable'</span>
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Panel de administraci&#243;n solo desde IPs espec&#237;ficas</span>
+<span style="background-color: #9fafc4;">ufw allow proto tcp from 203.0.113.10 to any port 8080 comment </span><span style="color: #a44185; background-color: #9fafc4;">'Admin desde IP confiable'</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+END_SRC</span>
 </pre>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-orgbeb4553" class="outline-2">
-<h2 id="orgbeb4553">Monitoreo y Mantenimiento</h2>
-<div class="outline-text-2" id="text-orgbeb4553">
+<div id="outline-container-org8a9e92b" class="outline-2">
+<h2 id="org8a9e92b">Monitoreo y Mantenimiento</h2>
+<div class="outline-text-2" id="text-org8a9e92b">
 <p>
 Añade esta sección para completar el post:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><span style="color: #1F55A0; font-weight: bold;">* Monitoreo y Mantenimiento</span>
+<pre class="src src-org"><span style="color: #2f86d2; font-weight: bold;">* Monitoreo y Mantenimiento</span>
 
 Una vez configurado el firewall, es importante monitorizarlo y mantenerlo:
 
-<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Verificaci&#243;n del estado</span>
+<span style="color: #ffffff;">*</span><span style="color: #dc3eb7; font-weight: bold;">* Verificaci&#243;n del estado</span>
 
 Para verificar el estado actual del firewall:
 
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash :eval no</span>
-<span style="background-color: #E9E9F2;">sudo ufw status verbose</span>
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+BEGIN_SRC bash :eval no</span>
+<span style="background-color: #9fafc4;">sudo ufw status verbose</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+END_SRC</span>
 
-<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Monitoreo de logs</span>
+<span style="color: #ffffff;">*</span><span style="color: #dc3eb7; font-weight: bold;">* Monitoreo de logs</span>
 
 Para monitorizar actividad sospechosa:
 
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash :eval no</span>
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Ver &#250;ltimas entradas del log en tiempo real</span>
-<span style="background-color: #E9E9F2;">sudo tail -f /var/log/ufw.log</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+BEGIN_SRC bash :eval no</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Ver &#250;ltimas entradas del log en tiempo real</span>
+<span style="background-color: #9fafc4;">sudo tail -f /var/log/ufw.log</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Buscar intentos de conexi&#243;n bloqueados</span>
-<span style="background-color: #E9E9F2;">sudo grep </span><span style="color: #005F00; background-color: #E9E9F2;">"BLOCK"</span><span style="background-color: #E9E9F2;"> /var/log/ufw.log</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Buscar intentos de conexi&#243;n bloqueados</span>
+<span style="background-color: #9fafc4;">sudo grep </span><span style="color: #a44185; background-color: #9fafc4;">"BLOCK"</span><span style="background-color: #9fafc4;"> /var/log/ufw.log</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Contar intentos bloqueados por IP (TOP 10)</span>
-<span style="background-color: #E9E9F2;">sudo grep </span><span style="color: #005F00; background-color: #E9E9F2;">"BLOCK"</span><span style="background-color: #E9E9F2;"> /var/log/ufw.log | grep -oE </span><span style="color: #005F00; background-color: #E9E9F2;">"SRC=[0-9.]+"</span><span style="background-color: #E9E9F2;"> | sort | uniq -c | sort -nr | head -10</span>
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Contar intentos bloqueados por IP (TOP 10)</span>
+<span style="background-color: #9fafc4;">sudo grep </span><span style="color: #a44185; background-color: #9fafc4;">"BLOCK"</span><span style="background-color: #9fafc4;"> /var/log/ufw.log | grep -oE </span><span style="color: #a44185; background-color: #9fafc4;">"SRC=[0-9.]+"</span><span style="background-color: #9fafc4;"> | sort | uniq -c | sort -nr | head -10</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+END_SRC</span>
 
-<span style="color: #F5F5F9;">*</span><span style="color: #AF005F; font-weight: bold;">* Actualizaci&#243;n de reglas</span>
+<span style="color: #ffffff;">*</span><span style="color: #dc3eb7; font-weight: bold;">* Actualizaci&#243;n de reglas</span>
 
 Cuando necesites actualizar las reglas:
 
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash :eval no</span>
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Ver reglas numeradas</span>
-<span style="background-color: #E9E9F2;">sudo ufw status numbered</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+BEGIN_SRC bash :eval no</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Ver reglas numeradas</span>
+<span style="background-color: #9fafc4;">sudo ufw status numbered</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Eliminar una regla espec&#237;fica</span>
-<span style="background-color: #E9E9F2;">sudo ufw delete 3  </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Elimina la regla n&#250;mero 3</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Eliminar una regla espec&#237;fica</span>
+<span style="background-color: #9fafc4;">sudo ufw delete 3  </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Elimina la regla n&#250;mero 3</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">A&#241;adir una nueva regla</span>
-<span style="background-color: #E9E9F2;">sudo ufw allow proto tcp from any to any port 8443 comment </span><span style="color: #005F00; background-color: #E9E9F2;">'HTTPS alternativo'</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">A&#241;adir una nueva regla</span>
+<span style="background-color: #9fafc4;">sudo ufw allow proto tcp from any to any port 8443 comment </span><span style="color: #a44185; background-color: #9fafc4;">'HTTPS alternativo'</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Aplicar cambios</span>
-<span style="background-color: #E9E9F2;">sudo ufw reload</span>
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Aplicar cambios</span>
+<span style="background-color: #9fafc4;">sudo ufw reload</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+END_SRC</span>
 
-<span style="color: #1F55A0; font-weight: bold;">* Integraci&#243;n con cron para Actualizaciones Autom&#225;ticas</span>
+<span style="color: #2f86d2; font-weight: bold;">* Integraci&#243;n con cron para Actualizaciones Autom&#225;ticas</span>
 
 Para mantener tu lista de IPs bloqueadas actualizada, puedes crear un script separado y programarlo con cron:
 
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC org</span>
-<span style="background-color: #E9E9F2;">#+BEGIN_SRC bash :tangle update-blocklist.sh :comments both</span>
-<span style="background-color: #E9E9F2;">#!/bin/bash</span>
-<span style="background-color: #E9E9F2;"># Script: update-blocklist.sh</span>
-<span style="background-color: #E9E9F2;"># Descripci&#243;n: Actualiza la lista de IPs bloqueadas en UFW</span>
-<span style="background-color: #E9E9F2;"># Autor: Tu Nombre</span>
-<span style="background-color: #E9E9F2;"># Fecha: 2025-04-15</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+BEGIN_SRC org</span>
+<span style="background-color: #9fafc4;">#+BEGIN_SRC bash :tangle update-blocklist.sh :comments both</span>
+<span style="background-color: #9fafc4;">#!/bin/bash</span>
+<span style="background-color: #9fafc4;"># Script: update-blocklist.sh</span>
+<span style="background-color: #9fafc4;"># Descripci&#243;n: Actualiza la lista de IPs bloqueadas en UFW</span>
+<span style="background-color: #9fafc4;"># Autor: Tu Nombre</span>
+<span style="background-color: #9fafc4;"># Fecha: 2025-04-15</span>
 
-<span style="background-color: #E9E9F2;"># Verificar privilegios</span>
-<span style="background-color: #E9E9F2;">if </span><span style="color: #009B7C; background-color: #E9E9F2; font-weight: bold; text-decoration: underline;"><a href=" $EUID -ne 0 ">[[ $EUID -ne 0 ]]</a></span><span style="background-color: #E9E9F2;">; then</span>
-<span style="background-color: #E9E9F2;">    echo "Este script requiere privilegios de root."</span>
-<span style="background-color: #E9E9F2;">    exit 1</span>
-<span style="background-color: #E9E9F2;">fi</span>
+<span style="background-color: #9fafc4;"># Verificar privilegios</span>
+<span style="background-color: #9fafc4;">if </span><span style="color: #2f86d2; background-color: #9fafc4; font-weight: bold; text-decoration: underline;"><a href=" $EUID -ne 0 ">[[ $EUID -ne 0 ]]</a></span><span style="background-color: #9fafc4;">; then</span>
+<span style="background-color: #9fafc4;">    echo "Este script requiere privilegios de root."</span>
+<span style="background-color: #9fafc4;">    exit 1</span>
+<span style="background-color: #9fafc4;">fi</span>
 
-<span style="background-color: #E9E9F2;"># Directorio para logs</span>
-<span style="background-color: #E9E9F2;">LOG_DIR="/var/log/ufw-updates"</span>
-<span style="background-color: #E9E9F2;">mkdir -p "$LOG_DIR"</span>
-<span style="background-color: #E9E9F2;">LOG_FILE="$LOG_DIR/update-$(date +%F).log"</span>
+<span style="background-color: #9fafc4;"># Directorio para logs</span>
+<span style="background-color: #9fafc4;">LOG_DIR="/var/log/ufw-updates"</span>
+<span style="background-color: #9fafc4;">mkdir -p "$LOG_DIR"</span>
+<span style="background-color: #9fafc4;">LOG_FILE="$LOG_DIR/update-$(date +%F).log"</span>
 
-<span style="background-color: #E9E9F2;">echo "Iniciando actualizaci&#243;n de listas de bloqueo en $(date)" &gt;&gt; "$LOG_FILE"</span>
+<span style="background-color: #9fafc4;">echo "Iniciando actualizaci&#243;n de listas de bloqueo en $(date)" &gt;&gt; "$LOG_FILE"</span>
 
-<span style="background-color: #E9E9F2;"># Descargar lista actualizada (ejemplo)</span>
-<span style="background-color: #E9E9F2;">echo "Descargando lista actualizada..." &gt;&gt; "$LOG_FILE"</span>
-<span style="background-color: #E9E9F2;">curl -s </span><span style="color: #009B7C; background-color: #E9E9F2; font-weight: bold; text-decoration: underline;"><a href="https://ejemplo.com/ip-blocklist.txt">https://ejemplo.com/ip-blocklist.txt</a></span><span style="background-color: #E9E9F2;"> &gt; /tmp/new-blocklist.txt</span>
+<span style="background-color: #9fafc4;"># Descargar lista actualizada (ejemplo)</span>
+<span style="background-color: #9fafc4;">echo "Descargando lista actualizada..." &gt;&gt; "$LOG_FILE"</span>
+<span style="background-color: #9fafc4;">curl -s </span><span style="color: #2f86d2; background-color: #9fafc4; font-weight: bold; text-decoration: underline;"><a href="https://ejemplo.com/ip-blocklist.txt">https://ejemplo.com/ip-blocklist.txt</a></span><span style="background-color: #9fafc4;"> &gt; /tmp/new-blocklist.txt</span>
 
-<span style="background-color: #E9E9F2;"># Eliminar reglas antiguas con comentario espec&#237;fico</span>
-<span style="background-color: #E9E9F2;">echo "Eliminando reglas antiguas..." &gt;&gt; "$LOG_FILE"</span>
-<span style="background-color: #E9E9F2;">for ip in $(ufw status | grep "lista externa" | awk '{print $3}'); do</span>
-<span style="background-color: #E9E9F2;">  ufw delete deny from $ip &gt;&gt; "$LOG_FILE" 2&gt;&amp;1</span>
-<span style="background-color: #E9E9F2;">done</span>
+<span style="background-color: #9fafc4;"># Eliminar reglas antiguas con comentario espec&#237;fico</span>
+<span style="background-color: #9fafc4;">echo "Eliminando reglas antiguas..." &gt;&gt; "$LOG_FILE"</span>
+<span style="background-color: #9fafc4;">for ip in $(ufw status | grep "lista externa" | awk '{print $3}'); do</span>
+<span style="background-color: #9fafc4;">  ufw delete deny from $ip &gt;&gt; "$LOG_FILE" 2&gt;&amp;1</span>
+<span style="background-color: #9fafc4;">done</span>
 
-<span style="background-color: #E9E9F2;"># A&#241;adir nuevas IPs</span>
-<span style="background-color: #E9E9F2;">echo "A&#241;adiendo nuevas IPs..." &gt;&gt; "$LOG_FILE"</span>
-<span style="background-color: #E9E9F2;">count=0</span>
-<span style="background-color: #E9E9F2;">while read ip; do</span>
-<span style="background-color: #E9E9F2;">  if [[ $ip =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}(/[0-9]{1,2})?$ ]]; then</span>
-<span style="background-color: #E9E9F2;">    ufw deny from $ip comment 'IP maliciosa - lista externa' &gt;&gt; "$LOG_FILE" 2&gt;&amp;1</span>
-<span style="background-color: #E9E9F2;">    ((count++))</span>
-<span style="background-color: #E9E9F2;">  fi</span>
-<span style="background-color: #E9E9F2;">done &lt; /tmp/new-blocklist.txt</span>
+<span style="background-color: #9fafc4;"># A&#241;adir nuevas IPs</span>
+<span style="background-color: #9fafc4;">echo "A&#241;adiendo nuevas IPs..." &gt;&gt; "$LOG_FILE"</span>
+<span style="background-color: #9fafc4;">count=0</span>
+<span style="background-color: #9fafc4;">while read ip; do</span>
+<span style="background-color: #9fafc4;">  if [[ $ip =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}(/[0-9]{1,2})?$ ]]; then</span>
+<span style="background-color: #9fafc4;">    ufw deny from $ip comment 'IP maliciosa - lista externa' &gt;&gt; "$LOG_FILE" 2&gt;&amp;1</span>
+<span style="background-color: #9fafc4;">    ((count++))</span>
+<span style="background-color: #9fafc4;">  fi</span>
+<span style="background-color: #9fafc4;">done &lt; /tmp/new-blocklist.txt</span>
 
-<span style="background-color: #E9E9F2;">echo "Actualizaci&#243;n completada. $count IPs bloqueadas." &gt;&gt; "$LOG_FILE"</span>
-<span style="background-color: #E9E9F2;">echo "Fecha y hora de finalizaci&#243;n: $(date)" &gt;&gt; "$LOG_FILE"</span>
+<span style="background-color: #9fafc4;">echo "Actualizaci&#243;n completada. $count IPs bloqueadas." &gt;&gt; "$LOG_FILE"</span>
+<span style="background-color: #9fafc4;">echo "Fecha y hora de finalizaci&#243;n: $(date)" &gt;&gt; "$LOG_FILE"</span>
 
-<span style="background-color: #E9E9F2;"># Limpiar archivos temporales</span>
-<span style="background-color: #E9E9F2;">rm /tmp/new-blocklist.txt</span>
+<span style="background-color: #9fafc4;"># Limpiar archivos temporales</span>
+<span style="background-color: #9fafc4;">rm /tmp/new-blocklist.txt</span>
 
-<span style="background-color: #E9E9F2;">exit 0</span>
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
-<span style="color: #004700;">#+END_SRC</span>
+<span style="background-color: #9fafc4;">exit 0</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+END_SRC</span>
+<span style="color: #60a8a1;">#+END_SRC</span>
 
 Programa la ejecuci&#243;n con cron:
 
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+BEGIN_SRC bash :eval no</span>
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">Editar crontab</span>
-<span style="background-color: #E9E9F2;">sudo crontab -e</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+BEGIN_SRC bash :eval no</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">Editar crontab</span>
+<span style="background-color: #9fafc4;">sudo crontab -e</span>
 
-<span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;"># </span><span style="color: #4E4E4E; background-color: #E9E9F2; font-style: italic;">A&#241;adir l&#237;nea para ejecutar cada d&#237;a a las 3 AM</span>
-<span style="background-color: #E9E9F2;">0 3 * * * /ruta/a/update-blocklist.sh</span>
-<span style="color: #4E4E4E; background-color: #F5F5F9; font-style: italic;">#+END_SRC</span>
+<span style="color: #8195b0; background-color: #9fafc4; font-style: italic;"># </span><span style="color: #8195b0; background-color: #9fafc4; font-style: italic;">A&#241;adir l&#237;nea para ejecutar cada d&#237;a a las 3 AM</span>
+<span style="background-color: #9fafc4;">0 3 * * * /ruta/a/update-blocklist.sh</span>
+<span style="color: #8195b0; background-color: #9fafc4;">#+END_SRC</span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org07e5819" class="outline-2">
-<h2 id="org07e5819">Conclusión y Recursos Adicionales</h2>
-<div class="outline-text-2" id="text-org07e5819">
+<div id="outline-container-orgdfe2fe9" class="outline-2">
+<h2 id="orgdfe2fe9">Conclusión y Recursos Adicionales</h2>
+<div class="outline-text-2" id="text-orgdfe2fe9">
 <p>
 Finalmente, añade una conclusión y recursos adicionales:
 </p>
@@ -1593,15 +1599,15 @@ Recuerda que la seguridad es un proceso continuo, no un estado final. Mantén tu
 </ul>
 </div>
 </div>
-<div id="outline-container-org2acdedd" class="outline-2">
-<h2 id="org2acdedd">Diagrama de Componentes de la Configuración</h2>
-<div class="outline-text-2" id="text-org2acdedd">
+<div id="outline-container-org602bbf5" class="outline-2">
+<h2 id="org602bbf5">Diagrama de Componentes de la Configuración</h2>
+<div class="outline-text-2" id="text-org602bbf5">
 <p>
 Este diagrama muestra los componentes principales que conforman la configuración de seguridad con UFW:
 </p>
 
 
-<figure id="org1694fa8">
+<figure id="orgb3074ff">
 <img src="images/ufw-components.png" alt="ufw-components.png">
 
 </figure>
@@ -1623,9 +1629,9 @@ Este diagrama muestra los componentes principales que conforman la configuració
 <item>
   <title><![CDATA[Detectando actividad maliciosa en nuestro sistema Linux: ¿Somos parte de una botnet?]]></title>
   <description><![CDATA[
-<div id="outline-container-orgda27259" class="outline-2">
-<h2 id="orgda27259">Introducción</h2>
-<div class="outline-text-2" id="text-orgda27259">
+<div id="outline-container-org4d90630" class="outline-2">
+<h2 id="org4d90630">Introducción</h2>
+<div class="outline-text-2" id="text-org4d90630">
 <p>
 En la era actual de amenazas cibernéticas cada vez más sofisticadas, uno de los riesgos más preocupantes es que nuestros sistemas sean comprometidos y utilizados como parte de una botnet sin nuestro conocimiento. Estas redes de equipos infectados pueden ser utilizadas para realizar ataques DDoS, minería de criptomonedas, envío de spam, o robo de datos, entre otras actividades maliciosas.
 </p>
@@ -1635,9 +1641,9 @@ En este artículo del blog <b>Emacs con Esteroides</b>, presentaremos un script 
 </p>
 </div>
 </div>
-<div id="outline-container-org68a17c4" class="outline-2">
-<h2 id="org68a17c4">¿Qué es una botnet?</h2>
-<div class="outline-text-2" id="text-org68a17c4">
+<div id="outline-container-org3d0771d" class="outline-2">
+<h2 id="org3d0771d">¿Qué es una botnet?</h2>
+<div class="outline-text-2" id="text-org3d0771d">
 <p>
 Una botnet es una red de equipos infectados con malware que son controlados remotamente por un atacante, conocido como "botmaster". Los equipos comprometidos, llamados "zombies" o "bots", ejecutan comandos sin el conocimiento de sus propietarios.
 </p>
@@ -1657,9 +1663,9 @@ Señales comunes de que un sistema puede formar parte de una botnet:
 </ul>
 </div>
 </div>
-<div id="outline-container-org6fc0b0e" class="outline-2">
-<h2 id="org6fc0b0e">El script de detección de botnets</h2>
-<div class="outline-text-2" id="text-org6fc0b0e">
+<div id="outline-container-orgfd116dd" class="outline-2">
+<h2 id="orgfd116dd">El script de detección de botnets</h2>
+<div class="outline-text-2" id="text-orgfd116dd">
 <p>
 Nuestro script realiza múltiples comprobaciones para identificar posibles indicios de compromiso:
 </p>
@@ -2221,15 +2227,15 @@ main
 </div>
 </div>
 </div>
-<div id="outline-container-org623d946" class="outline-2">
-<h2 id="org623d946">¿Cómo funciona el script?</h2>
-<div class="outline-text-2" id="text-org623d946">
+<div id="outline-container-org809f40b" class="outline-2">
+<h2 id="org809f40b">¿Cómo funciona el script?</h2>
+<div class="outline-text-2" id="text-org809f40b">
 <p>
 El script realiza una serie de verificaciones exhaustivas para detectar posibles signos de compromiso en el sistema:
 </p>
 
 
-<figure id="orgc7037fb">
+<figure id="org3d97007">
 <img src="images/botnet_detection_flow.png" alt="botnet_detection_flow.png">
 
 </figure>
@@ -2238,13 +2244,13 @@ El script realiza una serie de verificaciones exhaustivas para detectar posibles
 <a href="images/botnet_detection_flow.png">botnet<sub>detection</sub><sub>flow.png</sub></a>
 </p>
 </div>
-<div id="outline-container-org9cfe7ad" class="outline-3">
-<h3 id="org9cfe7ad">Descripción de los módulos principales</h3>
-<div class="outline-text-3" id="text-org9cfe7ad">
+<div id="outline-container-org86a7253" class="outline-3">
+<h3 id="org86a7253">Descripción de los módulos principales</h3>
+<div class="outline-text-3" id="text-org86a7253">
 </div>
-<div id="outline-container-org0fe53cc" class="outline-4">
-<h4 id="org0fe53cc">1. Verificación de procesos sospechosos</h4>
-<div class="outline-text-4" id="text-org0fe53cc">
+<div id="outline-container-orgd5586e7" class="outline-4">
+<h4 id="orgd5586e7">1. Verificación de procesos sospechosos</h4>
+<div class="outline-text-4" id="text-orgd5586e7">
 <p>
 Este módulo examina los procesos en ejecución para detectar:
 </p>
@@ -2256,9 +2262,9 @@ Este módulo examina los procesos en ejecución para detectar:
 </ul>
 </div>
 </div>
-<div id="outline-container-org00fac3d" class="outline-4">
-<h4 id="org00fac3d">2. Análisis de conexiones de red</h4>
-<div class="outline-text-4" id="text-org00fac3d">
+<div id="outline-container-orgdcf512d" class="outline-4">
+<h4 id="orgdcf512d">2. Análisis de conexiones de red</h4>
+<div class="outline-text-4" id="text-orgdcf512d">
 <p>
 Esta sección examina las conexiones de red para identificar:
 </p>
@@ -2270,9 +2276,9 @@ Esta sección examina las conexiones de red para identificar:
 </ul>
 </div>
 </div>
-<div id="outline-container-orga755647" class="outline-4">
-<h4 id="orga755647">3. Verificación de archivos y directorios</h4>
-<div class="outline-text-4" id="text-orga755647">
+<div id="outline-container-org99de2e1" class="outline-4">
+<h4 id="org99de2e1">3. Verificación de archivos y directorios</h4>
+<div class="outline-text-4" id="text-org99de2e1">
 <p>
 El script busca:
 </p>
@@ -2284,9 +2290,9 @@ El script busca:
 </ul>
 </div>
 </div>
-<div id="outline-container-org9dfdf49" class="outline-4">
-<h4 id="org9dfdf49">4. Análisis de tareas programadas</h4>
-<div class="outline-text-4" id="text-org9dfdf49">
+<div id="outline-container-org8f7335d" class="outline-4">
+<h4 id="org8f7335d">4. Análisis de tareas programadas</h4>
+<div class="outline-text-4" id="text-org8f7335d">
 <p>
 Se examinan:
 </p>
@@ -2298,9 +2304,9 @@ Se examinan:
 </ul>
 </div>
 </div>
-<div id="outline-container-org128160a" class="outline-4">
-<h4 id="org128160a">5. Verificación de usuarios y permisos</h4>
-<div class="outline-text-4" id="text-org128160a">
+<div id="outline-container-orgec5c79c" class="outline-4">
+<h4 id="orgec5c79c">5. Verificación de usuarios y permisos</h4>
+<div class="outline-text-4" id="text-orgec5c79c">
 <p>
 El script revisa:
 </p>
@@ -2312,9 +2318,9 @@ El script revisa:
 </ul>
 </div>
 </div>
-<div id="outline-container-orga52c424" class="outline-4">
-<h4 id="orga52c424">6. Análisis de servicios</h4>
-<div class="outline-text-4" id="text-orga52c424">
+<div id="outline-container-org10d55d8" class="outline-4">
+<h4 id="org10d55d8">6. Análisis de servicios</h4>
+<div class="outline-text-4" id="text-org10d55d8">
 <p>
 Esta sección examina:
 </p>
@@ -2326,9 +2332,9 @@ Esta sección examina:
 </ul>
 </div>
 </div>
-<div id="outline-container-org1fdbcee" class="outline-4">
-<h4 id="org1fdbcee">7. Escaneos de seguridad</h4>
-<div class="outline-text-4" id="text-org1fdbcee">
+<div id="outline-container-orge7b98b4" class="outline-4">
+<h4 id="orge7b98b4">7. Escaneos de seguridad</h4>
+<div class="outline-text-4" id="text-orge7b98b4">
 <p>
 El script utiliza herramientas especializadas:
 </p>
@@ -2340,9 +2346,9 @@ El script utiliza herramientas especializadas:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd351cfc" class="outline-4">
-<h4 id="orgd351cfc">8. Análisis de logs</h4>
-<div class="outline-text-4" id="text-orgd351cfc">
+<div id="outline-container-orgf2337f8" class="outline-4">
+<h4 id="orgf2337f8">8. Análisis de logs</h4>
+<div class="outline-text-4" id="text-orgf2337f8">
 <p>
 Se analizan los registros del sistema para identificar:
 </p>
@@ -2354,9 +2360,9 @@ Se analizan los registros del sistema para identificar:
 </ul>
 </div>
 </div>
-<div id="outline-container-org98dc3be" class="outline-4">
-<h4 id="org98dc3be">9. Análisis de tráfico de red</h4>
-<div class="outline-text-4" id="text-org98dc3be">
+<div id="outline-container-org587a9f4" class="outline-4">
+<h4 id="org587a9f4">9. Análisis de tráfico de red</h4>
+<div class="outline-text-4" id="text-org587a9f4">
 <p>
 El script examina:
 </p>
@@ -2368,9 +2374,9 @@ El script examina:
 </ul>
 </div>
 </div>
-<div id="outline-container-org66fb91b" class="outline-4">
-<h4 id="org66fb91b">10. Verificación del rendimiento</h4>
-<div class="outline-text-4" id="text-org66fb91b">
+<div id="outline-container-org36b4d21" class="outline-4">
+<h4 id="org36b4d21">10. Verificación del rendimiento</h4>
+<div class="outline-text-4" id="text-org36b4d21">
 <p>
 Se analiza:
 </p>
@@ -2383,9 +2389,9 @@ Se analiza:
 </div>
 </div>
 </div>
-<div id="outline-container-orgde77b11" class="outline-3">
-<h3 id="orgde77b11">Informe y resumen final</h3>
-<div class="outline-text-3" id="text-orgde77b11">
+<div id="outline-container-org4280415" class="outline-3">
+<h3 id="org4280415">Informe y resumen final</h3>
+<div class="outline-text-3" id="text-org4280415">
 <p>
 Al finalizar todas las verificaciones, el script genera un informe detallado y un resumen que clasifica el estado del sistema en tres categorías:
 </p>
@@ -2402,13 +2408,13 @@ El informe completo se guarda en el directorio <code>/var/log/security_checks/</
 </div>
 </div>
 </div>
-<div id="outline-container-orgf0e3821" class="outline-2">
-<h2 id="orgf0e3821">Uso práctico del script</h2>
-<div class="outline-text-2" id="text-orgf0e3821">
+<div id="outline-container-orge5ca4b9" class="outline-2">
+<h2 id="orge5ca4b9">Uso práctico del script</h2>
+<div class="outline-text-2" id="text-orge5ca4b9">
 </div>
-<div id="outline-container-orgb9952cf" class="outline-3">
-<h3 id="orgb9952cf">Requisitos previos</h3>
-<div class="outline-text-3" id="text-orgb9952cf">
+<div id="outline-container-org0822fa2" class="outline-3">
+<h3 id="org0822fa2">Requisitos previos</h3>
+<div class="outline-text-3" id="text-org0822fa2">
 <p>
 Antes de ejecutar el script, asegúrate de tener:
 </p>
@@ -2420,9 +2426,9 @@ Antes de ejecutar el script, asegúrate de tener:
 </ul>
 </div>
 </div>
-<div id="outline-container-org5b583e4" class="outline-3">
-<h3 id="org5b583e4">Instalación y ejecución</h3>
-<div class="outline-text-3" id="text-org5b583e4">
+<div id="outline-container-orgf2a779e" class="outline-3">
+<h3 id="orgf2a779e">Instalación y ejecución</h3>
+<div class="outline-text-3" id="text-orgf2a779e">
 <ol class="org-ol">
 <li>Copia el script completo en un archivo llamado <code>botnet_detector.sh</code></li>
 <li>Dale permisos de ejecución:</li>
@@ -2447,9 +2453,9 @@ Antes de ejecutar el script, asegúrate de tener:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgdf66306" class="outline-3">
-<h3 id="orgdf66306">Automatización</h3>
-<div class="outline-text-3" id="text-orgdf66306">
+<div id="outline-container-org44bf35d" class="outline-3">
+<h3 id="org44bf35d">Automatización</h3>
+<div class="outline-text-3" id="text-org44bf35d">
 <p>
 Para monitorear regularmente tu sistema, puedes configurar el script como una tarea programada:
 </p>
@@ -2469,16 +2475,16 @@ El informe se guardará con la fecha y hora de ejecución, permitiéndote compar
 </div>
 </div>
 </div>
-<div id="outline-container-org2eef659" class="outline-2">
-<h2 id="org2eef659">Signos comunes de infección por botnet</h2>
-<div class="outline-text-2" id="text-org2eef659">
+<div id="outline-container-orgf1658e2" class="outline-2">
+<h2 id="orgf1658e2">Signos comunes de infección por botnet</h2>
+<div class="outline-text-2" id="text-orgf1658e2">
 <p>
 Además de las verificaciones realizadas por el script, estos son signos adicionales que podrían indicar que tu sistema está comprometido:
 </p>
 </div>
-<div id="outline-container-orgeed5368" class="outline-3">
-<h3 id="orgeed5368">Signos a nivel de sistema</h3>
-<div class="outline-text-3" id="text-orgeed5368">
+<div id="outline-container-orgbda72d6" class="outline-3">
+<h3 id="orgbda72d6">Signos a nivel de sistema</h3>
+<div class="outline-text-3" id="text-orgbda72d6">
 <ul class="org-ul">
 <li>Tiempos de arranque o apagado inusualmente largos</li>
 <li>El sistema se vuelve significativamente más lento sin razón aparente</li>
@@ -2488,9 +2494,9 @@ Además de las verificaciones realizadas por el script, estos son signos adicion
 </ul>
 </div>
 </div>
-<div id="outline-container-org45ef8fa" class="outline-3">
-<h3 id="org45ef8fa">Signos a nivel de red</h3>
-<div class="outline-text-3" id="text-org45ef8fa">
+<div id="outline-container-orgd5a4509" class="outline-3">
+<h3 id="orgd5a4509">Signos a nivel de red</h3>
+<div class="outline-text-3" id="text-orgd5a4509">
 <ul class="org-ul">
 <li>Uso de red elevado incluso cuando no estás utilizando activamente Internet</li>
 <li>Quejas de tu proveedor de Internet sobre tráfico sospechoso</li>
@@ -2499,9 +2505,9 @@ Además de las verificaciones realizadas por el script, estos son signos adicion
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf29362a" class="outline-3">
-<h3 id="orgf29362a">Signos a nivel de usuario</h3>
-<div class="outline-text-3" id="text-orgf29362a">
+<div id="outline-container-org39bebc1" class="outline-3">
+<h3 id="org39bebc1">Signos a nivel de usuario</h3>
+<div class="outline-text-3" id="text-org39bebc1">
 <ul class="org-ul">
 <li>Cuentas de correo electrónico enviando spam sin tu conocimiento</li>
 <li>Actividad en tus cuentas que no reconoces</li>
@@ -2511,9 +2517,9 @@ Además de las verificaciones realizadas por el script, estos son signos adicion
 </div>
 </div>
 </div>
-<div id="outline-container-org6817cc2" class="outline-2">
-<h2 id="org6817cc2">Mejores prácticas para prevenir infecciones</h2>
-<div class="outline-text-2" id="text-org6817cc2">
+<div id="outline-container-orgc7e6089" class="outline-2">
+<h2 id="orgc7e6089">Mejores prácticas para prevenir infecciones</h2>
+<div class="outline-text-2" id="text-orgc7e6089">
 <p>
 La prevención es siempre la mejor estrategia. Estas son algunas recomendaciones para mantener tu sistema seguro:
 </p>
@@ -2577,9 +2583,9 @@ sudo aideinit
 </ol>
 </div>
 </div>
-<div id="outline-container-org5cb9bcc" class="outline-2">
-<h2 id="org5cb9bcc">Qué hacer si encuentras un sistema comprometido</h2>
-<div class="outline-text-2" id="text-org5cb9bcc">
+<div id="outline-container-org6629fa8" class="outline-2">
+<h2 id="org6629fa8">Qué hacer si encuentras un sistema comprometido</h2>
+<div class="outline-text-2" id="text-org6629fa8">
 <p>
 Si el script detecta signos de compromiso o tienes razones para creer que tu sistema es parte de una botnet:
 </p>
@@ -2627,9 +2633,9 @@ Si el script detecta signos de compromiso o tienes razones para creer que tu sis
 </ol>
 </div>
 </div>
-<div id="outline-container-org1050eb7" class="outline-2">
-<h2 id="org1050eb7">Conclusión</h2>
-<div class="outline-text-2" id="text-org1050eb7">
+<div id="outline-container-org67c2ae6" class="outline-2">
+<h2 id="org67c2ae6">Conclusión</h2>
+<div class="outline-text-2" id="text-org67c2ae6">
 <p>
 La seguridad informática es un proceso continuo, no un estado final. Este script puede ayudarte a detectar posibles compromisos en tu sistema Linux, pero debe ser parte de una estrategia de seguridad más amplia que incluya buenas prácticas preventivas, monitoreo regular, y planes de respuesta a incidentes.
 </p>
@@ -2642,8 +2648,12 @@ Utilizando Emacs y org-mode, puedes adaptar y mejorar este script según tus nec
 Recuerda que ninguna herramienta automatizada puede reemplazar el conocimiento y la vigilancia humana. Mantente informado sobre nuevas amenazas y técnicas de ataque, y adapta tus defensas en consecuencia.
 </p>
 
+
 <p>
-<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-15-gu-a-pr-ctica-configuraci-n-de-ufw-en-ubuntu-con-scripts-y-org-mode">2025-04-15-gu-a-pr-ctica-configuraci-n-de-ufw-en-ubuntu-con-scripts-y-org-mode</a>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-15-gu-a-pr-ctica-configuraci-n-de-ufw-en-ubuntu-con-scripts-y-org-mode">2025-04-15-gu-a-pr-ctica-configuraci-n-de-ufw-en-ubuntu-con-scripts-y-org-mode</a> <br>
+</p>
+
+<p>
 <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-16--fortaleciendo-la-seguridad-inform-tica-con-snort-y-aide-gu-a-completa">2025-04-16&#x2013;fortaleciendo-la-seguridad-inform-tica-con-snort-y-aide-gu-a-completa</a>
 </p>
 </div>
