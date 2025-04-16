@@ -4,7 +4,977 @@
 <title><![CDATA[Example.com - seguridad]]></title>
 <description><![CDATA[Example.com - seguridad]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-seguridad.html</link>
-<lastBuildDate>Tue, 15 Apr 2025 23:30:52 +0200</lastBuildDate>
+<lastBuildDate>Wed, 16 Apr 2025 07:16:59 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Fortaleciendo la Seguridad Informática con Snort y AIDE: Guía Completa]]></title>
+  <description><![CDATA[
+<div id="outline-container-orge8ed29e" class="outline-2">
+<h2 id="orge8ed29e">Introducción</h2>
+<div class="outline-text-2" id="text-orge8ed29e">
+<p>
+La seguridad informática es un aspecto fundamental para cualquier sistema, especialmente en la era digital actual donde las amenazas evolucionan constantemente. En esta guía detallada, exploraremos dos herramientas esenciales para complementar tu estrategia de seguridad: <b>Snort</b> y <b>AIDE</b>.
+</p>
+
+<ul class="org-ul">
+<li><b>Snort</b>: Un sistema de detección y prevención de intrusiones (IDS/IPS) basado en red que analiza el tráfico en tiempo real para identificar patrones sospechosos.</li>
+<li><b>AIDE</b> (Advanced Intrusion Detection Environment): Una herramienta de detección de intrusiones basada en host que monitorea la integridad de los archivos del sistema.</li>
+</ul>
+
+<p>
+La combinación de estas herramientas proporciona una defensa en profundidad, permitiéndote detectar tanto intrusiones a nivel de red como modificaciones no autorizadas en tus archivos del sistema.
+</p>
+
+
+<figure id="orgae815d0">
+<img src="file:///home/mike/myblog/images/arquitectura-seguridad.png" alt="arquitectura-seguridad.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org7ffc667" class="outline-2">
+<h2 id="org7ffc667">Parte 1: Instalación y Configuración de Snort</h2>
+<div class="outline-text-2" id="text-org7ffc667">
+</div>
+<div id="outline-container-org5e43b5e" class="outline-3">
+<h3 id="org5e43b5e">¿Qué es Snort?</h3>
+<div class="outline-text-3" id="text-org5e43b5e">
+<p>
+Snort es un sistema de detección y prevención de intrusiones (IDS/IPS) de código abierto, creado por Martin Roesch en 1998. Esta poderosa herramienta analiza el tráfico de red en tiempo real, comparándolo con una base de datos de reglas para identificar posibles ataques, escaneos, exploits y otras actividades maliciosas.
+</p>
+
+<p>
+Snort puede funcionar en tres modos principales:
+</p>
+<ol class="org-ol">
+<li><b>Modo Sniffer</b>: Simplemente lee los paquetes de la red y los muestra en pantalla.</li>
+<li><b>Modo Registro de Paquetes</b>: Guarda los paquetes en el disco para análisis posterior.</li>
+<li><b>Modo NIDS</b> (Network Intrusion Detection System): Analiza el tráfico de red en busca de coincidencias con patrones predefinidos.</li>
+<li><b>Modo NIPS</b> (Network Intrusion Prevention System): Además de detectar, puede bloquear activamente tráfico malicioso.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org21917f5" class="outline-3">
+<h3 id="org21917f5">Requisitos Previos</h3>
+<div class="outline-text-3" id="text-org21917f5">
+<p>
+Antes de instalar Snort, asegúrate de contar con:
+</p>
+
+<ul class="org-ul">
+<li>Sistema operativo Linux (esta guía usa Ubuntu/Debian, pero puede adaptarse)</li>
+<li>Privilegios de administrador (sudo/root)</li>
+<li>Conexión a Internet para descargar paquetes</li>
+<li>Libpcap (biblioteca para captura de paquetes)</li>
+<li>DAQ (Data Acquisition Library)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7eee210" class="outline-3">
+<h3 id="org7eee210">Instalación de Snort en Debian/Ubuntu</h3>
+<div class="outline-text-3" id="text-org7eee210">
+<p>
+Primero, instalemos las dependencias necesarias:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt update
+sudo apt install -y build-essential libpcap-dev libpcre3-dev libnet1-dev <span style="color: #005F00;">\</span>
+zlib1g-dev luajit hwloc libdnet-dev libdumbnet-dev bison flex liblzma-dev <span style="color: #005F00;">\</span>
+openssl libssl-dev libnghttp2-dev libluajit-5.1-dev pkg-config libhwloc-dev <span style="color: #005F00;">\</span>
+cmake cpputest
+</pre>
+</div>
+
+<p>
+A continuación, instalamos Snort desde los repositorios (aunque también veremos cómo compilarlo desde el código fuente):
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt install -y snort
+</pre>
+</div>
+
+<p>
+Durante la instalación, se te pedirá configurar tu red local. Introduce el rango de direcciones de tu red (por ejemplo, 192.168.1.0/24).
+</p>
+</div>
+</div>
+<div id="outline-container-org849891b" class="outline-3">
+<h3 id="org849891b">Instalación desde el código fuente (alternativa)</h3>
+<div class="outline-text-3" id="text-org849891b">
+<p>
+Para tener la versión más reciente, puedes compilar Snort desde el código fuente:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Descargar y compilar DAQ</span>
+<span style="color: #1F55A0;">cd</span> ~/Downloads
+wget https://github.com/snort3/libdaq/archive/refs/tags/v3.0.12.tar.gz
+tar -xzvf v3.0.12.tar.gz
+<span style="color: #1F55A0;">cd</span> libdaq-3.0.12/
+./bootstrap
+./configure
+make
+sudo make install
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Descargar y compilar Snort</span>
+<span style="color: #1F55A0;">cd</span> ~/Downloads
+wget https://github.com/snort3/snort3/archive/refs/tags/3.1.76.0.tar.gz
+tar -xzvf 3.1.76.0.tar.gz
+<span style="color: #1F55A0;">cd</span> snort3-3.1.76.0/
+./configure_cmake.sh --prefix=/usr/local --enable-tcmalloc
+<span style="color: #1F55A0;">cd</span> build
+make
+sudo make install
+sudo ldconfig
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verificar la instalaci&#243;n</span>
+snort -V
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orga1a40b5" class="outline-3">
+<h3 id="orga1a40b5">Configuración Básica de Snort</h3>
+<div class="outline-text-3" id="text-orga1a40b5">
+<p>
+El archivo principal de configuración se encuentra en `/etc/snort/snort.conf` (o en `/usr/local/etc/snort/snort.conf` si compilaste desde el código fuente). Vamos a realizar algunas configuraciones básicas:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo cp /etc/snort/snort.conf /etc/snort/snort.conf.bak  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Crear backup</span>
+sudo nano /etc/snort/snort.conf
+</pre>
+</div>
+
+<p>
+Dentro del archivo, busca y modifica las siguientes secciones:
+</p>
+
+<p>
+<b>Configuración de red</b>: Define tu red local para que Snort pueda diferenciar entre tráfico interno y externo.
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">ipvar HOME_NET 192.168.1.0/24
+ipvar EXTERNAL_NET !$<span style="color: #004651;">HOME_NET</span>
+</pre>
+</div>
+
+<p>
+<b>Rutas de reglas</b>: Asegúrate de que las rutas a los archivos de reglas sean correctas.
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">var RULE_PATH /etc/snort/rules
+var SO_RULE_PATH /etc/snort/so_rules
+var PREPROC_RULE_PATH /etc/snort/preproc_rules
+</pre>
+</div>
+
+<p>
+<b>Preprocesadores</b>: Habilita los preprocesadores necesarios según tus necesidades:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">preprocessor frag3_global: max_frags 65536
+preprocessor frag3_engine: policy windows detect_anomalies
+preprocessor stream5_global: track_tcp yes, track_udp yes
+</pre>
+</div>
+
+<p>
+<b>Reglas</b>: Descomenta las reglas que deseas utilizar:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">include $<span style="color: #004651;">RULE_PATH</span>/local.rules
+include $<span style="color: #004651;">RULE_PATH</span>/bad-traffic.rules
+include $<span style="color: #004651;">RULE_PATH</span>/exploit.rules
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">... otras reglas seg&#250;n necesidades ...</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org8e2af84" class="outline-3">
+<h3 id="org8e2af84">Creación de Reglas Personalizadas</h3>
+<div class="outline-text-3" id="text-org8e2af84">
+<p>
+Las reglas de Snort son extremadamente poderosas y flexibles. Vamos a crear algunas reglas personalizadas en el archivo `/etc/snort/rules/local.rules`:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo nano /etc/snort/rules/local.rules
+</pre>
+</div>
+
+<p>
+Añade estas reglas de ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Alerta por escaneo de puertos</span>
+alert tcp any any -&gt; $<span style="color: #004651;">HOME_NET</span> any (msg:<span style="color: #005F00;">"Posible escaneo de puertos TCP"</span>; flags:S; threshold: type threshold, track by_src, count 50, seconds 60; sid:1000001; rev:1;)
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Alerta por intentos de acceso SSH m&#250;ltiples</span>
+alert tcp any any -&gt; $<span style="color: #004651;">HOME_NET</span> 22 (msg:<span style="color: #005F00;">"Posible ataque de fuerza bruta SSH"</span>; flow:to_server; threshold: type threshold, track by_src, count 5, seconds 60; sid:1000002; rev:1;)
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Alerta por acceso a la p&#225;gina de administraci&#243;n</span>
+alert tcp any any -&gt; $<span style="color: #004651;">HOME_NET</span> 80 (msg:<span style="color: #005F00;">"Acceso a panel de administraci&#243;n"</span>; content:<span style="color: #005F00;">"GET /admin"</span>; nocase; sid:1000003; rev:1;)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgffe8e22" class="outline-3">
+<h3 id="orgffe8e22">Verificación de la Configuración</h3>
+<div class="outline-text-3" id="text-orgffe8e22">
+<p>
+Antes de iniciar Snort, verifica que tu configuración no tenga errores:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo snort -T -c /etc/snort/snort.conf
+</pre>
+</div>
+
+<p>
+Si todo está correcto, deberías ver "Snort successfully validated the configuration!"
+</p>
+</div>
+</div>
+<div id="outline-container-orgc7e24a3" class="outline-3">
+<h3 id="orgc7e24a3">Ejecución de Snort</h3>
+<div class="outline-text-3" id="text-orgc7e24a3">
+<p>
+Para ejecutar Snort en modo IDS:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo snort -A console -q -c /etc/snort/snort.conf -D
+</pre>
+</div>
+
+<p>
+Opciones comunes:
+</p>
+<ul class="org-ul">
+<li>`-A console`: Muestra las alertas en la consola</li>
+<li>`-q`: Modo silencioso</li>
+<li>`-c`: Ruta al archivo de configuración</li>
+<li>`-D`: Ejecutar como demonio</li>
+</ul>
+
+<p>
+Para ejecutar Snort en modo IPS (usando NFQ):
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo snort -c /etc/snort/snort.conf -Q --daq nfq --daq-var <span style="color: #004651;">queue</span>=1
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1728710" class="outline-3">
+<h3 id="org1728710">Configuración como Servicio</h3>
+<div class="outline-text-3" id="text-org1728710">
+<p>
+Para que Snort se inicie automáticamente al arrancar el sistema:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo nano /etc/systemd/system/snort.service
+</pre>
+</div>
+
+<p>
+Añade el siguiente contenido:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">[Unit]
+<span style="color: #004651;">Description</span>=Snort NIDS Daemon
+<span style="color: #004651;">After</span>=network.target
+
+[Service]
+<span style="color: #004651;">Type</span>=simple
+<span style="color: #004651;">ExecStart</span>=/usr/sbin/snort -c /etc/snort/snort.conf -D
+<span style="color: #004651;">Restart</span>=on-failure
+
+[Install]
+<span style="color: #004651;">WantedBy</span>=multi-user.target
+</pre>
+</div>
+
+
+<p>
+Habilita e inicia el servicio:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo systemctl enable snort.service
+sudo systemctl start snort.service
+sudo systemctl status snort.service
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgff00ddf" class="outline-3">
+<h3 id="orgff00ddf">Visualización con diagrama PlantUML</h3>
+<div class="outline-text-3" id="text-orgff00ddf">
+<p>
+El flujo de trabajo de Snort puede representarse visualmente:
+</p>
+
+
+<figure id="orgc3be191">
+<img src="file:///home/mike/myblog/images/flujo-snort.png" alt="flujo-snort.png">
+
+</figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org8560e3d" class="outline-2">
+<h2 id="org8560e3d">Parte 2: Instalación y Configuración de AIDE</h2>
+<div class="outline-text-2" id="text-org8560e3d">
+</div>
+<div id="outline-container-org3c71329" class="outline-3">
+<h3 id="org3c71329">¿Qué es AIDE?</h3>
+<div class="outline-text-3" id="text-org3c71329">
+<p>
+AIDE (Advanced Intrusion Detection Environment) es una herramienta de detección de intrusiones basada en host que verifica la integridad de los archivos del sistema. Funciona creando una base de datos de los atributos de los archivos y directorios, como permisos, timestamps, checksums y contenido. Posteriormente, puede detectar cualquier cambio no autorizado en estos atributos.
+</p>
+
+<p>
+AIDE es especialmente útil para:
+</p>
+<ul class="org-ul">
+<li>Detectar modificaciones no autorizadas en archivos críticos del sistema</li>
+<li>Identificar instalaciones de rootkits o backdoors</li>
+<li>Verificar la integridad del sistema tras un incidente de seguridad</li>
+<li>Cumplir con requisitos de auditoría y conformidad</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org890da46" class="outline-3">
+<h3 id="org890da46">Instalación de AIDE</h3>
+<div class="outline-text-3" id="text-org890da46">
+<p>
+En sistemas Debian/Ubuntu:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt update
+sudo apt install -y aide
+</pre>
+</div>
+
+<p>
+En sistemas basados en Red Hat (RHEL, CentOS, Fedora):
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo yum install -y aide
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">o con dnf</span>
+sudo dnf install -y aide
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org257efca" class="outline-3">
+<h3 id="org257efca">Configuración Básica de AIDE</h3>
+<div class="outline-text-3" id="text-org257efca">
+<p>
+El archivo principal de configuración se encuentra en `/etc/aide/aide.conf`. Vamos a realizar una configuración básica:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo cp /etc/aide/aide.conf /etc/aide/aide.conf.bak  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Crear backup</span>
+sudo nano /etc/aide/aide.conf
+</pre>
+</div>
+
+<p>
+El archivo contiene definiciones de grupos de reglas y los directorios/archivos a los que aplicarlas. Aquí hay algunos ejemplos importantes:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Definici&#243;n de grupos de reglas</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">NORMAL = checksums + atributos de archivo + permisos</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">DATAONLY = solo checksums</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">LOGS = como NORMAL pero permitiendo cambios en el tama&#241;o</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">...</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Directorios/archivos a monitorear</span>
+/etc NORMAL
+/bin NORMAL
+/sbin NORMAL
+/usr NORMAL
+/boot NORMAL
+/root NORMAL
+<span style="color: #1F55A0; font-weight: bold;">!</span>/var/log/.*  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Excluir logs - pueden cambiar frecuentemente</span>
+<span style="color: #1F55A0; font-weight: bold;">!</span>/var/spool/.* <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Excluir spool</span>
+<span style="color: #1F55A0; font-weight: bold;">!</span>/var/tmp/.* <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Excluir temporales</span>
+
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org76b9494" class="outline-3">
+<h3 id="org76b9494">Personalización de la Configuración</h3>
+<div class="outline-text-3" id="text-org76b9494">
+<p>
+Vamos a personalizar la configuración para adaptarla a nuestras necesidades:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo nano /etc/aide/aide.conf
+</pre>
+</div>
+
+<p>
+Añade o modifica estas líneas según tus necesidades:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Definici&#243;n personalizada de grupos de reglas</span>
+MyGroup = sha256+ftype+p+u+g+n+acl+xattrs
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Directorios espec&#237;ficos a monitorear con mayor atenci&#243;n</span>
+/etc/ssh MyGroup
+/etc/pam.d MyGroup
+/etc/sudoers MyGroup
+/etc/shadow MyGroup
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Archivos de configuraci&#243;n de Snort</span>
+/etc/snort MyGroup
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Excluir directorios que cambian frecuentemente</span>
+<span style="color: #1F55A0; font-weight: bold;">!</span>/var/lib/mysql/.*
+<span style="color: #1F55A0; font-weight: bold;">!</span>/home/usuario/descargas/.*
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1274708" class="outline-3">
+<h3 id="org1274708">Inicialización de la Base de Datos de AIDE</h3>
+<div class="outline-text-3" id="text-org1274708">
+<p>
+Antes de usar AIDE, necesitamos inicializar su base de datos:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo aideinit
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">o alternativamente</span>
+sudo aide --init
+</pre>
+</div>
+
+<p>
+Esto puede tomar tiempo dependiendo del tamaño de tu sistema. Una vez completado, la base de datos se creará en un archivo temporal (generalmente `/var/lib/aide/aide.db.new`). Necesitamos moverla al lugar correcto:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org84dd4d7" class="outline-3">
+<h3 id="org84dd4d7">Ejecución Manual de Verificaciones</h3>
+<div class="outline-text-3" id="text-org84dd4d7">
+<p>
+Para ejecutar una verificación manualmente:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo aide --check
+</pre>
+</div>
+
+<p>
+Este comando comparará el estado actual del sistema con la base de datos almacenada y mostrará cualquier discrepancia.
+</p>
+</div>
+</div>
+<div id="outline-container-org8379837" class="outline-3">
+<h3 id="org8379837">Actualización de la Base de Datos</h3>
+<div class="outline-text-3" id="text-org8379837">
+<p>
+Después de realizar cambios legítimos en el sistema (como actualizaciones de software), debemos actualizar la base de datos de AIDE:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo aide --update
+sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge21c918" class="outline-3">
+<h3 id="orge21c918">Automatización con Cron</h3>
+<div class="outline-text-3" id="text-orge21c918">
+<p>
+Para automatizar las verificaciones regulares, configuremos una tarea cron:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo nano /etc/cron.daily/aide-check
+</pre>
+</div>
+
+<p>
+Añade este contenido:
+</p>
+
+<p>
+bash
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Verificaci&#243;n diaria con AIDE</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Ruta para almacenar informes</span>
+<span style="color: #004651;">REPORT_DIR</span>=<span style="color: #005F00;">"/var/log/aide"</span>
+<span style="color: #004651;">REPORT_FILE</span>=<span style="color: #005F00;">"$REPORT_DIR/aide-$(</span><span style="color: #1F55A0; font-weight: bold;">date +%Y%m%d-%H%M%S</span><span style="color: #005F00;">).log"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Crear directorio si no existe</span>
+mkdir -p $<span style="color: #004651;">REPORT_DIR</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Ejecutar verificaci&#243;n</span>
+/usr/bin/aide --check &gt; $<span style="color: #004651;">REPORT_FILE</span> 2&gt;&amp;1
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Si hay cambios, enviar por correo (opcional)</span>
+<span style="color: #D70000;">if</span> [ $<span style="color: #004651;">?</span> -ne 0 ]; <span style="color: #D70000;">then</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Se detectaron cambios en el sistema. Ver $REPORT_FILE para detalles."</span> | <span style="color: #005F00;">\</span>
+    mail -s <span style="color: #005F00;">"Alerta de AIDE: cambios detectados"</span> admin@example.com
+<span style="color: #D70000;">fi</span>
+
+<span style="color: #D70000;">exit</span> 0
+</pre>
+</div>
+
+<p>
+Haz el script ejecutable:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo chmod +x /etc/cron.daily/aide-check
+</pre>
+</div>
+
+<p>
+También es buena práctica actualizar la base de datos periódicamente:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo nano /etc/cron.weekly/aide-update
+</pre>
+</div>
+
+<p>
+Añade este contenido:
+</p>
+
+<p>
+bash
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Actualizaci&#243;n semanal de la base de datos de AIDE</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Ejecutar actualizaci&#243;n</span>
+/usr/bin/aide --update
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Mover la nueva base de datos</span>
+mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
+
+<span style="color: #D70000;">exit</span> 0
+</pre>
+</div>
+
+<p>
+Haz el script ejecutable:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo chmod +x /etc/cron.weekly/aide-update
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org3886724" class="outline-3">
+<h3 id="org3886724">Visualización con diagrama PlantUML</h3>
+<div class="outline-text-3" id="text-org3886724">
+<p>
+El flujo de trabajo de AIDE puede representarse visualmente:
+</p>
+
+
+<figure id="orgd6cfbb4">
+<img src="file:///home/mike/myblog/images/flujo-aide.png" alt="flujo-aide.png">
+
+</figure>
+</div>
+</div>
+</div>
+<div id="outline-container-orgeaf8601" class="outline-2">
+<h2 id="orgeaf8601">Parte 3: Integración de Snort y AIDE para una Defensa Completa</h2>
+<div class="outline-text-2" id="text-orgeaf8601">
+</div>
+<div id="outline-container-org3b81f1c" class="outline-3">
+<h3 id="org3b81f1c">Estrategia de Defensa en Profundidad</h3>
+<div class="outline-text-3" id="text-org3b81f1c">
+<p>
+La combinación de Snort y AIDE proporciona una defensa en profundidad para tu sistema:
+</p>
+
+<ol class="org-ol">
+<li><b>Snort</b> actúa como primera línea de defensa, monitoreando el tráfico de red y detectando posibles intentos de intrusión antes de que lleguen a comprometer el sistema.</li>
+
+<li><b>AIDE</b> funciona como última línea de defensa, verificando si algún archivo del sistema ha sido modificado, lo que indicaría una posible intrusión exitosa.</li>
+</ol>
+
+<p>
+Esta estrategia aplica el principio de defensa en profundidad: múltiples capas de seguridad que se complementan para proteger tus sistemas.
+</p>
+</div>
+</div>
+<div id="outline-container-orgeb284dc" class="outline-3">
+<h3 id="orgeb284dc">Integración a Nivel de Alertas</h3>
+<div class="outline-text-3" id="text-orgeb284dc">
+<p>
+Podemos integrar las alertas de ambas herramientas para tener una vista unificada de posibles incidentes de seguridad:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo nano /etc/aide/aide.sh
+</pre>
+</div>
+
+<p>
+Crea un script que combine los resultados:
+</p>
+
+<p>
+bash
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Script para integrar las alertas de Snort y AIDE</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Directorios de logs</span>
+<span style="color: #004651;">SNORT_LOG</span>=<span style="color: #005F00;">"/var/log/snort/alert"</span>
+<span style="color: #004651;">AIDE_LOG</span>=<span style="color: #005F00;">"/var/log/aide/aide-$(</span><span style="color: #1F55A0; font-weight: bold;">date +%Y%m%d</span><span style="color: #005F00;">).log"</span>
+<span style="color: #004651;">COMBINED_LOG</span>=<span style="color: #005F00;">"/var/log/security/combined-$(</span><span style="color: #1F55A0; font-weight: bold;">date +%Y%m%d</span><span style="color: #005F00;">).log"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Crear directorio si no existe</span>
+mkdir -p /var/log/security
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Ejecutar verificaci&#243;n de AIDE</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Ejecutando verificaci&#243;n de AIDE..."</span> &gt; $<span style="color: #004651;">COMBINED_LOG</span>
+/usr/bin/aide --check &gt;&gt; $<span style="color: #004651;">COMBINED_LOG</span> 2&gt;&amp;1
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">""</span> &gt;&gt; $<span style="color: #004651;">COMBINED_LOG</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">A&#241;adir &#250;ltimas alertas de Snort</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#218;ltimas alertas de Snort:"</span> &gt;&gt; $<span style="color: #004651;">COMBINED_LOG</span>
+tail -n 50 $<span style="color: #004651;">SNORT_LOG</span> &gt;&gt; $<span style="color: #004651;">COMBINED_LOG</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">""</span> &gt;&gt; $<span style="color: #004651;">COMBINED_LOG</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Analizar para detectar correlaciones</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"An&#225;lisis de correlaci&#243;n:"</span> &gt;&gt; $<span style="color: #004651;">COMBINED_LOG</span>
+grep -i <span style="color: #005F00;">"modified"</span> $<span style="color: #004651;">AIDE_LOG</span> &gt; /tmp/aide_modified.tmp
+<span style="color: #D70000;">while </span><span style="color: #1F55A0;">read</span> line; <span style="color: #D70000;">do</span>
+    <span style="color: #004651;">file</span>=$(<span style="color: #1F55A0; font-weight: bold;">echo $line | awk '{print $2}'</span>)
+    grep -i <span style="color: #005F00;">"$file"</span> $<span style="color: #004651;">SNORT_LOG</span> &gt;&gt; $<span style="color: #004651;">COMBINED_LOG</span>
+<span style="color: #D70000;">done</span> &lt; /tmp/aide_modified.tmp
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Enviar informe (opcional)</span>
+cat $<span style="color: #004651;">COMBINED_LOG</span> | mail -s <span style="color: #005F00;">"Informe de Seguridad Diario"</span> admin@example.com
+
+<span style="color: #D70000;">exit</span> 0
+</pre>
+</div>
+
+<p>
+Haz el script ejecutable y configúralo como tarea cron diaria:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo chmod +x /etc/aide/aide.sh
+sudo nano /etc/cron.daily/security-check
+</pre>
+</div>
+
+<p>
+Añade este contenido:
+</p>
+
+<p>
+bash
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+/etc/aide/aide.sh
+</pre>
+</div>
+
+<p>
+Haz el script ejecutable:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo chmod +x /etc/cron.daily/security-check
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org2ad7e9a" class="outline-3">
+<h3 id="org2ad7e9a">Visualización con diagrama PlantUML</h3>
+<div class="outline-text-3" id="text-org2ad7e9a">
+<p>
+La integración entre Snort y AIDE puede representarse visualmente:
+</p>
+
+
+<figure id="org315afc0">
+<img src="file:///home/mike/myblog/images/integracion-snort-aide.png" alt="integracion-snort-aide.png">
+
+</figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org091dfda" class="outline-2">
+<h2 id="org091dfda">Parte 4: Mejores Prácticas y Mantenimiento</h2>
+<div class="outline-text-2" id="text-org091dfda">
+</div>
+<div id="outline-container-org5be60ef" class="outline-3">
+<h3 id="org5be60ef">Actualización de Reglas de Snort</h3>
+<div class="outline-text-3" id="text-org5be60ef">
+<p>
+Las reglas de Snort deben actualizarse regularmente para detectar las últimas amenazas:
+</p>
+
+<ol class="org-ol">
+<li><b>Suscripción a Reglas</b>: Considera una suscripción a Snort VRT para obtener las últimas reglas comerciales.</li>
+
+<li><b>Reglas de la Comunidad</b>: Alternativamente, puedes usar reglas gratuitas de la comunidad.</li>
+
+<li><b>Actualización Automática</b>: Configura un script para actualizar las reglas periódicamente:</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo nano /etc/cron.daily/update-snort-rules
+</pre>
+</div>
+
+<p>
+bash
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Actualizaci&#243;n diaria de reglas de Snort</span>
+
+<span style="color: #1F55A0;">cd</span> /etc/snort/rules
+wget -q https://www.snort.org/rules/community -O community.tar.gz
+tar -xzf community.tar.gz
+rm community.tar.gz
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Reiniciar Snort para aplicar las nuevas reglas</span>
+systemctl restart snort.service
+</pre>
+</div>
+
+<p>
+Haz el script ejecutable:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo chmod +x /etc/cron.daily/update-snort-rules
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbf2fa38" class="outline-3">
+<h3 id="orgbf2fa38">Ajuste y Optimización de Rendimiento</h3>
+<div class="outline-text-3" id="text-orgbf2fa38">
+<p>
+Para optimizar el rendimiento de Snort:
+</p>
+
+<p>
+<b>Ajusta los preprocesadores</b>: Habilita solo los preprocesadores necesarios para tu entorno.
+</p>
+
+<p>
+<b>Optimiza la memoria</b>: Ajusta los parámetros de memoria según tus recursos disponibles.
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">config detection: search-method ac-bnfa
+config detection: max_queue_events 5
+</pre>
+</div>
+
+<p>
+<b>Filtra tráfico irrelevante</b>: Usa BPF (Berkeley Packet Filter) para filtrar tráfico que no necesitas analizar:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">config bpf_file: /etc/snort/bpf.conf
+
+
+En <span style="color: #1F55A0; font-weight: bold;">`/etc/snort/bpf.conf`</span>:
+
+not port 53 and not port 80
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org55e5c6b" class="outline-3">
+<h3 id="org55e5c6b">Copia de Seguridad y Recuperación</h3>
+<div class="outline-text-3" id="text-org55e5c6b">
+<p>
+Realizar copias de seguridad regulares de tus configuraciones:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo nano /etc/cron.weekly/security-backup
+</pre>
+</div>
+
+<p>
+bash
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Copia de seguridad semanal de configuraciones de seguridad</span>
+
+<span style="color: #004651;">BACKUP_DIR</span>=<span style="color: #005F00;">"/backup/security/$(</span><span style="color: #1F55A0; font-weight: bold;">date +%Y%m%d</span><span style="color: #005F00;">)"</span>
+mkdir -p $<span style="color: #004651;">BACKUP_DIR</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Backup de configuraci&#243;n de Snort</span>
+tar -czf $<span style="color: #004651;">BACKUP_DIR</span>/snort-config.tar.gz /etc/snort
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Backup de configuraci&#243;n de AIDE</span>
+cp /etc/aide/aide.conf $<span style="color: #004651;">BACKUP_DIR</span>/
+cp /var/lib/aide/aide.db $<span style="color: #004651;">BACKUP_DIR</span>/
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Backup de logs (opcional)</span>
+tar -czf $<span style="color: #004651;">BACKUP_DIR</span>/security-logs.tar.gz /var/log/snort /var/log/aide
+
+<span style="color: #D70000;">exit</span> 0
+</pre>
+</div>
+
+
+<p>
+Haz el script ejecutable:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo chmod +x /etc/cron.weekly/security-backup
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6107b84" class="outline-3">
+<h3 id="org6107b84">Pruebas de Efectividad</h3>
+<div class="outline-text-3" id="text-org6107b84">
+<p>
+Es importante probar regularmente la efectividad de tu configuración:
+</p>
+
+<ol class="org-ol">
+<li><b>Para Snort</b>: Utiliza herramientas como `nmap` o `hping3` para generar tráfico sospechoso de forma controlada y verifica que Snort lo detecte.</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Desde otra m&#225;quina (&#161;NO desde producci&#243;n!)</span>
+sudo nmap -sS -p 1-1000 [IP-objetivo]
+</pre>
+</div>
+
+<ol class="org-ol">
+<li><b>Para AIDE</b>: Realiza cambios controlados en archivos monitoreados y verifica que AIDE los detecte.</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Modificar un archivo monitoreado</span>
+sudo touch /etc/test-file
+sudo aide --check  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Deber&#237;a mostrar el cambio</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge0739cd" class="outline-3">
+<h3 id="orge0739cd">Plan de Respuesta a Incidentes</h3>
+<div class="outline-text-3" id="text-orge0739cd">
+<p>
+Desarrolla un plan simple de respuesta a incidentes:
+</p>
+
+<ol class="org-ol">
+<li><b>Detección</b>: Monitoreo constante de logs y alertas.</li>
+<li><b>Contención</b>: Procedimientos para aislar sistemas comprometidos.</li>
+<li><b>Erradicación</b>: Eliminación de amenazas identificadas.</li>
+<li><b>Recuperación</b>: Restauración de sistemas a un estado seguro.</li>
+<li><b>Lecciones aprendidas</b>: Documentación y mejora continua.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org8d48d10" class="outline-2">
+<h2 id="org8d48d10">Conclusión</h2>
+<div class="outline-text-2" id="text-org8d48d10">
+<p>
+La combinación de Snort (IDS/IPS basado en red) y AIDE (verificación de integridad basada en host) proporciona una estrategia de defensa en profundidad para proteger tus sistemas informáticos. Mientras Snort vigila el perímetro y detecta intentos de intrusión, AIDE verifica que ningún archivo crítico haya sido modificado sin autorización.
+</p>
+
+<p>
+La configuración e integración adecuada de estas herramientas, junto con un mantenimiento regular y pruebas periódicas, te permitirá mantener un nivel de seguridad robusto frente a las constantes amenazas del entorno digital.
+</p>
+
+<p>
+Recuerda que la seguridad informática es un proceso continuo, no un producto. Mantente actualizado sobre las últimas amenazas y técnicas de protección, y adapta tu estrategia de seguridad en consecuencia.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf13903b" class="outline-2">
+<h2 id="orgf13903b">Referencias y Recursos Adicionales</h2>
+<div class="outline-text-2" id="text-orgf13903b">
+<ul class="org-ul">
+<li><a href="https://www.snort.org/">Sitio oficial de Snort</a></li>
+<li><a href="https://github.com/aide/aide">Repositorio de AIDE en GitHub</a></li>
+<li><a href="https://www.snort.org/documents/snort-users-manual">Manual de usuario de Snort</a></li>
+<li><a href="https://aide.github.io/">Documentación de AIDE</a></li>
+<li><a href="https://www.sans.org/security-resources/">Recursos de seguridad de SANS Institute</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6984077" class="outline-2">
+<h2 id="org6984077">Notas para el Editor de Emacs</h2>
+<div class="outline-text-2" id="text-org6984077">
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-informática.html">informática</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-nort.html">nort</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-aide.html">AIDE</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ids.html">IDS</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ips.html">IPS</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-detección.html">detección</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-intrusiones.html">intrusiones</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-monitoreo.html">monitoreo</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-integridad.html">integridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[informática]]></category>
+  <category><![CDATA[nort]]></category>
+  <category><![CDATA[AIDE]]></category>
+  <category><![CDATA[IDS]]></category>
+  <category><![CDATA[IPS]]></category>
+  <category><![CDATA[detección]]></category>
+  <category><![CDATA[intrusiones]]></category>
+  <category><![CDATA[monitoreo]]></category>
+  <category><![CDATA[integridad]]></category>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-16--fortaleciendo-la-seguridad-inform-tica-con-snort-y-aide-gu-a-completa.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-16--fortaleciendo-la-seguridad-inform-tica-con-snort-y-aide-gu-a-completa.html</guid>
+  <pubDate>Wed, 16 Apr 2025 04:17:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[Guía Práctica: Configuración de UFW en Ubuntu con Scripts y Org Mode]]></title>
   <description><![CDATA[
@@ -653,9 +1623,9 @@ Este diagrama muestra los componentes principales que conforman la configuració
 <item>
   <title><![CDATA[Detectando actividad maliciosa en nuestro sistema Linux: ¿Somos parte de una botnet?]]></title>
   <description><![CDATA[
-<div id="outline-container-orgcf593ec" class="outline-2">
-<h2 id="orgcf593ec">Introducción</h2>
-<div class="outline-text-2" id="text-orgcf593ec">
+<div id="outline-container-orgda27259" class="outline-2">
+<h2 id="orgda27259">Introducción</h2>
+<div class="outline-text-2" id="text-orgda27259">
 <p>
 En la era actual de amenazas cibernéticas cada vez más sofisticadas, uno de los riesgos más preocupantes es que nuestros sistemas sean comprometidos y utilizados como parte de una botnet sin nuestro conocimiento. Estas redes de equipos infectados pueden ser utilizadas para realizar ataques DDoS, minería de criptomonedas, envío de spam, o robo de datos, entre otras actividades maliciosas.
 </p>
@@ -665,9 +1635,9 @@ En este artículo del blog <b>Emacs con Esteroides</b>, presentaremos un script 
 </p>
 </div>
 </div>
-<div id="outline-container-org962e718" class="outline-2">
-<h2 id="org962e718">¿Qué es una botnet?</h2>
-<div class="outline-text-2" id="text-org962e718">
+<div id="outline-container-org68a17c4" class="outline-2">
+<h2 id="org68a17c4">¿Qué es una botnet?</h2>
+<div class="outline-text-2" id="text-org68a17c4">
 <p>
 Una botnet es una red de equipos infectados con malware que son controlados remotamente por un atacante, conocido como "botmaster". Los equipos comprometidos, llamados "zombies" o "bots", ejecutan comandos sin el conocimiento de sus propietarios.
 </p>
@@ -687,9 +1657,9 @@ Señales comunes de que un sistema puede formar parte de una botnet:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgba6c6cc" class="outline-2">
-<h2 id="orgba6c6cc">El script de detección de botnets</h2>
-<div class="outline-text-2" id="text-orgba6c6cc">
+<div id="outline-container-org6fc0b0e" class="outline-2">
+<h2 id="org6fc0b0e">El script de detección de botnets</h2>
+<div class="outline-text-2" id="text-org6fc0b0e">
 <p>
 Nuestro script realiza múltiples comprobaciones para identificar posibles indicios de compromiso:
 </p>
@@ -1251,15 +2221,15 @@ main
 </div>
 </div>
 </div>
-<div id="outline-container-orgfa45e69" class="outline-2">
-<h2 id="orgfa45e69">¿Cómo funciona el script?</h2>
-<div class="outline-text-2" id="text-orgfa45e69">
+<div id="outline-container-org623d946" class="outline-2">
+<h2 id="org623d946">¿Cómo funciona el script?</h2>
+<div class="outline-text-2" id="text-org623d946">
 <p>
 El script realiza una serie de verificaciones exhaustivas para detectar posibles signos de compromiso en el sistema:
 </p>
 
 
-<figure id="org95bad73">
+<figure id="orgc7037fb">
 <img src="images/botnet_detection_flow.png" alt="botnet_detection_flow.png">
 
 </figure>
@@ -1268,13 +2238,13 @@ El script realiza una serie de verificaciones exhaustivas para detectar posibles
 <a href="images/botnet_detection_flow.png">botnet<sub>detection</sub><sub>flow.png</sub></a>
 </p>
 </div>
-<div id="outline-container-orgfd207c2" class="outline-3">
-<h3 id="orgfd207c2">Descripción de los módulos principales</h3>
-<div class="outline-text-3" id="text-orgfd207c2">
+<div id="outline-container-org9cfe7ad" class="outline-3">
+<h3 id="org9cfe7ad">Descripción de los módulos principales</h3>
+<div class="outline-text-3" id="text-org9cfe7ad">
 </div>
-<div id="outline-container-org1d49734" class="outline-4">
-<h4 id="org1d49734">1. Verificación de procesos sospechosos</h4>
-<div class="outline-text-4" id="text-org1d49734">
+<div id="outline-container-org0fe53cc" class="outline-4">
+<h4 id="org0fe53cc">1. Verificación de procesos sospechosos</h4>
+<div class="outline-text-4" id="text-org0fe53cc">
 <p>
 Este módulo examina los procesos en ejecución para detectar:
 </p>
@@ -1286,9 +2256,9 @@ Este módulo examina los procesos en ejecución para detectar:
 </ul>
 </div>
 </div>
-<div id="outline-container-org7b63dc2" class="outline-4">
-<h4 id="org7b63dc2">2. Análisis de conexiones de red</h4>
-<div class="outline-text-4" id="text-org7b63dc2">
+<div id="outline-container-org00fac3d" class="outline-4">
+<h4 id="org00fac3d">2. Análisis de conexiones de red</h4>
+<div class="outline-text-4" id="text-org00fac3d">
 <p>
 Esta sección examina las conexiones de red para identificar:
 </p>
@@ -1300,9 +2270,9 @@ Esta sección examina las conexiones de red para identificar:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgace7d74" class="outline-4">
-<h4 id="orgace7d74">3. Verificación de archivos y directorios</h4>
-<div class="outline-text-4" id="text-orgace7d74">
+<div id="outline-container-orga755647" class="outline-4">
+<h4 id="orga755647">3. Verificación de archivos y directorios</h4>
+<div class="outline-text-4" id="text-orga755647">
 <p>
 El script busca:
 </p>
@@ -1314,9 +2284,9 @@ El script busca:
 </ul>
 </div>
 </div>
-<div id="outline-container-org207ce7b" class="outline-4">
-<h4 id="org207ce7b">4. Análisis de tareas programadas</h4>
-<div class="outline-text-4" id="text-org207ce7b">
+<div id="outline-container-org9dfdf49" class="outline-4">
+<h4 id="org9dfdf49">4. Análisis de tareas programadas</h4>
+<div class="outline-text-4" id="text-org9dfdf49">
 <p>
 Se examinan:
 </p>
@@ -1328,9 +2298,9 @@ Se examinan:
 </ul>
 </div>
 </div>
-<div id="outline-container-org16d5a45" class="outline-4">
-<h4 id="org16d5a45">5. Verificación de usuarios y permisos</h4>
-<div class="outline-text-4" id="text-org16d5a45">
+<div id="outline-container-org128160a" class="outline-4">
+<h4 id="org128160a">5. Verificación de usuarios y permisos</h4>
+<div class="outline-text-4" id="text-org128160a">
 <p>
 El script revisa:
 </p>
@@ -1342,9 +2312,9 @@ El script revisa:
 </ul>
 </div>
 </div>
-<div id="outline-container-org47b312a" class="outline-4">
-<h4 id="org47b312a">6. Análisis de servicios</h4>
-<div class="outline-text-4" id="text-org47b312a">
+<div id="outline-container-orga52c424" class="outline-4">
+<h4 id="orga52c424">6. Análisis de servicios</h4>
+<div class="outline-text-4" id="text-orga52c424">
 <p>
 Esta sección examina:
 </p>
@@ -1356,9 +2326,9 @@ Esta sección examina:
 </ul>
 </div>
 </div>
-<div id="outline-container-org11647c6" class="outline-4">
-<h4 id="org11647c6">7. Escaneos de seguridad</h4>
-<div class="outline-text-4" id="text-org11647c6">
+<div id="outline-container-org1fdbcee" class="outline-4">
+<h4 id="org1fdbcee">7. Escaneos de seguridad</h4>
+<div class="outline-text-4" id="text-org1fdbcee">
 <p>
 El script utiliza herramientas especializadas:
 </p>
@@ -1370,9 +2340,9 @@ El script utiliza herramientas especializadas:
 </ul>
 </div>
 </div>
-<div id="outline-container-orge84ed99" class="outline-4">
-<h4 id="orge84ed99">8. Análisis de logs</h4>
-<div class="outline-text-4" id="text-orge84ed99">
+<div id="outline-container-orgd351cfc" class="outline-4">
+<h4 id="orgd351cfc">8. Análisis de logs</h4>
+<div class="outline-text-4" id="text-orgd351cfc">
 <p>
 Se analizan los registros del sistema para identificar:
 </p>
@@ -1384,9 +2354,9 @@ Se analizan los registros del sistema para identificar:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcf0e469" class="outline-4">
-<h4 id="orgcf0e469">9. Análisis de tráfico de red</h4>
-<div class="outline-text-4" id="text-orgcf0e469">
+<div id="outline-container-org98dc3be" class="outline-4">
+<h4 id="org98dc3be">9. Análisis de tráfico de red</h4>
+<div class="outline-text-4" id="text-org98dc3be">
 <p>
 El script examina:
 </p>
@@ -1398,9 +2368,9 @@ El script examina:
 </ul>
 </div>
 </div>
-<div id="outline-container-org79767db" class="outline-4">
-<h4 id="org79767db">10. Verificación del rendimiento</h4>
-<div class="outline-text-4" id="text-org79767db">
+<div id="outline-container-org66fb91b" class="outline-4">
+<h4 id="org66fb91b">10. Verificación del rendimiento</h4>
+<div class="outline-text-4" id="text-org66fb91b">
 <p>
 Se analiza:
 </p>
@@ -1413,9 +2383,9 @@ Se analiza:
 </div>
 </div>
 </div>
-<div id="outline-container-org9da23ac" class="outline-3">
-<h3 id="org9da23ac">Informe y resumen final</h3>
-<div class="outline-text-3" id="text-org9da23ac">
+<div id="outline-container-orgde77b11" class="outline-3">
+<h3 id="orgde77b11">Informe y resumen final</h3>
+<div class="outline-text-3" id="text-orgde77b11">
 <p>
 Al finalizar todas las verificaciones, el script genera un informe detallado y un resumen que clasifica el estado del sistema en tres categorías:
 </p>
@@ -1432,13 +2402,13 @@ El informe completo se guarda en el directorio <code>/var/log/security_checks/</
 </div>
 </div>
 </div>
-<div id="outline-container-org4f369b7" class="outline-2">
-<h2 id="org4f369b7">Uso práctico del script</h2>
-<div class="outline-text-2" id="text-org4f369b7">
+<div id="outline-container-orgf0e3821" class="outline-2">
+<h2 id="orgf0e3821">Uso práctico del script</h2>
+<div class="outline-text-2" id="text-orgf0e3821">
 </div>
-<div id="outline-container-org53820ad" class="outline-3">
-<h3 id="org53820ad">Requisitos previos</h3>
-<div class="outline-text-3" id="text-org53820ad">
+<div id="outline-container-orgb9952cf" class="outline-3">
+<h3 id="orgb9952cf">Requisitos previos</h3>
+<div class="outline-text-3" id="text-orgb9952cf">
 <p>
 Antes de ejecutar el script, asegúrate de tener:
 </p>
@@ -1450,9 +2420,9 @@ Antes de ejecutar el script, asegúrate de tener:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbb4eacc" class="outline-3">
-<h3 id="orgbb4eacc">Instalación y ejecución</h3>
-<div class="outline-text-3" id="text-orgbb4eacc">
+<div id="outline-container-org5b583e4" class="outline-3">
+<h3 id="org5b583e4">Instalación y ejecución</h3>
+<div class="outline-text-3" id="text-org5b583e4">
 <ol class="org-ol">
 <li>Copia el script completo en un archivo llamado <code>botnet_detector.sh</code></li>
 <li>Dale permisos de ejecución:</li>
@@ -1477,9 +2447,9 @@ Antes de ejecutar el script, asegúrate de tener:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf8dba33" class="outline-3">
-<h3 id="orgf8dba33">Automatización</h3>
-<div class="outline-text-3" id="text-orgf8dba33">
+<div id="outline-container-orgdf66306" class="outline-3">
+<h3 id="orgdf66306">Automatización</h3>
+<div class="outline-text-3" id="text-orgdf66306">
 <p>
 Para monitorear regularmente tu sistema, puedes configurar el script como una tarea programada:
 </p>
@@ -1499,16 +2469,16 @@ El informe se guardará con la fecha y hora de ejecución, permitiéndote compar
 </div>
 </div>
 </div>
-<div id="outline-container-org8da5376" class="outline-2">
-<h2 id="org8da5376">Signos comunes de infección por botnet</h2>
-<div class="outline-text-2" id="text-org8da5376">
+<div id="outline-container-org2eef659" class="outline-2">
+<h2 id="org2eef659">Signos comunes de infección por botnet</h2>
+<div class="outline-text-2" id="text-org2eef659">
 <p>
 Además de las verificaciones realizadas por el script, estos son signos adicionales que podrían indicar que tu sistema está comprometido:
 </p>
 </div>
-<div id="outline-container-org340ca59" class="outline-3">
-<h3 id="org340ca59">Signos a nivel de sistema</h3>
-<div class="outline-text-3" id="text-org340ca59">
+<div id="outline-container-orgeed5368" class="outline-3">
+<h3 id="orgeed5368">Signos a nivel de sistema</h3>
+<div class="outline-text-3" id="text-orgeed5368">
 <ul class="org-ul">
 <li>Tiempos de arranque o apagado inusualmente largos</li>
 <li>El sistema se vuelve significativamente más lento sin razón aparente</li>
@@ -1518,9 +2488,9 @@ Además de las verificaciones realizadas por el script, estos son signos adicion
 </ul>
 </div>
 </div>
-<div id="outline-container-org9ad489c" class="outline-3">
-<h3 id="org9ad489c">Signos a nivel de red</h3>
-<div class="outline-text-3" id="text-org9ad489c">
+<div id="outline-container-org45ef8fa" class="outline-3">
+<h3 id="org45ef8fa">Signos a nivel de red</h3>
+<div class="outline-text-3" id="text-org45ef8fa">
 <ul class="org-ul">
 <li>Uso de red elevado incluso cuando no estás utilizando activamente Internet</li>
 <li>Quejas de tu proveedor de Internet sobre tráfico sospechoso</li>
@@ -1529,9 +2499,9 @@ Además de las verificaciones realizadas por el script, estos son signos adicion
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf10aaff" class="outline-3">
-<h3 id="orgf10aaff">Signos a nivel de usuario</h3>
-<div class="outline-text-3" id="text-orgf10aaff">
+<div id="outline-container-orgf29362a" class="outline-3">
+<h3 id="orgf29362a">Signos a nivel de usuario</h3>
+<div class="outline-text-3" id="text-orgf29362a">
 <ul class="org-ul">
 <li>Cuentas de correo electrónico enviando spam sin tu conocimiento</li>
 <li>Actividad en tus cuentas que no reconoces</li>
@@ -1541,9 +2511,9 @@ Además de las verificaciones realizadas por el script, estos son signos adicion
 </div>
 </div>
 </div>
-<div id="outline-container-org493a5e1" class="outline-2">
-<h2 id="org493a5e1">Mejores prácticas para prevenir infecciones</h2>
-<div class="outline-text-2" id="text-org493a5e1">
+<div id="outline-container-org6817cc2" class="outline-2">
+<h2 id="org6817cc2">Mejores prácticas para prevenir infecciones</h2>
+<div class="outline-text-2" id="text-org6817cc2">
 <p>
 La prevención es siempre la mejor estrategia. Estas son algunas recomendaciones para mantener tu sistema seguro:
 </p>
@@ -1607,9 +2577,9 @@ sudo aideinit
 </ol>
 </div>
 </div>
-<div id="outline-container-orgd7a69d0" class="outline-2">
-<h2 id="orgd7a69d0">Qué hacer si encuentras un sistema comprometido</h2>
-<div class="outline-text-2" id="text-orgd7a69d0">
+<div id="outline-container-org5cb9bcc" class="outline-2">
+<h2 id="org5cb9bcc">Qué hacer si encuentras un sistema comprometido</h2>
+<div class="outline-text-2" id="text-org5cb9bcc">
 <p>
 Si el script detecta signos de compromiso o tienes razones para creer que tu sistema es parte de una botnet:
 </p>
@@ -1657,9 +2627,9 @@ Si el script detecta signos de compromiso o tienes razones para creer que tu sis
 </ol>
 </div>
 </div>
-<div id="outline-container-orgd21c3ba" class="outline-2">
-<h2 id="orgd21c3ba">Conclusión</h2>
-<div class="outline-text-2" id="text-orgd21c3ba">
+<div id="outline-container-org1050eb7" class="outline-2">
+<h2 id="org1050eb7">Conclusión</h2>
+<div class="outline-text-2" id="text-org1050eb7">
 <p>
 La seguridad informática es un proceso continuo, no un estado final. Este script puede ayudarte a detectar posibles compromisos en tu sistema Linux, pero debe ser parte de una estrategia de seguridad más amplia que incluya buenas prácticas preventivas, monitoreo regular, y planes de respuesta a incidentes.
 </p>
@@ -1670,6 +2640,11 @@ Utilizando Emacs y org-mode, puedes adaptar y mejorar este script según tus nec
 
 <p>
 Recuerda que ninguna herramienta automatizada puede reemplazar el conocimiento y la vigilancia humana. Mantente informado sobre nuevas amenazas y técnicas de ataque, y adapta tus defensas en consecuencia.
+</p>
+
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-15-gu-a-pr-ctica-configuraci-n-de-ufw-en-ubuntu-con-scripts-y-org-mode">2025-04-15-gu-a-pr-ctica-configuraci-n-de-ufw-en-ubuntu-con-scripts-y-org-mode</a>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-16--fortaleciendo-la-seguridad-inform-tica-con-snort-y-aide-gu-a-completa">2025-04-16&#x2013;fortaleciendo-la-seguridad-inform-tica-con-snort-y-aide-gu-a-completa</a>
 </p>
 </div>
 </div>

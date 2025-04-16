@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - indice]]></title>
 <description><![CDATA[Example.com - indice]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-indice.html</link>
-<lastBuildDate>Tue, 15 Apr 2025 23:30:35 +0200</lastBuildDate>
+<lastBuildDate>Wed, 16 Apr 2025 07:16:43 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -620,6 +620,12 @@
 </tr>
 
 <tr>
+<td class="org-right">2025-04-16</td>
+<td class="org-left">Fortaleciendo la Seguridad Informática con Snort y AIDE: Guía Completa</td>
+<td class="org-left"><a href="2025-04-16--fortaleciendo-la-seguridad-inform-tica-con-snort-y-aide-gu-a-completa.html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
@@ -661,7 +667,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Tue, 15 Apr 2025 23:26:00 +0200</pubDate>
+  <pubDate>Wed, 16 Apr 2025 07:08:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Creación Indicador de Calidad de Libertad y su Aplicación KPI (i)]]></title>

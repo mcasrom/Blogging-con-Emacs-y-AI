@@ -4,13 +4,13 @@
 <title><![CDATA[Example.com - bash]]></title>
 <description><![CDATA[Example.com - bash]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-bash.html</link>
-<lastBuildDate>Tue, 15 Apr 2025 23:30:54 +0200</lastBuildDate>
+<lastBuildDate>Wed, 16 Apr 2025 07:17:00 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Detectando actividad maliciosa en nuestro sistema Linux: ¿Somos parte de una botnet?]]></title>
   <description><![CDATA[
-<div id="outline-container-orgcf593ec" class="outline-2">
-<h2 id="orgcf593ec">Introducción</h2>
-<div class="outline-text-2" id="text-orgcf593ec">
+<div id="outline-container-orgda27259" class="outline-2">
+<h2 id="orgda27259">Introducción</h2>
+<div class="outline-text-2" id="text-orgda27259">
 <p>
 En la era actual de amenazas cibernéticas cada vez más sofisticadas, uno de los riesgos más preocupantes es que nuestros sistemas sean comprometidos y utilizados como parte de una botnet sin nuestro conocimiento. Estas redes de equipos infectados pueden ser utilizadas para realizar ataques DDoS, minería de criptomonedas, envío de spam, o robo de datos, entre otras actividades maliciosas.
 </p>
@@ -20,9 +20,9 @@ En este artículo del blog <b>Emacs con Esteroides</b>, presentaremos un script 
 </p>
 </div>
 </div>
-<div id="outline-container-org962e718" class="outline-2">
-<h2 id="org962e718">¿Qué es una botnet?</h2>
-<div class="outline-text-2" id="text-org962e718">
+<div id="outline-container-org68a17c4" class="outline-2">
+<h2 id="org68a17c4">¿Qué es una botnet?</h2>
+<div class="outline-text-2" id="text-org68a17c4">
 <p>
 Una botnet es una red de equipos infectados con malware que son controlados remotamente por un atacante, conocido como "botmaster". Los equipos comprometidos, llamados "zombies" o "bots", ejecutan comandos sin el conocimiento de sus propietarios.
 </p>
@@ -42,9 +42,9 @@ Señales comunes de que un sistema puede formar parte de una botnet:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgba6c6cc" class="outline-2">
-<h2 id="orgba6c6cc">El script de detección de botnets</h2>
-<div class="outline-text-2" id="text-orgba6c6cc">
+<div id="outline-container-org6fc0b0e" class="outline-2">
+<h2 id="org6fc0b0e">El script de detección de botnets</h2>
+<div class="outline-text-2" id="text-org6fc0b0e">
 <p>
 Nuestro script realiza múltiples comprobaciones para identificar posibles indicios de compromiso:
 </p>
@@ -606,15 +606,15 @@ main
 </div>
 </div>
 </div>
-<div id="outline-container-orgfa45e69" class="outline-2">
-<h2 id="orgfa45e69">¿Cómo funciona el script?</h2>
-<div class="outline-text-2" id="text-orgfa45e69">
+<div id="outline-container-org623d946" class="outline-2">
+<h2 id="org623d946">¿Cómo funciona el script?</h2>
+<div class="outline-text-2" id="text-org623d946">
 <p>
 El script realiza una serie de verificaciones exhaustivas para detectar posibles signos de compromiso en el sistema:
 </p>
 
 
-<figure id="org95bad73">
+<figure id="orgc7037fb">
 <img src="images/botnet_detection_flow.png" alt="botnet_detection_flow.png">
 
 </figure>
@@ -623,13 +623,13 @@ El script realiza una serie de verificaciones exhaustivas para detectar posibles
 <a href="images/botnet_detection_flow.png">botnet<sub>detection</sub><sub>flow.png</sub></a>
 </p>
 </div>
-<div id="outline-container-orgfd207c2" class="outline-3">
-<h3 id="orgfd207c2">Descripción de los módulos principales</h3>
-<div class="outline-text-3" id="text-orgfd207c2">
+<div id="outline-container-org9cfe7ad" class="outline-3">
+<h3 id="org9cfe7ad">Descripción de los módulos principales</h3>
+<div class="outline-text-3" id="text-org9cfe7ad">
 </div>
-<div id="outline-container-org1d49734" class="outline-4">
-<h4 id="org1d49734">1. Verificación de procesos sospechosos</h4>
-<div class="outline-text-4" id="text-org1d49734">
+<div id="outline-container-org0fe53cc" class="outline-4">
+<h4 id="org0fe53cc">1. Verificación de procesos sospechosos</h4>
+<div class="outline-text-4" id="text-org0fe53cc">
 <p>
 Este módulo examina los procesos en ejecución para detectar:
 </p>
@@ -641,9 +641,9 @@ Este módulo examina los procesos en ejecución para detectar:
 </ul>
 </div>
 </div>
-<div id="outline-container-org7b63dc2" class="outline-4">
-<h4 id="org7b63dc2">2. Análisis de conexiones de red</h4>
-<div class="outline-text-4" id="text-org7b63dc2">
+<div id="outline-container-org00fac3d" class="outline-4">
+<h4 id="org00fac3d">2. Análisis de conexiones de red</h4>
+<div class="outline-text-4" id="text-org00fac3d">
 <p>
 Esta sección examina las conexiones de red para identificar:
 </p>
@@ -655,9 +655,9 @@ Esta sección examina las conexiones de red para identificar:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgace7d74" class="outline-4">
-<h4 id="orgace7d74">3. Verificación de archivos y directorios</h4>
-<div class="outline-text-4" id="text-orgace7d74">
+<div id="outline-container-orga755647" class="outline-4">
+<h4 id="orga755647">3. Verificación de archivos y directorios</h4>
+<div class="outline-text-4" id="text-orga755647">
 <p>
 El script busca:
 </p>
@@ -669,9 +669,9 @@ El script busca:
 </ul>
 </div>
 </div>
-<div id="outline-container-org207ce7b" class="outline-4">
-<h4 id="org207ce7b">4. Análisis de tareas programadas</h4>
-<div class="outline-text-4" id="text-org207ce7b">
+<div id="outline-container-org9dfdf49" class="outline-4">
+<h4 id="org9dfdf49">4. Análisis de tareas programadas</h4>
+<div class="outline-text-4" id="text-org9dfdf49">
 <p>
 Se examinan:
 </p>
@@ -683,9 +683,9 @@ Se examinan:
 </ul>
 </div>
 </div>
-<div id="outline-container-org16d5a45" class="outline-4">
-<h4 id="org16d5a45">5. Verificación de usuarios y permisos</h4>
-<div class="outline-text-4" id="text-org16d5a45">
+<div id="outline-container-org128160a" class="outline-4">
+<h4 id="org128160a">5. Verificación de usuarios y permisos</h4>
+<div class="outline-text-4" id="text-org128160a">
 <p>
 El script revisa:
 </p>
@@ -697,9 +697,9 @@ El script revisa:
 </ul>
 </div>
 </div>
-<div id="outline-container-org47b312a" class="outline-4">
-<h4 id="org47b312a">6. Análisis de servicios</h4>
-<div class="outline-text-4" id="text-org47b312a">
+<div id="outline-container-orga52c424" class="outline-4">
+<h4 id="orga52c424">6. Análisis de servicios</h4>
+<div class="outline-text-4" id="text-orga52c424">
 <p>
 Esta sección examina:
 </p>
@@ -711,9 +711,9 @@ Esta sección examina:
 </ul>
 </div>
 </div>
-<div id="outline-container-org11647c6" class="outline-4">
-<h4 id="org11647c6">7. Escaneos de seguridad</h4>
-<div class="outline-text-4" id="text-org11647c6">
+<div id="outline-container-org1fdbcee" class="outline-4">
+<h4 id="org1fdbcee">7. Escaneos de seguridad</h4>
+<div class="outline-text-4" id="text-org1fdbcee">
 <p>
 El script utiliza herramientas especializadas:
 </p>
@@ -725,9 +725,9 @@ El script utiliza herramientas especializadas:
 </ul>
 </div>
 </div>
-<div id="outline-container-orge84ed99" class="outline-4">
-<h4 id="orge84ed99">8. Análisis de logs</h4>
-<div class="outline-text-4" id="text-orge84ed99">
+<div id="outline-container-orgd351cfc" class="outline-4">
+<h4 id="orgd351cfc">8. Análisis de logs</h4>
+<div class="outline-text-4" id="text-orgd351cfc">
 <p>
 Se analizan los registros del sistema para identificar:
 </p>
@@ -739,9 +739,9 @@ Se analizan los registros del sistema para identificar:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcf0e469" class="outline-4">
-<h4 id="orgcf0e469">9. Análisis de tráfico de red</h4>
-<div class="outline-text-4" id="text-orgcf0e469">
+<div id="outline-container-org98dc3be" class="outline-4">
+<h4 id="org98dc3be">9. Análisis de tráfico de red</h4>
+<div class="outline-text-4" id="text-org98dc3be">
 <p>
 El script examina:
 </p>
@@ -753,9 +753,9 @@ El script examina:
 </ul>
 </div>
 </div>
-<div id="outline-container-org79767db" class="outline-4">
-<h4 id="org79767db">10. Verificación del rendimiento</h4>
-<div class="outline-text-4" id="text-org79767db">
+<div id="outline-container-org66fb91b" class="outline-4">
+<h4 id="org66fb91b">10. Verificación del rendimiento</h4>
+<div class="outline-text-4" id="text-org66fb91b">
 <p>
 Se analiza:
 </p>
@@ -768,9 +768,9 @@ Se analiza:
 </div>
 </div>
 </div>
-<div id="outline-container-org9da23ac" class="outline-3">
-<h3 id="org9da23ac">Informe y resumen final</h3>
-<div class="outline-text-3" id="text-org9da23ac">
+<div id="outline-container-orgde77b11" class="outline-3">
+<h3 id="orgde77b11">Informe y resumen final</h3>
+<div class="outline-text-3" id="text-orgde77b11">
 <p>
 Al finalizar todas las verificaciones, el script genera un informe detallado y un resumen que clasifica el estado del sistema en tres categorías:
 </p>
@@ -787,13 +787,13 @@ El informe completo se guarda en el directorio <code>/var/log/security_checks/</
 </div>
 </div>
 </div>
-<div id="outline-container-org4f369b7" class="outline-2">
-<h2 id="org4f369b7">Uso práctico del script</h2>
-<div class="outline-text-2" id="text-org4f369b7">
+<div id="outline-container-orgf0e3821" class="outline-2">
+<h2 id="orgf0e3821">Uso práctico del script</h2>
+<div class="outline-text-2" id="text-orgf0e3821">
 </div>
-<div id="outline-container-org53820ad" class="outline-3">
-<h3 id="org53820ad">Requisitos previos</h3>
-<div class="outline-text-3" id="text-org53820ad">
+<div id="outline-container-orgb9952cf" class="outline-3">
+<h3 id="orgb9952cf">Requisitos previos</h3>
+<div class="outline-text-3" id="text-orgb9952cf">
 <p>
 Antes de ejecutar el script, asegúrate de tener:
 </p>
@@ -805,9 +805,9 @@ Antes de ejecutar el script, asegúrate de tener:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbb4eacc" class="outline-3">
-<h3 id="orgbb4eacc">Instalación y ejecución</h3>
-<div class="outline-text-3" id="text-orgbb4eacc">
+<div id="outline-container-org5b583e4" class="outline-3">
+<h3 id="org5b583e4">Instalación y ejecución</h3>
+<div class="outline-text-3" id="text-org5b583e4">
 <ol class="org-ol">
 <li>Copia el script completo en un archivo llamado <code>botnet_detector.sh</code></li>
 <li>Dale permisos de ejecución:</li>
@@ -832,9 +832,9 @@ Antes de ejecutar el script, asegúrate de tener:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf8dba33" class="outline-3">
-<h3 id="orgf8dba33">Automatización</h3>
-<div class="outline-text-3" id="text-orgf8dba33">
+<div id="outline-container-orgdf66306" class="outline-3">
+<h3 id="orgdf66306">Automatización</h3>
+<div class="outline-text-3" id="text-orgdf66306">
 <p>
 Para monitorear regularmente tu sistema, puedes configurar el script como una tarea programada:
 </p>
@@ -854,16 +854,16 @@ El informe se guardará con la fecha y hora de ejecución, permitiéndote compar
 </div>
 </div>
 </div>
-<div id="outline-container-org8da5376" class="outline-2">
-<h2 id="org8da5376">Signos comunes de infección por botnet</h2>
-<div class="outline-text-2" id="text-org8da5376">
+<div id="outline-container-org2eef659" class="outline-2">
+<h2 id="org2eef659">Signos comunes de infección por botnet</h2>
+<div class="outline-text-2" id="text-org2eef659">
 <p>
 Además de las verificaciones realizadas por el script, estos son signos adicionales que podrían indicar que tu sistema está comprometido:
 </p>
 </div>
-<div id="outline-container-org340ca59" class="outline-3">
-<h3 id="org340ca59">Signos a nivel de sistema</h3>
-<div class="outline-text-3" id="text-org340ca59">
+<div id="outline-container-orgeed5368" class="outline-3">
+<h3 id="orgeed5368">Signos a nivel de sistema</h3>
+<div class="outline-text-3" id="text-orgeed5368">
 <ul class="org-ul">
 <li>Tiempos de arranque o apagado inusualmente largos</li>
 <li>El sistema se vuelve significativamente más lento sin razón aparente</li>
@@ -873,9 +873,9 @@ Además de las verificaciones realizadas por el script, estos son signos adicion
 </ul>
 </div>
 </div>
-<div id="outline-container-org9ad489c" class="outline-3">
-<h3 id="org9ad489c">Signos a nivel de red</h3>
-<div class="outline-text-3" id="text-org9ad489c">
+<div id="outline-container-org45ef8fa" class="outline-3">
+<h3 id="org45ef8fa">Signos a nivel de red</h3>
+<div class="outline-text-3" id="text-org45ef8fa">
 <ul class="org-ul">
 <li>Uso de red elevado incluso cuando no estás utilizando activamente Internet</li>
 <li>Quejas de tu proveedor de Internet sobre tráfico sospechoso</li>
@@ -884,9 +884,9 @@ Además de las verificaciones realizadas por el script, estos son signos adicion
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf10aaff" class="outline-3">
-<h3 id="orgf10aaff">Signos a nivel de usuario</h3>
-<div class="outline-text-3" id="text-orgf10aaff">
+<div id="outline-container-orgf29362a" class="outline-3">
+<h3 id="orgf29362a">Signos a nivel de usuario</h3>
+<div class="outline-text-3" id="text-orgf29362a">
 <ul class="org-ul">
 <li>Cuentas de correo electrónico enviando spam sin tu conocimiento</li>
 <li>Actividad en tus cuentas que no reconoces</li>
@@ -896,9 +896,9 @@ Además de las verificaciones realizadas por el script, estos son signos adicion
 </div>
 </div>
 </div>
-<div id="outline-container-org493a5e1" class="outline-2">
-<h2 id="org493a5e1">Mejores prácticas para prevenir infecciones</h2>
-<div class="outline-text-2" id="text-org493a5e1">
+<div id="outline-container-org6817cc2" class="outline-2">
+<h2 id="org6817cc2">Mejores prácticas para prevenir infecciones</h2>
+<div class="outline-text-2" id="text-org6817cc2">
 <p>
 La prevención es siempre la mejor estrategia. Estas son algunas recomendaciones para mantener tu sistema seguro:
 </p>
@@ -962,9 +962,9 @@ sudo aideinit
 </ol>
 </div>
 </div>
-<div id="outline-container-orgd7a69d0" class="outline-2">
-<h2 id="orgd7a69d0">Qué hacer si encuentras un sistema comprometido</h2>
-<div class="outline-text-2" id="text-orgd7a69d0">
+<div id="outline-container-org5cb9bcc" class="outline-2">
+<h2 id="org5cb9bcc">Qué hacer si encuentras un sistema comprometido</h2>
+<div class="outline-text-2" id="text-org5cb9bcc">
 <p>
 Si el script detecta signos de compromiso o tienes razones para creer que tu sistema es parte de una botnet:
 </p>
@@ -1012,9 +1012,9 @@ Si el script detecta signos de compromiso o tienes razones para creer que tu sis
 </ol>
 </div>
 </div>
-<div id="outline-container-orgd21c3ba" class="outline-2">
-<h2 id="orgd21c3ba">Conclusión</h2>
-<div class="outline-text-2" id="text-orgd21c3ba">
+<div id="outline-container-org1050eb7" class="outline-2">
+<h2 id="org1050eb7">Conclusión</h2>
+<div class="outline-text-2" id="text-org1050eb7">
 <p>
 La seguridad informática es un proceso continuo, no un estado final. Este script puede ayudarte a detectar posibles compromisos en tu sistema Linux, pero debe ser parte de una estrategia de seguridad más amplia que incluya buenas prácticas preventivas, monitoreo regular, y planes de respuesta a incidentes.
 </p>
@@ -1025,6 +1025,11 @@ Utilizando Emacs y org-mode, puedes adaptar y mejorar este script según tus nec
 
 <p>
 Recuerda que ninguna herramienta automatizada puede reemplazar el conocimiento y la vigilancia humana. Mantente informado sobre nuevas amenazas y técnicas de ataque, y adapta tus defensas en consecuencia.
+</p>
+
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-15-gu-a-pr-ctica-configuraci-n-de-ufw-en-ubuntu-con-scripts-y-org-mode">2025-04-15-gu-a-pr-ctica-configuraci-n-de-ufw-en-ubuntu-con-scripts-y-org-mode</a>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-16--fortaleciendo-la-seguridad-inform-tica-con-snort-y-aide-gu-a-completa">2025-04-16&#x2013;fortaleciendo-la-seguridad-inform-tica-con-snort-y-aide-gu-a-completa</a>
 </p>
 </div>
 </div>
