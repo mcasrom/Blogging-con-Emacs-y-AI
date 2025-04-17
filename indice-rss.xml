@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - indice]]></title>
 <description><![CDATA[Example.com - indice]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-indice.html</link>
-<lastBuildDate>Thu, 17 Apr 2025 23:31:21 +0200</lastBuildDate>
+<lastBuildDate>Thu, 17 Apr 2025 23:45:10 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -627,6 +627,12 @@
 
 <tr>
 <td class="org-right">2025-04-17</td>
+<td class="org-left">Entre Rascacielos y Olas: Un Amanecer en Broadbeach</td>
+<td class="org-left"><a href="2025-04-17--entre-rascacielos-y-olas:-un-amanecer-en-broadbeach.html">Enlace</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-04-17</td>
 <td class="org-left">Monitorización rápida de vulnerabilidades en Ubuntu desde Emacs (i)</td>
 <td class="org-left"><a href="2025-04-17--monitorizaci-n-r-pida-de-vulnerabilidades-en-ubuntu-desde-emacs-i-.html">Enlace</a></td>
 </tr>
@@ -662,12 +668,6 @@
 </tr>
 
 <tr>
-<td class="org-right">2025-04-17</td>
-<td class="org-left">Blog Overview</td>
-<td class="org-left"><a href="overview.html">Enlace</a></td>
-</tr>
-
-<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Proyectos</td>
 <td class="org-left"><a href="proyectos.html">Enlace</a></td>
@@ -685,7 +685,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Thu, 17 Apr 2025 10:21:00 +0200</pubDate>
+  <pubDate>Thu, 17 Apr 2025 23:39:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Creación Indicador de Calidad de Libertad y su Aplicación KPI (i)]]></title>
