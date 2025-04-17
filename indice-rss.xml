@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - indice]]></title>
 <description><![CDATA[Example.com - indice]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-indice.html</link>
-<lastBuildDate>Wed, 16 Apr 2025 08:57:40 +0200</lastBuildDate>
+<lastBuildDate>Thu, 17 Apr 2025 09:25:45 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -626,13 +626,25 @@
 </tr>
 
 <tr>
+<td class="org-right">2025-04-17</td>
+<td class="org-left">Monitorización rápida de vulnerabilidades en Ubuntu desde Emacs (i)</td>
+<td class="org-left"><a href="2025-04-17--monitorizaci-n-r-pida-de-vulnerabilidades-en-ubuntu-desde-emacs-i-.html">Enlace</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-04-17</td>
+<td class="org-left">🔥 UFW en acción: Controla tu firewall desde Emacs como un ninja (ii)</td>
+<td class="org-left"><a href="2025-04-17--ufw-en-acci-n-controla-tu-firewall-desde-emacs-como-un-ninja-ii-.html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
 </tr>
 
 <tr>
-<td class="org-right">2025-04-15</td>
+<td class="org-right">2025-04-17</td>
 <td class="org-left">Artículos recientes sobre geopolítica y estrategia</td>
 <td class="org-left"><a href="geopolitica.html">Enlace</a></td>
 </tr>
@@ -667,7 +679,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Wed, 16 Apr 2025 08:54:00 +0200</pubDate>
+  <pubDate>Thu, 17 Apr 2025 09:22:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Creación Indicador de Calidad de Libertad y su Aplicación KPI (i)]]></title>

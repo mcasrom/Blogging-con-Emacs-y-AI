@@ -4,7 +4,166 @@
 <title><![CDATA[Example.com - orgmode]]></title>
 <description><![CDATA[Example.com - orgmode]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-orgmode.html</link>
-<lastBuildDate>Wed, 16 Apr 2025 08:57:36 +0200</lastBuildDate>
+<lastBuildDate>Thu, 17 Apr 2025 09:25:41 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Monitorización rápida de vulnerabilidades en Ubuntu desde Emacs (i)]]></title>
+  <description><![CDATA[
+<div id="outline-container-org58c6a89" class="outline-2">
+<h2 id="org58c6a89">Introducción</h2>
+<div class="outline-text-2" id="text-org58c6a89">
+<p>
+¿Quieres una forma sencilla y rápida de hacer un chequeo de seguridad a tu sistema desde tu entorno Emacs? Aquí tienes un script en bash que podrás ejecutar desde la terminal o Emacs usando `shell-command`, y que además genera un log y un archivo `.org` con los resultados.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf561e67" class="outline-2">
+<h2 id="orgf561e67">PlantUML Diagram for "scan<sub>seguridad.sh</sub>" Workflow</h2>
+<div class="outline-text-2" id="text-orgf561e67">
+<p>
+This diagram represents the sequence of operations performed by the `scan<sub>seguridad.sh</sub>` script to monitor system security and generate logs and Org Mode reports.
+</p>
+
+
+<figure id="org82693ad">
+<img src="images/scan_seguridad_diagram.png" alt="scan_seguridad_diagram.png" width="500px" height="500px">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org0ea2fb0" class="outline-2">
+<h2 id="org0ea2fb0">Herramientas necesarias</h2>
+<div class="outline-text-2" id="text-org0ea2fb0">
+<p>
+Este script usará:
+</p>
+
+<ul class="org-ul">
+<li>`nmap` (para escanear puertos locales)</li>
+<li>`netstat` o `ss` (interfaces y conexiones)</li>
+<li>`curl` (para detectar IP pública y posibles amenazas)</li>
+<li>`whois`, `ip`, `free`, `top` o `ps`</li>
+<li>`chkrootkit` o `rkhunter` (si los tienes instalados)</li>
+<li>`fail2ban-client` (opcional)</li>
+</ul>
+
+<p>
+Si alguna herramienta no está instalada, el script la sugerirá automáticamente.
+</p>
+
+<p>
+Puedes instalar las básicas con:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">sudo apt update &amp;&amp; sudo apt install nmap curl whois net-tools chkrootkit -y
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6b259eb" class="outline-2">
+<h2 id="org6b259eb">🚀 Script de análisis rápido</h2>
+<div class="outline-text-2" id="text-org6b259eb">
+<p>
+Guarda este archivo como <code>scan_seguridad.sh</code> y ejecútalo como superusuario:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #1857a4;">LOGFILE</span>=<span style="color: #a44185;">"$HOME/seguridad/logs/seguridad_$(</span><span style="color: #219fd5; font-weight: bold;">date +%F_%H%M</span><span style="color: #a44185;">).log"</span>
+<span style="color: #1857a4;">ORGFILE</span>=<span style="color: #a44185;">"$HOME/seguridad/reportes/seguridad_$(</span><span style="color: #219fd5; font-weight: bold;">date +%F_%H%M</span><span style="color: #a44185;">).org"</span>
+mkdir -p <span style="color: #a44185;">"$(</span><span style="color: #219fd5; font-weight: bold;">dirname "$LOGFILE"</span><span style="color: #a44185;">)"</span>
+mkdir -p <span style="color: #a44185;">"$(</span><span style="color: #219fd5; font-weight: bold;">dirname "$ORGFILE"</span><span style="color: #a44185;">)"</span>
+
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"* Informe de seguridad generado el $(</span><span style="color: #219fd5; font-weight: bold;">date</span><span style="color: #a44185;">)"</span> &gt; <span style="color: #a44185;">"$ORGFILE"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"------------------------------------------"</span> &gt; <span style="color: #a44185;">"$LOGFILE"</span>
+
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"** &#129504; Memoria y carga del sistema"</span> | tee -a <span style="color: #a44185;">"$ORGFILE"</span> &gt;&gt; <span style="color: #a44185;">"$LOGFILE"</span>
+free -h | tee -a <span style="color: #a44185;">"$LOGFILE"</span> | sed <span style="color: #a44185;">'s/^/    /'</span> &gt;&gt; <span style="color: #a44185;">"$ORGFILE"</span>
+uptime | tee -a <span style="color: #a44185;">"$LOGFILE"</span> | sed <span style="color: #a44185;">'s/^/    /'</span> &gt;&gt; <span style="color: #a44185;">"$ORGFILE"</span>
+
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"** &#127760; Interfaces de red activas"</span> | tee -a <span style="color: #a44185;">"$ORGFILE"</span> &gt;&gt; <span style="color: #a44185;">"$LOGFILE"</span>
+ip addr show | grep inet | tee -a <span style="color: #a44185;">"$LOGFILE"</span> | sed <span style="color: #a44185;">'s/^/    /'</span> &gt;&gt; <span style="color: #a44185;">"$ORGFILE"</span>
+
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"** &#128272; Puertos abiertos (localhost)"</span> | tee -a <span style="color: #a44185;">"$ORGFILE"</span> &gt;&gt; <span style="color: #a44185;">"$LOGFILE"</span>
+nmap -sT -p- 127.0.0.1 | tee -a <span style="color: #a44185;">"$LOGFILE"</span> | sed <span style="color: #a44185;">'s/^/    /'</span> &gt;&gt; <span style="color: #a44185;">"$ORGFILE"</span>
+
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"** &#128373;&#65039; Conexiones activas sospechosas"</span> | tee -a <span style="color: #a44185;">"$ORGFILE"</span> &gt;&gt; <span style="color: #a44185;">"$LOGFILE"</span>
+ss -tunap | grep -v <span style="color: #a44185;">"127.0.0.1"</span> | tee -a <span style="color: #a44185;">"$LOGFILE"</span> | sed <span style="color: #a44185;">'s/^/    /'</span> &gt;&gt; <span style="color: #a44185;">"$ORGFILE"</span>
+
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"** &#128680; IP p&#250;blica y an&#225;lisis b&#225;sico"</span> | tee -a <span style="color: #a44185;">"$ORGFILE"</span> &gt;&gt; <span style="color: #a44185;">"$LOGFILE"</span>
+<span style="color: #1857a4;">IP</span>=$(<span style="color: #219fd5; font-weight: bold;">curl -s ifconfig.me</span>)
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"IP p&#250;blica: $IP"</span> | tee -a <span style="color: #a44185;">"$LOGFILE"</span> | sed <span style="color: #a44185;">'s/^/    /'</span> &gt;&gt; <span style="color: #a44185;">"$ORGFILE"</span>
+whois <span style="color: #a44185;">"$IP"</span> | grep -iE <span style="color: #a44185;">"org|country|name"</span> | tee -a <span style="color: #a44185;">"$LOGFILE"</span> | sed <span style="color: #a44185;">'s/^/    /'</span> &gt;&gt; <span style="color: #a44185;">"$ORGFILE"</span>
+
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"** &#128269; An&#225;lisis rootkits (chkrootkit si disponible)"</span> | tee -a <span style="color: #a44185;">"$ORGFILE"</span> &gt;&gt; <span style="color: #a44185;">"$LOGFILE"</span>
+<span style="color: #219fd5; font-style: italic;">if </span><span style="color: #dc3eb7;">command</span> -v chkrootkit &amp;&gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+    chkrootkit | tee -a <span style="color: #a44185;">"$LOGFILE"</span> | sed <span style="color: #a44185;">'s/^/    /'</span> &gt;&gt; <span style="color: #a44185;">"$ORGFILE"</span>
+<span style="color: #219fd5; font-style: italic;">else</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"chkrootkit no instalado. Inst&#225;lalo con: sudo apt install chkrootkit"</span> | tee -a <span style="color: #a44185;">"$LOGFILE"</span> | sed <span style="color: #a44185;">'s/^/    /'</span> &gt;&gt; <span style="color: #a44185;">"$ORGFILE"</span>
+<span style="color: #219fd5; font-style: italic;">fi</span>
+
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"** &#128202; Procesos sospechosos (m&#225;s consumo CPU)"</span> | tee -a <span style="color: #a44185;">"$ORGFILE"</span> &gt;&gt; <span style="color: #a44185;">"$LOGFILE"</span>
+ps aux --sort=-%cpu | head -n 10 | tee -a <span style="color: #a44185;">"$LOGFILE"</span> | sed <span style="color: #a44185;">'s/^/    /'</span> &gt;&gt; <span style="color: #a44185;">"$ORGFILE"</span>
+
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"** &#9989; Recomendaciones generales"</span> &gt;&gt; <span style="color: #a44185;">"$ORGFILE"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"- Verifica puertos abiertos innecesarios"</span> &gt;&gt; <span style="color: #a44185;">"$ORGFILE"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"- Usa firewalld o ufw para cerrar conexiones"</span> &gt;&gt; <span style="color: #a44185;">"$ORGFILE"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"- Revisa procesos con consumo elevado"</span> &gt;&gt; <span style="color: #a44185;">"$ORGFILE"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"- Instala y configura fail2ban si es un servidor expuesto"</span> &gt;&gt; <span style="color: #a44185;">"$ORGFILE"</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbb93516" class="outline-2">
+<h2 id="orgbb93516">✅ Cómo usarlo desde Emacs</h2>
+<div class="outline-text-2" id="text-orgbb93516">
+<p>
+Puedes ejecutar el script directamente desde Emacs con:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(shell-command <span style="color: #a44185;">"bash ~/scan_seguridad.sh"</span>)
+</pre>
+</div>
+
+<p>
+O también añadirlo a una función interactiva personalizada.
+</p>
+</div>
+</div>
+<div id="outline-container-org68d470d" class="outline-2">
+<h2 id="org68d470d">📂 Logs generados</h2>
+<div class="outline-text-2" id="text-org68d470d">
+<ul class="org-ul">
+<li>Archivo `.log` con todos los comandos ejecutados.</li>
+<li>Archivo `.org` con formato limpio para visualizar y exportar desde Org Mode.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org682b3cf" class="outline-2">
+<h2 id="org682b3cf">🚧 Futuras mejoras</h2>
+<div class="outline-text-2" id="text-org682b3cf">
+<ul class="org-ul">
+<li>Clasificación automática de amenazas</li>
+<li>Exportación a HTML para informe web</li>
+<li>Envío por correo o Telegram</li>
+</ul>
+
+<p>
+¡La seguridad también se hace desde Emacs! 😉
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-orgmode.html">orgmode</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-script.html">script</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[orgmode]]></category>
+  <category><![CDATA[script]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-17--monitorizaci-n-r-pida-de-vulnerabilidades-en-ubuntu-desde-emacs-i-.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-17--monitorizaci-n-r-pida-de-vulnerabilidades-en-ubuntu-desde-emacs-i-.html</guid>
+  <pubDate>Thu, 17 Apr 2025 06:46:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[Guía Práctica: Configuración de UFW en Ubuntu con Scripts y Org Mode]]></title>
   <description><![CDATA[

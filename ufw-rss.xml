@@ -4,7 +4,224 @@
 <title><![CDATA[Example.com - ufw]]></title>
 <description><![CDATA[Example.com - ufw]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-ufw.html</link>
-<lastBuildDate>Wed, 16 Apr 2025 08:57:24 +0200</lastBuildDate>
+<lastBuildDate>Thu, 17 Apr 2025 09:25:26 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[🔥 UFW en acción: Controla tu firewall desde Emacs como un ninja (ii)]]></title>
+  <description><![CDATA[
+<div id="outline-container-org045583a" class="outline-2">
+<h2 id="org045583a">Introducción</h2>
+</div>
+
+<div id="outline-container-org5eb8a0c" class="outline-2">
+<h2 id="org5eb8a0c">🛡️ ¿Qué es UFW?</h2>
+<div class="outline-text-2" id="text-org5eb8a0c">
+<p>
+UFW (Uncomplicated Firewall) es una interfaz sencilla para gestionar iptables, pensada para usuarios que quieren una configuración rápida y segura de su firewall.
+</p>
+</div>
+</div>
+<div id="outline-container-org2312006" class="outline-2">
+<h2 id="org2312006">✅ ¿Está activado UFW?</h2>
+<div class="outline-text-2" id="text-org2312006">
+<p>
+Puedes verificar su estado con:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo ufw status verbose
+</pre>
+</div>
+
+<p>
+Ejemplo de salida:
+</p>
+
+<pre class="example" id="org1e2de99">
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW IN    Anywhere
+443/tcp                    ALLOW IN    Anywhere
+</pre>
+</div>
+</div>
+<div id="outline-container-org48fbc5f" class="outline-2">
+<h2 id="org48fbc5f">🔍 Monitoreo de actividad en tiempo real</h2>
+<div class="outline-text-2" id="text-org48fbc5f">
+<p>
+UFW registra los eventos en `/var/log/ufw.log`. Puedes ver los accesos bloqueados más recientes con:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo grep <span style="color: #a44185;">'BLOCK'</span> /var/log/ufw.log | tail -n 10
+</pre>
+</div>
+
+<p>
+O visualizarlos de forma más clara:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo awk <span style="color: #a44185;">'/BLOCK/ {print $1, $2, $3, $NF}'</span> /var/log/ufw.log | tail -n 10
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1e91d93" class="outline-2">
+<h2 id="org1e91d93">📊 Tabla de intentos bloqueados</h2>
+<div class="outline-text-2" id="text-org1e91d93">
+<table id="org4656c48">
+<caption class="t-above"><span class="table-number">Table 1:</span> Últimos intentos bloqueados (simulado)</caption>
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Fecha</th>
+<th scope="col" class="org-right">Hora</th>
+<th scope="col" class="org-right">IP Origen</th>
+<th scope="col" class="org-right">Puerto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Apr 17</td>
+<td class="org-right">08:12</td>
+<td class="org-right">203.0.113.45</td>
+<td class="org-right">445</td>
+</tr>
+
+<tr>
+<td class="org-left">Apr 17</td>
+<td class="org-right">08:14</td>
+<td class="org-right">198.51.100.23</td>
+<td class="org-right">22</td>
+</tr>
+
+<tr>
+<td class="org-left">Apr 17</td>
+<td class="org-right">08:20</td>
+<td class="org-right">192.0.2.10</td>
+<td class="org-right">3389</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org5936ab5" class="outline-2">
+<h2 id="org5936ab5">🌐 Diagrama de flujo con PlantUML</h2>
+<div class="outline-text-2" id="text-org5936ab5">
+
+<figure id="org1ffaed5">
+<img src="images/ufw-diagrama.png" alt="ufw-diagrama.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org9d3f2c9" class="outline-2">
+<h2 id="org9d3f2c9">🔧 Comandos esenciales de UFW</h2>
+<div class="outline-text-2" id="text-org9d3f2c9">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Acción</th>
+<th scope="col" class="org-left">Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Activar UFW</td>
+<td class="org-left"><code>sudo ufw enable</code></td>
+</tr>
+
+<tr>
+<td class="org-left">Ver reglas activas</td>
+<td class="org-left"><code>sudo ufw status</code></td>
+</tr>
+
+<tr>
+<td class="org-left">Permitir puerto 80 (HTTP)</td>
+<td class="org-left"><code>sudo ufw allow 80/tcp</code></td>
+</tr>
+
+<tr>
+<td class="org-left">Bloquear IP maliciosa</td>
+<td class="org-left"><code>sudo ufw deny from 192.168.1.100</code></td>
+</tr>
+
+<tr>
+<td class="org-left">Eliminar regla</td>
+<td class="org-left"><code>sudo ufw delete allow 80/tcp</code></td>
+</tr>
+
+<tr>
+<td class="org-left">Reiniciar configuración</td>
+<td class="org-left"><code>sudo ufw reset</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org610c562" class="outline-2">
+<h2 id="org610c562">📦 Consejo extra: Instala Gufw (modo gráfico)</h2>
+<div class="outline-text-2" id="text-org610c562">
+<p>
+Si prefieres una interfaz gráfica:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt install gufw
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org5a589a6" class="outline-2">
+<h2 id="org5a589a6">🚨 Consejo de seguridad</h2>
+<div class="outline-text-2" id="text-org5a589a6">
+<p>
+Activa la <b>política por defecto restrictiva</b> si aún no lo has hecho:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo ufw default deny incoming
+sudo ufw default allow outgoing
+</pre>
+</div>
+
+
+<p>
+Este post te da visibilidad completa del comportamiento de tu firewall desde tu entorno favorito: <b>Emacs + Org Mode + PlantUML</b> 🧠🔥.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ufw.html">ufw</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-plantuml.html">plantuml</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-org-mode.html">org-mode</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[ufw]]></category>
+  <category><![CDATA[firewall]]></category>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[plantuml]]></category>
+  <category><![CDATA[org-mode]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-17--ufw-en-acci-n-controla-tu-firewall-desde-emacs-como-un-ninja-ii-.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-17--ufw-en-acci-n-controla-tu-firewall-desde-emacs-como-un-ninja-ii-.html</guid>
+  <pubDate>Thu, 17 Apr 2025 07:00:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[Guía Práctica: Configuración de UFW en Ubuntu con Scripts y Org Mode]]></title>
   <description><![CDATA[
