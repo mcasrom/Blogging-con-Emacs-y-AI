@@ -4,7 +4,333 @@
 <title><![CDATA[Example.com - linux]]></title>
 <description><![CDATA[Example.com - linux]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-linux.html</link>
-<lastBuildDate>Fri, 18 Apr 2025 09:50:53 +0200</lastBuildDate>
+<lastBuildDate>Fri, 18 Apr 2025 10:32:53 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[VPNs: Protección, Privacidad y Alternativas en Linux]]></title>
+  <description><![CDATA[
+<div id="outline-container-org8eb79cc" class="outline-2">
+<h2 id="org8eb79cc">¿Qué es una VPN y por qué deberías considerarla?</h2>
+<div class="outline-text-2" id="text-org8eb79cc">
+<p>
+Las Redes Privadas Virtuales (VPN, por sus siglas en inglés) se han convertido en una herramienta esencial para cualquier usuario que valore su privacidad y seguridad en línea. Una VPN crea un túnel encriptado entre tu dispositivo y un servidor remoto, enmascarando tu dirección IP y cifrando todo tu tráfico de internet.
+</p>
+
+<p>
+En un mundo donde la vigilancia masiva, los ataques cibernéticos y la recopilación indiscriminada de datos son cada vez más comunes, las VPNs se presentan como un escudo protector para tus actividades en línea.
+</p>
+</div>
+</div>
+<div id="outline-container-org36fb274" class="outline-2">
+<h2 id="org36fb274">Diagrama explicativo: Funcionamiento de una VPN</h2>
+<div class="outline-text-2" id="text-org36fb274">
+
+<figure id="org92a43e0">
+<img src="images/vpn_diagrama.png" alt="vpn_diagrama.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orgdd55dbb" class="outline-2">
+<h2 id="orgdd55dbb">Ventajas de utilizar una VPN</h2>
+<div class="outline-text-2" id="text-orgdd55dbb">
+</div>
+<div id="outline-container-org74ffa34" class="outline-3">
+<h3 id="org74ffa34">Privacidad mejorada</h3>
+<div class="outline-text-3" id="text-org74ffa34">
+<ul class="org-ul">
+<li>Oculta tu dirección IP real</li>
+<li>Enmascara tu ubicación física</li>
+<li>Dificulta el rastreo de tu actividad en línea</li>
+<li>Reduce la recopilación de datos por parte de ISPs y sitios web</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd7763b1" class="outline-3">
+<h3 id="orgd7763b1">Seguridad reforzada</h3>
+<div class="outline-text-3" id="text-orgd7763b1">
+<ul class="org-ul">
+<li>Encriptación de datos (generalmente AES-256)</li>
+<li>Protección en redes Wi-Fi públicas</li>
+<li>Reducción del riesgo de ataques Man-in-the-Middle</li>
+<li>Protección contra la inyección de anuncios maliciosos</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org76bf6bd" class="outline-3">
+<h3 id="org76bf6bd">Libertad de acceso</h3>
+<div class="outline-text-3" id="text-org76bf6bd">
+<ul class="org-ul">
+<li>Evasión de censura gubernamental</li>
+<li>Acceso a contenido geo-restringido</li>
+<li>Bypass de restricciones de red corporativas o educativas</li>
+<li>Conexión a servicios bloqueados regionalmente</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4224711" class="outline-3">
+<h3 id="org4224711">Rendimiento de red</h3>
+<div class="outline-text-3" id="text-org4224711">
+<ul class="org-ul">
+<li>Posible evasión de throttling por parte de los ISPs</li>
+<li>Rutas de red potencialmente más optimizadas</li>
+<li>Reducción de la latencia en ciertos casos específicos</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org566d453" class="outline-2">
+<h2 id="org566d453">Inconvenientes y limitaciones</h2>
+<div class="outline-text-2" id="text-org566d453">
+</div>
+<div id="outline-container-orgb1273ad" class="outline-3">
+<h3 id="orgb1273ad">Impacto en la velocidad</h3>
+<div class="outline-text-3" id="text-orgb1273ad">
+<ul class="org-ul">
+<li>Reducción general de la velocidad debido al procesamiento adicional</li>
+<li>Latencia aumentada por la distancia física al servidor VPN</li>
+<li>Posibles cuellos de botella en servidores congestionados</li>
+<li>Rendimiento variable según la calidad del proveedor</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org070639b" class="outline-3">
+<h3 id="org070639b">Consideraciones legales y de privacidad</h3>
+<div class="outline-text-3" id="text-org070639b">
+<ul class="org-ul">
+<li>No todas las VPNs mantienen políticas estrictas de no-logs</li>
+<li>Algunos proveedores pueden cooperar con autoridades</li>
+<li>Jurisdicciones problemáticas (países con leyes de retención de datos)</li>
+<li>Posible venta de datos de usuario en servicios gratuitos</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org69cb054" class="outline-3">
+<h3 id="org69cb054">Limitaciones técnicas</h3>
+<div class="outline-text-3" id="text-org69cb054">
+<ul class="org-ul">
+<li>No garantiza el anonimato completo</li>
+<li>Algunas páginas pueden detectar y bloquear el tráfico VPN</li>
+<li>Posibles filtraciones de DNS o WebRTC</li>
+<li>Compatibilidad limitada con ciertos servicios o aplicaciones</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9ef8dec" class="outline-3">
+<h3 id="org9ef8dec">Costos y confiabilidad</h3>
+<div class="outline-text-3" id="text-org9ef8dec">
+<ul class="org-ul">
+<li>Los servicios de calidad suelen ser de pago</li>
+<li>Opciones gratuitas con limitaciones significativas</li>
+<li>Dependencia del proveedor para mantener la seguridad</li>
+<li>Posibles caídas de servicio</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5acc0c4" class="outline-2">
+<h2 id="org5acc0c4">Opciones gratuitas de VPN para Linux</h2>
+<div class="outline-text-2" id="text-org5acc0c4">
+<p>
+A pesar de que las opciones de pago suelen ofrecer mejor servicio, existen alternativas gratuitas que pueden ser adecuadas para usuarios de Linux:
+</p>
+</div>
+<div id="outline-container-orge755f62" class="outline-3">
+<h3 id="orge755f62">ProtonVPN Free</h3>
+<div class="outline-text-3" id="text-orge755f62">
+<ul class="org-ul">
+<li>Desarrollado por los creadores de ProtonMail</li>
+<li>Sin límites de datos</li>
+<li>Política estricta de no registro</li>
+<li>Servidores en tres países</li>
+<li>Instalación: <code>sudo apt install openvpn</code> y descarga de configuración desde su sitio web</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb363cd9" class="outline-3">
+<h3 id="orgb363cd9">Windscribe</h3>
+<div class="outline-text-3" id="text-orgb363cd9">
+<ul class="org-ul">
+<li>10GB de datos mensuales gratuitos</li>
+<li>Servidores en 10 países en el plan gratuito</li>
+<li>Cliente nativo para Linux</li>
+<li>Instalación: Descargar el cliente desde su sitio web o usar OpenVPN</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd969b3d" class="outline-3">
+<h3 id="orgd969b3d">Hide.me</h3>
+<div class="outline-text-3" id="text-orgd969b3d">
+<ul class="org-ul">
+<li>10GB mensuales en la versión gratuita</li>
+<li>5 ubicaciones de servidores</li>
+<li>Sin registro de actividad</li>
+<li>Configuración a través de NetworkManager con OpenVPN</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc145892" class="outline-3">
+<h3 id="orgc145892">OpenVPN + VPNGate</h3>
+<div class="outline-text-3" id="text-orgc145892">
+<ul class="org-ul">
+<li>Proyecto educativo de la Universidad de Tsukuba</li>
+<li>Red de servidores voluntarios</li>
+<li>Completamente gratuito</li>
+<li>Instalación: <code>sudo apt install openvpn network-manager-openvpn-gnome</code></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf7ae0ea" class="outline-3">
+<h3 id="orgf7ae0ea">WireGuard + Algo VPN</h3>
+<div class="outline-text-3" id="text-orgf7ae0ea">
+<ul class="org-ul">
+<li>Opción auto-hospedada</li>
+<li>Control total sobre tus datos</li>
+<li>Requiere un servidor VPS (hay opciones económicas)</li>
+<li>Instalación: <code>sudo apt install wireguard</code></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0a956b7" class="outline-2">
+<h2 id="org0a956b7">Implementación práctica en Linux</h2>
+<div class="outline-text-2" id="text-org0a956b7">
+</div>
+<div id="outline-container-orga45da91" class="outline-3">
+<h3 id="orga45da91">Utilizando OpenVPN (método universal)</h3>
+<div class="outline-text-3" id="text-orga45da91">
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Instalar OpenVPN</span>
+sudo apt install openvpn network-manager-openvpn-gnome
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para iniciar una conexi&#243;n desde terminal con archivo de configuraci&#243;n</span>
+sudo openvpn --config /ruta/al/archivo.ovpn
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para configurar desde NetworkManager</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">1. Abrir configuraci&#243;n de red</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">2. A&#241;adir nueva VPN -&gt; Importar desde archivo</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">3. Seleccionar el archivo .ovpn descargado</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org9603455" class="outline-3">
+<h3 id="org9603455">Configurando WireGuard</h3>
+<div class="outline-text-3" id="text-org9603455">
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Instalar WireGuard</span>
+sudo apt install wireguard
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear archivo de configuraci&#243;n</span>
+sudo nano /etc/wireguard/wg0.conf
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Contenido b&#225;sico de configuraci&#243;n:</span>
+[Interface]
+PrivateKey = TU_CLAVE_PRIVADA
+Address = 10.0.0.2/24
+DNS = 1.1.1.1, 1.0.0.1
+
+[Peer]
+PublicKey = CLAVE_PUBLICA_DEL_SERVIDOR
+AllowedIPs = 0.0.0.0/0, ::/0
+Endpoint = servidor.vpn.com:51820
+PersistentKeepalive = 25
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Activar la conexi&#243;n</span>
+sudo wg-quick up wg0
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Desactivar la conexi&#243;n</span>
+sudo wg-quick down wg0
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org5b28958" class="outline-3">
+<h3 id="org5b28958">Verificación de la conexión VPN</h3>
+<div class="outline-text-3" id="text-org5b28958">
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Comprobar tu IP p&#250;blica actual</span>
+curl ifconfig.me
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar si hay fugas de DNS</span>
+dig +short myip.opendns.com @resolver1.opendns.com
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Comprobar el estado de conexi&#243;n WireGuard</span>
+sudo wg show
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ver las conexiones activas de OpenVPN</span>
+sudo systemctl status openvpn*
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org20eb999" class="outline-2">
+<h2 id="org20eb999">Recomendaciones para maximizar seguridad</h2>
+<div class="outline-text-2" id="text-org20eb999">
+<ol class="org-ol">
+<li>Utiliza un kill switch para evitar filtración de datos si la VPN cae</li>
+<li>Verifica regularmente que no haya fugas de DNS o WebRTC</li>
+<li>Combina la VPN con el navegador Tor para mayor anonimato</li>
+<li>Utiliza DNS encriptados (DoH o DoT) junto con tu VPN</li>
+<li>Revisa las políticas de privacidad de tu proveedor VPN</li>
+<li>Considera servicios que acepten pagos en criptomonedas</li>
+<li>Usa la extensión uBlock Origin junto con tu VPN</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org019d76b" class="outline-2">
+<h2 id="org019d76b">Casos de uso específicos</h2>
+<div class="outline-text-2" id="text-org019d76b">
+</div>
+<div id="outline-container-orgba35208" class="outline-3">
+<h3 id="orgba35208">Para desarrolladores</h3>
+<div class="outline-text-3" id="text-orgba35208">
+<ul class="org-ul">
+<li>Acceso seguro a servidores remotos</li>
+<li>Pruebas de aplicaciones en diferentes regiones</li>
+<li>Bypass de restricciones de API geográficas</li>
+<li>Protección al utilizar repositorios y paquetes</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgae86c02" class="outline-3">
+<h3 id="orgae86c02">Para usuarios generales</h3>
+<div class="outline-text-3" id="text-orgae86c02">
+<ul class="org-ul">
+<li>Navegación segura en redes públicas</li>
+<li>Protección frente a rastreo de ISPs</li>
+<li>Acceso a contenido multimedia internacional</li>
+<li>Descarga segura de archivos P2P</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org04d5344" class="outline-2">
+<h2 id="org04d5344">Conclusión</h2>
+<div class="outline-text-2" id="text-org04d5344">
+<p>
+Las VPNs representan una capa fundamental de protección en el panorama digital actual, especialmente para usuarios conscientes de la privacidad como los que utilizan Linux. Aunque no son una solución perfecta ni proporcionan anonimato absoluto, ofrecen beneficios sustanciales que superan sus limitaciones.
+Si valoras tu privacidad pero tienes un presupuesto limitado, las opciones gratuitas mencionadas pueden ser un buen punto de partida. Sin embargo, para usuarios que requieran mayor rendimiento, variedad de servidores o características avanzadas, las soluciones de pago suelen ofrecer un mejor equilibrio.
+Como usuarios de Emacs y Linux, tenemos la ventaja de contar con numerosas herramientas para implementar, automatizar y gestionar nuestras conexiones VPN, incluso integrándolas en nuestro flujo de trabajo con Org-mode o scripts personalizados.
+</p>
+
+<p>
+¿Has tenido experiencia con alguna VPN específica en Linux? ¿Tienes alguna configuración especial que quieras compartir? Déjanos tus comentarios.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-vpn.html">vpn</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-privacidad.html">privacidad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-open.html">open</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-source.html">source</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[vpn]]></category>
+  <category><![CDATA[privacidad]]></category>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[open]]></category>
+  <category><![CDATA[source]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-18--vpns:-protecci%C3%B3n,-privacidad-y-alternativas-en-linux.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-18--vpns:-protecci%C3%B3n,-privacidad-y-alternativas-en-linux.html</guid>
+  <pubDate>Fri, 18 Apr 2025 10:20:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[🔥 UFW en acción: Controla tu firewall desde Emacs como un ninja (ii)]]></title>
   <description><![CDATA[
