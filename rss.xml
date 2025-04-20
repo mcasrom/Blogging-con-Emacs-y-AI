@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com]]></title>
 <description><![CDATA[Example.com]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Sun, 20 Apr 2025 03:29:49 +0200</lastBuildDate>
+<lastBuildDate>Sun, 20 Apr 2025 03:37:34 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -708,23 +708,23 @@
 <item>
   <title><![CDATA[Verificación en Dos Pasos (2FA): Seguridad Reforzada en Emacs con Esteroides]]></title>
   <description><![CDATA[
-<div id="outline-container-org509a0e1" class="outline-2">
-<h2 id="org509a0e1">Introducción a la Verificación en Dos Pasos (2FA)</h2>
-<div class="outline-text-2" id="text-org509a0e1">
+<div id="outline-container-orgab4d2fc" class="outline-2">
+<h2 id="orgab4d2fc">Introducción a la Verificación en Dos Pasos (2FA)</h2>
+<div class="outline-text-2" id="text-orgab4d2fc">
 <p>
 La verificación en dos pasos, también conocida como autenticación de dos factores (2FA), es un método de seguridad que requiere dos formas de identificación para acceder a una cuenta o sistema. En lugar de depender únicamente de una contraseña, 2FA agrega una capa adicional, como un código temporal enviado a un dispositivo o generado por una aplicación. En el contexto de Emacs, donde manejamos configuraciones sensibles o integramos servicios como correo o APIs, implementar 2FA puede ser crucial.
 </p>
 
 
-<figure id="org7257232">
-<img src="images/2fsa.png" alt="2fsa.png">
+<figure id="org56038d1">
+<img src="images/2fsa.png" alt="2fsa.png" width="50%">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org7db7dbe" class="outline-2">
-<h2 id="org7db7dbe">¿Qué es 2FA y cómo funciona?</h2>
-<div class="outline-text-2" id="text-org7db7dbe">
+<div id="outline-container-orgc6242bc" class="outline-2">
+<h2 id="orgc6242bc">¿Qué es 2FA y cómo funciona?</h2>
+<div class="outline-text-2" id="text-orgc6242bc">
 <p>
 2FA combina dos de los siguientes factores:
 </p>
@@ -739,9 +739,9 @@ Por ejemplo, al iniciar sesión en un servicio, introduces tu contraseña (prime
 </p>
 </div>
 </div>
-<div id="outline-container-orged23948" class="outline-2">
-<h2 id="orged23948">Ventajas de 2FA</h2>
-<div class="outline-text-2" id="text-orged23948">
+<div id="outline-container-org6d0f6de" class="outline-2">
+<h2 id="org6d0f6de">Ventajas de 2FA</h2>
+<div class="outline-text-2" id="text-org6d0f6de">
 <ul class="org-ul">
 <li><b><b>Mayor seguridad</b></b>: Incluso si alguien obtiene tu contraseña, no puede acceder sin el segundo factor.</li>
 <li><b><b>Protección contra ataques comunes</b></b>: Reduce el riesgo de phishing, keyloggers o credenciales robadas.</li>
@@ -750,9 +750,9 @@ Por ejemplo, al iniciar sesión en un servicio, introduces tu contraseña (prime
 </ul>
 </div>
 </div>
-<div id="outline-container-org7164021" class="outline-2">
-<h2 id="org7164021">Inconvenientes de 2FA</h2>
-<div class="outline-text-2" id="text-org7164021">
+<div id="outline-container-org555c22f" class="outline-2">
+<h2 id="org555c22f">Inconvenientes de 2FA</h2>
+<div class="outline-text-2" id="text-org555c22f">
 <ul class="org-ul">
 <li><b><b>Dependencia de dispositivos</b></b>: Si pierdes tu smartphone o no tienes acceso al segundo factor, puedes quedar bloqueado.</li>
 <li><b><b>Complejidad adicional</b></b>: Configurar y usar 2FA puede ser intimidante para usuarios no técnicos.</li>
@@ -761,9 +761,9 @@ Por ejemplo, al iniciar sesión en un servicio, introduces tu contraseña (prime
 </ul>
 </div>
 </div>
-<div id="outline-container-org13fffcc" class="outline-2">
-<h2 id="org13fffcc">Futuro de 2FA</h2>
-<div class="outline-text-2" id="text-org13fffcc">
+<div id="outline-container-org75d9544" class="outline-2">
+<h2 id="org75d9544">Futuro de 2FA</h2>
+<div class="outline-text-2" id="text-org75d9544">
 <p>
 El futuro de 2FA apunta hacia métodos más seguros y cómodos:
 </p>
@@ -775,19 +775,19 @@ El futuro de 2FA apunta hacia métodos más seguros y cómodos:
 </ul>
 </div>
 </div>
-<div id="outline-container-org6e1f14c" class="outline-2">
-<h2 id="org6e1f14c">Diagrama del Proceso de Autenticación 2FA</h2>
-<div class="outline-text-2" id="text-org6e1f14c">
+<div id="outline-container-org58e7503" class="outline-2">
+<h2 id="org58e7503">Diagrama del Proceso de Autenticación 2FA</h2>
+<div class="outline-text-2" id="text-org58e7503">
 
-<figure id="orge66f2bf">
+<figure id="orgefcee64">
 <img src="images/2fa-proceso.png" alt="2fa-proceso.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org5066634" class="outline-2">
-<h2 id="org5066634">¿Qué hacer si no puedes recibir el segundo token?</h2>
-<div class="outline-text-2" id="text-org5066634">
+<div id="outline-container-orgf270532" class="outline-2">
+<h2 id="orgf270532">¿Qué hacer si no puedes recibir el segundo token?</h2>
+<div class="outline-text-2" id="text-orgf270532">
 <p>
 Si no puedes recibir el segundo factor (por ejemplo, no tienes acceso a tu smartphone o SMS), existen alternativas:
 </p>
@@ -800,9 +800,9 @@ Si no puedes recibir el segundo factor (por ejemplo, no tienes acceso a tu smart
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf14271a" class="outline-2">
-<h2 id="orgf14271a">Cómo implementar 2FA en Emacs</h2>
-<div class="outline-text-2" id="text-orgf14271a">
+<div id="outline-container-org4b80e17" class="outline-2">
+<h2 id="org4b80e17">Cómo implementar 2FA en Emacs</h2>
+<div class="outline-text-2" id="text-org4b80e17">
 <p>
 Para usuarios de Emacs, integrar 2FA es sencillo con paquetes como:
 </p>
@@ -822,9 +822,9 @@ Ejemplo de uso con <code>oath</code>:
 </div>
 </div>
 </div>
-<div id="outline-container-orge6e5e2b" class="outline-2">
-<h2 id="orge6e5e2b">Conclusión</h2>
-<div class="outline-text-2" id="text-orge6e5e2b">
+<div id="outline-container-org3405208" class="outline-2">
+<h2 id="org3405208">Conclusión</h2>
+<div class="outline-text-2" id="text-org3405208">
 <p>
 La verificación en dos pasos es una herramienta esencial para proteger tus cuentas y flujos de trabajo en Emacs. Aunque tiene inconvenientes, las ventajas superan ampliamente los riesgos, especialmente en un mundo donde las amenazas cibernéticas son comunes. Configura 2FA, guarda códigos de respaldo y explora paquetes de Emacs para integrarlo en tu entorno. El futuro de 2FA promete ser más seguro y fluido, y Emacs estará listo para adaptarse.
 </p>
