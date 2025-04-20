@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Verificación en Dos Pasos (2FA): Seguridad Reforzada">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Verificación en Dos Pasos (2FA): Seguridad Reforzada en Emacs con Esteroides</title>
+<meta charset='UTF-8'>
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.8em; .85
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
+       </nav>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">20/04/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-20-verificación-en-dos-pasos-(2fa):-seguridad-reforzada-en-emacs-con-esteroides.html">Verificación en Dos Pasos (2FA): Seguridad Reforzada en Emacs con Esteroides</a></h1>
+<div id="outline-container-org509a0e1" class="outline-2">
+<h2 id="org509a0e1">Introducción a la Verificación en Dos Pasos (2FA)</h2>
+<div class="outline-text-2" id="text-org509a0e1">
+<p>
+La verificación en dos pasos, también conocida como autenticación de dos factores (2FA), es un método de seguridad que requiere dos formas de identificación para acceder a una cuenta o sistema. En lugar de depender únicamente de una contraseña, 2FA agrega una capa adicional, como un código temporal enviado a un dispositivo o generado por una aplicación. En el contexto de Emacs, donde manejamos configuraciones sensibles o integramos servicios como correo o APIs, implementar 2FA puede ser crucial.
+</p>
+
+
+<figure id="org7257232">
+<img src="images/2fsa.png" alt="2fsa.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org7db7dbe" class="outline-2">
+<h2 id="org7db7dbe">¿Qué es 2FA y cómo funciona?</h2>
+<div class="outline-text-2" id="text-org7db7dbe">
+<p>
+2FA combina dos de los siguientes factores:
+</p>
+<ol class="org-ol">
+<li><b><b>Algo que sabes</b></b>: Una contraseña o PIN.</li>
+<li><b><b>Algo que tienes</b></b>: Un dispositivo físico (smartphone, token físico) que recibe o genera un código.</li>
+<li><b><b>Algo que eres</b></b>: Biometría (huella dactilar, reconocimiento facial), aunque menos común en 2FA estándar.</li>
+</ol>
+
+<p>
+Por ejemplo, al iniciar sesión en un servicio, introduces tu contraseña (primer factor) y luego un código temporal enviado por SMS, correo, o generado por una app como Google Authenticator (segundo factor).
+</p>
+</div>
+</div>
+<div id="outline-container-orged23948" class="outline-2">
+<h2 id="orged23948">Ventajas de 2FA</h2>
+<div class="outline-text-2" id="text-orged23948">
+<ul class="org-ul">
+<li><b><b>Mayor seguridad</b></b>: Incluso si alguien obtiene tu contraseña, no puede acceder sin el segundo factor.</li>
+<li><b><b>Protección contra ataques comunes</b></b>: Reduce el riesgo de phishing, keyloggers o credenciales robadas.</li>
+<li><b><b>Fácil integración en Emacs</b></b>: Herramientas como <code>auth-source</code> y paquetes como <code>oath</code> permiten gestionar tokens 2FA directamente desde Emacs.</li>
+<li><b><b>Adaptabilidad</b></b>: Compatible con múltiples plataformas (correo, GitHub, servicios en la nube).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7164021" class="outline-2">
+<h2 id="org7164021">Inconvenientes de 2FA</h2>
+<div class="outline-text-2" id="text-org7164021">
+<ul class="org-ul">
+<li><b><b>Dependencia de dispositivos</b></b>: Si pierdes tu smartphone o no tienes acceso al segundo factor, puedes quedar bloqueado.</li>
+<li><b><b>Complejidad adicional</b></b>: Configurar y usar 2FA puede ser intimidante para usuarios no técnicos.</li>
+<li><b><b>Tiempo</b></b>: Ingresar un segundo factor alarga el proceso de inicio de sesión.</li>
+<li><b><b>Vulnerabilidades específicas</b></b>: Los ataques de ingeniería social (como SIM swapping) pueden comprometer métodos como SMS.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org13fffcc" class="outline-2">
+<h2 id="org13fffcc">Futuro de 2FA</h2>
+<div class="outline-text-2" id="text-org13fffcc">
+<p>
+El futuro de 2FA apunta hacia métodos más seguros y cómodos:
+</p>
+<ul class="org-ul">
+<li><b><b>Claves de hardware</b></b>: Dispositivos como YubiKey o Titan Security Key están ganando popularidad por su resistencia a ataques remotos.</li>
+<li><b><b>Autenticación sin contraseña</b></b>: Tecnologías como WebAuthn permiten usar dispositivos como autenticadores principales, eliminando la necesidad de contraseñas.</li>
+<li><b><b>Biometría avanzada</b></b>: Aunque plantea preocupaciones de privacidad, la biometría podría integrarse más en 2FA.</li>
+<li><b><b>Mejor integración en Emacs</b></b>: Paquetes como <code>pass</code> o <code>auth-source</code> podrían evolucionar para soportar claves de hardware o WebAuthn directamente.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6e1f14c" class="outline-2">
+<h2 id="org6e1f14c">Diagrama del Proceso de Autenticación 2FA</h2>
+<div class="outline-text-2" id="text-org6e1f14c">
+
+<figure id="orge66f2bf">
+<img src="images/2fa-proceso.png" alt="2fa-proceso.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org5066634" class="outline-2">
+<h2 id="org5066634">¿Qué hacer si no puedes recibir el segundo token?</h2>
+<div class="outline-text-2" id="text-org5066634">
+<p>
+Si no puedes recibir el segundo factor (por ejemplo, no tienes acceso a tu smartphone o SMS), existen alternativas:
+</p>
+<ol class="org-ol">
+<li><b><b>Códigos de respaldo</b></b>: Muchos servicios ofrecen códigos de recuperación generados al activar 2FA. Guárdalos en un lugar seguro, como un administrador de contraseñas integrado en Emacs (<code>pass</code> o <code>password-store</code>).</li>
+<li><b><b>Apps de autenticación offline</b></b>: Aplicaciones como FreeOTP o Aegis generan códigos sin necesidad de conexión a internet.</li>
+<li><b><b>Claves de hardware</b></b>: Un dispositivo físico como YubiKey no depende de SMS ni smartphones.</li>
+<li><b><b>Contacto con soporte</b></b>: Algunos servicios permiten recuperar la cuenta mediante verificación manual, aunque puede ser lento.</li>
+<li><b><b>Configuración previa en Emacs</b></b>: Usa <code>auth-source</code> para almacenar credenciales de respaldo o scripts que automaticen la recuperación.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgf14271a" class="outline-2">
+<h2 id="orgf14271a">Cómo implementar 2FA en Emacs</h2>
+<div class="outline-text-2" id="text-orgf14271a">
+<p>
+Para usuarios de Emacs, integrar 2FA es sencillo con paquetes como:
+</p>
+<ul class="org-ul">
+<li><b><b><code>oath</code></b></b>: Genera códigos TOTP (Time-based One-Time Password) desde Emacs.</li>
+<li><b><b><code>pass</code></b></b>: Administra contraseñas y códigos de respaldo.</li>
+<li><b><b><code>notmuch</code> o <code>mu4e</code></b></b>: Configura 2FA para cuentas de correo.</li>
+</ul>
+
+<p>
+Ejemplo de uso con <code>oath</code>:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">oath</span>)
+(oath-generate <span style="color: #005F00;">"tu-clave-secreta-aqui"</span>) <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Genera un c&#243;digo TOTP</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge6e5e2b" class="outline-2">
+<h2 id="orge6e5e2b">Conclusión</h2>
+<div class="outline-text-2" id="text-orge6e5e2b">
+<p>
+La verificación en dos pasos es una herramienta esencial para proteger tus cuentas y flujos de trabajo en Emacs. Aunque tiene inconvenientes, las ventajas superan ampliamente los riesgos, especialmente en un mundo donde las amenazas cibernéticas son comunes. Configura 2FA, guarda códigos de respaldo y explora paquetes de Emacs para integrarlo en tu entorno. El futuro de 2FA promete ser más seguro y fluido, y Emacs estará listo para adaptarse.
+</p>
+
+<blockquote>
+<p>
+"La seguridad no es un destino, es un viaje. ¡Que Emacs sea tu compañero en él!" – Emacs con Esteroides
+</p>
+</blockquote>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-2fa.html">2FA</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-autenticación.html">autenticación</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">Emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>
