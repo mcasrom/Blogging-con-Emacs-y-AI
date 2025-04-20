@@ -4,7 +4,7 @@
 <title><![CDATA[Example.com - blog]]></title>
 <description><![CDATA[Example.com - blog]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-blog.html</link>
-<lastBuildDate>Fri, 18 Apr 2025 10:32:52 +0200</lastBuildDate>
+<lastBuildDate>Sun, 20 Apr 2025 02:58:13 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -650,19 +650,25 @@
 </tr>
 
 <tr>
+<td class="org-right">2025-04-19</td>
+<td class="org-left">Guía de GitHub con Git: Creación, Desarrollo, Uso y Ejemplo Práctico</td>
+<td class="org-left"><a href="2025-04-19-guía-de-github-con-git:-creación,-desarrollo,-uso-y-ejemplo-práctico.html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
 </tr>
 
 <tr>
-<td class="org-right">2025-04-17</td>
+<td class="org-right">2025-04-19</td>
 <td class="org-left">Artículos recientes sobre geopolítica y estrategia</td>
 <td class="org-left"><a href="geopolitica.html">Enlace</a></td>
 </tr>
 
 <tr>
-<td class="org-right">2025-04-18</td>
+<td class="org-right">2025-04-20</td>
 <td class="org-left">Índice de Publicaciones del Blog</td>
 <td class="org-left"><a href="indice-posts.html">Enlace</a></td>
 </tr>
@@ -691,7 +697,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Fri, 18 Apr 2025 10:29:00 +0200</pubDate>
+  <pubDate>Sun, 20 Apr 2025 02:51:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Emacs con Esteroides: Configurar un Contador de Visitantes para el Blog]]></title>

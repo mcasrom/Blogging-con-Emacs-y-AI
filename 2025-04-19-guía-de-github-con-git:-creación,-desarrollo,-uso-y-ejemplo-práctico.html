@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Guía de GitHub con Git: Creación, Desarrollo, Uso y Ejemplo Práctico">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Guía de GitHub con Git: Creación, Desarrollo, Uso y Ejemplo Práctico</title>
+<meta charset='UTF-8'>
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.8em; .85
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
+       </nav>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">19/04/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-19-guía-de-github-con-git:-creación,-desarrollo,-uso-y-ejemplo-práctico.html">Guía de GitHub con Git: Creación, Desarrollo, Uso y Ejemplo Práctico</a></h1>
+<div id="outline-container-orgbf79f7c" class="outline-2">
+<h2 id="orgbf79f7c">Introducción</h2>
+<div class="outline-text-2" id="text-orgbf79f7c">
+<p>
+GitHub es la plataforma líder para colaboración y control de versiones, pero su núcleo es <b><b>Git</b></b>, un sistema distribuido de control de versiones que permite gestionar cambios en el código de manera eficiente. Este post combina una introducción a Git con una guía completa sobre GitHub, cubriendo la creación de repositorios, desarrollo de proyectos, uso de funcionalidades avanzadas y un ejemplo práctico. Aprenderás a usar Git para versionar tu código y GitHub para colaborar, automatizar y publicar proyectos.
+</p>
+</div>
+</div>
+<div id="outline-container-orge8e96c3" class="outline-2">
+<h2 id="orge8e96c3">¿Qué es Git?</h2>
+<div class="outline-text-2" id="text-orge8e96c3">
+<p>
+Git es un sistema de control de versiones distribuido, creado por Linus Torvalds en 2005, que permite:
+</p>
+<ul class="org-ul">
+<li><b><b>Rastrear cambios</b></b>: Registra modificaciones en archivos, permitiendo revertir o comparar versiones.</li>
+<li><b><b>Trabajo distribuido</b></b>: Cada desarrollador tiene una copia completa del repositorio, incluyendo su historial.</li>
+<li><b><b>Ramificación</b></b>: Crea ramas para desarrollar funciones en paralelo sin afectar la rama principal.</li>
+<li><b><b>Colaboración</b></b>: Facilita la fusión de cambios de múltiples colaboradores.</li>
+</ul>
+
+<p>
+<b><b>Conceptos clave de Git</b></b>:
+</p>
+<ul class="org-ul">
+<li><b><b>Repositorio</b></b>: Carpeta que contiene el proyecto y su historial de cambios.</li>
+<li><b><b>Commit</b></b>: Instantánea de los cambios en un momento específico.</li>
+<li><b><b>Rama (branch)</b></b>: Línea de desarrollo independiente (por ejemplo, <code>main</code> o <code>feature/xxx</code>).</li>
+<li><b><b>Merge</b></b>: Combina cambios de una rama a otra.</li>
+<li><b><b>Remote</b></b>: Repositorio alojado en un servidor (como GitHub).</li>
+</ul>
+
+<p>
+Git es la base de GitHub, que añade herramientas de colaboración, interfaz web y automatización sobre los repositorios Git.
+</p>
+</div>
+</div>
+<div id="outline-container-org801d5e1" class="outline-2">
+<h2 id="org801d5e1">¿Qué es GitHub?</h2>
+<div class="outline-text-2" id="text-org801d5e1">
+<p>
+GitHub es un servicio en la nube que hospeda repositorios Git, ofreciendo:
+</p>
+<ul class="org-ul">
+<li>Control de versiones con Git.</li>
+<li>Colaboración mediante issues, pull requests y revisiones de código.</li>
+<li>Automatización con GitHub Actions.</li>
+<li>Hospedaje de sitios web con GitHub Pages.</li>
+<li>Gestión de proyectos con tableros y wikis.</li>
+</ul>
+
+<p>
+Fundada en 2008 y adquirida por Microsoft en 2018, GitHub es esencial para desarrolladores, con millones de usuarios y repositorios.
+</p>
+</div>
+</div>
+<div id="outline-container-org6459630" class="outline-2">
+<h2 id="org6459630">Diagrama PlantUML: Referencias y Flujo de Git</h2>
+<div class="outline-text-2" id="text-org6459630">
+<p>
+El siguiente diagrama combina una vista estructural (repositorio con commits, ramas, tags y HEAD) y un flujo de trabajo típico (commit, branch, merge).
+</p>
+
+
+
+<figure id="org5458e59">
+<img src="images/funciones-git-github.png" alt="funciones-git-github.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orga80d5c5" class="outline-2">
+<h2 id="orga80d5c5">Requisitos</h2>
+<div class="outline-text-2" id="text-orga80d5c5">
+<ul class="org-ul">
+<li>Cuenta en GitHub (crea una en <a href="https://github.com/signup">https://github.com/signup</a>).</li>
+<li>Git instalado (descarga desde <a href="https://git-scm.com/">https://git-scm.com/</a>).</li>
+<li>Editor de texto o IDE (por ejemplo, Emacs, VS Code).</li>
+<li>Conocimientos básicos de terminal.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7206201" class="outline-2">
+<h2 id="org7206201">Instalación y configuración de Git</h2>
+<div class="outline-text-2" id="text-org7206201">
+<ol class="org-ol">
+<li><b><b>Instala Git</b></b>:
+<ul class="org-ul">
+<li><p>
+En Linux:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt-get install git  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Debian/Ubuntu</span>
+sudo dnf install git      <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Fedora</span>
+</pre>
+</div></li>
+<li>En macOS: <code>brew install git</code>.</li>
+<li>En Windows: Descarga el instalador desde <a href="https://git-scm.com/">https://git-scm.com/</a>.</li>
+</ul></li>
+
+<li><p>
+<b><b>Configura tu identidad</b></b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">git config --global user.name <span style="color: #005F00;">"Tu Nombre"</span>
+git config --global user.email <span style="color: #005F00;">"tu.email@ejemplo.com"</span>
+</pre>
+</div></li>
+
+<li><p>
+<b><b>Verifica la instalación</b></b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">git --version
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org61e87ff" class="outline-2">
+<h2 id="org61e87ff">Creación de un repositorio en GitHub</h2>
+<div class="outline-text-2" id="text-org61e87ff">
+<p>
+Sigue estos pasos para crear un repositorio y conectarlo con Git localmente:
+</p>
+
+<ol class="org-ol">
+<li><b><b>Inicia sesión en GitHub</b></b>:
+<ul class="org-ul">
+<li>Accede a <a href="https://github.com">https://github.com</a> y haz clic en <b>Sign in</b> o <b>Sign up</b>.</li>
+</ul></li>
+
+<li><b><b>Crea un nuevo repositorio</b></b>:
+<ul class="org-ul">
+<li>Haz clic en <b>New</b> (o <b>+ &gt; New repository</b>).</li>
+<li>Configura:
+<ul class="org-ul">
+<li><b>Repository name</b>: Por ejemplo, <code>mi-proyecto</code>.</li>
+<li><b>Description</b> (opcional): Breve descripción.</li>
+<li><b>Public/Private</b>: Público o privado.</li>
+<li><b>Initialize this repository with a README</b>: Marca esta opción.</li>
+<li>Añade un <code>.gitignore</code> (por ejemplo, Python) y una licencia (por ejemplo, MIT).</li>
+</ul></li>
+<li>Haz clic en <b>Create repository</b>.</li>
+</ul></li>
+
+<li><b><b>Clona el repositorio localmente</b></b>:
+<ul class="org-ul">
+<li>Copia la URL (por ejemplo, <code>https://github.com/tu-usuario/mi-proyecto.git</code>).</li>
+<li><p>
+Ejecuta:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">git clone https://github.com/tu-usuario/mi-proyecto.git
+<span style="color: #1F55A0;">cd</span> mi-proyecto
+</pre>
+</div></li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org46d1a02" class="outline-2">
+<h2 id="org46d1a02">Desarrollo con Git y GitHub</h2>
+<div class="outline-text-2" id="text-org46d1a02">
+<p>
+El desarrollo combina comandos Git para versionado local con GitHub para colaboración remota.
+</p>
+
+<ol class="org-ol">
+<li><b><b>Crea una rama</b></b>:
+<ul class="org-ul">
+<li><p>
+Evita modificar <code>main</code> directamente:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">git checkout -b feature/nueva-funcionalidad
+</pre>
+</div></li>
+</ul></li>
+
+<li><b><b>Realiza cambios y commits</b></b>:
+<ul class="org-ul">
+<li>Edita archivos (por ejemplo, crea un <code>index.html</code>).</li>
+<li><p>
+Añade y commitea:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">git add .
+git commit -m <span style="color: #005F00;">"A&#241;ade p&#225;gina principal"</span>
+</pre>
+</div></li>
+</ul></li>
+
+<li><b><b>Sube cambios a GitHub</b></b>:
+<ul class="org-ul">
+<li><p>
+Envía la rama al remoto:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">git push origin feature/nueva-funcionalidad
+</pre>
+</div></li>
+</ul></li>
+
+<li><b><b>Crea un Pull Request (PR)</b></b>:
+<ul class="org-ul">
+<li>En GitHub, selecciona la rama <code>feature/nueva-funcionalidad</code>.</li>
+<li>Haz clic en <b>Compare &amp; pull request</b>.</li>
+<li>Añade una descripción y crea el PR.</li>
+<li>Revisa y fusiona a <code>main</code> con <b>Merge pull request</b>.</li>
+</ul></li>
+
+<li><b><b>Sincroniza localmente</b></b>:
+<ul class="org-ul">
+<li><p>
+Cambia a <code>main</code> y actualiza:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">git checkout main
+git pull origin main
+</pre>
+</div></li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orge74f363" class="outline-2">
+<h2 id="orge74f363">Uso de funcionalidades clave de GitHub</h2>
+<div class="outline-text-2" id="text-orge74f363">
+<p>
+GitHub extiende Git con herramientas de colaboración y automatización:
+</p>
+
+<ol class="org-ol">
+<li><b><b>Issues</b></b>:
+<ul class="org-ul">
+<li>Reporta errores o planifica tareas en <b>Issues &gt; New issue</b>.</li>
+<li>Ejemplo: "Arreglar error en login (#1)" con etiqueta <code>bug</code>.</li>
+</ul></li>
+
+<li><b><b>GitHub Actions</b></b>:
+<ul class="org-ul">
+<li><p>
+Automatiza pruebas o despliegues. Crea <code>.github/workflows/ci.yml</code>:
+</p>
+<div class="org-src-container">
+<pre class="src src-yaml"><span style="color: #004651;">name</span>: CI
+<span style="color: #AF005F;">on</span>: [push]
+<span style="color: #004651;">jobs</span>:
+  <span style="color: #004651;">test</span>:
+    <span style="color: #004651;">runs-on</span>: ubuntu-latest
+    <span style="color: #004651;">steps</span>:
+      - <span style="color: #004651;">uses</span>: actions/checkout@v3
+      - <span style="color: #004651;">name</span>: Set up Python
+        <span style="color: #004651;">uses</span>: actions/setup-python@v4
+        <span style="color: #004651;">with</span>:
+          <span style="color: #004651;">python-version</span>: <span style="color: #005F00;">'3.9'</span>
+      - <span style="color: #004651;">name</span>: Run tests
+        <span style="color: #004651;">run</span>: echo <span style="color: #005F00;">"Ejecutando pruebas..."</span>
+</pre>
+</div></li>
+<li>Git registra los cambios en el archivo y GitHub ejecuta el flujo.</li>
+</ul></li>
+
+<li><b><b>GitHub Pages</b></b>:
+<ul class="org-ul">
+<li>Hospeda sitios estáticos en <b>Settings &gt; Pages</b>, seleccionando <code>main</code> y <code>/ (root)</code>.</li>
+<li>Ejemplo: Sube <code>index.html</code> y accede en <code>https://tu-usuario.github.io/mi-proyecto</code>.</li>
+</ul></li>
+
+<li><b><b>Colaboración</b></b>:
+<ul class="org-ul">
+<li>Invita colaboradores en <b>Settings &gt; Collaborators</b>.</li>
+<li>Usa <b>Projects</b> para tableros Kanban.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orge76bfb4" class="outline-2">
+<h2 id="orge76bfb4">Ejemplo práctico: Proyecto web con Git y GitHub</h2>
+<div class="outline-text-2" id="text-orge76bfb4">
+<p>
+Crearemos una página web estática, la versionaremos con Git y la publicaremos en GitHub Pages.
+</p>
+
+<ol class="org-ol">
+<li><b><b>Crea el repositorio</b></b>:
+<ul class="org-ul">
+<li>Nombre: <code>mi-pagina-web</code>.</li>
+<li>Público, con README, <code>.gitignore</code> (HTML), licencia MIT.</li>
+</ul></li>
+
+<li><p>
+<b><b>Clona y configura</b></b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">git clone https://github.com/tu-usuario/mi-pagina-web.git
+<span style="color: #1F55A0;">cd</span> mi-pagina-web
+</pre>
+</div></li>
+
+<li><p>
+<b><b>Crea <code>index.html</code></b></b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="color: #D70000;">!DOCTYPE</span> html&gt;
+&lt;<span style="color: #AF8700;">html</span>&gt;
+&lt;<span style="color: #AF8700;">head</span>&gt;
+    &lt;<span style="color: #AF8700;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Mi P&#225;gina Web</span>&lt;/<span style="color: #AF8700;">title</span>&gt;
+&lt;/<span style="color: #AF8700;">head</span>&gt;
+&lt;<span style="color: #AF8700;">body</span>&gt;
+    &lt;<span style="color: #AF8700;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Bienvenido a mi sitio</span>&lt;/<span style="color: #AF8700;">h1</span>&gt;
+    &lt;<span style="color: #AF8700;">p</span>&gt;Este es un ejemplo para GitHub.&lt;/<span style="color: #AF8700;">p</span>&gt;
+&lt;/<span style="color: #AF8700;">body</span>&gt;
+&lt;/<span style="color: #AF8700;">html</span>&gt;
+</pre>
+</div></li>
+
+<li><p>
+<b><b>Commitea y sube</b></b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">git add index.html
+git commit -m <span style="color: #005F00;">"A&#241;ade p&#225;gina inicial"</span>
+git push origin main
+</pre>
+</div></li>
+
+<li><b><b>Habilita GitHub Pages</b></b>:
+<ul class="org-ul">
+<li>En <b>Settings &gt; Pages</b>, selecciona <code>main</code> y <code>/ (root)</code>.</li>
+<li>Accede a <code>https://tu-usuario.github.io/mi-pagina-web</code> tras unos minutos.</li>
+</ul></li>
+
+<li><p>
+<b><b>Añade mejoras en una rama</b></b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">git checkout -b feature/estilos
+</pre>
+</div>
+<ul class="org-ul">
+<li><p>
+Crea <code>styles.css</code>:
+</p>
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #1F55A0;">body</span> {
+    <span style="color: #005F00;">font-family</span>: Arial, sans-serif;
+    <span style="color: #005F00;">text-align</span>: center;
+}
+<span style="color: #1F55A0;">h1</span> {
+    <span style="color: #005F00;">color</span>: <span style="color: #ffffff; background-color: #000080;">navy</span>;
+}
+</pre>
+</div></li>
+<li><p>
+Actualiza <code>index.html</code>:
+</p>
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="color: #AF8700;">head</span>&gt;
+    &lt;<span style="color: #AF8700;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Mi P&#225;gina Web</span>&lt;/<span style="color: #AF8700;">title</span>&gt;
+    &lt;<span style="color: #AF8700;">link</span> <span style="color: #004651;">rel</span>=<span style="color: #005F00;">"stylesheet"</span> <span style="color: #004651;">href</span>=<span style="color: #005F00;">"styles.css"</span>&gt;
+&lt;/<span style="color: #AF8700;">head</span>&gt;
+</pre>
+</div></li>
+<li><p>
+Commitea y sube:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">git add .
+git commit -m <span style="color: #005F00;">"A&#241;ade estilos CSS"</span>
+git push origin feature/estilos
+</pre>
+</div></li>
+</ul></li>
+
+<li><b><b>Crea y fusiona un Pull Request</b></b>:
+<ul class="org-ul">
+<li>En GitHub, crea un PR para <code>feature/estilos</code>.</li>
+<li>Fusiona a <code>main</code> y verifica la página actualizada.</li>
+</ul></li>
+
+<li><p>
+<b><b>Sincroniza localmente</b></b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">git checkout main
+git pull origin main
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org03de3b0" class="outline-2">
+<h2 id="org03de3b0">Consejos avanzados</h2>
+<div class="outline-text-2" id="text-org03de3b0">
+<ul class="org-ul">
+<li><p>
+<b><b>Claves SSH para Git</b></b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">ssh-keygen -t ed25519 -C <span style="color: #005F00;">"tu.email@ejemplo.com"</span>
+git remote set-url origin git@github.com:tu-usuario/mi-proyecto.git
+</pre>
+</div></li>
+<li><p>
+<b><b>GitHub CLI</b></b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">gh repo create mi-proyecto --public
+</pre>
+</div></li>
+<li><p>
+<b><b>Git rebase</b></b>: Resuelve conflictos complejos:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">git rebase main
+</pre>
+</div></li>
+<li><b><b>Wikis</b></b>: Documenta tu proyecto en la pestaña <b>Wiki</b>.</li>
+<li><b><b>Integraciones</b></b>: Conecta con Slack, Jira o CI/CD.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfe9a0eb" class="outline-2">
+<h2 id="orgfe9a0eb">Lista de comandos Git</h2>
+<div class="outline-text-2" id="text-orgfe9a0eb">
+<p>
+A continuación, una lista organizada de comandos Git esenciales:
+</p>
+</div>
+<div id="outline-container-orgd576d69" class="outline-3">
+<h3 id="orgd576d69">Inicialización y configuración</h3>
+<div class="outline-text-3" id="text-orgd576d69">
+<div class="org-src-container">
+<pre class="src src-bash">git init                   <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Inicia un nuevo repositorio</span>
+git clone &lt;url&gt;            <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Clona un repositorio remoto</span>
+git config --global user.name <span style="color: #005F00;">"Nombre"</span>  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Configura nombre</span>
+git config --global user.email <span style="color: #005F00;">"email"</span>  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Configura email</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org89058c2" class="outline-3">
+<h3 id="org89058c2">Gestión de cambios</h3>
+<div class="outline-text-3" id="text-org89058c2">
+<div class="org-src-container">
+<pre class="src src-bash">git add &lt;archivo&gt;          <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">A&#241;ade archivo al staging</span>
+git add .                  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">A&#241;ade todos los cambios</span>
+git commit -m <span style="color: #005F00;">"Mensaje"</span>    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Crea un commit</span>
+git status                 <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Muestra estado del repositorio</span>
+git diff                   <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Muestra diferencias no confirmadas</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org4a9580d" class="outline-3">
+<h3 id="org4a9580d">Ramas y referencias</h3>
+<div class="outline-text-3" id="text-org4a9580d">
+<div class="org-src-container">
+<pre class="src src-bash">git branch                 <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Lista ramas</span>
+git branch &lt;nombre&gt;        <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Crea una rama</span>
+git checkout &lt;rama&gt;        <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Cambia a una rama</span>
+git checkout -b &lt;rama&gt;     <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Crea y cambia a una rama</span>
+git merge &lt;rama&gt;           <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Fusiona rama en la actual</span>
+git tag &lt;nombre&gt;           <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Crea un tag</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfe2b631" class="outline-3">
+<h3 id="orgfe2b631">Interacción con remotos</h3>
+<div class="outline-text-3" id="text-orgfe2b631">
+<div class="org-src-container">
+<pre class="src src-bash">git remote add origin &lt;url&gt;  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">A&#241;ade un remoto</span>
+git push origin &lt;rama&gt;       <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Sube rama al remoto</span>
+git pull origin &lt;rama&gt;       <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Descarga y fusiona cambios</span>
+git fetch origin             <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Descarga cambios sin fusionar</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org0e0ef40" class="outline-3">
+<h3 id="org0e0ef40">Inspección y comparación</h3>
+<div class="outline-text-3" id="text-org0e0ef40">
+<div class="org-src-container">
+<pre class="src src-bash">git log                    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Muestra historial de commits</span>
+git log --oneline --graph  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Historial compacto con ramas</span>
+git show &lt;commit&gt;          <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Detalles de un commit</span>
+git blame &lt;archivo&gt;        <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Muestra autor por l&#237;nea</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1394226" class="outline-3">
+<h3 id="org1394226">Corrección de errores</h3>
+<div class="outline-text-3" id="text-org1394226">
+<div class="org-src-container">
+<pre class="src src-bash">git reset &lt;archivo&gt;        <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Quita archivo del staging</span>
+git reset --hard &lt;commit&gt;  <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Revierte al commit</span>
+git revert &lt;commit&gt;         <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Crea un commit que deshace cambios</span>
+git rebase &lt;rama&gt;          <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Reorganiza historial</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfd1b8c5" class="outline-2">
+<h2 id="orgfd1b8c5">Ejemplo práctico</h2>
+<div class="outline-text-2" id="text-orgfd1b8c5">
+<ol class="org-ol">
+<li><p>
+Crea un repositorio:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">mkdir mi-proyecto
+<span style="color: #1F55A0;">cd</span> mi-proyecto
+git init
+</pre>
+</div></li>
+
+<li><p>
+Añade un archivo y commitea:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"# Mi Proyecto"</span> &gt; README.md
+git add README.md
+git commit -m <span style="color: #005F00;">"Initial commit"</span>
+</pre>
+</div></li>
+
+<li><p>
+Crea una rama y un tag:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">git checkout -b feature/nueva
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Nueva funci&#243;n"</span> &gt;&gt; feature.txt
+git add feature.txt
+git commit -m <span style="color: #005F00;">"A&#241;ade feature"</span>
+git tag v1.0
+</pre>
+</div></li>
+
+<li><p>
+Fusiona y sube a GitHub:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">git checkout main
+git merge feature/nueva
+git remote add origin https://github.com/tu-usuario/mi-proyecto.git
+git push origin main
+git push origin v1.0
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgcb6ba8f" class="outline-2">
+<h2 id="orgcb6ba8f">Conclusión</h2>
+<div class="outline-text-2" id="text-orgcb6ba8f">
+<p>
+Git proporciona el control de versiones robusto que GitHub potencia con colaboración, automatización y publicación. Este post te ha guiado desde los fundamentos de Git hasta la creación de un proyecto en GitHub, incluyendo un ejemplo práctico de una página web. Con estas herramientas, puedes gestionar proyectos de cualquier escala. ¡Crea tu próximo repositorio y explora el potencial de Git y GitHub!
+</p>
+
+<blockquote>
+<p>
+"Git versiona tu código; GitHub conecta tus ideas con el mundo." — Anónimo
+</p>
+</blockquote>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-git.html">Git</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-github.html">GitHub</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-versionado.html">versionado</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-colaboración.html">colaboración</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-desarrollo.html">desarrollo</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>
