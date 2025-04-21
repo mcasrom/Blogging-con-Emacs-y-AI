@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Descubre cómo dominar Pass, el gestor de contraseñas estándar para sistemas Unix/Linux.">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Instalación y Uso Completo de Pass: El Gestor de Contraseñas Estándar de Unix</title>
+<meta charset='UTF-8'>
+ <!-- ======= SEO y Redes Sociales ======= -->
+       <meta name='author' content='Mike'>
+       <meta name='description' content='Blog sobre Emacs, org-mode, automatización y herramientas avanzadas'>
+       <meta name='keywords' content='Emacs, Org Mode, Linux, Inteligencia Artificial, Automatización, Tutoriales'>
+       <meta property='og:title' content='Emacs con esteroides'>
+       <meta property='og:description' content='Poder y Simplicidad con Emacs, IA y Linux'>
+       <meta property='og:image' content='https://mcasrom.github.io/logo.png'>
+       <meta property='og:url' content='https://mcasrom.github.io/'>
+       <meta property='og:type' content='website'>
+       <meta name='twitter:card' content='summary_large_image'>
+       <meta name='twitter:title' content='Emacs con esteroides'>
+       <meta name='twitter:description' content='Blog sobre Emacs, IA y herramientas avanzadas'>
+       <meta name='twitter:image' content='https://tuusuario.github.io/logo.png'>
+       <link rel='alternate' type='application/rss+xml' href='rss.xml'>
+       <link rel='sitemap' type='application/xml' title='Sitemap' href='sitemap.xml'>
+       <!-- ======= Estilo y Fuentes ======= -->
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.8em; .85
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
+       </nav>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">21/04/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-21-instalación-y-uso-completo-de-pass:-el-gestor-de-contraseñas-estándar-de-unix.html">Instalación y Uso Completo de Pass: El Gestor de Contraseñas Estándar de Unix</a></h1>
+<div id="outline-container-org916df15" class="outline-2">
+<h2 id="org916df15">Introducción a Pass: El gestor de contraseñas estándar de Unix</h2>
+<div class="outline-text-2" id="text-org916df15">
+<p>
+<code>pass</code> (también conocido como "password-store") es una herramienta simple pero potente para gestionar contraseñas en sistemas Linux y Unix. Diseñado bajo la filosofía Unix de "hacer una cosa y hacerla bien", <code>pass</code> proporciona una interfaz de línea de comandos ligera para almacenar, recuperar y gestionar contraseñas de forma segura.
+</p>
+
+<p>
+Las principales ventajas de <code>pass</code> incluyen:
+</p>
+
+<ul class="org-ul">
+<li><b>Simplicidad</b>: Interfaz de línea de comandos intuitiva</li>
+<li><b>Seguridad</b>: Cifrado GPG para todas las contraseñas</li>
+<li><b>Flexibilidad</b>: Almacenamiento basado en archivos que puede sincronizarse fácilmente</li>
+<li><b>Extensibilidad</b>: Numerosas extensiones disponibles</li>
+<li><b>Integración</b>: Compatible con diferentes herramientas y flujos de trabajo</li>
+</ul>
+
+<p>
+Este artículo guiará al lector a través de la instalación, configuración y uso diario de <code>pass</code>, desde operaciones básicas hasta escenarios avanzados.
+</p>
+
+
+<figure id="org1f75759">
+<img src="images/pass-architecture.png" alt="pass-architecture.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orga8750df" class="outline-2">
+<h2 id="orga8750df">Instalación</h2>
+<div class="outline-text-2" id="text-orga8750df">
+</div>
+<div id="outline-container-orgc033a5c" class="outline-3">
+<h3 id="orgc033a5c">Requisitos previos</h3>
+<div class="outline-text-3" id="text-orgc033a5c">
+<p>
+Antes de instalar <code>pass</code>, necesitamos asegurarnos de tener GnuPG instalado, ya que <code>pass</code> lo utiliza para el cifrado:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">En distribuciones basadas en Debian/Ubuntu</span>
+sudo apt update
+sudo apt install gnupg2
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">En distribuciones basadas en Red Hat/Fedora</span>
+sudo dnf install gnupg2
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">En Arch Linux</span>
+sudo pacman -S gnupg
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org39eabc1" class="outline-3">
+<h3 id="org39eabc1">Instalación de Pass</h3>
+<div class="outline-text-3" id="text-org39eabc1">
+<p>
+La instalación de <code>pass</code> es sencilla en la mayoría de las distribuciones Linux:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">En distribuciones basadas en Debian/Ubuntu</span>
+sudo apt install pass
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">En distribuciones basadas en Red Hat/Fedora</span>
+sudo dnf install pass
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">En Arch Linux</span>
+sudo pacman -S pass
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">En openSUSE</span>
+sudo zypper install password-store
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org139fe0e" class="outline-3">
+<h3 id="org139fe0e">Generación de una clave GPG (si aún no tienes una)</h3>
+<div class="outline-text-3" id="text-org139fe0e">
+<p>
+Para usar <code>pass</code>, necesitas una clave GPG. Si ya tienes una, puedes saltarte este paso. Si no, puedes crear una con el siguiente comando:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">gpg --full-generate-key
+</pre>
+</div>
+
+<p>
+Sigue las instrucciones para crear tu clave. Recomendaciones:
+</p>
+<ul class="org-ul">
+<li>Tipo de clave: RSA and RSA (predeterminado)</li>
+<li>Tamaño de clave: 4096 bits</li>
+<li>Expiración: depende de tus necesidades (1-2 años es una buena práctica)</li>
+<li>Introduce tu nombre, correo electrónico y un comentario opcional</li>
+<li>Establece una contraseña segura para proteger tu clave privada</li>
+</ul>
+
+<p>
+Para verificar que tu clave se ha creado correctamente:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">gpg --list-secret-keys --keyid-format LONG
+</pre>
+</div>
+
+<p>
+Anota el ID de tu clave GPG (una cadena alfanumérica larga) que aparece después de "sec rsa4096/". Lo necesitarás para inicializar <code>pass</code>.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org075bc13" class="outline-2">
+<h2 id="org075bc13">Configuración inicial</h2>
+<div class="outline-text-2" id="text-org075bc13">
+</div>
+<div id="outline-container-org2c9532a" class="outline-3">
+<h3 id="org2c9532a">Inicialización del almacén de contraseñas</h3>
+<div class="outline-text-3" id="text-org2c9532a">
+<p>
+Inicializa tu almacén de contraseñas con el ID de tu clave GPG:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass init <span style="color: #a44185;">"TU_ID_DE_CLAVE_GPG"</span>
+</pre>
+</div>
+
+<p>
+Ejemplo con un ID ficticio:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass init <span style="color: #a44185;">"8F2A0B5C3D9E7F61"</span>
+</pre>
+</div>
+
+<p>
+Esto creará un directorio <code>~/.password-store/</code> donde se almacenarán tus contraseñas cifradas.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf247dd3" class="outline-3">
+<h3 id="orgf247dd3">Configuración del entorno</h3>
+<div class="outline-text-3" id="text-orgf247dd3">
+<p>
+Aunque no es estrictamente necesario, puedes añadir la siguiente línea a tu archivo <code>~/.bashrc</code> o <code>~/.zshrc</code> para habilitar el autocompletado:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #dc3eb7;">source</span> /usr/share/bash-completion/completions/pass
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb4bf5db" class="outline-2">
+<h2 id="orgb4bf5db">Uso básico</h2>
+<div class="outline-text-2" id="text-orgb4bf5db">
+</div>
+<div id="outline-container-org0b09b58" class="outline-3">
+<h3 id="org0b09b58">Insertar una contraseña</h3>
+<div class="outline-text-3" id="text-org0b09b58">
+<p>
+Para añadir una nueva contraseña:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass insert categor&#237;a/nombre-servicio
+</pre>
+</div>
+
+<p>
+Por ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass insert email/gmail
+</pre>
+</div>
+
+<p>
+El sistema te pedirá que introduzcas la contraseña dos veces para confirmación.
+</p>
+
+<p>
+Si quieres añadir información adicional, como nombre de usuario, URL, etc., usa la bandera <code>-m</code> (multiline):
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass insert -m email/gmail
+</pre>
+</div>
+
+<p>
+Esto abrirá un editor de texto donde puedes introducir toda la información:
+</p>
+
+<pre class="example" id="org6ecf3bf">
+Mi_contraseña_segura
+usuario: miusuario@gmail.com
+url: https://gmail.com
+recuperación: +123456789
+notas: Esta es mi cuenta principal
+</pre>
+</div>
+</div>
+<div id="outline-container-org474cfbc" class="outline-3">
+<h3 id="org474cfbc">Generar una contraseña aleatoria</h3>
+<div class="outline-text-3" id="text-org474cfbc">
+<p>
+Pass puede generar contraseñas seguras y aleatorias:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass generate categor&#237;a/nombre-servicio longitud
+</pre>
+</div>
+
+<p>
+Ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass generate banco/santander 16
+</pre>
+</div>
+
+<p>
+Esto generará una contraseña de 16 caracteres y la almacenará cifrada. Para generar una contraseña sin caracteres especiales:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass generate banco/santander 16 -n
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org8689940" class="outline-3">
+<h3 id="org8689940">Recuperar una contraseña</h3>
+<div class="outline-text-3" id="text-org8689940">
+<p>
+Para mostrar una contraseña:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass categor&#237;a/nombre-servicio
+</pre>
+</div>
+
+<p>
+Por ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass email/gmail
+</pre>
+</div>
+
+<p>
+Esto mostrará el contenido del archivo desencriptado en la terminal.
+</p>
+</div>
+</div>
+<div id="outline-container-org2aec7c8" class="outline-3">
+<h3 id="org2aec7c8">Copiar al portapapeles</h3>
+<div class="outline-text-3" id="text-org2aec7c8">
+<p>
+Para evitar mostrar la contraseña en la pantalla, puedes copiarla directamente al portapapeles:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass -c categor&#237;a/nombre-servicio
+</pre>
+</div>
+
+<p>
+Por defecto, esto copiará solo la primera línea (la contraseña) y se borrará automáticamente del portapapeles después de 45 segundos.
+</p>
+</div>
+</div>
+<div id="outline-container-org8d90f81" class="outline-3">
+<h3 id="org8d90f81">Listar las contraseñas almacenadas</h3>
+<div class="outline-text-3" id="text-org8d90f81">
+<p>
+Para ver todas tus contraseñas organizadas en un árbol:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass
+</pre>
+</div>
+
+<p>
+O para ver una categoría específica:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass categor&#237;a/
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org310fb6f" class="outline-3">
+<h3 id="org310fb6f">Buscar contraseñas</h3>
+<div class="outline-text-3" id="text-org310fb6f">
+<p>
+Para buscar una contraseña:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass find t&#233;rmino-b&#250;squeda
+</pre>
+</div>
+
+<p>
+Por ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass find gmail
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbe57c7e" class="outline-3">
+<h3 id="orgbe57c7e">Editar una contraseña existente</h3>
+<div class="outline-text-3" id="text-orgbe57c7e">
+<p>
+Para modificar una contraseña o la información asociada:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass edit categor&#237;a/nombre-servicio
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf9fa42e" class="outline-3">
+<h3 id="orgf9fa42e">Eliminar una contraseña</h3>
+<div class="outline-text-3" id="text-orgf9fa42e">
+<p>
+Para eliminar una contraseña:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass rm categor&#237;a/nombre-servicio
+</pre>
+</div>
+
+<p>
+Si quieres eliminar toda una categoría:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass rm -r categor&#237;a/
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org82c5d73" class="outline-2">
+<h2 id="org82c5d73">Gestión avanzada</h2>
+<div class="outline-text-2" id="text-org82c5d73">
+</div>
+<div id="outline-container-org8aee514" class="outline-3">
+<h3 id="org8aee514">Control de versiones con Git</h3>
+<div class="outline-text-3" id="text-org8aee514">
+<p>
+Pass puede utilizar Git para llevar un control de versiones de tus contraseñas, lo que facilita la sincronización entre dispositivos y tener un historial de cambios.
+</p>
+
+<p>
+Para inicializar Git en tu almacén de contraseñas:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass git init
+</pre>
+</div>
+
+<p>
+Cada vez que realices cambios, Pass automáticamente hará commit de ellos. Para ver el historial:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass git log
+</pre>
+</div>
+
+<p>
+Para configurar un repositorio remoto:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass git remote add origin git@github.com:usuario/passwords-store.git
+pass git push -u origin master
+</pre>
+</div>
+
+<p>
+<b>IMPORTANTE</b>: Asegúrate de que tu repositorio remoto sea privado, aunque las contraseñas estén cifradas.
+</p>
+
+<p>
+Para sincronizar cambios desde otro dispositivo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass git pull
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbbcb3a8" class="outline-3">
+<h3 id="orgbbcb3a8">Trabajo con múltiples claves GPG</h3>
+<div class="outline-text-3" id="text-orgbbcb3a8">
+<p>
+Puedes compartir contraseñas específicas con otras personas cifrándolas con múltiples claves GPG:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass init -p categor&#237;a/compartido ID_CLAVE_GPG_1 ID_CLAVE_GPG_2
+</pre>
+</div>
+
+<p>
+Esto cifrará todas las contraseñas en esa categoría para ambas claves GPG, permitiendo que ambos usuarios puedan desencriptarlas.
+</p>
+</div>
+</div>
+<div id="outline-container-org3c28195" class="outline-3">
+<h3 id="org3c28195">Exportación e importación</h3>
+<div class="outline-text-3" id="text-org3c28195">
+<p>
+Para exportar una contraseña o categoría:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass export &gt; passwords-backup.txt
+</pre>
+</div>
+
+<p>
+<b>ADVERTENCIA</b>: Este archivo contendrá todas tus contraseñas en texto plano. Trátalo con extremo cuidado.
+</p>
+
+<p>
+Para importar:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">cat passwords-backup.txt | pass import
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orge16134c" class="outline-2">
+<h2 id="orge16134c">Extensiones de Pass</h2>
+<div class="outline-text-2" id="text-orge16134c">
+<p>
+Una de las grandes ventajas de <code>pass</code> es su extensibilidad. Algunas extensiones populares incluyen:
+</p>
+</div>
+<div id="outline-container-orgaf9ab69" class="outline-3">
+<h3 id="orgaf9ab69">pass-otp: Gestión de códigos OTP</h3>
+<div class="outline-text-3" id="text-orgaf9ab69">
+<p>
+Permite gestionar tokens OTP (One-Time Password) para autenticación de dos factores:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Instalaci&#243;n en Debian/Ubuntu</span>
+sudo apt install pass-extension-otp
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">En Arch Linux</span>
+sudo pacman -S pass-otp
+</pre>
+</div>
+
+<p>
+Para añadir un token OTP:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass otp insert categor&#237;a/servicio-otp
+</pre>
+</div>
+
+<p>
+Luego introduce la clave secreta o el URI del OTP.
+</p>
+
+<p>
+Para generar un código OTP:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass otp categor&#237;a/servicio-otp
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org7e22a2c" class="outline-3">
+<h3 id="org7e22a2c">pass-import: Importar desde otros gestores</h3>
+<div class="outline-text-3" id="text-org7e22a2c">
+<p>
+Permite importar contraseñas desde otros gestores como KeePass, LastPass, etc.:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Instalaci&#243;n</span>
+pip install pass-import
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejemplo de importaci&#243;n desde KeePass</span>
+pass import keepass archivo.kdbx
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org838f806" class="outline-3">
+<h3 id="org838f806">Aplicaciones móviles</h3>
+<div class="outline-text-3" id="text-org838f806">
+<ul class="org-ul">
+<li>Android: Password Store (utiliza OpenKeychain para GPG)</li>
+<li>iOS: Pass for iOS</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga5fa18d" class="outline-3">
+<h3 id="orga5fa18d">Interfaces gráficas</h3>
+<div class="outline-text-3" id="text-orga5fa18d">
+<ul class="org-ul">
+<li>QtPass: Interfaz gráfica multiplataforma</li>
+<li>passmenu: Script simple para integración con dmenu</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Instalaci&#243;n de QtPass en Debian/Ubuntu</span>
+sudo apt install qtpass
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org70abba5" class="outline-2">
+<h2 id="org70abba5">Ejemplos prácticos</h2>
+<div class="outline-text-2" id="text-org70abba5">
+</div>
+<div id="outline-container-orgdc34544" class="outline-3">
+<h3 id="orgdc34544">Flujo de trabajo para gestionar contraseñas web</h3>
+<div class="outline-text-3" id="text-orgdc34544">
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear una estructura organizada</span>
+pass
+&#9500;&#9472;&#9472; email
+&#9474;   &#9500;&#9472;&#9472; gmail
+&#9474;   &#9500;&#9472;&#9472; trabajo
+&#9474;   &#9492;&#9472;&#9472; personal
+&#9500;&#9472;&#9472; banco
+&#9474;   &#9500;&#9472;&#9472; santander
+&#9474;   &#9492;&#9472;&#9472; bbva
+&#9500;&#9472;&#9472; social
+&#9474;   &#9500;&#9472;&#9472; twitter
+&#9474;   &#9500;&#9472;&#9472; facebook
+&#9474;   &#9492;&#9472;&#9472; linkedin
+&#9492;&#9472;&#9472; trabajo
+    &#9500;&#9472;&#9472; vpn
+    &#9500;&#9472;&#9472; gitlab
+    &#9492;&#9472;&#9472; jira
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc1820f9" class="outline-3">
+<h3 id="orgc1820f9">Ejemplo de gestión de credenciales SSH</h3>
+<div class="outline-text-3" id="text-orgc1820f9">
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Almacenar una frase de contrase&#241;a SSH</span>
+pass insert ssh/laptop-trabajo
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Usar en combinaci&#243;n con ssh-agent</span>
+<span style="color: #dc3eb7;">export</span> <span style="color: #1857a4;">SSH_ASKPASS</span>=<span style="color: #a44185;">"/usr/bin/pass-ssh-askpass"</span>
+pass show -c ssh/laptop-trabajo
+ssh-add ~/.ssh/id_rsa
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb9f12d6" class="outline-3">
+<h3 id="orgb9f12d6">Configuración de contraseñas compartidas en equipo</h3>
+<div class="outline-text-3" id="text-orgb9f12d6">
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear estructura para contrase&#241;as de equipo</span>
+pass
+&#9500;&#9472;&#9472; personal (cifrado solo con mi clave)
+&#9492;&#9472;&#9472; equipo (cifrado con m&#250;ltiples claves)
+    &#9500;&#9472;&#9472; wifi-oficina
+    &#9500;&#9472;&#9472; servidor-prod
+    &#9492;&#9472;&#9472; cuenta-aws
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1874d6a" class="outline-3">
+<h3 id="org1874d6a">Rotación periódica de contraseñas</h3>
+<div class="outline-text-3" id="text-org1874d6a">
+<p>
+Script para ayudar a rotar contraseñas periódicamente:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">rotate-passwords.sh</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Lista de contrase&#241;as a rotar</span>
+<span style="color: #1857a4;">passwords</span>=(
+  <span style="color: #a44185;">"email/gmail"</span>
+  <span style="color: #a44185;">"banco/santander"</span>
+  <span style="color: #a44185;">"trabajo/vpn"</span>
+)
+
+<span style="color: #219fd5; font-style: italic;">for</span> p<span style="color: #219fd5; font-style: italic;"> in</span> <span style="color: #a44185;">"${passwords[@]}"</span>; <span style="color: #219fd5; font-style: italic;">do</span>
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Rotando $p..."</span>
+  <span style="color: #1857a4;">new_pass</span>=$(<span style="color: #219fd5; font-weight: bold;">pass generate -f "$p" 20</span>)
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Nueva contrase&#241;a para $p: $new_pass"</span>
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Aqu&#237; podr&#237;as a&#241;adir c&#243;digo para actualizar la contrase&#241;a en el servicio correspondiente</span>
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"============================================="</span>
+<span style="color: #219fd5; font-style: italic;">done</span>
+
+pass git push
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org5f7c224" class="outline-2">
+<h2 id="org5f7c224">Mejores prácticas de seguridad</h2>
+<div class="outline-text-2" id="text-org5f7c224">
+</div>
+<div id="outline-container-org26ec2f6" class="outline-3">
+<h3 id="org26ec2f6">Protección de la clave maestra</h3>
+<div class="outline-text-3" id="text-org26ec2f6">
+<p>
+Tu clave GPG es el único punto de acceso a todas tus contraseñas. Protégela adecuadamente:
+</p>
+
+<ul class="org-ul">
+<li>Usa una frase de contraseña larga y segura</li>
+<li>Considera guardar una copia de seguridad de tu clave GPG en un lugar físico seguro</li>
+<li>Evalúa el uso de una smartcard o token de seguridad como YubiKey para almacenar tu clave GPG</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9cfae98" class="outline-3">
+<h3 id="org9cfae98">Copias de seguridad</h3>
+<div class="outline-text-3" id="text-org9cfae98">
+<p>
+Aunque Git proporciona cierto nivel de respaldo, es recomendable:
+</p>
+
+<ul class="org-ul">
+<li>Exportar regularmente tus claves GPG (pública y privada)</li>
+<li>Mantener copias de seguridad de <code>~/.password-store</code> en medios externos</li>
+<li>Considerar el cifrado de tus copias de seguridad</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Exportar clave GPG</span>
+gpg --export-secret-keys --armor TU_ID_CLAVE &gt; mi_clave_privada.asc
+gpg --export --armor TU_ID_CLAVE &gt; mi_clave_publica.asc
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Hacer copia de seguridad del almac&#233;n</span>
+tar -czf password-store-backup.tar.gz -C ~/ .password-store/
+gpg -e -r TU_ID_CLAVE password-store-backup.tar.gz
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orga6f2250" class="outline-3">
+<h3 id="orga6f2250">Auditoría de contraseñas</h3>
+<div class="outline-text-3" id="text-orga6f2250">
+<p>
+Revisa periódicamente tus contraseñas para detectar duplicados o contraseñas débiles:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Listar todas las contrase&#241;as (&#161;ten cuidado!)</span>
+find ~/.password-store -name <span style="color: #a44185;">"*.gpg"</span> -type f | <span style="color: #219fd5; font-style: italic;">while </span><span style="color: #dc3eb7;">read</span> file; <span style="color: #219fd5; font-style: italic;">do</span>
+  <span style="color: #1857a4;">name</span>=$(<span style="color: #219fd5; font-weight: bold;">echo "$file" | sed -e "s|$(dirname ~/.password-store/</span><span style="color: #a44185;">)/||"</span> -e <span style="color: #a44185;">"s|.gpg$||"</span>)
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"$name: $(</span><span style="color: #219fd5; font-weight: bold;">pass show "$name" 2&gt;/dev/null | head -n1</span><span style="color: #a44185;">)"</span>
+<span style="color: #219fd5; font-style: italic;">done</span> &gt; /tmp/password-audit.txt
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf6f2a9b" class="outline-3">
+<h3 id="orgf6f2a9b">Integración con herramientas de auditoría</h3>
+<div class="outline-text-3" id="text-orgf6f2a9b">
+<p>
+Puedes usar herramientas como <code>pass-audit</code> para verificar si tus contraseñas han sido comprometidas:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Instalaci&#243;n</span>
+pip install pass-audit
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar contrase&#241;as filtradas usando HaveIBeenPwned</span>
+pass audit
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org8d08052" class="outline-2">
+<h2 id="org8d08052">Solución de problemas comunes</h2>
+<div class="outline-text-2" id="text-org8d08052">
+</div>
+<div id="outline-container-org0df69dd" class="outline-3">
+<h3 id="org0df69dd">Error de descifrado</h3>
+<div class="outline-text-3" id="text-org0df69dd">
+<p>
+Si encuentras errores como "gpg: decryption failed: No secret key":
+</p>
+
+<ol class="org-ol">
+<li><p>
+Verifica que estás usando la clave GPG correcta:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">gpg --list-secret-keys
+</pre>
+</div></li>
+
+<li><p>
+Asegúrate de que la clave no ha expirado:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">gpg --edit-key TU_ID_CLAVE
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org4a5e354" class="outline-3">
+<h3 id="org4a5e354">Conflictos de Git</h3>
+<div class="outline-text-3" id="text-org4a5e354">
+<p>
+Si tienes conflictos al sincronizar entre dispositivos:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">pass git pull
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Si hay conflictos</span>
+pass git mergetool
+pass git commit
+pass git push
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org74ec746" class="outline-3">
+<h3 id="org74ec746">Problemas de permisos</h3>
+<div class="outline-text-3" id="text-org74ec746">
+<p>
+Si encuentras errores de permisos:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">chmod 700 ~/.password-store
+find ~/.password-store -type d -exec chmod 700 {} <span style="color: #a44185;">\;</span>
+find ~/.password-store -type f -exec chmod 600 {} <span style="color: #a44185;">\;</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd9df94e" class="outline-2">
+<h2 id="orgd9df94e">Diagrama de Arquitectura y Flujo de Pass</h2>
+</div>
+
+<div id="outline-container-org0342255" class="outline-2">
+<h2 id="org0342255">Leyenda y Explicación</h2>
+<div class="outline-text-2" id="text-org0342255">
+<p>
+Este diagrama muestra la arquitectura y flujo de trabajo de Pass, el gestor de contraseñas estándar de Unix:
+</p>
+</div>
+<div id="outline-container-org423de98" class="outline-3">
+<h3 id="org423de98">Componentes principales</h3>
+<div class="outline-text-3" id="text-org423de98">
+<ul class="org-ul">
+<li><b>Usuario</b>: Interactúa con Pass mediante comandos CLI</li>
+<li><b>Pass CLI</b>: La interfaz de línea de comandos que procesa las operaciones</li>
+<li><b>GPG</b>: Proporciona el cifrado/descifrado usando claves pública/privada</li>
+<li><b>Almacén de Contraseñas</b>: Estructura jerárquica de archivos cifrados</li>
+<li><b>Git</b>: Opcional, proporciona control de versiones y sincronización</li>
+<li><b>Extensiones y Aplicaciones</b>: Amplían la funcionalidad base</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5018ece" class="outline-3">
+<h3 id="org5018ece">Flujos de trabajo principales</h3>
+<div class="outline-text-3" id="text-org5018ece">
+<ol class="org-ol">
+<li><b>Almacenamiento de contraseñas:</b>
+<ul class="org-ul">
+<li>El usuario ejecuta un comando para insertar/generar contraseña</li>
+<li>Pass llama a GPG para cifrar los datos con la clave pública</li>
+<li>El archivo cifrado se guarda en la estructura del almacén</li>
+<li>Si Git está habilitado, se crea un commit automáticamente</li>
+</ul></li>
+
+<li><b>Recuperación de contraseñas:</b>
+<ul class="org-ul">
+<li>El usuario solicita una contraseña específica</li>
+<li>Pass localiza el archivo cifrado correspondiente</li>
+<li>GPG descifra el contenido usando la clave privada</li>
+<li>La contraseña se muestra o copia al portapapeles</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgf00749e" class="outline-3">
+<h3 id="orgf00749e">Ventajas del diseño</h3>
+<div class="outline-text-3" id="text-orgf00749e">
+<ul class="org-ul">
+<li><b>Seguridad</b>: Las contraseñas nunca se almacenan en texto plano</li>
+<li><b>Flexibilidad</b>: Estructura jerárquica personalizable</li>
+<li><b>Portabilidad</b>: Fácil sincronización entre dispositivos</li>
+<li><b>Extensibilidad</b>: Sistema modular con múltiples extensiones</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgddffaf2" class="outline-2">
+<h2 id="orgddffaf2">Notas técnicas adicionales</h2>
+<div class="outline-text-2" id="text-orgddffaf2">
+<ul class="org-ul">
+<li>El diagrama PlantUML se puede renderizar en Emacs usando org-babel-execute-src-block</li>
+<li>Para visualizar el diagrama, necesitas tener configurado PlantUML en tu entorno Emacs</li>
+<li>Configuración recomendada para org-mode y PlantUML:</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n para PlantUML en Emacs</span>
+(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">plantuml-mode</span>
+  <span style="color: #dc3eb7;">:ensure</span> t
+  <span style="color: #dc3eb7;">:config</span>
+  (<span style="color: #219fd5; font-style: italic;">setq</span> plantuml-default-exec-mode 'jar)
+  (<span style="color: #219fd5; font-style: italic;">setq</span> plantuml-jar-path <span style="color: #a44185;">"/ruta/a/plantuml.jar"</span>)
+  (<span style="color: #219fd5; font-style: italic;">setq</span> org-plantuml-jar-path <span style="color: #a44185;">"/ruta/a/plantuml.jar"</span>))
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((plantuml . t)))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org292ac1c" class="outline-2">
+<h2 id="org292ac1c">Conclusión</h2>
+<div class="outline-text-2" id="text-org292ac1c">
+<p>
+<code>pass</code> es una herramienta poderosa y flexible para la gestión de contraseñas en entornos Unix/Linux. Su enfoque basado en la filosofía Unix lo hace ideal para usuarios que prefieren la línea de comandos y valoran la simplicidad, seguridad y extensibilidad.
+</p>
+
+<p>
+Aunque puede tener una curva de aprendizaje inicial para usuarios no familiarizados con GPG o la línea de comandos, los beneficios a largo plazo en términos de seguridad y flexibilidad compensan ampliamente este esfuerzo inicial.
+</p>
+
+<p>
+Al adoptar <code>pass</code>, estás eligiendo una solución de código abierto, bien mantenida y respetada en la comunidad de seguridad, que te da control total sobre tus datos más sensibles.
+</p>
+</div>
+</div>
+<div id="outline-container-org0813139" class="outline-2">
+<h2 id="org0813139">Referencias y recursos adicionales</h2>
+<div class="outline-text-2" id="text-org0813139">
+<ul class="org-ul">
+<li><a href="https://www.passwordstore.org/">Sitio web oficial de pass</a></li>
+<li><a href="https://git.zx2c4.com/password-store/about/">Documentación completa</a></li>
+<li><a href="https://github.com/topics/pass-extension">Extensiones disponibles en GitHub</a></li>
+<li><a href="https://git.zx2c4.com/password-store/tree/contrib">Scripts y contribuciones de la comunidad</a></li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-pass.html">pass</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-password.html">password</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-contraseñas.html">contraseñas</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>
