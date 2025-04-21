@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title><![CDATA[Example.com - seguridad]]></title>
-<description><![CDATA[Example.com - seguridad]]></description>
+<title><![CDATA[Emacs con esteroides - seguridad]]></title>
+<description><![CDATA[Emacs con esteroides - seguridad]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-seguridad.html</link>
-<lastBuildDate>Sun, 20 Apr 2025 03:38:23 +0200</lastBuildDate>
+<lastBuildDate>Mon, 21 Apr 2025 10:21:38 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Verificación en Dos Pasos (2FA): Seguridad Reforzada en Emacs con Esteroides]]></title>
   <description><![CDATA[

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title><![CDATA[Example.com - autenticación]]></title>
-<description><![CDATA[Example.com - autenticación]]></description>
+<title><![CDATA[Emacs con esteroides - autenticación]]></title>
+<description><![CDATA[Emacs con esteroides - autenticación]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-autenticación.html</link>
-<lastBuildDate>Sun, 20 Apr 2025 03:37:45 +0200</lastBuildDate>
+<lastBuildDate>Mon, 21 Apr 2025 10:21:32 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Verificación en Dos Pasos (2FA): Seguridad Reforzada en Emacs con Esteroides]]></title>
   <description><![CDATA[

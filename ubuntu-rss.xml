@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title><![CDATA[Example.com - ubuntu]]></title>
-<description><![CDATA[Example.com - ubuntu]]></description>
+<title><![CDATA[Emacs con esteroides - ubuntu]]></title>
+<description><![CDATA[Emacs con esteroides - ubuntu]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-ubuntu.html</link>
-<lastBuildDate>Sun, 20 Apr 2025 03:37:51 +0200</lastBuildDate>
+<lastBuildDate>Mon, 21 Apr 2025 10:21:33 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Guía Práctica: Configuración de UFW en Ubuntu con Scripts y Org Mode]]></title>
   <description><![CDATA[
