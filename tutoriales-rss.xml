@@ -4,7 +4,409 @@
 <title><![CDATA[Emacs con esteroides - tutoriales]]></title>
 <description><![CDATA[Emacs con esteroides - tutoriales]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-tutoriales.html</link>
-<lastBuildDate>Tue, 22 Apr 2025 07:14:51 +0200</lastBuildDate>
+<lastBuildDate>Tue, 22 Apr 2025 07:59:32 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Automatizando Auditorías de Seguridad en Linux con Bash y Emacs]]></title>
+  <description><![CDATA[
+<div id="outline-container-org9f4ca91" class="outline-2">
+<h2 id="org9f4ca91">Introducción</h2>
+<div class="outline-text-2" id="text-org9f4ca91">
+<p>
+En un entorno donde las amenazas cibernéticas evolucionan constantemente, realizar auditorías de seguridad en sistemas Linux es esencial para identificar vulnerabilidades como puertos abiertos, permisos inseguros o configuraciones riesgosas. Realizar estas tareas manualmente es tedioso y propenso a errores. Este post presenta un flujo de trabajo para <b><b>automatizar auditorías de seguridad</b></b> usando scripts en Bash, integrando los resultados en Emacs con Org-mode para un análisis interactivo y programando ejecuciones automáticas con `cron`. Combinamos la potencia de la terminal con la flexibilidad de Emacs para ofrecer una solución eficiente para usuarios avanzados de Linux.
+</p>
+</div>
+</div>
+<div id="outline-container-org27d75cf" class="outline-2">
+<h2 id="org27d75cf">Objetivos</h2>
+<div class="outline-text-2" id="text-org27d75cf">
+<ul class="org-ul">
+<li>Crear scripts en Bash para auditar puertos y permisos.</li>
+<li>Integrar resultados en Org-mode para análisis interactivo en Emacs.</li>
+<li>Automatizar auditorías con `cron` para ejecuciones periódicas.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2b8e8bf" class="outline-2">
+<h2 id="org2b8e8bf">Audiencia</h2>
+<div class="outline-text-2" id="text-org2b8e8bf">
+<p>
+Usuarios avanzados de Linux interesados en ciberseguridad, automatización y flujos de trabajo con Emacs.
+</p>
+</div>
+</div>
+<div id="outline-container-org8df851f" class="outline-2">
+<h2 id="org8df851f">Herramientas Requeridas</h2>
+<div class="outline-text-2" id="text-org8df851f">
+<ul class="org-ul">
+<li><b><b>nmap</b></b>: Escaneo de puertos y servicios.</li>
+<li><b><b>find</b></b> y <b><b>stat</b></b>: Verificación de permisos.</li>
+<li><b><b>Bash</b></b>: Scripts de automatización.</li>
+<li><b><b>Emacs</b></b> con <b><b>Org-mode</b></b>: Visualización y análisis.</li>
+<li><b><b>cron</b></b>: Programación de tareas.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc93fce4" class="outline-2">
+<h2 id="orgc93fce4">Configuración Inicial</h2>
+<div class="outline-text-2" id="text-orgc93fce4">
+<p>
+Instala las herramientas necesarias en un sistema Linux (por ejemplo, Ubuntu/Debian):
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">sudo apt update
+sudo apt install nmap findutils coreutils bash emacs
+</pre>
+</div>
+
+<p>
+Verifica que `cron` esté habilitado:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">systemctl status cron
+</pre>
+</div>
+
+<p>
+Configura Emacs para Org-mode y `emacsclient`. Añade a `~/.emacs` o `~/.config/emacs/init.el`:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(server-start)
+(<span style="color: #219fd5; font-style: italic;">require</span> '<span style="color: #2f86d2;">org</span>)
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-startup-folded t)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge5f4165" class="outline-2">
+<h2 id="orge5f4165">Script de Auditoría en Bash</h2>
+<div class="outline-text-2" id="text-orge5f4165">
+<p>
+El script `security<sub>audit.sh</sub>` realiza:
+</p>
+<ol class="org-ol">
+<li>Escaneo de puertos con `nmap`.</li>
+<li>Verificación de permisos con `find`.</li>
+<li>Generación de un resumen en Org-mode que se abre en Emacs.</li>
+</ol>
+</div>
+<div id="outline-container-org213dd5b" class="outline-3">
+<h3 id="org213dd5b">Código del Script</h3>
+<div class="outline-text-3" id="text-org213dd5b">
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">security_audit.sh</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n</span>
+<span style="color: #1857a4;">OUTPUT_DIR</span>=<span style="color: #a44185;">"$HOME/security_audit"</span>
+<span style="color: #1857a4;">TIMESTAMP</span>=$(<span style="color: #219fd5; font-weight: bold;">date +%Y%m%d_%H%M%S</span>)
+<span style="color: #1857a4;">REPORT_DIR</span>=<span style="color: #a44185;">"$OUTPUT_DIR/report_$TIMESTAMP"</span>
+mkdir -p <span style="color: #a44185;">"$REPORT_DIR"</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Escaneo de puertos</span>
+<span style="color: #dc3eb7;">scan_ports</span>() {
+  <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">target</span>=<span style="color: #a44185;">"localhost"</span>
+  <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">output</span>=<span style="color: #a44185;">"$REPORT_DIR/nmap_scan.txt"</span>
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Escaneando puertos en $target..."</span>
+  nmap -sV <span style="color: #a44185;">"$target"</span> &gt; <span style="color: #a44185;">"$output"</span> 2&gt;&amp;1
+  [ $<span style="color: #1857a4;">?</span> -eq 0 ] &amp;&amp; <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Escaneo completado: $output"</span> || <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Error en nmap."</span>
+}
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificaci&#243;n de permisos</span>
+<span style="color: #dc3eb7;">check_permissions</span>() {
+  <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">output</span>=<span style="color: #a44185;">"$REPORT_DIR/permissions_report.txt"</span>
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Verificando permisos inseguros..."</span>
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Archivos con escritura para 'otros':"</span> &gt; <span style="color: #a44185;">"$output"</span>
+  find /home -type f -perm -o+w &gt;&gt; <span style="color: #a44185;">"$output"</span> 2&gt;/dev/null
+  <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\nArchivos con ejecuci&#243;n para 'otros':"</span> &gt;&gt; <span style="color: #a44185;">"$output"</span>
+  find /home -type f -perm -o+x &gt;&gt; <span style="color: #a44185;">"$output"</span> 2&gt;/dev/null
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Verificaci&#243;n completada: $output"</span>
+}
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar auditor&#237;as</span>
+scan_ports
+check_permissions
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generar resumen en Org-mode</span>
+<span style="color: #1857a4;">SUMMARY</span>=<span style="color: #a44185;">"$REPORT_DIR/summary.org"</span>
+cat &lt;&lt; EOF &gt; <span style="color: #a44185;">"$SUMMARY"</span>
+<span style="color: #a44185;">#+TITLE: Reporte de Auditor&#237;a de Seguridad - $TIMESTAMP</span>
+<span style="color: #a44185;">#+DATE: $(</span><span style="color: #219fd5; font-weight: bold;">date</span><span style="color: #a44185;">)</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-bash">- Resumen de Auditor&#237;a
+  - *Fecha*: $<span style="color: #1857a4;">TIMESTAMP</span>
+  - *Escaneo de puertos*: [[file:nmap_scan.txt][Resultados de Nmap]]
+  - *Permisos inseguros*: [[file:permissions_report.txt][Reporte de Permisos]]
+-  Notas
+  - Revisar puertos abiertos para servicios innecesarios.
+  - Corregir permisos inseguros en archivos listados.
+EOF
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Reporte generado: $SUMMARY"</span>
+emacsclient -c <span style="color: #a44185;">"$SUMMARY"</span> 2&gt;/dev/null || <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Abre $SUMMARY manualmente."</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge23a0c9" class="outline-3">
+<h3 id="orge23a0c9">Ejecución</h3>
+<div class="outline-text-3" id="text-orge23a0c9">
+<p>
+Guarda el script, hazlo ejecutable y ejecútalo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">chmod +x security_audit.sh
+./security_audit.sh
+</pre>
+</div>
+
+<p>
+El script genera una carpeta en `~/security<sub>audit</sub>/report<sub>YYYYMMDD</sub><sub>HHMMSS</sub>` con:
+</p>
+<ul class="org-ul">
+<li>`nmap<sub>scan.txt</sub>`: Resultados del escaneo de puertos.</li>
+<li>`permissions<sub>report.txt</sub>`: Archivos con permisos inseguros.</li>
+<li>`summary.org`: Resumen en Org-mode con enlaces.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org4df799d" class="outline-2">
+<h2 id="org4df799d">Integración con Emacs y Org-mode</h2>
+<div class="outline-text-2" id="text-org4df799d">
+<p>
+El archivo `summary.org` organiza los resultados en un formato interactivo. Para mejorar la experiencia, usamos funciones en Emacs (`security<sub>audit.el</sub>`) que procesan los reportes y generan un buffer dinámico.
+</p>
+</div>
+<div id="outline-container-orga1ceab5" class="outline-3">
+<h3 id="orga1ceab5">Código de Emacs</h3>
+<div class="outline-text-3" id="text-orga1ceab5">
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #8195b0; font-style: italic;">;;; </span><span style="color: #8195b0; font-style: italic;">security_audit.el --- Funciones para auditor&#237;as de seguridad</span>
+
+(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">security-audit-process-report</span> (report-dir)
+  <span style="color: #60a8a1; font-style: italic;">"Procesa un reporte y genera un buffer en Org-mode."</span>
+  (<span style="color: #219fd5; font-style: italic;">interactive</span> <span style="color: #a44185;">"DDirectorio del reporte: "</span>)
+  (<span style="color: #219fd5; font-style: italic;">let</span> ((nmap-file (concat report-dir <span style="color: #a44185;">"nmap_scan.txt"</span>))
+        (perm-file (concat report-dir <span style="color: #a44185;">"permissions_report.txt"</span>))
+        (buffer (get-buffer-create <span style="color: #a44185;">"*Security Audit Report*"</span>)))
+    (<span style="color: #219fd5; font-style: italic;">with-current-buffer</span> buffer
+      (erase-buffer)
+      (org-mode)
+      (insert <span style="color: #a44185;">"#+TITLE: Auditor&#237;a de Seguridad\n"</span>)
+      (insert <span style="color: #a44185;">"#+DATE: "</span> (format-time-string <span style="color: #a44185;">"%Y-%m-%d %H:%M:%S"</span>) <span style="color: #a44185;">"\n\n"</span>)
+      (insert <span style="color: #a44185;">"* An&#225;lisis de Puertos Abiertos\n"</span>)
+      (<span style="color: #219fd5; font-style: italic;">if</span> (file-exists-p nmap-file)
+          (<span style="color: #219fd5; font-style: italic;">progn</span>
+            (insert <span style="color: #a44185;">"[[file:"</span> nmap-file <span style="color: #a44185;">"][Ver resultados completos]]\n\n"</span>)
+            (insert <span style="color: #a44185;">"Puertos destacados:\n"</span>)
+            (<span style="color: #219fd5; font-style: italic;">with-temp-buffer</span>
+              (insert-file-contents nmap-file)
+              (goto-char (point-min))
+              (<span style="color: #219fd5; font-style: italic;">while</span> (re-search-forward <span style="color: #a44185;">"</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">(</span><span style="color: #a44185;">[0-9]+/tcp\\s+open</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">)</span><span style="color: #a44185;">"</span> nil t)
+                (insert <span style="color: #a44185;">"- "</span> (match-string 1) <span style="color: #a44185;">"\n"</span>))))
+        (insert <span style="color: #a44185;">"No se encontraron resultados de nmap.\n\n"</span>))
+      (insert <span style="color: #a44185;">"* Permisos Inseguros\n"</span>)
+      (<span style="color: #219fd5; font-style: italic;">if</span> (file-exists-p perm-file)
+          (insert <span style="color: #a44185;">"[[file:"</span> perm-file <span style="color: #a44185;">"][Ver reporte de permisos]]\n\n"</span>)
+        (insert <span style="color: #a44185;">"No se encontraron resultados de permisos.\n\n"</span>))
+      (insert <span style="color: #a44185;">"* Acciones Recomendadas\n"</span>)
+      (insert <span style="color: #a44185;">"- Cerrar puertos innecesarios (ej., `ufw deny`).\n"</span>)
+      (insert <span style="color: #a44185;">"- Ajustar permisos con `chmod`.\n"</span>))
+    (display-buffer buffer)))
+
+(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">security-audit-open-latest</span> ()
+  <span style="color: #60a8a1; font-style: italic;">"Abre el reporte m&#225;s reciente en ~/security_audit."</span>
+  (<span style="color: #219fd5; font-style: italic;">interactive</span>)
+  (<span style="color: #219fd5; font-style: italic;">let</span> ((audit-dir <span style="color: #a44185;">"~/security_audit"</span>))
+    (<span style="color: #219fd5; font-style: italic;">when</span> (file-directory-p audit-dir)
+      (<span style="color: #219fd5; font-style: italic;">let</span> ((latest-dir (car (sort (directory-files audit-dir t <span style="color: #a44185;">"^report_"</span>) #'string&gt;))))
+        (<span style="color: #219fd5; font-style: italic;">if</span> latest-dir
+            (security-audit-process-report latest-dir)
+          (message <span style="color: #a44185;">"No se encontraron reportes en %s"</span> audit-dir))))))
+
+(<span style="color: #219fd5; font-style: italic;">provide</span> '<span style="color: #2f86d2;">security_audit</span>)
+<span style="color: #8195b0; font-style: italic;">;;; </span><span style="color: #8195b0; font-style: italic;">security_audit.el ends here</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org46ddb13" class="outline-3">
+<h3 id="org46ddb13">Uso en Emacs</h3>
+<div class="outline-text-3" id="text-org46ddb13">
+<p>
+Carga `security<sub>audit.el</sub>` en Emacs y ejecuta:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">M-x security-audit-open-latest
+</pre>
+</div>
+
+<p>
+Esto genera un buffer `*Security Audit Report*` con un resumen interactivo, incluyendo enlaces a los resultados y recomendaciones.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org3496671" class="outline-2">
+<h2 id="org3496671">Automatización con Cron</h2>
+<div class="outline-text-2" id="text-org3496671">
+<p>
+Programa el script para ejecutarse automáticamente con `cron`.
+</p>
+</div>
+<div id="outline-container-org1794e7f" class="outline-3">
+<h3 id="org1794e7f">Configuración</h3>
+<div class="outline-text-3" id="text-org1794e7f">
+<p>
+Edita el crontab:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">crontab -e
+</pre>
+</div>
+
+<p>
+Añade una ejecución diaria a las 2:00 AM:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">0 2 * * * /bin/bash /path/to/security_audit.sh &gt;&gt; /path/to/security_audit.log 2&gt;&amp;1
+</pre>
+</div>
+
+<p>
+Verifica que `cron` esté activo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">systemctl status cron
+</pre>
+</div>
+
+<p>
+Los reportes se generarán en `~/security<sub>audit</sub>` y podrán revisarse con `M-x security-audit-open-latest`.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge66c279" class="outline-2">
+<h2 id="orge66c279">Flujo de Trabajo (Diagrama)</h2>
+<div class="outline-text-2" id="text-orge66c279">
+<p>
+El siguiente diagrama en PlantUML ilustra el proceso:
+</p>
+
+
+<figure id="org038b5c0">
+<img src="images/audit_workflow.png" alt="audit_workflow.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org7631959" class="outline-2">
+<h2 id="org7631959">Ejemplo Práctico</h2>
+<div class="outline-text-2" id="text-org7631959">
+<ol class="org-ol">
+<li>Ejecuta el script:</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-shell">./security_audit.sh
+</pre>
+</div>
+
+<ol class="org-ol">
+<li>Abre el reporte en Emacs:</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-elisp">M-x security-audit-open-latest
+</pre>
+</div>
+
+<ol class="org-ol">
+<li>Revisa los resultados, sigue los enlaces y aplica correcciones (por ejemplo, `ufw deny` para puertos o `chmod` para permisos).</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org86688ac" class="outline-2">
+<h2 id="org86688ac">Mejoras Adicionales</h2>
+<div class="outline-text-2" id="text-org86688ac">
+<ul class="org-ul">
+<li><b><b>Notificaciones</b></b>: Añade alertas con `notify-send`:</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #219fd5; font-style: italic;">if</span> grep -q <span style="color: #a44185;">"22/tcp open"</span> <span style="color: #a44185;">"$REPORT_DIR/nmap_scan.txt"</span>; <span style="color: #219fd5; font-style: italic;">then</span>
+  notify-send <span style="color: #a44185;">"Auditor&#237;a de Seguridad"</span> <span style="color: #a44185;">"Puerto SSH abierto detectado."</span>
+<span style="color: #219fd5; font-style: italic;">fi</span>
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><b><b>Exportar a PDF</b></b>: Genera un PDF desde el reporte:</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #219fd5; font-style: italic;">with-current-buffer</span> <span style="color: #a44185;">"*Security Audit Report*"</span>
+  (org-export-to-file 'pdf <span style="color: #a44185;">"security_report.pdf"</span>))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><b><b>Escaneo remoto</b></b>: Modifica `scan<sub>ports</sub>` para aceptar una IP:</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #dc3eb7;">scan_ports</span>() {
+  <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">target</span>=<span style="color: #a44185;">"${1:-localhost}"</span>
+  <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">output</span>=<span style="color: #a44185;">"$REPORT_DIR/nmap_scan.txt"</span>
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Escaneando puertos en $target..."</span>
+  nmap -sV <span style="color: #a44185;">"$target"</span> &gt; <span style="color: #a44185;">"$output"</span> 2&gt;&amp;1
+}
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><b><b>Integración con Git</b></b>: Almacena reportes en un repositorio para historial.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4a28912" class="outline-2">
+<h2 id="org4a28912">Conclusión</h2>
+<div class="outline-text-2" id="text-org4a28912">
+<p>
+Automatizar auditorías de seguridad con Bash y Emacs simplifica tareas complejas en un flujo eficiente. Los scripts en Bash escanean puertos y permisos, `cron` asegura ejecuciones regulares, y Emacs con Org-mode ofrece un entorno interactivo para análisis. Este enfoque es ideal para administradores de sistemas y entusiastas de Linux que buscan integrar ciberseguridad en su flujo de trabajo. ¡Implementa estas herramientas y fortalece tu seguridad con <b>Emacs con Esteroides</b>!
+</p>
+</div>
+</div>
+<div id="outline-container-org0ddbc79" class="outline-2">
+<h2 id="org0ddbc79">Referencias</h2>
+<div class="outline-text-2" id="text-org0ddbc79">
+<ul class="org-ul">
+<li>[Documentación de nmap](<a href="https://nmap.org/book/man.html">https://nmap.org/book/man.html</a>)</li>
+<li>[Manual de find y stat](<a href="https://www.gnu.org/software/findutils/manual/">https://www.gnu.org/software/findutils/manual/</a>)</li>
+<li>[Org-mode](<a href="https://orgmode.org/">https://orgmode.org/</a>)</li>
+<li>[Cron](<a href="https://man7.org/linux/man-pages/man8/cron.8.html">https://man7.org/linux/man-pages/man8/cron.8.html</a>)</li>
+<li>[PlantUML](<a href="https://plantuml.com/">https://plantuml.com/</a>)</li>
+<li>[Emacs Server](<a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Emacs-Server.html">https://www.gnu.org/software/emacs/manual/html_node/emacs/Emacs-Server.html</a>)</li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ciberseguridad.html">ciberseguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-automatización.html">automatización</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-org-mode.html">org-mode</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[ciberseguridad]]></category>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[automatización]]></category>
+  <category><![CDATA[org-mode]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-22-automatizando-auditor%C3%ADas-de-seguridad-en-linux-con-bash-y-emacs.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-22-automatizando-auditor%C3%ADas-de-seguridad-en-linux-con-bash-y-emacs.html</guid>
+  <pubDate>Tue, 22 Apr 2025 07:49:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[Instalación y Uso Completo de Pass: El Gestor de Contraseñas Estándar de Unix]]></title>
   <description><![CDATA[
