@@ -4,7 +4,7 @@
 <title><![CDATA[Emacs con esteroides - blog]]></title>
 <description><![CDATA[Emacs con esteroides - blog]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-blog.html</link>
-<lastBuildDate>Tue, 22 Apr 2025 07:59:31 +0200</lastBuildDate>
+<lastBuildDate>Tue, 22 Apr 2025 10:39:37 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -680,6 +680,12 @@
 </tr>
 
 <tr>
+<td class="org-right">2025-04-22</td>
+<td class="org-left">Gmail como herramienta de productividad: 10 trucos imprescindibles</td>
+<td class="org-left"><a href="2025-04-22-gmail-como-herramienta-de-productividad:-10-trucos-imprescindibles.html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
@@ -721,7 +727,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Tue, 22 Apr 2025 07:57:00 +0200</pubDate>
+  <pubDate>Tue, 22 Apr 2025 10:38:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Emacs con Esteroides: Configurar un Contador de Visitantes para el Blog]]></title>

@@ -4,7 +4,7 @@
 <title><![CDATA[Emacs con esteroides]]></title>
 <description><![CDATA[Emacs con esteroides]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Tue, 22 Apr 2025 07:59:14 +0200</lastBuildDate>
+<lastBuildDate>Tue, 22 Apr 2025 10:39:19 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Explorando Shima Spain Village: Un Rincón Español en Japón]]></title>
   <description><![CDATA[
@@ -130,7 +130,7 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[españa]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</guid>
-  <pubDate>Tue, 22 Apr 2025 07:59:13 +0200</pubDate>
+  <pubDate>Tue, 22 Apr 2025 10:39:18 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
@@ -807,6 +807,12 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
 </tr>
 
 <tr>
+<td class="org-right">2025-04-22</td>
+<td class="org-left">Gmail como herramienta de productividad: 10 trucos imprescindibles</td>
+<td class="org-left"><a href="2025-04-22-gmail-como-herramienta-de-productividad:-10-trucos-imprescindibles.html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
@@ -848,7 +854,199 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Tue, 22 Apr 2025 07:57:00 +0200</pubDate>
+  <pubDate>Tue, 22 Apr 2025 10:38:00 +0200</pubDate>
+</item>
+<item>
+  <title><![CDATA[Gmail como herramienta de productividad: 10 trucos imprescindibles]]></title>
+  <description><![CDATA[
+<p>
+¿Crees que Gmail solo sirve para enviar y recibir correos? En realidad, es una herramienta de productividad muy potente si sabes cómo configurarla. Aquí te dejo 10 trucos y consejos detallados que uso en mi día a día para mantener el enfoque, evitar distracciones y trabajar más rápido.
+</p>
+<div id="outline-container-orgf45e439" class="outline-2">
+<h2 id="orgf45e439">1. Atajos de teclado: la velocidad al alcance de tus dedos</h2>
+<div class="outline-text-2" id="text-orgf45e439">
+<p>
+Activa los atajos desde <code>Configuración &gt; Ver toda la configuración &gt; Avanzado &gt; Atajos de teclado</code>. Algunos básicos:
+</p>
+<dl class="org-dl">
+<dt><code>c</code></dt><dd>redactar nuevo correo</dd>
+<dt><code>r</code></dt><dd>responder</dd>
+<dt><code>f</code></dt><dd>reenviar</dd>
+<dt><code>e</code></dt><dd>archivar</dd>
+<dt><code>#</code></dt><dd>eliminar</dd>
+<dt><code>g i</code></dt><dd>ir a la bandeja de entrada</dd>
+</dl>
+
+<p>
+👉 Pulsa <code>?</code> dentro de Gmail para ver todos los atajos disponibles.
+</p>
+</div>
+</div>
+<div id="outline-container-org098395a" class="outline-2">
+<h2 id="org098395a">2. Filtros inteligentes: automatiza tu bandeja</h2>
+<div class="outline-text-2" id="text-org098395a">
+<p>
+Desde el buscador, haz clic en la flecha para crear un filtro. Puedes:
+</p>
+<ul class="org-ul">
+<li>Aplicar etiquetas automáticamente</li>
+<li>Archivar correos al llegar</li>
+<li>Reenviar a otra cuenta</li>
+<li>Saltar la bandeja de entrada</li>
+</ul>
+
+<p>
+Ejemplo práctico: todos los correos de notificaciones de Jira con asunto “Tarea asignada” → etiqueta “Proyectos” + marcador de importancia.
+</p>
+</div>
+</div>
+<div id="outline-container-org08ee555" class="outline-2">
+<h2 id="org08ee555">3. Etiquetas + colores: organiza visualmente</h2>
+<div class="outline-text-2" id="text-org08ee555">
+<p>
+Crea etiquetas específicas por proyecto, cliente o prioridad. Usa colores para resaltarlas (rojo = urgente, azul = info). Esto te permite escanear tu bandeja de forma más visual y rápida.
+</p>
+</div>
+</div>
+<div id="outline-container-org339b606" class="outline-2">
+<h2 id="org339b606">4. Bandeja de entrada Prioritaria + múltiples secciones</h2>
+<div class="outline-text-2" id="text-org339b606">
+<p>
+Desde <code>Configuración &gt; Recibidos</code> selecciona "Prioritarios". Puedes dividir la bandeja en:
+</p>
+<ul class="org-ul">
+<li>Correos importantes no leídos</li>
+<li>Correos destacados</li>
+<li>Todo lo demás</li>
+</ul>
+
+<p>
+Esto centra tu atención en lo urgente y evita perder correos clave entre notificaciones.
+</p>
+</div>
+</div>
+<div id="outline-container-orge8791de" class="outline-2">
+<h2 id="orge8791de">5. Función "Posponer": inbox cero realista</h2>
+<div class="outline-text-2" id="text-orge8791de">
+<p>
+Haz clic en el icono del reloj para que el correo reaparezca cuando tú lo decidas: esta tarde, mañana o la próxima semana. Ideal para responder cuando tengas el contexto adecuado.
+</p>
+
+
+<figure id="org176e760">
+<img src="images/gmail-productividad.png" alt="&quot;Diagrama de productividad con Gmail&quot;" width="200px">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orga997266" class="outline-2">
+<h2 id="orga997266">6. Plantillas de respuesta (Respuestas prediseñadas)</h2>
+<div class="outline-text-2" id="text-orga997266">
+<p>
+Activa esta función desde <code>Configuración &gt; Avanzado &gt; Plantillas</code>. Luego:
+</p>
+<ol class="org-ol">
+<li>Escribe tu mensaje estándar</li>
+<li>Haz clic en ⋮ y guarda como plantilla</li>
+<li>La próxima vez, solo inserta</li>
+</ol>
+
+<p>
+Perfecto para respuestas frecuentes: confirmaciones, seguimientos, propuestas…
+</p>
+</div>
+</div>
+<div id="outline-container-org100d31c" class="outline-2">
+<h2 id="org100d31c">7. Conexión con Google Tasks y Calendar</h2>
+<div class="outline-text-2" id="text-org100d31c">
+<ul class="org-ul">
+<li>Selecciona un correo y usa <code>Agregar a Tareas</code> (menú superior)</li>
+<li>Desde ahí, fija una fecha, descripción y seguimiento</li>
+<li>También puedes programar eventos desde el correo</li>
+</ul>
+
+<p>
+Con esto tu correo deja de ser una lista de pendientes invisible.
+</p>
+</div>
+</div>
+<div id="outline-container-org2d4a7c6" class="outline-2">
+<h2 id="org2d4a7c6">8. Complementos de productividad imprescindibles</h2>
+<div class="outline-text-2" id="text-org2d4a7c6">
+<p>
+Desde el menú lateral derecho, añade:
+</p>
+<ul class="org-ul">
+<li><b>Todoist</b>: convierte correos en tareas</li>
+<li><b>Trello para Gmail</b>: convierte correos en tarjetas</li>
+<li><b>Zoom/Meet</b>: programa videollamadas desde Gmail</li>
+</ul>
+
+<p>
+Además, con extensiones como:
+</p>
+<ul class="org-ul">
+<li><b>Simplify Gmail</b>: reduce distracciones visuales</li>
+<li><b>RightInbox</b>: programar correos, seguimiento, notas</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf6db3fa" class="outline-2">
+<h2 id="orgf6db3fa">9. Búsqueda avanzada: encuentra todo, rápido</h2>
+<div class="outline-text-2" id="text-orgf6db3fa">
+<p>
+Utiliza operadores como:
+</p>
+<ul class="org-ul">
+<li>=from:=juan@empresa.com</li>
+<li>=subject:=informe</li>
+<li><code>has:attachment</code></li>
+<li><code>older_than:7d</code> (correos de hace más de 7 días)</li>
+<li><code>is:unread</code> AND <code>label:urgente</code></li>
+</ul>
+
+<p>
+Puedes combinar varios para búsquedas precisas.
+</p>
+</div>
+</div>
+<div id="outline-container-org12c08ce" class="outline-2">
+<h2 id="org12c08ce">10. Automatiza con Google Apps Script o herramientas externas</h2>
+<div class="outline-text-2" id="text-org12c08ce">
+<p>
+Conecta Gmail con:
+</p>
+<ul class="org-ul">
+<li><b>Zapier</b>: automatiza acciones al recibir correos</li>
+<li><b>Google Apps Script</b>: crea scripts personalizados para archivar, responder o reenviar</li>
+<li><b>IFTTT</b>: guarda adjuntos automáticamente en Drive</li>
+</ul>
+
+<p>
+Ejemplo: si recibes un correo con el asunto “Factura”, guárdalo automáticamente en una carpeta de Drive y etiqueta el correo como “contabilidad”.
+</p>
+</div>
+</div>
+<div id="outline-container-orgcfd60e2" class="outline-2">
+<h2 id="orgcfd60e2">📌 Conclusión</h2>
+<div class="outline-text-2" id="text-orgcfd60e2">
+<p>
+Gmail no es solo una bandeja de entrada: puede ser el centro de tu productividad diaria. Automatiza, organiza y prioriza. Cuanto menos tiempo pases gestionando el correo, más tiempo tendrás para lo que realmente importa.
+</p>
+
+<p>
+¿Ya usas alguno de estos trucos? ¿Cuál agregarías tú? Te leo en los comentarios 👇
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-productividad.html">productividad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gmail.html">gmail</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-automatización.html">automatización</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-herramientas-digitales.html">herramientas-digitales</a> </div>]]></description>
+  <category><![CDATA[productividad]]></category>
+  <category><![CDATA[gmail]]></category>
+  <category><![CDATA[automatización]]></category>
+  <category><![CDATA[herramientas-digitales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-22-gmail-como-herramienta-de-productividad:-10-trucos-imprescindibles.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-22-gmail-como-herramienta-de-productividad:-10-trucos-imprescindibles.html</guid>
+  <pubDate>Tue, 22 Apr 2025 10:26:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Automatizando Auditorías de Seguridad en Linux con Bash y Emacs]]></title>
