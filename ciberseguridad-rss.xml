@@ -4,7 +4,215 @@
 <title><![CDATA[Emacs con esteroides - ciberseguridad]]></title>
 <description><![CDATA[Emacs con esteroides - ciberseguridad]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-ciberseguridad.html</link>
-<lastBuildDate>Wed, 23 Apr 2025 02:07:42 +0200</lastBuildDate>
+<lastBuildDate>Wed, 23 Apr 2025 02:19:43 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Ciberamenazas Más Frecuentes y Cómo Combatirlas]]></title>
+  <description><![CDATA[
+<div id="outline-container-org959e965" class="outline-2">
+<h2 id="org959e965">Introducción</h2>
+<div class="outline-text-2" id="text-org959e965">
+<p>
+En el mundo digital actual, las ciberamenazas representan uno de los mayores desafíos tanto para usuarios individuales como para empresas. Este post ofrece una visión detallada de las amenazas más comunes, cómo actúan y qué medidas se pueden tomar para prevenirlas.
+</p>
+</div>
+</div>
+<div id="outline-container-org396516a" class="outline-2">
+<h2 id="org396516a">Principales ciberamenazas</h2>
+<div class="outline-text-2" id="text-org396516a">
+</div>
+<div id="outline-container-org33f2145" class="outline-3">
+<h3 id="org33f2145">1. Phishing</h3>
+<div class="outline-text-3" id="text-org33f2145">
+<p>
+El <b>phishing</b> es un método de ingeniería social que engaña a los usuarios para que revelen información sensible, como contraseñas o datos bancarios, haciéndose pasar por entidades confiables mediante correos electrónicos, mensajes o páginas falsas.
+</p>
+</div>
+<div id="outline-container-org40582c9" class="outline-4">
+<h4 id="org40582c9">Cómo prevenirlo:</h4>
+<div class="outline-text-4" id="text-org40582c9">
+<ul class="org-ul">
+<li>No hacer clic en enlaces sospechosos.</li>
+<li>Verificar siempre el remitente.</li>
+<li>Usar autenticación en dos pasos.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd4a213c" class="outline-3">
+<h3 id="orgd4a213c">2. Ransomware</h3>
+<div class="outline-text-3" id="text-orgd4a213c">
+<p>
+El <b>ransomware</b> es un tipo de malware que cifra los archivos de la víctima y exige un rescate para restaurar el acceso.
+</p>
+</div>
+<div id="outline-container-org050828b" class="outline-4">
+<h4 id="org050828b">Cómo prevenirlo:</h4>
+<div class="outline-text-4" id="text-org050828b">
+<ul class="org-ul">
+<li>Hacer copias de seguridad periódicas.</li>
+<li>Mantener el sistema y software actualizados.</li>
+<li>Usar soluciones antivirus de calidad.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf9c6608" class="outline-3">
+<h3 id="orgf9c6608">3. Malware (virus, troyanos, spyware)</h3>
+<div class="outline-text-3" id="text-orgf9c6608">
+<p>
+Software malicioso diseñado para causar daño, espiar o controlar sistemas sin consentimiento.
+</p>
+</div>
+<div id="outline-container-orgf392d7a" class="outline-4">
+<h4 id="orgf392d7a">Cómo prevenirlo:</h4>
+<div class="outline-text-4" id="text-orgf392d7a">
+<ul class="org-ul">
+<li>No descargar archivos de sitios no confiables.</li>
+<li>Mantener actualizado el sistema operativo.</li>
+<li>Usar herramientas antimalware.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2f00251" class="outline-3">
+<h3 id="org2f00251">4. Ataques de fuerza bruta</h3>
+<div class="outline-text-3" id="text-org2f00251">
+<p>
+Intento automatizado de adivinar contraseñas mediante prueba y error.
+</p>
+</div>
+<div id="outline-container-orgfa1d49c" class="outline-4">
+<h4 id="orgfa1d49c">Cómo prevenirlo:</h4>
+<div class="outline-text-4" id="text-orgfa1d49c">
+<ul class="org-ul">
+<li>Usar contraseñas fuertes y únicas.</li>
+<li>Implementar límites de intentos de acceso.</li>
+<li>Activar autenticación multifactor.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org53d2f9c" class="outline-3">
+<h3 id="org53d2f9c">5. Ingeniería social</h3>
+<div class="outline-text-3" id="text-org53d2f9c">
+<p>
+Manipulación psicológica para obtener acceso a sistemas o datos sensibles.
+</p>
+</div>
+<div id="outline-container-orgeb9bdb9" class="outline-4">
+<h4 id="orgeb9bdb9">Cómo prevenirlo:</h4>
+<div class="outline-text-4" id="text-orgeb9bdb9">
+<ul class="org-ul">
+<li>Formación continua en ciberseguridad.</li>
+<li>Ser escéptico ante solicitudes urgentes o inusuales.</li>
+<li>Verificar siempre las identidades.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org0bba234" class="outline-2">
+<h2 id="org0bba234">Tabla resumen de amenazas</h2>
+<div class="outline-text-2" id="text-org0bba234">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Amenaza</th>
+<th scope="col" class="org-left">Ocurrencia</th>
+<th scope="col" class="org-left">Descripción breve</th>
+<th scope="col" class="org-left">Medidas de prevención</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Phishing</td>
+<td class="org-left">Muy frecuente</td>
+<td class="org-left">Engaño mediante emails/mensajes falsos</td>
+<td class="org-left">Verificar enlaces, remitente y usar 2FA</td>
+</tr>
+
+<tr>
+<td class="org-left">Ransomware</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Secuestro de archivos por cifrado</td>
+<td class="org-left">Copias de seguridad, antivirus y actualizaciones</td>
+</tr>
+
+<tr>
+<td class="org-left">Malware</td>
+<td class="org-left">Muy frecuente</td>
+<td class="org-left">Software malicioso</td>
+<td class="org-left">Antivirus, no descargar de sitios sospechosos</td>
+</tr>
+
+<tr>
+<td class="org-left">Fuerza bruta</td>
+<td class="org-left">Media</td>
+<td class="org-left">Intento de adivinar contraseñas</td>
+<td class="org-left">Contraseñas fuertes, límite de intentos, 2FA</td>
+</tr>
+
+<tr>
+<td class="org-left">Ingeniería social</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Engaño psicológico para obtener acceso</td>
+<td class="org-left">Formación, verificación de identidad</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org904dca6" class="outline-2">
+<h2 id="org904dca6">Diagrama explicativo</h2>
+<div class="outline-text-2" id="text-org904dca6">
+
+<figure id="org751d521">
+<img src="images/ciberamenazas_diagrama.png" alt="ciberamenazas_diagrama.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org744362d" class="outline-2">
+<h2 id="org744362d">Referencias</h2>
+<div class="outline-text-2" id="text-org744362d">
+<ol class="org-ol">
+<li><a href="https://www.incibe.es">INCIBE - Instituto Nacional de Ciberseguridad</a></li>
+<li><a href="https://www.cisa.gov/">CISA - Cybersecurity and Infrastructure Security Agency</a></li>
+<li><a href="https://www.osi.es/">Oficina de Seguridad del Internauta (OSI)</a></li>
+<li><a href="https://nvd.nist.gov/">National Vulnerability Database</a></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org13d724a" class="outline-2">
+<h2 id="org13d724a">Conclusión</h2>
+<div class="outline-text-2" id="text-org13d724a">
+<p>
+La ciberseguridad comienza con la educación del usuario. Conocer las amenazas más comunes y adoptar medidas básicas puede marcar la diferencia entre ser víctima o estar protegido. Mantente alerta, actualiza tus sistemas y no subestimes el poder de una contraseña robusta.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ciberseguridad.html">ciberseguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-amenazas.html">amenazas</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-malware.html">malware</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ransomware.html">ransomware</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-phishing.html">phishing</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[ciberseguridad]]></category>
+  <category><![CDATA[amenazas]]></category>
+  <category><![CDATA[malware]]></category>
+  <category><![CDATA[ransomware]]></category>
+  <category><![CDATA[phishing]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-23--ciberamenazas-m%C3%A1s-frecuentes-y-c%C3%B3mo-combatirlas.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-23--ciberamenazas-m%C3%A1s-frecuentes-y-c%C3%B3mo-combatirlas.html</guid>
+  <pubDate>Wed, 23 Apr 2025 02:12:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[Automatizando Auditorías de Seguridad en Linux con Bash y Emacs]]></title>
   <description><![CDATA[

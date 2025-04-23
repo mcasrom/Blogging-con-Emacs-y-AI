@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Ciberamenazas Más Frecuentes y Cómo Combatirlas">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Ciberamenazas Más Frecuentes y Cómo Combatirlas</title>
+<meta charset='UTF-8'>
+ <!-- ======= SEO y Redes Sociales ======= -->
+       <meta name='author' content='Mike'>
+       <meta name='description' content='Blog sobre Emacs, org-mode, automatización y herramientas avanzadas'>
+       <meta name='keywords' content='Emacs, Org Mode, Linux, Inteligencia Artificial, Automatización, Tutoriales'>
+       <meta property='og:title' content='Emacs con esteroides'>
+       <meta property='og:description' content='Poder y Simplicidad con Emacs, IA y Linux'>
+       <meta property='og:image' content='https://mcasrom.github.io/logo.png'>
+       <meta property='og:url' content='https://mcasrom.github.io/'>
+       <meta property='og:type' content='website'>
+       <meta name='twitter:card' content='summary_large_image'>
+       <meta name='twitter:title' content='Emacs con esteroides'>
+       <meta name='twitter:description' content='Blog sobre Emacs, IA y herramientas avanzadas'>
+       <meta name='twitter:image' content='https://tuusuario.github.io/logo.png'>
+       <link rel='alternate' type='application/rss+xml' href='rss.xml'>
+       <link rel='sitemap' type='application/xml' title='Sitemap' href='sitemap.xml'>
+       <!-- ======= Estilo y Fuentes ======= -->
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.8em; .85
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
+       </nav>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">23/04/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-23--ciberamenazas-más-frecuentes-y-cómo-combatirlas.html">Ciberamenazas Más Frecuentes y Cómo Combatirlas</a></h1>
+<div id="outline-container-org959e965" class="outline-2">
+<h2 id="org959e965">Introducción</h2>
+<div class="outline-text-2" id="text-org959e965">
+<p>
+En el mundo digital actual, las ciberamenazas representan uno de los mayores desafíos tanto para usuarios individuales como para empresas. Este post ofrece una visión detallada de las amenazas más comunes, cómo actúan y qué medidas se pueden tomar para prevenirlas.
+</p>
+</div>
+</div>
+<div id="outline-container-org396516a" class="outline-2">
+<h2 id="org396516a">Principales ciberamenazas</h2>
+<div class="outline-text-2" id="text-org396516a">
+</div>
+<div id="outline-container-org33f2145" class="outline-3">
+<h3 id="org33f2145">1. Phishing</h3>
+<div class="outline-text-3" id="text-org33f2145">
+<p>
+El <b>phishing</b> es un método de ingeniería social que engaña a los usuarios para que revelen información sensible, como contraseñas o datos bancarios, haciéndose pasar por entidades confiables mediante correos electrónicos, mensajes o páginas falsas.
+</p>
+</div>
+<div id="outline-container-org40582c9" class="outline-4">
+<h4 id="org40582c9">Cómo prevenirlo:</h4>
+<div class="outline-text-4" id="text-org40582c9">
+<ul class="org-ul">
+<li>No hacer clic en enlaces sospechosos.</li>
+<li>Verificar siempre el remitente.</li>
+<li>Usar autenticación en dos pasos.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd4a213c" class="outline-3">
+<h3 id="orgd4a213c">2. Ransomware</h3>
+<div class="outline-text-3" id="text-orgd4a213c">
+<p>
+El <b>ransomware</b> es un tipo de malware que cifra los archivos de la víctima y exige un rescate para restaurar el acceso.
+</p>
+</div>
+<div id="outline-container-org050828b" class="outline-4">
+<h4 id="org050828b">Cómo prevenirlo:</h4>
+<div class="outline-text-4" id="text-org050828b">
+<ul class="org-ul">
+<li>Hacer copias de seguridad periódicas.</li>
+<li>Mantener el sistema y software actualizados.</li>
+<li>Usar soluciones antivirus de calidad.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf9c6608" class="outline-3">
+<h3 id="orgf9c6608">3. Malware (virus, troyanos, spyware)</h3>
+<div class="outline-text-3" id="text-orgf9c6608">
+<p>
+Software malicioso diseñado para causar daño, espiar o controlar sistemas sin consentimiento.
+</p>
+</div>
+<div id="outline-container-orgf392d7a" class="outline-4">
+<h4 id="orgf392d7a">Cómo prevenirlo:</h4>
+<div class="outline-text-4" id="text-orgf392d7a">
+<ul class="org-ul">
+<li>No descargar archivos de sitios no confiables.</li>
+<li>Mantener actualizado el sistema operativo.</li>
+<li>Usar herramientas antimalware.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2f00251" class="outline-3">
+<h3 id="org2f00251">4. Ataques de fuerza bruta</h3>
+<div class="outline-text-3" id="text-org2f00251">
+<p>
+Intento automatizado de adivinar contraseñas mediante prueba y error.
+</p>
+</div>
+<div id="outline-container-orgfa1d49c" class="outline-4">
+<h4 id="orgfa1d49c">Cómo prevenirlo:</h4>
+<div class="outline-text-4" id="text-orgfa1d49c">
+<ul class="org-ul">
+<li>Usar contraseñas fuertes y únicas.</li>
+<li>Implementar límites de intentos de acceso.</li>
+<li>Activar autenticación multifactor.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org53d2f9c" class="outline-3">
+<h3 id="org53d2f9c">5. Ingeniería social</h3>
+<div class="outline-text-3" id="text-org53d2f9c">
+<p>
+Manipulación psicológica para obtener acceso a sistemas o datos sensibles.
+</p>
+</div>
+<div id="outline-container-orgeb9bdb9" class="outline-4">
+<h4 id="orgeb9bdb9">Cómo prevenirlo:</h4>
+<div class="outline-text-4" id="text-orgeb9bdb9">
+<ul class="org-ul">
+<li>Formación continua en ciberseguridad.</li>
+<li>Ser escéptico ante solicitudes urgentes o inusuales.</li>
+<li>Verificar siempre las identidades.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org0bba234" class="outline-2">
+<h2 id="org0bba234">Tabla resumen de amenazas</h2>
+<div class="outline-text-2" id="text-org0bba234">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Amenaza</th>
+<th scope="col" class="org-left">Ocurrencia</th>
+<th scope="col" class="org-left">Descripción breve</th>
+<th scope="col" class="org-left">Medidas de prevención</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Phishing</td>
+<td class="org-left">Muy frecuente</td>
+<td class="org-left">Engaño mediante emails/mensajes falsos</td>
+<td class="org-left">Verificar enlaces, remitente y usar 2FA</td>
+</tr>
+
+<tr>
+<td class="org-left">Ransomware</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Secuestro de archivos por cifrado</td>
+<td class="org-left">Copias de seguridad, antivirus y actualizaciones</td>
+</tr>
+
+<tr>
+<td class="org-left">Malware</td>
+<td class="org-left">Muy frecuente</td>
+<td class="org-left">Software malicioso</td>
+<td class="org-left">Antivirus, no descargar de sitios sospechosos</td>
+</tr>
+
+<tr>
+<td class="org-left">Fuerza bruta</td>
+<td class="org-left">Media</td>
+<td class="org-left">Intento de adivinar contraseñas</td>
+<td class="org-left">Contraseñas fuertes, límite de intentos, 2FA</td>
+</tr>
+
+<tr>
+<td class="org-left">Ingeniería social</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Engaño psicológico para obtener acceso</td>
+<td class="org-left">Formación, verificación de identidad</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org904dca6" class="outline-2">
+<h2 id="org904dca6">Diagrama explicativo</h2>
+<div class="outline-text-2" id="text-org904dca6">
+
+<figure id="org751d521">
+<img src="images/ciberamenazas_diagrama.png" alt="ciberamenazas_diagrama.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org744362d" class="outline-2">
+<h2 id="org744362d">Referencias</h2>
+<div class="outline-text-2" id="text-org744362d">
+<ol class="org-ol">
+<li><a href="https://www.incibe.es">INCIBE - Instituto Nacional de Ciberseguridad</a></li>
+<li><a href="https://www.cisa.gov/">CISA - Cybersecurity and Infrastructure Security Agency</a></li>
+<li><a href="https://www.osi.es/">Oficina de Seguridad del Internauta (OSI)</a></li>
+<li><a href="https://nvd.nist.gov/">National Vulnerability Database</a></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org13d724a" class="outline-2">
+<h2 id="org13d724a">Conclusión</h2>
+<div class="outline-text-2" id="text-org13d724a">
+<p>
+La ciberseguridad comienza con la educación del usuario. Conocer las amenazas más comunes y adoptar medidas básicas puede marcar la diferencia entre ser víctima o estar protegido. Mantente alerta, actualiza tus sistemas y no subestimes el poder de una contraseña robusta.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ciberseguridad.html">ciberseguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-amenazas.html">amenazas</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-malware.html">malware</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ransomware.html">ransomware</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-phishing.html">phishing</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>
