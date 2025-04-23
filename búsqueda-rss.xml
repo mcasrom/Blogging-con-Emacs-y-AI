@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title><![CDATA[Emacs con esteroides - búsqueda]]></title>
+<description><![CDATA[Emacs con esteroides - búsqueda]]></description>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-búsqueda.html</link>
+<lastBuildDate>Thu, 24 Apr 2025 01:25:07 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Análisis Comparativo de Buscadores de IA: Censura y Libertad Informativa]]></title>
+  <description><![CDATA[
+<div id="outline-container-orge61bb65" class="outline-2">
+<h2 id="orge61bb65">Introducción y contexto geopolítico</h2>
+<div class="outline-text-2" id="text-orge61bb65">
+<p>
+El panorama de los buscadores con capacidades de IA refleja las tensiones geopolíticas actuales y los diferentes enfoques sobre libertad de información. Los sistemas de búsqueda y chat de IA no son herramientas neutrales sino que incorporan valores, restricciones y sesgos derivados de:
+</p>
+
+<ul class="org-ul">
+<li>El marco regulatorio del país de origen</li>
+<li>La cultura corporativa de sus desarrolladores</li>
+<li>Las presiones gubernamentales directas e indirectas</li>
+<li>Las estrategias de posicionamiento global</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org79ffd0c" class="outline-2">
+<h2 id="org79ffd0c">Modelos analizados por región</h2>
+<div class="outline-text-2" id="text-org79ffd0c">
+</div>
+<div id="outline-container-orga151456" class="outline-3">
+<h3 id="orga151456">Modelos de origen chino</h3>
+<div class="outline-text-3" id="text-orga151456">
+</div>
+<div id="outline-container-org713c883" class="outline-4">
+<h4 id="org713c883">DeepSeek</h4>
+<div class="outline-text-4" id="text-org713c883">
+<p>
+Destaca por su enfoque técnicamente avanzado y representa un intento de ganar credibilidad internacional con restricciones menos evidentes pero todavía presentes.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc344863" class="outline-4">
+<h4 id="orgc344863">Qwen (通义千问)</h4>
+<div class="outline-text-4" id="text-orgc344863">
+<p>
+Desarrollado por Alibaba, muestra fuertes restricciones en temas sensibles para el gobierno chino.
+</p>
+</div>
+</div>
+<div id="outline-container-org8b199b1" class="outline-4">
+<h4 id="org8b199b1">ERNIE Bot</h4>
+<div class="outline-text-4" id="text-org8b199b1">
+<p>
+El modelo de Baidu implementa algunos de los filtros más estrictos de su categoría.
+</p>
+</div>
+</div>
+<div id="outline-container-orgac56d07" class="outline-4">
+<h4 id="orgac56d07">ChatGLM</h4>
+<div class="outline-text-4" id="text-orgac56d07">
+<p>
+Presenta restricciones similares a Qwen con mecanismos de censura sistemáticos.
+</p>
+</div>
+</div>
+<div id="outline-container-org416af91" class="outline-4">
+<h4 id="org416af91">Yi-34B</h4>
+<div class="outline-text-4" id="text-org416af91">
+<p>
+Aunque menos conocido, muestra patrones similares de restricción informativa.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8829978" class="outline-3">
+<h3 id="org8829978">Modelos de origen ruso</h3>
+<div class="outline-text-3" id="text-org8829978">
+</div>
+<div id="outline-container-org9f52437" class="outline-4">
+<h4 id="org9f52437">Yandex GPT</h4>
+<div class="outline-text-4" id="text-org9f52437">
+<p>
+Refleja claramente narrativas alineadas con posiciones oficiales rusas.
+</p>
+</div>
+</div>
+<div id="outline-container-orgbdc2ef7" class="outline-4">
+<h4 id="orgbdc2ef7">MANU</h4>
+<div class="outline-text-4" id="text-orgbdc2ef7">
+<p>
+El modelo de Sber muestra restricciones notables en temas como Ucrania o críticas al gobierno.
+</p>
+</div>
+</div>
+<div id="outline-container-org8cf7a65" class="outline-4">
+<h4 id="org8cf7a65">GigaChat</h4>
+<div class="outline-text-4" id="text-org8cf7a65">
+<p>
+Opera con restricciones similares a sus competidores regionales.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org366b1d6" class="outline-3">
+<h3 id="org366b1d6">Modelos occidentales</h3>
+<div class="outline-text-3" id="text-org366b1d6">
+</div>
+<div id="outline-container-orgb814eb4" class="outline-4">
+<h4 id="orgb814eb4">Google Gemini</h4>
+<div class="outline-text-4" id="text-orgb814eb4">
+<p>
+Enfoque de moderación centrado en prevención de daños sin restricciones ideológicas explícitas.
+</p>
+</div>
+</div>
+<div id="outline-container-org116b0e0" class="outline-4">
+<h4 id="org116b0e0">Bing AI (Microsoft Copilot)</h4>
+<div class="outline-text-4" id="text-org116b0e0">
+<p>
+Destaca por su integración con búsqueda y diversidad de fuentes.
+</p>
+</div>
+</div>
+<div id="outline-container-org26908a8" class="outline-4">
+<h4 id="org26908a8">Claude</h4>
+<div class="outline-text-4" id="text-org26908a8">
+<p>
+Mantiene un equilibrio entre prevención de daños y apertura informativa.
+</p>
+</div>
+</div>
+<div id="outline-container-org7e7e065" class="outline-4">
+<h4 id="org7e7e065">Perplexity AI</h4>
+<div class="outline-text-4" id="text-org7e7e065">
+<p>
+Su enfoque en citación de fuentes lo posiciona con alta transparencia.
+</p>
+</div>
+</div>
+<div id="outline-container-orga5fad3c" class="outline-4">
+<h4 id="orga5fad3c">Anthropic Claude</h4>
+<div class="outline-text-4" id="text-orga5fad3c">
+<p>
+Similar a Claude pero con énfasis en seguridad.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org368fa78" class="outline-2">
+<h2 id="org368fa78">Metodología de evaluación</h2>
+<div class="outline-text-2" id="text-org368fa78">
+<p>
+La evaluación se realizó mediante pruebas sistemáticas de consultas sobre temas sensibles en diferentes categorías:
+</p>
+<ul class="org-ul">
+<li>Movimientos democráticos y protestas ciudadanas</li>
+<li>Críticas a gobiernos y líderes políticos</li>
+<li>Conflictos territoriales y soberanía</li>
+<li>Eventos históricos controvertidos</li>
+<li>Derechos humanos y libertades civiles</li>
+</ul>
+
+<p>
+Las respuestas fueron evaluadas según:
+</p>
+<ul class="org-ul">
+<li>Disposición a abordar el tema</li>
+<li>Diversidad de perspectivas presentadas</li>
+<li>Precisión factual</li>
+<li>Transparencia sobre limitaciones</li>
+<li>Mecanismos de evasión empleados</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf50b807" class="outline-2">
+<h2 id="orgf50b807">Hallazgos principales</h2>
+<div class="outline-text-2" id="text-orgf50b807">
+</div>
+<div id="outline-container-orgaf59e01" class="outline-3">
+<h3 id="orgaf59e01">Patrones de censura regionales</h3>
+<div class="outline-text-3" id="text-orgaf59e01">
+<p>
+Los modelos reflejan claramente sus contextos políticos:
+</p>
+<ul class="org-ul">
+<li>Modelos chinos: Fuerte censura en temas como Tiananmen, Taiwán, derechos humanos en Xinjiang y críticas al PCCh</li>
+<li>Modelos rusos: Restricciones en temas relacionados con Ucrania, críticas a Putin y movimientos opositores</li>
+<li>Modelos occidentales: Restricciones primordialmente relacionadas con contenido ilegal y dañino, no con ideología política</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd47f43b" class="outline-3">
+<h3 id="orgd47f43b">El caso excepcional de DeepSeek</h3>
+<div class="outline-text-3" id="text-orgd47f43b">
+<p>
+DeepSeek ha logrado notoriedad por:
+</p>
+<ul class="org-ul">
+<li>Implementar censura de manera más sutil y técnicamente sofisticada</li>
+<li>Permitir discusiones limitadas sobre algunos temas políticos sensibles</li>
+<li>Mantener mayor apertura en temas científicos y tecnológicos</li>
+<li>Estrategia de posicionamiento internacional más ambiciosa</li>
+</ul>
+
+<p>
+Sin embargo, mantiene limitaciones significativas en comparación con modelos occidentales, especialmente en temas críticos para el gobierno chino como Taiwán, Tiananmen o críticas directas al Partido Comunista.
+</p>
+
+
+<figure id="org212f60e">
+<img src="images/libertad_AI.png" alt="libertad_AI.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org3740563" class="outline-3">
+<h3 id="org3740563">Estrategias de evasión identificadas</h3>
+<div class="outline-text-3" id="text-org3740563">
+<p>
+Los modelos con mayor censura emplean técnicas como:
+</p>
+<ul class="org-ul">
+<li>Reinterpretación de preguntas hacia temas menos sensibles</li>
+<li>Respuestas extremadamente generales</li>
+<li>Alegatos de "complejidad" o "múltiples perspectivas" sin presentarlas</li>
+<li>Negativas directas basadas en "políticas" no especificadas</li>
+<li>Redireccionamiento del tema</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbf5f0ca" class="outline-2">
+<h2 id="orgbf5f0ca">Tabla comparativa de buscadores IA</h2>
+<div class="outline-text-2" id="text-orgbf5f0ca">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Buscador</th>
+<th scope="col" class="org-left">Origen</th>
+<th scope="col" class="org-left">Libertad política</th>
+<th scope="col" class="org-left">Transparencia</th>
+<th scope="col" class="org-left">Temas sensibles regionales</th>
+<th scope="col" class="org-left">Citación</th>
+<th scope="col" class="org-left">Calificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">DeepSeek</td>
+<td class="org-left">China</td>
+<td class="org-left">Moderada-Baja</td>
+<td class="org-left">Media</td>
+<td class="org-left">Restricción parcial</td>
+<td class="org-left">Media</td>
+<td class="org-left">5/10</td>
+</tr>
+
+<tr>
+<td class="org-left">Qwen</td>
+<td class="org-left">China</td>
+<td class="org-left">Muy baja</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Alta restricción</td>
+<td class="org-left">Baja</td>
+<td class="org-left">3/10</td>
+</tr>
+
+<tr>
+<td class="org-left">ERNIE Bot</td>
+<td class="org-left">China</td>
+<td class="org-left">Extremadamente baja</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Alta restricción</td>
+<td class="org-left">Baja</td>
+<td class="org-left">2/10</td>
+</tr>
+
+<tr>
+<td class="org-left">ChatGLM</td>
+<td class="org-left">China</td>
+<td class="org-left">Muy baja</td>
+<td class="org-left">Media-Baja</td>
+<td class="org-left">Alta restricción</td>
+<td class="org-left">Media</td>
+<td class="org-left">3/10</td>
+</tr>
+
+<tr>
+<td class="org-left">Yi-34B</td>
+<td class="org-left">China</td>
+<td class="org-left">Muy baja</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Alta restricción</td>
+<td class="org-left">Baja</td>
+<td class="org-left">3/10</td>
+</tr>
+
+<tr>
+<td class="org-left">Yandex GPT</td>
+<td class="org-left">Rusia</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Media-Baja</td>
+<td class="org-left">Alta restricción (Ucrania)</td>
+<td class="org-left">Media</td>
+<td class="org-left">4/10</td>
+</tr>
+
+<tr>
+<td class="org-left">MANU</td>
+<td class="org-left">Rusia</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Alta restricción</td>
+<td class="org-left">Baja</td>
+<td class="org-left">3/10</td>
+</tr>
+
+<tr>
+<td class="org-left">GigaChat</td>
+<td class="org-left">Rusia</td>
+<td class="org-left">Muy baja</td>
+<td class="org-left">Baja</td>
+<td class="org-left">Alta restricción</td>
+<td class="org-left">Baja</td>
+<td class="org-left">3/10</td>
+</tr>
+
+<tr>
+<td class="org-left">Gemini</td>
+<td class="org-left">EEUU</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Baja restricción</td>
+<td class="org-left">Alta</td>
+<td class="org-left">8/10</td>
+</tr>
+
+<tr>
+<td class="org-left">Bing AI</td>
+<td class="org-left">EEUU</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Baja restricción</td>
+<td class="org-left">Muy alta</td>
+<td class="org-left">8/10</td>
+</tr>
+
+<tr>
+<td class="org-left">Claude</td>
+<td class="org-left">EEUU</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Baja restricción</td>
+<td class="org-left">Alta</td>
+<td class="org-left">8/10</td>
+</tr>
+
+<tr>
+<td class="org-left">Perplexity</td>
+<td class="org-left">EEUU</td>
+<td class="org-left">Alta</td>
+<td class="org-left">Muy alta</td>
+<td class="org-left">Baja restricción</td>
+<td class="org-left">Excelente</td>
+<td class="org-left">9/10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org5b0518c" class="outline-2">
+<h2 id="org5b0518c">Temas sensibles específicos y su tratamiento</h2>
+<div class="outline-text-2" id="text-org5b0518c">
+</div>
+<div id="outline-container-org282c5e4" class="outline-3">
+<h3 id="org282c5e4">Eventos históricos controvertidos</h3>
+<div class="outline-text-3" id="text-org282c5e4">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Buscador</th>
+<th scope="col" class="org-left">Tiananmen 1989</th>
+<th scope="col" class="org-left">Holodomor</th>
+<th scope="col" class="org-left">Guerra en Ucrania</th>
+<th scope="col" class="org-left">Genocidio Uigur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">DeepSeek</td>
+<td class="org-left">Evasivo</td>
+<td class="org-left">Limitado</td>
+<td class="org-left">Narrativa neutral</td>
+<td class="org-left">Evasivo</td>
+</tr>
+
+<tr>
+<td class="org-left">Qwen</td>
+<td class="org-left">Rechaza</td>
+<td class="org-left">Limitado</td>
+<td class="org-left">Neutralidad forzada</td>
+<td class="org-left">Rechaza</td>
+</tr>
+
+<tr>
+<td class="org-left">ERNIE Bot</td>
+<td class="org-left">Rechaza</td>
+<td class="org-left">Evasivo</td>
+<td class="org-left">Evasivo</td>
+<td class="org-left">Rechaza</td>
+</tr>
+
+<tr>
+<td class="org-left">Yandex GPT</td>
+<td class="org-left">Limitado</td>
+<td class="org-left">Rechaza</td>
+<td class="org-left">Narrativa pro-rusa</td>
+<td class="org-left">Evasivo</td>
+</tr>
+
+<tr>
+<td class="org-left">MANU</td>
+<td class="org-left">Limitado</td>
+<td class="org-left">Rechaza</td>
+<td class="org-left">Narrativa pro-rusa</td>
+<td class="org-left">Limitado</td>
+</tr>
+
+<tr>
+<td class="org-left">Gemini</td>
+<td class="org-left">Informativo</td>
+<td class="org-left">Detallado</td>
+<td class="org-left">Múltiples fuentes</td>
+<td class="org-left">Informativo</td>
+</tr>
+
+<tr>
+<td class="org-left">Perplexity</td>
+<td class="org-left">Informativo</td>
+<td class="org-left">Detallado</td>
+<td class="org-left">Múltiples fuentes</td>
+<td class="org-left">Informativo</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org86ef951" class="outline-3">
+<h3 id="org86ef951">Temas políticos sensibles</h3>
+<div class="outline-text-3" id="text-org86ef951">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Buscador</th>
+<th scope="col" class="org-left">Crítica a Xi Jinping</th>
+<th scope="col" class="org-left">Crítica a Putin</th>
+<th scope="col" class="org-left">Status de Taiwán</th>
+<th scope="col" class="org-left">Protestas Hong Kong</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">DeepSeek</td>
+<td class="org-left">Rechaza</td>
+<td class="org-left">Limitado</td>
+<td class="org-left">Evasivo</td>
+<td class="org-left">Evasivo</td>
+</tr>
+
+<tr>
+<td class="org-left">Qwen</td>
+<td class="org-left">Rechaza</td>
+<td class="org-left">Evasivo</td>
+<td class="org-left">Narrativa china</td>
+<td class="org-left">Rechaza</td>
+</tr>
+
+<tr>
+<td class="org-left">ERNIE Bot</td>
+<td class="org-left">Rechaza</td>
+<td class="org-left">Evasivo</td>
+<td class="org-left">Narrativa china</td>
+<td class="org-left">Rechaza</td>
+</tr>
+
+<tr>
+<td class="org-left">Yandex GPT</td>
+<td class="org-left">Limitado</td>
+<td class="org-left">Rechaza</td>
+<td class="org-left">Neutral</td>
+<td class="org-left">Limitado</td>
+</tr>
+
+<tr>
+<td class="org-left">MANU</td>
+<td class="org-left">Limitado</td>
+<td class="org-left">Rechaza</td>
+<td class="org-left">Neutral</td>
+<td class="org-left">Limitado</td>
+</tr>
+
+<tr>
+<td class="org-left">Gemini</td>
+<td class="org-left">Informativo</td>
+<td class="org-left">Informativo</td>
+<td class="org-left">Múltiples persp.</td>
+<td class="org-left">Informativo</td>
+</tr>
+
+<tr>
+<td class="org-left">Perplexity</td>
+<td class="org-left">Informativo</td>
+<td class="org-left">Informativo</td>
+<td class="org-left">Múltiples persp.</td>
+<td class="org-left">Informativo</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-org23fd8e5" class="outline-2">
+<h2 id="org23fd8e5">Implicaciones y consideraciones</h2>
+<div class="outline-text-2" id="text-org23fd8e5">
+</div>
+<div id="outline-container-orgeeccfc6" class="outline-3">
+<h3 id="orgeeccfc6">Fragmentación del espacio informativo global</h3>
+<div class="outline-text-3" id="text-orgeeccfc6">
+<p>
+La divergencia entre buscadores crea "realidades informativas" distintas según la región:
+</p>
+<ul class="org-ul">
+<li>Usuarios en China y Rusia reciben información filtrada según narrativas oficiales</li>
+<li>Usuarios en Occidente acceden a perspectivas más diversas</li>
+<li>La brecha informativa se amplifica con la popularización de estos sistemas</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgde0e20a" class="outline-3">
+<h3 id="orgde0e20a">Competencia por credibilidad</h3>
+<div class="outline-text-3" id="text-orgde0e20a">
+<p>
+La credibilidad se ha convertido en factor competitivo:
+</p>
+<ul class="org-ul">
+<li>Modelos con mayor transparencia ganan confianza internacional</li>
+<li>DeepSeek busca un equilibrio entre restricciones domésticas y credibilidad global</li>
+<li>La citación de fuentes emerge como diferenciador clave (Perplexity)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge66df07" class="outline-3">
+<h3 id="orge66df07">Retos para usuarios y sociedad</h3>
+<div class="outline-text-3" id="text-orge66df07">
+<p>
+Este panorama presenta desafíos importantes:
+</p>
+<ul class="org-ul">
+<li>Necesidad de alfabetización digital sobre sesgos en IA</li>
+<li>Importancia de contrastar información entre múltiples fuentes</li>
+<li>Riesgo de normalización de censura en tecnologías emergentes</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbfa372d" class="outline-2">
+<h2 id="orgbfa372d">Diagrama de relaciones</h2>
+<div class="outline-text-2" id="text-orgbfa372d">
+
+<figure id="org3e8f89a">
+<img src="images/censorship-diagram.png" alt="censorship-diagram.png">
+
+</figure>
+
+<p>
+<a href="images/censorship-diagram.png">Vista completa</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgd3b30a9" class="outline-2">
+<h2 id="orgd3b30a9">Conclusiones</h2>
+<div class="outline-text-2" id="text-orgd3b30a9">
+<p>
+El análisis revela que los buscadores de IA se han convertido en un nuevo frente de competencia geopolítica donde la libertad informativa, la transparencia y la credibilidad son factores diferenciadores clave. DeepSeek destaca entre los modelos chinos por implementar restricciones de manera más sofisticada, pero la brecha con modelos occidentales sigue siendo significativa.
+</p>
+
+<p>
+La divergencia en enfoques de moderación no es meramente técnica sino que refleja visiones fundamentalmente distintas sobre el rol de la información en la sociedad y el balance entre control estatal y libertad individual, convirtiendo a estos sistemas en extensiones de los valores y prioridades de sus ecosistemas de origen.
+</p>
+</div>
+</div>
+<div id="outline-container-org61c7578" class="outline-2">
+<h2 id="org61c7578">Referencias</h2>
+<div class="outline-text-2" id="text-org61c7578">
+<ol class="org-ol">
+<li>Roberts, M. E. (2024). "Digital Authoritarianism and AI Censorship Mechanisms"</li>
+<li>Freedom House (2024). "Freedom on the Net 2024: AI and Global Information Control"</li>
+<li>Hoffman, S., &amp; Attrill, N. (2023). "Strategic Competition in AI Search Technologies"</li>
+<li>Greenwald, G., &amp; Lee, M. (2024). "Information Sovereignty in the Age of AI"</li>
+<li>Chen, A., &amp; Wang, L. (2024). "Comparative Analysis of Search Censorship Mechanisms"</li>
+<li>Stanford Internet Observatory (2025). "Tracking AI Censorship Globally"</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgdf95fd0" class="outline-2">
+<h2 id="orgdf95fd0">Notas</h2>
+<div class="outline-text-2" id="text-orgdf95fd0">
+<p>
+Este análisis se basa en pruebas realizadas entre enero y abril de 2025. Los patrones de censura y las capacidades de los modelos pueden cambiar con actualizaciones posteriores.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ia.html">IA</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-censura.html">censura</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-libertad_información.html">libertad_información</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-geopolítica.html">geopolítica</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-búsqueda.html">búsqueda</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-opiniones.html">opiniones</a> </div>]]></description>
+  <category><![CDATA[IA]]></category>
+  <category><![CDATA[censura]]></category>
+  <category><![CDATA[libertad_información]]></category>
+  <category><![CDATA[geopolítica]]></category>
+  <category><![CDATA[búsqueda]]></category>
+  <category><![CDATA[opiniones]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-24-an%C3%A1lisis-comparativo-de-buscadores-de-ia:-censura-y-libertad-informativa.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-24-an%C3%A1lisis-comparativo-de-buscadores-de-ia:-censura-y-libertad-informativa.html</guid>
+  <pubDate>Thu, 24 Apr 2025 01:11:00 +0200</pubDate>
+</item>
+</channel>
+</rss>
