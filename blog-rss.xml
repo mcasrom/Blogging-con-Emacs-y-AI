@@ -4,7 +4,7 @@
 <title><![CDATA[Emacs con esteroides - blog]]></title>
 <description><![CDATA[Emacs con esteroides - blog]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-blog.html</link>
-<lastBuildDate>Thu, 24 Apr 2025 13:35:00 +0200</lastBuildDate>
+<lastBuildDate>Fri, 25 Apr 2025 00:50:30 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
   <description><![CDATA[
@@ -722,6 +722,12 @@
 </tr>
 
 <tr>
+<td class="org-right">2025-04-25</td>
+<td class="org-left">ANZAC Day: Significado, Celebración y Memoria Histórica</td>
+<td class="org-left"><a href="2025-04-25--anzac-day:-significado,-celebración-y-memoria-histórica.html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
@@ -763,7 +769,7 @@
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Thu, 24 Apr 2025 13:31:00 +0200</pubDate>
+  <pubDate>Fri, 25 Apr 2025 00:41:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Emacs con Esteroides: Configurar un Contador de Visitantes para el Blog]]></title>
