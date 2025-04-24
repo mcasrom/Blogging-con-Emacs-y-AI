@@ -4,13 +4,13 @@
 <title><![CDATA[Emacs con esteroides - búsqueda]]></title>
 <description><![CDATA[Emacs con esteroides - búsqueda]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-búsqueda.html</link>
-<lastBuildDate>Thu, 24 Apr 2025 01:25:07 +0200</lastBuildDate>
+<lastBuildDate>Thu, 24 Apr 2025 06:00:59 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Análisis Comparativo de Buscadores de IA: Censura y Libertad Informativa]]></title>
   <description><![CDATA[
-<div id="outline-container-orge61bb65" class="outline-2">
-<h2 id="orge61bb65">Introducción y contexto geopolítico</h2>
-<div class="outline-text-2" id="text-orge61bb65">
+<div id="outline-container-org9613421" class="outline-2">
+<h2 id="org9613421">Introducción y contexto geopolítico</h2>
+<div class="outline-text-2" id="text-org9613421">
 <p>
 El panorama de los buscadores con capacidades de IA refleja las tensiones geopolíticas actuales y los diferentes enfoques sobre libertad de información. Los sistemas de búsqueda y chat de IA no son herramientas neutrales sino que incorporan valores, restricciones y sesgos derivados de:
 </p>
@@ -23,123 +23,123 @@ El panorama de los buscadores con capacidades de IA refleja las tensiones geopol
 </ul>
 </div>
 </div>
-<div id="outline-container-org79ffd0c" class="outline-2">
-<h2 id="org79ffd0c">Modelos analizados por región</h2>
-<div class="outline-text-2" id="text-org79ffd0c">
+<div id="outline-container-org9f7899d" class="outline-2">
+<h2 id="org9f7899d">Modelos analizados por región</h2>
+<div class="outline-text-2" id="text-org9f7899d">
 </div>
-<div id="outline-container-orga151456" class="outline-3">
-<h3 id="orga151456">Modelos de origen chino</h3>
-<div class="outline-text-3" id="text-orga151456">
+<div id="outline-container-org4b3b77a" class="outline-3">
+<h3 id="org4b3b77a">Modelos de origen chino</h3>
+<div class="outline-text-3" id="text-org4b3b77a">
 </div>
-<div id="outline-container-org713c883" class="outline-4">
-<h4 id="org713c883">DeepSeek</h4>
-<div class="outline-text-4" id="text-org713c883">
+<div id="outline-container-org3feb54a" class="outline-4">
+<h4 id="org3feb54a">DeepSeek</h4>
+<div class="outline-text-4" id="text-org3feb54a">
 <p>
 Destaca por su enfoque técnicamente avanzado y representa un intento de ganar credibilidad internacional con restricciones menos evidentes pero todavía presentes.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc344863" class="outline-4">
-<h4 id="orgc344863">Qwen (通义千问)</h4>
-<div class="outline-text-4" id="text-orgc344863">
+<div id="outline-container-org89b0d4c" class="outline-4">
+<h4 id="org89b0d4c">Qwen (通义千问)</h4>
+<div class="outline-text-4" id="text-org89b0d4c">
 <p>
 Desarrollado por Alibaba, muestra fuertes restricciones en temas sensibles para el gobierno chino.
 </p>
 </div>
 </div>
-<div id="outline-container-org8b199b1" class="outline-4">
-<h4 id="org8b199b1">ERNIE Bot</h4>
-<div class="outline-text-4" id="text-org8b199b1">
+<div id="outline-container-org6955a59" class="outline-4">
+<h4 id="org6955a59">ERNIE Bot</h4>
+<div class="outline-text-4" id="text-org6955a59">
 <p>
 El modelo de Baidu implementa algunos de los filtros más estrictos de su categoría.
 </p>
 </div>
 </div>
-<div id="outline-container-orgac56d07" class="outline-4">
-<h4 id="orgac56d07">ChatGLM</h4>
-<div class="outline-text-4" id="text-orgac56d07">
+<div id="outline-container-org7440009" class="outline-4">
+<h4 id="org7440009">ChatGLM</h4>
+<div class="outline-text-4" id="text-org7440009">
 <p>
 Presenta restricciones similares a Qwen con mecanismos de censura sistemáticos.
 </p>
 </div>
 </div>
-<div id="outline-container-org416af91" class="outline-4">
-<h4 id="org416af91">Yi-34B</h4>
-<div class="outline-text-4" id="text-org416af91">
+<div id="outline-container-org88f8a7e" class="outline-4">
+<h4 id="org88f8a7e">Yi-34B</h4>
+<div class="outline-text-4" id="text-org88f8a7e">
 <p>
 Aunque menos conocido, muestra patrones similares de restricción informativa.
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org8829978" class="outline-3">
-<h3 id="org8829978">Modelos de origen ruso</h3>
-<div class="outline-text-3" id="text-org8829978">
+<div id="outline-container-org728fb61" class="outline-3">
+<h3 id="org728fb61">Modelos de origen ruso</h3>
+<div class="outline-text-3" id="text-org728fb61">
 </div>
-<div id="outline-container-org9f52437" class="outline-4">
-<h4 id="org9f52437">Yandex GPT</h4>
-<div class="outline-text-4" id="text-org9f52437">
+<div id="outline-container-orgc0e4ce2" class="outline-4">
+<h4 id="orgc0e4ce2">Yandex GPT</h4>
+<div class="outline-text-4" id="text-orgc0e4ce2">
 <p>
 Refleja claramente narrativas alineadas con posiciones oficiales rusas.
 </p>
 </div>
 </div>
-<div id="outline-container-orgbdc2ef7" class="outline-4">
-<h4 id="orgbdc2ef7">MANU</h4>
-<div class="outline-text-4" id="text-orgbdc2ef7">
+<div id="outline-container-org6cdb396" class="outline-4">
+<h4 id="org6cdb396">MANU</h4>
+<div class="outline-text-4" id="text-org6cdb396">
 <p>
 El modelo de Sber muestra restricciones notables en temas como Ucrania o críticas al gobierno.
 </p>
 </div>
 </div>
-<div id="outline-container-org8cf7a65" class="outline-4">
-<h4 id="org8cf7a65">GigaChat</h4>
-<div class="outline-text-4" id="text-org8cf7a65">
+<div id="outline-container-orga7aa3ff" class="outline-4">
+<h4 id="orga7aa3ff">GigaChat</h4>
+<div class="outline-text-4" id="text-orga7aa3ff">
 <p>
 Opera con restricciones similares a sus competidores regionales.
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org366b1d6" class="outline-3">
-<h3 id="org366b1d6">Modelos occidentales</h3>
-<div class="outline-text-3" id="text-org366b1d6">
+<div id="outline-container-orgebd5e0b" class="outline-3">
+<h3 id="orgebd5e0b">Modelos occidentales</h3>
+<div class="outline-text-3" id="text-orgebd5e0b">
 </div>
-<div id="outline-container-orgb814eb4" class="outline-4">
-<h4 id="orgb814eb4">Google Gemini</h4>
-<div class="outline-text-4" id="text-orgb814eb4">
+<div id="outline-container-org1d72b28" class="outline-4">
+<h4 id="org1d72b28">Google Gemini</h4>
+<div class="outline-text-4" id="text-org1d72b28">
 <p>
 Enfoque de moderación centrado en prevención de daños sin restricciones ideológicas explícitas.
 </p>
 </div>
 </div>
-<div id="outline-container-org116b0e0" class="outline-4">
-<h4 id="org116b0e0">Bing AI (Microsoft Copilot)</h4>
-<div class="outline-text-4" id="text-org116b0e0">
+<div id="outline-container-org22404d9" class="outline-4">
+<h4 id="org22404d9">Bing AI (Microsoft Copilot)</h4>
+<div class="outline-text-4" id="text-org22404d9">
 <p>
 Destaca por su integración con búsqueda y diversidad de fuentes.
 </p>
 </div>
 </div>
-<div id="outline-container-org26908a8" class="outline-4">
-<h4 id="org26908a8">Claude</h4>
-<div class="outline-text-4" id="text-org26908a8">
+<div id="outline-container-orge2aca6b" class="outline-4">
+<h4 id="orge2aca6b">Claude</h4>
+<div class="outline-text-4" id="text-orge2aca6b">
 <p>
 Mantiene un equilibrio entre prevención de daños y apertura informativa.
 </p>
 </div>
 </div>
-<div id="outline-container-org7e7e065" class="outline-4">
-<h4 id="org7e7e065">Perplexity AI</h4>
-<div class="outline-text-4" id="text-org7e7e065">
+<div id="outline-container-org8ef43c0" class="outline-4">
+<h4 id="org8ef43c0">Perplexity AI</h4>
+<div class="outline-text-4" id="text-org8ef43c0">
 <p>
 Su enfoque en citación de fuentes lo posiciona con alta transparencia.
 </p>
 </div>
 </div>
-<div id="outline-container-orga5fad3c" class="outline-4">
-<h4 id="orga5fad3c">Anthropic Claude</h4>
-<div class="outline-text-4" id="text-orga5fad3c">
+<div id="outline-container-orgd78e205" class="outline-4">
+<h4 id="orgd78e205">Anthropic Claude</h4>
+<div class="outline-text-4" id="text-orgd78e205">
 <p>
 Similar a Claude pero con énfasis en seguridad.
 </p>
@@ -147,9 +147,9 @@ Similar a Claude pero con énfasis en seguridad.
 </div>
 </div>
 </div>
-<div id="outline-container-org368fa78" class="outline-2">
-<h2 id="org368fa78">Metodología de evaluación</h2>
-<div class="outline-text-2" id="text-org368fa78">
+<div id="outline-container-org0112ce6" class="outline-2">
+<h2 id="org0112ce6">Metodología de evaluación</h2>
+<div class="outline-text-2" id="text-org0112ce6">
 <p>
 La evaluación se realizó mediante pruebas sistemáticas de consultas sobre temas sensibles en diferentes categorías:
 </p>
@@ -173,13 +173,13 @@ Las respuestas fueron evaluadas según:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf50b807" class="outline-2">
-<h2 id="orgf50b807">Hallazgos principales</h2>
-<div class="outline-text-2" id="text-orgf50b807">
+<div id="outline-container-org0f95d18" class="outline-2">
+<h2 id="org0f95d18">Hallazgos principales</h2>
+<div class="outline-text-2" id="text-org0f95d18">
 </div>
-<div id="outline-container-orgaf59e01" class="outline-3">
-<h3 id="orgaf59e01">Patrones de censura regionales</h3>
-<div class="outline-text-3" id="text-orgaf59e01">
+<div id="outline-container-orged2f9bf" class="outline-3">
+<h3 id="orged2f9bf">Patrones de censura regionales</h3>
+<div class="outline-text-3" id="text-orged2f9bf">
 <p>
 Los modelos reflejan claramente sus contextos políticos:
 </p>
@@ -190,9 +190,9 @@ Los modelos reflejan claramente sus contextos políticos:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd47f43b" class="outline-3">
-<h3 id="orgd47f43b">El caso excepcional de DeepSeek</h3>
-<div class="outline-text-3" id="text-orgd47f43b">
+<div id="outline-container-org8c4cc3d" class="outline-3">
+<h3 id="org8c4cc3d">El caso excepcional de DeepSeek</h3>
+<div class="outline-text-3" id="text-org8c4cc3d">
 <p>
 DeepSeek ha logrado notoriedad por:
 </p>
@@ -208,15 +208,15 @@ Sin embargo, mantiene limitaciones significativas en comparación con modelos oc
 </p>
 
 
-<figure id="org212f60e">
+<figure id="org23e460e">
 <img src="images/libertad_AI.png" alt="libertad_AI.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org3740563" class="outline-3">
-<h3 id="org3740563">Estrategias de evasión identificadas</h3>
-<div class="outline-text-3" id="text-org3740563">
+<div id="outline-container-orgb14365a" class="outline-3">
+<h3 id="orgb14365a">Estrategias de evasión identificadas</h3>
+<div class="outline-text-3" id="text-orgb14365a">
 <p>
 Los modelos con mayor censura emplean técnicas como:
 </p>
@@ -230,9 +230,9 @@ Los modelos con mayor censura emplean técnicas como:
 </div>
 </div>
 </div>
-<div id="outline-container-orgbf5f0ca" class="outline-2">
-<h2 id="orgbf5f0ca">Tabla comparativa de buscadores IA</h2>
-<div class="outline-text-2" id="text-orgbf5f0ca">
+<div id="outline-container-orgdcb2503" class="outline-2">
+<h2 id="orgdcb2503">Tabla comparativa de buscadores IA</h2>
+<div class="outline-text-2" id="text-orgdcb2503">
 <table border="2" rules="all" frame="border">
 
 
@@ -386,13 +386,13 @@ Los modelos con mayor censura emplean técnicas como:
 </table>
 </div>
 </div>
-<div id="outline-container-org5b0518c" class="outline-2">
-<h2 id="org5b0518c">Temas sensibles específicos y su tratamiento</h2>
-<div class="outline-text-2" id="text-org5b0518c">
+<div id="outline-container-org19d6c3b" class="outline-2">
+<h2 id="org19d6c3b">Temas sensibles específicos y su tratamiento</h2>
+<div class="outline-text-2" id="text-org19d6c3b">
 </div>
-<div id="outline-container-org282c5e4" class="outline-3">
-<h3 id="org282c5e4">Eventos históricos controvertidos</h3>
-<div class="outline-text-3" id="text-org282c5e4">
+<div id="outline-container-org997dfdf" class="outline-3">
+<h3 id="org997dfdf">Eventos históricos controvertidos</h3>
+<div class="outline-text-3" id="text-org997dfdf">
 <table border="2" rules="all" frame="border">
 
 
@@ -476,9 +476,9 @@ Los modelos con mayor censura emplean técnicas como:
 </table>
 </div>
 </div>
-<div id="outline-container-org86ef951" class="outline-3">
-<h3 id="org86ef951">Temas políticos sensibles</h3>
-<div class="outline-text-3" id="text-org86ef951">
+<div id="outline-container-org16e20af" class="outline-3">
+<h3 id="org16e20af">Temas políticos sensibles</h3>
+<div class="outline-text-3" id="text-org16e20af">
 <table border="2" rules="all" frame="border">
 
 
@@ -563,13 +563,13 @@ Los modelos con mayor censura emplean técnicas como:
 </div>
 </div>
 </div>
-<div id="outline-container-org23fd8e5" class="outline-2">
-<h2 id="org23fd8e5">Implicaciones y consideraciones</h2>
-<div class="outline-text-2" id="text-org23fd8e5">
+<div id="outline-container-org1e7fea4" class="outline-2">
+<h2 id="org1e7fea4">Implicaciones y consideraciones</h2>
+<div class="outline-text-2" id="text-org1e7fea4">
 </div>
-<div id="outline-container-orgeeccfc6" class="outline-3">
-<h3 id="orgeeccfc6">Fragmentación del espacio informativo global</h3>
-<div class="outline-text-3" id="text-orgeeccfc6">
+<div id="outline-container-orgc9fedfc" class="outline-3">
+<h3 id="orgc9fedfc">Fragmentación del espacio informativo global</h3>
+<div class="outline-text-3" id="text-orgc9fedfc">
 <p>
 La divergencia entre buscadores crea "realidades informativas" distintas según la región:
 </p>
@@ -580,9 +580,9 @@ La divergencia entre buscadores crea "realidades informativas" distintas según 
 </ul>
 </div>
 </div>
-<div id="outline-container-orgde0e20a" class="outline-3">
-<h3 id="orgde0e20a">Competencia por credibilidad</h3>
-<div class="outline-text-3" id="text-orgde0e20a">
+<div id="outline-container-org44ba74e" class="outline-3">
+<h3 id="org44ba74e">Competencia por credibilidad</h3>
+<div class="outline-text-3" id="text-org44ba74e">
 <p>
 La credibilidad se ha convertido en factor competitivo:
 </p>
@@ -593,9 +593,9 @@ La credibilidad se ha convertido en factor competitivo:
 </ul>
 </div>
 </div>
-<div id="outline-container-orge66df07" class="outline-3">
-<h3 id="orge66df07">Retos para usuarios y sociedad</h3>
-<div class="outline-text-3" id="text-orge66df07">
+<div id="outline-container-orgcc4c09a" class="outline-3">
+<h3 id="orgcc4c09a">Retos para usuarios y sociedad</h3>
+<div class="outline-text-3" id="text-orgcc4c09a">
 <p>
 Este panorama presenta desafíos importantes:
 </p>
@@ -607,11 +607,11 @@ Este panorama presenta desafíos importantes:
 </div>
 </div>
 </div>
-<div id="outline-container-orgbfa372d" class="outline-2">
-<h2 id="orgbfa372d">Diagrama de relaciones</h2>
-<div class="outline-text-2" id="text-orgbfa372d">
+<div id="outline-container-orgb5df488" class="outline-2">
+<h2 id="orgb5df488">Diagrama de relaciones</h2>
+<div class="outline-text-2" id="text-orgb5df488">
 
-<figure id="org3e8f89a">
+<figure id="org2f85036">
 <img src="images/censorship-diagram.png" alt="censorship-diagram.png">
 
 </figure>
@@ -621,9 +621,9 @@ Este panorama presenta desafíos importantes:
 </p>
 </div>
 </div>
-<div id="outline-container-orgd3b30a9" class="outline-2">
-<h2 id="orgd3b30a9">Conclusiones</h2>
-<div class="outline-text-2" id="text-orgd3b30a9">
+<div id="outline-container-orgb2bb8ba" class="outline-2">
+<h2 id="orgb2bb8ba">Conclusiones</h2>
+<div class="outline-text-2" id="text-orgb2bb8ba">
 <p>
 El análisis revela que los buscadores de IA se han convertido en un nuevo frente de competencia geopolítica donde la libertad informativa, la transparencia y la credibilidad son factores diferenciadores clave. DeepSeek destaca entre los modelos chinos por implementar restricciones de manera más sofisticada, pero la brecha con modelos occidentales sigue siendo significativa.
 </p>
@@ -633,9 +633,9 @@ La divergencia en enfoques de moderación no es meramente técnica sino que refl
 </p>
 </div>
 </div>
-<div id="outline-container-org61c7578" class="outline-2">
-<h2 id="org61c7578">Referencias</h2>
-<div class="outline-text-2" id="text-org61c7578">
+<div id="outline-container-org9210782" class="outline-2">
+<h2 id="org9210782">Referencias</h2>
+<div class="outline-text-2" id="text-org9210782">
 <ol class="org-ol">
 <li>Roberts, M. E. (2024). "Digital Authoritarianism and AI Censorship Mechanisms"</li>
 <li>Freedom House (2024). "Freedom on the Net 2024: AI and Global Information Control"</li>
@@ -646,9 +646,9 @@ La divergencia en enfoques de moderación no es meramente técnica sino que refl
 </ol>
 </div>
 </div>
-<div id="outline-container-orgdf95fd0" class="outline-2">
-<h2 id="orgdf95fd0">Notas</h2>
-<div class="outline-text-2" id="text-orgdf95fd0">
+<div id="outline-container-orgbf357d1" class="outline-2">
+<h2 id="orgbf357d1">Notas</h2>
+<div class="outline-text-2" id="text-orgbf357d1">
 <p>
 Este análisis se basa en pruebas realizadas entre enero y abril de 2025. Los patrones de censura y las capacidades de los modelos pueden cambiar con actualizaciones posteriores.
 </p>
