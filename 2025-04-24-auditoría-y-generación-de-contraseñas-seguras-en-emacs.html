@@ -29,7 +29,18 @@
        <meta name='twitter:image' content='https://tuusuario.github.io/logo.png'>
        <link rel='alternate' type='application/rss+xml' href='rss.xml'>
        <link rel='sitemap' type='application/xml' title='Sitemap' href='sitemap.xml'>
-       <!-- ======= Estilo y Fuentes ======= -->
+
+ <!-- === Google Analytics === -->
+       <script async src='https://www.googletagmanager.com/gtag/js?id=G-7YJ0SNJXSJ'></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-7YJ0SNJXSJ');
+       </script>
+
+
+<!-- ======= Estilo y Fuentes ======= -->
        <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
        <script src='/pagefind/pagefind.js'></script>
        <style>
@@ -180,36 +191,36 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgba3da54">1. Introducción</a></li>
-<li><a href="#org58282ef">2. ¿Por qué usarlo?</a></li>
-<li><a href="#orgeab422f">3. Funcionalidades principales</a></li>
-<li><a href="#orgae98d69">4. Código fuente del módulo</a></li>
-<li><a href="#org7e1acce">5. Diagrama del flujo de auditoría (PlantUML)</a></li>
-<li><a href="#orgc169b5a">6. Cómo usarlo</a></li>
-<li><a href="#org4152e8f">7. Próximos pasos</a></li>
-<li><a href="#org77d8659">8. Recomendaciones finales</a></li>
-<li><a href="#orgbbd3e28">9. Conclusión</a></li>
+<li><a href="#org09862b0">1. Introducción</a></li>
+<li><a href="#org7ff37c3">2. ¿Por qué usarlo?</a></li>
+<li><a href="#orgeb79f83">3. Funcionalidades principales</a></li>
+<li><a href="#org497989d">4. Código fuente del módulo</a></li>
+<li><a href="#orgd58a8cd">5. Diagrama del flujo de auditoría (PlantUML)</a></li>
+<li><a href="#org02247e8">6. Cómo usarlo</a></li>
+<li><a href="#org1f64d80">7. Próximos pasos</a></li>
+<li><a href="#org243556c">8. Recomendaciones finales</a></li>
+<li><a href="#orgaba0a14">9. Conclusión</a></li>
 </ul>
 </div>
 </nav>
-<div id="outline-container-orgba3da54" class="outline-2">
-<h2 id="orgba3da54"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org09862b0" class="outline-2">
+<h2 id="org09862b0"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 En esta entrada presento <code>password-audit.el</code>, un módulo para Emacs que permite auditar contraseñas, generar claves seguras y verificar la complejidad mínima exigida. También añade soporte opcional para el gestor de contraseñas <code>pass</code> desde la terminal.
 </p>
 </div>
 </div>
-<div id="outline-container-org58282ef" class="outline-2">
-<h2 id="org58282ef"><span class="section-number-2">2.</span> ¿Por qué usarlo?</h2>
+<div id="outline-container-org7ff37c3" class="outline-2">
+<h2 id="org7ff37c3"><span class="section-number-2">2.</span> ¿Por qué usarlo?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Con frecuencia usamos contraseñas débiles o repetidas. Este módulo ayuda a evaluar si una contraseña es vulnerable, y ofrece recomendaciones inmediatas para mejorarla.
 </p>
 </div>
 </div>
-<div id="outline-container-orgeab422f" class="outline-2">
-<h2 id="orgeab422f"><span class="section-number-2">3.</span> Funcionalidades principales</h2>
+<div id="outline-container-orgeb79f83" class="outline-2">
+<h2 id="orgeb79f83"><span class="section-number-2">3.</span> Funcionalidades principales</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>Auditoría de longitud, complejidad y patrones inseguros.</li>
@@ -218,131 +229,131 @@ Con frecuencia usamos contraseñas débiles o repetidas. Este módulo ayuda a ev
 </ul>
 </div>
 </div>
-<div id="outline-container-orgae98d69" class="outline-2">
-<h2 id="orgae98d69"><span class="section-number-2">4.</span> Código fuente del módulo</h2>
+<div id="outline-container-org497989d" class="outline-2">
+<h2 id="org497989d"><span class="section-number-2">4.</span> Código fuente del módulo</h2>
 <div class="outline-text-2" id="text-4">
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">  <span style="color: #4E4E4E; font-style: italic;">;;; </span><span style="color: #4E4E4E; font-style: italic;">password-audit.el --- Auditor&#237;a de contrase&#241;as + integraci&#243;n con pass -*- lexical-binding: t; -*-</span>
+<pre class="src src-emacs-lisp">  <span style="color: #8195b0; font-style: italic;">;;; </span><span style="color: #8195b0; font-style: italic;">password-audit.el --- Auditor&#237;a de contrase&#241;as + integraci&#243;n con pass -*- lexical-binding: t; -*-</span>
 
-  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Author: Mike</span>
-  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Version: 1.1</span>
-  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Package-Requires: ((emacs "24.3") (cl-lib "0.5"))</span>
-  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Keywords: security, password, audit</span>
-  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">License: MIT</span>
+  <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Author: Mike</span>
+  <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Version: 1.1</span>
+  <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Package-Requires: ((emacs "24.3") (cl-lib "0.5"))</span>
+  <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Keywords: security, password, audit</span>
+  <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">License: MIT</span>
 
-(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">cl-lib</span>)
+(<span style="color: #219fd5; font-style: italic;">require</span> '<span style="color: #2f86d2;">cl-lib</span>)
 
-(<span style="color: #D70000;">defvar</span> <span style="color: #004651;">audit-password-sequences</span> '(<span style="color: #005F00;">"abc"</span> <span style="color: #005F00;">"123"</span> <span style="color: #005F00;">"qwe"</span> <span style="color: #005F00;">"password"</span> <span style="color: #005F00;">"qaz"</span>)
-  <span style="color: #004700; font-style: italic;">"Lista de secuencias comunes que deben evitarse en contrase&#241;as."</span>)
+(<span style="color: #219fd5; font-style: italic;">defvar</span> <span style="color: #1857a4;">audit-password-sequences</span> '(<span style="color: #a44185;">"abc"</span> <span style="color: #a44185;">"123"</span> <span style="color: #a44185;">"qwe"</span> <span style="color: #a44185;">"password"</span> <span style="color: #a44185;">"qaz"</span>)
+  <span style="color: #60a8a1; font-style: italic;">"Lista de secuencias comunes que deben evitarse en contrase&#241;as."</span>)
 
-(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">audit-password-strength</span> (password)
-  <span style="color: #004700; font-style: italic;">"Audita la fortaleza de una contrase&#241;a y sugiere mejoras."</span>
-  (<span style="color: #D70000;">interactive</span> <span style="color: #005F00;">"sContrase&#241;a a auditar: "</span>)
-  (<span style="color: #D70000;">let*</span> ((length (length password))
-         (has-uppercase (string-match-p <span style="color: #005F00;">"[A-Z]"</span> password))
-         (has-lowercase (string-match-p <span style="color: #005F00;">"[a-z]"</span> password))
-         (has-numbers (string-match-p <span style="color: #005F00;">"[0-9]"</span> password))
-         (has-symbols (string-match-p <span style="color: #005F00;">"[</span><span style="color: #1F55A0; font-weight: bold;">^</span><span style="color: #005F00;">a-zA-Z0-9]"</span> password))
-         (has-sequences (cl-some (<span style="color: #D70000;">lambda</span> (seq)
+(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">audit-password-strength</span> (password)
+  <span style="color: #60a8a1; font-style: italic;">"Audita la fortaleza de una contrase&#241;a y sugiere mejoras."</span>
+  (<span style="color: #219fd5; font-style: italic;">interactive</span> <span style="color: #a44185;">"sContrase&#241;a a auditar: "</span>)
+  (<span style="color: #219fd5; font-style: italic;">let*</span> ((length (length password))
+         (has-uppercase (string-match-p <span style="color: #a44185;">"[A-Z]"</span> password))
+         (has-lowercase (string-match-p <span style="color: #a44185;">"[a-z]"</span> password))
+         (has-numbers (string-match-p <span style="color: #a44185;">"[0-9]"</span> password))
+         (has-symbols (string-match-p <span style="color: #a44185;">"[</span><span style="color: #219fd5; font-weight: bold;">^</span><span style="color: #a44185;">a-zA-Z0-9]"</span> password))
+         (has-sequences (cl-some (<span style="color: #219fd5; font-style: italic;">lambda</span> (seq)
                                    (string-match-p (regexp-quote seq) password))
                                  audit-password-sequences))
          (score 0)
          (feedback '()))
 
-    <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Evaluaci&#243;n de longitud</span>
-    (<span style="color: #D70000;">cond</span>
+    <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Evaluaci&#243;n de longitud</span>
+    (<span style="color: #219fd5; font-style: italic;">cond</span>
      ((&lt; length 8)
-      (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Longitud cr&#237;tica: menos de 8 caracteres."</span> feedback))
+      (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Longitud cr&#237;tica: menos de 8 caracteres."</span> feedback))
      ((&lt; length 12)
-      (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Longitud insuficiente: menos de 12 caracteres."</span> feedback)
-      (<span style="color: #D70000;">cl-incf</span> score))
+      (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Longitud insuficiente: menos de 12 caracteres."</span> feedback)
+      (<span style="color: #219fd5; font-style: italic;">cl-incf</span> score))
      ((&lt; length 16)
-      (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Longitud aceptable: entre 12-16 caracteres."</span> feedback)
-      (<span style="color: #D70000;">cl-incf</span> score 2))
+      (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Longitud aceptable: entre 12-16 caracteres."</span> feedback)
+      (<span style="color: #219fd5; font-style: italic;">cl-incf</span> score 2))
      (t
-      (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Longitud excelente: m&#225;s de 16 caracteres."</span> feedback)
-      (<span style="color: #D70000;">cl-incf</span> score 3)))
+      (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Longitud excelente: m&#225;s de 16 caracteres."</span> feedback)
+      (<span style="color: #219fd5; font-style: italic;">cl-incf</span> score 3)))
 
-    <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Evaluaci&#243;n de complejidad</span>
-    (<span style="color: #D70000;">when</span> has-uppercase (<span style="color: #D70000;">cl-incf</span> score) (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Contiene may&#250;sculas [+]"</span> feedback))
-    (<span style="color: #D70000;">when</span> has-lowercase (<span style="color: #D70000;">cl-incf</span> score) (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Contiene min&#250;sculas [+]"</span> feedback))
-    (<span style="color: #D70000;">when</span> has-numbers   (<span style="color: #D70000;">cl-incf</span> score) (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Contiene n&#250;meros [+]"</span> feedback))
-    (<span style="color: #D70000;">when</span> has-symbols   (<span style="color: #D70000;">cl-incf</span> score) (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Contiene s&#237;mbolos especiales [+]"</span> feedback))
+    <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Evaluaci&#243;n de complejidad</span>
+    (<span style="color: #219fd5; font-style: italic;">when</span> has-uppercase (<span style="color: #219fd5; font-style: italic;">cl-incf</span> score) (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Contiene may&#250;sculas [+]"</span> feedback))
+    (<span style="color: #219fd5; font-style: italic;">when</span> has-lowercase (<span style="color: #219fd5; font-style: italic;">cl-incf</span> score) (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Contiene min&#250;sculas [+]"</span> feedback))
+    (<span style="color: #219fd5; font-style: italic;">when</span> has-numbers   (<span style="color: #219fd5; font-style: italic;">cl-incf</span> score) (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Contiene n&#250;meros [+]"</span> feedback))
+    (<span style="color: #219fd5; font-style: italic;">when</span> has-symbols   (<span style="color: #219fd5; font-style: italic;">cl-incf</span> score) (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Contiene s&#237;mbolos especiales [+]"</span> feedback))
 
-    <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Penalizaciones</span>
-    (<span style="color: #D70000;">when</span> has-sequences
-      (<span style="color: #D70000;">cl-decf</span> score)
-      (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Contiene secuencias comunes (ej: abc, 123) [-]"</span> feedback))
+    <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Penalizaciones</span>
+    (<span style="color: #219fd5; font-style: italic;">when</span> has-sequences
+      (<span style="color: #219fd5; font-style: italic;">cl-decf</span> score)
+      (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Contiene secuencias comunes (ej: abc, 123) [-]"</span> feedback))
 
-    (<span style="color: #D70000;">when</span> (string-match-p (regexp-quote (user-login-name)) password)
-      (<span style="color: #D70000;">cl-decf</span> score 2)
-      (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Contiene tu nombre de usuario [-]"</span> feedback))
+    (<span style="color: #219fd5; font-style: italic;">when</span> (string-match-p (regexp-quote (user-login-name)) password)
+      (<span style="color: #219fd5; font-style: italic;">cl-decf</span> score 2)
+      (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Contiene tu nombre de usuario [-]"</span> feedback))
 
-    <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Limitar puntuaci&#243;n m&#225;xima</span>
-    (<span style="color: #D70000;">setq</span> score (min score 10))
+    <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Limitar puntuaci&#243;n m&#225;xima</span>
+    (<span style="color: #219fd5; font-style: italic;">setq</span> score (min score 10))
 
-    <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Mostrar resultados</span>
-    (<span style="color: #D70000;">with-output-to-temp-buffer</span> <span style="color: #005F00;">"*Password Audit*"</span>
-      (pop-to-buffer <span style="color: #005F00;">"*Password Audit*"</span>)
+    <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Mostrar resultados</span>
+    (<span style="color: #219fd5; font-style: italic;">with-output-to-temp-buffer</span> <span style="color: #a44185;">"*Password Audit*"</span>
+      (pop-to-buffer <span style="color: #a44185;">"*Password Audit*"</span>)
       (erase-buffer)
-      (insert <span style="color: #005F00;">"=== AUDITOR&#205;A DE SEGURIDAD DE CONTRASE&#209;A ===\n\n"</span>)
-      (insert (format <span style="color: #005F00;">"Puntuaci&#243;n: %d/10\n\n"</span> score))
-      (insert <span style="color: #005F00;">"An&#225;lisis:\n"</span>)
-      (<span style="color: #D70000;">dolist</span> (item (reverse feedback))
-        (insert (format <span style="color: #005F00;">"&#8226; %s\n"</span> item)))
-      (insert <span style="color: #005F00;">"\nRecomendaciones:\n"</span>)
-      (<span style="color: #D70000;">cond</span>
+      (insert <span style="color: #a44185;">"=== AUDITOR&#205;A DE SEGURIDAD DE CONTRASE&#209;A ===\n\n"</span>)
+      (insert (format <span style="color: #a44185;">"Puntuaci&#243;n: %d/10\n\n"</span> score))
+      (insert <span style="color: #a44185;">"An&#225;lisis:\n"</span>)
+      (<span style="color: #219fd5; font-style: italic;">dolist</span> (item (reverse feedback))
+        (insert (format <span style="color: #a44185;">"&#8226; %s\n"</span> item)))
+      (insert <span style="color: #a44185;">"\nRecomendaciones:\n"</span>)
+      (<span style="color: #219fd5; font-style: italic;">cond</span>
        ((&lt; score 4)
-        (insert <span style="color: #005F00;">"&#9888;&#65039; Contrase&#241;a D&#201;BIL - Se recomienda cambio inmediato\n"</span>)
-        (insert <span style="color: #005F00;">"&#8226; Use la funci&#243;n `generate-strong-password`\n"</span>)
-        (insert <span style="color: #005F00;">"&#8226; Longitud m&#237;nima sugerida: 16 caracteres\n"</span>)
-        (insert <span style="color: #005F00;">"&#8226; Incluir letras, n&#250;meros y s&#237;mbolos\n"</span>))
+        (insert <span style="color: #a44185;">"&#9888;&#65039; Contrase&#241;a D&#201;BIL - Se recomienda cambio inmediato\n"</span>)
+        (insert <span style="color: #a44185;">"&#8226; Use la funci&#243;n `generate-strong-password`\n"</span>)
+        (insert <span style="color: #a44185;">"&#8226; Longitud m&#237;nima sugerida: 16 caracteres\n"</span>)
+        (insert <span style="color: #a44185;">"&#8226; Incluir letras, n&#250;meros y s&#237;mbolos\n"</span>))
        ((&lt; score 7)
-        (insert <span style="color: #005F00;">"&#9888;&#65039; Contrase&#241;a MODERADA - Se recomienda mejora\n"</span>)
-        (insert <span style="color: #005F00;">"&#8226; Considere alargarla\n"</span>)
-        (insert <span style="color: #005F00;">"&#8226; A&#241;adir caracteres variados\n"</span>))
+        (insert <span style="color: #a44185;">"&#9888;&#65039; Contrase&#241;a MODERADA - Se recomienda mejora\n"</span>)
+        (insert <span style="color: #a44185;">"&#8226; Considere alargarla\n"</span>)
+        (insert <span style="color: #a44185;">"&#8226; A&#241;adir caracteres variados\n"</span>))
        (t
-        (insert <span style="color: #005F00;">"&#9989; Contrase&#241;a FUERTE - Cumple con los est&#225;ndares\n"</span>)
-        (insert <span style="color: #005F00;">"&#8226; Cambiarla peri&#243;dicamente\n"</span>)
-        (insert <span style="color: #005F00;">"&#8226; No reutilizarla en otros servicios\n"</span>)))
-      (insert <span style="color: #005F00;">"\n=== FIN DEL AN&#193;LISIS ===\n"</span>))))
+        (insert <span style="color: #a44185;">"&#9989; Contrase&#241;a FUERTE - Cumple con los est&#225;ndares\n"</span>)
+        (insert <span style="color: #a44185;">"&#8226; Cambiarla peri&#243;dicamente\n"</span>)
+        (insert <span style="color: #a44185;">"&#8226; No reutilizarla en otros servicios\n"</span>)))
+      (insert <span style="color: #a44185;">"\n=== FIN DEL AN&#193;LISIS ===\n"</span>))))
 
-(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">generate-strong-password</span> (<span style="color: #1F55A0;">&amp;optional</span> length)
-  <span style="color: #004700; font-style: italic;">"Genera una contrase&#241;a aleatoria de LENGTH caracteres (m&#237;nimo 16)."</span>
-  (<span style="color: #D70000;">interactive</span> <span style="color: #005F00;">"nLongitud de la contrase&#241;a (m&#237;nimo 16): "</span>)
-  (<span style="color: #D70000;">let*</span> ((chars <span style="color: #005F00;">"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&amp;*()_-+=&lt;&gt;?"</span>)
-         (len (max 16 (<span style="color: #D70000;">or</span> length 16)))
-         (pass (<span style="color: #D70000;">cl-loop</span> repeat len
+(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">generate-strong-password</span> (<span style="color: #dc3eb7;">&amp;optional</span> length)
+  <span style="color: #60a8a1; font-style: italic;">"Genera una contrase&#241;a aleatoria de LENGTH caracteres (m&#237;nimo 16)."</span>
+  (<span style="color: #219fd5; font-style: italic;">interactive</span> <span style="color: #a44185;">"nLongitud de la contrase&#241;a (m&#237;nimo 16): "</span>)
+  (<span style="color: #219fd5; font-style: italic;">let*</span> ((chars <span style="color: #a44185;">"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&amp;*()_-+=&lt;&gt;?"</span>)
+         (len (max 16 (<span style="color: #219fd5; font-style: italic;">or</span> length 16)))
+         (pass (<span style="color: #219fd5; font-style: italic;">cl-loop</span> repeat len
                         concat (string (elt chars (random (length chars)))))))
     (kill-new pass)
-    (message <span style="color: #005F00;">"Contrase&#241;a copiada al portapapeles: %s"</span> pass)))
+    (message <span style="color: #a44185;">"Contrase&#241;a copiada al portapapeles: %s"</span> pass)))
 
-(<span style="color: #D70000;">provide</span> '<span style="color: #AF005F;">password-audit</span>)
+(<span style="color: #219fd5; font-style: italic;">provide</span> '<span style="color: #2f86d2;">password-audit</span>)
 
-<span style="color: #4E4E4E; font-style: italic;">;;; </span><span style="color: #4E4E4E; font-style: italic;">password-audit.el ends here</span>
+<span style="color: #8195b0; font-style: italic;">;;; </span><span style="color: #8195b0; font-style: italic;">password-audit.el ends here</span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org7e1acce" class="outline-2">
-<h2 id="org7e1acce"><span class="section-number-2">5.</span> Diagrama del flujo de auditoría (PlantUML)</h2>
+<div id="outline-container-orgd58a8cd" class="outline-2">
+<h2 id="orgd58a8cd"><span class="section-number-2">5.</span> Diagrama del flujo de auditoría (PlantUML)</h2>
 <div class="outline-text-2" id="text-5">
 
-<figure id="org705149c">
+<figure id="orgf3c8ca5">
 <img src="images/password-audit-diagram.png" alt="password-audit-diagram.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-orgc169b5a" class="outline-2">
-<h2 id="orgc169b5a"><span class="section-number-2">6.</span> Cómo usarlo</h2>
+<div id="outline-container-org02247e8" class="outline-2">
+<h2 id="org02247e8"><span class="section-number-2">6.</span> Cómo usarlo</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li><p>
 Carga el archivo con:
 </p>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(load <span style="color: #005F00;">"~/ruta/a/password-audit.el"</span>)
+<pre class="src src-emacs-lisp">(load <span style="color: #a44185;">"~/ruta/a/password-audit.el"</span>)
 </pre>
 </div></li>
 
@@ -355,8 +366,8 @@ Carga el archivo con:
 </ul>
 </div>
 </div>
-<div id="outline-container-org4152e8f" class="outline-2">
-<h2 id="org4152e8f"><span class="section-number-2">7.</span> Próximos pasos</h2>
+<div id="outline-container-org1f64d80" class="outline-2">
+<h2 id="org1f64d80"><span class="section-number-2">7.</span> Próximos pasos</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Estoy trabajando en:
@@ -368,8 +379,8 @@ Estoy trabajando en:
 </ul>
 </div>
 </div>
-<div id="outline-container-org77d8659" class="outline-2">
-<h2 id="org77d8659"><span class="section-number-2">8.</span> Recomendaciones finales</h2>
+<div id="outline-container-org243556c" class="outline-2">
+<h2 id="org243556c"><span class="section-number-2">8.</span> Recomendaciones finales</h2>
 <div class="outline-text-2" id="text-8">
 <ul class="org-ul">
 <li>No reutilices contraseñas en diferentes servicios.</li>
@@ -378,8 +389,8 @@ Estoy trabajando en:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbbd3e28" class="outline-2">
-<h2 id="orgbbd3e28"><span class="section-number-2">9.</span> Conclusión</h2>
+<div id="outline-container-orgaba0a14" class="outline-2">
+<h2 id="orgaba0a14"><span class="section-number-2">9.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 Gracias a este pequeño módulo puedes mejorar tu higiene digital sin salir de Emacs. ¡Haz de Emacs tu central de seguridad también!
