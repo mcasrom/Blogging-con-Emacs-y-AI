@@ -2,12 +2,44 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="description" content="Explora aventuras de viajes y trekking con fotos y relatos, creadas con Org-mode en Emacs con Esteroides por M. Castillo.">
 <link rel="alternate"
       type="application/rss+xml"
       href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
       title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
 <title>Viajes y Trekking</title>
+<meta property="og:title" content="Viajes y Trekking">
+<meta property="og:type" content="article" />
+<meta property="og:description" content="Explora aventuras de viajes y trekking con fotos y relatos, creadas con Org-mode en Emacs con Esteroides por M. Castillo.">
+<meta property="og:url" content="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/viajes.html">
 <meta charset='UTF-8'>
+ <!-- ======= SEO y Redes Sociales ======= -->
+       <meta name='author' content='Mike'>
+       <meta name='description' content='Blog sobre Emacs, org-mode, automatización y herramientas avanzadas'>
+       <meta name='keywords' content='Emacs, Org Mode, Linux, Inteligencia Artificial, Automatización, Tutoriales'>
+       <meta property='og:title' content='Emacs con esteroides'>
+       <meta property='og:description' content='Poder y Simplicidad con Emacs, IA y Linux'>
+       <meta property='og:image' content='https://mcasrom.github.io/logo.png'>
+       <meta property='og:url' content='https://mcasrom.github.io/'>
+       <meta property='og:type' content='website'>
+       <meta name='twitter:card' content='summary_large_image'>
+       <meta name='twitter:title' content='Emacs con esteroides'>
+       <meta name='twitter:description' content='Blog sobre Emacs, IA y herramientas avanzadas'>
+       <meta name='twitter:image' content='https://tuusuario.github.io/logo.png'>
+       <link rel='alternate' type='application/rss+xml' href='rss.xml'>
+       <link rel='sitemap' type='application/xml' title='Sitemap' href='sitemap.xml'>
+
+ <!-- === Google Analytics === -->
+       <script async src='https://www.googletagmanager.com/gtag/js?id=G-7YJ0SNJXSJ'></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-7YJ0SNJXSJ');
+       </script>
+
+
+<!-- ======= Estilo y Fuentes ======= -->
        <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
        <script src='/pagefind/pagefind.js'></script>
        <style>
@@ -46,20 +78,7 @@
            text-align: center; /* Asegurar que el texto esté centrado */
          }
          .blog-title {
-           font-size: 2em;
-           margin: 0;
-         }
-         .blog-subtitle {
-           font-size: 1.1em;
-           color: #666;
-           margin-top: 5px;
-         }
-         .blog-email {
-           font-size: 0.9em;
-           color: #777;
-           margin-top: 8px;
-         }
-         .blog-email a {
+
            color: #2980b9;
            text-decoration: none;
          }
@@ -92,7 +111,7 @@
 	 }
          .postamble {
            text-align: center;
-           font-size: 0.85em;
+           font-size: 0.8em; .85
            color: #666;
          }
 	 /* Estilos para imágenes agregados aquí */
@@ -103,8 +122,44 @@
            margin: 10px auto;
            border-radius: 5px;
          }
-       </style>
-       
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
        <div class='blog-header'>
          <img src='logo.png' alt='Logo'>
          <div class='blog-header-content'>
@@ -112,34 +167,38 @@
            <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
            <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
          </div>
-       </div>
-       
+       </div>       
        <nav>
          <a href='index.html'>Inicio</a> |
-	 <a href='viajes.html'>Viajes</a> |
+         <a href='viajes.html'>Viajes</a> |
          <a href='archive.html'>Archivo</a> |
          <a href='contacto.html'>Contacto</a> |
          <a href='nosotros.html'>Nosotros</a> |
-         <a href='proyectos.html'>Proyectos</a>
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
          <a href='tag-tutoriales.html'>Tutoriales</a> |
-         <a href='tag-opiniones.html'>Opiniones</a>
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
        </nav>
-        <hr></head>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
 <body>
 <div id="preamble" class="status"></div>
 <div id="content">
 <div class="post-date">25/03/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/viajes.html">Viajes y Trekking</a></h1>
-<div id="outline-container-org4fce05a" class="outline-2">
-<h2 id="org4fce05a"><span class="section-number-2">1.</span> Viajes y Trekking</h2>
+<div id="outline-container-org6af7944" class="outline-2">
+<h2 id="org6af7944"><span class="section-number-2">1.</span> Viajes y Trekking</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Bienvenidos a la sección de Viajes y Trekking. Aquí encontrarás mis aventuras con fotos y descripciones.
 </p>
 </div>
-<div id="outline-container-org82a9564" class="outline-3">
-<h3 id="org82a9564"><span class="section-number-3">1.1.</span> Últimos 5 posts de viajes-trekking</h3>
+<div id="outline-container-orga3b15c8" class="outline-3">
+<h3 id="orga3b15c8"><span class="section-number-3">1.1.</span> Últimos 5 posts de viajes-trekking</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
+<li>2025-04-17 - <a href="file:///home/mike/myblog/posts/2025-04-17--entre-rascacielos-y-olas:-un-amanecer-en-broadbeach.html">Entre Rascacielos y Olas: Un Amanecer en Broadbeach</a></li>
+<li>2025-04-09 - <a href="file:///home/mike/myblog/posts/2025-04-09-Burleigh-Heads,-en-Queensland,-Australia.html">Burleigh Heads, en Queensland, Australia</a></li>
 <li>2025-03-27 - <a href="file:///home/mike/myblog/posts/2025-03-27-Trekking-por-el-Embalse-de-la-Cierva:-Un-espectáculo-tras-las-lluvias-de-marzo-2025.html">Trekking por el Embalse de la Cierva: Un espectáculo tras las lluvias de marzo 2025</a></li>
 </ul>
 </div>
@@ -158,6 +217,7 @@ Bienvenidos a la sección de Viajes y Trekking. Aquí encontrarás mis aventuras
            </a>
          </p>
          <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
          <!-- hitwebcounter Code START -->
          <a href="https://www.hitwebcounter.com" target="_blank">
            <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />

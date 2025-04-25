@@ -4,7 +4,7 @@
 <title><![CDATA[Emacs con esteroides]]></title>
 <description><![CDATA[Emacs con esteroides]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Fri, 25 Apr 2025 05:16:21 +0200</lastBuildDate>
+<lastBuildDate>Fri, 25 Apr 2025 07:02:15 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Explorando Shima Spain Village: Un Rincón Español en Japón]]></title>
   <description><![CDATA[
@@ -130,7 +130,7 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[españa]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</guid>
-  <pubDate>Fri, 25 Apr 2025 05:16:21 +0200</pubDate>
+  <pubDate>Fri, 25 Apr 2025 07:02:14 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
@@ -908,7 +908,7 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Fri, 25 Apr 2025 05:11:00 +0200</pubDate>
+  <pubDate>Fri, 25 Apr 2025 06:54:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Guía Completa de Emacs y Org Mode: De Principiante a Experto]]></title>
@@ -28748,17 +28748,19 @@ Operaciones de influencia en elecciones occidentales:
 <item>
   <title><![CDATA[Viajes y Trekking]]></title>
   <description><![CDATA[
-<div id="outline-container-org4fce05a" class="outline-2">
-<h2 id="org4fce05a"><span class="section-number-2">1.</span> Viajes y Trekking</h2>
+<div id="outline-container-org6af7944" class="outline-2">
+<h2 id="org6af7944"><span class="section-number-2">1.</span> Viajes y Trekking</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Bienvenidos a la sección de Viajes y Trekking. Aquí encontrarás mis aventuras con fotos y descripciones.
 </p>
 </div>
-<div id="outline-container-org82a9564" class="outline-3">
-<h3 id="org82a9564"><span class="section-number-3">1.1.</span> Últimos 5 posts de viajes-trekking</h3>
+<div id="outline-container-orga3b15c8" class="outline-3">
+<h3 id="orga3b15c8"><span class="section-number-3">1.1.</span> Últimos 5 posts de viajes-trekking</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
+<li>2025-04-17 - <a href="file:///home/mike/myblog/posts/2025-04-17--entre-rascacielos-y-olas:-un-amanecer-en-broadbeach.html">Entre Rascacielos y Olas: Un Amanecer en Broadbeach</a></li>
+<li>2025-04-09 - <a href="file:///home/mike/myblog/posts/2025-04-09-Burleigh-Heads,-en-Queensland,-Australia.html">Burleigh Heads, en Queensland, Australia</a></li>
 <li>2025-03-27 - <a href="file:///home/mike/myblog/posts/2025-03-27-Trekking-por-el-Embalse-de-la-Cierva:-Un-espectáculo-tras-las-lluvias-de-marzo-2025.html">Trekking por el Embalse de la Cierva: Un espectáculo tras las lluvias de marzo 2025</a></li>
 </ul>
 </div>
@@ -35367,9 +35369,9 @@ Wang, S. (2024). Election Forecasting and Demographic Shifts. <span class="under
 <p>
 ¡Bienvenidos a la página de <b>Proyectos</b>! En este espacio comparto algunos de los trabajos que he desarrollado, desde experimentos personales hasta iniciativas más ambiciosas. Esta página estática, generada con Org-mode y `org-static-blog`, es un reflejo de mi interés por la tecnología, la creatividad y el aprendizaje continuo. A continuación, encontrarás una descripción de lo que puedes explorar aquí y algunos ejemplos destacados.
 </p>
-<div id="outline-container-org565ef62" class="outline-2">
-<h2 id="org565ef62">¿Qué encontrarás en la página de Proyectos?</h2>
-<div class="outline-text-2" id="text-org565ef62">
+<div id="outline-container-orgbef3a83" class="outline-2">
+<h2 id="orgbef3a83">¿Qué encontrarás en la página de Proyectos?</h2>
+<div class="outline-text-2" id="text-orgbef3a83">
 <p>
 La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pero funcional de mis esfuerzos. Aquí algunos aspectos clave:
 </p>
@@ -35382,13 +35384,13 @@ La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pe
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb030672" class="outline-2">
-<h2 id="orgb030672">Ejemplos de Proyectos</h2>
-<div class="outline-text-2" id="text-orgb030672">
+<div id="outline-container-orgc1deab9" class="outline-2">
+<h2 id="orgc1deab9">Ejemplos de Proyectos</h2>
+<div class="outline-text-2" id="text-orgc1deab9">
 </div>
-<div id="outline-container-org012f169" class="outline-3">
-<h3 id="org012f169">1. Generador de Blog Estático con Org-mode</h3>
-<div class="outline-text-3" id="text-org012f169">
+<div id="outline-container-orgc2a2217" class="outline-3">
+<h3 id="orgc2a2217">1. Generador de Blog Estático con Org-mode</h3>
+<div class="outline-text-3" id="text-orgc2a2217">
 <ul class="org-ul">
 <li><b>Descripción</b>: Una herramienta para convertir archivos Org en un blog HTML estático, usando `org-static-blog`.</li>
 <li><b>Tecnologías</b>: Emacs, Org-mode, Gnuplot (para gráficos), CSS.</li>
@@ -35397,9 +35399,9 @@ La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pe
 </ul>
 </div>
 </div>
-<div id="outline-container-org3f2e082" class="outline-3">
-<h3 id="org3f2e082">3. Escritura Creativa Automatizada</h3>
-<div class="outline-text-3" id="text-org3f2e082">
+<div id="outline-container-org96e4db4" class="outline-3">
+<h3 id="org96e4db4">3. Escritura Creativa Automatizada</h3>
+<div class="outline-text-3" id="text-org96e4db4">
 <ul class="org-ul">
 <li><b>Descripción</b>: Un experimento para generar relatos cortos usando IA y publicarlos en este blog.</li>
 <li><b>Tecnologías</b>: Emacs, GPT (simulado), Org-mode.</li>
@@ -35409,9 +35411,9 @@ La página de <b>Proyectos</b> está diseñada para ser un catálogo sencillo pe
 </div>
 </div>
 </div>
-<div id="outline-container-orgc0ec8d2" class="outline-2">
-<h2 id="orgc0ec8d2">¿Cómo interactuar con los Proyectos?</h2>
-<div class="outline-text-2" id="text-orgc0ec8d2">
+<div id="outline-container-org7e92d6d" class="outline-2">
+<h2 id="org7e92d6d">¿Cómo interactuar con los Proyectos?</h2>
+<div class="outline-text-2" id="text-org7e92d6d">
 <p>
 Me encantaría que esta página no sea solo un escaparate, sino un punto de partida para colaboración o inspiración:
 </p>
@@ -35423,9 +35425,9 @@ Me encantaría que esta página no sea solo un escaparate, sino un punto de part
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbfa9483" class="outline-2">
-<h2 id="orgbfa9483">Conclusión</h2>
-<div class="outline-text-2" id="text-orgbfa9483">
+<div id="outline-container-org76b7292" class="outline-2">
+<h2 id="org76b7292">Conclusión</h2>
+<div class="outline-text-2" id="text-org76b7292">
 <p>
 La página de <b>Proyectos</b> es un espacio vivo que iré actualizando con nuevas ideas y trabajos. Usar Org-mode para mantenerla me permite combinar escritura, código y datos en un formato simple y portátil. Espero que encuentres algo que te inspire o motive a experimentar por tu cuenta. ¡No dudes en dejar tus comentarios o contactarme para charlar sobre ello!
 </p>
@@ -35455,20 +35457,20 @@ Para ponerte en contacto, envíanos un email a <a href="mailto:mybloggingnotes@g
   <title><![CDATA[Nosotros]]></title>
   <description><![CDATA[
 
-<figure id="orgae95f6c">
+<figure id="org7a0ddfe">
 <img src="images/blog-qr.png" alt="blog-qr.png" style="float:right; margin-left:20px; border:1px solid #ddd; padding:10px; margin-top:-6em;">
 
 </figure>
-<div id="outline-container-org0ed16af" class="outline-2">
-<h2 id="org0ed16af">Sobre Nosotros</h2>
-<div class="outline-text-2" id="text-org0ed16af">
+<div id="outline-container-org41e9361" class="outline-2">
+<h2 id="org41e9361">Sobre Nosotros</h2>
+<div class="outline-text-2" id="text-org41e9361">
 <p>
 Bienvenido a <b>Emacs con Esteroides</b>, un espacio donde combinamos la potencia de Emacs con las capacidades de la <b>IA Generativa</b> para crear un flujo de trabajo optimizado en la gestión y generación de contenido. Este blog es coordinado por <b>M. Castillo</b>, un entusiasta del software libre, la automatización y la productividad extrema.
 </p>
 </div>
-<div id="outline-container-org10cc88b" class="outline-3">
-<h3 id="org10cc88b">¿Qué es Emacs con Esteroides?</h3>
-<div class="outline-text-3" id="text-org10cc88b">
+<div id="outline-container-org774dfb5" class="outline-3">
+<h3 id="org774dfb5">¿Qué es Emacs con Esteroides?</h3>
+<div class="outline-text-3" id="text-org774dfb5">
 <p>
 Es un blog dedicado a explorar cómo llevar a <b>Emacs</b> al siguiente nivel con herramientas avanzadas. Aquí documentamos técnicas, configuraciones y scripts que permiten convertir Emacs en un entorno ultrapotente para la creación de contenido, el desarrollo de software y la productividad en general.
 </p>
@@ -35484,9 +35486,9 @@ Nuestro enfoque se centra en tres pilares principales:
 </ol>
 </div>
 </div>
-<div id="outline-container-org1996219" class="outline-3">
-<h3 id="org1996219">La IA y Emacs: Un dúo imparable</h3>
-<div class="outline-text-3" id="text-org1996219">
+<div id="outline-container-org41e6cf1" class="outline-3">
+<h3 id="org41e6cf1">La IA y Emacs: Un dúo imparable</h3>
+<div class="outline-text-3" id="text-org41e6cf1">
 <p>
 La combinación de <b>Emacs</b> con <b>IA Generativa</b> nos permite:
 </p>
@@ -35503,15 +35505,15 @@ La combinación de <b>Emacs</b> con <b>IA Generativa</b> nos permite:
 </p>
 </div>
 </div>
-<div id="outline-container-org6d51711" class="outline-3">
-<h3 id="org6d51711">Actores clave en la creación del blog</h3>
-<div class="outline-text-3" id="text-org6d51711">
+<div id="outline-container-org9c735b4" class="outline-3">
+<h3 id="org9c735b4">Actores clave en la creación del blog</h3>
+<div class="outline-text-3" id="text-org9c735b4">
 <p>
 Para ilustrar el ecosistema de trabajo en <b>Emacs con Esteroides</b>, aquí tienes un diagrama con los actores principales:
 </p>
 
 
-<figure id="org49ce4fe">
+<figure id="org1386fb3">
 <img src="images/diagrama_actores.png" alt="diagrama_actores.png">
 
 </figure>
@@ -35554,9 +35556,9 @@ Para ponerte en contacto, envíanos un email a <a href="mailto:mybloggingnotes@g
 <p>
 Puedes enviarme un correo electrónico a: <a href="mailto:tu.email@ejemplo.com">mybloggingnotes@gmail.com</a>. Trataré de responder lo antes posible.
 </p>
-<div id="outline-container-orgcc25846" class="outline-2">
-<h2 id="orgcc25846">¿Qué puedes escribir?</h2>
-<div class="outline-text-2" id="text-orgcc25846">
+<div id="outline-container-org0e16bf5" class="outline-2">
+<h2 id="org0e16bf5">¿Qué puedes escribir?</h2>
+<div class="outline-text-2" id="text-org0e16bf5">
 <ul class="org-ul">
 <li>Preguntas sobre los temas tratados en el blog.</li>
 <li>Ideas para futuros <b>posts</b> o colaboraciones.</li>
@@ -35564,9 +35566,9 @@ Puedes enviarme un correo electrónico a: <a href="mailto:tu.email@ejemplo.com">
 </ul>
 </div>
 </div>
-<div id="outline-container-org97f0a8a" class="outline-2">
-<h2 id="org97f0a8a">Comentarios</h2>
-<div class="outline-text-2" id="text-org97f0a8a">
+<div id="outline-container-orgf1a38e5" class="outline-2">
+<h2 id="orgf1a38e5">Comentarios</h2>
+<div class="outline-text-2" id="text-orgf1a38e5">
 <!-- Disqus Embed Code -->
 <div id="disqus_thread"></div>
 <script>
