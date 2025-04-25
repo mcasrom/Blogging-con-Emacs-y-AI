@@ -4,32 +4,32 @@
 <title><![CDATA[Emacs con esteroides - ciberseguridad]]></title>
 <description><![CDATA[Emacs con esteroides - ciberseguridad]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-ciberseguridad.html</link>
-<lastBuildDate>Fri, 25 Apr 2025 07:02:57 +0200</lastBuildDate>
+<lastBuildDate>Fri, 25 Apr 2025 08:36:07 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Ciberamenazas Más Frecuentes y Cómo Combatirlas]]></title>
   <description><![CDATA[
-<div id="outline-container-org959e965" class="outline-2">
-<h2 id="org959e965">Introducción</h2>
-<div class="outline-text-2" id="text-org959e965">
+<div id="outline-container-org104326c" class="outline-2">
+<h2 id="org104326c">Introducción</h2>
+<div class="outline-text-2" id="text-org104326c">
 <p>
 En el mundo digital actual, las ciberamenazas representan uno de los mayores desafíos tanto para usuarios individuales como para empresas. Este post ofrece una visión detallada de las amenazas más comunes, cómo actúan y qué medidas se pueden tomar para prevenirlas.
 </p>
 </div>
 </div>
-<div id="outline-container-org396516a" class="outline-2">
-<h2 id="org396516a">Principales ciberamenazas</h2>
-<div class="outline-text-2" id="text-org396516a">
+<div id="outline-container-orgd5000bd" class="outline-2">
+<h2 id="orgd5000bd">Principales ciberamenazas</h2>
+<div class="outline-text-2" id="text-orgd5000bd">
 </div>
-<div id="outline-container-org33f2145" class="outline-3">
-<h3 id="org33f2145">1. Phishing</h3>
-<div class="outline-text-3" id="text-org33f2145">
+<div id="outline-container-org8362e75" class="outline-3">
+<h3 id="org8362e75">1. Phishing</h3>
+<div class="outline-text-3" id="text-org8362e75">
 <p>
 El <b>phishing</b> es un método de ingeniería social que engaña a los usuarios para que revelen información sensible, como contraseñas o datos bancarios, haciéndose pasar por entidades confiables mediante correos electrónicos, mensajes o páginas falsas.
 </p>
 </div>
-<div id="outline-container-org40582c9" class="outline-4">
-<h4 id="org40582c9">Cómo prevenirlo:</h4>
-<div class="outline-text-4" id="text-org40582c9">
+<div id="outline-container-org8e44037" class="outline-4">
+<h4 id="org8e44037">Cómo prevenirlo:</h4>
+<div class="outline-text-4" id="text-org8e44037">
 <ul class="org-ul">
 <li>No hacer clic en enlaces sospechosos.</li>
 <li>Verificar siempre el remitente.</li>
@@ -38,16 +38,16 @@ El <b>phishing</b> es un método de ingeniería social que engaña a los usuario
 </div>
 </div>
 </div>
-<div id="outline-container-orgd4a213c" class="outline-3">
-<h3 id="orgd4a213c">2. Ransomware</h3>
-<div class="outline-text-3" id="text-orgd4a213c">
+<div id="outline-container-orgf0a2c13" class="outline-3">
+<h3 id="orgf0a2c13">2. Ransomware</h3>
+<div class="outline-text-3" id="text-orgf0a2c13">
 <p>
 El <b>ransomware</b> es un tipo de malware que cifra los archivos de la víctima y exige un rescate para restaurar el acceso.
 </p>
 </div>
-<div id="outline-container-org050828b" class="outline-4">
-<h4 id="org050828b">Cómo prevenirlo:</h4>
-<div class="outline-text-4" id="text-org050828b">
+<div id="outline-container-orgf7d8cf6" class="outline-4">
+<h4 id="orgf7d8cf6">Cómo prevenirlo:</h4>
+<div class="outline-text-4" id="text-orgf7d8cf6">
 <ul class="org-ul">
 <li>Hacer copias de seguridad periódicas.</li>
 <li>Mantener el sistema y software actualizados.</li>
@@ -56,16 +56,16 @@ El <b>ransomware</b> es un tipo de malware que cifra los archivos de la víctima
 </div>
 </div>
 </div>
-<div id="outline-container-orgf9c6608" class="outline-3">
-<h3 id="orgf9c6608">3. Malware (virus, troyanos, spyware)</h3>
-<div class="outline-text-3" id="text-orgf9c6608">
+<div id="outline-container-org266631a" class="outline-3">
+<h3 id="org266631a">3. Malware (virus, troyanos, spyware)</h3>
+<div class="outline-text-3" id="text-org266631a">
 <p>
 Software malicioso diseñado para causar daño, espiar o controlar sistemas sin consentimiento.
 </p>
 </div>
-<div id="outline-container-orgf392d7a" class="outline-4">
-<h4 id="orgf392d7a">Cómo prevenirlo:</h4>
-<div class="outline-text-4" id="text-orgf392d7a">
+<div id="outline-container-org16ac302" class="outline-4">
+<h4 id="org16ac302">Cómo prevenirlo:</h4>
+<div class="outline-text-4" id="text-org16ac302">
 <ul class="org-ul">
 <li>No descargar archivos de sitios no confiables.</li>
 <li>Mantener actualizado el sistema operativo.</li>
@@ -74,16 +74,16 @@ Software malicioso diseñado para causar daño, espiar o controlar sistemas sin 
 </div>
 </div>
 </div>
-<div id="outline-container-org2f00251" class="outline-3">
-<h3 id="org2f00251">4. Ataques de fuerza bruta</h3>
-<div class="outline-text-3" id="text-org2f00251">
+<div id="outline-container-org0969afb" class="outline-3">
+<h3 id="org0969afb">4. Ataques de fuerza bruta</h3>
+<div class="outline-text-3" id="text-org0969afb">
 <p>
 Intento automatizado de adivinar contraseñas mediante prueba y error.
 </p>
 </div>
-<div id="outline-container-orgfa1d49c" class="outline-4">
-<h4 id="orgfa1d49c">Cómo prevenirlo:</h4>
-<div class="outline-text-4" id="text-orgfa1d49c">
+<div id="outline-container-org40ea145" class="outline-4">
+<h4 id="org40ea145">Cómo prevenirlo:</h4>
+<div class="outline-text-4" id="text-org40ea145">
 <ul class="org-ul">
 <li>Usar contraseñas fuertes y únicas.</li>
 <li>Implementar límites de intentos de acceso.</li>
@@ -92,16 +92,16 @@ Intento automatizado de adivinar contraseñas mediante prueba y error.
 </div>
 </div>
 </div>
-<div id="outline-container-org53d2f9c" class="outline-3">
-<h3 id="org53d2f9c">5. Ingeniería social</h3>
-<div class="outline-text-3" id="text-org53d2f9c">
+<div id="outline-container-orgd96c70a" class="outline-3">
+<h3 id="orgd96c70a">5. Ingeniería social</h3>
+<div class="outline-text-3" id="text-orgd96c70a">
 <p>
 Manipulación psicológica para obtener acceso a sistemas o datos sensibles.
 </p>
 </div>
-<div id="outline-container-orgeb9bdb9" class="outline-4">
-<h4 id="orgeb9bdb9">Cómo prevenirlo:</h4>
-<div class="outline-text-4" id="text-orgeb9bdb9">
+<div id="outline-container-org1878c5a" class="outline-4">
+<h4 id="org1878c5a">Cómo prevenirlo:</h4>
+<div class="outline-text-4" id="text-org1878c5a">
 <ul class="org-ul">
 <li>Formación continua en ciberseguridad.</li>
 <li>Ser escéptico ante solicitudes urgentes o inusuales.</li>
@@ -111,9 +111,9 @@ Manipulación psicológica para obtener acceso a sistemas o datos sensibles.
 </div>
 </div>
 </div>
-<div id="outline-container-org0bba234" class="outline-2">
-<h2 id="org0bba234">Tabla resumen de amenazas</h2>
-<div class="outline-text-2" id="text-org0bba234">
+<div id="outline-container-org74b417a" class="outline-2">
+<h2 id="org74b417a">Tabla resumen de amenazas</h2>
+<div class="outline-text-2" id="text-org74b417a">
 <table border="2" rules="all" frame="border">
 
 
@@ -173,19 +173,19 @@ Manipulación psicológica para obtener acceso a sistemas o datos sensibles.
 </table>
 </div>
 </div>
-<div id="outline-container-org904dca6" class="outline-2">
-<h2 id="org904dca6">Diagrama explicativo</h2>
-<div class="outline-text-2" id="text-org904dca6">
+<div id="outline-container-orgec40e67" class="outline-2">
+<h2 id="orgec40e67">Diagrama explicativo</h2>
+<div class="outline-text-2" id="text-orgec40e67">
 
-<figure id="org751d521">
+<figure id="org7c679df">
 <img src="images/ciberamenazas_diagrama.png" alt="ciberamenazas_diagrama.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org744362d" class="outline-2">
-<h2 id="org744362d">Referencias</h2>
-<div class="outline-text-2" id="text-org744362d">
+<div id="outline-container-orge2aad4a" class="outline-2">
+<h2 id="orge2aad4a">Referencias</h2>
+<div class="outline-text-2" id="text-orge2aad4a">
 <ol class="org-ol">
 <li><a href="https://www.incibe.es">INCIBE - Instituto Nacional de Ciberseguridad</a></li>
 <li><a href="https://www.cisa.gov/">CISA - Cybersecurity and Infrastructure Security Agency</a></li>
@@ -194,9 +194,9 @@ Manipulación psicológica para obtener acceso a sistemas o datos sensibles.
 </ol>
 </div>
 </div>
-<div id="outline-container-org13d724a" class="outline-2">
-<h2 id="org13d724a">Conclusión</h2>
-<div class="outline-text-2" id="text-org13d724a">
+<div id="outline-container-orgb6c805f" class="outline-2">
+<h2 id="orgb6c805f">Conclusión</h2>
+<div class="outline-text-2" id="text-orgb6c805f">
 <p>
 La ciberseguridad comienza con la educación del usuario. Conocer las amenazas más comunes y adoptar medidas básicas puede marcar la diferencia entre ser víctima o estar protegido. Mantente alerta, actualiza tus sistemas y no subestimes el poder de una contraseña robusta.
 </p>

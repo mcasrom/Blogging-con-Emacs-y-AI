@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title><![CDATA[Emacs con esteroides - haveibeenpwned]]></title>
+<description><![CDATA[Emacs con esteroides - haveibeenpwned]]></description>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-haveibeenpwned.html</link>
+<lastBuildDate>Fri, 25 Apr 2025 08:35:28 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[12 Servicios de Ciberseguridad Gratuitos para Usuarios (Guía 2024)]]></title>
+  <description><![CDATA[
+<div id="outline-container-org5ca332c" class="outline-2">
+<h2 id="org5ca332c">Introducción: Ciberseguridad al Alcance de Todos</h2>
+<div class="outline-text-2" id="text-org5ca332c">
+<p>
+En un mundo donde las amenazas digitales crecen exponencialmente, proteger tus datos y sistemas es más crucial que nunca. La combinación de herramientas de ciberseguridad gratuitas y flujos de trabajo automatizados ofrece una solución poderosa y personalizable. En esta guía de 2024, se exploran <b>12 servicios gratuitos de ciberseguridad</b> para tareas como la detección de filtraciones de datos, análisis de redes y obtención de inteligencia de fuentes abiertas (OSINT). Cada servicio se detalla con ejemplos prácticos de uso, scripts y automatizaciones. Además, se incluye un diagrama del ecosistema y un script descargable para automatizar tareas de seguridad.
+</p>
+</div>
+</div>
+<div id="outline-container-org0134286" class="outline-2">
+<h2 id="org0134286">🌐 Diagrama: Ecosistema de Herramientas</h2>
+<div class="outline-text-2" id="text-org0134286">
+
+<figure id="orgd2de304">
+<img src="images/ciberseguridad-2024-diagrama.png" alt="ciberseguridad-2024-diagrama.png">
+
+</figure>
+
+<p>
+<a href="images/ciberseguridad-2024-diagrama.png">Ver imagen completa</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org1bcb4a8" class="outline-2">
+<h2 id="org1bcb4a8">🛡️ Configuración Inicial</h2>
+<div class="outline-text-2" id="text-org1bcb4a8">
+</div>
+<div id="outline-container-org7b3adc9" class="outline-3">
+<h3 id="org7b3adc9">Instalación de Herramientas y Dependencias</h3>
+<div class="outline-text-3" id="text-org7b3adc9">
+<p>
+Asegúrate de contar con herramientas como curl, jq, un cliente de API (por ejemplo, HTTPie o Postman), Python y un editor de texto compatible con bloques de código y automatización. 
+</p>
+</div>
+</div>
+<div id="outline-container-org0fbebd5" class="outline-3">
+<h3 id="org0fbebd5">Directorio de Seguridad</h3>
+<div class="outline-text-3" id="text-org0fbebd5">
+<p>
+Crea un directorio para almacenar notas y resultados:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">mkdir -p ~/security
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org9e5577c" class="outline-2">
+<h2 id="org9e5577c">🔒 Los 12 Servicios de Ciberseguridad Gratuitos</h2>
+<div class="outline-text-2" id="text-org9e5577c">
+</div>
+<div id="outline-container-orgef545d9" class="outline-3">
+<h3 id="orgef545d9">1. <a href="https://haveibeenpwned.com/">Have I Been Pwned (HIBP)</a></h3>
+<div class="outline-text-3" id="text-orgef545d9">
+<ul class="org-ul">
+<li><b>Propósito</b>: Verifica si tus correos electrónicos o contraseñas han sido comprometidos en filtraciones de datos.</li>
+<li><b>Límite Gratuito</b>: 1,500 solicitudes/mes con API Key.</li>
+<li><b>Uso</b>:</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-sh">curl -H <span style="color: #a44185;">"hibp-api-key: TU_API_KEY"</span> <span style="color: #a44185;">"https://haveibeenpwned.com/api/v3/breachedaccount/test@example.com"</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge16d2ad" class="outline-3">
+<h3 id="orge16d2ad">2. <a href="https://www.virustotal.com/">VirusTotal</a></h3>
+<div class="outline-text-3" id="text-orge16d2ad">
+<ul class="org-ul">
+<li><b>Propósito</b>: Analiza archivos y URLs para detectar malware.</li>
+<li><b>Límite Gratuito</b>: 500 solicitudes/día, 4 archivos/mes (máx. 32 MB).</li>
+<li><b>Uso</b>:</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-sh">curl --request POST --url https://www.virustotal.com/api/v3/files <span style="color: #a44185;">\</span>
+  --header <span style="color: #a44185;">'x-apikey: TU_API_KEY'</span> <span style="color: #a44185;">\</span>
+  --form <span style="color: #a44185;">'file=@/ruta/al/archivo'</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org31ef758" class="outline-3">
+<h3 id="org31ef758">3. <a href="https://www.shodan.io/">Shodan</a></h3>
+<div class="outline-text-3" id="text-org31ef758">
+<ul class="org-ul">
+<li><b>Propósito</b>: Busca dispositivos conectados a Internet (IoT, servidores, etc.).</li>
+<li><b>Límite Gratuito</b>: 100 créditos de consulta/mes.</li>
+<li><b>Uso</b>:</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-sh">curl <span style="color: #a44185;">"https://api.shodan.io/shodan/host/search?key=TU_API_KEY&amp;query=port:80+os:linux"</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6eeed77" class="outline-3">
+<h3 id="org6eeed77">4. <a href="https://www.dehashed.com/">Dehashed</a></h3>
+<div class="outline-text-3" id="text-org6eeed77">
+<ul class="org-ul">
+<li><b>Propósito</b>: Búsqueda profunda en filtraciones, incluyendo metadatos (nombres, direcciones).</li>
+<li><b>Límite Gratuito</b>: 5 consultas/día.</li>
+<li><b>Uso</b>:</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-sh">curl -u <span style="color: #a44185;">"TU_EMAIL:API_KEY"</span> <span style="color: #a44185;">"https://api.dehashed.com/search?query=email:test@example.com"</span> | jq .
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org095df39" class="outline-3">
+<h3 id="org095df39">5. <a href="https://www.greynoise.io/">GreyNoise</a></h3>
+<div class="outline-text-3" id="text-org095df39">
+<ul class="org-ul">
+<li><b>Propósito</b>: Detecta IPs maliciosas o escaneos masivos en la red.</li>
+<li><b>Límite Gratuito</b>: 1,000 solicitudes/mes.</li>
+<li><b>Uso</b>:</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-sh">curl -H <span style="color: #a44185;">"key: TU_API_KEY"</span> <span style="color: #a44185;">"https://api.greynoise.io/v3/community/1.1.1.1"</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge93d9fd" class="outline-3">
+<h3 id="orge93d9fd">6. <a href="https://urlscan.io/">URLScan.io</a></h3>
+<div class="outline-text-3" id="text-orge93d9fd">
+<ul class="org-ul">
+<li><b>Propósito</b>: Analiza URLs para detectar phishing o comportamiento sospechoso.</li>
+<li><b>Límite Gratuito</b>: 10 escaneos/día.</li>
+<li><b>Uso</b>:</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-sh">curl -X POST <span style="color: #a44185;">"https://urlscan.io/api/v1/scan/"</span> -H <span style="color: #a44185;">"API-Key: TU_API_KEY"</span> -H <span style="color: #a44185;">"Content-Type: application/json"</span> -d <span style="color: #a44185;">'{"url": "https://example.com"}'</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf09714b" class="outline-3">
+<h3 id="orgf09714b">7. <a href="https://intelx.io/">Intelligence X</a></h3>
+<div class="outline-text-3" id="text-orgf09714b">
+<ul class="org-ul">
+<li><b>Propósito</b>: Busca datos en la Dark Web y archivos expuestos.</li>
+<li><b>Límite Gratuito</b>: 50 solicitudes/mes.</li>
+<li><b>Uso</b>:</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-sh">curl -H <span style="color: #a44185;">"x-key: TU_API_KEY"</span> <span style="color: #a44185;">"https://api.intelx.io/intelligent/search?term=dominio.com"</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org36af834" class="outline-3">
+<h3 id="org36af834">8. <a href="https://dnsdumpster.com/">DNSDumpster</a></h3>
+<div class="outline-text-3" id="text-org36af834">
+<ul class="org-ul">
+<li><b>Propósito</b>: Mapea subdominios y registros DNS de un dominio.</li>
+<li><b>Límite Gratuito</b>: Sin límite explícito, uso web.</li>
+<li><b>Uso</b>: Accede a la web y realiza la consulta manualmente.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org30603f8" class="outline-3">
+<h3 id="org30603f8">9. <a href="https://www.censys.io/">Censys</a></h3>
+<div class="outline-text-3" id="text-org30603f8">
+<ul class="org-ul">
+<li><b>Propósito</b>: Inventario de dispositivos y certificados SSL.</li>
+<li><b>Límite Gratuito</b>: 250 solicitudes/mes.</li>
+<li><b>Uso</b>:</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #219fd5; font-style: italic;">import</span> censys.certificates
+<span style="color: #1857a4;">certs</span> = censys.certificates.CensysCertificates(api_id=<span style="color: #a44185;">"TU_ID"</span>, api_secret=<span style="color: #a44185;">"TU_SECRET"</span>)
+<span style="color: #219fd5; font-style: italic;">for</span> cert <span style="color: #219fd5; font-style: italic;">in</span> certs.search(<span style="color: #a44185;">"parsed.names:example.com"</span>):
+    <span style="color: #dc3eb7;">print</span>(cert)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org23dfc42" class="outline-3">
+<h3 id="org23dfc42">10. <a href="https://www.abuseipdb.com/">AbuseIPDB</a></h3>
+<div class="outline-text-3" id="text-org23dfc42">
+<ul class="org-ul">
+<li><b>Propósito</b>: Reporta y verifica IPs sospechosas.</li>
+<li><b>Límite Gratuito</b>: 1,000 solicitudes/día.</li>
+<li><b>Uso</b>:</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-sh">curl -G https://api.abuseipdb.com/api/v2/check <span style="color: #a44185;">\</span>
+  --data-urlencode <span style="color: #a44185;">"ipAddress=1.1.1.1"</span> <span style="color: #a44185;">\</span>
+  -H <span style="color: #a44185;">"Key: TU_API_KEY"</span> <span style="color: #a44185;">\</span>
+  -H <span style="color: #a44185;">"Accept: application/json"</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgff60fc5" class="outline-3">
+<h3 id="orgff60fc5">11. <a href="https://packettotal.com/">PacketTotal</a></h3>
+<div class="outline-text-3" id="text-orgff60fc5">
+<ul class="org-ul">
+<li><b>Propósito</b>: Analiza capturas de paquetes (PCAP) para detectar amenazas.</li>
+<li><b>Límite Gratuito</b>: 10 análisis/mes.</li>
+<li><b>Uso</b>: Accede a la web y sube el archivo PCAP manualmente.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4b01f37" class="outline-3">
+<h3 id="org4b01f37">12. <a href="https://otx.alienvault.com/">OTX AlienVault</a></h3>
+<div class="outline-text-3" id="text-org4b01f37">
+<ul class="org-ul">
+<li><b>Propósito</b>: Comparte inteligencia de amenazas (IoCs, malware).</li>
+<li><b>Límite Gratuito</b>: Acceso completo a la API.</li>
+<li><b>Uso</b>:</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-sh">curl -H <span style="color: #a44185;">"X-OTX-API-KEY: TU_API_KEY"</span> <span style="color: #a44185;">"https://otx.alienvault.com/api/v1/indicators/IPv4/8.8.8.8"</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org7b907bb" class="outline-2">
+<h2 id="org7b907bb">📊 Tabla Comparativa Extendida</h2>
+<div class="outline-text-2" id="text-org7b907bb">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Servicio</th>
+<th scope="col" class="org-left">Propósito</th>
+<th scope="col" class="org-left">Límite Gratuito</th>
+<th scope="col" class="org-left">Tipo de Consulta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">HaveIBeenPwned</td>
+<td class="org-left">Filtraciones de datos</td>
+<td class="org-left">1,500/mes</td>
+<td class="org-left">API</td>
+</tr>
+
+<tr>
+<td class="org-left">VirusTotal</td>
+<td class="org-left">Análisis de archivos/URLs</td>
+<td class="org-left">500/día, 4 archivos/mes</td>
+<td class="org-left">API</td>
+</tr>
+
+<tr>
+<td class="org-left">Shodan</td>
+<td class="org-left">Dispositivos conectados</td>
+<td class="org-left">100 créditos/mes</td>
+<td class="org-left">API</td>
+</tr>
+
+<tr>
+<td class="org-left">Dehashed</td>
+<td class="org-left">Filtraciones profundas</td>
+<td class="org-left">5/día</td>
+<td class="org-left">API</td>
+</tr>
+
+<tr>
+<td class="org-left">GreyNoise</td>
+<td class="org-left">IPs maliciosas</td>
+<td class="org-left">1,000/mes</td>
+<td class="org-left">API</td>
+</tr>
+
+<tr>
+<td class="org-left">URLScan.io</td>
+<td class="org-left">Escaneo de URLs</td>
+<td class="org-left">10/día</td>
+<td class="org-left">API</td>
+</tr>
+
+<tr>
+<td class="org-left">Intelligence X</td>
+<td class="org-left">Dark Web y archivos expuestos</td>
+<td class="org-left">50/mes</td>
+<td class="org-left">API</td>
+</tr>
+
+<tr>
+<td class="org-left">DNSDumpster</td>
+<td class="org-left">Subdominios y DNS</td>
+<td class="org-left">Ilimitado (web)</td>
+<td class="org-left">Web</td>
+</tr>
+
+<tr>
+<td class="org-left">Censys</td>
+<td class="org-left">Certificados/Inventario</td>
+<td class="org-left">250/mes</td>
+<td class="org-left">API/Python</td>
+</tr>
+
+<tr>
+<td class="org-left">AbuseIPDB</td>
+<td class="org-left">IPs sospechosas</td>
+<td class="org-left">1,000/día</td>
+<td class="org-left">API</td>
+</tr>
+
+<tr>
+<td class="org-left">PacketTotal</td>
+<td class="org-left">Análisis de PCAP</td>
+<td class="org-left">10/mes</td>
+<td class="org-left">Web</td>
+</tr>
+
+<tr>
+<td class="org-left">OTX AlienVault</td>
+<td class="org-left">Inteligencia de amenazas</td>
+<td class="org-left">Completo</td>
+<td class="org-left">API</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<b>Conclusión</b>: Estas herramientas permiten fortalecer la seguridad digital de cualquier usuario, automatizando tareas clave y centralizando resultados para una gestión más eficiente.
+</p>
+
+<p>
+Citations:
+[1] <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/56277478/527b378c-edf3-45cc-8e5c-b1cfbe13c35a/paste.txt">https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/56277478/527b378c-edf3-45cc-8e5c-b1cfbe13c35a/paste.txt</a>
+</p>
+
+<p>
+&#x2014;
+Answer from Perplexity: pplx.ai/share
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-haveibeenpwned.html">haveibeenpwned</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-virustotal.html">virustotal</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-shodan.html">shodan</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-dehashed.html">dehashed</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-greynoise.html">greynoise</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-urlscan.html">urlscan</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[haveibeenpwned]]></category>
+  <category><![CDATA[virustotal]]></category>
+  <category><![CDATA[shodan]]></category>
+  <category><![CDATA[dehashed]]></category>
+  <category><![CDATA[greynoise]]></category>
+  <category><![CDATA[urlscan]]></category>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-24--12-servicios-de-ciberseguridad-gratuitos-para-usuarios-(gu%C3%ADa-2024).html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-24--12-servicios-de-ciberseguridad-gratuitos-para-usuarios-(gu%C3%ADa-2024).html</guid>
+  <pubDate>Thu, 24 Apr 2025 12:53:00 +0200</pubDate>
+</item>
+</channel>
+</rss>

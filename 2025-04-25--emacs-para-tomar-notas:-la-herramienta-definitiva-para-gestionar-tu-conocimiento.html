@@ -187,9 +187,9 @@
 <div id="preamble" class="status"></div>
 <div id="content">
 <div class="post-date">25/04/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-25--emacs-para-tomar-notas:-la-herramienta-definitiva-para-gestionar-tu-conocimiento.html">Emacs para Tomar Notas: La Herramienta Definitiva para Gestionar tu Conocimiento</a></h1>
-<div id="outline-container-orgdef1337" class="outline-2">
-<h2 id="orgdef1337">Introducción</h2>
-<div class="outline-text-2" id="text-orgdef1337">
+<div id="outline-container-org550bfbf" class="outline-2">
+<h2 id="org550bfbf">Introducción</h2>
+<div class="outline-text-2" id="text-org550bfbf">
 <p>
 Tomar notas es una habilidad fundamental en nuestra era de sobrecarga de información. Ya sea para estudiar, trabajar en proyectos o simplemente capturar ideas fugaces, necesitamos un sistema que sea a la vez potente y flexible. Emacs, especialmente con Org mode, ofrece una de las experiencias más completas para la gestión de notas y conocimiento.
 </p>
@@ -199,9 +199,9 @@ En este artículo, exploraremos cómo configurar Emacs para tomar notas eficient
 </p>
 </div>
 </div>
-<div id="outline-container-orgf16395a" class="outline-2">
-<h2 id="orgf16395a">¿Por qué usar Emacs para tomar notas?</h2>
-<div class="outline-text-2" id="text-orgf16395a">
+<div id="outline-container-org831ecf3" class="outline-2">
+<h2 id="org831ecf3">¿Por qué usar Emacs para tomar notas?</h2>
+<div class="outline-text-2" id="text-org831ecf3">
 <p>
 Antes de sumergirnos en la configuración, vale la pena entender qué hace a Emacs una opción tan atractiva para tomar notas:
 </p>
@@ -215,25 +215,25 @@ Antes de sumergirnos en la configuración, vale la pena entender qué hace a Ema
 </ul>
 </div>
 </div>
-<div id="outline-container-org4af4e8e" class="outline-2">
-<h2 id="org4af4e8e">Configuración básica para toma de notas</h2>
-<div class="outline-text-2" id="text-org4af4e8e">
+<div id="outline-container-orgbc91ffc" class="outline-2">
+<h2 id="orgbc91ffc">Configuración básica para toma de notas</h2>
+<div class="outline-text-2" id="text-orgbc91ffc">
 </div>
-<div id="outline-container-orgbc0da0c" class="outline-3">
-<h3 id="orgbc0da0c">Instalación y configuración inicial</h3>
-<div class="outline-text-3" id="text-orgbc0da0c">
+<div id="outline-container-org6c0ca8b" class="outline-3">
+<h3 id="org6c0ca8b">Instalación y configuración inicial</h3>
+<div class="outline-text-3" id="text-org6c0ca8b">
 <p>
 Si aún no tienes Emacs instalado, el primer paso es obtenerlo para tu sistema operativo:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-shell"><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">En sistemas basados en Debian/Ubuntu</span>
+<pre class="src src-shell"><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">En sistemas basados en Debian/Ubuntu</span>
 sudo apt install emacs
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">En macOS con Homebrew</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">En macOS con Homebrew</span>
 brew install emacs
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">En Windows, descarga desde https://gnu.org/software/emacs/download.html</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">En Windows, descarga desde https://gnu.org/software/emacs/download.html</span>
 </pre>
 </div>
 
@@ -242,49 +242,49 @@ Aunque Org mode viene incluido en Emacs moderno, querrás algunas configuracione
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n b&#225;sica para Org mode</span>
-(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">org</span>)
-(global-set-key (kbd <span style="color: #005F00;">"C-c l"</span>) 'org-store-link)
-(global-set-key (kbd <span style="color: #005F00;">"C-c a"</span>) 'org-agenda)
-(global-set-key (kbd <span style="color: #005F00;">"C-c c"</span>) 'org-capture)
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n b&#225;sica para Org mode</span>
+(<span style="color: #219fd5; font-style: italic;">require</span> '<span style="color: #2f86d2;">org</span>)
+(global-set-key (kbd <span style="color: #a44185;">"C-c l"</span>) 'org-store-link)
+(global-set-key (kbd <span style="color: #a44185;">"C-c a"</span>) 'org-agenda)
+(global-set-key (kbd <span style="color: #a44185;">"C-c c"</span>) 'org-capture)
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Definir ubicaciones para notas</span>
-(<span style="color: #D70000;">setq</span> org-directory <span style="color: #005F00;">"~/org"</span>)
-(<span style="color: #D70000;">setq</span> org-default-notes-file (concat org-directory <span style="color: #005F00;">"/notas.org"</span>))
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Definir ubicaciones para notas</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-directory <span style="color: #a44185;">"~/org"</span>)
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-default-notes-file (concat org-directory <span style="color: #a44185;">"/notas.org"</span>))
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Habilitar indent-mode para mejor visualizaci&#243;n</span>
-(<span style="color: #D70000;">setq</span> org-startup-indented t)
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Habilitar indent-mode para mejor visualizaci&#243;n</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-startup-indented t)
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Mostrar im&#225;genes inline</span>
-(<span style="color: #D70000;">setq</span> org-display-inline-images t)
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Mostrar im&#225;genes inline</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-display-inline-images t)
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Habilitar auto-completado</span>
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Habilitar auto-completado</span>
 (add-hook 'org-mode-hook 'company-mode)
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orga57e94e" class="outline-3">
-<h3 id="orga57e94e">Configuración para captura rápida de notas</h3>
-<div class="outline-text-3" id="text-orga57e94e">
+<div id="outline-container-org7c7c894" class="outline-3">
+<h3 id="org7c7c894">Configuración para captura rápida de notas</h3>
+<div class="outline-text-3" id="text-org7c7c894">
 <p>
 Una de las características más poderosas de Org mode es el sistema de captura (Org Capture), que permite tomar notas rápidamente sin interrumpir tu flujo de trabajo:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Plantillas para captura r&#225;pida de notas</span>
-(<span style="color: #D70000;">setq</span> org-capture-templates
-      '((<span style="color: #005F00;">"t"</span> <span style="color: #005F00;">"Tarea"</span> entry (file+headline <span style="color: #005F00;">"~/org/tareas.org"</span> <span style="color: #005F00;">"Tareas"</span>)
-         <span style="color: #005F00;">"* TODO %?\n  %i\n  %a"</span>)
-        (<span style="color: #005F00;">"n"</span> <span style="color: #005F00;">"Nota"</span> entry (file+headline <span style="color: #005F00;">"~/org/notas.org"</span> <span style="color: #005F00;">"Notas"</span>)
-         <span style="color: #005F00;">"* %? :nota:\n  %U\n  %i\n  %a"</span>)
-        (<span style="color: #005F00;">"i"</span> <span style="color: #005F00;">"Idea"</span> entry (file+headline <span style="color: #005F00;">"~/org/ideas.org"</span> <span style="color: #005F00;">"Ideas"</span>)
-         <span style="color: #005F00;">"* %? :idea:\n  %U\n  %i"</span>)
-        (<span style="color: #005F00;">"j"</span> <span style="color: #005F00;">"Diario"</span> entry (file+datetree <span style="color: #005F00;">"~/org/diario.org"</span>)
-         <span style="color: #005F00;">"* %?\nIngresado el %U\n  %i\n  %a"</span>)))
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Plantillas para captura r&#225;pida de notas</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-capture-templates
+      '((<span style="color: #a44185;">"t"</span> <span style="color: #a44185;">"Tarea"</span> entry (file+headline <span style="color: #a44185;">"~/org/tareas.org"</span> <span style="color: #a44185;">"Tareas"</span>)
+         <span style="color: #a44185;">"* TODO %?\n  %i\n  %a"</span>)
+        (<span style="color: #a44185;">"n"</span> <span style="color: #a44185;">"Nota"</span> entry (file+headline <span style="color: #a44185;">"~/org/notas.org"</span> <span style="color: #a44185;">"Notas"</span>)
+         <span style="color: #a44185;">"* %? :nota:\n  %U\n  %i\n  %a"</span>)
+        (<span style="color: #a44185;">"i"</span> <span style="color: #a44185;">"Idea"</span> entry (file+headline <span style="color: #a44185;">"~/org/ideas.org"</span> <span style="color: #a44185;">"Ideas"</span>)
+         <span style="color: #a44185;">"* %? :idea:\n  %U\n  %i"</span>)
+        (<span style="color: #a44185;">"j"</span> <span style="color: #a44185;">"Diario"</span> entry (file+datetree <span style="color: #a44185;">"~/org/diario.org"</span>)
+         <span style="color: #a44185;">"* %?\nIngresado el %U\n  %i\n  %a"</span>)))
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Atajo global para captura desde cualquier aplicaci&#243;n</span>
-(global-set-key (kbd <span style="color: #005F00;">"C-c c"</span>) 'org-capture)
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Atajo global para captura desde cualquier aplicaci&#243;n</span>
+(global-set-key (kbd <span style="color: #a44185;">"C-c c"</span>) 'org-capture)
 </pre>
 </div>
 
@@ -293,22 +293,22 @@ Con esta configuración, puedes presionar <code>C-c c</code> (Control + c, segui
 </p>
 </div>
 </div>
-<div id="outline-container-orgcb27f67" class="outline-3">
-<h3 id="orgcb27f67">Organización de archivos de notas</h3>
-<div class="outline-text-3" id="text-orgcb27f67">
+<div id="outline-container-org32b390b" class="outline-3">
+<h3 id="org32b390b">Organización de archivos de notas</h3>
+<div class="outline-text-3" id="text-org32b390b">
 <p>
 Te recomendamos estructurar tus notas en varios archivos según su propósito:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Archivos para la agenda y b&#250;squedas</span>
-(<span style="color: #D70000;">setq</span> org-agenda-files '(<span style="color: #005F00;">"~/org/tareas.org"</span>
-                         <span style="color: #005F00;">"~/org/proyectos.org"</span>
-                         <span style="color: #005F00;">"~/org/calendario.org"</span>
-                         <span style="color: #005F00;">"~/org/notas.org"</span>))
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Archivos para la agenda y b&#250;squedas</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-agenda-files '(<span style="color: #a44185;">"~/org/tareas.org"</span>
+                         <span style="color: #a44185;">"~/org/proyectos.org"</span>
+                         <span style="color: #a44185;">"~/org/calendario.org"</span>
+                         <span style="color: #a44185;">"~/org/notas.org"</span>))
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Archivo para notas r&#225;pidas que luego se procesar&#225;n</span>
-(<span style="color: #D70000;">setq</span> org-refile-targets '((org-agenda-files <span style="color: #1F55A0;">:maxlevel</span> . 3)))
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Archivo para notas r&#225;pidas que luego se procesar&#225;n</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-refile-targets '((org-agenda-files <span style="color: #dc3eb7;">:maxlevel</span> . 3)))
 </pre>
 </div>
 
@@ -326,69 +326,69 @@ Una estructura básica podría ser:
 </div>
 </div>
 </div>
-<div id="outline-container-org45f010b" class="outline-2">
-<h2 id="org45f010b">Funcionalidades avanzadas para toma de notas</h2>
-<div class="outline-text-2" id="text-org45f010b">
+<div id="outline-container-org74d6e12" class="outline-2">
+<h2 id="org74d6e12">Funcionalidades avanzadas para toma de notas</h2>
+<div class="outline-text-2" id="text-org74d6e12">
 </div>
-<div id="outline-container-org4aa95e9" class="outline-3">
-<h3 id="org4aa95e9">Org Roam: Un sistema Zettelkasten en Emacs</h3>
-<div class="outline-text-3" id="text-org4aa95e9">
+<div id="outline-container-org37d2973" class="outline-3">
+<h3 id="org37d2973">Org Roam: Un sistema Zettelkasten en Emacs</h3>
+<div class="outline-text-3" id="text-org37d2973">
 <p>
 Org Roam implementa el método Zettelkasten de toma de notas interconectadas:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Instalar org-roam con package.el</span>
-(<span style="color: #D70000;">unless</span> (package-installed-p 'org-roam)
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Instalar org-roam con package.el</span>
+(<span style="color: #219fd5; font-style: italic;">unless</span> (package-installed-p 'org-roam)
   (package-install 'org-roam))
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n b&#225;sica</span>
-(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">org-roam</span>
-  <span style="color: #1F55A0;">:ensure</span> t
-  <span style="color: #1F55A0;">:hook</span>
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n b&#225;sica</span>
+(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">org-roam</span>
+  <span style="color: #dc3eb7;">:ensure</span> t
+  <span style="color: #dc3eb7;">:hook</span>
   (after-init . org-roam-mode)
-  <span style="color: #1F55A0;">:custom</span>
-  (org-roam-directory <span style="color: #005F00;">"~/org-roam/"</span>)
-  <span style="color: #1F55A0;">:bind</span> (<span style="color: #1F55A0;">:map</span> org-roam-mode-map
-              ((<span style="color: #005F00;">"C-c n l"</span> . org-roam)
-               (<span style="color: #005F00;">"C-c n f"</span> . org-roam-find-file)
-               (<span style="color: #005F00;">"C-c n g"</span> . org-roam-graph))
-              <span style="color: #1F55A0;">:map</span> org-mode-map
-              ((<span style="color: #005F00;">"C-c n i"</span> . org-roam-insert))
-              ((<span style="color: #005F00;">"C-c n I"</span> . org-roam-insert-immediate))))
+  <span style="color: #dc3eb7;">:custom</span>
+  (org-roam-directory <span style="color: #a44185;">"~/org-roam/"</span>)
+  <span style="color: #dc3eb7;">:bind</span> (<span style="color: #dc3eb7;">:map</span> org-roam-mode-map
+              ((<span style="color: #a44185;">"C-c n l"</span> . org-roam)
+               (<span style="color: #a44185;">"C-c n f"</span> . org-roam-find-file)
+               (<span style="color: #a44185;">"C-c n g"</span> . org-roam-graph))
+              <span style="color: #dc3eb7;">:map</span> org-mode-map
+              ((<span style="color: #a44185;">"C-c n i"</span> . org-roam-insert))
+              ((<span style="color: #a44185;">"C-c n I"</span> . org-roam-insert-immediate))))
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgd7f84ca" class="outline-3">
-<h3 id="orgd7f84ca">Org Journal para diarios estructurados</h3>
-<div class="outline-text-3" id="text-orgd7f84ca">
+<div id="outline-container-org76ce2fd" class="outline-3">
+<h3 id="org76ce2fd">Org Journal para diarios estructurados</h3>
+<div class="outline-text-3" id="text-org76ce2fd">
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">org-journal</span>
-  <span style="color: #1F55A0;">:ensure</span> t
-  <span style="color: #1F55A0;">:defer</span> t
-  <span style="color: #1F55A0;">:custom</span>
-  (org-journal-dir <span style="color: #005F00;">"~/org/diario/"</span>)
-  (org-journal-date-format <span style="color: #005F00;">"%A, %d %B %Y"</span>)
-  (org-journal-file-format <span style="color: #005F00;">"%Y-%m-%d.org"</span>))
+<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">org-journal</span>
+  <span style="color: #dc3eb7;">:ensure</span> t
+  <span style="color: #dc3eb7;">:defer</span> t
+  <span style="color: #dc3eb7;">:custom</span>
+  (org-journal-dir <span style="color: #a44185;">"~/org/diario/"</span>)
+  (org-journal-date-format <span style="color: #a44185;">"%A, %d %B %Y"</span>)
+  (org-journal-file-format <span style="color: #a44185;">"%Y-%m-%d.org"</span>))
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgd99e44f" class="outline-3">
-<h3 id="orgd99e44f">Deft para búsqueda rápida de notas</h3>
-<div class="outline-text-3" id="text-orgd99e44f">
+<div id="outline-container-org5b55859" class="outline-3">
+<h3 id="org5b55859">Deft para búsqueda rápida de notas</h3>
+<div class="outline-text-3" id="text-org5b55859">
 <p>
 Deft proporciona una interfaz similar a Notational Velocity para buscar rápidamente entre tus notas:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">deft</span>
-  <span style="color: #1F55A0;">:ensure</span> t
-  <span style="color: #1F55A0;">:bind</span> (<span style="color: #005F00;">"&lt;f8&gt;"</span> . deft)
-  <span style="color: #1F55A0;">:custom</span>
-  (deft-extensions '(<span style="color: #005F00;">"org"</span> <span style="color: #005F00;">"md"</span> <span style="color: #005F00;">"txt"</span>))
-  (deft-directory <span style="color: #005F00;">"~/org"</span>)
+<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">deft</span>
+  <span style="color: #dc3eb7;">:ensure</span> t
+  <span style="color: #dc3eb7;">:bind</span> (<span style="color: #a44185;">"&lt;f8&gt;"</span> . deft)
+  <span style="color: #dc3eb7;">:custom</span>
+  (deft-extensions '(<span style="color: #a44185;">"org"</span> <span style="color: #a44185;">"md"</span> <span style="color: #a44185;">"txt"</span>))
+  (deft-directory <span style="color: #a44185;">"~/org"</span>)
   (deft-recursive t)
   (deft-use-filename-as-title nil))
 </pre>
@@ -396,13 +396,13 @@ Deft proporciona una interfaz similar a Notational Velocity para buscar rápidam
 </div>
 </div>
 </div>
-<div id="outline-container-org08e063b" class="outline-2">
-<h2 id="org08e063b">Técnicas eficientes para tomar notas en Emacs</h2>
-<div class="outline-text-2" id="text-org08e063b">
+<div id="outline-container-org8dddb03" class="outline-2">
+<h2 id="org8dddb03">Técnicas eficientes para tomar notas en Emacs</h2>
+<div class="outline-text-2" id="text-org8dddb03">
 </div>
-<div id="outline-container-org460d762" class="outline-3">
-<h3 id="org460d762">Captura rápida de notas</h3>
-<div class="outline-text-3" id="text-org460d762">
+<div id="outline-container-orge912915" class="outline-3">
+<h3 id="orge912915">Captura rápida de notas</h3>
+<div class="outline-text-3" id="text-orge912915">
 <p>
 Para capturar rápidamente una nota:
 </p>
@@ -415,9 +415,9 @@ Para capturar rápidamente una nota:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgc9c77a4" class="outline-3">
-<h3 id="orgc9c77a4">Enlazando notas entre sí</h3>
-<div class="outline-text-3" id="text-orgc9c77a4">
+<div id="outline-container-org87e2bdb" class="outline-3">
+<h3 id="org87e2bdb">Enlazando notas entre sí</h3>
+<div class="outline-text-3" id="text-org87e2bdb">
 <p>
 Los enlaces son fundamentales en un sistema de notas:
 </p>
@@ -429,9 +429,9 @@ Los enlaces son fundamentales en un sistema de notas:
 </ul>
 </div>
 </div>
-<div id="outline-container-org4da7c84" class="outline-3">
-<h3 id="org4da7c84">Estructurando tus notas con encabezados</h3>
-<div class="outline-text-3" id="text-org4da7c84">
+<div id="outline-container-orgf203340" class="outline-3">
+<h3 id="orgf203340">Estructurando tus notas con encabezados</h3>
+<div class="outline-text-3" id="text-orgf203340">
 <p>
 Org mode permite estructurar jerárquicamente:
 </p>
@@ -442,17 +442,17 @@ Org mode permite estructurar jerárquicamente:
 </div>
 </div>
 </div>
-<div id="outline-container-orgb04ab49" class="outline-2">
-<h2 id="orgb04ab49">Tema principal</h2>
-<div class="outline-text-2" id="text-orgb04ab49">
+<div id="outline-container-orga7559a0" class="outline-2">
+<h2 id="orga7559a0">Tema principal</h2>
+<div class="outline-text-2" id="text-orga7559a0">
 </div>
-<div id="outline-container-org7fff99e" class="outline-3">
-<h3 id="org7fff99e">Subtema</h3>
-<div class="outline-text-3" id="text-org7fff99e">
+<div id="outline-container-orgf200216" class="outline-3">
+<h3 id="orgf200216">Subtema</h3>
+<div class="outline-text-3" id="text-orgf200216">
 </div>
-<div id="outline-container-org18df7bb" class="outline-4">
-<h4 id="org18df7bb">Punto específico</h4>
-<div class="outline-text-4" id="text-org18df7bb">
+<div id="outline-container-org594bd90" class="outline-4">
+<h4 id="org594bd90">Punto específico</h4>
+<div class="outline-text-4" id="text-org594bd90">
 <p>
     Contenido detallado&#x2026;
 #+END<sub>EXAMPLE</sub>
@@ -464,9 +464,9 @@ Puedes expandir/contraer encabezados con TAB y navegar con <code>C-c C-n</code> 
 </div>
 </div>
 </div>
-<div id="outline-container-orgdbc603e" class="outline-3">
-<h3 id="orgdbc603e">Etiquetado y categorización</h3>
-<div class="outline-text-3" id="text-orgdbc603e">
+<div id="outline-container-orga54a700" class="outline-3">
+<h3 id="orga54a700">Etiquetado y categorización</h3>
+<div class="outline-text-3" id="text-orga54a700">
 <p>
 Las etiquetas permiten categorizar y filtrar notas:
 </p>
@@ -477,9 +477,9 @@ Las etiquetas permiten categorizar y filtrar notas:
 </div>
 </div>
 </div>
-<div id="outline-container-org600225b" class="outline-2">
-<h2 id="org600225b">Concepto importante sobre programación funcional&#xa0;&#xa0;&#xa0;<span class="tag"><span class="programaci_n">programación</span>&#xa0;<span class="funcional">funcional</span></span></h2>
-<div class="outline-text-2" id="text-org600225b">
+<div id="outline-container-org3bb3ed2" class="outline-2">
+<h2 id="org3bb3ed2">Concepto importante sobre programación funcional&#xa0;&#xa0;&#xa0;<span class="tag"><span class="programaci_n">programación</span>&#xa0;<span class="funcional">funcional</span></span></h2>
+<div class="outline-text-2" id="text-org3bb3ed2">
 <p>
 #+END<sub>EXAMPLE</sub>
 </p>
@@ -489,13 +489,13 @@ Luego puedes buscar con <code>C-c a m</code> (agenda match) y filtrar por etique
 </p>
 </div>
 </div>
-<div id="outline-container-orgbf7f8ef" class="outline-2">
-<h2 id="orgbf7f8ef">Ventajas de usar Emacs para tomar notas</h2>
-<div class="outline-text-2" id="text-orgbf7f8ef">
+<div id="outline-container-org505b64b" class="outline-2">
+<h2 id="org505b64b">Ventajas de usar Emacs para tomar notas</h2>
+<div class="outline-text-2" id="text-org505b64b">
 </div>
-<div id="outline-container-org1e2bac1" class="outline-3">
-<h3 id="org1e2bac1">Ventajas principales</h3>
-<div class="outline-text-3" id="text-org1e2bac1">
+<div id="outline-container-org75b82e0" class="outline-3">
+<h3 id="org75b82e0">Ventajas principales</h3>
+<div class="outline-text-3" id="text-org75b82e0">
 <ul class="org-ul">
 <li><b>Longevidad</b>: Formato de texto plano garantiza accesibilidad por décadas</li>
 <li><b>Flexibilidad extrema</b>: Adaptable a cualquier flujo de trabajo o metodología</li>
@@ -509,9 +509,9 @@ Luego puedes buscar con <code>C-c a m</code> (agenda match) y filtrar por etique
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf5d3a24" class="outline-3">
-<h3 id="orgf5d3a24">Casos de uso ideales</h3>
-<div class="outline-text-3" id="text-orgf5d3a24">
+<div id="outline-container-org612bb93" class="outline-3">
+<h3 id="org612bb93">Casos de uso ideales</h3>
+<div class="outline-text-3" id="text-org612bb93">
 <ul class="org-ul">
 <li>Investigadores y académicos</li>
 <li>Desarrolladores de software</li>
@@ -523,9 +523,9 @@ Luego puedes buscar con <code>C-c a m</code> (agenda match) y filtrar por etique
 </div>
 </div>
 </div>
-<div id="outline-container-org1527b0e" class="outline-2">
-<h2 id="org1527b0e">Desventajas y limitaciones</h2>
-<div class="outline-text-2" id="text-org1527b0e">
+<div id="outline-container-org7e90eb8" class="outline-2">
+<h2 id="org7e90eb8">Desventajas y limitaciones</h2>
+<div class="outline-text-2" id="text-org7e90eb8">
 <ul class="org-ul">
 <li><b>Curva de aprendizaje pronunciada</b>: Requiere inversión de tiempo inicial</li>
 <li><b>Interfaz menos visual</b>: Comparado con apps modernas como Notion o Evernote</li>
@@ -536,9 +536,9 @@ Luego puedes buscar con <code>C-c a m</code> (agenda match) y filtrar por etique
 </ul>
 </div>
 </div>
-<div id="outline-container-org6dd9aeb" class="outline-2">
-<h2 id="org6dd9aeb">Comparación con otras herramientas</h2>
-<div class="outline-text-2" id="text-org6dd9aeb">
+<div id="outline-container-org6f16424" class="outline-2">
+<h2 id="org6f16424">Comparación con otras herramientas</h2>
+<div class="outline-text-2" id="text-org6f16424">
 <table border="2" rules="all" frame="border">
 
 
@@ -596,50 +596,50 @@ Luego puedes buscar con <code>C-c a m</code> (agenda match) y filtrar por etique
 </table>
 </div>
 </div>
-<div id="outline-container-org7be925c" class="outline-2">
-<h2 id="org7be925c">Configuración del sistema completo</h2>
-<div class="outline-text-2" id="text-org7be925c">
+<div id="outline-container-org6d3fbe7" class="outline-2">
+<h2 id="org6d3fbe7">Configuración del sistema completo</h2>
+<div class="outline-text-2" id="text-org6d3fbe7">
 <p>
 Para implementar un sistema completo de notas, te recomendamos esta configuración:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n completa para sistema de notas en Emacs</span>
-(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">org</span>)
-(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">org-capture</span>)
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n completa para sistema de notas en Emacs</span>
+(<span style="color: #219fd5; font-style: italic;">require</span> '<span style="color: #2f86d2;">org</span>)
+(<span style="color: #219fd5; font-style: italic;">require</span> '<span style="color: #2f86d2;">org-capture</span>)
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Directorios base</span>
-(<span style="color: #D70000;">setq</span> org-directory <span style="color: #005F00;">"~/org"</span>)
-(<span style="color: #D70000;">setq</span> org-default-notes-file (concat org-directory <span style="color: #005F00;">"/inbox.org"</span>))
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Directorios base</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-directory <span style="color: #a44185;">"~/org"</span>)
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-default-notes-file (concat org-directory <span style="color: #a44185;">"/inbox.org"</span>))
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Archivos de notas</span>
-(<span style="color: #D70000;">setq</span> org-agenda-files '(<span style="color: #005F00;">"~/org/inbox.org"</span>
-                         <span style="color: #005F00;">"~/org/proyectos.org"</span>
-                         <span style="color: #005F00;">"~/org/tareas.org"</span>
-                         <span style="color: #005F00;">"~/org/calendario.org"</span>
-                         <span style="color: #005F00;">"~/org/areas.org"</span>))
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Archivos de notas</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-agenda-files '(<span style="color: #a44185;">"~/org/inbox.org"</span>
+                         <span style="color: #a44185;">"~/org/proyectos.org"</span>
+                         <span style="color: #a44185;">"~/org/tareas.org"</span>
+                         <span style="color: #a44185;">"~/org/calendario.org"</span>
+                         <span style="color: #a44185;">"~/org/areas.org"</span>))
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Plantillas de captura</span>
-(<span style="color: #D70000;">setq</span> org-capture-templates
-      '((<span style="color: #005F00;">"t"</span> <span style="color: #005F00;">"Tarea"</span> entry (file+headline <span style="color: #005F00;">"~/org/inbox.org"</span> <span style="color: #005F00;">"Tareas"</span>)
-         <span style="color: #005F00;">"* TODO %?\n  %i\n  %a"</span>)
-        (<span style="color: #005F00;">"n"</span> <span style="color: #005F00;">"Nota"</span> entry (file+headline <span style="color: #005F00;">"~/org/inbox.org"</span> <span style="color: #005F00;">"Notas"</span>)
-         <span style="color: #005F00;">"* %? :nota:\n  %U\n  %i\n  %a"</span>)
-        (<span style="color: #005F00;">"j"</span> <span style="color: #005F00;">"Diario"</span> entry (file+datetree <span style="color: #005F00;">"~/org/diario.org"</span>)
-         <span style="color: #005F00;">"* %?\nIngresado el %U\n  %i\n  %a"</span>)
-        (<span style="color: #005F00;">"i"</span> <span style="color: #005F00;">"Idea"</span> entry (file+headline <span style="color: #005F00;">"~/org/ideas.org"</span> <span style="color: #005F00;">"Ideas"</span>)
-         <span style="color: #005F00;">"* %? :idea:\n  %U\n  %i"</span>)
-        (<span style="color: #005F00;">"p"</span> <span style="color: #005F00;">"Proyecto"</span> entry (file+headline <span style="color: #005F00;">"~/org/proyectos.org"</span> <span style="color: #005F00;">"Proyectos"</span>)
-         <span style="color: #005F00;">"* %? :proyecto:\n  %U\n  %i"</span>)))
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Plantillas de captura</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-capture-templates
+      '((<span style="color: #a44185;">"t"</span> <span style="color: #a44185;">"Tarea"</span> entry (file+headline <span style="color: #a44185;">"~/org/inbox.org"</span> <span style="color: #a44185;">"Tareas"</span>)
+         <span style="color: #a44185;">"* TODO %?\n  %i\n  %a"</span>)
+        (<span style="color: #a44185;">"n"</span> <span style="color: #a44185;">"Nota"</span> entry (file+headline <span style="color: #a44185;">"~/org/inbox.org"</span> <span style="color: #a44185;">"Notas"</span>)
+         <span style="color: #a44185;">"* %? :nota:\n  %U\n  %i\n  %a"</span>)
+        (<span style="color: #a44185;">"j"</span> <span style="color: #a44185;">"Diario"</span> entry (file+datetree <span style="color: #a44185;">"~/org/diario.org"</span>)
+         <span style="color: #a44185;">"* %?\nIngresado el %U\n  %i\n  %a"</span>)
+        (<span style="color: #a44185;">"i"</span> <span style="color: #a44185;">"Idea"</span> entry (file+headline <span style="color: #a44185;">"~/org/ideas.org"</span> <span style="color: #a44185;">"Ideas"</span>)
+         <span style="color: #a44185;">"* %? :idea:\n  %U\n  %i"</span>)
+        (<span style="color: #a44185;">"p"</span> <span style="color: #a44185;">"Proyecto"</span> entry (file+headline <span style="color: #a44185;">"~/org/proyectos.org"</span> <span style="color: #a44185;">"Proyectos"</span>)
+         <span style="color: #a44185;">"* %? :proyecto:\n  %U\n  %i"</span>)))
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Refile para mover notas entre archivos</span>
-(<span style="color: #D70000;">setq</span> org-refile-targets
-      '((nil <span style="color: #1F55A0;">:maxlevel</span> . 9)
-        (org-agenda-files <span style="color: #1F55A0;">:maxlevel</span> . 9)))
-(<span style="color: #D70000;">setq</span> org-outline-path-complete-in-steps nil)
-(<span style="color: #D70000;">setq</span> org-refile-use-outline-path t)
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Refile para mover notas entre archivos</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-refile-targets
+      '((nil <span style="color: #dc3eb7;">:maxlevel</span> . 9)
+        (org-agenda-files <span style="color: #dc3eb7;">:maxlevel</span> . 9)))
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-outline-path-complete-in-steps nil)
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-refile-use-outline-path t)
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Org Babel para c&#243;digo ejecutable en notas</span>
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Org Babel para c&#243;digo ejecutable en notas</span>
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((python . t)
@@ -648,29 +648,29 @@ Para implementar un sistema completo de notas, te recomendamos esta configuraci�
    (emacs-lisp . t)
    (plantuml . t)))
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Para diagramas con PlantUML</span>
-(<span style="color: #D70000;">setq</span> org-plantuml-jar-path
-      (expand-file-name <span style="color: #005F00;">"~/plantuml/plantuml.jar"</span>))
-(add-to-list 'org-src-lang-modes '(<span style="color: #005F00;">"plantuml"</span> . plantuml))
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Para diagramas con PlantUML</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-plantuml-jar-path
+      (expand-file-name <span style="color: #a44185;">"~/plantuml/plantuml.jar"</span>))
+(add-to-list 'org-src-lang-modes '(<span style="color: #a44185;">"plantuml"</span> . plantuml))
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Mejor visualizaci&#243;n</span>
-(<span style="color: #D70000;">setq</span> org-startup-indented t)
-(<span style="color: #D70000;">setq</span> org-startup-folded t)
-(<span style="color: #D70000;">setq</span> org-pretty-entities t)
-(<span style="color: #D70000;">setq</span> org-hide-emphasis-markers t)
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Mejor visualizaci&#243;n</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-startup-indented t)
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-startup-folded t)
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-pretty-entities t)
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-hide-emphasis-markers t)
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Atajos globales</span>
-(global-set-key (kbd <span style="color: #005F00;">"C-c c"</span>) 'org-capture)
-(global-set-key (kbd <span style="color: #005F00;">"C-c a"</span>) 'org-agenda)
-(global-set-key (kbd <span style="color: #005F00;">"C-c l"</span>) 'org-store-link)
-(global-set-key (kbd <span style="color: #005F00;">"C-c b"</span>) 'org-switchb)
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Atajos globales</span>
+(global-set-key (kbd <span style="color: #a44185;">"C-c c"</span>) 'org-capture)
+(global-set-key (kbd <span style="color: #a44185;">"C-c a"</span>) 'org-agenda)
+(global-set-key (kbd <span style="color: #a44185;">"C-c l"</span>) 'org-store-link)
+(global-set-key (kbd <span style="color: #a44185;">"C-c b"</span>) 'org-switchb)
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org8d7fc06" class="outline-2">
-<h2 id="org8d7fc06">Flujo de trabajo recomendado</h2>
-<div class="outline-text-2" id="text-org8d7fc06">
+<div id="outline-container-org6679c18" class="outline-2">
+<h2 id="org6679c18">Flujo de trabajo recomendado</h2>
+<div class="outline-text-2" id="text-org6679c18">
 <ol class="org-ol">
 <li><b>Captura</b>: Usa <code>C-c c</code> para capturar rápidamente cualquier idea o información</li>
 <li><b>Procesamiento</b>: Revisa periódicamente tu <code>inbox.org</code> y refile (<code>C-c C-w</code>) las notas a ubicaciones apropiadas</li>
@@ -681,32 +681,32 @@ Para implementar un sistema completo de notas, te recomendamos esta configuraci�
 </ol>
 </div>
 </div>
-<div id="outline-container-orgc5c4c2a" class="outline-2">
-<h2 id="orgc5c4c2a">Diagrama de Arquitectura del Sistema de Notas</h2>
-<div class="outline-text-2" id="text-orgc5c4c2a">
+<div id="outline-container-orgb729844" class="outline-2">
+<h2 id="orgb729844">Diagrama de Arquitectura del Sistema de Notas</h2>
+<div class="outline-text-2" id="text-orgb729844">
 
-<figure id="orga5d2055">
+<figure id="orga869795">
 <img src="images/sistema-notas-emacs.png" alt="sistema-notas-emacs.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org3bc2811" class="outline-2">
-<h2 id="org3bc2811">Referencias y recursos adicionales</h2>
-<div class="outline-text-2" id="text-org3bc2811">
+<div id="outline-container-org8cb451d" class="outline-2">
+<h2 id="org8cb451d">Referencias y recursos adicionales</h2>
+<div class="outline-text-2" id="text-org8cb451d">
 </div>
-<div id="outline-container-orgfed04e1" class="outline-3">
-<h3 id="orgfed04e1">Documentación oficial</h3>
-<div class="outline-text-3" id="text-orgfed04e1">
+<div id="outline-container-org2f93bc8" class="outline-3">
+<h3 id="org2f93bc8">Documentación oficial</h3>
+<div class="outline-text-3" id="text-org2f93bc8">
 <ul class="org-ul">
 <li><a href="https://orgmode.org/manual/">Manual de Org Mode</a></li>
 <li><a href="https://www.gnu.org/software/emacs/manual/">Manual de Emacs</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org3694b8b" class="outline-3">
-<h3 id="org3694b8b">Libros</h3>
-<div class="outline-text-3" id="text-org3694b8b">
+<div id="outline-container-orgccd36b3" class="outline-3">
+<h3 id="orgccd36b3">Libros</h3>
+<div class="outline-text-3" id="text-orgccd36b3">
 <ul class="org-ul">
 <li>"Org Mode Compact Guide" por Carsten Dominik</li>
 <li>"Mastering Emacs" por Mickey Petersen</li>
@@ -714,9 +714,9 @@ Para implementar un sistema completo de notas, te recomendamos esta configuraci�
 </ul>
 </div>
 </div>
-<div id="outline-container-org1f299a3" class="outline-3">
-<h3 id="org1f299a3">Artículos y tutoriales</h3>
-<div class="outline-text-3" id="text-org1f299a3">
+<div id="outline-container-org621a03f" class="outline-3">
+<h3 id="org621a03f">Artículos y tutoriales</h3>
+<div class="outline-text-3" id="text-org621a03f">
 <ul class="org-ul">
 <li>Worg: <a href="https://orgmode.org/worg/">Wiki de Org Mode</a></li>
 <li><a href="https://blog.jethro.dev/posts/org_mode_workflow_preview/">Workflow de Org Mode para Zettelkasten</a> por Jethro Kuan</li>
@@ -724,9 +724,9 @@ Para implementar un sistema completo de notas, te recomendamos esta configuraci�
 </ul>
 </div>
 </div>
-<div id="outline-container-org2982389" class="outline-3">
-<h3 id="org2982389">Comunidades</h3>
-<div class="outline-text-3" id="text-org2982389">
+<div id="outline-container-orge06f409" class="outline-3">
+<h3 id="orge06f409">Comunidades</h3>
+<div class="outline-text-3" id="text-orge06f409">
 <ul class="org-ul">
 <li>Reddit: r/emacs y r/orgmode</li>
 <li><a href="https://emacs.stackexchange.com/">Emacs Stack Exchange</a></li>
@@ -734,9 +734,9 @@ Para implementar un sistema completo de notas, te recomendamos esta configuraci�
 </ul>
 </div>
 </div>
-<div id="outline-container-orgdc0e753" class="outline-3">
-<h3 id="orgdc0e753">Paquetes complementarios</h3>
-<div class="outline-text-3" id="text-orgdc0e753">
+<div id="outline-container-orgae1f401" class="outline-3">
+<h3 id="orgae1f401">Paquetes complementarios</h3>
+<div class="outline-text-3" id="text-orgae1f401">
 <ul class="org-ul">
 <li>org-roam: <a href="https://www.orgroam.com/">https://www.orgroam.com/</a></li>
 <li>org-journal: <a href="https://github.com/bastibe/org-journal">https://github.com/bastibe/org-journal</a></li>
@@ -746,9 +746,9 @@ Para implementar un sistema completo de notas, te recomendamos esta configuraci�
 </div>
 </div>
 </div>
-<div id="outline-container-org7773225" class="outline-2">
-<h2 id="org7773225">Conclusiones</h2>
-<div class="outline-text-2" id="text-org7773225">
+<div id="outline-container-orge09047a" class="outline-2">
+<h2 id="orge09047a">Conclusiones</h2>
+<div class="outline-text-2" id="text-orge09047a">
 <p>
 Emacs con Org mode ofrece probablemente el sistema más potente y flexible para tomar notas que existe actualmente. Aunque tiene una curva de aprendizaje pronunciada, los beneficios a largo plazo son enormes para quienes inviertan el tiempo en dominarlo.
 </p>
@@ -766,7 +766,7 @@ Si valoras el control total sobre tus datos, la personalización extrema y la ef
 </p>
 </div>
 </div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs,.html">emacs,</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-org-mode,.html">org-mode,</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-notas,.html">notas,</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-productividad,.html">productividad,</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gestión.html">gestión</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-de.html">de</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-conocimiento.html">conocimiento</a> </div></div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-org-mode.html">org-mode</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-notas.html">notas</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-productividad.html">productividad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gestión-de-conocimiento.html">gestión-de-conocimiento</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div></div>
 <div id="postamble" class="status"><div class='postamble'>
          <hr class='footer-hr'>
          <p style="display: flex; align-items: center;">

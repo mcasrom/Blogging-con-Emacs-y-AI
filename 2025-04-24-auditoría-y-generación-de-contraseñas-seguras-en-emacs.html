@@ -191,36 +191,36 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org09862b0">1. Introducción</a></li>
-<li><a href="#org7ff37c3">2. ¿Por qué usarlo?</a></li>
-<li><a href="#orgeb79f83">3. Funcionalidades principales</a></li>
-<li><a href="#org497989d">4. Código fuente del módulo</a></li>
-<li><a href="#orgd58a8cd">5. Diagrama del flujo de auditoría (PlantUML)</a></li>
-<li><a href="#org02247e8">6. Cómo usarlo</a></li>
-<li><a href="#org1f64d80">7. Próximos pasos</a></li>
-<li><a href="#org243556c">8. Recomendaciones finales</a></li>
-<li><a href="#orgaba0a14">9. Conclusión</a></li>
+<li><a href="#org056c602">1. Introducción</a></li>
+<li><a href="#org45b1212">2. ¿Por qué usarlo?</a></li>
+<li><a href="#org4740a4e">3. Funcionalidades principales</a></li>
+<li><a href="#org91e040d">4. Código fuente del módulo</a></li>
+<li><a href="#org6dbfed0">5. Diagrama del flujo de auditoría (PlantUML)</a></li>
+<li><a href="#orgc74f9cf">6. Cómo usarlo</a></li>
+<li><a href="#org7b5dc06">7. Próximos pasos</a></li>
+<li><a href="#org8eb1ee6">8. Recomendaciones finales</a></li>
+<li><a href="#org765587d">9. Conclusión</a></li>
 </ul>
 </div>
 </nav>
-<div id="outline-container-org09862b0" class="outline-2">
-<h2 id="org09862b0"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org056c602" class="outline-2">
+<h2 id="org056c602"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 En esta entrada presento <code>password-audit.el</code>, un módulo para Emacs que permite auditar contraseñas, generar claves seguras y verificar la complejidad mínima exigida. También añade soporte opcional para el gestor de contraseñas <code>pass</code> desde la terminal.
 </p>
 </div>
 </div>
-<div id="outline-container-org7ff37c3" class="outline-2">
-<h2 id="org7ff37c3"><span class="section-number-2">2.</span> ¿Por qué usarlo?</h2>
+<div id="outline-container-org45b1212" class="outline-2">
+<h2 id="org45b1212"><span class="section-number-2">2.</span> ¿Por qué usarlo?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Con frecuencia usamos contraseñas débiles o repetidas. Este módulo ayuda a evaluar si una contraseña es vulnerable, y ofrece recomendaciones inmediatas para mejorarla.
 </p>
 </div>
 </div>
-<div id="outline-container-orgeb79f83" class="outline-2">
-<h2 id="orgeb79f83"><span class="section-number-2">3.</span> Funcionalidades principales</h2>
+<div id="outline-container-org4740a4e" class="outline-2">
+<h2 id="org4740a4e"><span class="section-number-2">3.</span> Funcionalidades principales</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>Auditoría de longitud, complejidad y patrones inseguros.</li>
@@ -229,8 +229,8 @@ Con frecuencia usamos contraseñas débiles o repetidas. Este módulo ayuda a ev
 </ul>
 </div>
 </div>
-<div id="outline-container-org497989d" class="outline-2">
-<h2 id="org497989d"><span class="section-number-2">4.</span> Código fuente del módulo</h2>
+<div id="outline-container-org91e040d" class="outline-2">
+<h2 id="org91e040d"><span class="section-number-2">4.</span> Código fuente del módulo</h2>
 <div class="outline-text-2" id="text-4">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">  <span style="color: #8195b0; font-style: italic;">;;; </span><span style="color: #8195b0; font-style: italic;">password-audit.el --- Auditor&#237;a de contrase&#241;as + integraci&#243;n con pass -*- lexical-binding: t; -*-</span>
@@ -335,18 +335,18 @@ Con frecuencia usamos contraseñas débiles o repetidas. Este módulo ayuda a ev
 </div>
 </div>
 </div>
-<div id="outline-container-orgd58a8cd" class="outline-2">
-<h2 id="orgd58a8cd"><span class="section-number-2">5.</span> Diagrama del flujo de auditoría (PlantUML)</h2>
+<div id="outline-container-org6dbfed0" class="outline-2">
+<h2 id="org6dbfed0"><span class="section-number-2">5.</span> Diagrama del flujo de auditoría (PlantUML)</h2>
 <div class="outline-text-2" id="text-5">
 
-<figure id="orgf3c8ca5">
+<figure id="org8a1ac7f">
 <img src="images/password-audit-diagram.png" alt="password-audit-diagram.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org02247e8" class="outline-2">
-<h2 id="org02247e8"><span class="section-number-2">6.</span> Cómo usarlo</h2>
+<div id="outline-container-orgc74f9cf" class="outline-2">
+<h2 id="orgc74f9cf"><span class="section-number-2">6.</span> Cómo usarlo</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li><p>
@@ -366,8 +366,8 @@ Carga el archivo con:
 </ul>
 </div>
 </div>
-<div id="outline-container-org1f64d80" class="outline-2">
-<h2 id="org1f64d80"><span class="section-number-2">7.</span> Próximos pasos</h2>
+<div id="outline-container-org7b5dc06" class="outline-2">
+<h2 id="org7b5dc06"><span class="section-number-2">7.</span> Próximos pasos</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Estoy trabajando en:
@@ -379,8 +379,8 @@ Estoy trabajando en:
 </ul>
 </div>
 </div>
-<div id="outline-container-org243556c" class="outline-2">
-<h2 id="org243556c"><span class="section-number-2">8.</span> Recomendaciones finales</h2>
+<div id="outline-container-org8eb1ee6" class="outline-2">
+<h2 id="org8eb1ee6"><span class="section-number-2">8.</span> Recomendaciones finales</h2>
 <div class="outline-text-2" id="text-8">
 <ul class="org-ul">
 <li>No reutilices contraseñas en diferentes servicios.</li>
@@ -389,8 +389,8 @@ Estoy trabajando en:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgaba0a14" class="outline-2">
-<h2 id="orgaba0a14"><span class="section-number-2">9.</span> Conclusión</h2>
+<div id="outline-container-org765587d" class="outline-2">
+<h2 id="org765587d"><span class="section-number-2">9.</span> Conclusión</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 Gracias a este pequeño módulo puedes mejorar tu higiene digital sin salir de Emacs. ¡Haz de Emacs tu central de seguridad también!

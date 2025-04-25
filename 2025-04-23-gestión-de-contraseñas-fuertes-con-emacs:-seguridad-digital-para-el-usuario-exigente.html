@@ -8,6 +8,11 @@
       href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
       title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
 <title>Gestión de Contraseñas Fuertes con Emacs: Seguridad Digital para el Usuario Exigente</title>
+<meta property="og:title" content="Gestión de Contraseñas Fuertes con Emacs: Seguridad Digital para el Usuario Exigente">
+<meta property="og:type" content="article" />
+<meta property="og:description" content="Gestión de Contraseñas Fuertes con Emacs">
+<meta property="og:url" content="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-23-gestión-de-contraseñas-fuertes-con-emacs:-seguridad-digital-para-el-usuario-exigente.html">
+<meta property="og:image" content="https://mcasrom.github.io/Blogging-con-Emacs-y-AI//images/password-system-architecture.png">
 <meta charset='UTF-8'>
  <!-- ======= SEO y Redes Sociales ======= -->
        <meta name='author' content='Mike'>
@@ -24,7 +29,18 @@
        <meta name='twitter:image' content='https://tuusuario.github.io/logo.png'>
        <link rel='alternate' type='application/rss+xml' href='rss.xml'>
        <link rel='sitemap' type='application/xml' title='Sitemap' href='sitemap.xml'>
-       <!-- ======= Estilo y Fuentes ======= -->
+
+ <!-- === Google Analytics === -->
+       <script async src='https://www.googletagmanager.com/gtag/js?id=G-7YJ0SNJXSJ'></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-7YJ0SNJXSJ');
+       </script>
+
+
+<!-- ======= Estilo y Fuentes ======= -->
        <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
        <script src='/pagefind/pagefind.js'></script>
        <style>
@@ -171,9 +187,9 @@
 <div id="preamble" class="status"></div>
 <div id="content">
 <div class="post-date">23/04/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-23-gestión-de-contraseñas-fuertes-con-emacs:-seguridad-digital-para-el-usuario-exigente.html">Gestión de Contraseñas Fuertes con Emacs: Seguridad Digital para el Usuario Exigente</a></h1>
-<div id="outline-container-orgf1a3259" class="outline-2">
-<h2 id="orgf1a3259">Introducción</h2>
-<div class="outline-text-2" id="text-orgf1a3259">
+<div id="outline-container-org9b80c02" class="outline-2">
+<h2 id="org9b80c02">Introducción</h2>
+<div class="outline-text-2" id="text-org9b80c02">
 <p>
 En la era digital actual, donde las brechas de seguridad y los robos de datos son cada vez más comunes, la importancia de contar con contraseñas fuertes se ha convertido en un pilar fundamental de nuestra seguridad en línea. Como usuarios avanzados de Emacs, tenemos a nuestra disposición un potente entorno que puede ayudarnos no solo a crear contraseñas robustas, sino también a gestionar todo nuestro sistema de autenticación de manera eficiente y segura.
 </p>
@@ -183,16 +199,16 @@ Este artículo explorará en profundidad la creación y gestión de contraseñas
 </p>
 </div>
 </div>
-<div id="outline-container-org335ef5c" class="outline-2">
-<h2 id="org335ef5c">¿Qué hace que una contraseña sea fuerte?</h2>
-<div class="outline-text-2" id="text-org335ef5c">
+<div id="outline-container-orgd12406a" class="outline-2">
+<h2 id="orgd12406a">¿Qué hace que una contraseña sea fuerte?</h2>
+<div class="outline-text-2" id="text-orgd12406a">
 <p>
 Antes de adentrarnos en las herramientas y métodos de generación, es esencial comprender qué características definen a una contraseña como "fuerte":
 </p>
 </div>
-<div id="outline-container-orgd6071ca" class="outline-3">
-<h3 id="orgd6071ca">Complejidad</h3>
-<div class="outline-text-3" id="text-orgd6071ca">
+<div id="outline-container-orgf8be08a" class="outline-3">
+<h3 id="orgf8be08a">Complejidad</h3>
+<div class="outline-text-3" id="text-orgf8be08a">
 <p>
 Una contraseña verdaderamente robusta debe incluir:
 </p>
@@ -206,9 +222,9 @@ Una contraseña verdaderamente robusta debe incluir:
 </ul>
 </div>
 </div>
-<div id="outline-container-org054634e" class="outline-3">
-<h3 id="org054634e">Longitud</h3>
-<div class="outline-text-3" id="text-org054634e">
+<div id="outline-container-org779155c" class="outline-3">
+<h3 id="org779155c">Longitud</h3>
+<div class="outline-text-3" id="text-org779155c">
 <p>
 La longitud es posiblemente el factor más importante:
 </p>
@@ -220,9 +236,9 @@ La longitud es posiblemente el factor más importante:
 </ul>
 </div>
 </div>
-<div id="outline-container-org98ee97f" class="outline-3">
-<h3 id="org98ee97f">Aleatoriedad</h3>
-<div class="outline-text-3" id="text-org98ee97f">
+<div id="outline-container-org12a36c9" class="outline-3">
+<h3 id="org12a36c9">Aleatoriedad</h3>
+<div class="outline-text-3" id="text-org12a36c9">
 <p>
 La verdadera seguridad proviene de la aleatoriedad:
 </p>
@@ -234,9 +250,9 @@ La verdadera seguridad proviene de la aleatoriedad:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd227748" class="outline-3">
-<h3 id="orgd227748">Unicidad</h3>
-<div class="outline-text-3" id="text-orgd227748">
+<div id="outline-container-orgffb8006" class="outline-3">
+<h3 id="orgffb8006">Unicidad</h3>
+<div class="outline-text-3" id="text-orgffb8006">
 <p>
 Cada servicio o cuenta debe tener una contraseña única:
 </p>
@@ -249,16 +265,16 @@ Cada servicio o cuenta debe tener una contraseña única:
 </div>
 </div>
 </div>
-<div id="outline-container-org1bb63b4" class="outline-2">
-<h2 id="org1bb63b4">Ventajas de las contraseñas fuertes</h2>
-<div class="outline-text-2" id="text-org1bb63b4">
+<div id="outline-container-org03d9c40" class="outline-2">
+<h2 id="org03d9c40">Ventajas de las contraseñas fuertes</h2>
+<div class="outline-text-2" id="text-org03d9c40">
 <p>
 Las contraseñas robustas proporcionan numerosos beneficios que van más allá de la simple protección de acceso:
 </p>
 </div>
-<div id="outline-container-orgd24cb2f" class="outline-3">
-<h3 id="orgd24cb2f">Resistencia a ataques de fuerza bruta</h3>
-<div class="outline-text-3" id="text-orgd24cb2f">
+<div id="outline-container-orgc2fab23" class="outline-3">
+<h3 id="orgc2fab23">Resistencia a ataques de fuerza bruta</h3>
+<div class="outline-text-3" id="text-orgc2fab23">
 <p>
 Los ataques de fuerza bruta consisten en probar sistemáticamente todas las combinaciones posibles hasta encontrar la correcta. Una contraseña fuerte:
 </p>
@@ -270,9 +286,9 @@ Los ataques de fuerza bruta consisten en probar sistemáticamente todas las comb
 </ul>
 </div>
 </div>
-<div id="outline-container-org2db1c3b" class="outline-3">
-<h3 id="org2db1c3b">Protección contra ataques de diccionario</h3>
-<div class="outline-text-3" id="text-org2db1c3b">
+<div id="outline-container-org3a95f79" class="outline-3">
+<h3 id="org3a95f79">Protección contra ataques de diccionario</h3>
+<div class="outline-text-3" id="text-org3a95f79">
 <p>
 Estos ataques prueban palabras comunes y sus variaciones:
 </p>
@@ -284,9 +300,9 @@ Estos ataques prueban palabras comunes y sus variaciones:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb15f61f" class="outline-3">
-<h3 id="orgb15f61f">Defensa ante ingeniería social</h3>
-<div class="outline-text-3" id="text-orgb15f61f">
+<div id="outline-container-org0aa3f60" class="outline-3">
+<h3 id="org0aa3f60">Defensa ante ingeniería social</h3>
+<div class="outline-text-3" id="text-org0aa3f60">
 <p>
 Muchos ataques se basan en información personal fácilmente obtenible:
 </p>
@@ -298,9 +314,9 @@ Muchos ataques se basan en información personal fácilmente obtenible:
 </ul>
 </div>
 </div>
-<div id="outline-container-org88937e9" class="outline-3">
-<h3 id="org88937e9">Mayor tiempo de protección</h3>
-<div class="outline-text-3" id="text-org88937e9">
+<div id="outline-container-orgf200193" class="outline-3">
+<h3 id="orgf200193">Mayor tiempo de protección</h3>
+<div class="outline-text-3" id="text-orgf200193">
 <p>
 Las contraseñas fuertes permanecen seguras por más tiempo:
 </p>
@@ -312,9 +328,9 @@ Las contraseñas fuertes permanecen seguras por más tiempo:
 </ul>
 </div>
 </div>
-<div id="outline-container-org3d533a1" class="outline-3">
-<h3 id="org3d533a1">Cumplimiento de políticas de seguridad</h3>
-<div class="outline-text-3" id="text-org3d533a1">
+<div id="outline-container-orgae8b501" class="outline-3">
+<h3 id="orgae8b501">Cumplimiento de políticas de seguridad</h3>
+<div class="outline-text-3" id="text-orgae8b501">
 <p>
 Las organizaciones y servicios tienen requisitos cada vez más estrictos:
 </p>
@@ -327,16 +343,16 @@ Las organizaciones y servicios tienen requisitos cada vez más estrictos:
 </div>
 </div>
 </div>
-<div id="outline-container-orgc3ba9eb" class="outline-2">
-<h2 id="orgc3ba9eb">Inconvenientes de las contraseñas fuertes</h2>
-<div class="outline-text-2" id="text-orgc3ba9eb">
+<div id="outline-container-org7b35707" class="outline-2">
+<h2 id="org7b35707">Inconvenientes de las contraseñas fuertes</h2>
+<div class="outline-text-2" id="text-org7b35707">
 <p>
 Sin embargo, la implementación de contraseñas robustas también presenta algunos desafíos:
 </p>
 </div>
-<div id="outline-container-org968fac3" class="outline-3">
-<h3 id="org968fac3">Dificultad para memorizarlas</h3>
-<div class="outline-text-3" id="text-org968fac3">
+<div id="outline-container-orgd068be3" class="outline-3">
+<h3 id="orgd068be3">Dificultad para memorizarlas</h3>
+<div class="outline-text-3" id="text-orgd068be3">
 <p>
 El principal inconveniente es la memorización:
 </p>
@@ -348,9 +364,9 @@ El principal inconveniente es la memorización:
 </ul>
 </div>
 </div>
-<div id="outline-container-org0655afd" class="outline-3">
-<h3 id="org0655afd">Riesgo de pérdida de acceso</h3>
-<div class="outline-text-3" id="text-org0655afd">
+<div id="outline-container-org2fb2d76" class="outline-3">
+<h3 id="org2fb2d76">Riesgo de pérdida de acceso</h3>
+<div class="outline-text-3" id="text-org2fb2d76">
 <p>
 Si se olvida una contraseña compleja:
 </p>
@@ -362,9 +378,9 @@ Si se olvida una contraseña compleja:
 </ul>
 </div>
 </div>
-<div id="outline-container-org18c1ca5" class="outline-3">
-<h3 id="org18c1ca5">Problemas de compatibilidad</h3>
-<div class="outline-text-3" id="text-org18c1ca5">
+<div id="outline-container-orge0c2511" class="outline-3">
+<h3 id="orge0c2511">Problemas de compatibilidad</h3>
+<div class="outline-text-3" id="text-orge0c2511">
 <p>
 No todos los sistemas aceptan contraseñas muy complejas:
 </p>
@@ -376,9 +392,9 @@ No todos los sistemas aceptan contraseñas muy complejas:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd3857d8" class="outline-3">
-<h3 id="orgd3857d8">Inconvenientes prácticos</h3>
-<div class="outline-text-3" id="text-orgd3857d8">
+<div id="outline-container-org7c8868c" class="outline-3">
+<h3 id="org7c8868c">Inconvenientes prácticos</h3>
+<div class="outline-text-3" id="text-org7c8868c">
 <p>
 El uso diario presenta desafíos adicionales:
 </p>
@@ -390,9 +406,9 @@ El uso diario presenta desafíos adicionales:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf3b94dc" class="outline-3">
-<h3 id="orgf3b94dc">Fricción con la experiencia de usuario</h3>
-<div class="outline-text-3" id="text-orgf3b94dc">
+<div id="outline-container-orgeebb2ed" class="outline-3">
+<h3 id="orgeebb2ed">Fricción con la experiencia de usuario</h3>
+<div class="outline-text-3" id="text-orgeebb2ed">
 <p>
 La seguridad excesiva puede afectar la usabilidad:
 </p>
@@ -405,173 +421,173 @@ La seguridad excesiva puede afectar la usabilidad:
 </div>
 </div>
 </div>
-<div id="outline-container-org6727e7d" class="outline-2">
-<h2 id="org6727e7d">Generación de contraseñas fuertes con Bash</h2>
-<div class="outline-text-2" id="text-org6727e7d">
+<div id="outline-container-orgf8fd8b4" class="outline-2">
+<h2 id="orgf8fd8b4">Generación de contraseñas fuertes con Bash</h2>
+<div class="outline-text-2" id="text-orgf8fd8b4">
 <p>
 Una solución pragmática para generar contraseñas robustas es utilizar scripts de Bash en sistemas Unix/Linux. A continuación, presentamos un script completo que permite generar contraseñas altamente seguras con diferentes configuraciones:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">strong-password-generator.sh - Generador de contrase&#241;as seguras</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Autor: Emacs con Esteroides</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Fecha: 2025-04-23</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Uso: ./strong-password-generator.sh [longitud] [complejidad]</span>
-<span style="color: #4E4E4E; font-style: italic;">#   </span><span style="color: #4E4E4E; font-style: italic;">longitud: n&#250;mero de caracteres (por defecto: 16)</span>
-<span style="color: #4E4E4E; font-style: italic;">#   </span><span style="color: #4E4E4E; font-style: italic;">complejidad: 1=b&#225;sica, 2=media, 3=alta, 4=extrema (por defecto: 3)</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">strong-password-generator.sh - Generador de contrase&#241;as seguras</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Autor: Emacs con Esteroides</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Fecha: 2025-04-23</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Uso: ./strong-password-generator.sh [longitud] [complejidad]</span>
+<span style="color: #8195b0; font-style: italic;">#   </span><span style="color: #8195b0; font-style: italic;">longitud: n&#250;mero de caracteres (por defecto: 16)</span>
+<span style="color: #8195b0; font-style: italic;">#   </span><span style="color: #8195b0; font-style: italic;">complejidad: 1=b&#225;sica, 2=media, 3=alta, 4=extrema (por defecto: 3)</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Colores para mejor visualizaci&#243;n</span>
-<span style="color: #004651;">RED</span>=<span style="color: #005F00;">'\033[0;31m'</span>
-<span style="color: #004651;">GREEN</span>=<span style="color: #005F00;">'\033[0;32m'</span>
-<span style="color: #004651;">BLUE</span>=<span style="color: #005F00;">'\033[0;34m'</span>
-<span style="color: #004651;">YELLOW</span>=<span style="color: #005F00;">'\033[0;33m'</span>
-<span style="color: #004651;">NC</span>=<span style="color: #005F00;">'\033[0m'</span> <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">No Color</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Colores para mejor visualizaci&#243;n</span>
+<span style="color: #1857a4;">RED</span>=<span style="color: #a44185;">'\033[0;31m'</span>
+<span style="color: #1857a4;">GREEN</span>=<span style="color: #a44185;">'\033[0;32m'</span>
+<span style="color: #1857a4;">BLUE</span>=<span style="color: #a44185;">'\033[0;34m'</span>
+<span style="color: #1857a4;">YELLOW</span>=<span style="color: #a44185;">'\033[0;33m'</span>
+<span style="color: #1857a4;">NC</span>=<span style="color: #a44185;">'\033[0m'</span> <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">No Color</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Banner</span>
-<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"${BLUE}"</span>
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#9556;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9559;"</span>
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#9553;                                               &#9553;"</span>
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#9553;   GENERADOR DE CONTRASE&#209;AS ULTRA-SEGURAS      &#9553;"</span>
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#9553;   Para usuarios de Emacs con Esteroides       &#9553;"</span>
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#9553;                                               &#9553;"</span>
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#9562;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9565;"</span>
-<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"${NC}"</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Banner</span>
+<span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${BLUE}"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"&#9556;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9559;"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"&#9553;                                               &#9553;"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"&#9553;   GENERADOR DE CONTRASE&#209;AS ULTRA-SEGURAS      &#9553;"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"&#9553;   Para usuarios de Emacs con Esteroides       &#9553;"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"&#9553;                                               &#9553;"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"&#9562;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9552;&#9565;"</span>
+<span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${NC}"</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Valores por defecto</span>
-<span style="color: #004651;">PASSWORD_LENGTH</span>=${<span style="color: #004651;">1</span>:-16}
-<span style="color: #004651;">COMPLEXITY_LEVEL</span>=${<span style="color: #004651;">2</span>:-3}
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Valores por defecto</span>
+<span style="color: #1857a4;">PASSWORD_LENGTH</span>=${<span style="color: #1857a4;">1</span>:-16}
+<span style="color: #1857a4;">COMPLEXITY_LEVEL</span>=${<span style="color: #1857a4;">2</span>:-3}
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Validar entrada</span>
-<span style="color: #D70000;">if</span> <span style="color: #1F55A0; font-weight: bold;">!</span> [[ <span style="color: #005F00;">"$PASSWORD_LENGTH"</span> =~ ^[0-9]+$ ]]; <span style="color: #D70000;">then</span>
-    <span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"${RED}Error: La longitud debe ser un n&#250;mero entero.${NC}"</span>
-    <span style="color: #D70000;">exit</span> 1
-<span style="color: #D70000;">fi</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Validar entrada</span>
+<span style="color: #219fd5; font-style: italic;">if</span> <span style="color: #219fd5; font-weight: bold;">!</span> [[ <span style="color: #a44185;">"$PASSWORD_LENGTH"</span> =~ ^[0-9]+$ ]]; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${RED}Error: La longitud debe ser un n&#250;mero entero.${NC}"</span>
+    <span style="color: #219fd5; font-style: italic;">exit</span> 1
+<span style="color: #219fd5; font-style: italic;">fi</span>
 
-<span style="color: #D70000;">if</span> [[ <span style="color: #005F00;">"$PASSWORD_LENGTH"</span> -lt 8 ]]; <span style="color: #D70000;">then</span>
-    <span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"${YELLOW}Advertencia: Se recomienda una longitud m&#237;nima de 12 caracteres.${NC}"</span>
-    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Continuando con longitud $PASSWORD_LENGTH..."</span>
-<span style="color: #D70000;">fi</span>
+<span style="color: #219fd5; font-style: italic;">if</span> [[ <span style="color: #a44185;">"$PASSWORD_LENGTH"</span> -lt 8 ]]; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${YELLOW}Advertencia: Se recomienda una longitud m&#237;nima de 12 caracteres.${NC}"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Continuando con longitud $PASSWORD_LENGTH..."</span>
+<span style="color: #219fd5; font-style: italic;">fi</span>
 
-<span style="color: #D70000;">if</span> <span style="color: #1F55A0; font-weight: bold;">!</span> [[ <span style="color: #005F00;">"$COMPLEXITY_LEVEL"</span> =~ ^[1-4]$ ]]; <span style="color: #D70000;">then</span>
-    <span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"${RED}Error: El nivel de complejidad debe ser 1, 2, 3 o 4.${NC}"</span>
-    <span style="color: #D70000;">exit</span> 1
-<span style="color: #D70000;">fi</span>
+<span style="color: #219fd5; font-style: italic;">if</span> <span style="color: #219fd5; font-weight: bold;">!</span> [[ <span style="color: #a44185;">"$COMPLEXITY_LEVEL"</span> =~ ^[1-4]$ ]]; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${RED}Error: El nivel de complejidad debe ser 1, 2, 3 o 4.${NC}"</span>
+    <span style="color: #219fd5; font-style: italic;">exit</span> 1
+<span style="color: #219fd5; font-style: italic;">fi</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Definir conjuntos de caracteres seg&#250;n nivel de complejidad</span>
-<span style="color: #D70000;">case</span> $<span style="color: #004651;">COMPLEXITY_LEVEL</span><span style="color: #D70000;"> in</span>
-    1) <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">B&#225;sico: letras y n&#250;meros</span>
-        <span style="color: #004651;">CHAR_SET</span>=<span style="color: #005F00;">"a-zA-Z0-9"</span>
-        <span style="color: #004651;">DESCRIPTION</span>=<span style="color: #005F00;">"b&#225;sica (letras y n&#250;meros)"</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Definir conjuntos de caracteres seg&#250;n nivel de complejidad</span>
+<span style="color: #219fd5; font-style: italic;">case</span> $<span style="color: #1857a4;">COMPLEXITY_LEVEL</span><span style="color: #219fd5; font-style: italic;"> in</span>
+    1) <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">B&#225;sico: letras y n&#250;meros</span>
+        <span style="color: #1857a4;">CHAR_SET</span>=<span style="color: #a44185;">"a-zA-Z0-9"</span>
+        <span style="color: #1857a4;">DESCRIPTION</span>=<span style="color: #a44185;">"b&#225;sica (letras y n&#250;meros)"</span>
         ;;
-    2) <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Medio: a&#241;ade algunos s&#237;mbolos comunes</span>
-        <span style="color: #004651;">CHAR_SET</span>=<span style="color: #005F00;">"a-zA-Z0-9!@#$%^&amp;*"</span>
-        <span style="color: #004651;">DESCRIPTION</span>=<span style="color: #005F00;">"media (letras, n&#250;meros y s&#237;mbolos comunes)"</span>
+    2) <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Medio: a&#241;ade algunos s&#237;mbolos comunes</span>
+        <span style="color: #1857a4;">CHAR_SET</span>=<span style="color: #a44185;">"a-zA-Z0-9!@#$%^&amp;*"</span>
+        <span style="color: #1857a4;">DESCRIPTION</span>=<span style="color: #a44185;">"media (letras, n&#250;meros y s&#237;mbolos comunes)"</span>
         ;;
-    3) <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Alto: amplia gama de s&#237;mbolos</span>
-        <span style="color: #004651;">CHAR_SET</span>=<span style="color: #005F00;">"a-zA-Z0-9!@#$%^&amp;*()_+-=[]{}|;:,.&lt;&gt;?/~"</span>
-        <span style="color: #004651;">DESCRIPTION</span>=<span style="color: #005F00;">"alta (amplia gama de caracteres)"</span>
+    3) <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Alto: amplia gama de s&#237;mbolos</span>
+        <span style="color: #1857a4;">CHAR_SET</span>=<span style="color: #a44185;">"a-zA-Z0-9!@#$%^&amp;*()_+-=[]{}|;:,.&lt;&gt;?/~"</span>
+        <span style="color: #1857a4;">DESCRIPTION</span>=<span style="color: #a44185;">"alta (amplia gama de caracteres)"</span>
         ;;
-    4) <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Extremo: incluye caracteres Unicode</span>
-        <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Generamos con todo y a&#241;adimos caracteres Unicode</span>
-        <span style="color: #004651;">CHAR_SET</span>=<span style="color: #005F00;">"a-zA-Z0-9!@#$%^&amp;*()_+-=[]{}|;:,.&lt;&gt;?/~\"\\\`"</span>
-        <span style="color: #004651;">DESCRIPTION</span>=<span style="color: #005F00;">"extrema (incluyendo caracteres especiales avanzados)"</span>
+    4) <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Extremo: incluye caracteres Unicode</span>
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generamos con todo y a&#241;adimos caracteres Unicode</span>
+        <span style="color: #1857a4;">CHAR_SET</span>=<span style="color: #a44185;">"a-zA-Z0-9!@#$%^&amp;*()_+-=[]{}|;:,.&lt;&gt;?/~\"\\\`"</span>
+        <span style="color: #1857a4;">DESCRIPTION</span>=<span style="color: #a44185;">"extrema (incluyendo caracteres especiales avanzados)"</span>
         ;;
-<span style="color: #D70000;">esac</span>
+<span style="color: #219fd5; font-style: italic;">esac</span>
 
-<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"${GREEN}Generando contrase&#241;a con:${NC}"</span>
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#8226; Longitud: $PASSWORD_LENGTH caracteres"</span>
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#8226; Complejidad: $DESCRIPTION"</span>
+<span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}Generando contrase&#241;a con:${NC}"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"&#8226; Longitud: $PASSWORD_LENGTH caracteres"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"&#8226; Complejidad: $DESCRIPTION"</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Funci&#243;n para generar la contrase&#241;a</span>
-<span style="color: #AF8700;">generate_password</span>() {
-    <span style="color: #1F55A0;">local</span> <span style="color: #004651;">length</span>=$<span style="color: #004651;">1</span>
-    <span style="color: #1F55A0;">local</span> <span style="color: #004651;">charset</span>=$<span style="color: #004651;">2</span>
-    <span style="color: #1F55A0;">local</span> <span style="color: #004651;">complexity</span>=$<span style="color: #004651;">3</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Funci&#243;n para generar la contrase&#241;a</span>
+<span style="color: #dc3eb7;">generate_password</span>() {
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">length</span>=$<span style="color: #1857a4;">1</span>
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">charset</span>=$<span style="color: #1857a4;">2</span>
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">complexity</span>=$<span style="color: #1857a4;">3</span>
 
-    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Base64 da buena entrop&#237;a</span>
-    <span style="color: #D70000;">if</span> [[ $<span style="color: #004651;">complexity</span> -eq 4 ]]; <span style="color: #D70000;">then</span>
-        <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Para nivel extremo, incluimos algunos caracteres Unicode</span>
-        <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Generamos una contrase&#241;a base</span>
-        <span style="color: #1F55A0;">local</span> <span style="color: #004651;">base_password</span>=$(<span style="color: #1F55A0; font-weight: bold;">LC_ALL=C tr -dc "$charset" &lt; /dev/urandom | head -c $(($length - 3</span>)))
-        <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">A&#241;adimos 3 caracteres Unicode comunes pero poco usados en contrase&#241;as</span>
-        <span style="color: #1F55A0;">local</span> <span style="color: #004651;">unicode_chars</span>=$(<span style="color: #1F55A0; font-weight: bold;">echo -e "\u2603\u03A9\u2764"</span>)
-        <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"${base_password}${unicode_chars}"</span> | fold -w1 | shuf | tr -d <span style="color: #005F00;">'\n'</span> | head -c $<span style="color: #004651;">length</span>
-    <span style="color: #D70000;">else</span>
-        <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Para otros niveles usamos el conjunto definido</span>
-        <span style="color: #004651;">LC_ALL</span>=C tr -dc <span style="color: #005F00;">"$charset"</span> &lt; /dev/urandom | head -c $<span style="color: #004651;">length</span>
-    <span style="color: #D70000;">fi</span>
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Base64 da buena entrop&#237;a</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [[ $<span style="color: #1857a4;">complexity</span> -eq 4 ]]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para nivel extremo, incluimos algunos caracteres Unicode</span>
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generamos una contrase&#241;a base</span>
+        <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">base_password</span>=$(<span style="color: #219fd5; font-weight: bold;">LC_ALL=C tr -dc "$charset" &lt; /dev/urandom | head -c $(($length - 3</span>)))
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">A&#241;adimos 3 caracteres Unicode comunes pero poco usados en contrase&#241;as</span>
+        <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">unicode_chars</span>=$(<span style="color: #219fd5; font-weight: bold;">echo -e "\u2603\u03A9\u2764"</span>)
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"${base_password}${unicode_chars}"</span> | fold -w1 | shuf | tr -d <span style="color: #a44185;">'\n'</span> | head -c $<span style="color: #1857a4;">length</span>
+    <span style="color: #219fd5; font-style: italic;">else</span>
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para otros niveles usamos el conjunto definido</span>
+        <span style="color: #1857a4;">LC_ALL</span>=C tr -dc <span style="color: #a44185;">"$charset"</span> &lt; /dev/urandom | head -c $<span style="color: #1857a4;">length</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
 }
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Generar contrase&#241;a</span>
-<span style="color: #004651;">PASSWORD</span>=$(<span style="color: #1F55A0; font-weight: bold;">generate_password $PASSWORD_LENGTH "$CHAR_SET" $COMPLEXITY_LEVEL</span>)
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generar contrase&#241;a</span>
+<span style="color: #1857a4;">PASSWORD</span>=$(<span style="color: #219fd5; font-weight: bold;">generate_password $PASSWORD_LENGTH "$CHAR_SET" $COMPLEXITY_LEVEL</span>)
 
-<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"\n${GREEN}Contrase&#241;a generada:${NC}"</span>
-<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"${BLUE}$PASSWORD${NC}"</span>
+<span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${GREEN}Contrase&#241;a generada:${NC}"</span>
+<span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${BLUE}$PASSWORD${NC}"</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Evaluaci&#243;n de la fortaleza</span>
-<span style="color: #004651;">STRENGTH</span>=0
-[[ ${#<span style="color: #004651;">PASSWORD</span>} -ge 12 ]] &amp;&amp; ((<span style="color: #004651;">STRENGTH</span>+=1))
-[[ ${#<span style="color: #004651;">PASSWORD</span>} -ge 16 ]] &amp;&amp; ((<span style="color: #004651;">STRENGTH</span>+=1))
-[[ <span style="color: #005F00;">"$PASSWORD"</span> =~ [A-Z] ]] &amp;&amp; ((<span style="color: #004651;">STRENGTH</span>+=1))
-[[ <span style="color: #005F00;">"$PASSWORD"</span> =~ [a-z] ]] &amp;&amp; ((<span style="color: #004651;">STRENGTH</span>+=1))
-[[ <span style="color: #005F00;">"$PASSWORD"</span> =~ [0-9] ]] &amp;&amp; ((<span style="color: #004651;">STRENGTH</span>+=1))
-[[ <span style="color: #005F00;">"$PASSWORD"</span> =~ [^a-zA-Z0-9] ]] &amp;&amp; ((<span style="color: #004651;">STRENGTH</span>+=1))
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Evaluaci&#243;n de la fortaleza</span>
+<span style="color: #1857a4;">STRENGTH</span>=0
+[[ ${#<span style="color: #1857a4;">PASSWORD</span>} -ge 12 ]] &amp;&amp; ((<span style="color: #1857a4;">STRENGTH</span>+=1))
+[[ ${#<span style="color: #1857a4;">PASSWORD</span>} -ge 16 ]] &amp;&amp; ((<span style="color: #1857a4;">STRENGTH</span>+=1))
+[[ <span style="color: #a44185;">"$PASSWORD"</span> =~ [A-Z] ]] &amp;&amp; ((<span style="color: #1857a4;">STRENGTH</span>+=1))
+[[ <span style="color: #a44185;">"$PASSWORD"</span> =~ [a-z] ]] &amp;&amp; ((<span style="color: #1857a4;">STRENGTH</span>+=1))
+[[ <span style="color: #a44185;">"$PASSWORD"</span> =~ [0-9] ]] &amp;&amp; ((<span style="color: #1857a4;">STRENGTH</span>+=1))
+[[ <span style="color: #a44185;">"$PASSWORD"</span> =~ [^a-zA-Z0-9] ]] &amp;&amp; ((<span style="color: #1857a4;">STRENGTH</span>+=1))
 
-<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"\n${GREEN}Evaluaci&#243;n de fortaleza:${NC}"</span>
-<span style="color: #D70000;">case</span> $<span style="color: #004651;">STRENGTH</span><span style="color: #D70000;"> in</span>
-    6) <span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"${GREEN}&#9733;&#9733;&#9733;&#9733;&#9733; Excelente${NC} - Pr&#225;cticamente imposible de romper"</span> ;;
-    5) <span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"${GREEN}&#9733;&#9733;&#9733;&#9733;&#9734; Muy buena${NC} - Extremadamente dif&#237;cil de comprometer"</span> ;;
-    4) <span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"${YELLOW}&#9733;&#9733;&#9733;&#9734;&#9734; Buena${NC} - Resistente a la mayor&#237;a de ataques"</span> ;;
-    3) <span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"${YELLOW}&#9733;&#9733;&#9734;&#9734;&#9734; Moderada${NC} - Ofrece protecci&#243;n b&#225;sica"</span> ;;
-    *) <span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"${RED}&#9733;&#9734;&#9734;&#9734;&#9734; D&#233;bil${NC} - Considere aumentar la complejidad"</span> ;;
-<span style="color: #D70000;">esac</span>
+<span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${GREEN}Evaluaci&#243;n de fortaleza:${NC}"</span>
+<span style="color: #219fd5; font-style: italic;">case</span> $<span style="color: #1857a4;">STRENGTH</span><span style="color: #219fd5; font-style: italic;"> in</span>
+    6) <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}&#9733;&#9733;&#9733;&#9733;&#9733; Excelente${NC} - Pr&#225;cticamente imposible de romper"</span> ;;
+    5) <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}&#9733;&#9733;&#9733;&#9733;&#9734; Muy buena${NC} - Extremadamente dif&#237;cil de comprometer"</span> ;;
+    4) <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${YELLOW}&#9733;&#9733;&#9733;&#9734;&#9734; Buena${NC} - Resistente a la mayor&#237;a de ataques"</span> ;;
+    3) <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${YELLOW}&#9733;&#9733;&#9734;&#9734;&#9734; Moderada${NC} - Ofrece protecci&#243;n b&#225;sica"</span> ;;
+    *) <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${RED}&#9733;&#9734;&#9734;&#9734;&#9734; D&#233;bil${NC} - Considere aumentar la complejidad"</span> ;;
+<span style="color: #219fd5; font-style: italic;">esac</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Estimaci&#243;n del tiempo para romperla (muy aproximada)</span>
-<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"\n${GREEN}Tiempo estimado para romper mediante fuerza bruta:${NC}"</span>
-<span style="color: #004651;">COMBINATIONS</span>=0
-<span style="color: #D70000;">case</span> $<span style="color: #004651;">COMPLEXITY_LEVEL</span><span style="color: #D70000;"> in</span>
-    1) <span style="color: #004651;">CHAR_COUNT</span>=62 ;; <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">a-z, A-Z, 0-9</span>
-    2) <span style="color: #004651;">CHAR_COUNT</span>=71 ;; <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">+9 s&#237;mbolos comunes</span>
-    3) <span style="color: #004651;">CHAR_COUNT</span>=95 ;; <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">ASCII imprimible est&#225;ndar</span>
-    4) <span style="color: #004651;">CHAR_COUNT</span>=105 ;; <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Con algunos caracteres adicionales</span>
-<span style="color: #D70000;">esac</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Estimaci&#243;n del tiempo para romperla (muy aproximada)</span>
+<span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${GREEN}Tiempo estimado para romper mediante fuerza bruta:${NC}"</span>
+<span style="color: #1857a4;">COMBINATIONS</span>=0
+<span style="color: #219fd5; font-style: italic;">case</span> $<span style="color: #1857a4;">COMPLEXITY_LEVEL</span><span style="color: #219fd5; font-style: italic;"> in</span>
+    1) <span style="color: #1857a4;">CHAR_COUNT</span>=62 ;; <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">a-z, A-Z, 0-9</span>
+    2) <span style="color: #1857a4;">CHAR_COUNT</span>=71 ;; <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">+9 s&#237;mbolos comunes</span>
+    3) <span style="color: #1857a4;">CHAR_COUNT</span>=95 ;; <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">ASCII imprimible est&#225;ndar</span>
+    4) <span style="color: #1857a4;">CHAR_COUNT</span>=105 ;; <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Con algunos caracteres adicionales</span>
+<span style="color: #219fd5; font-style: italic;">esac</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">F&#243;rmula b&#225;sica: combinaciones = conjunto^longitud</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Convertimos a notaci&#243;n cient&#237;fica para evitar desbordamientos</span>
-<span style="color: #004651;">EXPONENT</span>=$(<span style="color: #1F55A0; font-weight: bold;">echo "$PASSWORD_LENGTH * l($CHAR_COUNT</span><span style="color: #005F00;">)/l(10)"</span> | bc -l | awk <span style="color: #005F00;">'{printf "%.2f", $1}'</span>)
-<span style="color: #004651;">CRACK_TIME</span>=<span style="color: #005F00;">""</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">F&#243;rmula b&#225;sica: combinaciones = conjunto^longitud</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Convertimos a notaci&#243;n cient&#237;fica para evitar desbordamientos</span>
+<span style="color: #1857a4;">EXPONENT</span>=$(<span style="color: #219fd5; font-weight: bold;">echo "$PASSWORD_LENGTH * l($CHAR_COUNT</span><span style="color: #a44185;">)/l(10)"</span> | bc -l | awk <span style="color: #a44185;">'{printf "%.2f", $1}'</span>)
+<span style="color: #1857a4;">CRACK_TIME</span>=<span style="color: #a44185;">""</span>
 
-<span style="color: #D70000;">if</span> (( $(<span style="color: #1F55A0; font-weight: bold;">echo "$EXPONENT &lt; 9" | bc -l</span>) )); <span style="color: #D70000;">then</span>
-    <span style="color: #004651;">CRACK_TIME</span>=<span style="color: #005F00;">"Horas o d&#237;as"</span>
-<span style="color: #D70000;">elif</span> (( $(<span style="color: #1F55A0; font-weight: bold;">echo "$EXPONENT &lt; 12" | bc -l</span>) )); <span style="color: #D70000;">then</span>
-    <span style="color: #004651;">CRACK_TIME</span>=<span style="color: #005F00;">"Meses"</span>
-<span style="color: #D70000;">elif</span> (( $(<span style="color: #1F55A0; font-weight: bold;">echo "$EXPONENT &lt; 15" | bc -l</span>) )); <span style="color: #D70000;">then</span>
-    <span style="color: #004651;">CRACK_TIME</span>=<span style="color: #005F00;">"A&#241;os"</span>
-<span style="color: #D70000;">else</span>
-    <span style="color: #004651;">CRACK_TIME</span>=<span style="color: #005F00;">"Siglos o milenios"</span>
-<span style="color: #D70000;">fi</span>
+<span style="color: #219fd5; font-style: italic;">if</span> (( $(<span style="color: #219fd5; font-weight: bold;">echo "$EXPONENT &lt; 9" | bc -l</span>) )); <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #1857a4;">CRACK_TIME</span>=<span style="color: #a44185;">"Horas o d&#237;as"</span>
+<span style="color: #219fd5; font-style: italic;">elif</span> (( $(<span style="color: #219fd5; font-weight: bold;">echo "$EXPONENT &lt; 12" | bc -l</span>) )); <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #1857a4;">CRACK_TIME</span>=<span style="color: #a44185;">"Meses"</span>
+<span style="color: #219fd5; font-style: italic;">elif</span> (( $(<span style="color: #219fd5; font-weight: bold;">echo "$EXPONENT &lt; 15" | bc -l</span>) )); <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #1857a4;">CRACK_TIME</span>=<span style="color: #a44185;">"A&#241;os"</span>
+<span style="color: #219fd5; font-style: italic;">else</span>
+    <span style="color: #1857a4;">CRACK_TIME</span>=<span style="color: #a44185;">"Siglos o milenios"</span>
+<span style="color: #219fd5; font-style: italic;">fi</span>
 
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#8226; Combinaciones posibles: ~10^$EXPONENT"</span>
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#8226; Tiempo aproximado: $CRACK_TIME (con hardware actual)"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"&#8226; Combinaciones posibles: ~10^$EXPONENT"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"&#8226; Tiempo aproximado: $CRACK_TIME (con hardware actual)"</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Guardar en el portapapeles si est&#225; disponible xclip o xsel</span>
-<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"\n${GREEN}Acciones adicionales:${NC}"</span>
-<span style="color: #D70000;">if </span><span style="color: #1F55A0;">command</span> -v xclip &gt; /dev/null; <span style="color: #D70000;">then</span>
-    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"$PASSWORD"</span> | xclip -selection clipboard
-    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#8226; Contrase&#241;a copiada al portapapeles (xclip)"</span>
-<span style="color: #D70000;">elif </span><span style="color: #1F55A0;">command</span> -v xsel &gt; /dev/null; <span style="color: #D70000;">then</span>
-    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"$PASSWORD"</span> | xsel -b
-    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#8226; Contrase&#241;a copiada al portapapeles (xsel)"</span>
-<span style="color: #D70000;">else</span>
-    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#8226; Instale xclip o xsel para copiar autom&#225;ticamente al portapapeles"</span>
-<span style="color: #D70000;">fi</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Guardar en el portapapeles si est&#225; disponible xclip o xsel</span>
+<span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${GREEN}Acciones adicionales:${NC}"</span>
+<span style="color: #219fd5; font-style: italic;">if </span><span style="color: #dc3eb7;">command</span> -v xclip &gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"$PASSWORD"</span> | xclip -selection clipboard
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"&#8226; Contrase&#241;a copiada al portapapeles (xclip)"</span>
+<span style="color: #219fd5; font-style: italic;">elif </span><span style="color: #dc3eb7;">command</span> -v xsel &gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"$PASSWORD"</span> | xsel -b
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"&#8226; Contrase&#241;a copiada al portapapeles (xsel)"</span>
+<span style="color: #219fd5; font-style: italic;">else</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"&#8226; Instale xclip o xsel para copiar autom&#225;ticamente al portapapeles"</span>
+<span style="color: #219fd5; font-style: italic;">fi</span>
 
-<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"&#8226; Use ${YELLOW}Ctrl+Y${NC} para pegar esta contrase&#241;a en Emacs (despu&#233;s de copiarla)"</span>
+<span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"&#8226; Use ${YELLOW}Ctrl+Y${NC} para pegar esta contrase&#241;a en Emacs (despu&#233;s de copiarla)"</span>
 
-<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"\n${BLUE}Para usar desde Emacs, a&#241;ada este script a su init.el${NC}"</span>
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Consulte la secci&#243;n 'Integraci&#243;n con Emacs' en el blog Emacs con Esteroides"</span>
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">""</span>
+<span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"\n${BLUE}Para usar desde Emacs, a&#241;ada este script a su init.el${NC}"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Consulte la secci&#243;n 'Integraci&#243;n con Emacs' en el blog Emacs con Esteroides"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span>
 </pre>
 </div>
 
@@ -588,269 +604,269 @@ Este script ofrece:
 </ul>
 </div>
 </div>
-<div id="outline-container-orga1e530e" class="outline-2">
-<h2 id="orga1e530e">Integración con Emacs</h2>
-<div class="outline-text-2" id="text-orga1e530e">
+<div id="outline-container-org8621c78" class="outline-2">
+<h2 id="org8621c78">Integración con Emacs</h2>
+<div class="outline-text-2" id="text-org8621c78">
 <p>
 Ahora que contamos con un potente generador de contraseñas, vamos a integrarlo en nuestro entorno Emacs para maximizar su utilidad.
 </p>
 </div>
-<div id="outline-container-orgf061215" class="outline-3">
-<h3 id="orgf061215">Configuración básica</h3>
-<div class="outline-text-3" id="text-orgf061215">
+<div id="outline-container-org0a047cf" class="outline-3">
+<h3 id="org0a047cf">Configuración básica</h3>
+<div class="outline-text-3" id="text-org0a047cf">
 <p>
 Podemos agregar el siguiente código a nuestro archivo <code>init.el</code> para crear una función que genere contraseñas directamente desde Emacs:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Funci&#243;n para generar contrase&#241;as fuertes desde Emacs</span>
-(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">generate-strong-password</span> (length complexity)
-  <span style="color: #004700; font-style: italic;">"Genera una contrase&#241;a fuerte usando nuestro script personalizado.</span>
-<span style="color: #004700; font-style: italic;">LENGTH es la longitud de la contrase&#241;a.</span>
-<span style="color: #004700; font-style: italic;">COMPLEXITY es el nivel de complejidad (1-4)."</span>
-  (<span style="color: #D70000;">interactive</span> 
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Funci&#243;n para generar contrase&#241;as fuertes desde Emacs</span>
+(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">generate-strong-password</span> (length complexity)
+  <span style="color: #60a8a1; font-style: italic;">"Genera una contrase&#241;a fuerte usando nuestro script personalizado.</span>
+<span style="color: #60a8a1; font-style: italic;">LENGTH es la longitud de la contrase&#241;a.</span>
+<span style="color: #60a8a1; font-style: italic;">COMPLEXITY es el nivel de complejidad (1-4)."</span>
+  (<span style="color: #219fd5; font-style: italic;">interactive</span> 
    (list 
-    (read-number <span style="color: #005F00;">"Longitud de la contrase&#241;a: "</span> 16)
-    (read-number <span style="color: #005F00;">"Nivel de complejidad (1-4): "</span> 3)))
+    (read-number <span style="color: #a44185;">"Longitud de la contrase&#241;a: "</span> 16)
+    (read-number <span style="color: #a44185;">"Nivel de complejidad (1-4): "</span> 3)))
 
-  (<span style="color: #D70000;">let</span> ((script-path <span style="color: #005F00;">"~/bin/strong-password-generator.sh"</span>))
-    (<span style="color: #D70000;">if</span> (file-exists-p script-path)
-        (<span style="color: #D70000;">let</span> ((password 
+  (<span style="color: #219fd5; font-style: italic;">let</span> ((script-path <span style="color: #a44185;">"~/bin/strong-password-generator.sh"</span>))
+    (<span style="color: #219fd5; font-style: italic;">if</span> (file-exists-p script-path)
+        (<span style="color: #219fd5; font-style: italic;">let</span> ((password 
                (string-trim 
                 (shell-command-to-string 
-                 (format <span style="color: #005F00;">"%s %d %d"</span> script-path length complexity)))))
-          <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Insertar en el buffer actual o mostrar en minibuffer</span>
-          (<span style="color: #D70000;">if</span> (use-region-p)
-              (<span style="color: #D70000;">progn</span>
+                 (format <span style="color: #a44185;">"%s %d %d"</span> script-path length complexity)))))
+          <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Insertar en el buffer actual o mostrar en minibuffer</span>
+          (<span style="color: #219fd5; font-style: italic;">if</span> (use-region-p)
+              (<span style="color: #219fd5; font-style: italic;">progn</span>
                 (delete-region (region-beginning) (region-end))
                 (insert password)
-                (message <span style="color: #005F00;">"Contrase&#241;a insertada en el buffer"</span>))
+                (message <span style="color: #a44185;">"Contrase&#241;a insertada en el buffer"</span>))
             (kill-new password)
-            (message <span style="color: #005F00;">"Contrase&#241;a copiada al kill-ring: %s"</span> password)))
-      (message <span style="color: #005F00;">"Script no encontrado en %s. Verifique la ruta."</span> script-path))))
+            (message <span style="color: #a44185;">"Contrase&#241;a copiada al kill-ring: %s"</span> password)))
+      (message <span style="color: #a44185;">"Script no encontrado en %s. Verifique la ruta."</span> script-path))))
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Atajo de teclado para generar contrase&#241;as r&#225;pidamente</span>
-(global-set-key (kbd <span style="color: #005F00;">"C-c p"</span>) 'generate-strong-password)
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Atajo de teclado para generar contrase&#241;as r&#225;pidamente</span>
+(global-set-key (kbd <span style="color: #a44185;">"C-c p"</span>) 'generate-strong-password)
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org83a614e" class="outline-3">
-<h3 id="org83a614e">Integración con passwords.el</h3>
-<div class="outline-text-3" id="text-org83a614e">
+<div id="outline-container-orgf2cc1a1" class="outline-3">
+<h3 id="orgf2cc1a1">Integración con passwords.el</h3>
+<div class="outline-text-3" id="text-orgf2cc1a1">
 <p>
 Para una gestión más completa, podemos aprovechar la biblioteca estándar <code>auth-source.el</code> de Emacs para almacenar y recuperar contraseñas de forma segura:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Integraci&#243;n con auth-source para gesti&#243;n de contrase&#241;as</span>
-(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">auth-source</span>)
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Integraci&#243;n con auth-source para gesti&#243;n de contrase&#241;as</span>
+(<span style="color: #219fd5; font-style: italic;">require</span> '<span style="color: #2f86d2;">auth-source</span>)
 
-(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">save-password-to-auth-source</span> (host user password)
-  <span style="color: #004700; font-style: italic;">"Guarda una contrase&#241;a en auth-source para el HOST y USER especificados."</span>
-  (<span style="color: #D70000;">interactive</span>
+(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">save-password-to-auth-source</span> (host user password)
+  <span style="color: #60a8a1; font-style: italic;">"Guarda una contrase&#241;a en auth-source para el HOST y USER especificados."</span>
+  (<span style="color: #219fd5; font-style: italic;">interactive</span>
    (list
-    (read-string <span style="color: #005F00;">"Host/Servicio: "</span>)
-    (read-string <span style="color: #005F00;">"Usuario: "</span>)
-    (read-string <span style="color: #005F00;">"Contrase&#241;a: "</span> nil nil nil t)))  <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">No mostrar la contrase&#241;a</span>
+    (read-string <span style="color: #a44185;">"Host/Servicio: "</span>)
+    (read-string <span style="color: #a44185;">"Usuario: "</span>)
+    (read-string <span style="color: #a44185;">"Contrase&#241;a: "</span> nil nil nil t)))  <span style="color: #8195b0; font-style: italic;">; </span><span style="color: #8195b0; font-style: italic;">No mostrar la contrase&#241;a</span>
 
-  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Crear entrada en auth-source</span>
-  (<span style="color: #D70000;">let</span> ((auth-sources '(<span style="color: #005F00;">"~/.authinfo.gpg"</span>)))
+  <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Crear entrada en auth-source</span>
+  (<span style="color: #219fd5; font-style: italic;">let</span> ((auth-sources '(<span style="color: #a44185;">"~/.authinfo.gpg"</span>)))
     (auth-source-forget-all-cached)
-    (<span style="color: #D70000;">let</span> ((entry (list <span style="color: #1F55A0;">:host</span> host <span style="color: #1F55A0;">:user</span> user <span style="color: #1F55A0;">:secret</span> password)))
+    (<span style="color: #219fd5; font-style: italic;">let</span> ((entry (list <span style="color: #dc3eb7;">:host</span> host <span style="color: #dc3eb7;">:user</span> user <span style="color: #dc3eb7;">:secret</span> password)))
       (auth-source-save-behavior nil)
       (auth-source-save-new entry)
-      (message <span style="color: #005F00;">"Contrase&#241;a guardada para %s@%s"</span> user host))))
+      (message <span style="color: #a44185;">"Contrase&#241;a guardada para %s@%s"</span> user host))))
 
-(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">generate-and-save-password</span> (host user length complexity)
-  <span style="color: #004700; font-style: italic;">"Genera una contrase&#241;a fuerte y la guarda en auth-source."</span>
-  (<span style="color: #D70000;">interactive</span>
+(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">generate-and-save-password</span> (host user length complexity)
+  <span style="color: #60a8a1; font-style: italic;">"Genera una contrase&#241;a fuerte y la guarda en auth-source."</span>
+  (<span style="color: #219fd5; font-style: italic;">interactive</span>
    (list
-    (read-string <span style="color: #005F00;">"Host/Servicio: "</span>)
-    (read-string <span style="color: #005F00;">"Usuario: "</span>)
-    (read-number <span style="color: #005F00;">"Longitud de la contrase&#241;a: "</span> 16)
-    (read-number <span style="color: #005F00;">"Nivel de complejidad (1-4): "</span> 3)))
+    (read-string <span style="color: #a44185;">"Host/Servicio: "</span>)
+    (read-string <span style="color: #a44185;">"Usuario: "</span>)
+    (read-number <span style="color: #a44185;">"Longitud de la contrase&#241;a: "</span> 16)
+    (read-number <span style="color: #a44185;">"Nivel de complejidad (1-4): "</span> 3)))
 
-  (<span style="color: #D70000;">let*</span> ((script-path <span style="color: #005F00;">"~/bin/strong-password-generator.sh"</span>)
+  (<span style="color: #219fd5; font-style: italic;">let*</span> ((script-path <span style="color: #a44185;">"~/bin/strong-password-generator.sh"</span>)
          (password
           (string-trim
            (shell-command-to-string
-            (format <span style="color: #005F00;">"%s %d %d"</span> script-path length complexity)))))
+            (format <span style="color: #a44185;">"%s %d %d"</span> script-path length complexity)))))
 
-    <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Guardar en auth-source</span>
+    <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Guardar en auth-source</span>
     (save-password-to-auth-source host user password)
 
-    <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Tambi&#233;n copiar al kill-ring para uso inmediato</span>
+    <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Tambi&#233;n copiar al kill-ring para uso inmediato</span>
     (kill-new password)
-    (message <span style="color: #005F00;">"Contrase&#241;a generada y guardada para %s@%s (copiada al kill-ring)"</span> user host)))
+    (message <span style="color: #a44185;">"Contrase&#241;a generada y guardada para %s@%s (copiada al kill-ring)"</span> user host)))
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Funci&#243;n para recuperar contrase&#241;as</span>
-(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">get-password-from-auth-source</span> (host user)
-  <span style="color: #004700; font-style: italic;">"Recupera una contrase&#241;a desde auth-source."</span>
-  (<span style="color: #D70000;">interactive</span>
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Funci&#243;n para recuperar contrase&#241;as</span>
+(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">get-password-from-auth-source</span> (host user)
+  <span style="color: #60a8a1; font-style: italic;">"Recupera una contrase&#241;a desde auth-source."</span>
+  (<span style="color: #219fd5; font-style: italic;">interactive</span>
    (list
-    (read-string <span style="color: #005F00;">"Host/Servicio: "</span>)
-    (read-string <span style="color: #005F00;">"Usuario: "</span>)))
+    (read-string <span style="color: #a44185;">"Host/Servicio: "</span>)
+    (read-string <span style="color: #a44185;">"Usuario: "</span>)))
 
-  (<span style="color: #D70000;">let*</span> ((auth-info (car (auth-source-search <span style="color: #1F55A0;">:host</span> host <span style="color: #1F55A0;">:user</span> user)))
-         (password (<span style="color: #D70000;">if</span> auth-info
-                      (<span style="color: #D70000;">let</span> ((secret (plist-get auth-info <span style="color: #1F55A0;">:secret</span>)))
-                        (<span style="color: #D70000;">if</span> (functionp secret)
+  (<span style="color: #219fd5; font-style: italic;">let*</span> ((auth-info (car (auth-source-search <span style="color: #dc3eb7;">:host</span> host <span style="color: #dc3eb7;">:user</span> user)))
+         (password (<span style="color: #219fd5; font-style: italic;">if</span> auth-info
+                      (<span style="color: #219fd5; font-style: italic;">let</span> ((secret (plist-get auth-info <span style="color: #dc3eb7;">:secret</span>)))
+                        (<span style="color: #219fd5; font-style: italic;">if</span> (functionp secret)
                             (funcall secret)
                           secret))
                     nil)))
 
-    (<span style="color: #D70000;">if</span> password
-        (<span style="color: #D70000;">progn</span>
+    (<span style="color: #219fd5; font-style: italic;">if</span> password
+        (<span style="color: #219fd5; font-style: italic;">progn</span>
           (kill-new password)
-          (message <span style="color: #005F00;">"Contrase&#241;a recuperada y copiada al kill-ring"</span>))
-      (message <span style="color: #005F00;">"No se encontr&#243; contrase&#241;a para %s@%s"</span> user host))))
+          (message <span style="color: #a44185;">"Contrase&#241;a recuperada y copiada al kill-ring"</span>))
+      (message <span style="color: #a44185;">"No se encontr&#243; contrase&#241;a para %s@%s"</span> user host))))
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Atajo para generar y guardar</span>
-(global-set-key (kbd <span style="color: #005F00;">"C-c P"</span>) 'generate-and-save-password)
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Atajo para generar y guardar</span>
+(global-set-key (kbd <span style="color: #a44185;">"C-c P"</span>) 'generate-and-save-password)
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgce8e841" class="outline-3">
-<h3 id="orgce8e841">Integración con pass (Password Store)</h3>
-<div class="outline-text-3" id="text-orgce8e841">
+<div id="outline-container-org7edf7b6" class="outline-3">
+<h3 id="org7edf7b6">Integración con pass (Password Store)</h3>
+<div class="outline-text-3" id="text-org7edf7b6">
 <p>
 Para usuarios de <code>pass</code> (el estándar Unix para gestión de contraseñas), ofrecemos también una integración con este sistema:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Integraci&#243;n con Password Store (pass)</span>
-(<span style="color: #D70000;">when</span> (executable-find <span style="color: #005F00;">"pass"</span>)
-  (<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">auth-source-pass</span>)
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Integraci&#243;n con Password Store (pass)</span>
+(<span style="color: #219fd5; font-style: italic;">when</span> (executable-find <span style="color: #a44185;">"pass"</span>)
+  (<span style="color: #219fd5; font-style: italic;">require</span> '<span style="color: #2f86d2;">auth-source-pass</span>)
   (auth-source-pass-enable)
 
-  (<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">generate-password-and-store-in-pass</span> (path length complexity)
-    <span style="color: #004700; font-style: italic;">"Genera una contrase&#241;a fuerte y la almacena usando pass."</span>
-    (<span style="color: #D70000;">interactive</span>
+  (<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">generate-password-and-store-in-pass</span> (path length complexity)
+    <span style="color: #60a8a1; font-style: italic;">"Genera una contrase&#241;a fuerte y la almacena usando pass."</span>
+    (<span style="color: #219fd5; font-style: italic;">interactive</span>
      (list
-      (read-string <span style="color: #005F00;">"Ruta en pass (ej. email/gmail.com): "</span>)
-      (read-number <span style="color: #005F00;">"Longitud de la contrase&#241;a: "</span> 16)
-      (read-number <span style="color: #005F00;">"Nivel de complejidad (1-4): "</span> 3)))
+      (read-string <span style="color: #a44185;">"Ruta en pass (ej. email/gmail.com): "</span>)
+      (read-number <span style="color: #a44185;">"Longitud de la contrase&#241;a: "</span> 16)
+      (read-number <span style="color: #a44185;">"Nivel de complejidad (1-4): "</span> 3)))
 
-    (<span style="color: #D70000;">let*</span> ((script-path <span style="color: #005F00;">"~/bin/strong-password-generator.sh"</span>)
+    (<span style="color: #219fd5; font-style: italic;">let*</span> ((script-path <span style="color: #a44185;">"~/bin/strong-password-generator.sh"</span>)
            (password
             (string-trim
              (shell-command-to-string
-              (format <span style="color: #005F00;">"%s %d %d"</span> script-path length complexity)))))
+              (format <span style="color: #a44185;">"%s %d %d"</span> script-path length complexity)))))
 
-      <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Almacenar en pass</span>
-      (shell-command-to-string (format <span style="color: #005F00;">"echo '</span><span style="color: #AF005F;">%s</span><span style="color: #005F00;">' | pass insert -e '</span><span style="color: #AF005F;">%s</span><span style="color: #005F00;">'"</span> password path))
+      <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Almacenar en pass</span>
+      (shell-command-to-string (format <span style="color: #a44185;">"echo '</span><span style="color: #2f86d2;">%s</span><span style="color: #a44185;">' | pass insert -e '</span><span style="color: #2f86d2;">%s</span><span style="color: #a44185;">'"</span> password path))
 
-      <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Copiar al kill-ring</span>
+      <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Copiar al kill-ring</span>
       (kill-new password)
-      (message <span style="color: #005F00;">"Contrase&#241;a generada y almacenada en pass: %s (copiada al kill-ring)"</span> path)))
+      (message <span style="color: #a44185;">"Contrase&#241;a generada y almacenada en pass: %s (copiada al kill-ring)"</span> path)))
 
-  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Atajo para la funci&#243;n de pass</span>
-  (global-set-key (kbd <span style="color: #005F00;">"C-c M-p"</span>) 'generate-password-and-store-in-pass))
+  <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Atajo para la funci&#243;n de pass</span>
+  (global-set-key (kbd <span style="color: #a44185;">"C-c M-p"</span>) 'generate-password-and-store-in-pass))
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgd8f5cfb" class="outline-3">
-<h3 id="orgd8f5cfb">Integración avanzada con org-mode</h3>
-<div class="outline-text-3" id="text-orgd8f5cfb">
+<div id="outline-container-orgd7e8c2e" class="outline-3">
+<h3 id="orgd7e8c2e">Integración avanzada con org-mode</h3>
+<div class="outline-text-3" id="text-orgd7e8c2e">
 <p>
 Para los amantes de <code>org-mode</code>, podemos crear un sistema completo de gestión de contraseñas aprovechando sus capacidades:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Gesti&#243;n de contrase&#241;as con org-mode (cifrado)</span>
-(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">org-crypt</span>)
-(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">epa-file</span>)
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Gesti&#243;n de contrase&#241;as con org-mode (cifrado)</span>
+(<span style="color: #219fd5; font-style: italic;">require</span> '<span style="color: #2f86d2;">org-crypt</span>)
+(<span style="color: #219fd5; font-style: italic;">require</span> '<span style="color: #2f86d2;">epa-file</span>)
 (epa-file-enable)
 (org-crypt-use-before-save-magic)
-(<span style="color: #D70000;">setq</span> org-tags-exclude-from-inheritance (<span style="color: #D70000;">quote</span> (<span style="color: #005F00;">"crypt"</span>)))
-(<span style="color: #D70000;">setq</span> org-crypt-key user-mail-address)  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Usar tu clave GPG</span>
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-tags-exclude-from-inheritance (<span style="color: #219fd5; font-style: italic;">quote</span> (<span style="color: #a44185;">"crypt"</span>)))
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-crypt-key user-mail-address)  <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Usar tu clave GPG</span>
 
-(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">create-password-entry-in-org</span> ()
-  <span style="color: #004700; font-style: italic;">"Crea una entrada para una contrase&#241;a en un archivo org cifrado."</span>
-  (<span style="color: #D70000;">interactive</span>)
-  (<span style="color: #D70000;">let*</span> ((org-password-file <span style="color: #005F00;">"~/org/passwords.org.gpg"</span>)
-         (host (read-string <span style="color: #005F00;">"Servicio/Sitio: "</span>))
-         (user (read-string <span style="color: #005F00;">"Usuario/Email: "</span>))
-         (notes (read-string <span style="color: #005F00;">"Notas adicionales: "</span>))
-         (length (read-number <span style="color: #005F00;">"Longitud de la contrase&#241;a: "</span> 16))
-         (complexity (read-number <span style="color: #005F00;">"Nivel de complejidad (1-4): "</span> 3))
-         (script-path <span style="color: #005F00;">"~/bin/strong-password-generator.sh"</span>)
+(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">create-password-entry-in-org</span> ()
+  <span style="color: #60a8a1; font-style: italic;">"Crea una entrada para una contrase&#241;a en un archivo org cifrado."</span>
+  (<span style="color: #219fd5; font-style: italic;">interactive</span>)
+  (<span style="color: #219fd5; font-style: italic;">let*</span> ((org-password-file <span style="color: #a44185;">"~/org/passwords.org.gpg"</span>)
+         (host (read-string <span style="color: #a44185;">"Servicio/Sitio: "</span>))
+         (user (read-string <span style="color: #a44185;">"Usuario/Email: "</span>))
+         (notes (read-string <span style="color: #a44185;">"Notas adicionales: "</span>))
+         (length (read-number <span style="color: #a44185;">"Longitud de la contrase&#241;a: "</span> 16))
+         (complexity (read-number <span style="color: #a44185;">"Nivel de complejidad (1-4): "</span> 3))
+         (script-path <span style="color: #a44185;">"~/bin/strong-password-generator.sh"</span>)
          (password
           (string-trim
            (shell-command-to-string
-            (format <span style="color: #005F00;">"%s %d %d"</span> script-path length complexity)))))
+            (format <span style="color: #a44185;">"%s %d %d"</span> script-path length complexity)))))
 
-    <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Crear o abrir el archivo</span>
-    (<span style="color: #D70000;">unless</span> (file-exists-p org-password-file)
-      (<span style="color: #D70000;">with-temp-file</span> org-password-file
-        (insert <span style="color: #005F00;">"#+TITLE: Base de datos de contrase&#241;as seguras\n"</span>)
-        (insert <span style="color: #005F00;">"#+AUTHOR: "</span> user-full-name <span style="color: #005F00;">"\n"</span>)
-        (insert <span style="color: #005F00;">"#+STARTUP: content\n\n"</span>)))
+    <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Crear o abrir el archivo</span>
+    (<span style="color: #219fd5; font-style: italic;">unless</span> (file-exists-p org-password-file)
+      (<span style="color: #219fd5; font-style: italic;">with-temp-file</span> org-password-file
+        (insert <span style="color: #a44185;">"#+TITLE: Base de datos de contrase&#241;as seguras\n"</span>)
+        (insert <span style="color: #a44185;">"#+AUTHOR: "</span> user-full-name <span style="color: #a44185;">"\n"</span>)
+        (insert <span style="color: #a44185;">"#+STARTUP: content\n\n"</span>)))
 
-    <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">A&#241;adir nueva entrada</span>
+    <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">A&#241;adir nueva entrada</span>
     (find-file org-password-file)
     (goto-char (point-max))
-    (insert (format <span style="color: #005F00;">"\n* %s %s\n"</span> host (format-time-string <span style="color: #005F00;">"(%Y-%m-%d)"</span>)))
-    (insert (format <span style="color: #005F00;">"  :PROPERTIES:\n"</span>))
-    (insert (format <span style="color: #005F00;">"  :CREATED: %s\n"</span> (format-time-string <span style="color: #005F00;">"[%Y-%m-%d %a %H:%M]"</span>)))
-    (insert (format <span style="color: #005F00;">"  :USER: %s\n"</span> user))
-    (insert (format <span style="color: #005F00;">"  :END:\n"</span>))
-    (insert (format <span style="color: #005F00;">"** Credenciales :crypt:\n"</span>))
-    (insert (format <span style="color: #005F00;">"- Usuario: %s\n"</span> user))
-    (insert (format <span style="color: #005F00;">"- Contrase&#241;a: %s\n"</span> password))
-    (insert (format <span style="color: #005F00;">"- Generada: %s\n"</span> (format-time-string <span style="color: #005F00;">"%Y-%m-%d"</span>)))
-    (insert (format <span style="color: #005F00;">"- Longitud: %d caracteres\n"</span> length))
-    (insert (format <span style="color: #005F00;">"- Complejidad: nivel %d\n"</span> complexity))
-    (<span style="color: #D70000;">when</span> (not (string= notes <span style="color: #005F00;">""</span>))
-      (insert (format <span style="color: #005F00;">"** Notas\n%s\n"</span> notes)))
+    (insert (format <span style="color: #a44185;">"\n* %s %s\n"</span> host (format-time-string <span style="color: #a44185;">"(%Y-%m-%d)"</span>)))
+    (insert (format <span style="color: #a44185;">"  :PROPERTIES:\n"</span>))
+    (insert (format <span style="color: #a44185;">"  :CREATED: %s\n"</span> (format-time-string <span style="color: #a44185;">"[%Y-%m-%d %a %H:%M]"</span>)))
+    (insert (format <span style="color: #a44185;">"  :USER: %s\n"</span> user))
+    (insert (format <span style="color: #a44185;">"  :END:\n"</span>))
+    (insert (format <span style="color: #a44185;">"** Credenciales :crypt:\n"</span>))
+    (insert (format <span style="color: #a44185;">"- Usuario: %s\n"</span> user))
+    (insert (format <span style="color: #a44185;">"- Contrase&#241;a: %s\n"</span> password))
+    (insert (format <span style="color: #a44185;">"- Generada: %s\n"</span> (format-time-string <span style="color: #a44185;">"%Y-%m-%d"</span>)))
+    (insert (format <span style="color: #a44185;">"- Longitud: %d caracteres\n"</span> length))
+    (insert (format <span style="color: #a44185;">"- Complejidad: nivel %d\n"</span> complexity))
+    (<span style="color: #219fd5; font-style: italic;">when</span> (not (string= notes <span style="color: #a44185;">""</span>))
+      (insert (format <span style="color: #a44185;">"** Notas\n%s\n"</span> notes)))
 
-    <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Cifrar inmediatamente la secci&#243;n</span>
+    <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Cifrar inmediatamente la secci&#243;n</span>
     (org-encrypt-entry)
     (save-buffer)
 
-    <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Copiar al kill-ring</span>
+    <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Copiar al kill-ring</span>
     (kill-new password)
-    (message <span style="color: #005F00;">"Entrada creada para %s y contrase&#241;a copiada al kill-ring"</span> host)))
+    (message <span style="color: #a44185;">"Entrada creada para %s y contrase&#241;a copiada al kill-ring"</span> host)))
 
-<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Atajo para crear entradas de contrase&#241;as en org</span>
-(global-set-key (kbd <span style="color: #005F00;">"C-c M-P"</span>) 'create-password-entry-in-org)
+<span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Atajo para crear entradas de contrase&#241;as en org</span>
+(global-set-key (kbd <span style="color: #a44185;">"C-c M-P"</span>) 'create-password-entry-in-org)
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgc1dd670" class="outline-3">
-<h3 id="orgc1dd670">Uso con Dired</h3>
-<div class="outline-text-3" id="text-orgc1dd670">
+<div id="outline-container-org24dbc58" class="outline-3">
+<h3 id="org24dbc58">Uso con Dired</h3>
+<div class="outline-text-3" id="text-org24dbc58">
 <p>
 Para una integración aún más completa, podemos agregar un marcador en Dired para ejecutar nuestro generador:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Integraci&#243;n con Dired</span>
-(<span style="color: #D70000;">with-eval-after-load</span> 'dired
-  (define-key dired-mode-map (kbd <span style="color: #005F00;">";p"</span>) 
-    (<span style="color: #D70000;">lambda</span> ()
-      (<span style="color: #D70000;">interactive</span>)
-      (<span style="color: #D70000;">let</span> ((default-directory dired-directory))
+<pre class="src src-emacs-lisp"><span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Integraci&#243;n con Dired</span>
+(<span style="color: #219fd5; font-style: italic;">with-eval-after-load</span> 'dired
+  (define-key dired-mode-map (kbd <span style="color: #a44185;">";p"</span>) 
+    (<span style="color: #219fd5; font-style: italic;">lambda</span> ()
+      (<span style="color: #219fd5; font-style: italic;">interactive</span>)
+      (<span style="color: #219fd5; font-style: italic;">let</span> ((default-directory dired-directory))
         (generate-strong-password 16 3)))))
 </pre>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org51ae44a" class="outline-2">
-<h2 id="org51ae44a">Buenas prácticas para la gestión de contraseñas</h2>
-<div class="outline-text-2" id="text-org51ae44a">
+<div id="outline-container-orgd16a3fd" class="outline-2">
+<h2 id="orgd16a3fd">Buenas prácticas para la gestión de contraseñas</h2>
+<div class="outline-text-2" id="text-orgd16a3fd">
 <p>
 Además de generar contraseñas fuertes, es importante seguir algunas buenas prácticas para maximizar nuestra seguridad:
 </p>
 </div>
-<div id="outline-container-org8256de6" class="outline-3">
-<h3 id="org8256de6">Rotación periódica</h3>
-<div class="outline-text-3" id="text-org8256de6">
+<div id="outline-container-org430a57e" class="outline-3">
+<h3 id="org430a57e">Rotación periódica</h3>
+<div class="outline-text-3" id="text-org430a57e">
 <ul class="org-ul">
 <li>Cambiar contraseñas críticas cada 3-6 meses</li>
 <li>No reutilizar contraseñas anteriores</li>
@@ -858,9 +874,9 @@ Además de generar contraseñas fuertes, es importante seguir algunas buenas pr�
 </ul>
 </div>
 </div>
-<div id="outline-container-org82ac3e9" class="outline-3">
-<h3 id="org82ac3e9">Autenticación de dos factores (2FA)</h3>
-<div class="outline-text-3" id="text-org82ac3e9">
+<div id="outline-container-org823f7f2" class="outline-3">
+<h3 id="org823f7f2">Autenticación de dos factores (2FA)</h3>
+<div class="outline-text-3" id="text-org823f7f2">
 <ul class="org-ul">
 <li>Complementar contraseñas con un segundo factor de autenticación</li>
 <li>Configurar apps como Google Authenticator o Authy</li>
@@ -868,9 +884,9 @@ Además de generar contraseñas fuertes, es importante seguir algunas buenas pr�
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcaf35b7" class="outline-3">
-<h3 id="orgcaf35b7">Sistema de clasificación</h3>
-<div class="outline-text-3" id="text-orgcaf35b7">
+<div id="outline-container-orgc3ede33" class="outline-3">
+<h3 id="orgc3ede33">Sistema de clasificación</h3>
+<div class="outline-text-3" id="text-orgc3ede33">
 <ul class="org-ul">
 <li>Categorizar contraseñas según su nivel de sensibilidad</li>
 <li>Ajustar la complejidad según la importancia del servicio</li>
@@ -878,9 +894,9 @@ Además de generar contraseñas fuertes, es importante seguir algunas buenas pr�
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd58f67e" class="outline-3">
-<h3 id="orgd58f67e">Respaldo seguro</h3>
-<div class="outline-text-3" id="text-orgd58f67e">
+<div id="outline-container-org733d40a" class="outline-3">
+<h3 id="org733d40a">Respaldo seguro</h3>
+<div class="outline-text-3" id="text-org733d40a">
 <ul class="org-ul">
 <li>Mantener copias cifradas de las contraseñas más importantes</li>
 <li>Considerar soluciones físicas como claves de respaldo o papel</li>
@@ -889,23 +905,23 @@ Además de generar contraseñas fuertes, es importante seguir algunas buenas pr�
 </div>
 </div>
 </div>
-<div id="outline-container-org6972859" class="outline-2">
-<h2 id="org6972859">Diagrama: Arquitectura del sistema de gestión de contraseñas</h2>
-<div class="outline-text-2" id="text-org6972859">
+<div id="outline-container-org332580d" class="outline-2">
+<h2 id="org332580d">Diagrama: Arquitectura del sistema de gestión de contraseñas</h2>
+<div class="outline-text-2" id="text-org332580d">
 <p>
 El siguiente diagrama PlantUML ilustra la arquitectura completa del sistema de gestión de contraseñas que hemos descrito:
 </p>
 
 
-<figure id="org24a095a">
+<figure id="org30e220e">
 <img src="images/password-system-architecture.png" alt="password-system-architecture.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-orgff6c7a0" class="outline-2">
-<h2 id="orgff6c7a0">Comparativa de enfoques de gestión de contraseñas</h2>
-<div class="outline-text-2" id="text-orgff6c7a0">
+<div id="outline-container-org49846be" class="outline-2">
+<h2 id="org49846be">Comparativa de enfoques de gestión de contraseñas</h2>
+<div class="outline-text-2" id="text-org49846be">
 <p>
 Para poner en perspectiva nuestra solución, comparemos diferentes enfoques para la gestión de contraseñas:
 </p>
@@ -990,56 +1006,56 @@ Para poner en perspectiva nuestra solución, comparemos diferentes enfoques para
 </table>
 </div>
 </div>
-<div id="outline-container-org1d694ca" class="outline-2">
-<h2 id="org1d694ca">Personalizaciones avanzadas del generador de contraseñas</h2>
-<div class="outline-text-2" id="text-org1d694ca">
+<div id="outline-container-org6aa52b2" class="outline-2">
+<h2 id="org6aa52b2">Personalizaciones avanzadas del generador de contraseñas</h2>
+<div class="outline-text-2" id="text-org6aa52b2">
 <p>
 Nuestro script de generación de contraseñas puede personalizarse aún más para satisfacer necesidades específicas:
 </p>
 </div>
-<div id="outline-container-orga33f75c" class="outline-3">
-<h3 id="orga33f75c">Patrones de contraseñas memorizables</h3>
-<div class="outline-text-3" id="text-orga33f75c">
+<div id="outline-container-orgb96344a" class="outline-3">
+<h3 id="orgb96344a">Patrones de contraseñas memorizables</h3>
+<div class="outline-text-3" id="text-orgb96344a">
 <p>
 A veces necesitamos contraseñas que, siendo seguras, también sean memorizables. Podemos modificar nuestro script para generar contraseñas basadas en patrones:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">memorable-password-generator.sh</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">memorable-password-generator.sh</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Definir conjuntos de palabras (esto ser&#237;a mucho m&#225;s extenso en una implementaci&#243;n real)</span>
-<span style="color: #004651;">ADJECTIVES</span>=(<span style="color: #005F00;">"r&#225;pido"</span> <span style="color: #005F00;">"alegre"</span> <span style="color: #005F00;">"verde"</span> <span style="color: #005F00;">"brillante"</span> <span style="color: #005F00;">"suave"</span> <span style="color: #005F00;">"&#225;spero"</span> <span style="color: #005F00;">"dulce"</span> <span style="color: #005F00;">"amargo"</span> <span style="color: #005F00;">"fuerte"</span> <span style="color: #005F00;">"d&#233;bil"</span>)
-<span style="color: #004651;">NOUNS</span>=(<span style="color: #005F00;">"tigre"</span> <span style="color: #005F00;">"monta&#241;a"</span> <span style="color: #005F00;">"oc&#233;ano"</span> <span style="color: #005F00;">"jard&#237;n"</span> <span style="color: #005F00;">"libro"</span> <span style="color: #005F00;">"pluma"</span> <span style="color: #005F00;">"casa"</span> <span style="color: #005F00;">"estrella"</span> <span style="color: #005F00;">"fuego"</span> <span style="color: #005F00;">"nube"</span>)
-<span style="color: #004651;">VERBS</span>=(<span style="color: #005F00;">"corre"</span> <span style="color: #005F00;">"salta"</span> <span style="color: #005F00;">"nada"</span> <span style="color: #005F00;">"vuela"</span> <span style="color: #005F00;">"escribe"</span> <span style="color: #005F00;">"lee"</span> <span style="color: #005F00;">"canta"</span> <span style="color: #005F00;">"baila"</span> <span style="color: #005F00;">"r&#237;e"</span> <span style="color: #005F00;">"llora"</span>)
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Definir conjuntos de palabras (esto ser&#237;a mucho m&#225;s extenso en una implementaci&#243;n real)</span>
+<span style="color: #1857a4;">ADJECTIVES</span>=(<span style="color: #a44185;">"r&#225;pido"</span> <span style="color: #a44185;">"alegre"</span> <span style="color: #a44185;">"verde"</span> <span style="color: #a44185;">"brillante"</span> <span style="color: #a44185;">"suave"</span> <span style="color: #a44185;">"&#225;spero"</span> <span style="color: #a44185;">"dulce"</span> <span style="color: #a44185;">"amargo"</span> <span style="color: #a44185;">"fuerte"</span> <span style="color: #a44185;">"d&#233;bil"</span>)
+<span style="color: #1857a4;">NOUNS</span>=(<span style="color: #a44185;">"tigre"</span> <span style="color: #a44185;">"monta&#241;a"</span> <span style="color: #a44185;">"oc&#233;ano"</span> <span style="color: #a44185;">"jard&#237;n"</span> <span style="color: #a44185;">"libro"</span> <span style="color: #a44185;">"pluma"</span> <span style="color: #a44185;">"casa"</span> <span style="color: #a44185;">"estrella"</span> <span style="color: #a44185;">"fuego"</span> <span style="color: #a44185;">"nube"</span>)
+<span style="color: #1857a4;">VERBS</span>=(<span style="color: #a44185;">"corre"</span> <span style="color: #a44185;">"salta"</span> <span style="color: #a44185;">"nada"</span> <span style="color: #a44185;">"vuela"</span> <span style="color: #a44185;">"escribe"</span> <span style="color: #a44185;">"lee"</span> <span style="color: #a44185;">"canta"</span> <span style="color: #a44185;">"baila"</span> <span style="color: #a44185;">"r&#237;e"</span> <span style="color: #a44185;">"llora"</span>)
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Generar componentes aleatorios</span>
-<span style="color: #AF8700;">get_random_element</span>() {
-    <span style="color: #1F55A0;">local</span> <span style="color: #004651;">array</span>=(<span style="color: #005F00;">"$@"</span>)
-    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"${array[RANDOM % ${#array[@]}]}"</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generar componentes aleatorios</span>
+<span style="color: #dc3eb7;">get_random_element</span>() {
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">array</span>=(<span style="color: #a44185;">"$@"</span>)
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"${array[RANDOM % ${#array[@]}]}"</span>
 }
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Generar una contrase&#241;a memorable</span>
-<span style="color: #AF8700;">generate_memorable_password</span>() {
-    <span style="color: #1F55A0;">local</span> <span style="color: #004651;">adj</span>=$(<span style="color: #1F55A0; font-weight: bold;">get_random_element "${ADJECTIVES[@]}"</span>)
-    <span style="color: #1F55A0;">local</span> <span style="color: #004651;">noun</span>=$(<span style="color: #1F55A0; font-weight: bold;">get_random_element "${NOUNS[@]}"</span>)
-    <span style="color: #1F55A0;">local</span> <span style="color: #004651;">verb</span>=$(<span style="color: #1F55A0; font-weight: bold;">get_random_element "${VERBS[@]}"</span>)
-    <span style="color: #1F55A0;">local</span> <span style="color: #004651;">num</span>=$(<span style="color: #1F55A0; font-weight: bold;">(RANDOM % 1000</span>))
-    <span style="color: #1F55A0;">local</span> <span style="color: #004651;">special_chars</span>=(<span style="color: #005F00;">"!"</span> <span style="color: #005F00;">"@"</span> <span style="color: #005F00;">"#"</span> <span style="color: #005F00;">"$"</span> <span style="color: #005F00;">"%"</span> <span style="color: #005F00;">"&amp;"</span> <span style="color: #005F00;">"*"</span>)
-    <span style="color: #1F55A0;">local</span> <span style="color: #004651;">special</span>=$(<span style="color: #1F55A0; font-weight: bold;">get_random_element "${special_chars[@]}"</span>)
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generar una contrase&#241;a memorable</span>
+<span style="color: #dc3eb7;">generate_memorable_password</span>() {
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">adj</span>=$(<span style="color: #219fd5; font-weight: bold;">get_random_element "${ADJECTIVES[@]}"</span>)
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">noun</span>=$(<span style="color: #219fd5; font-weight: bold;">get_random_element "${NOUNS[@]}"</span>)
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">verb</span>=$(<span style="color: #219fd5; font-weight: bold;">get_random_element "${VERBS[@]}"</span>)
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">num</span>=$(<span style="color: #219fd5; font-weight: bold;">(RANDOM % 1000</span>))
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">special_chars</span>=(<span style="color: #a44185;">"!"</span> <span style="color: #a44185;">"@"</span> <span style="color: #a44185;">"#"</span> <span style="color: #a44185;">"$"</span> <span style="color: #a44185;">"%"</span> <span style="color: #a44185;">"&amp;"</span> <span style="color: #a44185;">"*"</span>)
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">special</span>=$(<span style="color: #219fd5; font-weight: bold;">get_random_element "${special_chars[@]}"</span>)
 
-    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Capitalizar primera letra de cada palabra para mayor seguridad</span>
-    <span style="color: #004651;">adj</span>=$(<span style="color: #1F55A0; font-weight: bold;">echo "$adj" | sed 's/\(.\</span><span style="color: #005F00;">)/\u\1/'</span>)
-    <span style="color: #004651;">noun</span>=$(<span style="color: #1F55A0; font-weight: bold;">echo "$noun" | sed 's/\(.\</span><span style="color: #005F00;">)/\u\1/'</span>)
-    <span style="color: #004651;">verb</span>=$(<span style="color: #1F55A0; font-weight: bold;">echo "$verb" | sed 's/\(.\</span><span style="color: #005F00;">)/\u\1/'</span>)
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Capitalizar primera letra de cada palabra para mayor seguridad</span>
+    <span style="color: #1857a4;">adj</span>=$(<span style="color: #219fd5; font-weight: bold;">echo "$adj" | sed 's/\(.\</span><span style="color: #a44185;">)/\u\1/'</span>)
+    <span style="color: #1857a4;">noun</span>=$(<span style="color: #219fd5; font-weight: bold;">echo "$noun" | sed 's/\(.\</span><span style="color: #a44185;">)/\u\1/'</span>)
+    <span style="color: #1857a4;">verb</span>=$(<span style="color: #219fd5; font-weight: bold;">echo "$verb" | sed 's/\(.\</span><span style="color: #a44185;">)/\u\1/'</span>)
 
-    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"${adj}${special}${noun}${num}${verb}"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"${adj}${special}${noun}${num}${verb}"</span>
 }
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Generar y mostrar</span>
-<span style="color: #004651;">PASSWORD</span>=$(<span style="color: #1F55A0; font-weight: bold;">generate_memorable_password</span>)
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Contrase&#241;a memorable generada: $PASSWORD"</span>
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Esta contrase&#241;a es m&#225;s f&#225;cil de recordar pero sigue siendo segura."</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generar y mostrar</span>
+<span style="color: #1857a4;">PASSWORD</span>=$(<span style="color: #219fd5; font-weight: bold;">generate_memorable_password</span>)
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Contrase&#241;a memorable generada: $PASSWORD"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Esta contrase&#241;a es m&#225;s f&#225;cil de recordar pero sigue siendo segura."</span>
 </pre>
 </div>
 
@@ -1048,81 +1064,81 @@ Integramos esta funcionalidad en Emacs:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">generate-memorable-password</span> ()
-  <span style="color: #004700; font-style: italic;">"Genera una contrase&#241;a memorable pero segura."</span>
-  (<span style="color: #D70000;">interactive</span>)
-  (<span style="color: #D70000;">let</span> ((script-path <span style="color: #005F00;">"~/bin/memorable-password-generator.sh"</span>))
-    (<span style="color: #D70000;">if</span> (file-exists-p script-path)
-        (<span style="color: #D70000;">let</span> ((password 
+<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">generate-memorable-password</span> ()
+  <span style="color: #60a8a1; font-style: italic;">"Genera una contrase&#241;a memorable pero segura."</span>
+  (<span style="color: #219fd5; font-style: italic;">interactive</span>)
+  (<span style="color: #219fd5; font-style: italic;">let</span> ((script-path <span style="color: #a44185;">"~/bin/memorable-password-generator.sh"</span>))
+    (<span style="color: #219fd5; font-style: italic;">if</span> (file-exists-p script-path)
+        (<span style="color: #219fd5; font-style: italic;">let</span> ((password 
                (string-trim 
                 (shell-command-to-string script-path))))
           (kill-new password)
-          (message <span style="color: #005F00;">"Contrase&#241;a memorable generada y copiada: %s"</span> password))
-      (message <span style="color: #005F00;">"Script no encontrado en %s"</span> script-path))))
+          (message <span style="color: #a44185;">"Contrase&#241;a memorable generada y copiada: %s"</span> password))
+      (message <span style="color: #a44185;">"Script no encontrado en %s"</span> script-path))))
 
-(global-set-key (kbd <span style="color: #005F00;">"C-c m"</span>) 'generate-memorable-password)
+(global-set-key (kbd <span style="color: #a44185;">"C-c m"</span>) 'generate-memorable-password)
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org70ee421" class="outline-3">
-<h3 id="org70ee421">Generador de frases de contraseña (diceware)</h3>
-<div class="outline-text-3" id="text-org70ee421">
+<div id="outline-container-org077f6d8" class="outline-3">
+<h3 id="org077f6d8">Generador de frases de contraseña (diceware)</h3>
+<div class="outline-text-3" id="text-org077f6d8">
 <p>
 Las frases de contraseña ofrecen alta entropía siendo más memorizables:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">passphrase-generator.sh</span>
+<pre class="src src-bash"><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">passphrase-generator.sh</span>
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Simulamos dados para seleccionar palabras del diccionario diceware</span>
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">En una implementaci&#243;n real, usar&#237;amos un diccionario completo</span>
-<span style="color: #004651;">DICEWARE_DICT</span>=(
-    <span style="color: #005F00;">"abaco"</span> <span style="color: #005F00;">"badajo"</span> <span style="color: #005F00;">"cabra"</span> <span style="color: #005F00;">"dados"</span> <span style="color: #005F00;">"efecto"</span> <span style="color: #005F00;">"f&#225;bula"</span> <span style="color: #005F00;">"gacela"</span> <span style="color: #005F00;">"hacedor"</span>
-    <span style="color: #005F00;">"icono"</span> <span style="color: #005F00;">"jab&#243;n"</span> <span style="color: #005F00;">"kiosco"</span> <span style="color: #005F00;">"labio"</span> <span style="color: #005F00;">"maceta"</span> <span style="color: #005F00;">"nadar"</span> <span style="color: #005F00;">"oasis"</span> <span style="color: #005F00;">"pacto"</span>
-    <span style="color: #005F00;">"queso"</span> <span style="color: #005F00;">"r&#225;bano"</span> <span style="color: #005F00;">"s&#225;bana"</span> <span style="color: #005F00;">"tabla"</span> <span style="color: #005F00;">"&#250;nico"</span> <span style="color: #005F00;">"vac&#237;o"</span> <span style="color: #005F00;">"wafle"</span> <span style="color: #005F00;">"xil&#243;fono"</span>
-    <span style="color: #005F00;">"yeso"</span> <span style="color: #005F00;">"zarza"</span> <span style="color: #005F00;">"&#225;guila"</span> <span style="color: #005F00;">"b&#250;ho"</span> <span style="color: #005F00;">"c&#225;liz"</span> <span style="color: #005F00;">"d&#225;til"</span> <span style="color: #005F00;">"&#233;lite"</span> <span style="color: #005F00;">"f&#233;nix"</span>
-    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Este diccionario ser&#237;a mucho m&#225;s extenso en la realidad</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Simulamos dados para seleccionar palabras del diccionario diceware</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">En una implementaci&#243;n real, usar&#237;amos un diccionario completo</span>
+<span style="color: #1857a4;">DICEWARE_DICT</span>=(
+    <span style="color: #a44185;">"abaco"</span> <span style="color: #a44185;">"badajo"</span> <span style="color: #a44185;">"cabra"</span> <span style="color: #a44185;">"dados"</span> <span style="color: #a44185;">"efecto"</span> <span style="color: #a44185;">"f&#225;bula"</span> <span style="color: #a44185;">"gacela"</span> <span style="color: #a44185;">"hacedor"</span>
+    <span style="color: #a44185;">"icono"</span> <span style="color: #a44185;">"jab&#243;n"</span> <span style="color: #a44185;">"kiosco"</span> <span style="color: #a44185;">"labio"</span> <span style="color: #a44185;">"maceta"</span> <span style="color: #a44185;">"nadar"</span> <span style="color: #a44185;">"oasis"</span> <span style="color: #a44185;">"pacto"</span>
+    <span style="color: #a44185;">"queso"</span> <span style="color: #a44185;">"r&#225;bano"</span> <span style="color: #a44185;">"s&#225;bana"</span> <span style="color: #a44185;">"tabla"</span> <span style="color: #a44185;">"&#250;nico"</span> <span style="color: #a44185;">"vac&#237;o"</span> <span style="color: #a44185;">"wafle"</span> <span style="color: #a44185;">"xil&#243;fono"</span>
+    <span style="color: #a44185;">"yeso"</span> <span style="color: #a44185;">"zarza"</span> <span style="color: #a44185;">"&#225;guila"</span> <span style="color: #a44185;">"b&#250;ho"</span> <span style="color: #a44185;">"c&#225;liz"</span> <span style="color: #a44185;">"d&#225;til"</span> <span style="color: #a44185;">"&#233;lite"</span> <span style="color: #a44185;">"f&#233;nix"</span>
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Este diccionario ser&#237;a mucho m&#225;s extenso en la realidad</span>
 )
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Generar frase de contrase&#241;a</span>
-<span style="color: #AF8700;">generate_passphrase</span>() {
-    <span style="color: #1F55A0;">local</span> <span style="color: #004651;">num_words</span>=$<span style="color: #004651;">1</span>
-    <span style="color: #1F55A0;">local</span> <span style="color: #004651;">passphrase</span>=<span style="color: #005F00;">""</span>
-    <span style="color: #1F55A0;">local</span> <span style="color: #004651;">separator</span>=$<span style="color: #004651;">2</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generar frase de contrase&#241;a</span>
+<span style="color: #dc3eb7;">generate_passphrase</span>() {
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">num_words</span>=$<span style="color: #1857a4;">1</span>
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">passphrase</span>=<span style="color: #a44185;">""</span>
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">separator</span>=$<span style="color: #1857a4;">2</span>
 
-    <span style="color: #D70000;">for</span> ((<span style="color: #004651;">i</span>=0; i&lt;num_words; i++)); <span style="color: #D70000;">do</span>
-        <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Seleccionar palabra aleatoria</span>
-        <span style="color: #004651;">index</span>=$(<span style="color: #1F55A0; font-weight: bold;">(RANDOM % ${#DICEWARE_DICT[@]}</span>))
-        <span style="color: #004651;">word</span>=${<span style="color: #004651;">DICEWARE_DICT</span>[$<span style="color: #004651;">index</span>]}
+    <span style="color: #219fd5; font-style: italic;">for</span> ((<span style="color: #1857a4;">i</span>=0; i&lt;num_words; i++)); <span style="color: #219fd5; font-style: italic;">do</span>
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Seleccionar palabra aleatoria</span>
+        <span style="color: #1857a4;">index</span>=$(<span style="color: #219fd5; font-weight: bold;">(RANDOM % ${#DICEWARE_DICT[@]}</span>))
+        <span style="color: #1857a4;">word</span>=${<span style="color: #1857a4;">DICEWARE_DICT</span>[$<span style="color: #1857a4;">index</span>]}
 
-        <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">A&#241;adir capitalizaci&#243;n aleatoria para mayor seguridad</span>
-        <span style="color: #D70000;">if</span> ((RANDOM % 2)); <span style="color: #D70000;">then</span>
-            <span style="color: #004651;">word</span>=$(<span style="color: #1F55A0; font-weight: bold;">echo "$word" | sed 's/\(.\</span><span style="color: #005F00;">)/\u\1/'</span>)
-        <span style="color: #D70000;">fi</span>
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">A&#241;adir capitalizaci&#243;n aleatoria para mayor seguridad</span>
+        <span style="color: #219fd5; font-style: italic;">if</span> ((RANDOM % 2)); <span style="color: #219fd5; font-style: italic;">then</span>
+            <span style="color: #1857a4;">word</span>=$(<span style="color: #219fd5; font-weight: bold;">echo "$word" | sed 's/\(.\</span><span style="color: #a44185;">)/\u\1/'</span>)
+        <span style="color: #219fd5; font-style: italic;">fi</span>
 
-        <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">A&#241;adir a la frase</span>
-        <span style="color: #D70000;">if</span> [[ -n <span style="color: #005F00;">"$passphrase"</span> ]]; <span style="color: #D70000;">then</span>
-            <span style="color: #004651;">passphrase</span>=<span style="color: #005F00;">"${passphrase}${separator}${word}"</span>
-        <span style="color: #D70000;">else</span>
-            <span style="color: #004651;">passphrase</span>=$<span style="color: #004651;">word</span>
-        <span style="color: #D70000;">fi</span>
-    <span style="color: #D70000;">done</span>
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">A&#241;adir a la frase</span>
+        <span style="color: #219fd5; font-style: italic;">if</span> [[ -n <span style="color: #a44185;">"$passphrase"</span> ]]; <span style="color: #219fd5; font-style: italic;">then</span>
+            <span style="color: #1857a4;">passphrase</span>=<span style="color: #a44185;">"${passphrase}${separator}${word}"</span>
+        <span style="color: #219fd5; font-style: italic;">else</span>
+            <span style="color: #1857a4;">passphrase</span>=$<span style="color: #1857a4;">word</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">done</span>
 
-    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">A&#241;adir un n&#250;mero aleatorio al final</span>
-    <span style="color: #004651;">passphrase</span>=<span style="color: #005F00;">"${passphrase}${separator}$(</span><span style="color: #1F55A0; font-weight: bold;">($RANDOM % 100</span><span style="color: #005F00;">))"</span>
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">A&#241;adir un n&#250;mero aleatorio al final</span>
+    <span style="color: #1857a4;">passphrase</span>=<span style="color: #a44185;">"${passphrase}${separator}$(</span><span style="color: #219fd5; font-weight: bold;">($RANDOM % 100</span><span style="color: #a44185;">))"</span>
 
-    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"$passphrase"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"$passphrase"</span>
 }
 
-<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Generar y mostrar</span>
-<span style="color: #004651;">NUM_WORDS</span>=${<span style="color: #004651;">1</span>:-4}
-<span style="color: #004651;">SEPARATOR</span>=${<span style="color: #004651;">2</span>:--}
-<span style="color: #004651;">PASSPHRASE</span>=$(<span style="color: #1F55A0; font-weight: bold;">generate_passphrase $NUM_WORDS $SEPARATOR</span>)
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generar y mostrar</span>
+<span style="color: #1857a4;">NUM_WORDS</span>=${<span style="color: #1857a4;">1</span>:-4}
+<span style="color: #1857a4;">SEPARATOR</span>=${<span style="color: #1857a4;">2</span>:--}
+<span style="color: #1857a4;">PASSPHRASE</span>=$(<span style="color: #219fd5; font-weight: bold;">generate_passphrase $NUM_WORDS $SEPARATOR</span>)
 
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Frase de contrase&#241;a generada: $PASSPHRASE"</span>
-<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Esta frase tiene alta entrop&#237;a pero es m&#225;s f&#225;cil de recordar."</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Frase de contrase&#241;a generada: $PASSPHRASE"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Esta frase tiene alta entrop&#237;a pero es m&#225;s f&#225;cil de recordar."</span>
 </pre>
 </div>
 
@@ -1131,41 +1147,41 @@ Y la correspondiente integración en Emacs:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">generate-passphrase</span> (words separator)
-  <span style="color: #004700; font-style: italic;">"Genera una frase de contrase&#241;a usando el m&#233;todo diceware.</span>
-<span style="color: #004700; font-style: italic;">WORDS es el n&#250;mero de palabras a incluir.</span>
-<span style="color: #004700; font-style: italic;">SEPARATOR es el car&#225;cter separador entre palabras."</span>
-  (<span style="color: #D70000;">interactive</span>
+<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">generate-passphrase</span> (words separator)
+  <span style="color: #60a8a1; font-style: italic;">"Genera una frase de contrase&#241;a usando el m&#233;todo diceware.</span>
+<span style="color: #60a8a1; font-style: italic;">WORDS es el n&#250;mero de palabras a incluir.</span>
+<span style="color: #60a8a1; font-style: italic;">SEPARATOR es el car&#225;cter separador entre palabras."</span>
+  (<span style="color: #219fd5; font-style: italic;">interactive</span>
    (list
-    (read-number <span style="color: #005F00;">"N&#250;mero de palabras: "</span> 4)
-    (read-string <span style="color: #005F00;">"Separador: "</span> <span style="color: #005F00;">"-"</span>)))
+    (read-number <span style="color: #a44185;">"N&#250;mero de palabras: "</span> 4)
+    (read-string <span style="color: #a44185;">"Separador: "</span> <span style="color: #a44185;">"-"</span>)))
 
-  (<span style="color: #D70000;">let</span> ((script-path <span style="color: #005F00;">"~/bin/passphrase-generator.sh"</span>))
-    (<span style="color: #D70000;">if</span> (file-exists-p script-path)
-        (<span style="color: #D70000;">let</span> ((passphrase 
+  (<span style="color: #219fd5; font-style: italic;">let</span> ((script-path <span style="color: #a44185;">"~/bin/passphrase-generator.sh"</span>))
+    (<span style="color: #219fd5; font-style: italic;">if</span> (file-exists-p script-path)
+        (<span style="color: #219fd5; font-style: italic;">let</span> ((passphrase 
                (string-trim 
                 (shell-command-to-string 
-                 (format <span style="color: #005F00;">"%s %d %s"</span> script-path words separator)))))
+                 (format <span style="color: #a44185;">"%s %d %s"</span> script-path words separator)))))
           (kill-new passphrase)
-          (message <span style="color: #005F00;">"Frase de contrase&#241;a generada y copiada: %s"</span> passphrase))
-      (message <span style="color: #005F00;">"Script no encontrado en %s"</span> script-path))))
+          (message <span style="color: #a44185;">"Frase de contrase&#241;a generada y copiada: %s"</span> passphrase))
+      (message <span style="color: #a44185;">"Script no encontrado en %s"</span> script-path))))
 
-(global-set-key (kbd <span style="color: #005F00;">"C-c f"</span>) 'generate-passphrase)
+(global-set-key (kbd <span style="color: #a44185;">"C-c f"</span>) 'generate-passphrase)
 </pre>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org4109111" class="outline-2">
-<h2 id="org4109111">Estrategias de migración a contraseñas fuertes</h2>
-<div class="outline-text-2" id="text-org4109111">
+<div id="outline-container-orgad83263" class="outline-2">
+<h2 id="orgad83263">Estrategias de migración a contraseñas fuertes</h2>
+<div class="outline-text-2" id="text-orgad83263">
 <p>
 La transición a un sistema de contraseñas fuertes puede parecer abrumadora. Aquí hay un enfoque gradual que facilita la adopción:
 </p>
 </div>
-<div id="outline-container-org3aade3f" class="outline-3">
-<h3 id="org3aade3f">Plan por fases</h3>
-<div class="outline-text-3" id="text-org3aade3f">
+<div id="outline-container-org49b6640" class="outline-3">
+<h3 id="org49b6640">Plan por fases</h3>
+<div class="outline-text-3" id="text-org49b6640">
 <ol class="org-ol">
 <li><b>Fase 1: Inventario</b>
 <ul class="org-ul">
@@ -1197,100 +1213,100 @@ La transición a un sistema de contraseñas fuertes puede parecer abrumadora. Aq
 </ol>
 </div>
 </div>
-<div id="outline-container-orga573168" class="outline-3">
-<h3 id="orga573168">Script de auditoría de contraseñas</h3>
-<div class="outline-text-3" id="text-orga573168">
+<div id="outline-container-org1263d81" class="outline-3">
+<h3 id="org1263d81">Script de auditoría de contraseñas</h3>
+<div class="outline-text-3" id="text-org1263d81">
 <p>
 El siguiente script en Emacs Lisp ayuda a evaluar la seguridad de las contraseñas existentes:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">audit-password-strength</span> (password)
-  <span style="color: #004700; font-style: italic;">"Audita la fortaleza de una contrase&#241;a y sugiere mejoras."</span>
-  (<span style="color: #D70000;">interactive</span> <span style="color: #005F00;">"sContrase&#241;a a auditar: "</span>)
+<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">defun</span> <span style="color: #dc3eb7;">audit-password-strength</span> (password)
+  <span style="color: #60a8a1; font-style: italic;">"Audita la fortaleza de una contrase&#241;a y sugiere mejoras."</span>
+  (<span style="color: #219fd5; font-style: italic;">interactive</span> <span style="color: #a44185;">"sContrase&#241;a a auditar: "</span>)
 
-  (<span style="color: #D70000;">let</span> ((length (length password))
-        (has-uppercase (string-match-p <span style="color: #005F00;">"[A-Z]"</span> password))
-        (has-lowercase (string-match-p <span style="color: #005F00;">"[a-z]"</span> password))
-        (has-numbers (string-match-p <span style="color: #005F00;">"[0-9]"</span> password))
-        (has-symbols (string-match-p <span style="color: #005F00;">"[</span><span style="color: #1F55A0; font-weight: bold;">^</span><span style="color: #005F00;">a-zA-Z0-9]"</span> password))
-        (has-sequences (string-match-p <span style="color: #005F00;">"</span><span style="color: #1F55A0; font-weight: bold;">\\</span><span style="color: #1F55A0; font-weight: bold;">(</span><span style="color: #005F00;">abc</span><span style="color: #1F55A0; font-weight: bold;">\\</span><span style="color: #1F55A0; font-weight: bold;">|</span><span style="color: #005F00;">123</span><span style="color: #1F55A0; font-weight: bold;">\\</span><span style="color: #1F55A0; font-weight: bold;">|</span><span style="color: #005F00;">qwe</span><span style="color: #1F55A0; font-weight: bold;">\\</span><span style="color: #1F55A0; font-weight: bold;">)</span><span style="color: #005F00;">"</span> password))
+  (<span style="color: #219fd5; font-style: italic;">let</span> ((length (length password))
+        (has-uppercase (string-match-p <span style="color: #a44185;">"[A-Z]"</span> password))
+        (has-lowercase (string-match-p <span style="color: #a44185;">"[a-z]"</span> password))
+        (has-numbers (string-match-p <span style="color: #a44185;">"[0-9]"</span> password))
+        (has-symbols (string-match-p <span style="color: #a44185;">"[</span><span style="color: #219fd5; font-weight: bold;">^</span><span style="color: #a44185;">a-zA-Z0-9]"</span> password))
+        (has-sequences (string-match-p <span style="color: #a44185;">"</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">(</span><span style="color: #a44185;">abc</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">123</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">|</span><span style="color: #a44185;">qwe</span><span style="color: #219fd5; font-weight: bold;">\\</span><span style="color: #219fd5; font-weight: bold;">)</span><span style="color: #a44185;">"</span> password))
         (score 0)
         (feedback '()))
 
-    <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Evaluaci&#243;n de longitud</span>
-    (<span style="color: #D70000;">cond</span>
+    <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Evaluaci&#243;n de longitud</span>
+    (<span style="color: #219fd5; font-style: italic;">cond</span>
      ((&lt; length 8)
-      (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Longitud cr&#237;tica: menos de 8 caracteres."</span> feedback))
+      (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Longitud cr&#237;tica: menos de 8 caracteres."</span> feedback))
      ((&lt; length 12)
-      (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Longitud insuficiente: menos de 12 caracteres."</span> feedback)
-      (<span style="color: #D70000;">cl-incf</span> score))
+      (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Longitud insuficiente: menos de 12 caracteres."</span> feedback)
+      (<span style="color: #219fd5; font-style: italic;">cl-incf</span> score))
      ((&lt; length 16)
-      (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Longitud aceptable: entre 12-16 caracteres."</span> feedback)
-      (<span style="color: #D70000;">cl-incf</span> score 2))
+      (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Longitud aceptable: entre 12-16 caracteres."</span> feedback)
+      (<span style="color: #219fd5; font-style: italic;">cl-incf</span> score 2))
      (t
-      (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Longitud excelente: m&#225;s de 16 caracteres."</span> feedback)
-      (<span style="color: #D70000;">cl-incf</span> score 3)))
+      (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Longitud excelente: m&#225;s de 16 caracteres."</span> feedback)
+      (<span style="color: #219fd5; font-style: italic;">cl-incf</span> score 3)))
 
-    <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Evaluaci&#243;n de complejidad</span>
-    (<span style="color: #D70000;">when</span> has-uppercase (<span style="color: #D70000;">cl-incf</span> score) (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Contiene may&#250;sculas [+]"</span> feedback))
-    (<span style="color: #D70000;">when</span> has-lowercase (<span style="color: #D70000;">cl-incf</span> score) (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Contiene min&#250;sculas [+]"</span> feedback))
-    (<span style="color: #D70000;">when</span> has-numbers (<span style="color: #D70000;">cl-incf</span> score) (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Contiene n&#250;meros [+]"</span> feedback))
-    (<span style="color: #D70000;">when</span> has-symbols (<span style="color: #D70000;">cl-incf</span> score) (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Contiene s&#237;mbolos especiales [+]"</span> feedback))
+    <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Evaluaci&#243;n de complejidad</span>
+    (<span style="color: #219fd5; font-style: italic;">when</span> has-uppercase (<span style="color: #219fd5; font-style: italic;">cl-incf</span> score) (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Contiene may&#250;sculas [+]"</span> feedback))
+    (<span style="color: #219fd5; font-style: italic;">when</span> has-lowercase (<span style="color: #219fd5; font-style: italic;">cl-incf</span> score) (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Contiene min&#250;sculas [+]"</span> feedback))
+    (<span style="color: #219fd5; font-style: italic;">when</span> has-numbers (<span style="color: #219fd5; font-style: italic;">cl-incf</span> score) (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Contiene n&#250;meros [+]"</span> feedback))
+    (<span style="color: #219fd5; font-style: italic;">when</span> has-symbols (<span style="color: #219fd5; font-style: italic;">cl-incf</span> score) (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Contiene s&#237;mbolos especiales [+]"</span> feedback))
 
-    <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Penalizaciones</span>
-    (<span style="color: #D70000;">when</span> has-sequences
-      (<span style="color: #D70000;">cl-decf</span> score)
-      (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Contiene secuencias predecibles (ej: abc, 123) [-]"</span> feedback))
+    <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Penalizaciones</span>
+    (<span style="color: #219fd5; font-style: italic;">when</span> has-sequences
+      (<span style="color: #219fd5; font-style: italic;">cl-decf</span> score)
+      (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Contiene secuencias predecibles (ej: abc, 123) [-]"</span> feedback))
 
-    (<span style="color: #D70000;">when</span> (string-match-p (regexp-quote (user-login-name)) password)
-      (<span style="color: #D70000;">cl-decf</span> score 2)
-      (<span style="color: #D70000;">push</span> <span style="color: #005F00;">"Contiene tu nombre de usuario [-]"</span> feedback))
+    (<span style="color: #219fd5; font-style: italic;">when</span> (string-match-p (regexp-quote (user-login-name)) password)
+      (<span style="color: #219fd5; font-style: italic;">cl-decf</span> score 2)
+      (<span style="color: #219fd5; font-style: italic;">push</span> <span style="color: #a44185;">"Contiene tu nombre de usuario [-]"</span> feedback))
 
-    <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Mostrar resultados</span>
-    (<span style="color: #D70000;">with-output-to-temp-buffer</span> <span style="color: #005F00;">"*Password Audit*"</span>
-      (switch-to-buffer <span style="color: #005F00;">"*Password Audit*"</span>)
+    <span style="color: #8195b0; font-style: italic;">;; </span><span style="color: #8195b0; font-style: italic;">Mostrar resultados</span>
+    (<span style="color: #219fd5; font-style: italic;">with-output-to-temp-buffer</span> <span style="color: #a44185;">"*Password Audit*"</span>
+      (switch-to-buffer <span style="color: #a44185;">"*Password Audit*"</span>)
       (erase-buffer)
-      (insert <span style="color: #005F00;">"=== AUDITOR&#205;A DE SEGURIDAD DE CONTRASE&#209;A ===\n\n"</span>)
-      (insert (format <span style="color: #005F00;">"Puntuaci&#243;n: %d/10\n\n"</span> score))
-      (insert <span style="color: #005F00;">"An&#225;lisis:\n"</span>)
-      (<span style="color: #D70000;">dolist</span> (item (reverse feedback))
-        (insert (format <span style="color: #005F00;">"&#8226; %s\n"</span> item)))
+      (insert <span style="color: #a44185;">"=== AUDITOR&#205;A DE SEGURIDAD DE CONTRASE&#209;A ===\n\n"</span>)
+      (insert (format <span style="color: #a44185;">"Puntuaci&#243;n: %d/10\n\n"</span> score))
+      (insert <span style="color: #a44185;">"An&#225;lisis:\n"</span>)
+      (<span style="color: #219fd5; font-style: italic;">dolist</span> (item (reverse feedback))
+        (insert (format <span style="color: #a44185;">"&#8226; %s\n"</span> item)))
 
-      (insert <span style="color: #005F00;">"\nRecomendaciones:\n"</span>)
-      (<span style="color: #D70000;">cond</span>
+      (insert <span style="color: #a44185;">"\nRecomendaciones:\n"</span>)
+      (<span style="color: #219fd5; font-style: italic;">cond</span>
        ((&lt; score 4)
-        (insert <span style="color: #005F00;">"&#9888;&#65039; Contrase&#241;a D&#201;BIL - Se recomienda cambio inmediato\n"</span>)
-        (insert <span style="color: #005F00;">"&#8226; Utilice la funci&#243;n generate-strong-password para crear una nueva\n"</span>)
-        (insert <span style="color: #005F00;">"&#8226; Aumente la longitud a m&#237;nimo 16 caracteres\n"</span>)
-        (insert <span style="color: #005F00;">"&#8226; Incluya caracteres de todas las categor&#237;as\n"</span>))
+        (insert <span style="color: #a44185;">"&#9888;&#65039; Contrase&#241;a D&#201;BIL - Se recomienda cambio inmediato\n"</span>)
+        (insert <span style="color: #a44185;">"&#8226; Utilice la funci&#243;n generate-strong-password para crear una nueva\n"</span>)
+        (insert <span style="color: #a44185;">"&#8226; Aumente la longitud a m&#237;nimo 16 caracteres\n"</span>)
+        (insert <span style="color: #a44185;">"&#8226; Incluya caracteres de todas las categor&#237;as\n"</span>))
        ((&lt; score 7)
-        (insert <span style="color: #005F00;">"&#9888;&#65039; Contrase&#241;a MODERADA - Se recomienda mejora\n"</span>)
-        (insert <span style="color: #005F00;">"&#8226; Considere aumentar la longitud\n"</span>)
-        (insert <span style="color: #005F00;">"&#8226; A&#241;ada el tipo de caracteres que faltan\n"</span>))
+        (insert <span style="color: #a44185;">"&#9888;&#65039; Contrase&#241;a MODERADA - Se recomienda mejora\n"</span>)
+        (insert <span style="color: #a44185;">"&#8226; Considere aumentar la longitud\n"</span>)
+        (insert <span style="color: #a44185;">"&#8226; A&#241;ada el tipo de caracteres que faltan\n"</span>))
        (t
-        (insert <span style="color: #005F00;">"&#9989; Contrase&#241;a FUERTE - Cumple con los est&#225;ndares recomendados\n"</span>)
-        (insert <span style="color: #005F00;">"&#8226; Recuerde cambiarla peri&#243;dicamente\n"</span>)
-        (insert <span style="color: #005F00;">"&#8226; Aseg&#250;rese de no reutilizarla en otros servicios\n"</span>)))
+        (insert <span style="color: #a44185;">"&#9989; Contrase&#241;a FUERTE - Cumple con los est&#225;ndares recomendados\n"</span>)
+        (insert <span style="color: #a44185;">"&#8226; Recuerde cambiarla peri&#243;dicamente\n"</span>)
+        (insert <span style="color: #a44185;">"&#8226; Aseg&#250;rese de no reutilizarla en otros servicios\n"</span>)))
 
-      (insert <span style="color: #005F00;">"\n=== FIN DEL AN&#193;LISIS ===\n"</span>))))
+      (insert <span style="color: #a44185;">"\n=== FIN DEL AN&#193;LISIS ===\n"</span>))))
 
-(global-set-key (kbd <span style="color: #005F00;">"C-c C-p a"</span>) 'audit-password-strength)
+(global-set-key (kbd <span style="color: #a44185;">"C-c C-p a"</span>) 'audit-password-strength)
 </pre>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-orgce55172" class="outline-2">
-<h2 id="orgce55172">Recursos adicionales</h2>
-<div class="outline-text-2" id="text-orgce55172">
+<div id="outline-container-org9de327c" class="outline-2">
+<h2 id="org9de327c">Recursos adicionales</h2>
+<div class="outline-text-2" id="text-org9de327c">
 <p>
 Para profundizar en la seguridad de contraseñas y su gestión con Emacs, recomendamos consultar:
 </p>
 </div>
-<div id="outline-container-org43a0ba7" class="outline-3">
-<h3 id="org43a0ba7">Paquetes de Emacs relacionados</h3>
-<div class="outline-text-3" id="text-org43a0ba7">
+<div id="outline-container-orga335b13" class="outline-3">
+<h3 id="orga335b13">Paquetes de Emacs relacionados</h3>
+<div class="outline-text-3" id="text-orga335b13">
 <ul class="org-ul">
 <li><code>auth-source.el</code> - Sistema base para autenticación</li>
 <li><code>auth-source-pass.el</code> - Integración con pass</li>
@@ -1301,9 +1317,9 @@ Para profundizar en la seguridad de contraseñas y su gestión con Emacs, recome
 </ul>
 </div>
 </div>
-<div id="outline-container-org172ee39" class="outline-3">
-<h3 id="org172ee39">Lecturas recomendadas</h3>
-<div class="outline-text-3" id="text-org172ee39">
+<div id="outline-container-org39660a0" class="outline-3">
+<h3 id="org39660a0">Lecturas recomendadas</h3>
+<div class="outline-text-3" id="text-org39660a0">
 <ul class="org-ul">
 <li>"Practical Cryptography" por Niels Ferguson y Bruce Schneier</li>
 <li>"Password Strength" en el NIST Special Publication 800-63B</li>
@@ -1312,9 +1328,9 @@ Para profundizar en la seguridad de contraseñas y su gestión con Emacs, recome
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd537f0f" class="outline-3">
-<h3 id="orgd537f0f">Herramientas complementarias</h3>
-<div class="outline-text-3" id="text-orgd537f0f">
+<div id="outline-container-org4e82b7b" class="outline-3">
+<h3 id="org4e82b7b">Herramientas complementarias</h3>
+<div class="outline-text-3" id="text-org4e82b7b">
 <ul class="org-ul">
 <li><code>pass</code> - El estándar Unix para gestores de contraseñas</li>
 <li><code>gpg</code> - GNU Privacy Guard para cifrado</li>
@@ -1324,9 +1340,9 @@ Para profundizar en la seguridad de contraseñas y su gestión con Emacs, recome
 </div>
 </div>
 </div>
-<div id="outline-container-org5ea2d48" class="outline-2">
-<h2 id="org5ea2d48">Conclusión</h2>
-<div class="outline-text-2" id="text-org5ea2d48">
+<div id="outline-container-org86fd205" class="outline-2">
+<h2 id="org86fd205">Conclusión</h2>
+<div class="outline-text-2" id="text-org86fd205">
 <p>
 La seguridad de nuestras contraseñas no es una preocupación menor en la era digital. Con las herramientas adecuadas y un enfoque sistemático, podemos transformar esta necesidad en una fortaleza. Emacs, con su flexibilidad y capacidad de integración, nos proporciona el entorno perfecto para implementar un sistema de gestión de contraseñas personalizado, seguro y eficiente.
 </p>
@@ -1359,9 +1375,9 @@ Como diría Richard Stallman: "La libertad en el software es también la liberta
 </p>
 </div>
 </div>
-<div id="outline-container-org8c34d28" class="outline-2">
-<h2 id="org8c34d28">Nota sobre la ejecución del script</h2>
-<div class="outline-text-2" id="text-org8c34d28">
+<div id="outline-container-org584a746" class="outline-2">
+<h2 id="org584a746">Nota sobre la ejecución del script</h2>
+<div class="outline-text-2" id="text-org584a746">
 <p>
 Para utilizar el script de generación de contraseñas presentado en este artículo:
 </p>
@@ -1387,7 +1403,7 @@ A partir de ese momento, podrás generar contraseñas seguras con <code>C-c p</c
 </p>
 </div>
 </div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-contraseñas.html">contraseñas</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-criptografía.html">criptografía</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> </div></div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-contraseñas.html">contraseñas</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-criptografía.html">criptografía</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div></div>
 <div id="postamble" class="status"><div class='postamble'>
          <hr class='footer-hr'>
          <p style="display: flex; align-items: center;">
