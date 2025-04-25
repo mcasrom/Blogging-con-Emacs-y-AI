@@ -1,0 +1,2776 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title><![CDATA[Emacs con esteroides - texto,]]></title>
+<description><![CDATA[Emacs con esteroides - texto,]]></description>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-texto,.html</link>
+<lastBuildDate>Fri, 25 Apr 2025 05:16:34 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Guía Completa de Emacs y Org Mode: De Principiante a Experto]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgefb31a6">1. Prefacio</a>
+<ul>
+<li><a href="#org1e70881">1.1. Estructura de la guía</a></li>
+</ul>
+</li>
+<li><a href="#org0502a84">2. Introducción a Emacs y Org Mode</a>
+<ul>
+<li><a href="#orgeb8b3a1">2.1. ¿Qué es Emacs?</a></li>
+<li><a href="#org316b7d4">2.2. ¿Qué es Org Mode?</a></li>
+<li><a href="#org79f1c28">2.3. ¿Por qué aprender Emacs y Org Mode?</a></li>
+</ul>
+</li>
+<li><a href="#orgbcea52d">3. Instalación y configuración inicial</a>
+<ul>
+<li><a href="#orge84131d">3.1. Instalación de Emacs</a>
+<ul>
+<li><a href="#orgf19a11c">3.1.1. Linux</a></li>
+<li><a href="#org1d87d24">3.1.2. macOS</a></li>
+<li><a href="#org088b393">3.1.3. Windows</a></li>
+</ul>
+</li>
+<li><a href="#org29521da">3.2. Primera ejecución</a></li>
+<li><a href="#org0a2fdfa">3.3. Configuración básica inicial</a></li>
+<li><a href="#orgb305157">3.4. Configurando el sistema de paquetes</a>
+<ul>
+<li><a href="#orga524327">3.4.1. Uso de use-package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgf4bab56">4. Fundamentos de Emacs</a>
+<ul>
+<li><a href="#org05ace25">4.1. Terminología esencial</a></li>
+<li><a href="#orgc2324a2">4.2. Notación de teclas</a></li>
+<li><a href="#org0d363ac">4.3. Comandos básicos de navegación</a></li>
+<li><a href="#org6a97eaf">4.4. Comandos básicos de edición</a></li>
+<li><a href="#org5c1f372">4.5. Gestión de archivos y buffers</a></li>
+<li><a href="#orga9b1c6e">4.6. Gestión de ventanas y frames</a></li>
+<li><a href="#orga5cd47a">4.7. Búsqueda y reemplazo</a></li>
+<li><a href="#org89a5420">4.8. Ayuda y documentación</a></li>
+<li><a href="#org275d7f2">4.9. Diagrama: Estructura básica de Emacs</a></li>
+</ul>
+</li>
+<li><a href="#org3bc2e13">5. Dominando Org Mode</a>
+<ul>
+<li><a href="#orgc83b11c">5.1. Fundamentos de Org Mode</a>
+<ul>
+<li><a href="#orgfacdc91">5.1.1. Estructura básica de un documento Org</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orge96564e">6. Encabezado de primer nivel</a>
+<ul>
+<li><a href="#orged8f133">6.1. Encabezado de segundo nivel</a>
+<ul>
+<li><a href="#org8460a20">6.1.1. Encabezado de tercer nivel</a></li>
+<li><a href="#org32299c5">6.1.2. Navegación en documentos Org</a></li>
+<li><a href="#orgdd8ca08">6.1.3. Edición de la estructura</a></li>
+</ul>
+</li>
+<li><a href="#org6c4d752">6.2. Gestión de tareas y proyectos</a>
+<ul>
+<li><a href="#orgc02f1d4">6.2.1. Estados de TODO</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org2d6700e">7. <span class="todo TODO">TODO</span> Completar informe trimestral</a></li>
+<li><a href="#org737ba8d">8. <span class="done DONE">DONE</span> Enviar correo al equipo</a>
+<ul>
+<li>
+<ul>
+<li><a href="#org6d9112c">8.0.1. Prioridades</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org35476a1">9. <span class="todo TODO">TODO</span> Tarea crítica de alta prioridad</a></li>
+<li><a href="#orgdd0d277">10. <span class="todo TODO">TODO</span> Tarea de prioridad media</a></li>
+<li><a href="#orgcc9444e">11. <span class="todo TODO">TODO</span> Tarea de baja prioridad</a>
+<ul>
+<li>
+<ul>
+<li><a href="#org2d180e2">11.0.1. Plazos y programación</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org0ce6191">12. <span class="todo TODO">TODO</span> Completar proyecto</a>
+<ul>
+<li>
+<ul>
+<li><a href="#orgb7fd527">12.0.1. Propiedades y etiquetas</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org327d18a">13. <span class="todo TODO">TODO</span> Escribir propuesta de proyecto</a></li>
+<li><a href="#orged54a98">14. <span class="todo TODO">TODO</span> Actualizar sitio web&#xa0;&#xa0;&#xa0;<span class="tag"><span class="web">web</span>&#xa0;<span class="tecnolog_a">tecnología</span></span></a></li>
+<li><a href="#orgde45dba">15. <span class="todo TODO">TODO</span> Llamar al cliente Acme&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tel_fono">teléfono</span>&#xa0;<span class="clientes">clientes</span></span></a>
+<ul>
+<li><a href="#org349b60a">15.1. Agenda y organización</a>
+<ul>
+<li><a href="#org5ccaa46">15.1.1. Configuración básica de agenda</a></li>
+<li><a href="#orgd426393">15.1.2. Vista personalizada de agenda</a></li>
+<li><a href="#orgdc7d6d9">15.1.3. Sistema de captura</a></li>
+</ul>
+</li>
+<li><a href="#org86da059">15.2. Toma de notas avanzada</a>
+<ul>
+<li><a href="#org6dc0a74">15.2.1. Enlaces y referencias cruzadas</a></li>
+<li><a href="#org4889e94">15.2.2. Listas de control (checklists)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org5194cf8">16. <span class="todo TODO">TODO</span> Preparar presentación <code>[0/3]</code></a>
+<ul>
+<li>
+<ul>
+<li><a href="#orgc24d53e">16.0.1. Tablas y cálculos</a></li>
+<li><a href="#org4a35738">16.0.2. Código fuente y bloques de código</a></li>
+<li><a href="#org3b5241d">16.0.3. Exportación y publicación</a></li>
+</ul>
+</li>
+<li><a href="#org5758477">16.1. Diagrama: Estructura de Org Mode</a></li>
+</ul>
+</li>
+<li><a href="#orgad4a426">17. Flujos de trabajo avanzados</a>
+<ul>
+<li><a href="#orgb7fab28">17.1. Sistema GTD (Getting Things Done)</a>
+<ul>
+<li><a href="#org569674e">17.1.1. Estructura de archivos</a></li>
+<li><a href="#org014b08a">17.1.2. Configuración básica para GTD</a></li>
+<li><a href="#org6aef923">17.1.3. Flujo de trabajo GTD en Org Mode</a></li>
+</ul>
+</li>
+<li><a href="#orga318a58">17.2. Zettelkasten para gestión de conocimiento</a>
+<ul>
+<li><a href="#orgdb8e337">17.2.1. Configuración básica</a></li>
+<li><a href="#org26693da">17.2.2. Uso con org-roam</a></li>
+<li><a href="#org6978881">17.2.3. Principios de Zettelkasten en Org Mode</a></li>
+</ul>
+</li>
+<li><a href="#org47be19e">17.3. Gestión de proyectos y tareas</a>
+<ul>
+<li><a href="#orge2f9b9b">17.3.1. Tareas recurrentes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org59dd9db">18. <span class="todo TODO">TODO</span> Revisar correo electrónico</a></li>
+<li><a href="#org35f6b72">19. <span class="todo TODO">TODO</span> Reunión semanal de equipo</a></li>
+<li><a href="#org10257f6">20. <span class="todo TODO">TODO</span> Pago de servicios</a>
+<ul>
+<li>
+<ul>
+<li><a href="#org9910c23">20.0.1. Hábitos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org3808f31">21. <span class="todo TODO">TODO</span> Ejercicio diario</a>
+<ul>
+<li>
+<ul>
+<li><a href="#org1e8fad5">21.0.1. Seguimiento de tiempo</a></li>
+</ul>
+</li>
+<li><a href="#orgb1fb6e0">21.1. Integración con correo electrónico</a>
+<ul>
+<li><a href="#org7028a75">21.1.1. Configuración con mu4e</a></li>
+</ul>
+</li>
+<li><a href="#org387f914">21.2. Publicación en la web</a>
+<ul>
+<li><a href="#org6397d4b">21.2.1. Configuración básica de org-publish</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgfb2e887">22. Extensiones y personalización</a>
+<ul>
+<li><a href="#org19dd38b">22.1. Paquetes esenciales para Org Mode</a>
+<ul>
+<li><a href="#org26e1799">22.1.1. org-bullets</a></li>
+<li><a href="#org63db8c8">22.1.2. org-super-agenda</a></li>
+<li><a href="#orgbb0c492">22.1.3. org-download</a></li>
+<li><a href="#orga77ddff">22.1.4. org-noter</a></li>
+</ul>
+</li>
+<li><a href="#orge92faa3">22.2. Temas y personalización visual</a>
+<ul>
+<li><a href="#org2b38a20">22.2.1. Temas populares</a></li>
+<li><a href="#orge17ed79">22.2.2. Personalización de fuentes</a></li>
+</ul>
+</li>
+<li><a href="#org190ac4a">22.3. Gestión avanzada de configuraciones</a>
+<ul>
+<li><a href="#orgd0ff885">22.3.1. use-package</a></li>
+<li><a href="#org8670a18">22.3.2. Organización por archivos</a></li>
+</ul>
+</li>
+<li><a href="#org8d4326a">22.4. Productividad con pequeñas mejoras</a></li>
+</ul>
+</li>
+<li><a href="#org3684588">23. Solución de problemas comunes</a>
+<ul>
+<li><a href="#org3f931e4">23.1. Problemas de rendimiento</a></li>
+<li><a href="#org56bd8ea">23.2. Problemas de exportación</a></li>
+<li><a href="#org15f1f13">23.3. Errores en Org Mode</a></li>
+<li><a href="#orgcbda41b">23.4. Problemas de compatibilidad</a></li>
+</ul>
+</li>
+<li><a href="#org922c495">24. Diagrama: Jerarquía de conceptos en Emacs y Org Mode</a></li>
+<li><a href="#org11a57fb">25. Emacs + Org Mode</a>
+<ul>
+<li><a href="#orgf2f4f12">25.1. Fundamentos de Emacs</a>
+<ul>
+<li><a href="#orgea90327">25.1.1. Terminología</a></li>
+<li><a href="#org59e44c3">25.1.2. Navegación</a></li>
+<li><a href="#orge186c3c">25.1.3. Edición</a></li>
+</ul>
+</li>
+<li><a href="#orgb8c85c4">25.2. Org Mode Básico</a>
+<ul>
+<li><a href="#orga0d9b44">25.2.1. Estructura de documentos</a></li>
+<li><a href="#org2f339f0">25.2.2. Gestión de tareas</a></li>
+<li><a href="#org1d174d1">25.2.3. Enlaces y referencias</a></li>
+<li><a href="#org0bd8465">25.2.4. Fechas y horarios</a></li>
+</ul>
+</li>
+<li><a href="#org9fcbe22">25.3. Org Mode Avanzado</a>
+<ul>
+<li><a href="#org5821cda">25.3.1. Agenda</a></li>
+<li><a href="#org6571987">25.3.2. Captura</a></li>
+<li><a href="#org53c4157">25.3.3. Exportación</a></li>
+<li><a href="#org5a32aae">25.3.4. Babel (código)</a></li>
+<li><a href="#org92b1476">25.3.5. Bloques especiales</a></li>
+</ul>
+</li>
+<li><a href="#orgdee5934">25.4. Flujos de trabajo</a>
+<ul>
+<li><a href="#orgb4d4db1">25.4.1. GTD</a></li>
+<li><a href="#org8be620e">25.4.2. Zettelkasten</a></li>
+<li><a href="#orgbf7e8c5">25.4.3. Gestión de proyectos</a></li>
+<li><a href="#org2aad2dd">25.4.4. Toma de notas</a></li>
+</ul>
+</li>
+<li><a href="#org80633df">25.5. Personalización</a>
+<ul>
+<li><a href="#org2365ad7">25.5.1. Temas</a></li>
+<li><a href="#org1893e23">25.5.2. Paquetes adicionales</a></li>
+<li><a href="#org23d6752">25.5.3. Configuración propia</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgc5c0f07">26. Recursos y referencias</a>
+<ul>
+<li><a href="#org100047a">26.1. Documentación oficial</a></li>
+<li><a href="#orgf9383d0">26.2. Libros</a></li>
+<li><a href="#orgc50bafe">26.3. Tutoriales en línea</a></li>
+<li><a href="#orgc5070a7">26.4. Comunidades y foros</a></li>
+<li><a href="#org4a317a6">26.5. Repositorios y configuraciones públicas</a></li>
+<li><a href="#org005da6c">26.6. Canales de YouTube</a></li>
+</ul>
+</li>
+<li><a href="#orgb0d1b26">27. Resumen y siguientes pasos</a>
+<ul>
+<li><a href="#orgd79261e">27.1. Lo que has aprendido</a></li>
+<li><a href="#org499e1b9">27.2. Recomendaciones para continuar</a></li>
+<li><a href="#org6d3f382">27.3. Plan de aprendizaje de 30 días</a></li>
+</ul>
+</li>
+<li><a href="#org89660fc">28. Conclusión</a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-orgefb31a6" class="outline-2">
+<h2 id="orgefb31a6"><span class="section-number-2">1.</span> Prefacio</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Esta guía está diseñada para proporcionar un recurso completo para aprender a trabajar con Emacs y Org Mode, desde los conceptos básicos hasta las técnicas avanzadas. Está orientada tanto a principiantes como a usuarios intermedios que desean profundizar sus conocimientos y mejorar su flujo de trabajo.
+</p>
+</div>
+<div id="outline-container-org1e70881" class="outline-3">
+<h3 id="org1e70881"><span class="section-number-3">1.1.</span> Estructura de la guía</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+La guía está dividida en varias secciones principales:
+</p>
+
+<ol class="org-ol">
+<li>Introducción a Emacs y Org Mode</li>
+<li>Instalación y configuración inicial</li>
+<li>Fundamentos de Emacs</li>
+<li>Dominando Org Mode</li>
+<li>Flujos de trabajo avanzados</li>
+<li>Extensiones y personalización</li>
+<li>Solución de problemas comunes</li>
+<li>Recursos y referencias</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org0502a84" class="outline-2">
+<h2 id="org0502a84"><span class="section-number-2">2.</span> Introducción a Emacs y Org Mode</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgeb8b3a1" class="outline-3">
+<h3 id="orgeb8b3a1"><span class="section-number-3">2.1.</span> ¿Qué es Emacs?</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Emacs es mucho más que un simple editor de texto. Es un entorno completo para programación, escritura, organización y casi cualquier tarea relacionada con texto. Desarrollado originalmente en la década de 1970 por Richard Stallman, Emacs se ha convertido en uno de los editores más potentes y extensibles disponibles.
+</p>
+
+<p>
+Algunas características distintivas de Emacs:
+</p>
+
+<ul class="org-ul">
+<li><b>Extensibilidad ilimitada</b>: Emacs está escrito en Lisp (específicamente Emacs Lisp), lo que permite a los usuarios personalizar y extender cualquier aspecto del editor.</li>
+<li><b>Auto-documentado</b>: Incluye documentación extensa y accesible desde dentro del propio editor.</li>
+<li><b>Multi-plataforma</b>: Funciona en prácticamente cualquier sistema operativo.</li>
+<li><b>Ecosistema rico</b>: Miles de paquetes y extensiones disponibles.</li>
+<li><b>Longevidad</b>: Con más de 45 años de desarrollo continuo, Emacs es uno de los programas más antiguos en uso activo.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org316b7d4" class="outline-3">
+<h3 id="org316b7d4"><span class="section-number-3">2.2.</span> ¿Qué es Org Mode?</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Org Mode es una de las extensiones más populares y potentes para Emacs. Creado por Carsten Dominik en 2003, Org Mode comenzó como un simple organizador de notas y ha evolucionado hasta convertirse en un sistema completo para:
+</p>
+
+<ul class="org-ul">
+<li>Tomar notas estructuradas</li>
+<li>Mantener listas de tareas y proyectos</li>
+<li>Planificar proyectos</li>
+<li>Gestionar documentos</li>
+<li>Programar literaria</li>
+<li>Publicar documentos en múltiples formatos</li>
+<li>Mantener una agenda y calendario</li>
+<li>Implementar metodologías como GTD (Getting Things Done)</li>
+</ul>
+
+<p>
+Org Mode utiliza archivos de texto plano con una sintaxis simple pero poderosa, lo que garantiza que tus datos sean accesibles a largo plazo.
+</p>
+</div>
+</div>
+<div id="outline-container-org79f1c28" class="outline-3">
+<h3 id="org79f1c28"><span class="section-number-3">2.3.</span> ¿Por qué aprender Emacs y Org Mode?</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+En la era de aplicaciones especializadas para cada tarea específica, puede parecer anacrónico dedicar tiempo a aprender una herramienta compleja como Emacs. Sin embargo, hay razones convincentes para hacerlo:
+</p>
+
+<ul class="org-ul">
+<li><b>Unificación de herramientas</b>: Un solo entorno para programación, escritura, organización, correo electrónico y más.</li>
+<li><b>Eficiencia a largo plazo</b>: La inversión inicial en la curva de aprendizaje se compensa con mayor productividad a lo largo del tiempo.</li>
+<li><b>Adaptabilidad</b>: Emacs se adapta a tu flujo de trabajo, no al revés.</li>
+<li><b>Formato de datos duradero</b>: Los archivos de texto plano seguirán siendo legibles décadas después, a diferencia de formatos propietarios.</li>
+<li><b>Control total</b>: No dependes de servicios en la nube o compañías que puedan discontinuar sus productos.</li>
+<li><b>Comunidad vibrante</b>: Acceso a una comunidad de usuarios experimentados y entusiastas.</li>
+</ul>
+
+<blockquote>
+<p>
+"Emacs no es solo un editor de texto; es un estilo de vida." — Un usuario anónimo de Emacs
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbcea52d" class="outline-2">
+<h2 id="orgbcea52d"><span class="section-number-2">3.</span> Instalación y configuración inicial</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orge84131d" class="outline-3">
+<h3 id="orge84131d"><span class="section-number-3">3.1.</span> Instalación de Emacs</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgf19a11c" class="outline-4">
+<h4 id="orgf19a11c"><span class="section-number-4">3.1.1.</span> Linux</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+En distribuciones basadas en Debian/Ubuntu:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">sudo apt update
+sudo apt install emacs
+</pre>
+</div>
+
+<p>
+En distribuciones basadas en Red Hat/Fedora:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">sudo dnf install emacs
+</pre>
+</div>
+
+<p>
+En Arch Linux:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">sudo pacman -S emacs
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1d87d24" class="outline-4">
+<h4 id="org1d87d24"><span class="section-number-4">3.1.2.</span> macOS</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<p>
+Usando Homebrew:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">brew install emacs
+</pre>
+</div>
+
+<p>
+Alternativamente, puedes descargar una versión precompilada como Emacs For Mac OS X (<a href="https://emacsformacosx.com/">https://emacsformacosx.com/</a>).
+</p>
+</div>
+</div>
+<div id="outline-container-org088b393" class="outline-4">
+<h4 id="org088b393"><span class="section-number-4">3.1.3.</span> Windows</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ol class="org-ol">
+<li>Descarga el instalador desde la página oficial GNU: <a href="https://gnu.org/software/emacs/download.html">https://gnu.org/software/emacs/download.html</a></li>
+<li>Ejecuta el instalador y sigue las instrucciones</li>
+<li>Opcionalmente, añade Emacs al PATH del sistema para acceder desde la línea de comandos</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org29521da" class="outline-3">
+<h3 id="org29521da"><span class="section-number-3">3.2.</span> Primera ejecución</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Al iniciar Emacs por primera vez, verás una pantalla de bienvenida con información básica y enlaces útiles. Para empezar a usar Emacs inmediatamente:
+</p>
+
+<ol class="org-ol">
+<li>Presiona `Ctrl+x` seguido de `Ctrl+f` para abrir un archivo</li>
+<li>Escribe el nombre del archivo (nuevo o existente) y presiona Enter</li>
+<li>¡Comienza a editar!</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org0a2fdfa" class="outline-3">
+<h3 id="org0a2fdfa"><span class="section-number-3">3.3.</span> Configuración básica inicial</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Emacs utiliza un archivo de configuración llamado `init.el` ubicado en el directorio `~/.emacs.d/` (en sistemas Unix/macOS) o `AppData\Roaming\.emacs.d\` (en Windows).
+</p>
+
+<p>
+Aquí hay una configuración básica para empezar:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n b&#225;sica para Emacs y Org Mode</span>
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Interfaz de usuario</span>
+(menu-bar-mode -1)                  <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Desactivar barra de men&#250;</span>
+(tool-bar-mode -1)                  <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Desactivar barra de herramientas</span>
+(scroll-bar-mode -1)                <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Desactivar barra de desplazamiento</span>
+(global-display-line-numbers-mode)  <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Mostrar n&#250;meros de l&#237;nea</span>
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Comportamiento general</span>
+(<span style="color: #D70000;">setq</span> inhibit-startup-screen t)     <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Saltar pantalla de inicio</span>
+(<span style="color: #D70000;">setq</span> make-backup-files nil)        <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">No crear archivos de respaldo</span>
+(<span style="color: #D70000;">setq</span> auto-save-default nil)        <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">No crear archivos de auto-guardado</span>
+(global-auto-revert-mode 1)         <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Actualizar buffer cuando el archivo cambia</span>
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n de Org Mode</span>
+(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">org</span>)
+(<span style="color: #D70000;">setq</span> org-startup-indented t)       <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Sangr&#237;a visual</span>
+(<span style="color: #D70000;">setq</span> org-startup-folded nil)       <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Mostrar todo el contenido al abrir</span>
+(<span style="color: #D70000;">setq</span> org-directory <span style="color: #005F00;">"~/org"</span>)        <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Directorio principal para archivos Org</span>
+(<span style="color: #D70000;">setq</span> org-default-notes-file <span style="color: #005F00;">"~/org/notes.org"</span>) <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Archivo predeterminado para notas</span>
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Atajos globales para Org Mode</span>
+(global-set-key (kbd <span style="color: #005F00;">"C-c l"</span>) 'org-store-link)
+(global-set-key (kbd <span style="color: #005F00;">"C-c a"</span>) 'org-agenda)
+(global-set-key (kbd <span style="color: #005F00;">"C-c c"</span>) 'org-capture)
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Sistema de paquetes</span>
+(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">package</span>)
+(add-to-list 'package-archives '(<span style="color: #005F00;">"melpa"</span> . <span style="color: #005F00;">"https://melpa.org/packages/"</span>) t)
+(package-initialize)
+</pre>
+</div>
+
+<p>
+Para usar esta configuración:
+</p>
+
+<ol class="org-ol">
+<li>Crea el directorio `~/.emacs.d/` si no existe</li>
+<li>Crea un archivo llamado `init.el` dentro de ese directorio</li>
+<li>Copia el código anterior y pégalo en el archivo</li>
+<li>Reinicia Emacs</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgb305157" class="outline-3">
+<h3 id="orgb305157"><span class="section-number-3">3.4.</span> Configurando el sistema de paquetes</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Emacs incluye un gestor de paquetes que te permite instalar extensiones fácilmente:
+</p>
+
+<ol class="org-ol">
+<li>Presiona `M-x` (Alt+x o Esc+x)</li>
+<li>Escribe `package-refresh-contents` y presiona Enter</li>
+<li>Para instalar un paquete:
+<ul class="org-ul">
+<li>Presiona `M-x`</li>
+<li>Escribe `package-install` y presiona Enter</li>
+<li>Escribe el nombre del paquete (e.g., `use-package`) y presiona Enter</li>
+</ul></li>
+</ol>
+</div>
+<div id="outline-container-orga524327" class="outline-4">
+<h4 id="orga524327"><span class="section-number-4">3.4.1.</span> Uso de use-package</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<p>
+Para simplificar la configuración de paquetes, recomendamos instalar `use-package`:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Instalar use-package si no est&#225; instalado</span>
+(<span style="color: #D70000;">unless</span> (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">use-package</span>)
+(<span style="color: #D70000;">setq</span> use-package-always-ensure t)  <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Instalar autom&#225;ticamente paquetes si no est&#225;n presentes</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf4bab56" class="outline-2">
+<h2 id="orgf4bab56"><span class="section-number-2">4.</span> Fundamentos de Emacs</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org05ace25" class="outline-3">
+<h3 id="org05ace25"><span class="section-number-3">4.1.</span> Terminología esencial</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Antes de avanzar, es importante familiarizarse con la terminología específica de Emacs:
+</p>
+
+<ul class="org-ul">
+<li><b>Buffer</b>: Área de edición donde se visualiza y modifica el contenido de un archivo.</li>
+<li><b>Frame</b>: Lo que otros programas llamarían "ventana" (la ventana completa de la aplicación).</li>
+<li><b>Window</b>: División dentro de un frame (lo que otros programas llamarían "panel" o "split").</li>
+<li><b>Point</b>: La posición actual del cursor.</li>
+<li><b>Mark</b>: Una posición guardada en el buffer.</li>
+<li><b>Region</b>: El texto entre point y mark.</li>
+<li><b>Kill</b>: Cortar texto (eliminarlo y guardarlo en el kill ring).</li>
+<li><b>Yank</b>: Pegar texto desde el kill ring.</li>
+<li><b>Kill ring</b>: Equivalente al portapapeles, pero con historial.</li>
+<li><b>Minibuffer</b>: Área en la parte inferior de la pantalla donde Emacs solicita entrada del usuario.</li>
+<li><b>Mode line</b>: Barra de estado en la parte inferior de cada ventana.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc2324a2" class="outline-3">
+<h3 id="orgc2324a2"><span class="section-number-3">4.2.</span> Notación de teclas</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Emacs utiliza una notación especial para describir combinaciones de teclas:
+</p>
+
+<ul class="org-ul">
+<li>`C-x`: Presionar Ctrl y x simultáneamente</li>
+<li>`M-x`: Presionar Alt (o Meta) y x simultáneamente, o Esc seguido de x</li>
+<li>`C-x C-f`: Presionar Ctrl+x, seguido de Ctrl+f</li>
+<li>`C-x k RET`: Presionar Ctrl+x, seguido de k, seguido de Enter (Return)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0d363ac" class="outline-3">
+<h3 id="org0d363ac"><span class="section-number-3">4.3.</span> Comandos básicos de navegación</h3>
+<div class="outline-text-3" id="text-4-3">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Atajo</th>
+<th scope="col" class="org-left">Comando</th>
+<th scope="col" class="org-left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">`C-f`</td>
+<td class="org-left">`forward-char`</td>
+<td class="org-left">Mover cursor un carácter hacia adelante</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-b`</td>
+<td class="org-left">`backward-char`</td>
+<td class="org-left">Mover cursor un carácter hacia atrás</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-n`</td>
+<td class="org-left">`next-line`</td>
+<td class="org-left">Mover cursor a la siguiente línea</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-p`</td>
+<td class="org-left">`previous-line`</td>
+<td class="org-left">Mover cursor a la línea anterior</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-a`</td>
+<td class="org-left">`move-beginning-of-line`</td>
+<td class="org-left">Ir al principio de la línea actual</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-e`</td>
+<td class="org-left">`move-end-of-line`</td>
+<td class="org-left">Ir al final de la línea actual</td>
+</tr>
+
+<tr>
+<td class="org-left">`M-f`</td>
+<td class="org-left">`forward-word`</td>
+<td class="org-left">Avanzar una palabra</td>
+</tr>
+
+<tr>
+<td class="org-left">`M-b`</td>
+<td class="org-left">`backward-word`</td>
+<td class="org-left">Retroceder una palabra</td>
+</tr>
+
+<tr>
+<td class="org-left">`M-a`</td>
+<td class="org-left">`backward-sentence`</td>
+<td class="org-left">Ir al principio de la oración actual</td>
+</tr>
+
+<tr>
+<td class="org-left">`M-e`</td>
+<td class="org-left">`forward-sentence`</td>
+<td class="org-left">Ir al final de la oración actual</td>
+</tr>
+
+<tr>
+<td class="org-left">`M-&lt;`</td>
+<td class="org-left">`beginning-of-buffer`</td>
+<td class="org-left">Ir al principio del buffer</td>
+</tr>
+
+<tr>
+<td class="org-left">`M-&gt;`</td>
+<td class="org-left">`end-of-buffer`</td>
+<td class="org-left">Ir al final del buffer</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-v`</td>
+<td class="org-left">`scroll-up-command`</td>
+<td class="org-left">Avanzar una pantalla</td>
+</tr>
+
+<tr>
+<td class="org-left">`M-v`</td>
+<td class="org-left">`scroll-down-command`</td>
+<td class="org-left">Retroceder una pantalla</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org6a97eaf" class="outline-3">
+<h3 id="org6a97eaf"><span class="section-number-3">4.4.</span> Comandos básicos de edición</h3>
+<div class="outline-text-3" id="text-4-4">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Atajo</th>
+<th scope="col" class="org-left">Comando</th>
+<th scope="col" class="org-left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">`C-d`</td>
+<td class="org-left">`delete-char`</td>
+<td class="org-left">Eliminar carácter bajo el cursor</td>
+</tr>
+
+<tr>
+<td class="org-left">`M-d`</td>
+<td class="org-left">`kill-word`</td>
+<td class="org-left">Eliminar palabra desde el cursor</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-k`</td>
+<td class="org-left">`kill-line`</td>
+<td class="org-left">Eliminar desde el cursor hasta el final de la línea</td>
+</tr>
+
+<tr>
+<td class="org-left">`M-k`</td>
+<td class="org-left">`kill-sentence`</td>
+<td class="org-left">Eliminar oración desde el cursor</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-w`</td>
+<td class="org-left">`kill-region`</td>
+<td class="org-left">Cortar región seleccionada</td>
+</tr>
+
+<tr>
+<td class="org-left">`M-w`</td>
+<td class="org-left">`kill-ring-save`</td>
+<td class="org-left">Copiar región seleccionada</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-y`</td>
+<td class="org-left">`yank`</td>
+<td class="org-left">Pegar (último texto cortado/copiado)</td>
+</tr>
+
+<tr>
+<td class="org-left">`M-y`</td>
+<td class="org-left">`yank-pop`</td>
+<td class="org-left">Ciclar a través del historial del kill ring (después de `C-y`)</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-/`</td>
+<td class="org-left">`undo`</td>
+<td class="org-left">Deshacer último cambio</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-x u`</td>
+<td class="org-left">`undo`</td>
+<td class="org-left">Alternativa para deshacer</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-g`</td>
+<td class="org-left">`keyboard-quit`</td>
+<td class="org-left">Cancelar comando actual o área de selección</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org5c1f372" class="outline-3">
+<h3 id="org5c1f372"><span class="section-number-3">4.5.</span> Gestión de archivos y buffers</h3>
+<div class="outline-text-3" id="text-4-5">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Atajo</th>
+<th scope="col" class="org-left">Comando</th>
+<th scope="col" class="org-left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">`C-x C-f`</td>
+<td class="org-left">`find-file`</td>
+<td class="org-left">Abrir archivo</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-x C-s`</td>
+<td class="org-left">`save-buffer`</td>
+<td class="org-left">Guardar archivo actual</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-x C-w`</td>
+<td class="org-left">`write-file`</td>
+<td class="org-left">Guardar como&#x2026;</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-x k`</td>
+<td class="org-left">`kill-buffer`</td>
+<td class="org-left">Cerrar buffer actual</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-x b`</td>
+<td class="org-left">`switch-to-buffer`</td>
+<td class="org-left">Cambiar a otro buffer</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-x C-b`</td>
+<td class="org-left">`list-buffers`</td>
+<td class="org-left">Listar todos los buffers</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-x C-c`</td>
+<td class="org-left">`save-buffers-kill-terminal`</td>
+<td class="org-left">Salir de Emacs</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orga9b1c6e" class="outline-3">
+<h3 id="orga9b1c6e"><span class="section-number-3">4.6.</span> Gestión de ventanas y frames</h3>
+<div class="outline-text-3" id="text-4-6">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Atajo</th>
+<th scope="col" class="org-left">Comando</th>
+<th scope="col" class="org-left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">`C-x 0`</td>
+<td class="org-left">`delete-window`</td>
+<td class="org-left">Cerrar ventana actual</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-x 1`</td>
+<td class="org-left">`delete-other-windows`</td>
+<td class="org-left">Cerrar todas las ventanas excepto la actual</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-x 2`</td>
+<td class="org-left">`split-window-below`</td>
+<td class="org-left">Dividir ventana horizontalmente</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-x 3`</td>
+<td class="org-left">`split-window-right`</td>
+<td class="org-left">Dividir ventana verticalmente</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-x o`</td>
+<td class="org-left">`other-window`</td>
+<td class="org-left">Mover cursor a otra ventana</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-x 5 2`</td>
+<td class="org-left">`make-frame`</td>
+<td class="org-left">Crear un nuevo frame</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-x 5 0`</td>
+<td class="org-left">`delete-frame`</td>
+<td class="org-left">Cerrar frame actual</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orga5cd47a" class="outline-3">
+<h3 id="orga5cd47a"><span class="section-number-3">4.7.</span> Búsqueda y reemplazo</h3>
+<div class="outline-text-3" id="text-4-7">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Atajo</th>
+<th scope="col" class="org-left">Comando</th>
+<th scope="col" class="org-left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">`C-s`</td>
+<td class="org-left">`isearch-forward`</td>
+<td class="org-left">Búsqueda incremental hacia adelante</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-r`</td>
+<td class="org-left">`isearch-backward`</td>
+<td class="org-left">Búsqueda incremental hacia atrás</td>
+</tr>
+
+<tr>
+<td class="org-left">`M-%`</td>
+<td class="org-left">`query-replace`</td>
+<td class="org-left">Buscar y reemplazar interactivo</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-M-s`</td>
+<td class="org-left">`isearch-forward-regexp`</td>
+<td class="org-left">Búsqueda con expresiones regulares hacia adelante</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-M-r`</td>
+<td class="org-left">`isearch-backward-regexp`</td>
+<td class="org-left">Búsqueda con expresiones regulares hacia atrás</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-M-%`</td>
+<td class="org-left">`query-replace-regexp`</td>
+<td class="org-left">Buscar y reemplazar con expresiones regulares</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org89a5420" class="outline-3">
+<h3 id="org89a5420"><span class="section-number-3">4.8.</span> Ayuda y documentación</h3>
+<div class="outline-text-3" id="text-4-8">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Atajo</th>
+<th scope="col" class="org-left">Comando</th>
+<th scope="col" class="org-left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">`C-h t`</td>
+<td class="org-left">`help-with-tutorial`</td>
+<td class="org-left">Abrir tutorial interactivo de Emacs</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-h k`</td>
+<td class="org-left">`describe-key`</td>
+<td class="org-left">Describir qué hace una combinación de teclas</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-h f`</td>
+<td class="org-left">`describe-function`</td>
+<td class="org-left">Describir una función</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-h v`</td>
+<td class="org-left">`describe-variable`</td>
+<td class="org-left">Describir una variable</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-h m`</td>
+<td class="org-left">`describe-mode`</td>
+<td class="org-left">Describir el modo actual y sus atajos</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-h a`</td>
+<td class="org-left">`apropos-command`</td>
+<td class="org-left">Buscar comandos por palabra clave</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-h i`</td>
+<td class="org-left">`info`</td>
+<td class="org-left">Abrir sistema de documentación Info</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org275d7f2" class="outline-3">
+<h3 id="org275d7f2"><span class="section-number-3">4.9.</span> Diagrama: Estructura básica de Emacs</h3>
+<div class="outline-text-3" id="text-4-9">
+
+<figure id="orgff62d13">
+<img src="images/estructura_basica_emacs.png" alt="estructura_basica_emacs.png">
+
+</figure>
+
+<p>
+<a href="images/estructura_basica_emacs.png">Ver imagen</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org3bc2e13" class="outline-2">
+<h2 id="org3bc2e13"><span class="section-number-2">5.</span> Dominando Org Mode</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgc83b11c" class="outline-3">
+<h3 id="orgc83b11c"><span class="section-number-3">5.1.</span> Fundamentos de Org Mode</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Org Mode es un sistema de organización y toma de notas dentro de Emacs. Para activarlo:
+</p>
+
+<ol class="org-ol">
+<li>Abre cualquier archivo con extensión `.org`</li>
+<li>Alternativamente, ejecuta `M-x org-mode` para activarlo en cualquier buffer</li>
+</ol>
+</div>
+<div id="outline-container-orgfacdc91" class="outline-4">
+<h4 id="orgfacdc91"><span class="section-number-4">5.1.1.</span> Estructura básica de un documento Org</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<p>
+Un documento Org tiene la siguiente estructura:
+</p>
+
+<p>
+#+BEGIN_EXAMPLE
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orge96564e" class="outline-2">
+<h2 id="orge96564e"><span class="section-number-2">6.</span> Encabezado de primer nivel</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orged8f133" class="outline-3">
+<h3 id="orged8f133"><span class="section-number-3">6.1.</span> Encabezado de segundo nivel</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-org8460a20" class="outline-4">
+<h4 id="org8460a20"><span class="section-number-4">6.1.1.</span> Encabezado de tercer nivel</h4>
+<div class="outline-text-4" id="text-6-1-1">
+</div>
+<ul class="org-ul">
+<li><a id="orgc9ad55b"></a>Encabezado de cuarto nivel<br>
+<ul class="org-ul">
+<li><a id="orgd9f72d1"></a>Encabezado de quinto nivel<br>
+<div class="outline-text-6" id="text-orgd9f72d1">
+<p>
+Texto normal que forma parte del contenido.
+</p>
+
+<ul class="org-ul">
+<li>Lista de viñetas</li>
+<li>Otro elemento
+<ul class="org-ul">
+<li>Sub-elemento</li>
+<li>Otro sub-elemento
+<ul class="org-ul">
+<li>Sub-sub-elemento</li>
+</ul></li>
+</ul></li>
+
+<li>Lista numerada</li>
+<li>Segundo elemento
+a. Sub-elemento con letras
+b. Otro sub-elemento</li>
+</ul>
+
+<p>
+#+END_EXAMPLE
+</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-org32299c5" class="outline-4">
+<h4 id="org32299c5"><span class="section-number-4">6.1.2.</span> Navegación en documentos Org</h4>
+<div class="outline-text-4" id="text-6-1-2">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Atajo</th>
+<th scope="col" class="org-left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">`TAB`</td>
+<td class="org-left">Ciclar visibilidad del encabezado actual</td>
+</tr>
+
+<tr>
+<td class="org-left">`S-TAB`</td>
+<td class="org-left">Ciclar visibilidad global del documento</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-c C-n`</td>
+<td class="org-left">Ir al siguiente encabezado</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-c C-p`</td>
+<td class="org-left">Ir al encabezado anterior</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-c C-f`</td>
+<td class="org-left">Ir al siguiente encabezado del mismo nivel</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-c C-b`</td>
+<td class="org-left">Ir al encabezado anterior del mismo nivel</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-c C-u`</td>
+<td class="org-left">Subir un nivel en la jerarquía de encabezados</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-c C-j`</td>
+<td class="org-left">Saltar a un encabezado específico</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgdd8ca08" class="outline-4">
+<h4 id="orgdd8ca08"><span class="section-number-4">6.1.3.</span> Edición de la estructura</h4>
+<div class="outline-text-4" id="text-6-1-3">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Atajo</th>
+<th scope="col" class="org-left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">`M-RET`</td>
+<td class="org-left">Insertar nuevo encabezado/elemento</td>
+</tr>
+
+<tr>
+<td class="org-left">`M-S-RET`</td>
+<td class="org-left">Insertar nuevo TODO</td>
+</tr>
+
+<tr>
+<td class="org-left">`M-left/right`</td>
+<td class="org-left">Promover/degradar encabezado actual</td>
+</tr>
+
+<tr>
+<td class="org-left">`M-up/down`</td>
+<td class="org-left">Mover encabezado arriba/abajo</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-c *`</td>
+<td class="org-left">Convertir línea normal en encabezado o viceversa</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-c C-w`</td>
+<td class="org-left">Reubicar encabezado (con subárbol)</td>
+</tr>
+
+<tr>
+<td class="org-left">`C-c C-x b`</td>
+<td class="org-left">Mostrar solo el subárbol actual</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-org6c4d752" class="outline-3">
+<h3 id="org6c4d752"><span class="section-number-3">6.2.</span> Gestión de tareas y proyectos</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-orgc02f1d4" class="outline-4">
+<h4 id="orgc02f1d4"><span class="section-number-4">6.2.1.</span> Estados de TODO</h4>
+<div class="outline-text-4" id="text-6-2-1">
+<p>
+Por defecto, Org Mode incluye los estados TODO y DONE:
+</p>
+
+<p>
+#+BEGIN_EXAMPLE
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org2d6700e" class="outline-2">
+<h2 id="org2d6700e"><span class="section-number-2">7.</span> <span class="todo TODO">TODO</span> Completar informe trimestral</h2>
+</div>
+<div id="outline-container-org737ba8d" class="outline-2">
+<h2 id="org737ba8d"><span class="section-number-2">8.</span> <span class="done DONE">DONE</span> Enviar correo al equipo</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+#+END_EXAMPLE
+</p>
+
+<p>
+Para cambiar el estado de una tarea:
+</p>
+
+<ol class="org-ol">
+<li>Coloca el cursor sobre el encabezado de la tarea</li>
+<li>Presiona `C-c C-t` o `S-left/right` para ciclar entre estados</li>
+</ol>
+
+<p>
+Para personalizar los estados de TODO:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Secuencia b&#225;sica de estados</span>
+(<span style="color: #D70000;">setq</span> org-todo-keywords
+      '((sequence <span style="color: #005F00;">"TODO(t)"</span> <span style="color: #005F00;">"IN-PROGRESS(p)"</span> <span style="color: #005F00;">"WAITING(w)"</span> <span style="color: #005F00;">"|"</span> <span style="color: #005F00;">"DONE(d)"</span> <span style="color: #005F00;">"CANCELLED(c)"</span>)))
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Con colores personalizados</span>
+(<span style="color: #D70000;">setq</span> org-todo-keyword-faces
+      '((<span style="color: #005F00;">"TODO"</span> . org-warning)
+        (<span style="color: #005F00;">"IN-PROGRESS"</span> . <span style="color: #005F00;">"orange"</span>)
+        (<span style="color: #005F00;">"WAITING"</span> . <span style="color: #005F00;">"purple"</span>)
+        (<span style="color: #005F00;">"DONE"</span> . <span style="color: #005F00;">"green"</span>)
+        (<span style="color: #005F00;">"CANCELLED"</span> . <span style="color: #005F00;">"gray"</span>)))
+</pre>
+</div>
+</div>
+<div id="outline-container-org6d9112c" class="outline-4">
+<h4 id="org6d9112c"><span class="section-number-4">8.0.1.</span> Prioridades</h4>
+<div class="outline-text-4" id="text-8-0-1">
+<p>
+Puedes asignar prioridades a las tareas:
+</p>
+
+<p>
+#+BEGIN_EXAMPLE
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org35476a1" class="outline-2">
+<h2 id="org35476a1"><span class="section-number-2">9.</span> <span class="todo TODO">TODO</span> Tarea crítica de alta prioridad</h2>
+</div>
+<div id="outline-container-orgdd0d277" class="outline-2">
+<h2 id="orgdd0d277"><span class="section-number-2">10.</span> <span class="todo TODO">TODO</span> Tarea de prioridad media</h2>
+</div>
+<div id="outline-container-orgcc9444e" class="outline-2">
+<h2 id="orgcc9444e"><span class="section-number-2">11.</span> <span class="todo TODO">TODO</span> Tarea de baja prioridad</h2>
+<div class="outline-text-2" id="text-11">
+<p>
+#+END_EXAMPLE
+</p>
+
+<p>
+Para cambiar la prioridad: `C-c ,`
+</p>
+</div>
+<div id="outline-container-org2d180e2" class="outline-4">
+<h4 id="org2d180e2"><span class="section-number-4">11.0.1.</span> Plazos y programación</h4>
+<div class="outline-text-4" id="text-11-0-1">
+<p>
+Org Mode permite establecer fechas para tus tareas:
+</p>
+
+<p>
+#+BEGIN_EXAMPLE
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org0ce6191" class="outline-2">
+<h2 id="org0ce6191"><span class="section-number-2">12.</span> <span class="todo TODO">TODO</span> Completar proyecto</h2>
+<div class="outline-text-2" id="text-12">
+<p>
+  SCHEDULED: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-04-28 lun&gt;</span></span>
+#+END_EXAMPLE
+</p>
+
+<ul class="org-ul">
+<li>`DEADLINE`: Fecha límite para completar la tarea</li>
+<li>`SCHEDULED`: Fecha planificada para comenzar a trabajar en la tarea</li>
+</ul>
+
+<p>
+Para establecer estas fechas:
+</p>
+<ul class="org-ul">
+<li>`C-c C-d`: Establecer DEADLINE</li>
+<li>`C-c C-s`: Establecer SCHEDULED</li>
+</ul>
+</div>
+<div id="outline-container-orgb7fd527" class="outline-4">
+<h4 id="orgb7fd527"><span class="section-number-4">12.0.1.</span> Propiedades y etiquetas</h4>
+<div class="outline-text-4" id="text-12-0-1">
+<p>
+Las propiedades permiten añadir metadatos estructurados:
+</p>
+
+<p>
+#+BEGIN_EXAMPLE
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org327d18a" class="outline-2">
+<h2 id="org327d18a"><span class="section-number-2">13.</span> <span class="todo TODO">TODO</span> Escribir propuesta de proyecto</h2>
+<div class="outline-text-2" id="text-13">
+<p>
+#+END_EXAMPLE
+</p>
+
+<p>
+Las etiquetas ayudan a categorizar:
+</p>
+
+<p>
+#+BEGIN_EXAMPLE
+</p>
+</div>
+</div>
+<div id="outline-container-orged54a98" class="outline-2">
+<h2 id="orged54a98"><span class="section-number-2">14.</span> <span class="todo TODO">TODO</span> Actualizar sitio web&#xa0;&#xa0;&#xa0;<span class="tag"><span class="web">web</span>&#xa0;<span class="tecnolog_a">tecnología</span></span></h2>
+</div>
+<div id="outline-container-orgde45dba" class="outline-2">
+<h2 id="orgde45dba"><span class="section-number-2">15.</span> <span class="todo TODO">TODO</span> Llamar al cliente Acme&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tel_fono">teléfono</span>&#xa0;<span class="clientes">clientes</span></span></h2>
+<div class="outline-text-2" id="text-15">
+<p>
+#+END_EXAMPLE
+</p>
+
+<p>
+Para añadir etiquetas: `C-c C-q`
+</p>
+</div>
+<div id="outline-container-org349b60a" class="outline-3">
+<h3 id="org349b60a"><span class="section-number-3">15.1.</span> Agenda y organización</h3>
+<div class="outline-text-3" id="text-15-1">
+</div>
+<div id="outline-container-org5ccaa46" class="outline-4">
+<h4 id="org5ccaa46"><span class="section-number-4">15.1.1.</span> Configuración básica de agenda</h4>
+<div class="outline-text-4" id="text-15-1-1">
+<p>
+Para usar la agenda, primero debes especificar qué archivos incluir:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">setq</span> org-agenda-files '(<span style="color: #005F00;">"~/org/trabajo.org"</span>
+                         <span style="color: #005F00;">"~/org/personal.org"</span>
+                         <span style="color: #005F00;">"~/org/proyectos.org"</span>))
+</pre>
+</div>
+
+<p>
+Para abrir la agenda: `C-c a`
+</p>
+
+<p>
+Las vistas comunes de agenda son:
+</p>
+<ul class="org-ul">
+<li>`a`: Vista semanal/diaria</li>
+<li>`t`: Lista de tareas TODO</li>
+<li>`m`: Coincidir con etiquetas/propiedades</li>
+<li>`s`: Búsqueda por palabras clave</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd426393" class="outline-4">
+<h4 id="orgd426393"><span class="section-number-4">15.1.2.</span> Vista personalizada de agenda</h4>
+<div class="outline-text-4" id="text-15-1-2">
+<p>
+Puedes crear vistas personalizadas para la agenda:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">setq</span> org-agenda-custom-commands
+      '((<span style="color: #005F00;">"p"</span> <span style="color: #005F00;">"Proyectos activos"</span>
+         ((tags-todo <span style="color: #005F00;">"PROYECTO+ACTIVO"</span>)))
+        (<span style="color: #005F00;">"w"</span> <span style="color: #005F00;">"Agenda laboral semanal"</span>
+         ((agenda <span style="color: #005F00;">""</span> ((org-agenda-span 'week)
+                      (org-agenda-tag-filter-preset '(<span style="color: #005F00;">"+trabajo"</span>))))
+          (tags-todo <span style="color: #005F00;">"+trabajo-reuni&#243;n"</span>)))))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdc7d6d9" class="outline-4">
+<h4 id="orgdc7d6d9"><span class="section-number-4">15.1.3.</span> Sistema de captura</h4>
+<div class="outline-text-4" id="text-15-1-3">
+<p>
+Org Capture permite tomar notas rápidamente sin interrumpir el flujo de trabajo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">setq</span> org-capture-templates
+      '((<span style="color: #005F00;">"t"</span> <span style="color: #005F00;">"Tarea"</span> entry (file+headline <span style="color: #005F00;">"~/org/tareas.org"</span> <span style="color: #005F00;">"Tareas"</span>)
+         <span style="color: #005F00;">"* TODO %?\n  %i\n  %a"</span>)
+        (<span style="color: #005F00;">"n"</span> <span style="color: #005F00;">"Nota"</span> entry (file+datetree <span style="color: #005F00;">"~/org/notas.org"</span>)
+         <span style="color: #005F00;">"* %?\n  %U\n  %i\n  %a"</span>)
+        (<span style="color: #005F00;">"j"</span> <span style="color: #005F00;">"Diario"</span> entry (file+datetree <span style="color: #005F00;">"~/org/diario.org"</span>)
+         <span style="color: #005F00;">"* %?\n  %U\n  %i"</span>)
+        (<span style="color: #005F00;">"i"</span> <span style="color: #005F00;">"Idea"</span> entry (file+headline <span style="color: #005F00;">"~/org/ideas.org"</span> <span style="color: #005F00;">"Ideas"</span>)
+         <span style="color: #005F00;">"* %? :IDEA:\n  %U"</span>)))
+</pre>
+</div>
+
+<p>
+Para capturar: `C-c c`
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org86da059" class="outline-3">
+<h3 id="org86da059"><span class="section-number-3">15.2.</span> Toma de notas avanzada</h3>
+<div class="outline-text-3" id="text-15-2">
+</div>
+<div id="outline-container-org6dc0a74" class="outline-4">
+<h4 id="org6dc0a74"><span class="section-number-4">15.2.1.</span> Enlaces y referencias cruzadas</h4>
+<div class="outline-text-4" id="text-15-2-1">
+<p>
+Org Mode tiene un potente sistema de enlaces:
+</p>
+
+<pre class="example" id="org8af55fd">
+[[https://gnu.org][Sitio de GNU]]  # Enlace externo
+[[file:imagen.png]]               # Enlace a archivo
+[[./documentos/informe.pdf]]     # Ruta relativa
+[[#ID]]                          # Enlace a un ID en el documento
+[[proyectos.org::*Proyecto X]]   # Enlace a un encabezado en otro archivo
+</pre>
+
+<p>
+Para insertar un enlace: `C-c C-l`
+Para seguir un enlace: `C-c C-o`
+</p>
+</div>
+</div>
+<div id="outline-container-org4889e94" class="outline-4">
+<h4 id="org4889e94"><span class="section-number-4">15.2.2.</span> Listas de control (checklists)</h4>
+<div class="outline-text-4" id="text-15-2-2">
+<p>
+Para tareas con subtareas:
+</p>
+
+<p>
+#+BEGIN_EXAMPLE
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org5194cf8" class="outline-2">
+<h2 id="org5194cf8"><span class="section-number-2">16.</span> <span class="todo TODO">TODO</span> Preparar presentación <code>[0/3]</code></h2>
+<div class="outline-text-2" id="text-16">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Recopilar datos</li>
+<li class="off"><code>[&#xa0;]</code> Crear diapositivas</li>
+<li class="off"><code>[&#xa0;]</code> Ensayar presentación</li>
+</ul>
+<p>
+#+END_EXAMPLE
+</p>
+
+<p>
+Para marcar un elemento como completo: `C-c C-c`
+</p>
+</div>
+<div id="outline-container-orgc24d53e" class="outline-4">
+<h4 id="orgc24d53e"><span class="section-number-4">16.0.1.</span> Tablas y cálculos</h4>
+<div class="outline-text-4" id="text-16-0-1">
+<p>
+Org Mode tiene un potente sistema de tablas con capacidades de hoja de cálculo:
+</p>
+
+<pre class="example" id="org77daf16">
+#+ATTR_HTML: :border 2 :rules all :frame border
+| Nombre  | Horas | Tarifa | Total  |
+|---------+-------+--------+--------|
+| Juan    |    10 |     25 |    250 |
+| María   |     8 |     30 |    240 |
+| Carlos  |    12 |     20 |    240 |
+|---------+-------+--------+--------|
+| Total   |    30 |        |    730 |
+#+TBLFM: @5$2=vsum(@2..@4$2)::@2$4=$2*$3::@3$4=$2*$3::@4$4=$2*$3::@5$4=vsum(@2..@4$4)
+</pre>
+
+<p>
+Para crear una tabla: Comienza a escribir `|` y presiona TAB
+</p>
+
+<p>
+Comandos útiles para tablas:
+</p>
+<ul class="org-ul">
+<li>`TAB`: Navegar entre celdas</li>
+<li>`RET`: Crear nueva fila</li>
+<li>`M-left/right/up/down`: Mover columnas/filas</li>
+<li>`C-c -`: Insertar línea horizontal</li>
+<li>`C-c ^`: Ordenar tabla</li>
+<li>`C-c *`: Recalcular fórmulas</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4a35738" class="outline-4">
+<h4 id="org4a35738"><span class="section-number-4">16.0.2.</span> Código fuente y bloques de código</h4>
+<div class="outline-text-4" id="text-16-0-2">
+<p>
+Org Mode permite incluir bloques de código ejecutables:
+</p>
+
+<pre class="example" id="org817de49">
+#+BEGIN_SRC python :results output
+def fibonacci(n):
+    a, b = 0, 1
+    for i in range(n):
+        print(a, end=' ')
+        a, b = b, a + b
+
+fibonacci(10)
+#+END_SRC
+
+#+RESULTS:
+: 0 1 1 2 3 5 8 13 21 34
+</pre>
+
+<p>
+Para crear un bloque de código: `C-c C-,` o simplemente escribe `&lt;s` y presiona TAB
+Para ejecutar un bloque de código: `C-c C-c` con el cursor dentro del bloque
+</p>
+</div>
+</div>
+<div id="outline-container-org3b5241d" class="outline-4">
+<h4 id="org3b5241d"><span class="section-number-4">16.0.3.</span> Exportación y publicación</h4>
+<div class="outline-text-4" id="text-16-0-3">
+<p>
+Org Mode puede exportar documentos a múltiples formatos:
+</p>
+
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Formato</th>
+<th scope="col" class="org-left">Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">HTML</td>
+<td class="org-left">`C-c C-e h h`</td>
+</tr>
+
+<tr>
+<td class="org-left">PDF (vía LaTeX)</td>
+<td class="org-left">`C-c C-e l p`</td>
+</tr>
+
+<tr>
+<td class="org-left">Markdown</td>
+<td class="org-left">`C-c C-e m m`</td>
+</tr>
+
+<tr>
+<td class="org-left">ASCII/Text</td>
+<td class="org-left">`C-c C-e t a`</td>
+</tr>
+
+<tr>
+<td class="org-left">ODT</td>
+<td class="org-left">`C-c C-e o o`</td>
+</tr>
+
+<tr>
+<td class="org-left">iCalendar</td>
+<td class="org-left">`C-c C-e c c`</td>
+</tr>
+
+<tr>
+<td class="org-left">LaTeX</td>
+<td class="org-left">`C-c C-e l l`</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Para personalizar la exportación, puedes usar opciones al principio del documento:
+</p>
+
+<pre class="example" id="orga32642e">
+#+OPTIONS: toc:2 num:t ^:nil
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper,11pt]
+#+LATEX_HEADER: \usepackage{xcolor}
+#+HTML_HEAD: &lt;style&gt;body { max-width: 800px; margin: auto; }&lt;/style&gt;
+</pre>
+</div>
+</div>
+<div id="outline-container-org5758477" class="outline-3">
+<h3 id="org5758477"><span class="section-number-3">16.1.</span> Diagrama: Estructura de Org Mode</h3>
+<div class="outline-text-3" id="text-16-1">
+
+<figure id="org20e611f">
+<img src="images/estructura_org_mode.png" alt="estructura_org_mode.png" width="170%" class="sombra">
+
+</figure>
+</div>
+</div>
+</div>
+<div id="outline-container-orgad4a426" class="outline-2">
+<h2 id="orgad4a426"><span class="section-number-2">17.</span> Flujos de trabajo avanzados</h2>
+<div class="outline-text-2" id="text-17">
+</div>
+<div id="outline-container-orgb7fab28" class="outline-3">
+<h3 id="orgb7fab28"><span class="section-number-3">17.1.</span> Sistema GTD (Getting Things Done)</h3>
+<div class="outline-text-3" id="text-17-1">
+<p>
+Org Mode es ideal para implementar el método GTD de David Allen:
+</p>
+</div>
+<div id="outline-container-org569674e" class="outline-4">
+<h4 id="org569674e"><span class="section-number-4">17.1.1.</span> Estructura de archivos</h4>
+<div class="outline-text-4" id="text-17-1-1">
+<pre class="example" id="org1bcef81">
+~/org/
+  ├── inbox.org      # Captura inicial de todo
+  ├── gtd.org        # Tareas organizadas
+  ├── someday.org    # Proyectos e ideas futuras
+  ├── tickler.org    # Recordatorios cronológicos
+  └── referencias.org # Material de referencia
+</pre>
+</div>
+</div>
+<div id="outline-container-org014b08a" class="outline-4">
+<h4 id="org014b08a"><span class="section-number-4">17.1.2.</span> Configuración básica para GTD</h4>
+<div class="outline-text-4" id="text-17-1-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Estados para el flujo GTD</span>
+(<span style="color: #D70000;">setq</span> org-todo-keywords
+      '((sequence <span style="color: #005F00;">"TODO(t)"</span> <span style="color: #005F00;">"NEXT(n)"</span> <span style="color: #005F00;">"WAITING(w)"</span> <span style="color: #005F00;">"SOMEDAY(s)"</span> <span style="color: #005F00;">"|"</span> <span style="color: #005F00;">"DONE(d)"</span> <span style="color: #005F00;">"CANCELLED(c)"</span>)))
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Archivos para agenda</span>
+(<span style="color: #D70000;">setq</span> org-agenda-files '(<span style="color: #005F00;">"~/org/inbox.org"</span> <span style="color: #005F00;">"~/org/gtd.org"</span> <span style="color: #005F00;">"~/org/tickler.org"</span>))
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Plantillas de captura para GTD</span>
+(<span style="color: #D70000;">setq</span> org-capture-templates
+      '((<span style="color: #005F00;">"t"</span> <span style="color: #005F00;">"Todo"</span> entry (file <span style="color: #005F00;">"~/org/inbox.org"</span>)
+         <span style="color: #005F00;">"* TODO %?\n%i\n%U"</span>)
+        (<span style="color: #005F00;">"n"</span> <span style="color: #005F00;">"Nota"</span> entry (file <span style="color: #005F00;">"~/org/inbox.org"</span>)
+         <span style="color: #005F00;">"* %? :NOTE:\n%i\n%U"</span>)
+        (<span style="color: #005F00;">"m"</span> <span style="color: #005F00;">"Reuni&#243;n"</span> entry (file <span style="color: #005F00;">"~/org/inbox.org"</span>)
+         <span style="color: #005F00;">"* MEETING %? :MEETING:\n%i\n%U"</span>)
+        (<span style="color: #005F00;">"r"</span> <span style="color: #005F00;">"Referencia"</span> entry (file <span style="color: #005F00;">"~/org/referencias.org"</span>)
+         <span style="color: #005F00;">"* %? :REFERENCE:\n%i\n%U"</span>)
+        (<span style="color: #005F00;">"s"</span> <span style="color: #005F00;">"Someday"</span> entry (file <span style="color: #005F00;">"~/org/someday.org"</span>)
+         <span style="color: #005F00;">"* SOMEDAY %?\n%i\n%U"</span>)))
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n de refiling para procesar la bandeja de entrada</span>
+(<span style="color: #D70000;">setq</span> org-refile-targets '((<span style="color: #005F00;">"~/org/gtd.org"</span> <span style="color: #1F55A0;">:maxlevel</span> . 3)
+                           (<span style="color: #005F00;">"~/org/someday.org"</span> <span style="color: #1F55A0;">:level</span> . 1)
+                           (<span style="color: #005F00;">"~/org/referencias.org"</span> <span style="color: #1F55A0;">:level</span> . 1)
+                           (<span style="color: #005F00;">"~/org/tickler.org"</span> <span style="color: #1F55A0;">:maxlevel</span> . 2)))
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Vistas personalizadas para GTD</span>
+(<span style="color: #D70000;">setq</span> org-agenda-custom-commands
+      '((<span style="color: #005F00;">"g"</span> <span style="color: #005F00;">"Vista GTD"</span>
+         ((agenda <span style="color: #005F00;">""</span> ((org-agenda-span 'day)
+                      (org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                      (org-agenda-sorting-strategy '(time-up priority-down))))
+          (todo <span style="color: #005F00;">"NEXT"</span>
+                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'scheduled))
+                 (org-agenda-overriding-header <span style="color: #005F00;">"Pr&#243;ximas acciones:"</span>)))
+          (todo <span style="color: #005F00;">"WAITING"</span>
+                ((org-agenda-overriding-header <span style="color: #005F00;">"Esperando:"</span>)))
+          (todo <span style="color: #005F00;">"TODO"</span>
+                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'scheduled))
+                 (org-agenda-overriding-header <span style="color: #005F00;">"Tareas pendientes:"</span>)))))
+        (<span style="color: #005F00;">"r"</span> <span style="color: #005F00;">"Revisi&#243;n semanal"</span>
+         ((agenda <span style="color: #005F00;">""</span> ((org-agenda-span 'week)
+                      (org-agenda-start-on-weekday 1)
+                      (org-agenda-start-with-log-mode t)))
+          (stuck <span style="color: #005F00;">""</span>)
+          (todo <span style="color: #005F00;">"SOMEDAY"</span>
+                ((org-agenda-overriding-header <span style="color: #005F00;">"Proyectos futuros:"</span>)))))))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6aef923" class="outline-4">
+<h4 id="org6aef923"><span class="section-number-4">17.1.3.</span> Flujo de trabajo GTD en Org Mode</h4>
+<div class="outline-text-4" id="text-17-1-3">
+<ol class="org-ol">
+<li><b>Capturar</b>: Usa `C-c c` para añadir cualquier información a `inbox.org`</li>
+<li><b>Procesar</b>: Regularmente revisa `inbox.org` y decide qué hacer con cada ítem:
+<ul class="org-ul">
+<li>Si es accionable y toma menos de 2 minutos, hazlo ahora</li>
+<li>Si es accionable pero toma más tiempo, conviértelo en un TODO</li>
+<li>Si no es accionable, archívalo en referencias o someday</li>
+</ul></li>
+<li><b>Organizar</b>: Usa `C-c C-w` (refile) para mover elementos a donde pertenecen</li>
+<li><b>Revisar</b>: Usa la vista de agenda para revisar regularmente tus tareas</li>
+<li><b>Hacer</b>: Usa la vista "Próximas acciones" para decidir qué hacer ahora</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orga318a58" class="outline-3">
+<h3 id="orga318a58"><span class="section-number-3">17.2.</span> Zettelkasten para gestión de conocimiento</h3>
+<div class="outline-text-3" id="text-17-2">
+<p>
+El método Zettelkasten es un sistema de toma de notas interconectadas:
+</p>
+</div>
+<div id="outline-container-orgdb8e337" class="outline-4">
+<h4 id="orgdb8e337"><span class="section-number-4">17.2.1.</span> Configuración básica</h4>
+<div class="outline-text-4" id="text-17-2-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Directorio para notas Zettelkasten</span>
+(<span style="color: #D70000;">setq</span> org-zettelkasten-directory <span style="color: #005F00;">"~/org/zettelkasten/"</span>)
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Plantilla para nueva nota</span>
+(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">org-zettelkasten-new-note</span> ()
+  (<span style="color: #D70000;">interactive</span>)
+  (<span style="color: #D70000;">let</span> ((title (read-string <span style="color: #005F00;">"T&#237;tulo de la nota: "</span>)))
+    (<span style="color: #D70000;">let</span> ((file (concat org-zettelkasten-directory
+                        (format-time-string <span style="color: #005F00;">"%Y%m%d%H%M"</span>)
+                        <span style="color: #005F00;">"-"</span>
+                        (replace-regexp-in-string <span style="color: #005F00;">" "</span> <span style="color: #005F00;">"_"</span> (downcase title))
+                        <span style="color: #005F00;">".org"</span>)))
+      (find-file file)
+      (insert (format <span style="color: #005F00;">"#+TITLE: %s\n#+DATE: %s\n#+FILETAGS: \n\n"</span> 
+                      title 
+                      (format-time-string <span style="color: #005F00;">"[%Y-%m-%d %a %H:%M]"</span>)))
+      (save-buffer))))
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Atajo global para crear nueva nota</span>
+(global-set-key (kbd <span style="color: #005F00;">"C-c z n"</span>) 'org-zettelkasten-new-note)
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Funci&#243;n para buscar notas</span>
+(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">org-zettelkasten-find-note</span> ()
+  (<span style="color: #D70000;">interactive</span>)
+  (<span style="color: #D70000;">let</span> ((default-directory org-zettelkasten-directory))
+    (call-interactively 'find-file)))
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Atajo global para buscar notas</span>
+(global-set-key (kbd <span style="color: #005F00;">"C-c z f"</span>) 'org-zettelkasten-find-note)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org26693da" class="outline-4">
+<h4 id="org26693da"><span class="section-number-4">17.2.2.</span> Uso con org-roam</h4>
+<div class="outline-text-4" id="text-17-2-2">
+<p>
+Para una implementación más completa, puedes usar `org-roam`:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n b&#225;sica de org-roam</span>
+(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">org-roam</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:hook</span>
+  (after-init . org-roam-mode)
+  <span style="color: #1F55A0;">:custom</span>
+  (org-roam-directory <span style="color: #005F00;">"~/org/roam"</span>)
+  <span style="color: #1F55A0;">:bind</span> (<span style="color: #1F55A0;">:map</span> org-roam-mode-map
+              ((<span style="color: #005F00;">"C-c n l"</span> . org-roam)
+               (<span style="color: #005F00;">"C-c n f"</span> . org-roam-find-file)
+               (<span style="color: #005F00;">"C-c n g"</span> . org-roam-graph))
+              <span style="color: #1F55A0;">:map</span> org-mode-map
+              ((<span style="color: #005F00;">"C-c n i"</span> . org-roam-insert))
+              ((<span style="color: #005F00;">"C-c n I"</span> . org-roam-insert-immediate))))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6978881" class="outline-4">
+<h4 id="org6978881"><span class="section-number-4">17.2.3.</span> Principios de Zettelkasten en Org Mode</h4>
+<div class="outline-text-4" id="text-17-2-3">
+<ol class="org-ol">
+<li><b>Atomicidad</b>: Cada nota aborda un solo concepto</li>
+<li><b>Autonomía</b>: Cada nota es comprensible por sí misma</li>
+<li><b>Vinculación</b>: Las notas se conectan entre sí mediante enlaces</li>
+<li><b>Explicación</b>: Los enlaces explican por qué se conectan dos notas</li>
+<li><b>Indexación</b>: Usa notas de índice para agrupar temáticamente</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org47be19e" class="outline-3">
+<h3 id="org47be19e"><span class="section-number-3">17.3.</span> Gestión de proyectos y tareas</h3>
+<div class="outline-text-3" id="text-17-3">
+</div>
+<div id="outline-container-orge2f9b9b" class="outline-4">
+<h4 id="orge2f9b9b"><span class="section-number-4">17.3.1.</span> Tareas recurrentes</h4>
+<div class="outline-text-4" id="text-17-3-1">
+<p>
+Org Mode permite definir tareas que se repiten automáticamente después de completarlas:
+</p>
+
+<p>
+#+BEGIN_EXAMPLE
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org59dd9db" class="outline-2">
+<h2 id="org59dd9db"><span class="section-number-2">18.</span> <span class="todo TODO">TODO</span> Revisar correo electrónico</h2>
+<div class="outline-text-2" id="text-18">
+</div>
+</div>
+<div id="outline-container-org35f6b72" class="outline-2">
+<h2 id="org35f6b72"><span class="section-number-2">19.</span> <span class="todo TODO">TODO</span> Reunión semanal de equipo</h2>
+<div class="outline-text-2" id="text-19">
+</div>
+</div>
+<div id="outline-container-org10257f6" class="outline-2">
+<h2 id="org10257f6"><span class="section-number-2">20.</span> <span class="todo TODO">TODO</span> Pago de servicios</h2>
+<div class="outline-text-2" id="text-20">
+<p>
+#+END_EXAMPLE
+</p>
+
+<p>
+Marcadores de repetición:
+</p>
+<ul class="org-ul">
+<li>`.+1d`: Repetir cada día después de completar</li>
+<li>`++1w`: Repetir cada semana en el mismo día</li>
+<li>`+1m`: Repetir cada mes en la misma fecha</li>
+</ul>
+</div>
+<div id="outline-container-org9910c23" class="outline-4">
+<h4 id="org9910c23"><span class="section-number-4">20.0.1.</span> Hábitos</h4>
+<div class="outline-text-4" id="text-20-0-1">
+<p>
+Para seguimiento de hábitos, puedes usar `org-habit`:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">org-habit</span>)
+(<span style="color: #D70000;">setq</span> org-habit-graph-column 40)
+(<span style="color: #D70000;">setq</span> org-habit-show-habits-only-for-today t)
+</pre>
+</div>
+
+<p>
+Ejemplo de hábito:
+</p>
+
+<p>
+#+BEGIN_EXAMPLE
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org3808f31" class="outline-2">
+<h2 id="org3808f31"><span class="section-number-2">21.</span> <span class="todo TODO">TODO</span> Ejercicio diario</h2>
+<div class="outline-text-2" id="text-21">
+<p>
+#+END_EXAMPLE
+</p>
+</div>
+<div id="outline-container-org1e8fad5" class="outline-4">
+<h4 id="org1e8fad5"><span class="section-number-4">21.0.1.</span> Seguimiento de tiempo</h4>
+<div class="outline-text-4" id="text-21-0-1">
+<p>
+Org Mode permite registrar el tiempo dedicado a tareas:
+</p>
+
+<p>
+Para iniciar el reloj: `C-c C-x C-i`
+Para detener el reloj: `C-c C-x C-o`
+Para ver informe de tiempo: `C-c C-x C-r`
+</p>
+
+<p>
+Configuración para seguimiento de tiempo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Formato para informe de tiempo</span>
+(<span style="color: #D70000;">setq</span> org-clock-report-include-clocks t)
+(<span style="color: #D70000;">setq</span> org-agenda-start-with-clockreport-mode t)
+(<span style="color: #D70000;">setq</span> org-clock-persist t)
+(org-clock-persistence-insinuate)
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Guardar &#250;ltima tarea en la que se trabaj&#243;</span>
+(<span style="color: #D70000;">setq</span> org-clock-persist 'history)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb1fb6e0" class="outline-3">
+<h3 id="orgb1fb6e0"><span class="section-number-3">21.1.</span> Integración con correo electrónico</h3>
+<div class="outline-text-3" id="text-21-1">
+<p>
+Org Mode puede integrarse con el correo electrónico para una gestión eficiente:
+</p>
+</div>
+<div id="outline-container-org7028a75" class="outline-4">
+<h4 id="org7028a75"><span class="section-number-4">21.1.1.</span> Configuración con mu4e</h4>
+<div class="outline-text-4" id="text-21-1-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">mu4e</span>
+  <span style="color: #1F55A0;">:ensure</span> nil
+  <span style="color: #1F55A0;">:config</span>
+  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Integraci&#243;n con Org Mode</span>
+  (<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">org-mu4e</span>)
+
+  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Guardar enlaces a correos electr&#243;nicos</span>
+  (org-link-set-parameters <span style="color: #005F00;">"mu4e"</span>
+                          <span style="color: #1F55A0;">:follow</span> #'org-mu4e-open
+                          <span style="color: #1F55A0;">:store</span> #'org-mu4e-store-link)
+
+  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Capturar correos electr&#243;nicos como tareas</span>
+  (add-to-list 'org-capture-templates
+             '(<span style="color: #005F00;">"e"</span> <span style="color: #005F00;">"Email"</span> entry (file+headline <span style="color: #005F00;">"~/org/inbox.org"</span> <span style="color: #005F00;">"Correos"</span>)
+               <span style="color: #005F00;">"* TODO %?\nENLACE: %a\n %i"</span>))
+
+  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Convertir correos en tareas</span>
+  (define-key mu4e-headers-mode-map (kbd <span style="color: #005F00;">"C-c c"</span>) 'org-mu4e-store-and-capture)
+  (define-key mu4e-view-mode-map (kbd <span style="color: #005F00;">"C-c c"</span>) 'org-mu4e-store-and-capture))
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org387f914" class="outline-3">
+<h3 id="org387f914"><span class="section-number-3">21.2.</span> Publicación en la web</h3>
+<div class="outline-text-3" id="text-21-2">
+<p>
+Org Mode permite crear sitios web completos:
+</p>
+</div>
+<div id="outline-container-org6397d4b" class="outline-4">
+<h4 id="org6397d4b"><span class="section-number-4">21.2.1.</span> Configuración básica de org-publish</h4>
+<div class="outline-text-4" id="text-21-2-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">ox-publish</span>)
+(<span style="color: #D70000;">setq</span> org-publish-project-alist
+      '((<span style="color: #005F00;">"sitio-web"</span>
+         <span style="color: #1F55A0;">:base-directory</span> <span style="color: #005F00;">"~/org/sitio/"</span>
+         <span style="color: #1F55A0;">:base-extension</span> <span style="color: #005F00;">"org"</span>
+         <span style="color: #1F55A0;">:publishing-directory</span> <span style="color: #005F00;">"~/public_html/"</span>
+         <span style="color: #1F55A0;">:recursive</span> t
+         <span style="color: #1F55A0;">:publishing-function</span> org-html-publish-to-html
+         <span style="color: #1F55A0;">:headline-levels</span> 4
+         <span style="color: #1F55A0;">:auto-preamble</span> t
+         <span style="color: #1F55A0;">:auto-sitemap</span> t
+         <span style="color: #1F55A0;">:sitemap-title</span> <span style="color: #005F00;">"Mi Sitio Web"</span>)
+        (<span style="color: #005F00;">"sitio-web-static"</span>
+         <span style="color: #1F55A0;">:base-directory</span> <span style="color: #005F00;">"~/org/sitio/static/"</span>
+         <span style="color: #1F55A0;">:base-extension</span> <span style="color: #005F00;">"css</span><span style="color: #1F55A0; font-weight: bold;">\\</span><span style="color: #1F55A0; font-weight: bold;">|</span><span style="color: #005F00;">js</span><span style="color: #1F55A0; font-weight: bold;">\\</span><span style="color: #1F55A0; font-weight: bold;">|</span><span style="color: #005F00;">png</span><span style="color: #1F55A0; font-weight: bold;">\\</span><span style="color: #1F55A0; font-weight: bold;">|</span><span style="color: #005F00;">jpg</span><span style="color: #1F55A0; font-weight: bold;">\\</span><span style="color: #1F55A0; font-weight: bold;">|</span><span style="color: #005F00;">gif"</span>
+         <span style="color: #1F55A0;">:publishing-directory</span> <span style="color: #005F00;">"~/public_html/static/"</span>
+         <span style="color: #1F55A0;">:recursive</span> t
+         <span style="color: #1F55A0;">:publishing-function</span> org-publish-attachment)
+        (<span style="color: #005F00;">"sitio-web-completo"</span>
+         <span style="color: #1F55A0;">:components</span> (<span style="color: #005F00;">"sitio-web"</span> <span style="color: #005F00;">"sitio-web-static"</span>))))
+</pre>
+</div>
+
+<p>
+Para publicar el sitio: `M-x org-publish` y selecciona "sitio-web-completo"
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfb2e887" class="outline-2">
+<h2 id="orgfb2e887"><span class="section-number-2">22.</span> Extensiones y personalización</h2>
+<div class="outline-text-2" id="text-22">
+</div>
+<div id="outline-container-org19dd38b" class="outline-3">
+<h3 id="org19dd38b"><span class="section-number-3">22.1.</span> Paquetes esenciales para Org Mode</h3>
+<div class="outline-text-3" id="text-22-1">
+<p>
+Estos paquetes complementan la funcionalidad de Org Mode:
+</p>
+</div>
+<div id="outline-container-org26e1799" class="outline-4">
+<h4 id="org26e1799"><span class="section-number-4">22.1.1.</span> org-bullets</h4>
+<div class="outline-text-4" id="text-22-1-1">
+<p>
+Mejora la visualización de los encabezados con Unicode:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">org-bullets</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:hook</span> (org-mode . org-bullets-mode))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org63db8c8" class="outline-4">
+<h4 id="org63db8c8"><span class="section-number-4">22.1.2.</span> org-super-agenda</h4>
+<div class="outline-text-4" id="text-22-1-2">
+<p>
+Agrupa elementos en la agenda para mejor visualización:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">org-super-agenda</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:config</span>
+  (org-super-agenda-mode)
+  (<span style="color: #D70000;">setq</span> org-super-agenda-groups
+        '((<span style="color: #1F55A0;">:name</span> <span style="color: #005F00;">"Importantes"</span>
+                 <span style="color: #1F55A0;">:priority</span> <span style="color: #005F00;">"A"</span>)
+          (<span style="color: #1F55A0;">:name</span> <span style="color: #005F00;">"Trabajo"</span>
+                 <span style="color: #1F55A0;">:tag</span> <span style="color: #005F00;">"trabajo"</span>)
+          (<span style="color: #1F55A0;">:name</span> <span style="color: #005F00;">"Urgentes"</span>
+                 <span style="color: #1F55A0;">:deadline</span> today)
+          (<span style="color: #1F55A0;">:name</span> <span style="color: #005F00;">"Pr&#243;ximas tareas"</span>
+                 <span style="color: #1F55A0;">:todo</span> <span style="color: #005F00;">"NEXT"</span>)
+          (<span style="color: #1F55A0;">:name</span> <span style="color: #005F00;">"Esperando"</span>
+                 <span style="color: #1F55A0;">:todo</span> <span style="color: #005F00;">"WAITING"</span>))))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbb0c492" class="outline-4">
+<h4 id="orgbb0c492"><span class="section-number-4">22.1.3.</span> org-download</h4>
+<div class="outline-text-4" id="text-22-1-3">
+<p>
+Permite insertar imágenes fácilmente en documentos Org:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">org-download</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:after</span> org
+  <span style="color: #1F55A0;">:config</span>
+  (<span style="color: #D70000;">setq</span> org-download-method 'directory)
+  (<span style="color: #D70000;">setq</span> org-download-image-dir <span style="color: #005F00;">"~/org/images"</span>)
+  (<span style="color: #D70000;">setq</span> org-download-heading-lvl nil)
+  (<span style="color: #D70000;">setq</span> org-download-timestamp <span style="color: #005F00;">"%Y%m%d-%H%M%S_"</span>)
+  (<span style="color: #D70000;">setq</span> org-image-actual-width 400))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orga77ddff" class="outline-4">
+<h4 id="orga77ddff"><span class="section-number-4">22.1.4.</span> org-noter</h4>
+<div class="outline-text-4" id="text-22-1-4">
+<p>
+Para tomar notas mientras lees documentos PDF:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">org-noter</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:config</span>
+  (<span style="color: #D70000;">setq</span> org-noter-notes-search-path '(<span style="color: #005F00;">"~/org/notas"</span>))
+  (<span style="color: #D70000;">setq</span> org-noter-separate-notes-from-heading t))
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orge92faa3" class="outline-3">
+<h3 id="orge92faa3"><span class="section-number-3">22.2.</span> Temas y personalización visual</h3>
+<div class="outline-text-3" id="text-22-2">
+</div>
+<div id="outline-container-org2b38a20" class="outline-4">
+<h4 id="org2b38a20"><span class="section-number-4">22.2.1.</span> Temas populares</h4>
+<div class="outline-text-4" id="text-22-2-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Doom Themes - conjunto de temas modernos</span>
+(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">doom-themes</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:config</span>
+  (load-theme 'doom-one t)
+  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Configurar org-mode espec&#237;ficamente</span>
+  (doom-themes-org-config))
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Modus Themes - temas accesibles incluidos en Emacs</span>
+(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">modus-themes</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:config</span>
+  (load-theme 'modus-operandi t)) <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Tema claro, usa modus-vivendi para oscuro</span>
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Spacemacs Theme</span>
+(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">spacemacs-theme</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:defer</span> t
+  <span style="color: #1F55A0;">:init</span>
+  (load-theme 'spacemacs-dark t))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge17ed79" class="outline-4">
+<h4 id="orge17ed79"><span class="section-number-4">22.2.2.</span> Personalización de fuentes</h4>
+<div class="outline-text-4" id="text-22-2-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Establecer fuentes para diferentes contextos</span>
+(set-face-attribute 'default nil <span style="color: #1F55A0;">:font</span> <span style="color: #005F00;">"JetBrains Mono-12"</span>)
+(set-face-attribute 'variable-pitch nil <span style="color: #1F55A0;">:font</span> <span style="color: #005F00;">"Cantarell-12"</span>)
+(set-face-attribute 'fixed-pitch nil <span style="color: #1F55A0;">:font</span> <span style="color: #005F00;">"JetBrains Mono-12"</span>)
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Mejorar la visualizaci&#243;n de Org Mode</span>
+(add-hook 'org-mode-hook 'variable-pitch-mode)
+(add-hook 'org-mode-hook 'visual-line-mode)
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Mantener fuente monoespaciada en ciertos elementos</span>
+(set-face-attribute 'org-block nil <span style="color: #1F55A0;">:inherit</span> 'fixed-pitch)
+(set-face-attribute 'org-code nil <span style="color: #1F55A0;">:inherit</span> 'fixed-pitch)
+(set-face-attribute 'org-table nil <span style="color: #1F55A0;">:inherit</span> 'fixed-pitch)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org190ac4a" class="outline-3">
+<h3 id="org190ac4a"><span class="section-number-3">22.3.</span> Gestión avanzada de configuraciones</h3>
+<div class="outline-text-3" id="text-22-3">
+</div>
+<div id="outline-container-orgd0ff885" class="outline-4">
+<h4 id="orgd0ff885"><span class="section-number-4">22.3.1.</span> use-package</h4>
+<div class="outline-text-4" id="text-22-3-1">
+<p>
+Para mantener tu configuración de Emacs organizada:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Instalaci&#243;n de use-package</span>
+(<span style="color: #D70000;">unless</span> (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">use-package</span>)
+(<span style="color: #D70000;">setq</span> use-package-always-ensure t)
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Ejemplo de uso</span>
+(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">org</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:bind</span> ((<span style="color: #005F00;">"C-c a"</span> . org-agenda)
+         (<span style="color: #005F00;">"C-c c"</span> . org-capture)
+         (<span style="color: #005F00;">"C-c l"</span> . org-store-link))
+  <span style="color: #1F55A0;">:config</span>
+  (<span style="color: #D70000;">setq</span> org-agenda-files '(<span style="color: #005F00;">"~/org/agenda.org"</span>))
+  (<span style="color: #D70000;">setq</span> org-default-notes-file <span style="color: #005F00;">"~/org/notes.org"</span>))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org8670a18" class="outline-4">
+<h4 id="org8670a18"><span class="section-number-4">22.3.2.</span> Organización por archivos</h4>
+<div class="outline-text-4" id="text-22-3-2">
+<p>
+Una estructura recomendada para configuración de Emacs:
+</p>
+
+<pre class="example" id="orgb560225">
+~/.emacs.d/
+  ├── init.el           # Archivo principal
+  ├── early-init.el     # Configuración temprana (Emacs 27+)
+  ├── custom.el         # Personalizaciones generadas por customize
+  └── lisp/             # Carpeta para módulos propios
+      ├── init-core.el  # Configuración básica
+      ├── init-ui.el    # Interfaz de usuario
+      ├── init-org.el   # Configuración Org Mode
+      └── init-dev.el   # Herramientas de desarrollo
+</pre>
+
+<p>
+Ejemplo de init.el para cargar módulos:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Establecer directorio lisp</span>
+(add-to-list 'load-path (expand-file-name <span style="color: #005F00;">"lisp"</span> user-emacs-directory))
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Cargar m&#243;dulos</span>
+(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">init-core</span>)
+(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">init-ui</span>)
+(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">init-org</span>)
+(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">init-dev</span>)
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Cargar personalizaciones externas</span>
+(<span style="color: #D70000;">setq</span> custom-file (expand-file-name <span style="color: #005F00;">"custom.el"</span> user-emacs-directory))
+(<span style="color: #D70000;">when</span> (file-exists-p custom-file)
+  (load custom-file))
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org8d4326a" class="outline-3">
+<h3 id="org8d4326a"><span class="section-number-3">22.4.</span> Productividad con pequeñas mejoras</h3>
+<div class="outline-text-3" id="text-22-4">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Mejorar la funci&#243;n de auto-completado</span>
+(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">company</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:hook</span> (after-init . global-company-mode)
+  <span style="color: #1F55A0;">:config</span>
+  (<span style="color: #D70000;">setq</span> company-idle-delay 0.1)
+  (<span style="color: #D70000;">setq</span> company-minimum-prefix-length 1))
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Mejorar b&#250;squeda/selecci&#243;n</span>
+(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">ivy</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:config</span>
+  (ivy-mode 1)
+  (<span style="color: #D70000;">setq</span> ivy-use-virtual-buffers t)
+  (<span style="color: #D70000;">setq</span> enable-recursive-minibuffers t))
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Ayuda con comandos</span>
+(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">which-key</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:config</span>
+  (which-key-mode))
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Acceso r&#225;pido a archivos recientes</span>
+(recentf-mode 1)
+(<span style="color: #D70000;">setq</span> recentf-max-menu-items 25)
+(global-set-key <span style="color: #005F00;">"\C-x\ \C-r"</span> 'recentf-open-files)
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Atajos globales &#250;tiles</span>
+(global-set-key (kbd <span style="color: #005F00;">"&lt;f5&gt;"</span>) 'revert-buffer)
+(global-set-key (kbd <span style="color: #005F00;">"C-c r"</span>) 'replace-string)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org3684588" class="outline-2">
+<h2 id="org3684588"><span class="section-number-2">23.</span> Solución de problemas comunes</h2>
+<div class="outline-text-2" id="text-23">
+</div>
+<div id="outline-container-org3f931e4" class="outline-3">
+<h3 id="org3f931e4"><span class="section-number-3">23.1.</span> Problemas de rendimiento</h3>
+<div class="outline-text-3" id="text-23-1">
+<p>
+Si Emacs se vuelve lento:
+</p>
+
+<ol class="org-ol">
+<li><b>Diagnóstico</b>: Usa `M-x profiler-start` y `M-x profiler-report` para identificar cuellos de botella</li>
+<li><b>Reducir paquetes</b>: Deshabilita paquetes que no uses frecuentemente</li>
+<li><b>Archivos Org grandes</b>: Divide archivos muy grandes en varios más pequeños</li>
+<li><b>Org Agenda lenta</b>: Reduce cantidad de archivos en `org-agenda-files`</li>
+<li><b>Inicio lento</b>: Usa `use-package` con `:defer t` para cargar paquetes solo cuando se necesiten</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Mejorar rendimiento con GC</span>
+(<span style="color: #D70000;">setq</span> gc-cons-threshold 100000000) <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">100 MB</span>
+(<span style="color: #D70000;">setq</span> read-process-output-max (* 1024 1024)) <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">1 MB</span>
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Acelerar Org Mode</span>
+(<span style="color: #D70000;">setq</span> org-agenda-dim-blocked-tasks nil)
+(<span style="color: #D70000;">setq</span> org-agenda-inhibit-startup t)
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Optimizar para archivos grandes</span>
+(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">so-long</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:config</span>
+  (global-so-long-mode 1))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org56bd8ea" class="outline-3">
+<h3 id="org56bd8ea"><span class="section-number-3">23.2.</span> Problemas de exportación</h3>
+<div class="outline-text-3" id="text-23-2">
+<p>
+Para resolver problemas al exportar documentos:
+</p>
+
+<ol class="org-ol">
+<li><b>Dependencias</b>: Asegúrate de tener instaladas las dependencias necesarias (LaTeX, Pandoc, etc.)</li>
+<li><b>Errores de sintaxis</b>: Verifica la sintaxis del documento con `M-x org-lint`</li>
+<li><b>Problemas con LaTeX</b>: Usa `C-c C-e l L` para exportar a LaTeX y ver errores específicos</li>
+<li><b>Caracteres especiales</b>: Usa `#+LATEX_HEADER: \usepackage[utf8]{inputenc}` para UTF-8</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org15f1f13" class="outline-3">
+<h3 id="org15f1f13"><span class="section-number-3">23.3.</span> Errores en Org Mode</h3>
+<div class="outline-text-3" id="text-23-3">
+<p>
+Soluciones a problemas comunes:
+</p>
+
+<ol class="org-ol">
+<li><b>Tareas no aparecen en agenda</b>: Verifica que el archivo esté en `org-agenda-files`</li>
+<li><b>Problemas de indentación</b>: Usa `org-indent-mode` o `M-x org-indent-region`</li>
+<li><b>Enlaces que no funcionan</b>: Verifica la sintaxis ``</li>
+<li><b>Bloques de código no se ejecutan</b>: Verifica que hayas cargado el lenguaje en `org-babel-load-languages`</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgcbda41b" class="outline-3">
+<h3 id="orgcbda41b"><span class="section-number-3">23.4.</span> Problemas de compatibilidad</h3>
+<div class="outline-text-3" id="text-23-4">
+<p>
+Para problemas entre versiones o sistemas:
+</p>
+
+<ol class="org-ol">
+<li><b>Distintas versiones de Emacs</b>: Usa condicionales en tu configuración
+```emacs-lisp
+(when (&gt;= emacs-major-version 27)
+  ;; Código específico para Emacs 27+
+  )
+```</li>
+<li><b>Distintos sistemas operativos</b>:
+```emacs-lisp
+(cond ((eq system-type 'windows-nt)
+       ;; Configuración para Windows
+       )
+      ((eq system-type 'darwin)
+       ;; Configuración para macOS
+       )
+      ((eq system-type 'gnu/linux)
+       ;; Configuración para Linux
+       ))
+```</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org922c495" class="outline-2">
+<h2 id="org922c495"><span class="section-number-2">24.</span> Diagrama: Jerarquía de conceptos en Emacs y Org Mode</h2>
+<div class="outline-text-2" id="text-24">
+<p>
+#+BEGIN_SRC plantuml
+@startmindmap
+skinparam backgroundColor #EEEBDC
+skinparam handwritten true
+</p>
+</div>
+</div>
+<div id="outline-container-org11a57fb" class="outline-2">
+<h2 id="org11a57fb"><span class="section-number-2">25.</span> Emacs + Org Mode</h2>
+<div class="outline-text-2" id="text-25">
+</div>
+<div id="outline-container-orgf2f4f12" class="outline-3">
+<h3 id="orgf2f4f12"><span class="section-number-3">25.1.</span> Fundamentos de Emacs</h3>
+<div class="outline-text-3" id="text-25-1">
+</div>
+<div id="outline-container-orgea90327" class="outline-4">
+<h4 id="orgea90327"><span class="section-number-4">25.1.1.</span> Terminología</h4>
+<div class="outline-text-4" id="text-25-1-1">
+</div>
+<ul class="org-ul">
+<li><a id="org753d7c6"></a>Buffers<br></li>
+<li><a id="org1997932"></a>Frames<br></li>
+<li><a id="orgb5240a6"></a>Windows<br></li>
+<li><a id="orgcbcab65"></a>Point &amp; Mark<br></li>
+<li><a id="org755b092"></a>Modes<br></li>
+</ul>
+</div>
+<div id="outline-container-org59e44c3" class="outline-4">
+<h4 id="org59e44c3"><span class="section-number-4">25.1.2.</span> Navegación</h4>
+<div class="outline-text-4" id="text-25-1-2">
+</div>
+<ul class="org-ul">
+<li><a id="org134a258"></a>Básica (C-f, C-b, etc.)<br></li>
+<li><a id="orgda51824"></a>Avanzada (M-f, M-b, etc.)<br></li>
+</ul>
+</div>
+<div id="outline-container-orge186c3c" class="outline-4">
+<h4 id="orge186c3c"><span class="section-number-4">25.1.3.</span> Edición</h4>
+<div class="outline-text-4" id="text-25-1-3">
+</div>
+<ul class="org-ul">
+<li><a id="org1c6041e"></a>Básica<br></li>
+<li><a id="org0771a15"></a>Búsqueda y reemplazo<br></li>
+<li><a id="org721dcd1"></a>Región y kill ring<br></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb8c85c4" class="outline-3">
+<h3 id="orgb8c85c4"><span class="section-number-3">25.2.</span> Org Mode Básico</h3>
+<div class="outline-text-3" id="text-25-2">
+</div>
+<div id="outline-container-orga0d9b44" class="outline-4">
+<h4 id="orga0d9b44"><span class="section-number-4">25.2.1.</span> Estructura de documentos</h4>
+<div class="outline-text-4" id="text-25-2-1">
+</div>
+<ul class="org-ul">
+<li><a id="org62e8233"></a>Encabezados y subencabezados<br></li>
+<li><a id="org916309b"></a>Listas<br></li>
+<li><a id="org6a68b02"></a>Tablas<br></li>
+</ul>
+</div>
+<div id="outline-container-org2f339f0" class="outline-4">
+<h4 id="org2f339f0"><span class="section-number-4">25.2.2.</span> Gestión de tareas</h4>
+<div class="outline-text-4" id="text-25-2-2">
+</div>
+<ul class="org-ul">
+<li><a id="orgbbcb5d2"></a>Estados TODO<br></li>
+<li><a id="orgd740835"></a>Prioridades<br></li>
+<li><a id="org08d49ae"></a>Etiquetas<br></li>
+</ul>
+</div>
+<div id="outline-container-org1d174d1" class="outline-4">
+<h4 id="org1d174d1"><span class="section-number-4">25.2.3.</span> Enlaces y referencias</h4>
+</div>
+<div id="outline-container-org0bd8465" class="outline-4">
+<h4 id="org0bd8465"><span class="section-number-4">25.2.4.</span> Fechas y horarios</h4>
+</div>
+</div>
+<div id="outline-container-org9fcbe22" class="outline-3">
+<h3 id="org9fcbe22"><span class="section-number-3">25.3.</span> Org Mode Avanzado</h3>
+<div class="outline-text-3" id="text-25-3">
+</div>
+<div id="outline-container-org5821cda" class="outline-4">
+<h4 id="org5821cda"><span class="section-number-4">25.3.1.</span> Agenda</h4>
+</div>
+<div id="outline-container-org6571987" class="outline-4">
+<h4 id="org6571987"><span class="section-number-4">25.3.2.</span> Captura</h4>
+</div>
+<div id="outline-container-org53c4157" class="outline-4">
+<h4 id="org53c4157"><span class="section-number-4">25.3.3.</span> Exportación</h4>
+</div>
+<div id="outline-container-org5a32aae" class="outline-4">
+<h4 id="org5a32aae"><span class="section-number-4">25.3.4.</span> Babel (código)</h4>
+</div>
+<div id="outline-container-org92b1476" class="outline-4">
+<h4 id="org92b1476"><span class="section-number-4">25.3.5.</span> Bloques especiales</h4>
+</div>
+</div>
+<div id="outline-container-orgdee5934" class="outline-3">
+<h3 id="orgdee5934"><span class="section-number-3">25.4.</span> Flujos de trabajo</h3>
+<div class="outline-text-3" id="text-25-4">
+</div>
+<div id="outline-container-orgb4d4db1" class="outline-4">
+<h4 id="orgb4d4db1"><span class="section-number-4">25.4.1.</span> GTD</h4>
+</div>
+<div id="outline-container-org8be620e" class="outline-4">
+<h4 id="org8be620e"><span class="section-number-4">25.4.2.</span> Zettelkasten</h4>
+</div>
+<div id="outline-container-orgbf7e8c5" class="outline-4">
+<h4 id="orgbf7e8c5"><span class="section-number-4">25.4.3.</span> Gestión de proyectos</h4>
+</div>
+<div id="outline-container-org2aad2dd" class="outline-4">
+<h4 id="org2aad2dd"><span class="section-number-4">25.4.4.</span> Toma de notas</h4>
+</div>
+</div>
+<div id="outline-container-org80633df" class="outline-3">
+<h3 id="org80633df"><span class="section-number-3">25.5.</span> Personalización</h3>
+<div class="outline-text-3" id="text-25-5">
+</div>
+<div id="outline-container-org2365ad7" class="outline-4">
+<h4 id="org2365ad7"><span class="section-number-4">25.5.1.</span> Temas</h4>
+</div>
+<div id="outline-container-org1893e23" class="outline-4">
+<h4 id="org1893e23"><span class="section-number-4">25.5.2.</span> Paquetes adicionales</h4>
+</div>
+<div id="outline-container-org23d6752" class="outline-4">
+<h4 id="org23d6752"><span class="section-number-4">25.5.3.</span> Configuración propia</h4>
+<div class="outline-text-4" id="text-25-5-3">
+<p>
+@endmindmap
+#+END_SRC
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc5c0f07" class="outline-2">
+<h2 id="orgc5c0f07"><span class="section-number-2">26.</span> Recursos y referencias</h2>
+<div class="outline-text-2" id="text-26">
+</div>
+<div id="outline-container-org100047a" class="outline-3">
+<h3 id="org100047a"><span class="section-number-3">26.1.</span> Documentación oficial</h3>
+<div class="outline-text-3" id="text-26-1">
+<ul class="org-ul">
+<li>[Manual de Org Mode](<a href="https://orgmode.org/manual/">https://orgmode.org/manual/</a>)</li>
+<li>[Manual de Emacs](<a href="https://www.gnu.org/software/emacs/manual/">https://www.gnu.org/software/emacs/manual/</a>)</li>
+<li>[Org-mode Compact Guide](<a href="https://orgmode.org/guide/">https://orgmode.org/guide/</a>)</li>
+<li>[Worg: Wiki de Org Mode](<a href="https://orgmode.org/worg/">https://orgmode.org/worg/</a>)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf9383d0" class="outline-3">
+<h3 id="orgf9383d0"><span class="section-number-3">26.2.</span> Libros</h3>
+<div class="outline-text-3" id="text-26-2">
+<ul class="org-ul">
+<li>"Org Mode Compact Guide" por Carsten Dominik</li>
+<li>"Mastering Emacs" por Mickey Petersen</li>
+<li>"Practical Emacs Tutorial" por Xah Lee</li>
+<li>"Writing GNU Emacs Extensions" por Bob Glickstein</li>
+<li>"Learning GNU Emacs" por Debra Cameron, et al.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc50bafe" class="outline-3">
+<h3 id="orgc50bafe"><span class="section-number-3">26.3.</span> Tutoriales en línea</h3>
+<div class="outline-text-3" id="text-26-3">
+<ul class="org-ul">
+<li>[Curso Org Mode UC Irvine](<a href="https://github.com/zamansky/using-emacs">https://github.com/zamansky/using-emacs</a>)</li>
+<li>[Org Mode - Organize Your Life In Plain Text](<a href="http://doc.norang.ca/org-mode.html">http://doc.norang.ca/org-mode.html</a>) por Bernt Hansen</li>
+<li>[Emacs Tutorial de Sacha Chua](<a href="https://sachachua.com/blog/category/emacs/">https://sachachua.com/blog/category/emacs/</a>)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc5070a7" class="outline-3">
+<h3 id="orgc5070a7"><span class="section-number-3">26.4.</span> Comunidades y foros</h3>
+<div class="outline-text-3" id="text-26-4">
+<ul class="org-ul">
+<li>[Reddit r/emacs](<a href="https://www.reddit.com/r/emacs/">https://www.reddit.com/r/emacs/</a>)</li>
+<li>[Reddit r/orgmode](<a href="https://www.reddit.com/r/orgmode/">https://www.reddit.com/r/orgmode/</a>)</li>
+<li>[Emacs Stack Exchange](<a href="https://emacs.stackexchange.com/">https://emacs.stackexchange.com/</a>)</li>
+<li>[Org Mode Mailing List](<a href="https://lists.gnu.org/mailman/listinfo/emacs-orgmode">https://lists.gnu.org/mailman/listinfo/emacs-orgmode</a>)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4a317a6" class="outline-3">
+<h3 id="org4a317a6"><span class="section-number-3">26.5.</span> Repositorios y configuraciones públicas</h3>
+<div class="outline-text-3" id="text-26-5">
+<ul class="org-ul">
+<li>[Doom Emacs](<a href="https://github.com/hlissner/doom-emacs">https://github.com/hlissner/doom-emacs</a>) - Configuración popular y modular</li>
+<li>[Spacemacs](<a href="https://www.spacemacs.org/">https://www.spacemacs.org/</a>) - Configuración comunitaria con características de Vim</li>
+<li>[Prelude](<a href="https://github.com/bbatsov/prelude">https://github.com/bbatsov/prelude</a>) - Configuración mejorada para Emacs</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org005da6c" class="outline-3">
+<h3 id="org005da6c"><span class="section-number-3">26.6.</span> Canales de YouTube</h3>
+<div class="outline-text-3" id="text-26-6">
+<ul class="org-ul">
+<li>[System Crafters](<a href="https://www.youtube.com/c/SystemCrafters">https://www.youtube.com/c/SystemCrafters</a>)</li>
+<li>[Protesilaos Stavrou](<a href="https://www.youtube.com/c/ProtesilaosStavrou">https://www.youtube.com/c/ProtesilaosStavrou</a>)</li>
+<li>[David Wilson](<a href="https://www.youtube.com/c/DavidWilson3">https://www.youtube.com/c/DavidWilson3</a>)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb0d1b26" class="outline-2">
+<h2 id="orgb0d1b26"><span class="section-number-2">27.</span> Resumen y siguientes pasos</h2>
+<div class="outline-text-2" id="text-27">
+</div>
+<div id="outline-container-orgd79261e" class="outline-3">
+<h3 id="orgd79261e"><span class="section-number-3">27.1.</span> Lo que has aprendido</h3>
+<div class="outline-text-3" id="text-27-1">
+<p>
+En esta guía has explorado:
+</p>
+
+<ol class="org-ol">
+<li><b>Fundamentos de Emacs</b>: Configuración básica y comandos esenciales</li>
+<li><b>Org Mode</b>: Toma de notas estructurada y gestión de tareas</li>
+<li><b>Flujos de trabajo avanzados</b>: GTD, Zettelkasten y gestión de proyectos</li>
+<li><b>Personalización</b>: Temas, paquetes y optimizaciones</li>
+<li><b>Solución de problemas</b>: Estrategias para resolver problemas comunes</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org499e1b9" class="outline-3">
+<h3 id="org499e1b9"><span class="section-number-3">27.2.</span> Recomendaciones para continuar</h3>
+<div class="outline-text-3" id="text-27-2">
+<ol class="org-ol">
+<li><b>Práctica regular</b>: Usa Emacs y Org Mode a diario, incluso para tareas simples</li>
+<li><b>Incremento gradual</b>: Añade nuevas funcionalidades de una en una</li>
+<li><b>Personalización progresiva</b>: Modifica tu configuración cuando sea necesario</li>
+<li><b>Participación comunitaria</b>: Únete a foros y grupos de usuarios</li>
+<li><b>Contribución</b>: Comparte tus conocimientos y mejoras con la comunidad</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org6d3f382" class="outline-3">
+<h3 id="org6d3f382"><span class="section-number-3">27.3.</span> Plan de aprendizaje de 30 días</h3>
+<div class="outline-text-3" id="text-27-3">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Día</th>
+<th scope="col" class="org-left">Tema</th>
+<th scope="col" class="org-left">Actividad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1-5</td>
+<td class="org-left">Comandos básicos</td>
+<td class="org-left">Memorizar atajos esenciales, hacer el tutorial integrado</td>
+</tr>
+
+<tr>
+<td class="org-right">6-10</td>
+<td class="org-left">Edición avanzada</td>
+<td class="org-left">Practicar selección, búsqueda y reemplazo</td>
+</tr>
+
+<tr>
+<td class="org-right">11-15</td>
+<td class="org-left">Org Mode básico</td>
+<td class="org-left">Crear archivo de tareas, capturar notas, usar agenda</td>
+</tr>
+
+<tr>
+<td class="org-right">16-20</td>
+<td class="org-left">Configuración</td>
+<td class="org-left">Personalizar init.el, instalar paquetes esenciales</td>
+</tr>
+
+<tr>
+<td class="org-right">21-25</td>
+<td class="org-left">Org Mode avanzado</td>
+<td class="org-left">Implementar GTD, exportar a diferentes formatos</td>
+</tr>
+
+<tr>
+<td class="org-right">26-30</td>
+<td class="org-left">Flujo de trabajo</td>
+<td class="org-left">Integrar Emacs en tu vida diaria, automatizar tareas</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-org89660fc" class="outline-2">
+<h2 id="org89660fc"><span class="section-number-2">28.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-28">
+<p>
+Emacs y Org Mode representan una inversión significativa de tiempo y esfuerzo, pero ofrecen un retorno extraordinario en términos de productividad, control y longevidad. Con esta guía, estás equipado para comenzar tu viaje hacia el dominio de estas herramientas poderosas y flexibles.
+</p>
+
+<p>
+Recuerda que la configuración ideal es aquella que se adapta a tu flujo de trabajo, no al revés. Tómate tu tiempo para experimentar y encontrar lo que funciona mejor para ti.
+</p>
+
+<p>
+La comunidad de Emacs es una de las más antiguas y colaborativas en el mundo del software libre. Nunca dudes en buscar ayuda, compartir soluciones o contribuir al desarrollo continuo de este ecosistema.
+</p>
+
+<blockquote>
+<p>
+"La verdadera productividad no está en hacer más cosas, sino en hacer las cosas correctas con las herramientas adecuadas." — Anónimo
+</p>
+</blockquote>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs,.html">emacs,</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-org-mode,.html">org-mode,</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-productividad,.html">productividad,</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-editor.html">editor</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-de.html">de</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-texto,.html">texto,</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-programación.html">programación</a> </div>]]></description>
+  <category><![CDATA[emacs,]]></category>
+  <category><![CDATA[org-mode,]]></category>
+  <category><![CDATA[productividad,]]></category>
+  <category><![CDATA[editor]]></category>
+  <category><![CDATA[de]]></category>
+  <category><![CDATA[texto,]]></category>
+  <category><![CDATA[programación]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-25-gu%C3%ADa-completa-de-emacs-y-org-mode:-de-principiante-a-experto.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-04-25-gu%C3%ADa-completa-de-emacs-y-org-mode:-de-principiante-a-experto.html</guid>
+  <pubDate>Fri, 25 Apr 2025 04:38:00 +0200</pubDate>
+</item>
+</channel>
+</rss>
