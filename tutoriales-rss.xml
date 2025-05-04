@@ -4,7 +4,269 @@
 <title><![CDATA[Emacs con esteroides - tutoriales]]></title>
 <description><![CDATA[Emacs con esteroides - tutoriales]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-tutoriales.html</link>
-<lastBuildDate>Sat, 03 May 2025 08:48:46 +0200</lastBuildDate>
+<lastBuildDate>Sun, 04 May 2025 03:18:20 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Creación de Presentaciones con Emacs (i)]]></title>
+  <description><![CDATA[
+<div id="outline-container-org3744e37" class="outline-2">
+<h2 id="org3744e37">Introducción</h2>
+</div>
+
+
+<div id="outline-container-org8b4904c" class="outline-2">
+<h2 id="org8b4904c">Introducción</h2>
+<div class="outline-text-2" id="text-org8b4904c">
+<p>
+Emacs no solo es un editor de texto potente, sino también una herramienta versátil que permite crear <b>presentaciones profesionales</b> directamente desde archivos Org Mode. En este artículo exploraremos cómo generar presentaciones usando dos tecnologías integradas en Emacs:
+</p>
+
+<ul class="org-ul">
+<li><code>Beamer</code> para presentaciones en PDF estilo LaTeX.</li>
+<li><code>Reveal.js</code> para presentaciones web interactivas en HTML.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb3b7e81" class="outline-2">
+<h2 id="orgb3b7e81">Ventajas de crear presentaciones en Emacs</h2>
+<div class="outline-text-2" id="text-orgb3b7e81">
+<ul class="org-ul">
+<li><b><b>Reproducibilidad</b></b>: El contenido puede versionarse con Git.</li>
+<li><b><b>Modularidad</b></b>: Puedes reutilizar contenido fácilmente.</li>
+<li><b><b>Exportación flexible</b></b>: A PDF, HTML, Markdown, LaTeX, etc.</li>
+<li><b><b>Org Babel</b></b>: Inserta código ejecutable y gráficos en vivo.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org631a223" class="outline-2">
+<h2 id="org631a223">Opción 1: Presentaciones PDF con LaTeX Beamer</h2>
+<div class="outline-text-2" id="text-org631a223">
+<p>
+<b><b>Requisitos previos</b></b>:
+</p>
+<ul class="org-ul">
+<li>Instalado un sistema LaTeX completo (TeX Live o MiKTeX).</li>
+<li>Emacs con Org Mode actualizado.</li>
+</ul>
+
+<p>
+<b><b>Configuración mínima</b></b> en Emacs:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">setq</span> org-latex-packages-alist '((<span style="color: #a44185;">""</span> <span style="color: #a44185;">"graphicx"</span> t)
+                                  (<span style="color: #a44185;">""</span> <span style="color: #a44185;">"xcolor"</span> t)
+                                  (<span style="color: #a44185;">""</span> <span style="color: #a44185;">"hyperref"</span> t)))
+
+(<span style="color: #219fd5; font-style: italic;">setq</span> org-latex-default-class <span style="color: #a44185;">"beamer"</span>)
+</pre>
+</div>
+
+<p>
+<b><b>Ejemplo de presentación Beamer en Org Mode</b></b>:
+</p>
+
+<p>
+#+BEGIN<sub>SRC</sub> org
+</p>
+</div>
+</div>
+<div id="outline-container-org2217a9a" class="outline-2">
+<h2 id="org2217a9a">Introducción</h2>
+<div class="outline-text-2" id="text-org2217a9a">
+<ul class="org-ul">
+<li>Esta es una diapositiva de ejemplo.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfe4d399" class="outline-2">
+<h2 id="orgfe4d399">Código en vivo</h2>
+<div class="outline-text-2" id="text-orgfe4d399">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #dc3eb7;">print</span>(<span style="color: #a44185;">"Hola desde Python en Beamer"</span>)
+</pre>
+</div>
+
+<pre class="example">
+Hola desde Python en Beamer
+</pre>
+
+
+<p>
+#+END<sub>SRC</sub>
+</p>
+
+<p>
+<b><b>Exportar</b></b>: Usa <code>C-c C-e l P</code> para exportar a PDF.
+</p>
+</div>
+</div>
+<div id="outline-container-org406fecf" class="outline-2">
+<h2 id="org406fecf">Opción 2: Presentaciones web con Reveal.js</h2>
+<div class="outline-text-2" id="text-org406fecf">
+<p>
+Reveal.js genera presentaciones en HTML interactivas. Es ideal para compartir en la web o proyectar desde navegadores modernos.
+</p>
+
+<p>
+<b><b>Requisitos</b></b>:
+</p>
+<ul class="org-ul">
+<li>Instalar el paquete Reveal.js y colocarlo en tu sistema.</li>
+<li>Configuración mínima en Emacs:</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #219fd5; font-style: italic;">setq</span> org-reveal-root <span style="color: #a44185;">"https://cdn.jsdelivr.net/npm/reveal.js"</span>)
+</pre>
+</div>
+
+<p>
+<b><b>Ejemplo Reveal.js</b></b>:
+</p>
+
+<p>
+#+BEGIN<sub>SRC</sub> org
+</p>
+</div>
+</div>
+<div id="outline-container-org9789b11" class="outline-2">
+<h2 id="org9789b11">Bienvenida</h2>
+<div class="outline-text-2" id="text-org9789b11">
+<p>
+¡Hola Emacs!
+</p>
+</div>
+</div>
+<div id="outline-container-org6f3c026" class="outline-2">
+<h2 id="org6f3c026">Diapositiva con código</h2>
+<div class="outline-text-2" id="text-org6f3c026">
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Hola desde shell"</span>
+</pre>
+</div>
+<p>
+#+END<sub>SRC</sub>
+</p>
+
+<p>
+<b><b>Exportar a HTML Reveal</b></b>: <code>C-c C-e R R</code>
+</p>
+</div>
+</div>
+<div id="outline-container-orge45fe1f" class="outline-2">
+<h2 id="orge45fe1f">Agregar diagramas: Integración con PlantUML</h2>
+<div class="outline-text-2" id="text-orge45fe1f">
+<p>
+Puedes incluir diagramas UML en tus presentaciones gracias a Org Babel.
+</p>
+
+<p>
+<b><b>Ejemplo de secuencia UML</b></b>:
+</p>
+
+
+<figure id="org4b81bca">
+<img src="images/uml-diagrama-presentacion.png" alt="uml-diagrama-presentacion.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org2f8dca2" class="outline-2">
+<h2 id="org2f8dca2">Tips Avanzados</h2>
+<div class="outline-text-2" id="text-org2f8dca2">
+<ul class="org-ul">
+<li>Puedes usar <code>#+INCLUDE</code> para insertar secciones comunes en múltiples presentaciones.</li>
+<li>Usa <code>org-babel-tangle</code> para extraer código reutilizable.</li>
+<li>Personaliza el CSS si usas Reveal.js con `#+REVEAL<sub>EXTRA</sub><sub>CSS</sub>`.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org26d7d50" class="outline-2">
+<h2 id="org26d7d50">Comparación rápida</h2>
+<div class="outline-text-2" id="text-org26d7d50">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Característica</th>
+<th scope="col" class="org-left">Beamer (PDF)</th>
+<th scope="col" class="org-left">Reveal.js (HTML)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Interactividad</td>
+<td class="org-left">❌ No</td>
+<td class="org-left">✅ Sí</td>
+</tr>
+
+<tr>
+<td class="org-left">Estilo visual</td>
+<td class="org-left">✅ Profesional</td>
+<td class="org-left">✅ Moderno</td>
+</tr>
+
+<tr>
+<td class="org-left">Facilidad de uso</td>
+<td class="org-left">Media</td>
+<td class="org-left">Alta</td>
+</tr>
+
+<tr>
+<td class="org-left">Compartición</td>
+<td class="org-left">Difícil (PDF)</td>
+<td class="org-left">Muy fácil (HTML)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org890d91f" class="outline-2">
+<h2 id="org890d91f">Referencias</h2>
+<div class="outline-text-2" id="text-org890d91f">
+<ol class="org-ol">
+<li><a href="https://orgmode.org">Org Mode oficial</a></li>
+<li><a href="https://revealjs.com">Reveal.js</a></li>
+<li><a href="https://ctan.org/pkg/beamer">Beamer en CTAN</a></li>
+<li><a href="https://plantuml.com">PlantUML para Emacs</a></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd05a8f7" class="outline-2">
+<h2 id="orgd05a8f7">Conclusión</h2>
+<div class="outline-text-2" id="text-orgd05a8f7">
+<p>
+Gracias a Emacs y Org Mode, puedes crear presentaciones impactantes y completamente reproducibles, ya sea en formato PDF o HTML interactivo. Con un poco de práctica, sustituirás definitivamente PowerPoint por Emacs.
+</p>
+
+<p>
+&#x2014;
+</p>
+</div>
+</div>
+<div id="outline-container-orgbe9cf7b" class="outline-2">
+<h2 id="orgbe9cf7b">🎯 ¿Y ahora qué?</h2>
+<div class="outline-text-2" id="text-orgbe9cf7b">
+<p>
+Crea tu primera presentación en `presentacion.org`, agrega tus secciones, exporta a PDF o HTML y comparte tus conocimientos desde <b>Emacs con esteroides</b>.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> </div>]]></description>
+  <category><![CDATA[tutoriales]]></category>
+  <category><![CDATA[emacs]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-03-creaci-n-de-presentaciones-con-emacs-i-.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-03-creaci-n-de-presentaciones-con-emacs-i-.html</guid>
+  <pubDate>Sat, 03 May 2025 09:04:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[Guía Completa de Emacs y Org Mode: De Principiante a Experto]]></title>
   <description><![CDATA[
