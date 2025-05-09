@@ -4,7 +4,1791 @@
 <title><![CDATA[Emacs con esteroides - github]]></title>
 <description><![CDATA[Emacs con esteroides - github]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-github.html</link>
-<lastBuildDate>Tue, 06 May 2025 06:27:55 +0200</lastBuildDate>
+<lastBuildDate>Fri, 09 May 2025 07:37:33 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[GitHub - De sus Orígenes a la Práctica]]></title>
+  <description><![CDATA[
+<div id="outline-container-org9ff21b6" class="outline-2">
+<h2 id="org9ff21b6">Introducción</h2>
+<div class="outline-text-2" id="text-org9ff21b6">
+<p>
+En el mundo del desarrollo moderno, GitHub se ha convertido en mucho más que un repositorio de código: es una plataforma donde las ideas crecen, los equipos colaboran y los proyectos se vuelven realidad.
+Pero si estás empezando, puede parecer intimidante: ramas, commits, pull requests… ¿por dónde se empieza?
+</p>
+</div>
+</div>
+<div id="outline-container-cap1-origen-evolucion" class="outline-2">
+<h2 id="cap1-origen-evolucion">Capítulo 1: GitHub - Origen y Evolución</h2>
+<div class="outline-text-2" id="text-cap1-origen-evolucion">
+</div>
+<div id="outline-container-introduccion" class="outline-3">
+<h3 id="introduccion">Introducción</h3>
+<div class="outline-text-3" id="text-introduccion">
+<p>
+En el mundo del desarrollo moderno, GitHub se ha convertido en mucho más que un repositorio de código: es una plataforma donde las ideas crecen, los equipos colaboran y los proyectos se vuelven realidad.
+Pero si estás empezando, puede parecer intimidante: ramas, commits, pull requests… ¿por dónde se empieza?
+</p>
+
+<p>
+En esta publicación, te acompañaremos paso a paso para que entiendas:
+</p>
+
+<p>
+Qué es GitHub y por qué deberías usarlo.
+</p>
+
+<p>
+Cómo crear tu primer repositorio y gestionarlo desde tu PC o Emacs.
+</p>
+
+<p>
+Las prácticas básicas que te permitirán colaborar sin miedo a romper nada.
+</p>
+
+<p>
+Ya sea que quieras guardar tu código personal, contribuir a proyectos de código abierto o mejorar tu flujo de trabajo con Emacs, esta introducción te dará una base sólida para avanzar con seguridad.
+</p>
+
+
+
+<p>
+GitHub es actualmente la plataforma de alojamiento de código y colaboración más grande del mundo. Con más de 100 millones de desarrolladores y más de 400 millones de repositorios, se ha convertido en el estándar de facto para el desarrollo colaborativo de software. Pero, ¿cómo comenzó todo? En este capítulo, exploraremos el origen de GitHub, su evolución a lo largo del tiempo y cómo ha revolucionado la forma en que los desarrolladores colaboran en proyectos de software.
+</p>
+</div>
+</div>
+<div id="outline-container-origenes-git-github" class="outline-3">
+<h3 id="origenes-git-github">Los Orígenes de Git y GitHub</h3>
+<div class="outline-text-3" id="text-origenes-git-github">
+</div>
+<div id="outline-container-nacimiento-git" class="outline-4">
+<h4 id="nacimiento-git">El nacimiento de Git</h4>
+<div class="outline-text-4" id="text-nacimiento-git">
+<p>
+Antes de hablar de GitHub, es fundamental entender Git, el sistema de control de versiones distribuido en el que se basa.
+Git fue creado por Linus Torvalds en 2005, el mismo creador del kernel de Linux. Torvalds necesitaba un sistema de control de versiones que pudiera manejar el desarrollo distribuido del kernel de Linux después de que la relación con BitKeeper, el sistema que estaban utilizando anteriormente, se deteriorara.
+Los objetivos principales de Git eran:
+</p>
+
+<p>
+Velocidad
+Diseño simple
+Fuerte soporte para desarrollo no lineal (miles de ramas paralelas)
+Totalmente distribuido
+Capacidad para manejar proyectos grandes como el kernel de Linux de manera eficiente
+</p>
+
+<p>
+A diferencia de sistemas anteriores como CVS o Subversion, Git está diseñado como un sistema distribuido, lo que significa que cada desarrollador tiene una copia completa del repositorio, incluyendo todo el historial. Esto permite trabajar sin conexión y facilita enormemente la ramificación y fusión de código.
+</p>
+
+
+<figure id="org7097a65">
+<img src="images/git-distributed-model.png  results" alt="git-distributed-model.png  results">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-fundacion-github" class="outline-4">
+<h4 id="fundacion-github">La fundación de GitHub</h4>
+<div class="outline-text-4" id="text-fundacion-github">
+<p>
+GitHub fue fundado en febrero de 2008 por Tom Preston-Werner, Chris Wanstrath y PJ Hyett. La idea surgió cuando estos desarrolladores buscaban una manera más sencilla de compartir código y colaborar.
+Antes de GitHub, compartir código podía ser complicado:
+</p>
+
+<p>
+Los desarrolladores enviaban parches por correo electrónico
+Utilizaban sistemas FTP para compartir archivos
+Empleaban herramientas complejas como SourceForge que tenían una curva de aprendizaje pronunciada
+</p>
+
+<p>
+GitHub transformó este paradigma al crear una interfaz web amigable para Git, añadiendo características sociales que facilitaban la colaboración. Su eslogan inicial, "Social Coding", reflejaba perfectamente su misión.
+La plataforma se lanzó oficialmente en abril de 2008 y rápidamente ganó popularidad entre los desarrolladores de código abierto.
+</p>
+
+
+<figure id="org446adee">
+<img src="images/github-timeline.png  results" alt="github-timeline.png  results">
+
+</figure>
+</div>
+</div>
+</div>
+<div id="outline-container-evolucion-github" class="outline-3">
+<h3 id="evolucion-github">La evolución de GitHub</h3>
+<div class="outline-text-3" id="text-evolucion-github">
+</div>
+<div id="outline-container-startup-gigante" class="outline-4">
+<h4 id="startup-gigante">De startup a gigante tecnológico</h4>
+<div class="outline-text-4" id="text-startup-gigante">
+<p>
+El crecimiento de GitHub ha sido extraordinario:
+</p>
+
+<p>
+2009: Alcanzó los 100,000 usuarios
+2010: Superó el millón de repositorios
+2011: Lanzó GitHub Enterprise para empresas
+2012: Recibió $100 millones en financiación de Andreessen Horowitz
+2013: Llegó a 10 millones de repositorios
+2018: Microsoft adquirió GitHub por $7.5 billones
+2023: Superó los 100 millones de usuarios
+2024: Más de 400 millones de repositorios
+</p>
+
+<p>
+Esta evolución refleja no solo el crecimiento de GitHub como empresa, sino también el auge del software de código abierto y las prácticas modernas de desarrollo colaborativo.
+</p>
+</div>
+</div>
+<div id="outline-container-caracteristicas-revolucionarias" class="outline-4">
+<h4 id="caracteristicas-revolucionarias">Características revolucionarias</h4>
+<div class="outline-text-4" id="text-caracteristicas-revolucionarias">
+<p>
+A lo largo de su historia, GitHub ha introducido numerosas características que han cambiado la forma en que trabajamos con el código:
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="orged2682e"></a>Pull Requests<br>
+<div class="outline-text-5" id="text-orged2682e">
+<p>
+Quizás la innovación más importante de GitHub. Los Pull Requests (PR) permiten a los desarrolladores proponer cambios a un repositorio, discutirlos y revisarlos antes de integrarlos al código principal. Este flujo de trabajo ha sido adoptado universalmente y ha establecido un estándar en la industria.
+</p>
+
+
+<figure id="org85525f3">
+<img src="images/pull-request-workflow.png" alt="pull-request-workflow.png">
+
+</figure>
+</div>
+</li>
+<li><a id="org9545434"></a>Issues y Projects<br>
+<div class="outline-text-5" id="text-org9545434">
+<p>
+GitHub introdujo un sistema de seguimiento de problemas integrado directamente con el código. Los Issues permiten reportar errores, solicitar características o discutir ideas. Con Projects, GitHub añadió capacidades de gestión de proyectos tipo Kanban.
+</p>
+</div>
+</li>
+<li><a id="org7b1993f"></a>GitHub Actions (2018)<br>
+<div class="outline-text-5" id="text-org7b1993f">
+<p>
+Esta característica permitió la automatización del flujo de trabajo de desarrollo directamente en GitHub, facilitando la integración continua y el despliegue continuo (CI/CD) sin necesidad de herramientas externas.
+</p>
+
+
+<figure id="orgf1cf4bf">
+<img src="images/github-actions-workflow.png  results" alt="github-actions-workflow.png  results">
+
+</figure>
+</div>
+</li>
+<li><a id="org60da80f"></a>Codespaces (2020)<br>
+<div class="outline-text-5" id="text-org60da80f">
+<p>
+Entornos de desarrollo basados en la nube que permiten programar desde el navegador. Esto ha sido especialmente útil para equipos distribuidos y para simplificar la configuración de entornos de desarrollo.
+</p>
+</div>
+</li>
+<li><a id="orgf471ec7"></a>GitHub Copilot (2021)<br>
+<div class="outline-text-5" id="text-orgf471ec7">
+<p>
+Basado en tecnología de OpenAI, Copilot es un asistente de programación impulsado por IA que sugiere código mientras escribes, representando uno de los primeros usos masivos de IA generativa en el desarrollo de software.
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-impacto-cultural" class="outline-4">
+<h4 id="impacto-cultural">Impacto cultural en el desarrollo de software</h4>
+<div class="outline-text-4" id="text-impacto-cultural">
+<p>
+GitHub no solo ha proporcionado herramientas técnicas, sino que ha transformado la cultura del desarrollo de software:
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="orga43feeb"></a>Democratización del código abierto<br>
+<div class="outline-text-5" id="text-orga43feeb">
+<p>
+GitHub ha hecho que contribuir a proyectos de código abierto sea más accesible que nunca. Con su interfaz web intuitiva, cualquier desarrollador puede proponer cambios a proyectos públicos sin necesidad de permisos especiales.
+</p>
+</div>
+</li>
+<li><a id="orgc928194"></a>El perfil de GitHub como currículum<br>
+<div class="outline-text-5" id="text-orgc928194">
+<p>
+El perfil de GitHub se ha convertido en una forma de mostrar habilidades y experiencia. Para muchos desarrolladores y empleadores, la actividad en GitHub es tan importante como un currículum tradicional.
+</p>
+</div>
+</li>
+<li><a id="org336acac"></a>Colaboración global<br>
+<div class="outline-text-5" id="text-org336acac">
+<p>
+GitHub ha derribado barreras geográficas en el desarrollo de software. Proyectos como Linux, React o TensorFlow tienen contribuyentes de todo el mundo que trabajan de forma asíncrona pero coordinada.
+</p>
+
+
+<figure id="orgc9a9a7f">
+<img src="images/github-impacto-cultural.png  results" alt="github-impacto-cultural.png  results">
+
+</figure>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-github-devops" class="outline-3">
+<h3 id="github-devops">GitHub y el ecosistema DevOps</h3>
+<div class="outline-text-3" id="text-github-devops">
+<p>
+GitHub se ha convertido en una pieza central del ecosistema DevOps moderno, integrándose con una amplia variedad de herramientas y servicios:
+</p>
+</div>
+<div id="outline-container-orgddb1f84" class="outline-4">
+<h4 id="orgddb1f84">Integración continua y despliegue continuo (CI/CD)</h4>
+<div class="outline-text-4" id="text-orgddb1f84">
+<p>
+Con GitHub Actions y su integración con herramientas como Jenkins, CircleCI, Travis CI y otras, GitHub permite automatizar todo el proceso desde el commit hasta el despliegue en producción.
+</p>
+</div>
+</div>
+<div id="outline-container-org3327c74" class="outline-4">
+<h4 id="org3327c74">Seguridad y calidad de código</h4>
+<div class="outline-text-4" id="text-org3327c74">
+<p>
+GitHub incluye características como:
+</p>
+
+<p>
+Análisis de dependencias y alertas de seguridad
+Code scanning con CodeQL
+Secret scanning para evitar la filtración de credenciales
+Dependabot para mantener las dependencias actualizadas
+</p>
+</div>
+</div>
+<div id="outline-container-orgf5983c6" class="outline-4">
+<h4 id="orgf5983c6">Integración con servicios cloud</h4>
+<div class="outline-text-4" id="text-orgf5983c6">
+<p>
+GitHub se integra fácilmente con todos los principales proveedores de nube (AWS, Azure, Google Cloud), facilitando el despliegue de aplicaciones directamente desde el repositorio.
+</p>
+
+
+<figure id="org2bd0171">
+<img src="images/github-ecosystem.png  results" alt="github-ecosystem.png  results">
+
+</figure>
+</div>
+</div>
+</div>
+<div id="outline-container-conclusion-cap1" class="outline-3">
+<h3 id="conclusion-cap1">Conclusión del Capítulo 1</h3>
+<div class="outline-text-3" id="text-conclusion-cap1">
+<p>
+GitHub ha recorrido un largo camino desde su creación en 2008. De ser una simple interfaz web para Git, se ha convertido en el centro del ecosistema de desarrollo de software moderno. Su evolución refleja y ha impulsado cambios fundamentales en cómo creamos software:
+</p>
+
+<p>
+La adopción masiva del control de versiones distribuido
+El auge del desarrollo colaborativo y el código abierto
+La automatización del ciclo de vida del desarrollo
+La globalización de los equipos de desarrollo
+</p>
+
+<p>
+En el próximo capítulo, exploraremos en detalle cómo trabajar con GitHub, desde los conceptos básicos hasta flujos de trabajo avanzados, con ejemplos prácticos que te permitirán aprovechar al máximo esta poderosa plataforma.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-cap2-trabajando-con-github" class="outline-2">
+<h2 id="cap2-trabajando-con-github">Capítulo 2: Trabajando con GitHub - De Principiante a Experto</h2>
+<div class="outline-text-2" id="text-cap2-trabajando-con-github">
+</div>
+<div id="outline-container-intro-git-github" class="outline-3">
+<h3 id="intro-git-github">Introducción a Git y GitHub</h3>
+<div class="outline-text-3" id="text-intro-git-github">
+<p>
+Antes de profundizar en GitHub, es fundamental entender los conceptos básicos de Git, ya que GitHub se basa en este sistema de control de versiones. En esta sección, exploraremos los fundamentos de Git y cómo se relacionan con GitHub.
+</p>
+</div>
+<div id="outline-container-conceptos-git" class="outline-4">
+<h4 id="conceptos-git">Conceptos fundamentales de Git</h4>
+<div class="outline-text-4" id="text-conceptos-git">
+</div>
+<ul class="org-ul">
+<li><a id="orgcd71e58"></a>Repositorio<br>
+<div class="outline-text-5" id="text-orgcd71e58">
+<p>
+Un repositorio (o repo) es donde Git almacena todo el historial de cambios de un proyecto. Consiste en archivos, directorios y un directorio especial .git que contiene toda la información de control de versiones.
+</p>
+</div>
+</li>
+<li><a id="org45828b5"></a>Commit<br>
+<div class="outline-text-5" id="text-org45828b5">
+<p>
+Un commit es una instantánea de los cambios realizados en un momento específico. Cada commit tiene un identificador único (hash SHA-1) y contiene metadatos como autor, fecha y mensaje descriptivo.
+</p>
+</div>
+</li>
+<li><a id="orgbf27d4d"></a>Rama (Branch)<br>
+<div class="outline-text-5" id="text-orgbf27d4d">
+<p>
+Una rama representa una línea independiente de desarrollo. La rama principal por defecto tradicionalmente se llamaba master, aunque ahora GitHub utiliza main como estándar. Las ramas permiten trabajar en diferentes características o correcciones sin afectar al código principal.
+</p>
+</div>
+</li>
+<li><a id="orgdf5d53e"></a>Merge<br>
+<div class="outline-text-5" id="text-orgdf5d53e">
+<p>
+El proceso de combinar los cambios de una rama con otra. Git intenta resolver automáticamente las diferencias, pero a veces requiere intervención manual cuando hay conflictos.
+</p>
+</div>
+</li>
+<li><a id="orgfee4b7c"></a>Remoto (Remote)<br>
+<div class="outline-text-5" id="text-orgfee4b7c">
+<p>
+Un repositorio remoto es una versión del proyecto alojada en Internet o en una red. En GitHub, cada repositorio tiene al menos un remoto (llamado origin por defecto).
+</p>
+
+
+<figure id="orga310665">
+<img src="images/git-conceptos.png  results" alt="git-conceptos.png  results">
+
+</figure>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-diferencia-git-github" class="outline-4">
+<h4 id="diferencia-git-github">Diferencia entre Git y GitHub</h4>
+<div class="outline-text-4" id="text-diferencia-git-github">
+<p>
+Es importante distinguir entre Git y GitHub:
+</p>
+
+<p>
+Git es un sistema de control de versiones distribuido que se ejecuta localmente en tu computadora. Fue creado por Linus Torvalds y es software libre.
+GitHub es una plataforma web que proporciona alojamiento para repositorios Git y añade características de colaboración como issues, pull requests, wikis, etc. Es propiedad de Microsoft desde 2018.
+</p>
+
+<p>
+Podemos pensar en Git como el motor y GitHub como el servicio construido sobre ese motor. Existen alternativas a GitHub como GitLab, Bitbucket o Gitea, todas construidas sobre Git.
+</p>
+
+
+<figure id="org9e37070">
+<img src="images/git-vs-github.png  results" alt="git-vs-github.png  results">
+
+</figure>
+</div>
+</div>
+</div>
+<div id="outline-container-primeros-pasos" class="outline-3">
+<h3 id="primeros-pasos">Primeros pasos con GitHub</h3>
+<div class="outline-text-3" id="text-primeros-pasos">
+<p>
+En esta sección, aprenderemos a configurar y comenzar a usar GitHub, desde la creación de una cuenta hasta los primeros comandos.
+</p>
+</div>
+<div id="outline-container-config-inicial" class="outline-4">
+<h4 id="config-inicial">Configuración inicial</h4>
+<div class="outline-text-4" id="text-config-inicial">
+</div>
+<ul class="org-ul">
+<li><a id="org6a2600d"></a>Crear una cuenta en GitHub<br>
+<div class="outline-text-5" id="text-org6a2600d">
+<p>
+Visita GitHub.com
+Haz clic en "Sign up" y sigue las instrucciones
+Elige un plan (el plan gratuito es suficiente para comenzar)
+Verifica tu dirección de correo electrónico
+</p>
+</div>
+</li>
+<li><a id="org013fe22"></a>Instalar Git<br>
+<div class="outline-text-5" id="text-org013fe22">
+<p>
+Antes de usar GitHub, necesitas instalar Git en tu computadora:
+En Linux (Debian/Ubuntu):
+bashsudo apt-get update
+sudo apt-get install git
+En macOS:
+bash# Opción 1: Instalar con Homebrew
+brew install git
+</p>
+
+<p>
+En Windows:
+bash# Descarga e instala Git desde:
+</p>
+</div>
+</li>
+<li><a id="org2891c5a"></a>Configurar Git<br>
+<div class="outline-text-5" id="text-org2891c5a">
+<p>
+Una vez instalado Git, configúralo con tu información:
+bashgit config &#x2013;global user.name "Tu Nombre"
+git config &#x2013;global user.email "tu.email@ejemplo.com"
+</p>
+
+<p>
+git config &#x2013;global core.editor "code &#x2013;wait"  # Para Visual Studio Code
+</p>
+</div>
+</li>
+<li><a id="orgad0320b"></a>Autenticación en GitHub<br>
+<div class="outline-text-5" id="text-orgad0320b">
+<p>
+GitHub ya no acepta autenticación por contraseña para operaciones Git. En su lugar, debes usar:
+</p>
+
+<p>
+Token de acceso personal (PAT):
+</p>
+
+<p>
+Ve a Settings &gt; Developer settings &gt; Personal access tokens
+Genera un nuevo token con los permisos necesarios
+Úsalo en lugar de tu contraseña
+</p>
+
+
+<p>
+SSH:
+bash# Generar par de claves SSH
+ssh-keygen -t ed25519 -C "tu.email@ejemplo.com"
+</p>
+
+<p>
+cat ~/.ssh/id<sub>ed25519.pub</sub>
+</p>
+
+<p>
+Copia la clave pública y agrégala en GitHub: Settings &gt; SSH and GPG keys
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-comandos-basicos" class="outline-4">
+<h4 id="comandos-basicos">Comandos básicos de Git</h4>
+<div class="outline-text-4" id="text-comandos-basicos">
+<p>
+Veamos los comandos más utilizados en Git:
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org09a49be"></a>Iniciar un repositorio<br>
+<div class="outline-text-5" id="text-org09a49be">
+<p>
+bash# Crear un nuevo repositorio
+git init mi-proyecto
+</p>
+
+<p>
+cd mi-proyecto-existente
+git init
+</p>
+</div>
+</li>
+<li><a id="org2c72fcf"></a>Clonar un repositorio existente<br>
+<div class="outline-text-5" id="text-org2c72fcf">
+<p>
+bash# Clonar desde GitHub
+git clone <a href="https://github.com/usuario/repositorio.git">https://github.com/usuario/repositorio.git</a>
+</p>
+
+<p>
+git clone -b nombre-rama <a href="https://github.com/usuario/repositorio.git">https://github.com/usuario/repositorio.git</a>
+</p>
+</div>
+</li>
+<li><a id="org5e8f75a"></a>Gestionar cambios<br>
+<div class="outline-text-5" id="text-org5e8f75a">
+<p>
+bash# Ver el estado de los archivos
+git status
+</p>
+
+<p>
+git add archivo.txt        # Un archivo específico
+git add .                  # Todos los archivos modificados
+</p>
+
+<p>
+git commit -m "Mensaje descriptivo del cambio"
+</p>
+
+<p>
+git commit -am "Mensaje descriptivo"
+</p>
+</div>
+</li>
+<li><a id="org543c404"></a>Trabajar con ramas<br>
+<div class="outline-text-5" id="text-org543c404">
+<p>
+bash# Ver ramas
+git branch
+</p>
+
+<p>
+git branch nueva-caracteristica
+</p>
+
+<p>
+git checkout nueva-caracteristica
+</p>
+
+<p>
+git checkout -b nueva-caracteristica
+</p>
+
+<p>
+git merge otra-rama
+</p>
+</div>
+</li>
+<li><a id="org11bd213"></a>Sincronizar con GitHub<br>
+<div class="outline-text-5" id="text-org11bd213">
+<p>
+bash# Añadir un remoto
+git remote add origin <a href="https://github.com/usuario/repositorio.git">https://github.com/usuario/repositorio.git</a>
+</p>
+
+<p>
+git push -u origin main  # La primera vez
+git push                 # Después de la primera vez
+</p>
+
+<p>
+git pull origin main
+</p>
+
+<p>
+git remote -v
+</p>
+
+
+<figure id="org2aceca3">
+<img src="images/git-workflow-basico.png" alt="git-workflow-basico.png">
+
+</figure>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-creacion-repos" class="outline-4">
+<h4 id="creacion-repos">Creación y gestión de repositorios en GitHub</h4>
+<div class="outline-text-4" id="text-creacion-repos">
+</div>
+<ul class="org-ul">
+<li><a id="orgdf67475"></a>Crear un repositorio en GitHub<br>
+<div class="outline-text-5" id="text-orgdf67475">
+<p>
+Inicia sesión en GitHub
+Haz clic en el botón "+" en la esquina superior derecha
+Selecciona "New repository"
+Completa la información:
+</p>
+
+<p>
+Nombre del repositorio
+Descripción (opcional)
+Visibilidad (público o privado)
+Inicializar con README (recomendado)
+Añadir .gitignore y licencia (opcionales)
+</p>
+
+
+<p>
+Haz clic en "Create repository"
+</p>
+</div>
+</li>
+<li><a id="org55f9034"></a>Gestionar un repositorio existente<br>
+<div class="outline-text-5" id="text-org55f9034">
+<p>
+Una vez creado el repositorio, puedes:
+</p>
+
+<p>
+Editar la descripción y temas
+Administrar colaboradores en Settings &gt; Manage access
+Configurar ramas protegidas en Settings &gt; Branches
+Crear y gestionar etiquetas para issues
+Configurar GitHub Pages para sitios web
+</p>
+</div>
+</li>
+<li><a id="orgc2c6a95"></a>Conectar un repositorio local con GitHub<br>
+<div class="outline-text-5" id="text-orgc2c6a95">
+<p>
+Si ya tienes un repositorio local y quieres subirlo a GitHub:
+bash# Dentro de tu repositorio local
+git remote add origin <a href="https://github.com/usuario/repositorio.git">https://github.com/usuario/repositorio.git</a>
+git branch -M main  # Renombrar rama master a main (si es necesario)
+git push -u origin main
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-flujos-colaborativos" class="outline-3">
+<h3 id="flujos-colaborativos">Flujos de trabajo colaborativos en GitHub</h3>
+<div class="outline-text-3" id="text-flujos-colaborativos">
+<p>
+GitHub facilita varios flujos de trabajo para la colaboración en equipos. Veamos los más comunes:
+</p>
+</div>
+<div id="outline-container-github-flow" class="outline-4">
+<h4 id="github-flow">GitHcub Flow</h4>
+<div class="outline-text-4" id="text-github-flow">
+<p>
+GitHub Flow es un flujo de trabajo ligero basado en ramas. Es simple y adecuado para equipos que realizan despliegues frecuentes.
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org73e096e"></a>Pasos del GitHub Flow:<br>
+<div class="outline-text-5" id="text-org73e096e">
+<p>
+Crear una rama: Crea una rama desde main para trabajar en una nueva característica o corrección
+Hacer commits: Realiza cambios y haz commits frecuentes
+Abrir un Pull Request: Solicita la revisión de tus cambios
+Discutir y revisar: Recibe comentarios y haz ajustes si es necesario
+Merge y despliegue: Una vez aprobado, fusiona a main y despliega
+</p>
+
+
+<figure id="orgf9472ad">
+<img src="images/github-flow.png  results" alt="github-flow.png  results">
+
+</figure>
+</div>
+</li>
+<li><a id="org8298261"></a>Ejemplo práctico de GitHub Flow:<br>
+<div class="outline-text-5" id="text-org8298261">
+<p>
+bash# 1. Crear una rama para una nueva característica
+git checkout main
+git pull origin main  # Asegúrate de tener la última versión
+git checkout -b feature-login-system
+</p>
+
+<p>
+git add .
+git commit -m "Implementar formulario de login"
+</p>
+
+<p>
+git add .
+git commit -m "Añadir validación al formulario de login"
+</p>
+
+<p>
+git push -u origin feature-login-system
+</p>
+
+<p>
+git checkout main
+git pull origin main
+</p>
+
+<p>
+git branch -d feature-login-system
+git push origin &#x2013;delete feature-login-system  # Borrar en remoto
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-git-flow" class="outline-4">
+<h4 id="git-flow">Git Flow</h4>
+<div class="outline-text-4" id="text-git-flow">
+<p>
+Git Flow es un modelo más estructurado, ideal para proyectos con ciclos de lanzamiento planificados. Define tipos específicos de ramas con propósitos particulares.
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="orgca9fb1f"></a>Ramas principales en Git Flow:<br>
+<div class="outline-text-5" id="text-orgca9fb1f">
+<p>
+main/master: Solo contiene código de producción estable
+develop: Rama de integración para características
+feature/*: Ramas para desarrollar nuevas características
+release/*: Preparación para un nuevo lanzamiento
+hotfix/*: Correcciones urgentes en producción
+</p>
+</div>
+</li>
+<li><a id="org76c1b4c"></a>Ciclo de vida en Git Flow:<br>
+<div class="outline-text-5" id="text-org76c1b4c">
+<p>
+Las características se desarrollan en ramas feature/*
+Se integran en develop
+Cuando se prepara un lanzamiento, se crea una rama release/*
+La rama de release se fusiona tanto en develop como en main
+Las correcciones críticas se hacen en ramas hotfix/* y se fusionan en ambas ramas principales
+</p>
+
+
+<figure id="org534267e">
+<img src="images/git-flow.png" alt="git-flow.png">
+
+</figure>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-trunk-based" class="outline-4">
+<h4 id="trunk-based">Trunk-Based Development</h4>
+<div class="outline-text-4" id="text-trunk-based">
+<p>
+Este enfoque promueve commits pequeños y frecuentes directamente en la rama principal (trunk). Es popular en equipos que practican integración continua y entrega continua (CI/CD).
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="orgc110032"></a>Características del Trunk-Based Development:<br>
+<div class="outline-text-5" id="text-orgc110032">
+<p>
+Commits pequeños y frecuentes
+Ramas de corta duración (menos de un día)
+Uso intensivo de feature flags para controlar funcionalidades
+Pruebas automatizadas extensivas
+Integración continua
+</p>
+
+
+
+
+<figure id="org5ffa0e4">
+<img src="images/trunk-based-dev.png" alt="trunk-based-dev.png">
+
+</figure>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-pull-requests" class="outline-3">
+<h3 id="pull-requests">Pull Requests y Code Reviews</h3>
+<div class="outline-text-3" id="text-pull-requests">
+<p>
+Los Pull Requests (PR) son una de las características más poderosas de GitHub, permitiendo revisiones de código estructuradas antes de integrar cambios.
+</p>
+</div>
+<div id="outline-container-anatomia-pr" class="outline-4">
+<h4 id="anatomia-pr">Anatomía de un Pull Request</h4>
+<div class="outline-text-4" id="text-anatomia-pr">
+<p>
+Un Pull Request consiste en:
+</p>
+
+<p>
+Título: Descripción breve del cambio
+Descripción: Explicación detallada, contexto y motivación
+Ramas: Rama origen y rama destino para la fusión
+Commits: Todos los commits que forman parte del PR
+Revisores: Personas asignadas para revisar los cambios
+Checks: Resultados de pruebas automáticas y CI/CD
+Conversación: Comentarios y discusiones sobre el código
+</p>
+</div>
+</div>
+<div id="outline-container-crear-pr" class="outline-4">
+<h4 id="crear-pr">Creando un Pull Request efectivo</h4>
+<div class="outline-text-4" id="text-crear-pr">
+<p>
+Prepara tu rama:
+bashgit checkout -b feature-nombre
+</p>
+
+<p>
+git push -u origin feature-nombre
+</p>
+
+<p>
+Desde GitHub:
+</p>
+
+<p>
+Navega a tu repositorio
+Haz clic en "Pull requests" y luego en "New pull request"
+Selecciona la rama base (donde quieres fusionar) y la rama compare (tu rama)
+Haz clic en "Create pull request"
+</p>
+
+
+<p>
+Completa el formulario:
+</p>
+
+<p>
+Título claro y descriptivo
+Descripción que explique:
+</p>
+
+<p>
+Qué cambios realizaste
+Por qué los realizaste
+Cómo probar los cambios
+Enlaces a issues relacionados
+</p>
+
+
+<p>
+Asigna revisores
+Añade etiquetas relevantes
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org75497ec"></a>Plantilla de descripción para Pull Requests<br>
+<div class="outline-text-5" id="text-org75497ec">
+<p>
+markdown## Descripción
+[Explicación clara de los cambios realizados]
+</p>
+
+<p>
+## Motivación y Contexto
+[¿Por qué es necesario este cambio? ¿Qué problema resuelve?]
+</p>
+
+<p>
+## Tipo de Cambio
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Corrección de bug</li>
+<li class="off"><code>[&#xa0;]</code> Nueva característica</li>
+<li class="off"><code>[&#xa0;]</code> Mejora de rendimiento</li>
+<li class="off"><code>[&#xa0;]</code> Refactorización de código</li>
+</ul>
+
+<p>
+## Cómo Probar
+[Pasos para probar los cambios]
+</p>
+
+<p>
+## Screenshots (si aplica)
+[Imágenes que ayuden a entender el cambio]
+</p>
+
+<p>
+## Issues Relacionados
+Closes #[número de issue]
+GitHub permite crear plantillas de PR para tu repositorio añadiendo un archivo .github/pull<sub>request</sub><sub>template.md</sub>.
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-code-reviews" class="outline-4">
+<h4 id="code-reviews">Realizando Code Reviews efectivas</h4>
+<div class="outline-text-4" id="text-code-reviews">
+<p>
+Las revisiones de código son fundamentales para mantener la calidad y compartir conocimiento. Aquí hay algunas prácticas recomendadas:
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="orgcdc0571"></a>Para revisores:<br>
+<div class="outline-text-5" id="text-orgcdc0571">
+<p>
+Sé respetuoso y constructivo:
+</p>
+
+<p>
+Comenta sobre el código, no sobre la persona
+Explica el "por qué" junto con el "qué"
+Sugiere alternativas cuando sea posible
+</p>
+
+
+<p>
+Busca problemas específicos:
+</p>
+
+<p>
+Errores lógicos o de seguridad
+Rendimiento y escalabilidad
+Legibilidad y mantenibilidad
+Cumplimiento de estándares del proyecto
+</p>
+
+
+<p>
+Utiliza las herramientas de GitHub:
+</p>
+
+<p>
+Comentarios en líneas específicas
+Sugerencias de código (propuestas de cambio)
+Revisiones con estados (Approve, Request changes, Comment)
+</p>
+</div>
+</li>
+<li><a id="org85a618f"></a>Para autores:<br>
+<div class="outline-text-5" id="text-org85a618f">
+<p>
+Facilita la revisión:
+</p>
+
+<p>
+PRs pequeños y enfocados
+Descripción clara y completa
+Responde a los comentarios puntualmente
+</p>
+
+
+<p>
+Mantén una actitud abierta:
+</p>
+
+<p>
+Considera las sugerencias sin tomártelo personalmente
+Explica tus decisiones cuando no estés de acuerdo
+Agradece el feedback
+</p>
+
+
+<figure id="orgf958193">
+<img src="images/code-review-process.png" alt="code-review-process.png">
+
+</figure>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-github-actions" class="outline-3">
+<h3 id="github-actions">GitHub Actions: Automatización y CI/CD</h3>
+<div class="outline-text-3" id="text-github-actions">
+<p>
+GitHub Actions es un sistema de automatización integrado que permite definir flujos de trabajo personalizados directamente en tu repositorio.
+</p>
+</div>
+<div id="outline-container-conceptos-actions" class="outline-4">
+<h4 id="conceptos-actions">Conceptos básicos de GitHub Actions</h4>
+<div class="outline-text-4" id="text-conceptos-actions">
+</div>
+<ul class="org-ul">
+<li><a id="org85d2d8f"></a>Componentes principales:<br>
+<div class="outline-text-5" id="text-org85d2d8f">
+<p>
+Workflows: Procesos automatizados configurados en archivos YAML
+Events: Disparadores que inician un workflow (push, pull request, etc.)
+Jobs: Conjuntos de pasos que se ejecutan en un mismo runner
+Steps: Tareas individuales que pueden ejecutar comandos o acciones
+Actions: Unidades reutilizables de código (como funciones)
+Runners: Servidores que ejecutan los workflows
+</p>
+</div>
+</li>
+<li><a id="orgdbc2d15"></a>Estructura de un workflow:<br>
+<div class="outline-text-5" id="text-orgdbc2d15">
+<p>
+yamlname: CI/CD Pipeline
+</p>
+
+<p>
+on:
+  push:
+    branches: [ main ]
+  pull<sub>request</sub>:
+    branches: [ main ]
+</p>
+
+<p>
+jobs:
+  build:
+    runs-on: ubuntu-latest
+</p>
+
+<p>
+steps:
+</p>
+<ul class="org-ul">
+<li>uses: actions/checkout@v3</li>
+
+<li>name: Set up Node.js
+uses: actions/setup-node@v3
+with:
+  node-version: '16'</li>
+
+<li>name: Install dependencies
+run: npm ci</li>
+
+<li>name: Run tests
+run: npm test</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-casos-uso-actions" class="outline-4">
+<h4 id="casos-uso-actions">Casos de uso comunes</h4>
+<div class="outline-text-4" id="text-casos-uso-actions">
+</div>
+<ul class="org-ul">
+<li><a id="orgc03c304"></a>Integración Continua (CI)<br>
+<div class="outline-text-5" id="text-orgc03c304">
+<p>
+yamlname: Continuous Integration
+</p>
+
+<p>
+on:
+  push:
+    branches: [ main, develop ]
+  pull<sub>request</sub>:
+    branches: [ main, develop ]
+</p>
+
+<p>
+jobs:
+  test:
+    runs-on: ubuntu-latest
+</p>
+
+<p>
+steps:
+</p>
+<ul class="org-ul">
+<li>uses: actions/checkout@v3</li>
+
+<li>name: Set up Python
+uses: actions/setup-python@v4
+with:
+  python-version: '3.10'</li>
+
+<li>name: Install dependencies
+run: |
+  python -m pip install &#x2013;upgrade pip
+  pip install flake8 pytest
+  if [ -f requirements.txt ]; then pip install -r requirements.txt; fi</li>
+
+<li>name: Lint with flake8
+run: flake8 . &#x2013;count &#x2013;select=E9,F63,F7,F82 &#x2013;show-source &#x2013;statistics</li>
+
+<li>name: Test with pytest
+run: pytest</li>
+</ul>
+</div>
+</li>
+<li><a id="orgcc04aa7"></a>Despliegue Continuo (CD)<br>
+<div class="outline-text-5" id="text-orgcc04aa7">
+<p>
+yamlname: Deploy to Production
+</p>
+
+<p>
+on:
+  push:
+    branches: [ main ]
+</p>
+
+<p>
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+</p>
+
+<p>
+steps:
+</p>
+<ul class="org-ul">
+<li>uses: actions/checkout@v3</li>
+
+<li>name: Set up Node.js
+uses: actions/setup-node@v3
+with:
+  node-version: '16'</li>
+
+<li>name: Install dependencies
+run: npm ci</li>
+
+<li>name: Build
+run: npm run build</li>
+
+<li>name: Deploy to AWS S3
+uses: jakejarvis/s3-sync-action@master
+with:
+  args: &#x2013;acl public-read &#x2013;follow-symlinks &#x2013;delete
+env:
+  AWS<sub>S3</sub><sub>BUCKET</sub>: ${{ secrets.AWS<sub>S3</sub><sub>BUCKET</sub> }}
+  AWS<sub>ACCESS</sub><sub>KEY</sub><sub>ID</sub>: ${{ secrets.AWS<sub>ACCESS</sub><sub>KEY</sub><sub>ID</sub> }}
+  AWS<sub>SECRET</sub><sub>ACCESS</sub><sub>KEY</sub>: ${{ secrets.AWS<sub>SECRET</sub><sub>ACCESS</sub><sub>KEY</sub> }}
+  AWS<sub>REGION</sub>: 'us-west-1'
+  SOURCE<sub>DIR</sub>: 'build'</li>
+</ul>
+</div>
+</li>
+<li><a id="org2f4c890"></a>Automatización de tareas<br>
+<div class="outline-text-5" id="text-org2f4c890">
+<p>
+yamlname: Auto Assign Issues
+</p>
+
+<p>
+on:
+  issues:
+    types: [opened]
+</p>
+
+<p>
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+</p>
+<ul class="org-ul">
+<li>name: Assign to Project Board
+uses: alex-page/github-project-automation-plus@v0.8.3
+with:
+  project: "Backlog"
+  column: "To Do"
+  repo-token: ${{ secrets.GITHUB<sub>TOKEN</sub> }}</li>
+
+<li>name: Add labels
+uses: andymckay/labeler@master
+with:
+  add-labels: "needs-triage, bug"</li>
+</ul>
+
+
+<figure id="org4ae57bb">
+<img src="images/github-actions-components.png  results" alt="github-actions-components.png  results">
+
+</figure>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-secretos-actions" class="outline-4">
+<h4 id="secretos-actions">Secretos y variables de entorno</h4>
+<div class="outline-text-4" id="text-secretos-actions">
+<p>
+GitHub Actions permite manejar información sensible de forma segura:
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org613a65d"></a>Configuración de secretos:<br>
+<div class="outline-text-5" id="text-org613a65d">
+<p>
+En tu repositorio, ve a Settings &gt; Secrets and variables &gt; Actions
+Haz clic en "New repository secret"
+Introduce el nombre y valor del secreto
+</p>
+</div>
+</li>
+<li><a id="orgcf34b2c"></a>Uso en workflows:<br>
+<div class="outline-text-5" id="text-orgcf34b2c">
+<p>
+yamljobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+</p>
+<ul class="org-ul">
+<li>name: Deploy with secret
+env:
+  API<sub>TOKEN</sub>: ${{ secrets.API<sub>TOKEN</sub> }}
+run: |
+  echo "Using token to authenticate"
+  ./deploy.sh</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-caracteristicas-avanzadas" class="outline-3">
+<h3 id="caracteristicas-avanzadas">Características avanzadas de GitHub</h3>
+<div class="outline-text-3" id="text-caracteristicas-avanzadas">
+<p>
+GitHub ofrece muchas características avanzadas que pueden mejorar significativamente tu flujo de trabajo. Veamos algunas de las más útiles:
+</p>
+</div>
+<div id="outline-container-issues-projects" class="outline-4">
+<h4 id="issues-projects">GitHub Issues y Projects</h4>
+<div class="outline-text-4" id="text-issues-projects">
+</div>
+<ul class="org-ul">
+<li><a id="org8a1dc68"></a>Issues<br>
+<div class="outline-text-5" id="text-org8a1dc68">
+<p>
+Los issues son el sistema de seguimiento de problemas de GitHub. Puedes usarlos para:
+</p>
+
+<p>
+Reportar bugs
+Solicitar nuevas características
+Planificar tareas
+Hacer preguntas o iniciar discusiones
+</p>
+</div>
+</li>
+<li><a id="orgaa1d68e"></a>Anatomía de un issue:<br>
+<div class="outline-text-5" id="text-orgaa1d68e">
+<p>
+Título descriptivo
+Descripción detallada
+Asignados (responsables)
+Etiquetas (clasificación)
+Hitos (agrupación temporal)
+Estado (abierto/cerrado)
+Comentarios (discusión)
+</p>
+</div>
+</li>
+<li><a id="orgacd9300"></a>Plantillas de issues:<br>
+<div class="outline-text-5" id="text-orgacd9300">
+<p>
+Puedes crear plantillas para diferentes tipos de issues añadiendo archivos en .github/ISSUE<sub>TEMPLATE</sub>/.
+Ejemplo de plantilla para reportar bugs:
+markdown&#x2014;
+name: Bug report
+about: Create a report to help us improve
+title: '[BUG] '
+labels: bug
+assignees: ''
+&#x2014;
+</p>
+
+<p>
+<b><b>Describe el bug</b></b>
+Una descripción clara y concisa del problema.
+</p>
+
+<p>
+<b><b>Pasos para reproducir</b></b>
+</p>
+<ol class="org-ol">
+<li>Ir a '&#x2026;'</li>
+<li>Click en '&#x2026;.'</li>
+<li>Desplazarse hasta '&#x2026;.'</li>
+<li>Ver error</li>
+</ol>
+
+<p>
+<b><b>Comportamiento esperado</b></b>
+Una descripción de lo que esperabas que ocurriera.
+</p>
+
+<p>
+<b><b>Screenshots</b></b>
+Si aplica, añade capturas de pantalla.
+</p>
+
+<p>
+<b><b>Entorno:</b></b>
+</p>
+<ul class="org-ul">
+<li>OS: [ej. iOS]</li>
+<li>Navegador [ej. chrome, safari]</li>
+<li>Versión [ej. 22]</li>
+</ul>
+
+<p>
+<b><b>Contexto adicional</b></b>
+Cualquier otra información relevante.
+</p>
+</div>
+</li>
+<li><a id="org2193613"></a>GitHub Projects<br>
+<div class="outline-text-5" id="text-org2193613">
+<p>
+Projects es la herramienta de gestión de proyectos integrada en GitHub, con tableros estilo Kanban:
+</p>
+
+<p>
+Vistas: Tablero, tabla, calendario, etc.
+Elementos: Issues, Pull Requests y notas
+Campos personalizados: Estado, prioridad, etc.
+Automatización: Mover issues entre columnas automáticamente
+</p>
+
+
+<figure id="orgf772936">
+<img src="images/github-projects.png" alt="github-projects.png">
+
+</figure>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-github-pages" class="outline-4">
+<h4 id="github-pages">GitHub Pages</h4>
+<div class="outline-text-4" id="text-github-pages">
+<p>
+GitHub Pages permite publicar sitios web directamente desde tu repositorio:
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org47d8773"></a>Configuración básica:<br>
+<div class="outline-text-5" id="text-org47d8773">
+<p>
+Crea un repositorio llamado username.github.io (donde username es tu nombre de usuario)
+Añade archivos HTML, CSS y JavaScript
+Activa GitHub Pages en Settings &gt; Pages
+</p>
+</div>
+</li>
+<li><a id="orgff5cff2"></a>Opciones de publicación:<br>
+<div class="outline-text-5" id="text-orgff5cff2">
+<p>
+Rama: Puedes publicar desde la rama main, gh-pages u otra
+Carpeta: Puedes elegir la carpeta raíz o /docs
+Generadores: Jekyll integrado o cualquier generador de sitios estáticos
+</p>
+</div>
+</li>
+<li><a id="orgd7416e6"></a>Dominios personalizados:<br>
+<div class="outline-text-5" id="text-orgd7416e6">
+<p>
+Añade un archivo CNAME con tu dominio
+Configura los registros DNS
+Activa HTTPS en la configuración
+</p>
+</div>
+</li>
+<li><a id="orge12bb29"></a>Ejemplo de flujo:<br>
+<div class="outline-text-5" id="text-orge12bb29">
+<p>
+bash# Crear sitio local
+mkdir mi-sitio
+cd mi-sitio
+echo "# Mi sitio personal" &gt; index.md
+</p>
+
+<p>
+git init
+git add .
+git commit -m "Primer commit"
+git remote add origin <a href="https://github.com/username/username.github.io.git">https://github.com/username/username.github.io.git</a>
+git push -u origin main
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-github-wikis" class="outline-4">
+<h4 id="github-wikis">GitHub Wikis</h4>
+<div class="outline-text-4" id="text-github-wikis">
+<p>
+Las wikis son ideales para documentación extensa:
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="orgd134cef"></a>Características:<br>
+<div class="outline-text-5" id="text-orgd134cef">
+<p>
+Editor Markdown/HTML
+Historial de versiones
+Navegación jerárquica
+Puede clonarse como un repositorio Git
+</p>
+</div>
+</li>
+<li><a id="org9dd9541"></a>Ejemplo de estructura:<br>
+<div class="outline-text-5" id="text-org9dd9541">
+<p>
+Home (página principal)
+Guía de instalación
+Manual del usuario
+API Reference
+Contribución
+FAQ
+</p>
+</div>
+</li>
+<li><a id="orga4ca373"></a>Comandos para trabajar con wikis:<br>
+<div class="outline-text-5" id="text-orga4ca373">
+<p>
+bash# Clonar una wiki
+git clone <a href="https://github.com/username/repo.wiki.git">https://github.com/username/repo.wiki.git</a>
+</p>
+
+<p>
+cd repo.wiki
+</p>
+
+<p>
+git add .
+git commit -m "Actualizar documentación"
+git push
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-codespaces" class="outline-4">
+<h4 id="codespaces">GitHub Codespaces</h4>
+<div class="outline-text-4" id="text-codespaces">
+<p>
+Codespaces proporciona entornos de desarrollo basados en la nube:
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org5206347"></a>Características principales:<br>
+<div class="outline-text-5" id="text-org5206347">
+<p>
+Entorno de desarrollo completo en el navegador
+VS Code integrado
+Terminal y depurador
+Personalización mediante devcontainer.json
+Prebuilds para iniciar más rápido
+</p>
+</div>
+</li>
+<li><a id="org8e153be"></a>Configuración básica:<br>
+<div class="outline-text-5" id="text-org8e153be">
+<p>
+Crea un archivo .devcontainer/devcontainer.json:
+</p>
+
+<p>
+json{
+  "name": "My Project Dev Environment",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  },
+  "forwardPorts": [3000],
+  "postCreateCommand": "npm install"
+}
+</p>
+
+<p>
+Inicia un codespace desde la interfaz de GitHub
+Desarrolla, ejecuta y prueba directamente en la nube
+</p>
+
+
+<figure id="org692d7aa">
+<img src="github-codespaces.png  results" alt="github-codespaces.png  results">
+
+</figure>
+
+
+
+<figure id="org439ab1d">
+<img src="images/github-codespaces.png  results" alt="github-codespaces.png  results">
+
+</figure>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-buenas-practicas" class="outline-3">
+<h3 id="buenas-practicas">Buenas prácticas y consejos avanzados</h3>
+<div class="outline-text-3" id="text-buenas-practicas">
+<p>
+Para finalizar, veamos algunas recomendaciones para trabajar de forma efectiva con GitHub:
+</p>
+</div>
+<div id="outline-container-convenciones-commits" class="outline-4">
+<h4 id="convenciones-commits">Convenciones de commits</h4>
+<div class="outline-text-4" id="text-convenciones-commits">
+<p>
+Adoptar un estándar para mensajes de commit mejora la legibilidad y facilita la generación de changelogs automáticos.
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="orge580685"></a>Conventional Commits:<br>
+<div class="outline-text-5" id="text-orge580685">
+<p>
+&lt;tipo&gt;[ámbito opcional]: &lt;descripción&gt;
+</p>
+
+<p>
+[cuerpo opcional]
+</p>
+
+<p>
+[notas de pie opcionales]
+Donde tipo puede ser:
+</p>
+
+<p>
+feat: Nueva característica
+fix: Corrección de error
+docs: Cambios en documentación
+style: Cambios de formato (espacios, indentación)
+refactor: Refactorización de código
+test: Añadir o corregir tests
+chore: Tareas de mantenimiento
+</p>
+
+<p>
+Ejemplos:
+feat(auth): implementar autenticación con Google
+</p>
+
+<p>
+fix(api): corregir error en endpoint de usuarios
+</p>
+
+<p>
+docs: actualizar instrucciones de instalación
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-archivos-esenciales" class="outline-4">
+<h4 id="archivos-esenciales">Archivos esenciales para repositorios</h4>
+<div class="outline-text-4" id="text-archivos-esenciales">
+<p>
+Estos archivos mejoran significativamente la calidad y usabilidad de tu repositorio:
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org9b0ce20"></a>README.md<br>
+<div class="outline-text-5" id="text-org9b0ce20">
+<p>
+Primer archivo que verán los visitantes. Debe incluir:
+</p>
+
+<p>
+Nombre y descripción del proyecto
+Instrucciones de instalación
+Uso básico
+Contribución
+Licencia
+</p>
+</div>
+</li>
+<li><a id="org298037e"></a>.gitignore<br>
+<div class="outline-text-5" id="text-org298037e">
+<p>
+Especifica archivos que Git debe ignorar:
+</p>
+
+<p>
+/node<sub>modules</sub>
+/vendor
+</p>
+
+<p>
+/dist
+/build
+</p>
+
+<p>
+.env
+.env.local
+</p>
+
+<p>
+*.log
+</p>
+
+<p>
+.DS<sub>Store</sub>
+Thumbs.db
+</p>
+</div>
+</li>
+<li><a id="org0d2be18"></a>LICENSE<br>
+<div class="outline-text-5" id="text-org0d2be18">
+<p>
+Define cómo se puede usar tu código. Opciones comunes:
+</p>
+
+<p>
+MIT: Muy permisiva
+Apache 2.0: Permisiva con protecciones de patentes
+GPL: Copyleft, requiere mantener la misma licencia
+AGPL: Como GPL pero también para software como servicio
+</p>
+</div>
+</li>
+<li><a id="orga7a35eb"></a>CONTRIBUTING.md<br>
+<div class="outline-text-5" id="text-orga7a35eb">
+<p>
+Guía para contribuidores:
+</p>
+
+<p>
+Proceso para reportar bugs
+Proceso para sugerir características
+Estándares de código
+Proceso de pull request
+</p>
+</div>
+</li>
+<li><a id="org99ed7c7"></a>SECURITY.md<br>
+<div class="outline-text-5" id="text-org99ed7c7">
+<p>
+Política de seguridad:
+</p>
+
+<p>
+Versiones soportadas
+Cómo reportar vulnerabilidades
+Proceso de divulgación
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-dependencias-seguridad" class="outline-4">
+<h4 id="dependencias-seguridad">Gestión de dependencias y seguridad</h4>
+<div class="outline-text-4" id="text-dependencias-seguridad">
+</div>
+<ul class="org-ul">
+<li><a id="org54a313b"></a>Dependabot<br>
+<div class="outline-text-5" id="text-org54a313b">
+<p>
+GitHub incluye Dependabot para gestionar dependencias:
+</p>
+
+<p>
+Crea un archivo .github/dependabot.yml:
+</p>
+
+<p>
+yamlversion: 2
+updates:
+</p>
+<ul class="org-ul">
+<li>package-ecosystem: "npm"
+directory: "/"
+schedule:
+  interval: "weekly"
+open-pull-requests-limit: 10</li>
+
+<li>package-ecosystem: "docker"
+directory: "/"
+schedule:
+  interval: "weekly"</li>
+</ul>
+
+<p>
+Dependabot creará PRs automáticamente cuando haya actualizaciones disponibles
+También alertará sobre vulnerabilidades de seguridad
+</p>
+</div>
+</li>
+<li><a id="org3479426"></a>Security Scanning<br>
+<div class="outline-text-5" id="text-org3479426">
+<p>
+GitHub ofrece herramientas de análisis de seguridad:
+</p>
+
+<p>
+Code Scanning: Análisis estático de código con CodeQL
+Secret Scanning: Detección de credenciales expuestas
+Dependency Review: Análisis de seguridad en PRs
+</p>
+
+<p>
+Para activar Code Scanning:
+yaml# .github/workflows/codeql-analysis.yml
+name: "CodeQL"
+</p>
+
+<p>
+on:
+  push:
+    branches: [ main ]
+  pull<sub>request</sub>:
+    branches: [ main ]
+  schedule:
+</p>
+<ul class="org-ul">
+<li>cron: '30 1 * * 0'</li>
+</ul>
+
+<p>
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+</p>
+
+<p>
+steps:
+</p>
+<ul class="org-ul">
+<li>name: Checkout repository
+uses: actions/checkout@v3</li>
+
+<li>name: Initialize CodeQL
+uses: github/codeql-action/init@v2
+with:
+  languages: javascript, python</li>
+
+<li>name: Perform CodeQL Analysis
+uses: github/codeql-action/analyze@v2</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-conclusion-cap2" class="outline-3">
+<h3 id="conclusion-cap2">Conclusión del Capítulo 2</h3>
+<div class="outline-text-3" id="text-conclusion-cap2">
+<p>
+En este capítulo, hemos explorado en profundidad cómo trabajar con GitHub, desde los conceptos básicos hasta características avanzadas y buenas prácticas.
+GitHub ha revolucionado el desarrollo de software facilitando la colaboración, automatización y gestión de proyectos. Hemos visto cómo:
+</p>
+
+<p>
+Los comandos básicos de Git y GitHub permiten gestionar código de forma efectiva
+Los flujos de trabajo como GitHub Flow y Git Flow estructuran el proceso de desarrollo
+Los Pull Requests y Code Reviews mejoran la calidad del código
+GitHub Actions automatiza tareas repetitivas y procesos de CI/CD
+Características como Issues, Projects, Pages y Codespaces enriquecen la experiencia
+Las buenas prácticas y herramientas de seguridad protegen nuestros proyectos
+</p>
+
+<p>
+Dominar GitHub no solo implica aprender comandos y características, sino adoptar una filosofía de desarrollo colaborativo, abierto y estructurado.
+A medida que sigas trabajando con GitHub, descubrirás que su verdadero poder está en cómo facilita la comunicación y coordinación entre desarrolladores, permitiendo construir software más robusto, mantenible y seguro.
+</p>
+
+<p>
+Referencias
+</p>
+<p>
+:CUSTOM<sub>ID</sub>: referencias
+</p>
+
+<hr>
+
+<ul class="org-ul">
+<li>Chacon, S., &amp; Straub, B. (2014). Pro Git (2nd ed.). Apress. <a href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a></li>
+<li>GitHub Docs. GitHub official documentation. <a href="https://docs.github.com/">https://docs.github.com/</a></li>
+<li>Preston-Werner, T. (2011). Semantic Versioning 2.0.0. <a href="https://semver.org/">https://semver.org/</a></li>
+<li>Driessen, V. (2010). A successful Git branching model. [<a href="https://">https://</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-git.html">git</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-github.html">github</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-colaboracion.html">colaboracion</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-desarrollo_software.html">desarrollo_software</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-codigo_abierto.html">codigo_abierto</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-devops.html">devops</a> </div>]]></description>
+  <category><![CDATA[git]]></category>
+  <category><![CDATA[github]]></category>
+  <category><![CDATA[colaboracion]]></category>
+  <category><![CDATA[desarrollo_software]]></category>
+  <category><![CDATA[codigo_abierto]]></category>
+  <category><![CDATA[devops]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-09-github-de-sus-or-genes-a-la-pr-ctica.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-09-github-de-sus-or-genes-a-la-pr-ctica.html</guid>
+  <pubDate>Fri, 09 May 2025 06:49:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[Creación de un Blog Estático con GitHub]]></title>
   <description><![CDATA[
