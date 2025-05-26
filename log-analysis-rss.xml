@@ -1,0 +1,1424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title><![CDATA[Emacs con esteroides - log-analysis]]></title>
+<description><![CDATA[Emacs con esteroides - log-analysis]]></description>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-log-analysis.html</link>
+<lastBuildDate>Mon, 26 May 2025 12:47:37 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Scripts de Ciberseguridad en Bash Linux]]></title>
+  <description><![CDATA[
+<div id="outline-container-orga979442" class="outline-2">
+<h2 id="orga979442"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Esta guía presenta los 3 scripts de ciberseguridad más útiles para administradores de sistemas Linux, diseñados para automatizar tareas críticas de seguridad, monitoreo y análisis de amenazas.
+</p>
+</div>
+<div id="outline-container-orge89226b" class="outline-3">
+<h3 id="orge89226b"><span class="section-number-3">1.1.</span> Requisitos Previos</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Sistema Linux (Ubuntu, CentOS, RHEL, Debian)</li>
+<li>Bash 4.0 o superior</li>
+<li>Permisos de root para algunas funcionalidades</li>
+<li>Herramientas básicas: grep, awk, sed, netstat, ss</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org478527d" class="outline-2">
+<h2 id="org478527d"><span class="section-number-2">2.</span> Script 1: Monitor de Seguridad del Sistema</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org4794b7b" class="outline-3">
+<h3 id="org4794b7b"><span class="section-number-3">2.1.</span> Descripción</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Script completo para monitorear actividades sospechosas en el sistema, detectar intentos de intrusión y generar alertas automáticas.
+</p>
+</div>
+</div>
+<div id="outline-container-org367f80d" class="outline-3">
+<h3 id="org367f80d"><span class="section-number-3">2.2.</span> Tags: <code>monitoring</code> <code>intrusion-detection</code> <code>system-security</code></h3>
+</div>
+
+<div id="outline-container-org25a442c" class="outline-3">
+<h3 id="org25a442c"><span class="section-number-3">2.3.</span> Código del Script</h3>
+<div class="outline-text-3" id="text-2-3">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">security_monitor.sh - Monitor de Seguridad del Sistema</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Autor: Admin de Seguridad</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Versi&#243;n: 2.1</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Descripci&#243;n: Monitorea actividades sospechosas y genera alertas</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n</span>
+<span style="color: #1857a4;">LOG_FILE</span>=<span style="color: #a44185;">"/var/log/security_monitor.log"</span>
+<span style="color: #1857a4;">ALERT_EMAIL</span>=<span style="color: #a44185;">"admin@empresa.com"</span>
+<span style="color: #1857a4;">MAX_FAILED_LOGINS</span>=5
+<span style="color: #1857a4;">SUSPICIOUS_PROCESSES</span>=(<span style="color: #a44185;">"nc"</span> <span style="color: #a44185;">"nmap"</span> <span style="color: #a44185;">"metasploit"</span> <span style="color: #a44185;">"sqlmap"</span>)
+<span style="color: #1857a4;">ALERT_THRESHOLD</span>=10
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Funci&#243;n de logging</span>
+<span style="color: #dc3eb7;">log_event</span>() {
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"[$(</span><span style="color: #219fd5; font-weight: bold;">date '+%Y-%m-%d %H:%M:%S'</span><span style="color: #a44185;">)] $1"</span> &gt;&gt; <span style="color: #a44185;">"$LOG_FILE"</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Funci&#243;n para enviar alertas</span>
+<span style="color: #dc3eb7;">send_alert</span>() {
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">message</span>=<span style="color: #a44185;">"$1"</span>
+    log_event <span style="color: #a44185;">"ALERT: $message"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"$message"</span> | mail -s <span style="color: #a44185;">"Alerta de Seguridad - $(</span><span style="color: #219fd5; font-weight: bold;">hostname</span><span style="color: #a44185;">)"</span> <span style="color: #a44185;">"$ALERT_EMAIL"</span> 2&gt;/dev/null
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar intentos de login fallidos</span>
+<span style="color: #dc3eb7;">check_failed_logins</span>() {
+    <span style="color: #dc3eb7;">local</span> failed_count
+    <span style="color: #1857a4;">failed_count</span>=$(<span style="color: #219fd5; font-weight: bold;">grep "Failed password" /var/log/auth.log 2&gt;/dev/null | </span>
+                   grep <span style="color: #a44185;">"$(</span><span style="color: #219fd5; font-weight: bold;">date '+%b %d'</span><span style="color: #a44185;">)"</span> | wc -l)
+
+    <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$failed_count"</span> -gt <span style="color: #a44185;">"$MAX_FAILED_LOGINS"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        send_alert <span style="color: #a44185;">"CR&#205;TICO: $failed_count intentos de login fallidos detectados hoy"</span>
+
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Obtener IPs con m&#225;s intentos</span>
+        grep <span style="color: #a44185;">"Failed password"</span> /var/log/auth.log 2&gt;/dev/null | 
+        grep <span style="color: #a44185;">"$(</span><span style="color: #219fd5; font-weight: bold;">date '+%b %d'</span><span style="color: #a44185;">)"</span> | 
+        awk <span style="color: #a44185;">'{print $(</span><span style="color: #219fd5; font-weight: bold;">NF-3</span><span style="color: #a44185;">)}'</span> | sort | uniq -c | sort -nr | head -5 &gt;&gt; <span style="color: #a44185;">"$LOG_FILE"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar conexiones de red sospechosas</span>
+<span style="color: #dc3eb7;">check_network_connections</span>() {
+    <span style="color: #dc3eb7;">local</span> suspicious_connections
+    <span style="color: #1857a4;">suspicious_connections</span>=$(<span style="color: #219fd5; font-weight: bold;">ss -tuln | grep -E ':22|:80|:443|:3389|:5432|:3306' | </span>
+                           grep -v <span style="color: #a44185;">'127.0.0.1\|::1'</span> | wc -l)
+
+    <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$suspicious_connections"</span> -gt <span style="color: #a44185;">"$ALERT_THRESHOLD"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        send_alert <span style="color: #a44185;">"ADVERTENCIA: $suspicious_connections conexiones externas activas"</span>
+        ss -tuln | grep -v <span style="color: #a44185;">'127.0.0.1\|::1'</span> &gt;&gt; <span style="color: #a44185;">"$LOG_FILE"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar procesos sospechosos</span>
+<span style="color: #dc3eb7;">check_suspicious_processes</span>() {
+    <span style="color: #219fd5; font-style: italic;">for</span> process<span style="color: #219fd5; font-style: italic;"> in</span> <span style="color: #a44185;">"${SUSPICIOUS_PROCESSES[@]}"</span>; <span style="color: #219fd5; font-style: italic;">do</span>
+        <span style="color: #219fd5; font-style: italic;">if</span> pgrep -f <span style="color: #a44185;">"$process"</span> &gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+            send_alert <span style="color: #a44185;">"CR&#205;TICO: Proceso sospechoso detectado: $process"</span>
+            ps aux | grep <span style="color: #a44185;">"$process"</span> | grep -v grep &gt;&gt; <span style="color: #a44185;">"$LOG_FILE"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">done</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar cambios en archivos cr&#237;ticos</span>
+<span style="color: #dc3eb7;">check_system_files</span>() {
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">critical_files</span>=(<span style="color: #a44185;">"/etc/passwd"</span> <span style="color: #a44185;">"/etc/shadow"</span> <span style="color: #a44185;">"/etc/sudoers"</span> <span style="color: #a44185;">"/etc/hosts"</span>)
+
+    <span style="color: #219fd5; font-style: italic;">for</span> file<span style="color: #219fd5; font-style: italic;"> in</span> <span style="color: #a44185;">"${critical_files[@]}"</span>; <span style="color: #219fd5; font-style: italic;">do</span>
+        <span style="color: #219fd5; font-style: italic;">if</span> [ -f <span style="color: #a44185;">"$file"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+            <span style="color: #dc3eb7;">local</span> current_hash
+            <span style="color: #1857a4;">current_hash</span>=$(<span style="color: #219fd5; font-weight: bold;">md5sum "$file" | cut -d' ' -f1</span>)
+            <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">stored_hash_file</span>=<span style="color: #a44185;">"/tmp/$(</span><span style="color: #219fd5; font-weight: bold;">basename "$file"</span><span style="color: #a44185;">).hash"</span>
+
+            <span style="color: #219fd5; font-style: italic;">if</span> [ -f <span style="color: #a44185;">"$stored_hash_file"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+                <span style="color: #dc3eb7;">local</span> stored_hash
+                <span style="color: #1857a4;">stored_hash</span>=$(<span style="color: #219fd5; font-weight: bold;">cat "$stored_hash_file"</span>)
+                <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$current_hash"</span> != <span style="color: #a44185;">"$stored_hash"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+                    send_alert <span style="color: #a44185;">"CR&#205;TICO: Archivo cr&#237;tico modificado: $file"</span>
+                <span style="color: #219fd5; font-style: italic;">fi</span>
+            <span style="color: #219fd5; font-style: italic;">fi</span>
+            <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"$current_hash"</span> &gt; <span style="color: #a44185;">"$stored_hash_file"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">done</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar uso de recursos</span>
+<span style="color: #dc3eb7;">check_resource_usage</span>() {
+    <span style="color: #dc3eb7;">local</span> cpu_usage
+    <span style="color: #dc3eb7;">local</span> memory_usage
+    <span style="color: #dc3eb7;">local</span> disk_usage
+
+    <span style="color: #1857a4;">cpu_usage</span>=$(<span style="color: #219fd5; font-weight: bold;">top -bn1 | grep "Cpu(s</span><span style="color: #a44185;">)"</span> | awk <span style="color: #a44185;">'{print $2}'</span> | cut -d<span style="color: #a44185;">'%'</span> -f1 | cut -d<span style="color: #a44185;">','</span> -f1)
+    <span style="color: #1857a4;">memory_usage</span>=$(<span style="color: #219fd5; font-weight: bold;">free | grep Mem | awk '{printf "%.1f", $3/$2 * 100.0}'</span>)
+    <span style="color: #1857a4;">disk_usage</span>=$(<span style="color: #219fd5; font-weight: bold;">df / | tail -1 | awk '{print $5}' | cut -d'%' -f1</span>)
+
+    <span style="color: #219fd5; font-style: italic;">if</span> (( $(<span style="color: #219fd5; font-weight: bold;">echo "$cpu_usage &gt; 90" | bc -l</span>) )); <span style="color: #219fd5; font-style: italic;">then</span>
+        send_alert <span style="color: #a44185;">"ADVERTENCIA: Uso de CPU elevado: ${cpu_usage}%"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #219fd5; font-style: italic;">if</span> (( $(<span style="color: #219fd5; font-weight: bold;">echo "$memory_usage &gt; 90" | bc -l</span>) )); <span style="color: #219fd5; font-style: italic;">then</span>
+        send_alert <span style="color: #a44185;">"ADVERTENCIA: Uso de memoria elevado: ${memory_usage}%"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$disk_usage"</span> -gt 90 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        send_alert <span style="color: #a44185;">"ADVERTENCIA: Uso de disco elevado: ${disk_usage}%"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Funci&#243;n principal</span>
+<span style="color: #dc3eb7;">main</span>() {
+    log_event <span style="color: #a44185;">"Iniciando monitoreo de seguridad"</span>
+
+    check_failed_logins
+    check_network_connections
+    check_suspicious_processes
+    check_system_files
+    check_resource_usage
+
+    log_event <span style="color: #a44185;">"Monitoreo completado"</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar si se ejecuta como root</span>
+<span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$EUID"</span> -ne 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Este script debe ejecutarse como root"</span>
+    <span style="color: #219fd5; font-style: italic;">exit</span> 1
+<span style="color: #219fd5; font-style: italic;">fi</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear directorio de logs si no existe</span>
+mkdir -p <span style="color: #a44185;">"$(</span><span style="color: #219fd5; font-weight: bold;">dirname "$LOG_FILE"</span><span style="color: #a44185;">)"</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar funci&#243;n principal</span>
+main <span style="color: #a44185;">"$@"</span>
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgee49811" class="outline-3">
+<h3 id="orgee49811"><span class="section-number-3">2.4.</span> Instalación y Configuración</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-orgc090e05" class="outline-4">
+<h4 id="orgc090e05"><span class="section-number-4">2.4.1.</span> Paso 1: Preparar el script</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear el archivo del script</span>
+sudo nano /usr/local/bin/security_monitor.sh
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Copiar el c&#243;digo anterior y guardar</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Hacer ejecutable</span>
+sudo chmod +x /usr/local/bin/security_monitor.sh
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org5e498fd" class="outline-4">
+<h4 id="org5e498fd"><span class="section-number-4">2.4.2.</span> Paso 2: Configurar cron para ejecución automática</h4>
+<div class="outline-text-4" id="text-2-4-2">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Editar crontab</span>
+sudo crontab -e
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Agregar l&#237;nea para ejecutar cada 15 minutos</span>
+*/15 * * * * /usr/local/bin/security_monitor.sh
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd9ade4f" class="outline-4">
+<h4 id="orgd9ade4f"><span class="section-number-4">2.4.3.</span> Paso 3: Configurar alertas por email (opcional)</h4>
+<div class="outline-text-4" id="text-2-4-3">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Instalar mailutils</span>
+sudo apt-get install mailutils
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Configurar postfix o sendmail seg&#250;n necesidades</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org8df45f2" class="outline-3">
+<h3 id="org8df45f2"><span class="section-number-3">2.5.</span> Ejemplos de Uso</h3>
+<div class="outline-text-3" id="text-2-5">
+</div>
+<div id="outline-container-orgeb36b71" class="outline-4">
+<h4 id="orgeb36b71"><span class="section-number-4">2.5.1.</span> Ejecución manual</h4>
+<div class="outline-text-4" id="text-2-5-1">
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo /usr/local/bin/security_monitor.sh
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb81a3f7" class="outline-4">
+<h4 id="orgb81a3f7"><span class="section-number-4">2.5.2.</span> Revisar logs</h4>
+<div class="outline-text-4" id="text-2-5-2">
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo tail -f /var/log/security_monitor.log
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc41bbab" class="outline-2">
+<h2 id="orgc41bbab"><span class="section-number-2">3.</span> Script 2: Analizador de Logs de Seguridad</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgf8c5969" class="outline-3">
+<h3 id="orgf8c5969"><span class="section-number-3">3.1.</span> Descripción</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Script avanzado para analizar logs del sistema en busca de patrones de ataque, generar reportes y identificar amenazas.
+</p>
+</div>
+</div>
+<div id="outline-container-org790a4d2" class="outline-3">
+<h3 id="org790a4d2"><span class="section-number-3">3.2.</span> Tags: <code>log-analysis</code> <code>forensics</code> <code>threat-detection</code></h3>
+</div>
+
+<div id="outline-container-orge071297" class="outline-3">
+<h3 id="orge071297"><span class="section-number-3">3.3.</span> Código del Script</h3>
+<div class="outline-text-3" id="text-3-3">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">log_analyzer.sh - Analizador de Logs de Seguridad</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Autor: Security Team</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Versi&#243;n: 1.8</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Descripci&#243;n: Analiza logs del sistema para detectar amenazas</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n</span>
+<span style="color: #1857a4;">REPORT_DIR</span>=<span style="color: #a44185;">"/var/log/security_reports"</span>
+<span style="color: #1857a4;">DATE_PATTERN</span>=$(<span style="color: #219fd5; font-weight: bold;">date '+%Y-%m-%d'</span>)
+<span style="color: #1857a4;">LOG_FILES</span>=(<span style="color: #a44185;">"/var/log/auth.log"</span> <span style="color: #a44185;">"/var/log/syslog"</span> <span style="color: #a44185;">"/var/log/apache2/access.log"</span> <span style="color: #a44185;">"/var/log/nginx/access.log"</span>)
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Patrones de ataque conocidos</span>
+<span style="color: #dc3eb7;">declare</span> -A <span style="color: #1857a4;">ATTACK_PATTERNS</span>=(
+    [<span style="color: #a44185;">"SQL_INJECTION"</span>]=<span style="color: #a44185;">"union.*select|drop.*table|exec.*sp_|script.*alert"</span>
+    [<span style="color: #a44185;">"XSS"</span>]=<span style="color: #a44185;">"&lt;script|javascript:|onload=|onerror="</span>
+    [<span style="color: #a44185;">"PATH_TRAVERSAL"</span>]=<span style="color: #a44185;">"\.\.\/|\.\.\\|directory.*traversal"</span>
+    [<span style="color: #a44185;">"BRUTE_FORCE"</span>]=<span style="color: #a44185;">"Failed password|authentication failure|invalid user"</span>
+    [<span style="color: #a44185;">"PORT_SCAN"</span>]=<span style="color: #a44185;">"nmap|port.*scan|stealth.*scan"</span>
+    [<span style="color: #a44185;">"PRIVILEGE_ESCALATION"</span>]=<span style="color: #a44185;">"sudo.*su|privilege.*escalation|root.*access"</span>
+)
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Funci&#243;n para crear reportes</span>
+<span style="color: #dc3eb7;">create_report_header</span>() {
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">report_file</span>=<span style="color: #a44185;">"$1"</span>
+    cat &gt; <span style="color: #a44185;">"$report_file"</span> &lt;&lt; EOF
+<span style="color: #a44185;">===========================================</span>
+<span style="color: #a44185;">REPORTE DE AN&#193;LISIS DE SEGURIDAD</span>
+<span style="color: #a44185;">===========================================</span>
+<span style="color: #a44185;">Fecha: $(</span><span style="color: #219fd5; font-weight: bold;">date</span><span style="color: #a44185;">)</span>
+<span style="color: #a44185;">Hostname: $(</span><span style="color: #219fd5; font-weight: bold;">hostname</span><span style="color: #a44185;">)</span>
+<span style="color: #a44185;">Sistema: $(</span><span style="color: #219fd5; font-weight: bold;">uname -a</span><span style="color: #a44185;">)</span>
+<span style="color: #a44185;">===========================================</span>
+
+<span style="color: #a44185;">EOF</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">An&#225;lisis de intentos de autenticaci&#243;n</span>
+<span style="color: #dc3eb7;">analyze_auth_attempts</span>() {
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">report_file</span>=<span style="color: #a44185;">"$1"</span>
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"AN&#193;LISIS DE AUTENTICACI&#211;N"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"========================="</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Intentos fallidos por IP</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Top 10 IPs con intentos fallidos:"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    grep <span style="color: #a44185;">"Failed password"</span> /var/log/auth.log 2&gt;/dev/null | 
+    awk <span style="color: #a44185;">'{print $(</span><span style="color: #219fd5; font-weight: bold;">NF-3</span><span style="color: #a44185;">)}'</span> | sort | uniq -c | sort -nr | head -10 &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Usuarios m&#225;s atacados</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Usuarios m&#225;s atacados:"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    grep <span style="color: #a44185;">"Failed password"</span> /var/log/auth.log 2&gt;/dev/null | 
+    awk <span style="color: #a44185;">'{print $9}'</span> | sort | uniq -c | sort -nr | head -10 &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Logins exitosos sospechosos (fuera de horario)</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Logins exitosos fuera de horario (22:00-06:00):"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    grep <span style="color: #a44185;">"Accepted"</span> /var/log/auth.log 2&gt;/dev/null | 
+    awk <span style="color: #a44185;">'$3 ~ /^(2[2-3]|0[0-6]):/ {print}'</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">An&#225;lisis de patrones de ataque</span>
+<span style="color: #dc3eb7;">analyze_attack_patterns</span>() {
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">report_file</span>=<span style="color: #a44185;">"$1"</span>
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"AN&#193;LISIS DE PATRONES DE ATAQUE"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"=============================="</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #219fd5; font-style: italic;">for</span> attack_type<span style="color: #219fd5; font-style: italic;"> in</span> <span style="color: #a44185;">"${!ATTACK_PATTERNS[@]}"</span>; <span style="color: #219fd5; font-style: italic;">do</span>
+        <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">pattern</span>=<span style="color: #a44185;">"${ATTACK_PATTERNS[$attack_type]}"</span>
+        <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">count</span>=0
+
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Analizando: $attack_type"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+        <span style="color: #219fd5; font-style: italic;">for</span> log_file<span style="color: #219fd5; font-style: italic;"> in</span> <span style="color: #a44185;">"${LOG_FILES[@]}"</span>; <span style="color: #219fd5; font-style: italic;">do</span>
+            <span style="color: #219fd5; font-style: italic;">if</span> [ -f <span style="color: #a44185;">"$log_file"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+                <span style="color: #dc3eb7;">local</span> matches
+                <span style="color: #1857a4;">matches</span>=$(<span style="color: #219fd5; font-weight: bold;">grep -iE "$pattern" "$log_file" 2&gt;/dev/null</span>)
+                <span style="color: #219fd5; font-style: italic;">if</span> [ -n <span style="color: #a44185;">"$matches"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+                    <span style="color: #dc3eb7;">local</span> match_count
+                    <span style="color: #1857a4;">match_count</span>=$(<span style="color: #219fd5; font-weight: bold;">echo "$matches" | wc -l</span>)
+                    <span style="color: #1857a4;">count</span>=$(<span style="color: #219fd5; font-weight: bold;">(count + match_count</span>))
+
+                    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"  Archivo: $log_file - Coincidencias: $match_count"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+                    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"$matches"</span> | head -5 &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+                <span style="color: #219fd5; font-style: italic;">fi</span>
+            <span style="color: #219fd5; font-style: italic;">fi</span>
+        <span style="color: #219fd5; font-style: italic;">done</span>
+
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"  Total de coincidencias para $attack_type: $count"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    <span style="color: #219fd5; font-style: italic;">done</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">An&#225;lisis de conexiones de red</span>
+<span style="color: #dc3eb7;">analyze_network_activity</span>() {
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">report_file</span>=<span style="color: #a44185;">"$1"</span>
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"AN&#193;LISIS DE ACTIVIDAD DE RED"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"============================"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Conexiones establecidas</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Conexiones activas:"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    ss -tuln | grep ESTAB &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Puertos en escucha</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Puertos en escucha:"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    ss -tuln | grep LISTEN &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">An&#225;lisis de logs de firewall</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [ -f <span style="color: #a44185;">"/var/log/ufw.log"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Actividad del firewall (&#250;ltimos bloqueos):"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+        grep <span style="color: #a44185;">"BLOCK"</span> /var/log/ufw.log | tail -20 &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">An&#225;lisis de cambios en el sistema</span>
+<span style="color: #dc3eb7;">analyze_system_changes</span>() {
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">report_file</span>=<span style="color: #a44185;">"$1"</span>
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"AN&#193;LISIS DE CAMBIOS DEL SISTEMA"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"==============================="</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Nuevos usuarios</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Usuarios creados recientemente:"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    grep <span style="color: #a44185;">"useradd"</span> /var/log/auth.log 2&gt;/dev/null | tail -10 &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Cambios de contrase&#241;a</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Cambios de contrase&#241;a recientes:"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    grep <span style="color: #a44185;">"password changed"</span> /var/log/auth.log 2&gt;/dev/null | tail -10 &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Comandos sudo ejecutados</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Comandos sudo ejecutados (&#250;ltimos 20):"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    grep <span style="color: #a44185;">"sudo:"</span> /var/log/auth.log 2&gt;/dev/null | tail -20 &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generar resumen ejecutivo</span>
+<span style="color: #dc3eb7;">generate_executive_summary</span>() {
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">report_file</span>=<span style="color: #a44185;">"$1"</span>
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"RESUMEN EJECUTIVO"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"================="</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #dc3eb7;">local</span> failed_logins
+    <span style="color: #dc3eb7;">local</span> successful_logins
+    <span style="color: #dc3eb7;">local</span> sudo_commands
+    <span style="color: #dc3eb7;">local</span> firewall_blocks
+
+    <span style="color: #1857a4;">failed_logins</span>=$(<span style="color: #219fd5; font-weight: bold;">grep -c "Failed password" /var/log/auth.log 2&gt;/dev/null || echo "0"</span>)
+    <span style="color: #1857a4;">successful_logins</span>=$(<span style="color: #219fd5; font-weight: bold;">grep -c "Accepted" /var/log/auth.log 2&gt;/dev/null || echo "0"</span>)
+    <span style="color: #1857a4;">sudo_commands</span>=$(<span style="color: #219fd5; font-weight: bold;">grep -c "sudo:" /var/log/auth.log 2&gt;/dev/null || echo "0"</span>)
+    <span style="color: #1857a4;">firewall_blocks</span>=$(<span style="color: #219fd5; font-weight: bold;">grep -c "BLOCK" /var/log/ufw.log 2&gt;/dev/null || echo "0"</span>)
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Estad&#237;sticas del d&#237;a:"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"- Intentos de login fallidos: $failed_logins"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"- Logins exitosos: $successful_logins"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"- Comandos sudo ejecutados: $sudo_commands"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"- Conexiones bloqueadas por firewall: $firewall_blocks"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Nivel de riesgo</span>
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">risk_level</span>=<span style="color: #a44185;">"BAJO"</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$failed_logins"</span> -gt 100 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #1857a4;">risk_level</span>=<span style="color: #a44185;">"ALTO"</span>
+    <span style="color: #219fd5; font-style: italic;">elif</span> [ <span style="color: #a44185;">"$failed_logins"</span> -gt 50 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #1857a4;">risk_level</span>=<span style="color: #a44185;">"MEDIO"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"- Nivel de riesgo estimado: $risk_level"</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span> &gt;&gt; <span style="color: #a44185;">"$report_file"</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Funci&#243;n principal</span>
+<span style="color: #dc3eb7;">main</span>() {
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">report_file</span>=<span style="color: #a44185;">"$REPORT_DIR/security_report_$DATE_PATTERN.txt"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear directorio de reportes</span>
+    mkdir -p <span style="color: #a44185;">"$REPORT_DIR"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear reporte</span>
+    create_report_header <span style="color: #a44185;">"$report_file"</span>
+    generate_executive_summary <span style="color: #a44185;">"$report_file"</span>
+    analyze_auth_attempts <span style="color: #a44185;">"$report_file"</span>
+    analyze_attack_patterns <span style="color: #a44185;">"$report_file"</span>
+    analyze_network_activity <span style="color: #a44185;">"$report_file"</span>
+    analyze_system_changes <span style="color: #a44185;">"$report_file"</span>
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Reporte generado: $report_file"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Mostrar resumen en pantalla</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"=== RESUMEN ==="</span>
+    grep -A 10 <span style="color: #a44185;">"RESUMEN EJECUTIVO"</span> <span style="color: #a44185;">"$report_file"</span> | tail -8
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar permisos</span>
+<span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$EUID"</span> -ne 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Se recomienda ejecutar como root para acceso completo a logs"</span>
+<span style="color: #219fd5; font-style: italic;">fi</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar</span>
+main <span style="color: #a44185;">"$@"</span>
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf4754e3" class="outline-3">
+<h3 id="orgf4754e3"><span class="section-number-3">3.4.</span> Instalación y Uso</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org64a7236" class="outline-4">
+<h4 id="org64a7236"><span class="section-number-4">3.4.1.</span> Instalación</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear el script</span>
+sudo nano /usr/local/bin/log_analyzer.sh
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Hacer ejecutable</span>
+sudo chmod +x /usr/local/bin/log_analyzer.sh
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear directorio de reportes</span>
+sudo mkdir -p /var/log/security_reports
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org2831696" class="outline-4">
+<h4 id="org2831696"><span class="section-number-4">3.4.2.</span> Uso básico</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar an&#225;lisis</span>
+sudo /usr/local/bin/log_analyzer.sh
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ver el reporte generado</span>
+sudo cat /var/log/security_reports/security_report_$(<span style="color: #219fd5; font-weight: bold;">date +%Y-%m-%d</span>).txt
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf5f694c" class="outline-4">
+<h4 id="orgf5f694c"><span class="section-number-4">3.4.3.</span> Automatización</h4>
+<div class="outline-text-4" id="text-3-4-3">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Agregar a cron para ejecuci&#243;n diaria</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"0 6 * * * /usr/local/bin/log_analyzer.sh"</span> | sudo crontab -
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orga69951b" class="outline-2">
+<h2 id="orga69951b"><span class="section-number-2">4.</span> Script 3: Escáner de Vulnerabilidades del Sistema</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org6bf20e4" class="outline-3">
+<h3 id="org6bf20e4"><span class="section-number-3">4.1.</span> Descripción</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Script comprehensivo para escanear el sistema en busca de vulnerabilidades comunes, configuraciones inseguras y problemas de seguridad.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd423210" class="outline-3">
+<h3 id="orgd423210"><span class="section-number-3">4.2.</span> Tags: <code>vulnerability-scanner</code> <code>security-audit</code> <code>system-hardening</code></h3>
+</div>
+
+<div id="outline-container-orga8fb622" class="outline-3">
+<h3 id="orga8fb622"><span class="section-number-3">4.3.</span> Código del Script</h3>
+<div class="outline-text-3" id="text-4-3">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">vuln_scanner.sh - Esc&#225;ner de Vulnerabilidades del Sistema</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Autor: Security Audit Team</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Versi&#243;n: 2.3</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Descripci&#243;n: Escanea vulnerabilidades y configuraciones inseguras</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Configuraci&#243;n</span>
+<span style="color: #1857a4;">REPORT_FILE</span>=<span style="color: #a44185;">"/tmp/vulnerability_scan_$(</span><span style="color: #219fd5; font-weight: bold;">date +%Y%m%d_%H%M%S</span><span style="color: #a44185;">).txt"</span>
+<span style="color: #1857a4;">CRITICAL_COUNT</span>=0
+<span style="color: #1857a4;">HIGH_COUNT</span>=0
+<span style="color: #1857a4;">MEDIUM_COUNT</span>=0
+<span style="color: #1857a4;">LOW_COUNT</span>=0
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Colores para output</span>
+<span style="color: #1857a4;">RED</span>=<span style="color: #a44185;">'\033[0;31m'</span>
+<span style="color: #1857a4;">YELLOW</span>=<span style="color: #a44185;">'\033[1;33m'</span>
+<span style="color: #1857a4;">GREEN</span>=<span style="color: #a44185;">'\033[0;32m'</span>
+<span style="color: #1857a4;">BLUE</span>=<span style="color: #a44185;">'\033[0;34m'</span>
+<span style="color: #1857a4;">NC</span>=<span style="color: #a44185;">'\033[0m'</span> <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">No Color</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Funci&#243;n para logging con niveles</span>
+<span style="color: #dc3eb7;">log_vulnerability</span>() {
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">level</span>=<span style="color: #a44185;">"$1"</span>
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">description</span>=<span style="color: #a44185;">"$2"</span>
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">details</span>=<span style="color: #a44185;">"$3"</span>
+
+    <span style="color: #219fd5; font-style: italic;">case</span> $<span style="color: #1857a4;">level</span><span style="color: #219fd5; font-style: italic;"> in</span>
+        <span style="color: #a44185;">"CRITICAL"</span>)
+            <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${RED}[CR&#205;TICO]${NC} $description"</span> | tee -a <span style="color: #a44185;">"$REPORT_FILE"</span>
+            ((CRITICAL_COUNT++))
+            ;;
+        <span style="color: #a44185;">"HIGH"</span>)
+            <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${RED}[ALTO]${NC} $description"</span> | tee -a <span style="color: #a44185;">"$REPORT_FILE"</span>
+            ((HIGH_COUNT++))
+            ;;
+        <span style="color: #a44185;">"MEDIUM"</span>)
+            <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${YELLOW}[MEDIO]${NC} $description"</span> | tee -a <span style="color: #a44185;">"$REPORT_FILE"</span>
+            ((MEDIUM_COUNT++))
+            ;;
+        <span style="color: #a44185;">"LOW"</span>)
+            <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${BLUE}[BAJO]${NC} $description"</span> | tee -a <span style="color: #a44185;">"$REPORT_FILE"</span>
+            ((LOW_COUNT++))
+            ;;
+    <span style="color: #219fd5; font-style: italic;">esac</span>
+
+    <span style="color: #219fd5; font-style: italic;">if</span> [ -n <span style="color: #a44185;">"$details"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"    Detalles: $details"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar configuraci&#243;n de SSH</span>
+<span style="color: #dc3eb7;">check_ssh_config</span>() {
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}Verificando configuraci&#243;n SSH...${NC}"</span>
+
+    <span style="color: #219fd5; font-style: italic;">if</span> [ -f <span style="color: #a44185;">"/etc/ssh/sshd_config"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar root login</span>
+        <span style="color: #219fd5; font-style: italic;">if</span> grep -q <span style="color: #a44185;">"^PermitRootLogin yes"</span> /etc/ssh/sshd_config; <span style="color: #219fd5; font-style: italic;">then</span>
+            log_vulnerability <span style="color: #a44185;">"HIGH"</span> <span style="color: #a44185;">"SSH permite login directo como root"</span> <span style="color: #a44185;">\</span>
+                <span style="color: #a44185;">"Cambiar 'PermitRootLogin' a 'no' en /etc/ssh/sshd_config"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar autenticaci&#243;n por contrase&#241;a</span>
+        <span style="color: #219fd5; font-style: italic;">if</span> grep -q <span style="color: #a44185;">"^PasswordAuthentication yes"</span> /etc/ssh/sshd_config; <span style="color: #219fd5; font-style: italic;">then</span>
+            log_vulnerability <span style="color: #a44185;">"MEDIUM"</span> <span style="color: #a44185;">"SSH permite autenticaci&#243;n por contrase&#241;a"</span> <span style="color: #a44185;">\</span>
+                <span style="color: #a44185;">"Considerar usar solo autenticaci&#243;n por clave p&#250;blica"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar protocolo SSH</span>
+        <span style="color: #219fd5; font-style: italic;">if</span> <span style="color: #219fd5; font-weight: bold;">!</span> grep -q <span style="color: #a44185;">"^Protocol 2"</span> /etc/ssh/sshd_config; <span style="color: #219fd5; font-style: italic;">then</span>
+            log_vulnerability <span style="color: #a44185;">"HIGH"</span> <span style="color: #a44185;">"SSH no est&#225; configurado espec&#237;ficamente para protocolo 2"</span> <span style="color: #a44185;">\</span>
+                <span style="color: #a44185;">"Agregar 'Protocol 2' en /etc/ssh/sshd_config"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar puerto por defecto</span>
+        <span style="color: #219fd5; font-style: italic;">if</span> grep -q <span style="color: #a44185;">"^Port 22"</span> /etc/ssh/sshd_config || <span style="color: #219fd5; font-weight: bold;">!</span> grep -q <span style="color: #a44185;">"^Port"</span> /etc/ssh/sshd_config; <span style="color: #219fd5; font-style: italic;">then</span>
+            log_vulnerability <span style="color: #a44185;">"LOW"</span> <span style="color: #a44185;">"SSH usando puerto por defecto (22)"</span> <span style="color: #a44185;">\</span>
+                <span style="color: #a44185;">"Considerar cambiar el puerto SSH"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">else</span>
+        log_vulnerability <span style="color: #a44185;">"LOW"</span> <span style="color: #a44185;">"Archivo de configuraci&#243;n SSH no encontrado"</span> <span style="color: #a44185;">""</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar usuarios y permisos</span>
+<span style="color: #dc3eb7;">check_users_permissions</span>() {
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}Verificando usuarios y permisos...${NC}"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Usuarios con UID 0</span>
+    <span style="color: #dc3eb7;">local</span> root_users
+    <span style="color: #1857a4;">root_users</span>=$(<span style="color: #219fd5; font-weight: bold;">awk -F: '$3 == 0 {print $1}' /etc/passwd | grep -v "^root$"</span>)
+    <span style="color: #219fd5; font-style: italic;">if</span> [ -n <span style="color: #a44185;">"$root_users"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        log_vulnerability <span style="color: #a44185;">"CRITICAL"</span> <span style="color: #a44185;">"Usuarios adicionales con UID 0 detectados"</span> <span style="color: #a44185;">\</span>
+            <span style="color: #a44185;">"Usuarios: $root_users"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Usuarios sin contrase&#241;a</span>
+    <span style="color: #dc3eb7;">local</span> no_passwd_users
+    <span style="color: #1857a4;">no_passwd_users</span>=$(<span style="color: #219fd5; font-weight: bold;">awk -F: '$2 == "" {print $1}' /etc/shadow 2&gt;/dev/null</span>)
+    <span style="color: #219fd5; font-style: italic;">if</span> [ -n <span style="color: #a44185;">"$no_passwd_users"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        log_vulnerability <span style="color: #a44185;">"CRITICAL"</span> <span style="color: #a44185;">"Usuarios sin contrase&#241;a detectados"</span> <span style="color: #a44185;">\</span>
+            <span style="color: #a44185;">"Usuarios: $no_passwd_users"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Archivos con permisos 777</span>
+    <span style="color: #dc3eb7;">local</span> world_writable
+    <span style="color: #1857a4;">world_writable</span>=$(<span style="color: #219fd5; font-weight: bold;">find /etc /bin /sbin /usr/bin /usr/sbin -type f -perm -002 2&gt;/dev/null | head -10</span>)
+    <span style="color: #219fd5; font-style: italic;">if</span> [ -n <span style="color: #a44185;">"$world_writable"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        log_vulnerability <span style="color: #a44185;">"HIGH"</span> <span style="color: #a44185;">"Archivos cr&#237;ticos con permisos de escritura mundial"</span> <span style="color: #a44185;">\</span>
+            <span style="color: #a44185;">"$(</span><span style="color: #219fd5; font-weight: bold;">echo "$world_writable" | tr '\n' ' '</span><span style="color: #a44185;">)"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar sudo sin contrase&#241;a</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> grep -q <span style="color: #a44185;">"NOPASSWD"</span> /etc/sudoers 2&gt;/dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+        log_vulnerability <span style="color: #a44185;">"MEDIUM"</span> <span style="color: #a44185;">"Configuraci&#243;n sudo sin contrase&#241;a detectada"</span> <span style="color: #a44185;">\</span>
+            <span style="color: #a44185;">"Revisar configuraci&#243;n en /etc/sudoers"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar servicios y puertos</span>
+<span style="color: #dc3eb7;">check_services_ports</span>() {
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}Verificando servicios y puertos...${NC}"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Servicios innecesarios comunes</span>
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">unnecessary_services</span>=(<span style="color: #a44185;">"telnet"</span> <span style="color: #a44185;">"rsh"</span> <span style="color: #a44185;">"rlogin"</span> <span style="color: #a44185;">"ftp"</span> <span style="color: #a44185;">"tftp"</span>)
+
+    <span style="color: #219fd5; font-style: italic;">for</span> service<span style="color: #219fd5; font-style: italic;"> in</span> <span style="color: #a44185;">"${unnecessary_services[@]}"</span>; <span style="color: #219fd5; font-style: italic;">do</span>
+        <span style="color: #219fd5; font-style: italic;">if</span> systemctl is-active --quiet <span style="color: #a44185;">"$service"</span> 2&gt;/dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+            log_vulnerability <span style="color: #a44185;">"HIGH"</span> <span style="color: #a44185;">"Servicio inseguro activo: $service"</span> <span style="color: #a44185;">\</span>
+                <span style="color: #a44185;">"Considerar deshabilitar con: systemctl disable $service"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">done</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Puertos abiertos sospechosos</span>
+    <span style="color: #dc3eb7;">local</span> open_ports
+    <span style="color: #1857a4;">open_ports</span>=$(<span style="color: #219fd5; font-weight: bold;">ss -tuln | grep LISTEN | awk '{print $5}' | cut -d: -f2 | sort -n | uniq</span>)
+
+    <span style="color: #219fd5; font-style: italic;">for</span> port<span style="color: #219fd5; font-style: italic;"> in</span> $<span style="color: #1857a4;">open_ports</span>; <span style="color: #219fd5; font-style: italic;">do</span>
+        <span style="color: #219fd5; font-style: italic;">case</span> $<span style="color: #1857a4;">port</span><span style="color: #219fd5; font-style: italic;"> in</span>
+            23) log_vulnerability <span style="color: #a44185;">"HIGH"</span> <span style="color: #a44185;">"Puerto Telnet (23) abierto"</span> <span style="color: #a44185;">"Servicio inseguro"</span> ;;
+            69) log_vulnerability <span style="color: #a44185;">"HIGH"</span> <span style="color: #a44185;">"Puerto TFTP (69) abierto"</span> <span style="color: #a44185;">"Servicio inseguro"</span> ;;
+            135|139|445) log_vulnerability <span style="color: #a44185;">"MEDIUM"</span> <span style="color: #a44185;">"Puerto SMB/NetBIOS ($port) abierto"</span> <span style="color: #a44185;">"Revisar necesidad"</span> ;;
+            1433|3306|5432) log_vulnerability <span style="color: #a44185;">"MEDIUM"</span> <span style="color: #a44185;">"Puerto de base de datos ($port) abierto"</span> <span style="color: #a44185;">"Verificar acceso remoto"</span> ;;
+        <span style="color: #219fd5; font-style: italic;">esac</span>
+    <span style="color: #219fd5; font-style: italic;">done</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar actualizaciones del sistema</span>
+<span style="color: #dc3eb7;">check_system_updates</span>() {
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}Verificando actualizaciones del sistema...${NC}"</span>
+
+    <span style="color: #219fd5; font-style: italic;">if </span><span style="color: #dc3eb7;">command</span> -v apt &amp;&gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Debian/Ubuntu</span>
+        apt list --upgradable 2&gt;/dev/null | grep -c <span style="color: #a44185;">"upgradable"</span> &gt; /tmp/update_count
+        <span style="color: #dc3eb7;">local</span> update_count
+        <span style="color: #1857a4;">update_count</span>=$(<span style="color: #219fd5; font-weight: bold;">cat /tmp/update_count</span>)
+
+        <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$update_count"</span> -gt 50 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+            log_vulnerability <span style="color: #a44185;">"HIGH"</span> <span style="color: #a44185;">"$update_count actualizaciones pendientes"</span> <span style="color: #a44185;">\</span>
+                <span style="color: #a44185;">"Ejecutar: apt update &amp;&amp; apt upgrade"</span>
+        <span style="color: #219fd5; font-style: italic;">elif</span> [ <span style="color: #a44185;">"$update_count"</span> -gt 10 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+            log_vulnerability <span style="color: #a44185;">"MEDIUM"</span> <span style="color: #a44185;">"$update_count actualizaciones pendientes"</span> <span style="color: #a44185;">\</span>
+                <span style="color: #a44185;">"Ejecutar: apt update &amp;&amp; apt upgrade"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar actualizaciones de seguridad</span>
+        <span style="color: #dc3eb7;">local</span> security_updates
+        <span style="color: #1857a4;">security_updates</span>=$(<span style="color: #219fd5; font-weight: bold;">apt list --upgradable 2&gt;/dev/null | grep -i security | wc -l</span>)
+        <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$security_updates"</span> -gt 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+            log_vulnerability <span style="color: #a44185;">"HIGH"</span> <span style="color: #a44185;">"$security_updates actualizaciones de seguridad pendientes"</span> <span style="color: #a44185;">\</span>
+                <span style="color: #a44185;">"Instalar inmediatamente"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #219fd5; font-style: italic;">elif </span><span style="color: #dc3eb7;">command</span> -v yum &amp;&gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">CentOS/RHEL</span>
+        <span style="color: #dc3eb7;">local</span> update_count
+        <span style="color: #1857a4;">update_count</span>=$(<span style="color: #219fd5; font-weight: bold;">yum check-update 2&gt;/dev/null | grep -c "updates"</span>)
+
+        <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$update_count"</span> -gt 50 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+            log_vulnerability <span style="color: #a44185;">"HIGH"</span> <span style="color: #a44185;">"$update_count actualizaciones pendientes"</span> <span style="color: #a44185;">\</span>
+                <span style="color: #a44185;">"Ejecutar: yum update"</span>
+        <span style="color: #219fd5; font-style: italic;">elif</span> [ <span style="color: #a44185;">"$update_count"</span> -gt 10 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+            log_vulnerability <span style="color: #a44185;">"MEDIUM"</span> <span style="color: #a44185;">"$update_count actualizaciones pendientes"</span> <span style="color: #a44185;">\</span>
+                <span style="color: #a44185;">"Ejecutar: yum update"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar configuraci&#243;n del firewall</span>
+<span style="color: #dc3eb7;">check_firewall_config</span>() {
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}Verificando configuraci&#243;n del firewall...${NC}"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">UFW</span>
+    <span style="color: #219fd5; font-style: italic;">if </span><span style="color: #dc3eb7;">command</span> -v ufw &amp;&gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">local</span> ufw_status
+        <span style="color: #1857a4;">ufw_status</span>=$(<span style="color: #219fd5; font-weight: bold;">ufw status | grep "Status:" | awk '{print $2}'</span>)
+
+        <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$ufw_status"</span> = <span style="color: #a44185;">"inactive"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+            log_vulnerability <span style="color: #a44185;">"HIGH"</span> <span style="color: #a44185;">"Firewall UFW desactivado"</span> <span style="color: #a44185;">\</span>
+                <span style="color: #a44185;">"Activar con: ufw enable"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">iptables</span>
+    <span style="color: #dc3eb7;">local</span> iptables_rules
+    <span style="color: #1857a4;">iptables_rules</span>=$(<span style="color: #219fd5; font-weight: bold;">iptables -L | grep -c "Chain"</span>)
+
+    <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$iptables_rules"</span> -lt 3 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        log_vulnerability <span style="color: #a44185;">"MEDIUM"</span> <span style="color: #a44185;">"Reglas de iptables m&#237;nimas o inexistentes"</span> <span style="color: #a44185;">\</span>
+            <span style="color: #a44185;">"Configurar reglas de firewall apropiadas"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar pol&#237;ticas por defecto</span>
+    <span style="color: #dc3eb7;">local</span> default_policy
+    <span style="color: #1857a4;">default_policy</span>=$(<span style="color: #219fd5; font-weight: bold;">iptables -L | grep "policy ACCEPT" | wc -l</span>)
+
+    <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$default_policy"</span> -gt 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        log_vulnerability <span style="color: #a44185;">"MEDIUM"</span> <span style="color: #a44185;">"Pol&#237;ticas de firewall permisivas detectadas"</span> <span style="color: #a44185;">\</span>
+            <span style="color: #a44185;">"Revisar pol&#237;ticas por defecto"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar logs y auditor&#237;a</span>
+<span style="color: #dc3eb7;">check_logging_audit</span>() {
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}Verificando configuraci&#243;n de logs y auditor&#237;a...${NC}"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar syslog</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> <span style="color: #219fd5; font-weight: bold;">!</span> systemctl is-active --quiet rsyslog; <span style="color: #219fd5; font-style: italic;">then</span>
+        log_vulnerability <span style="color: #a44185;">"MEDIUM"</span> <span style="color: #a44185;">"Servicio rsyslog no est&#225; activo"</span> <span style="color: #a44185;">\</span>
+            <span style="color: #a44185;">"Activar con: systemctl enable rsyslog"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar auditd</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> <span style="color: #219fd5; font-weight: bold;">!</span> systemctl is-active --quiet auditd 2&gt;/dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+        log_vulnerability <span style="color: #a44185;">"LOW"</span> <span style="color: #a44185;">"Sistema de auditor&#237;a (auditd) no est&#225; activo"</span> <span style="color: #a44185;">\</span>
+            <span style="color: #a44185;">"Instalar y configurar auditd"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar rotaci&#243;n de logs</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #219fd5; font-weight: bold;">!</span> -f <span style="color: #a44185;">"/etc/logrotate.conf"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        log_vulnerability <span style="color: #a44185;">"MEDIUM"</span> <span style="color: #a44185;">"Configuraci&#243;n de rotaci&#243;n de logs no encontrada"</span> <span style="color: #a44185;">\</span>
+            <span style="color: #a44185;">"Configurar logrotate"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar configuraciones de seguridad del kernel</span>
+<span style="color: #dc3eb7;">check_kernel_security</span>() {
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}Verificando configuraciones de seguridad del kernel...${NC}"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar ASLR</span>
+    <span style="color: #dc3eb7;">local</span> aslr_status
+    <span style="color: #1857a4;">aslr_status</span>=$(<span style="color: #219fd5; font-weight: bold;">cat /proc/sys/kernel/randomize_va_space 2&gt;/dev/null</span>)
+
+    <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$aslr_status"</span> != <span style="color: #a44185;">"2"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        log_vulnerability <span style="color: #a44185;">"MEDIUM"</span> <span style="color: #a44185;">"ASLR no est&#225; completamente habilitado"</span> <span style="color: #a44185;">\</span>
+            <span style="color: #a44185;">"Configurar kernel.randomize_va_space = 2"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar protecci&#243;n exec-shield</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [ -f <span style="color: #a44185;">"/proc/sys/kernel/exec-shield"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">local</span> exec_shield
+        <span style="color: #1857a4;">exec_shield</span>=$(<span style="color: #219fd5; font-weight: bold;">cat /proc/sys/kernel/exec-shield</span>)
+        <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$exec_shield"</span> != <span style="color: #a44185;">"1"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+            log_vulnerability <span style="color: #a44185;">"LOW"</span> <span style="color: #a44185;">"Exec-shield no est&#225; habilitado"</span> <span style="color: #a44185;">\</span>
+                <span style="color: #a44185;">"Habilitar exec-shield"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar control de acceso obligatorio (SELinux/AppArmor)</span>
+    <span style="color: #219fd5; font-style: italic;">if </span><span style="color: #dc3eb7;">command</span> -v getenforce &amp;&gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">local</span> selinux_status
+        <span style="color: #1857a4;">selinux_status</span>=$(<span style="color: #219fd5; font-weight: bold;">getenforce</span>)
+        <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$selinux_status"</span> = <span style="color: #a44185;">"Disabled"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+            log_vulnerability <span style="color: #a44185;">"MEDIUM"</span> <span style="color: #a44185;">"SELinux est&#225; deshabilitado"</span> <span style="color: #a44185;">\</span>
+                <span style="color: #a44185;">"Considerar habilitar SELinux"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">elif </span><span style="color: #dc3eb7;">command</span> -v aa-status &amp;&gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #219fd5; font-style: italic;">if</span> <span style="color: #219fd5; font-weight: bold;">!</span> aa-status &amp;&gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+            log_vulnerability <span style="color: #a44185;">"MEDIUM"</span> <span style="color: #a44185;">"AppArmor no est&#225; activo"</span> <span style="color: #a44185;">\</span>
+                <span style="color: #a44185;">"Verificar estado de AppArmor"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">else</span>
+        log_vulnerability <span style="color: #a44185;">"LOW"</span> <span style="color: #a44185;">"No se detect&#243; sistema de control de acceso obligatorio"</span> <span style="color: #a44185;">\</span>
+            <span style="color: #a44185;">"Considerar instalar SELinux o AppArmor"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar archivos de configuraci&#243;n cr&#237;ticos</span>
+<span style="color: #dc3eb7;">check_critical_files</span>() {
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}Verificando archivos de configuraci&#243;n cr&#237;ticos...${NC}"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar permisos de archivos sensibles</span>
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">critical_files</span>=(
+        <span style="color: #a44185;">"/etc/passwd:644"</span>
+        <span style="color: #a44185;">"/etc/shadow:640"</span>
+        <span style="color: #a44185;">"/etc/group:644"</span>
+        <span style="color: #a44185;">"/etc/gshadow:640"</span>
+        <span style="color: #a44185;">"/etc/sudoers:440"</span>
+    )
+
+    <span style="color: #219fd5; font-style: italic;">for</span> file_perm<span style="color: #219fd5; font-style: italic;"> in</span> <span style="color: #a44185;">"${critical_files[@]}"</span>; <span style="color: #219fd5; font-style: italic;">do</span>
+        <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">file</span>=<span style="color: #a44185;">"${file_perm%:*}"</span>
+        <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">expected_perm</span>=<span style="color: #a44185;">"${file_perm#*:}"</span>
+
+        <span style="color: #219fd5; font-style: italic;">if</span> [ -f <span style="color: #a44185;">"$file"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+            <span style="color: #dc3eb7;">local</span> actual_perm
+            <span style="color: #1857a4;">actual_perm</span>=$(<span style="color: #219fd5; font-weight: bold;">stat -c "%a" "$file"</span>)
+
+            <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$actual_perm"</span> != <span style="color: #a44185;">"$expected_perm"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+                log_vulnerability <span style="color: #a44185;">"HIGH"</span> <span style="color: #a44185;">"Permisos incorrectos en $file"</span> <span style="color: #a44185;">\</span>
+                    <span style="color: #a44185;">"Actual: $actual_perm, Esperado: $expected_perm"</span>
+            <span style="color: #219fd5; font-style: italic;">fi</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">done</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar archivos de configuraci&#243;n backup</span>
+    <span style="color: #dc3eb7;">local</span> backup_files
+    <span style="color: #1857a4;">backup_files</span>=$(<span style="color: #219fd5; font-weight: bold;">find /etc -name "*.bak" -o -name "*.old" -o -name "*~" 2&gt;/dev/null</span>)
+
+    <span style="color: #219fd5; font-style: italic;">if</span> [ -n <span style="color: #a44185;">"$backup_files"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        log_vulnerability <span style="color: #a44185;">"LOW"</span> <span style="color: #a44185;">"Archivos de respaldo encontrados en /etc"</span> <span style="color: #a44185;">\</span>
+            <span style="color: #a44185;">"$(</span><span style="color: #219fd5; font-weight: bold;">echo "$backup_files" | head -5 | tr '\n' ' '</span><span style="color: #a44185;">)"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar configuraci&#243;n de red</span>
+<span style="color: #dc3eb7;">check_network_security</span>() {
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}Verificando configuraci&#243;n de seguridad de red...${NC}"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar IP forwarding</span>
+    <span style="color: #dc3eb7;">local</span> ip_forward
+    <span style="color: #1857a4;">ip_forward</span>=$(<span style="color: #219fd5; font-weight: bold;">cat /proc/sys/net/ipv4/ip_forward</span>)
+
+    <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$ip_forward"</span> = <span style="color: #a44185;">"1"</span> ] &amp;&amp; <span style="color: #219fd5; font-weight: bold;">!</span> grep -q <span style="color: #a44185;">"router\|gateway"</span> /etc/hostname; <span style="color: #219fd5; font-style: italic;">then</span>
+        log_vulnerability <span style="color: #a44185;">"MEDIUM"</span> <span style="color: #a44185;">"IP forwarding habilitado"</span> <span style="color: #a44185;">\</span>
+            <span style="color: #a44185;">"Deshabilitar si no es necesario: echo 0 &gt; /proc/sys/net/ipv4/ip_forward"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar source routing</span>
+    <span style="color: #dc3eb7;">local</span> accept_source_route
+    <span style="color: #1857a4;">accept_source_route</span>=$(<span style="color: #219fd5; font-weight: bold;">cat /proc/sys/net/ipv4/conf/all/accept_source_route</span>)
+
+    <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$accept_source_route"</span> = <span style="color: #a44185;">"1"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        log_vulnerability <span style="color: #a44185;">"MEDIUM"</span> <span style="color: #a44185;">"Source routing habilitado"</span> <span style="color: #a44185;">\</span>
+            <span style="color: #a44185;">"Deshabilitar source routing"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar ICMP redirects</span>
+    <span style="color: #dc3eb7;">local</span> accept_redirects
+    <span style="color: #1857a4;">accept_redirects</span>=$(<span style="color: #219fd5; font-weight: bold;">cat /proc/sys/net/ipv4/conf/all/accept_redirects</span>)
+
+    <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$accept_redirects"</span> = <span style="color: #a44185;">"1"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        log_vulnerability <span style="color: #a44185;">"LOW"</span> <span style="color: #a44185;">"ICMP redirects habilitados"</span> <span style="color: #a44185;">\</span>
+            <span style="color: #a44185;">"Considerar deshabilitar ICMP redirects"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar software instalado</span>
+<span style="color: #dc3eb7;">check_installed_software</span>() {
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}Verificando software instalado...${NC}"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Software potencialmente peligroso</span>
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">risky_software</span>=(<span style="color: #a44185;">"netcat"</span> <span style="color: #a44185;">"ncat"</span> <span style="color: #a44185;">"socat"</span> <span style="color: #a44185;">"telnet-server"</span> <span style="color: #a44185;">"rsh-server"</span>)
+
+    <span style="color: #219fd5; font-style: italic;">for</span> software<span style="color: #219fd5; font-style: italic;"> in</span> <span style="color: #a44185;">"${risky_software[@]}"</span>; <span style="color: #219fd5; font-style: italic;">do</span>
+        <span style="color: #219fd5; font-style: italic;">if</span> dpkg -l <span style="color: #a44185;">"$software"</span> 2&gt;/dev/null | grep -q <span style="color: #a44185;">"^ii"</span>; <span style="color: #219fd5; font-style: italic;">then</span>
+            log_vulnerability <span style="color: #a44185;">"MEDIUM"</span> <span style="color: #a44185;">"Software potencialmente riesgoso instalado: $software"</span> <span style="color: #a44185;">\</span>
+                <span style="color: #a44185;">"Revisar necesidad y considerar desinstalar"</span>
+        <span style="color: #219fd5; font-style: italic;">elif</span> rpm -q <span style="color: #a44185;">"$software"</span> 2&gt;/dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+            log_vulnerability <span style="color: #a44185;">"MEDIUM"</span> <span style="color: #a44185;">"Software potencialmente riesgoso instalado: $software"</span> <span style="color: #a44185;">\</span>
+                <span style="color: #a44185;">"Revisar necesidad y considerar desinstalar"</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">done</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar compiladores (en servidores de producci&#243;n)</span>
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">compilers</span>=(<span style="color: #a44185;">"gcc"</span> <span style="color: #a44185;">"g++"</span> <span style="color: #a44185;">"make"</span> <span style="color: #a44185;">"cmake"</span>)
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">compiler_found</span>=false
+
+    <span style="color: #219fd5; font-style: italic;">for</span> compiler<span style="color: #219fd5; font-style: italic;"> in</span> <span style="color: #a44185;">"${compilers[@]}"</span>; <span style="color: #219fd5; font-style: italic;">do</span>
+        <span style="color: #219fd5; font-style: italic;">if </span><span style="color: #dc3eb7;">command</span> -v <span style="color: #a44185;">"$compiler"</span> &amp;&gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+            <span style="color: #1857a4;">compiler_found</span>=true
+            <span style="color: #219fd5; font-style: italic;">break</span>
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">done</span>
+
+    <span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #a44185;">"$compiler_found"</span> = true ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        log_vulnerability <span style="color: #a44185;">"LOW"</span> <span style="color: #a44185;">"Compiladores encontrados en el sistema"</span> <span style="color: #a44185;">\</span>
+            <span style="color: #a44185;">"En servidores de producci&#243;n, considerar remover herramientas de desarrollo"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generar reporte final</span>
+<span style="color: #dc3eb7;">generate_final_report</span>() {
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"========================================"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"RESUMEN DE VULNERABILIDADES ENCONTRADAS"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"========================================"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Cr&#237;ticas: $CRITICAL_COUNT"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Altas: $HIGH_COUNT"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Medias: $MEDIUM_COUNT"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Bajas: $LOW_COUNT"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Total: $(</span><span style="color: #219fd5; font-weight: bold;">(CRITICAL_COUNT + HIGH_COUNT + MEDIUM_COUNT + LOW_COUNT</span><span style="color: #a44185;">))"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Calcular score de seguridad</span>
+    <span style="color: #dc3eb7;">local</span> security_score
+    <span style="color: #1857a4;">security_score</span>=$(<span style="color: #219fd5; font-weight: bold;">(100 - (CRITICAL_COUNT * 25</span>) - (HIGH_COUNT * 10) - (MEDIUM_COUNT * 5) - (LOW_COUNT * 1)))
+
+    <span style="color: #219fd5; font-style: italic;">if</span> [ $<span style="color: #1857a4;">security_score</span> -lt 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #1857a4;">security_score</span>=0
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Score de Seguridad: $security_score/100"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+
+    <span style="color: #219fd5; font-style: italic;">if</span> [ $<span style="color: #1857a4;">security_score</span> -ge 80 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Estado: BUENO"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #219fd5; font-style: italic;">elif</span> [ $<span style="color: #1857a4;">security_score</span> -ge 60 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Estado: REGULAR - Requiere atenci&#243;n"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #219fd5; font-style: italic;">else</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Estado: CR&#205;TICO - Requiere acci&#243;n inmediata"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Fecha del escaneo: $(</span><span style="color: #219fd5; font-weight: bold;">date</span><span style="color: #a44185;">)"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Sistema: $(</span><span style="color: #219fd5; font-weight: bold;">uname -a</span><span style="color: #a44185;">)"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Hostname: $(</span><span style="color: #219fd5; font-weight: bold;">hostname</span><span style="color: #a44185;">)"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Funci&#243;n principal</span>
+<span style="color: #dc3eb7;">main</span>() {
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}===========================================${NC}"</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}    ESC&#193;NER DE VULNERABILIDADES v2.3     ${NC}"</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}===========================================${NC}"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear encabezado del reporte</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"REPORTE DE VULNERABILIDADES"</span> &gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"============================"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Fecha: $(</span><span style="color: #219fd5; font-weight: bold;">date</span><span style="color: #a44185;">)"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Sistema: $(</span><span style="color: #219fd5; font-weight: bold;">uname -a</span><span style="color: #a44185;">)"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Hostname: $(</span><span style="color: #219fd5; font-weight: bold;">hostname</span><span style="color: #a44185;">)"</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span> &gt;&gt; <span style="color: #a44185;">"$REPORT_FILE"</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar verificaciones</span>
+    check_ssh_config
+    check_users_permissions
+    check_services_ports
+    check_system_updates
+    check_firewall_config
+    check_logging_audit
+    check_kernel_security
+    check_critical_files
+    check_network_security
+    check_installed_software
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Generar reporte final</span>
+    generate_final_report
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Mostrar resumen</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}===========================================${NC}"</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}            RESUMEN FINAL                  ${NC}"</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}===========================================${NC}"</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"Vulnerabilidades ${RED}CR&#205;TICAS${NC}: $CRITICAL_COUNT"</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"Vulnerabilidades ${RED}ALTAS${NC}: $HIGH_COUNT"</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"Vulnerabilidades ${YELLOW}MEDIAS${NC}: $MEDIUM_COUNT"</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"Vulnerabilidades ${BLUE}BAJAS${NC}: $LOW_COUNT"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span>
+    <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"Reporte completo guardado en: ${GREEN}$REPORT_FILE${NC}"</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">""</span>
+
+    <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Mostrar recomendaciones prioritarias</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [ $<span style="color: #1857a4;">CRITICAL_COUNT</span> -gt 0 ] || [ $<span style="color: #1857a4;">HIGH_COUNT</span> -gt 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${RED}&#9888;&#65039;  ATENCI&#211;N: Se encontraron vulnerabilidades cr&#237;ticas o altas${NC}"</span>
+        <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${RED}   Revisar el reporte y tomar medidas correctivas inmediatamente${NC}"</span>
+    <span style="color: #219fd5; font-style: italic;">elif</span> [ $<span style="color: #1857a4;">MEDIUM_COUNT</span> -gt 5 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${YELLOW}&#9888;&#65039;  ADVERTENCIA: M&#250;ltiples vulnerabilidades de nivel medio${NC}"</span>
+        <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${YELLOW}   Se recomienda revisar y corregir en el pr&#243;ximo mantenimiento${NC}"</span>
+    <span style="color: #219fd5; font-style: italic;">else</span>
+        <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${GREEN}&#9989; Estado de seguridad: Aceptable${NC}"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar herramientas necesarias</span>
+<span style="color: #dc3eb7;">check_dependencies</span>() {
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">missing_tools</span>=()
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">tools</span>=(<span style="color: #a44185;">"awk"</span> <span style="color: #a44185;">"grep"</span> <span style="color: #a44185;">"find"</span> <span style="color: #a44185;">"stat"</span> <span style="color: #a44185;">"systemctl"</span>)
+
+    <span style="color: #219fd5; font-style: italic;">for</span> tool<span style="color: #219fd5; font-style: italic;"> in</span> <span style="color: #a44185;">"${tools[@]}"</span>; <span style="color: #219fd5; font-style: italic;">do</span>
+        <span style="color: #219fd5; font-style: italic;">if ! </span><span style="color: #dc3eb7;">command</span> -v <span style="color: #a44185;">"$tool"</span> &amp;&gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+            <span style="color: #1857a4;">missing_tools</span>+=(<span style="color: #a44185;">"$tool"</span>)
+        <span style="color: #219fd5; font-style: italic;">fi</span>
+    <span style="color: #219fd5; font-style: italic;">done</span>
+
+    <span style="color: #219fd5; font-style: italic;">if</span> [ ${#<span style="color: #1857a4;">missing_tools</span>[@]} -gt 0 ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">echo</span> -e <span style="color: #a44185;">"${RED}Error: Herramientas faltantes: ${missing_tools[*]}${NC}"</span>
+        <span style="color: #219fd5; font-style: italic;">exit</span> 1
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+}
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar dependencias y ejecutar</span>
+check_dependencies
+main <span style="color: #a44185;">"$@"</span>
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org5034095" class="outline-3">
+<h3 id="org5034095"><span class="section-number-3">4.4.</span> Instalación y Configuración</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-orgb811e14" class="outline-4">
+<h4 id="orgb811e14"><span class="section-number-4">4.4.1.</span> Paso 1: Instalación del script</h4>
+<div class="outline-text-4" id="text-4-4-1">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear el archivo del script</span>
+sudo nano /usr/local/bin/vuln_scanner.sh
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Copiar el c&#243;digo y guardar</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Hacer ejecutable</span>
+sudo chmod +x /usr/local/bin/vuln_scanner.sh
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6e0089d" class="outline-4">
+<h4 id="org6e0089d"><span class="section-number-4">4.4.2.</span> Paso 2: Ejecución básica</h4>
+<div class="outline-text-4" id="text-4-4-2">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar escaneo completo</span>
+sudo /usr/local/bin/vuln_scanner.sh
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ver el reporte generado</span>
+cat /tmp/vulnerability_scan_*.txt
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfb0ab1e" class="outline-4">
+<h4 id="orgfb0ab1e"><span class="section-number-4">4.4.3.</span> Paso 3: Automatización (recomendado semanal)</h4>
+<div class="outline-text-4" id="text-4-4-3">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Agregar a cron para ejecuci&#243;n semanal</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"0 2 * * 0 /usr/local/bin/vuln_scanner.sh"</span> | sudo crontab -
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear script para env&#237;o de reportes por email</span>
+cat &gt; /usr/local/bin/send_vuln_report.sh &lt;&lt; <span style="color: #a44185;">'EOF'</span>
+<span style="color: #a44185;">#!/bin/bash</span>
+<span style="color: #a44185;">REPORT=$(</span><span style="color: #219fd5; font-weight: bold;">ls -t /tmp/vulnerability_scan_*.txt | head -1</span><span style="color: #a44185;">)</span>
+<span style="color: #a44185;">if [ -f "$REPORT" ]; then</span>
+<span style="color: #a44185;">    mail -s "Reporte de Vulnerabilidades - $(</span><span style="color: #219fd5; font-weight: bold;">hostname</span><span style="color: #a44185;">)" admin@empresa.com &lt; "$REPORT"</span>
+<span style="color: #a44185;">fi</span>
+<span style="color: #a44185;">EOF</span>
+
+sudo chmod +x /usr/local/bin/send_vuln_report.sh
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1e51240" class="outline-3">
+<h3 id="org1e51240"><span class="section-number-3">4.5.</span> Ejemplos de Uso Avanzado</h3>
+<div class="outline-text-3" id="text-4-5">
+</div>
+<div id="outline-container-org21d7fdc" class="outline-4">
+<h4 id="org21d7fdc"><span class="section-number-4">4.5.1.</span> Escaneo específico por categoría</h4>
+<div class="outline-text-4" id="text-4-5-1">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Modificar el script para escaneos espec&#237;ficos</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejemplo: solo verificar SSH y usuarios</span>
+/usr/local/bin/vuln_scanner.sh --ssh --users
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc7fa275" class="outline-4">
+<h4 id="orgc7fa275"><span class="section-number-4">4.5.2.</span> Integración con otros sistemas</h4>
+<div class="outline-text-4" id="text-4-5-2">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Exportar resultados en formato JSON para SIEM</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Agregar funci&#243;n de exportaci&#243;n al script</span>
+<span style="color: #dc3eb7;">export_json</span>() {
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">json_file</span>=<span style="color: #a44185;">"/tmp/vulnerabilities.json"</span>
+    cat &gt; <span style="color: #a44185;">"$json_file"</span> &lt;&lt; EOF
+<span style="color: #a44185;">{</span>
+<span style="color: #a44185;">    "timestamp": "$(</span><span style="color: #219fd5; font-weight: bold;">date -Iseconds</span><span style="color: #a44185;">)",</span>
+<span style="color: #a44185;">    "hostname": "$(</span><span style="color: #219fd5; font-weight: bold;">hostname</span><span style="color: #a44185;">)",</span>
+<span style="color: #a44185;">    "vulnerabilities": {</span>
+<span style="color: #a44185;">        "critical": $CRITICAL_COUNT,</span>
+<span style="color: #a44185;">        "high": $HIGH_COUNT,</span>
+<span style="color: #a44185;">        "medium": $MEDIUM_COUNT,</span>
+<span style="color: #a44185;">        "low": $LOW_COUNT</span>
+<span style="color: #a44185;">    }</span>
+<span style="color: #a44185;">}</span>
+<span style="color: #a44185;">EOF</span>
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Reporte JSON: $json_file"</span>
+}
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org5152776" class="outline-2">
+<h2 id="org5152776"><span class="section-number-2">5.</span> Guía de Implementación y Mejores Prácticas</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org943e9be" class="outline-3">
+<h3 id="org943e9be"><span class="section-number-3">5.1.</span> Configuración Inicial del Entorno</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orgbd2e214" class="outline-4">
+<h4 id="orgbd2e214"><span class="section-number-4">5.1.1.</span> Preparación del sistema</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear estructura de directorios</span>
+sudo mkdir -p /var/log/security/{reports,alerts,scans}
+sudo mkdir -p /etc/security/scripts
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Configurar permisos</span>
+sudo chmod 750 /var/log/security
+sudo chown root:adm /var/log/security
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Instalar dependencias necesarias</span>
+sudo apt-get update
+sudo apt-get install -y mailutils bc netcat-openbsd
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org87fe2b8" class="outline-4">
+<h4 id="org87fe2b8"><span class="section-number-4">5.1.2.</span> Configuración de alertas</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Configurar postfix para alertas por email</span>
+sudo dpkg-reconfigure postfix
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Crear archivo de configuraci&#243;n de alertas</span>
+cat &gt; /etc/security/alert.conf &lt;&lt; <span style="color: #a44185;">'EOF'</span>
+<span style="color: #a44185;"># Configuraci&#243;n de alertas de seguridad</span>
+<span style="color: #a44185;">ALERT_EMAIL="security@empresa.com"</span>
+<span style="color: #a44185;">ALERT_THRESHOLD_CRITICAL=1</span>
+<span style="color: #a44185;">ALERT_THRESHOLD_HIGH=3</span>
+<span style="color: #a44185;">SEND_DAILY_REPORT=true</span>
+<span style="color: #a44185;">EOF</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org96f2845" class="outline-3">
+<h3 id="org96f2845"><span class="section-number-3">5.2.</span> Programación y Automatización</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-org9c15690" class="outline-4">
+<h4 id="org9c15690"><span class="section-number-4">5.2.1.</span> Script de orquestación</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">security_orchestrator.sh - Orquestador de scripts de seguridad</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar monitoreo cada 15 minutos</span>
+*/15 * * * * /usr/local/bin/security_monitor.sh
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar an&#225;lisis de logs diariamente a las 6 AM</span>
+0 6 * * * /usr/local/bin/log_analyzer.sh
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Ejecutar escaneo de vulnerabilidades semanalmente</span>
+0 2 * * 0 /usr/local/bin/vuln_scanner.sh
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Limpiar logs antiguos mensualmente</span>
+0 0 1 * * find /var/log/security -name <span style="color: #a44185;">"*.log"</span> -mtime +30 -delete
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org21b0f09" class="outline-3">
+<h3 id="org21b0f09"><span class="section-number-3">5.3.</span> Personalización y Extensión</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<div id="outline-container-orgb32584b" class="outline-4">
+<h4 id="orgb32584b"><span class="section-number-4">5.3.1.</span> Agregar nuevas verificaciones</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<p>
+Los scripts están diseñados para ser extensibles. Para agregar nuevas verificaciones:
+</p>
+
+<ol class="org-ol">
+<li><b><b>En security<sub>monitor.sh</sub></b></b>: Agregar nueva función `check<sub>nueva</sub><sub>verificacion</sub>()`</li>
+<li><b><b>En log<sub>analyzer.sh</sub></b></b>: Añadir patrones a `ATTACK<sub>PATTERNS</sub>`</li>
+<li><b><b>En vuln<sub>scanner.sh</sub></b></b>: Crear nueva función `check<sub>nueva</sub><sub>categoria</sub>()`</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgfbb09f6" class="outline-4">
+<h4 id="orgfbb09f6"><span class="section-number-4">5.3.2.</span> Integración con SIEM</h4>
+<div class="outline-text-4" id="text-5-3-2">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Funci&#243;n para enviar datos a SIEM</span>
+<span style="color: #dc3eb7;">send_to_siem</span>() {
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">event_data</span>=<span style="color: #a44185;">"$1"</span>
+    <span style="color: #dc3eb7;">local</span> <span style="color: #1857a4;">siem_endpoint</span>=<span style="color: #a44185;">"https://siem.empresa.com/api/events"</span>
+
+    curl -X POST <span style="color: #a44185;">"$siem_endpoint"</span> <span style="color: #a44185;">\</span>
+         -H <span style="color: #a44185;">"Content-Type: application/json"</span> <span style="color: #a44185;">\</span>
+         -H <span style="color: #a44185;">"Authorization: Bearer $SIEM_TOKEN"</span> <span style="color: #a44185;">\</span>
+         -d <span style="color: #a44185;">"$event_data"</span>
+}
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orga468a85" class="outline-3">
+<h3 id="orga468a85"><span class="section-number-3">5.4.</span> Mantenimiento y Monitoreo</h3>
+<div class="outline-text-3" id="text-5-4">
+</div>
+<div id="outline-container-orgfedd8f3" class="outline-4">
+<h4 id="orgfedd8f3"><span class="section-number-4">5.4.1.</span> Verificación de funcionamiento</h4>
+<div class="outline-text-4" id="text-5-4-1">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Script de verificaci&#243;n del estado de los scripts de seguridad</span>
+<span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/bash</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Verificando scripts de seguridad..."</span>
+
+<span style="color: #219fd5; font-style: italic;">for</span> script<span style="color: #219fd5; font-style: italic;"> in</span> security_monitor log_analyzer vuln_scanner; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> [ -x <span style="color: #a44185;">"/usr/local/bin/${script}.sh"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"&#9989; $script - OK"</span>
+    <span style="color: #219fd5; font-style: italic;">else</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"&#10060; $script - FALTA O NO EJECUTABLE"</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+<span style="color: #219fd5; font-style: italic;">done</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar logs recientes</span>
+<span style="color: #219fd5; font-style: italic;">if</span> [ -f <span style="color: #a44185;">"/var/log/security_monitor.log"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+    <span style="color: #1857a4;">last_entry</span>=$(<span style="color: #219fd5; font-weight: bold;">tail -1 /var/log/security_monitor.log | cut -d']' -f1 | tr -d '['</span>)
+    <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"&#218;ltimo monitoreo: $last_entry"</span>
+<span style="color: #219fd5; font-style: italic;">fi</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org4570eb8" class="outline-3">
+<h3 id="org4570eb8"><span class="section-number-3">5.5.</span> Consideraciones de Seguridad</h3>
+<div class="outline-text-3" id="text-5-5">
+</div>
+<div id="outline-container-org8fb5574" class="outline-4">
+<h4 id="org8fb5574"><span class="section-number-4">5.5.1.</span> Protección de los scripts</h4>
+<div class="outline-text-4" id="text-5-5-1">
+<ul class="org-ul">
+<li>Almacenar en ubicaciones seguras (`/usr/local/bin/`)</li>
+<li>Permisos restrictivos (755 para ejecución, 644 para configuración)</li>
+<li>Validar todas las entradas</li>
+<li>Usar rutas absolutas para comandos</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1596f00" class="outline-4">
+<h4 id="org1596f00"><span class="section-number-4">5.5.2.</span> Gestión de logs</h4>
+<div class="outline-text-4" id="text-5-5-2">
+<ul class="org-ul">
+<li>Rotación automática con `logrotate`</li>
+<li>Envío seguro a sistemas centralizados</li>
+<li>Encriptación de logs sensibles</li>
+<li>Retención según políticas de la organización</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orge2ccd66" class="outline-2">
+<h2 id="orge2ccd66"><span class="section-number-2">6.</span> Solución de Problemas Comunes</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgcd88c55" class="outline-3">
+<h3 id="orgcd88c55"><span class="section-number-3">6.1.</span> Problemas de Permisos</h3>
+<div class="outline-text-3" id="text-6-1">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Error: Permission denied</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Soluci&#243;n: Verificar permisos y ejecutar como root si es necesario</span>
+sudo chmod +x /usr/local/bin/script_name.sh
+sudo chown root:root /usr/local/bin/script_name.sh
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd4bf018" class="outline-3">
+<h3 id="orgd4bf018"><span class="section-number-3">6.2.</span> Problemas de Dependencias</h3>
+<div class="outline-text-3" id="text-6-2">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Error: command not found</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Soluci&#243;n: Instalar herramientas faltantes</span>
+sudo apt-get install -y bc netcat-openbsd mailutils
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Para CentOS/RHEL</span>
+sudo yum install -y bc nc mailx
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd59e3e7" class="outline-3">
+<h3 id="orgd59e3e7"><span class="section-number-3">6.3.</span> Problemas de Conectividad</h3>
+<div class="outline-text-3" id="text-6-3">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Error al enviar emails</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar configuraci&#243;n de MTA</span>
+systemctl status postfix
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">O configurar relay SMTP externo</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1925476" class="outline-2">
+<h2 id="org1925476"><span class="section-number-2">7.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Estos tres scripts proporcionan una base sólida para la monitorización y auditoría de seguridad en sistemas Linux. Cada script está diseñado para:
+</p>
+
+<ul class="org-ul">
+<li><b><b>Facilidad de uso</b></b>: Instalación y configuración simples</li>
+<li><b><b>Extensibilidad</b></b>: Fácil personalización y adición de nuevas funcionalidades</li>
+<li><b><b>Automatización</b></b>: Integración perfecta con cron y sistemas de monitoreo</li>
+<li><b><b>Reporting</b></b>: Generación de reportes detallados y alertas automáticas</li>
+</ul>
+
+<p>
+La implementación de estos scripts como parte de una estrategia integral de ciberseguridad ayudará a mantener los sistemas Linux seguros y detectar amenazas de manera proactiva.
+</p>
+</div>
+<div id="outline-container-orgbcc365e" class="outline-3">
+<h3 id="orgbcc365e"><span class="section-number-3">7.1.</span> Próximos Pasos Recomendados</h3>
+<div class="outline-text-3" id="text-7-1">
+<ol class="org-ol">
+<li>Implementar los scripts en un entorno de prueba</li>
+<li>Personalizar las configuraciones según las necesidades específicas</li>
+<li>Integrar con sistemas de monitoreo existentes</li>
+<li>Establecer procedimientos de respuesta a incidentes</li>
+<li>Capacitar al equipo en el uso y mantenimiento de los scripts</li>
+</ol>
+
+<p>
+&#x2014;
+<b>Mantener estos scripts actualizados y revisar periódicamente su efectividad es crucial para una seguridad óptima.</b>
+</p>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-security,.html">security,</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash,.html">bash,</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux,.html">linux,</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-monitoring,.html">monitoring,</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-intrusion-detection,.html">intrusion-detection,</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-log-analysis.html">log-analysis</a> </div>]]></description>
+  <category><![CDATA[security,]]></category>
+  <category><![CDATA[bash,]]></category>
+  <category><![CDATA[linux,]]></category>
+  <category><![CDATA[monitoring,]]></category>
+  <category><![CDATA[intrusion-detection,]]></category>
+  <category><![CDATA[log-analysis]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-26--scripts-de-ciberseguridad-en-bash-linux.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-26--scripts-de-ciberseguridad-en-bash-linux.html</guid>
+  <pubDate>Mon, 26 May 2025 12:30:00 +0200</pubDate>
+</item>
+</channel>
+</rss>
