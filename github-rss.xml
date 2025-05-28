@@ -4,13 +4,13 @@
 <title><![CDATA[Emacs con esteroides - github]]></title>
 <description><![CDATA[Emacs con esteroides - github]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-github.html</link>
-<lastBuildDate>Wed, 28 May 2025 13:52:50 +0200</lastBuildDate>
+<lastBuildDate>Thu, 29 May 2025 01:54:28 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Nace un blog complementario: "El Mapa y El Código"]]></title>
   <description><![CDATA[
-<div id="outline-container-org531f2fb" class="outline-2">
-<h2 id="org531f2fb">Un nuevo espacio con la misma energía</h2>
-<div class="outline-text-2" id="text-org531f2fb">
+<div id="outline-container-orge56ec87" class="outline-2">
+<h2 id="orge56ec87">Un nuevo espacio con la misma energía</h2>
+<div class="outline-text-2" id="text-orge56ec87">
 <p>
 Desde que inicié <b>Emacs con Esteroides</b>, he mantenido un principio claro: usar Emacs no solo como una herramienta, sino como un entorno completo para pensar, escribir, publicar y automatizar. Hoy quiero compartir con quienes siguen este blog una novedad que nace del mismo impulso creativo, la misma atención al detalle y el mismo amor por <b>Org Mode</b> y el flujo de trabajo con Git.
 </p>
@@ -22,19 +22,25 @@ Desde que inicié <b>Emacs con Esteroides</b>, he mantenido un principio claro: 
 <p>
 Este nuevo espacio, construido completamente en Emacs y Org Mode, está dedicado al análisis de temas geoestratégicos, geopolíticos y de relaciones de poder global. Si en <b>Emacs con Esteroides</b> exploramos el poder técnico y filosófico de Emacs, en <b>El Mapa y El Código</b> abordamos el poder en su dimensión política y territorial.
 </p>
+
+
+<figure id="orgefa9687">
+<a href="https://mcasrom.github.io/geo-ia/" width="800px"><img src="images/logoblog_backup.png" alt="logoblog_backup.png" width="800px"></a>
+
+</figure>
 </div>
 </div>
-<div id="outline-container-orgff04f92" class="outline-2">
-<h2 id="orgff04f92">¿Por qué otro blog?</h2>
-<div class="outline-text-2" id="text-orgff04f92">
+<div id="outline-container-orgab6a361" class="outline-2">
+<h2 id="orgab6a361">¿Por qué otro blog?</h2>
+<div class="outline-text-2" id="text-orgab6a361">
 <p>
 Aunque los dos blogs comparten la misma infraestructura (Emacs + Org + GitHub Pages), el contenido y enfoque de cada uno responde a distintas pasiones: la ingeniería del conocimiento y la ingeniería del mundo. Esta separación permite mantener la claridad temática sin dejar de aprovechar todo el ecosistema de Emacs para escribir, analizar y publicar.
 </p>
 </div>
 </div>
-<div id="outline-container-orgcef2e3d" class="outline-2">
-<h2 id="orgcef2e3d">¿Qué puedes esperar de <b>El Mapa y El Código</b>?</h2>
-<div class="outline-text-2" id="text-orgcef2e3d">
+<div id="outline-container-org83aed79" class="outline-2">
+<h2 id="org83aed79">¿Qué puedes esperar de <b>El Mapa y El Código</b>?</h2>
+<div class="outline-text-2" id="text-org83aed79">
 <ul class="org-ul">
 <li>Análisis actuales sobre conflictos, tensiones y alianzas globales.</li>
 <li>Diagramas en PlantUML y mapas conceptuales generados desde Org.</li>
@@ -43,9 +49,9 @@ Aunque los dos blogs comparten la misma infraestructura (Emacs + Org + GitHub Pa
 </ul>
 </div>
 </div>
-<div id="outline-container-org4ae2917" class="outline-2">
-<h2 id="org4ae2917">En resumen</h2>
-<div class="outline-text-2" id="text-org4ae2917">
+<div id="outline-container-org35ea8e8" class="outline-2">
+<h2 id="org35ea8e8">En resumen</h2>
+<div class="outline-text-2" id="text-org35ea8e8">
 <p>
 Si te interesa el uso avanzado de Emacs, <b>Emacs con Esteroides</b> seguirá siendo tu espacio. Pero si también te atrae el análisis geopolítico con una mirada técnica, crítica y libre, te invito a visitar y seguir:
 </p>
@@ -59,7 +65,7 @@ Espero sinceramente que este nuevo proyecto también sea de tu interés.
 </p>
 
 
-<figure id="org9df0acc">
+<figure id="org1f07328">
 <img src="images/blog-relacion-diagrama.png" alt="blog-relacion-diagrama.png">
 
 </figure>
