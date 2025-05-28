@@ -1,28 +1,284 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-<channel>
-<title><![CDATA[Emacs con esteroides - codigo_abierto]]></title>
-<description><![CDATA[Emacs con esteroides - codigo_abierto]]></description>
-<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-codigo_abierto.html</link>
-<lastBuildDate>Wed, 28 May 2025 13:34:45 +0200</lastBuildDate>
-<item>
-  <title><![CDATA[GitHub - De sus Orígenes a la Práctica]]></title>
-  <description><![CDATA[
-<div id="outline-container-org9ff21b6" class="outline-2">
-<h2 id="org9ff21b6">Introducción</h2>
-<div class="outline-text-2" id="text-org9ff21b6">
-<p>
-En el mundo del desarrollo moderno, GitHub se ha convertido en mucho más que un repositorio de código: es una plataforma donde las ideas crecen, los equipos colaboran y los proyectos se vuelven realidad.
-Pero si estás empezando, puede parecer intimidante: ramas, commits, pull requests… ¿por dónde se empieza?
-</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Un recorrido completo por GitHub, desde su historia hasta su implementación práctica">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>GitHub - De sus Orígenes a la Práctica</title>
+<meta property="og:title" content="GitHub - De sus Orígenes a la Práctica">
+<meta property="og:type" content="article" />
+<meta property="og:description" content="Un recorrido completo por GitHub, desde su historia hasta su implementación práctica">
+<meta property="og:url" content="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/250508-GitHub---De-sus-Orígenes-a-la-Práctica.html">
+<meta charset='UTF-8'>
+ <!-- ======= SEO y Redes Sociales ======= -->
+       <meta name='author' content='Mike'>
+       <meta name='description' content='Blog sobre Emacs, org-mode, automatización y herramientas avanzadas'>
+       <meta name='keywords' content='Emacs, Org Mode, Linux, Inteligencia Artificial, Automatización, Tutoriales'>
+       <meta property='og:title' content='Emacs con esteroides'>
+       <meta property='og:description' content='Poder y Simplicidad con Emacs, IA y Linux'>
+       <meta property='og:image' content='https://mcasrom.github.io/logo.png'>
+       <meta property='og:url' content='https://mcasrom.github.io/'>
+       <meta property='og:type' content='website'>
+       <meta name='twitter:card' content='summary_large_image'>
+       <meta name='twitter:title' content='Emacs con esteroides'>
+       <meta name='twitter:description' content='Blog sobre Emacs, IA y herramientas avanzadas'>
+       <meta name='twitter:image' content='https://tuusuario.github.io/logo.png'>
+       <link rel='alternate' type='application/rss+xml' href='rss.xml'>
+       <link rel='sitemap' type='application/xml' title='Sitemap' href='sitemap.xml'>
+
+ <!-- === Google Analytics === -->
+       <script async src='https://www.googletagmanager.com/gtag/js?id=G-7YJ0SNJXSJ'></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-7YJ0SNJXSJ');
+       </script>
+
+
+<!-- ======= Estilo y Fuentes ======= -->
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.8em; .85
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
+       </nav>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">08/05/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/250508-GitHub---De-sus-Orígenes-a-la-Práctica.html">GitHub - De sus Orígenes a la Práctica</a></h1>
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#cap1-origen-evolucion">1. Capítulo 1: GitHub - Origen y Evolución</a>
+<ul>
+<li><a href="#introduccion">1.1. Introducción</a></li>
+<li><a href="#origenes-git-github">1.2. Los Orígenes de Git y GitHub</a>
+<ul>
+<li><a href="#nacimiento-git">1.2.1. El nacimiento de Git</a></li>
+<li><a href="#fundacion-github">1.2.2. La fundación de GitHub</a></li>
+</ul>
+</li>
+<li><a href="#evolucion-github">1.3. La evolución de GitHub</a>
+<ul>
+<li><a href="#startup-gigante">1.3.1. De startup a gigante tecnológico</a></li>
+<li><a href="#caracteristicas-revolucionarias">1.3.2. Características revolucionarias</a></li>
+<li><a href="#impacto-cultural">1.3.3. Impacto cultural en el desarrollo de software</a></li>
+</ul>
+</li>
+<li><a href="#github-devops">1.4. GitHub y el ecosistema DevOps</a>
+<ul>
+<li><a href="#org19396df">1.4.1. Integración continua y despliegue continuo (CI/CD)</a></li>
+<li><a href="#org8d339dd">1.4.2. Seguridad y calidad de código</a></li>
+<li><a href="#orgc4ddde6">1.4.3. Integración con servicios cloud</a></li>
+</ul>
+</li>
+<li><a href="#conclusion-cap1">1.5. Conclusión del Capítulo 1</a></li>
+</ul>
+</li>
+<li><a href="#org22b26ed">2. Capítulo 2: Introducción a Git y GitHub</a>
+<ul>
+<li><a href="#intro-git-github">2.1. Introducción a Git y GitHub</a>
+<ul>
+<li><a href="#conceptos-git">2.1.1. Conceptos fundamentales de Git</a></li>
+<li><a href="#diferencia-git-github">2.1.2. Diferencia entre Git y GitHub</a></li>
+</ul>
+</li>
+<li><a href="#primeros-pasos">2.2. Primeros pasos con GitHub</a>
+<ul>
+<li><a href="#config-inicial">2.2.1. Configuración inicial</a></li>
+<li><a href="#comandos-basicos">2.2.2. Comandos básicos de Git</a></li>
+<li><a href="#creacion-repos">2.2.3. Creación y gestión de repositorios en GitHub</a></li>
+</ul>
+</li>
+<li><a href="#flujos-colaborativos">2.3. Flujos de trabajo colaborativos en GitHub</a>
+<ul>
+<li><a href="#github-flow">2.3.1. GitHcub Flow</a></li>
+<li><a href="#git-flow">2.3.2. Git Flow</a></li>
+<li><a href="#trunk-based">2.3.3. Trunk-Based Development</a></li>
+</ul>
+</li>
+<li><a href="#pull-requests">2.4. Pull Requests y Code Reviews</a>
+<ul>
+<li><a href="#anatomia-pr">2.4.1. Anatomía de un Pull Request</a></li>
+<li><a href="#crear-pr">2.4.2. Creando un Pull Request efectivo</a></li>
+<li><a href="#code-reviews">2.4.3. Realizando Code Reviews efectivas</a></li>
+</ul>
+</li>
+<li><a href="#github-actions">2.5. GitHub Actions: Automatización y CI/CD</a>
+<ul>
+<li><a href="#conceptos-actions">2.5.1. Conceptos básicos de GitHub Actions</a></li>
+<li><a href="#casos-uso-actions">2.5.2. Casos de uso comunes</a></li>
+<li><a href="#secretos-actions">2.5.3. Secretos y variables de entorno</a></li>
+</ul>
+</li>
+<li><a href="#caracteristicas-avanzadas">2.6. Características avanzadas de GitHub</a>
+<ul>
+<li><a href="#issues-projects">2.6.1. GitHub Issues y Projects</a></li>
+<li><a href="#github-pages">2.6.2. GitHub Pages</a></li>
+<li><a href="#github-wikis">2.6.3. GitHub Wikis</a></li>
+<li><a href="#codespaces">2.6.4. GitHub Codespaces</a></li>
+</ul>
+</li>
+<li><a href="#buenas-practicas">2.7. Buenas prácticas y consejos avanzados</a>
+<ul>
+<li><a href="#convenciones-commits">2.7.1. Convenciones de commits</a></li>
+<li><a href="#archivos-esenciales">2.7.2. Archivos esenciales para repositorios</a></li>
+<li><a href="#dependencias-seguridad">2.7.3. Gestión de dependencias y seguridad</a></li>
+</ul>
+</li>
+<li><a href="#conclusion-cap2">2.8. Conclusión del Capítulo 2</a></li>
+</ul>
+</li>
+</ul>
 </div>
-</div>
+</nav>
 <div id="outline-container-cap1-origen-evolucion" class="outline-2">
-<h2 id="cap1-origen-evolucion">Capítulo 1: GitHub - Origen y Evolución</h2>
+<h2 id="cap1-origen-evolucion"><span class="section-number-2">1.</span> Capítulo 1: GitHub - Origen y Evolución</h2>
 <div class="outline-text-2" id="text-cap1-origen-evolucion">
 </div>
 <div id="outline-container-introduccion" class="outline-3">
-<h3 id="introduccion">Introducción</h3>
+<h3 id="introduccion"><span class="section-number-3">1.1.</span> Introducción</h3>
 <div class="outline-text-3" id="text-introduccion">
 <p>
 En el mundo del desarrollo moderno, GitHub se ha convertido en mucho más que un repositorio de código: es una plataforma donde las ideas crecen, los equipos colaboran y los proyectos se vuelven realidad.
@@ -57,11 +313,11 @@ GitHub es actualmente la plataforma de alojamiento de código y colaboración m�
 </div>
 </div>
 <div id="outline-container-origenes-git-github" class="outline-3">
-<h3 id="origenes-git-github">Los Orígenes de Git y GitHub</h3>
+<h3 id="origenes-git-github"><span class="section-number-3">1.2.</span> Los Orígenes de Git y GitHub</h3>
 <div class="outline-text-3" id="text-origenes-git-github">
 </div>
 <div id="outline-container-nacimiento-git" class="outline-4">
-<h4 id="nacimiento-git">El nacimiento de Git</h4>
+<h4 id="nacimiento-git"><span class="section-number-4">1.2.1.</span> El nacimiento de Git</h4>
 <div class="outline-text-4" id="text-nacimiento-git">
 <p>
 Antes de hablar de GitHub, es fundamental entender Git, el sistema de control de versiones distribuido en el que se basa.
@@ -82,14 +338,14 @@ A diferencia de sistemas anteriores como CVS o Subversion, Git está diseñado c
 </p>
 
 
-<figure id="org7097a65">
-<img src="images/git-distributed-model.png  results" alt="git-distributed-model.png  results">
+<figure id="orge5af545">
+<img src="git-distributed-model.png  results" alt="git-distributed-model.png  results">
 
 </figure>
 </div>
 </div>
 <div id="outline-container-fundacion-github" class="outline-4">
-<h4 id="fundacion-github">La fundación de GitHub</h4>
+<h4 id="fundacion-github"><span class="section-number-4">1.2.2.</span> La fundación de GitHub</h4>
 <div class="outline-text-4" id="text-fundacion-github">
 <p>
 GitHub fue fundado en febrero de 2008 por Tom Preston-Werner, Chris Wanstrath y PJ Hyett. La idea surgió cuando estos desarrolladores buscaban una manera más sencilla de compartir código y colaborar.
@@ -108,19 +364,19 @@ La plataforma se lanzó oficialmente en abril de 2008 y rápidamente ganó popul
 </p>
 
 
-<figure id="org446adee">
-<img src="images/github-timeline.png  results" alt="github-timeline.png  results">
+<figure id="org5520804">
+<img src="github-timeline.png  results" alt="github-timeline.png  results">
 
 </figure>
 </div>
 </div>
 </div>
 <div id="outline-container-evolucion-github" class="outline-3">
-<h3 id="evolucion-github">La evolución de GitHub</h3>
+<h3 id="evolucion-github"><span class="section-number-3">1.3.</span> La evolución de GitHub</h3>
 <div class="outline-text-3" id="text-evolucion-github">
 </div>
 <div id="outline-container-startup-gigante" class="outline-4">
-<h4 id="startup-gigante">De startup a gigante tecnológico</h4>
+<h4 id="startup-gigante"><span class="section-number-4">1.3.1.</span> De startup a gigante tecnológico</h4>
 <div class="outline-text-4" id="text-startup-gigante">
 <p>
 El crecimiento de GitHub ha sido extraordinario:
@@ -143,118 +399,118 @@ Esta evolución refleja no solo el crecimiento de GitHub como empresa, sino tamb
 </div>
 </div>
 <div id="outline-container-caracteristicas-revolucionarias" class="outline-4">
-<h4 id="caracteristicas-revolucionarias">Características revolucionarias</h4>
+<h4 id="caracteristicas-revolucionarias"><span class="section-number-4">1.3.2.</span> Características revolucionarias</h4>
 <div class="outline-text-4" id="text-caracteristicas-revolucionarias">
 <p>
 A lo largo de su historia, GitHub ha introducido numerosas características que han cambiado la forma en que trabajamos con el código:
 </p>
 </div>
-<ul class="org-ul">
-<li><a id="orged2682e"></a>Pull Requests<br>
-<div class="outline-text-5" id="text-orged2682e">
+<ol class="org-ol">
+<li><a id="orgfe13165"></a>Pull Requests<br>
+<div class="outline-text-5" id="text-1-3-2-1">
 <p>
 Quizás la innovación más importante de GitHub. Los Pull Requests (PR) permiten a los desarrolladores proponer cambios a un repositorio, discutirlos y revisarlos antes de integrarlos al código principal. Este flujo de trabajo ha sido adoptado universalmente y ha establecido un estándar en la industria.
 </p>
 
 
-<figure id="org85525f3">
-<img src="images/pull-request-workflow.png" alt="pull-request-workflow.png">
+<figure id="org51073d8">
+<img src="pull-request-workflow.png" alt="pull-request-workflow.png">
 
 </figure>
 </div>
 </li>
-<li><a id="org9545434"></a>Issues y Projects<br>
-<div class="outline-text-5" id="text-org9545434">
+<li><a id="orga5f1d59"></a>Issues y Projects<br>
+<div class="outline-text-5" id="text-1-3-2-2">
 <p>
 GitHub introdujo un sistema de seguimiento de problemas integrado directamente con el código. Los Issues permiten reportar errores, solicitar características o discutir ideas. Con Projects, GitHub añadió capacidades de gestión de proyectos tipo Kanban.
 </p>
 </div>
 </li>
-<li><a id="org7b1993f"></a>GitHub Actions (2018)<br>
-<div class="outline-text-5" id="text-org7b1993f">
+<li><a id="orgaab193d"></a>GitHub Actions (2018)<br>
+<div class="outline-text-5" id="text-1-3-2-3">
 <p>
 Esta característica permitió la automatización del flujo de trabajo de desarrollo directamente en GitHub, facilitando la integración continua y el despliegue continuo (CI/CD) sin necesidad de herramientas externas.
 </p>
 
 
-<figure id="orgf1cf4bf">
-<img src="images/github-actions-workflow.png  results" alt="github-actions-workflow.png  results">
+<figure id="org80e9264">
+<img src="github-actions-workflow.png  results" alt="github-actions-workflow.png  results">
 
 </figure>
 </div>
 </li>
-<li><a id="org60da80f"></a>Codespaces (2020)<br>
-<div class="outline-text-5" id="text-org60da80f">
+<li><a id="orgb6e4611"></a>Codespaces (2020)<br>
+<div class="outline-text-5" id="text-1-3-2-4">
 <p>
 Entornos de desarrollo basados en la nube que permiten programar desde el navegador. Esto ha sido especialmente útil para equipos distribuidos y para simplificar la configuración de entornos de desarrollo.
 </p>
 </div>
 </li>
-<li><a id="orgf471ec7"></a>GitHub Copilot (2021)<br>
-<div class="outline-text-5" id="text-orgf471ec7">
+<li><a id="org97dd0e0"></a>GitHub Copilot (2021)<br>
+<div class="outline-text-5" id="text-1-3-2-5">
 <p>
 Basado en tecnología de OpenAI, Copilot es un asistente de programación impulsado por IA que sugiere código mientras escribes, representando uno de los primeros usos masivos de IA generativa en el desarrollo de software.
 </p>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 <div id="outline-container-impacto-cultural" class="outline-4">
-<h4 id="impacto-cultural">Impacto cultural en el desarrollo de software</h4>
+<h4 id="impacto-cultural"><span class="section-number-4">1.3.3.</span> Impacto cultural en el desarrollo de software</h4>
 <div class="outline-text-4" id="text-impacto-cultural">
 <p>
 GitHub no solo ha proporcionado herramientas técnicas, sino que ha transformado la cultura del desarrollo de software:
 </p>
 </div>
-<ul class="org-ul">
-<li><a id="orga43feeb"></a>Democratización del código abierto<br>
-<div class="outline-text-5" id="text-orga43feeb">
+<ol class="org-ol">
+<li><a id="org8a90453"></a>Democratización del código abierto<br>
+<div class="outline-text-5" id="text-1-3-3-1">
 <p>
 GitHub ha hecho que contribuir a proyectos de código abierto sea más accesible que nunca. Con su interfaz web intuitiva, cualquier desarrollador puede proponer cambios a proyectos públicos sin necesidad de permisos especiales.
 </p>
 </div>
 </li>
-<li><a id="orgc928194"></a>El perfil de GitHub como currículum<br>
-<div class="outline-text-5" id="text-orgc928194">
+<li><a id="org2e49bad"></a>El perfil de GitHub como currículum<br>
+<div class="outline-text-5" id="text-1-3-3-2">
 <p>
 El perfil de GitHub se ha convertido en una forma de mostrar habilidades y experiencia. Para muchos desarrolladores y empleadores, la actividad en GitHub es tan importante como un currículum tradicional.
 </p>
 </div>
 </li>
-<li><a id="org336acac"></a>Colaboración global<br>
-<div class="outline-text-5" id="text-org336acac">
+<li><a id="orgee06f58"></a>Colaboración global<br>
+<div class="outline-text-5" id="text-1-3-3-3">
 <p>
 GitHub ha derribado barreras geográficas en el desarrollo de software. Proyectos como Linux, React o TensorFlow tienen contribuyentes de todo el mundo que trabajan de forma asíncrona pero coordinada.
 </p>
 
 
-<figure id="orgc9a9a7f">
-<img src="images/github-impacto-cultural.png  results" alt="github-impacto-cultural.png  results">
+<figure id="org4f3f146">
+<img src="github-impacto-cultural.png  results" alt="github-impacto-cultural.png  results">
 
 </figure>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 </div>
 <div id="outline-container-github-devops" class="outline-3">
-<h3 id="github-devops">GitHub y el ecosistema DevOps</h3>
+<h3 id="github-devops"><span class="section-number-3">1.4.</span> GitHub y el ecosistema DevOps</h3>
 <div class="outline-text-3" id="text-github-devops">
 <p>
 GitHub se ha convertido en una pieza central del ecosistema DevOps moderno, integrándose con una amplia variedad de herramientas y servicios:
 </p>
 </div>
-<div id="outline-container-orgddb1f84" class="outline-4">
-<h4 id="orgddb1f84">Integración continua y despliegue continuo (CI/CD)</h4>
-<div class="outline-text-4" id="text-orgddb1f84">
+<div id="outline-container-org19396df" class="outline-4">
+<h4 id="org19396df"><span class="section-number-4">1.4.1.</span> Integración continua y despliegue continuo (CI/CD)</h4>
+<div class="outline-text-4" id="text-1-4-1">
 <p>
 Con GitHub Actions y su integración con herramientas como Jenkins, CircleCI, Travis CI y otras, GitHub permite automatizar todo el proceso desde el commit hasta el despliegue en producción.
 </p>
 </div>
 </div>
-<div id="outline-container-org3327c74" class="outline-4">
-<h4 id="org3327c74">Seguridad y calidad de código</h4>
-<div class="outline-text-4" id="text-org3327c74">
+<div id="outline-container-org8d339dd" class="outline-4">
+<h4 id="org8d339dd"><span class="section-number-4">1.4.2.</span> Seguridad y calidad de código</h4>
+<div class="outline-text-4" id="text-1-4-2">
 <p>
 GitHub incluye características como:
 </p>
@@ -267,23 +523,23 @@ Dependabot para mantener las dependencias actualizadas
 </p>
 </div>
 </div>
-<div id="outline-container-orgf5983c6" class="outline-4">
-<h4 id="orgf5983c6">Integración con servicios cloud</h4>
-<div class="outline-text-4" id="text-orgf5983c6">
+<div id="outline-container-orgc4ddde6" class="outline-4">
+<h4 id="orgc4ddde6"><span class="section-number-4">1.4.3.</span> Integración con servicios cloud</h4>
+<div class="outline-text-4" id="text-1-4-3">
 <p>
 GitHub se integra fácilmente con todos los principales proveedores de nube (AWS, Azure, Google Cloud), facilitando el despliegue de aplicaciones directamente desde el repositorio.
 </p>
 
 
-<figure id="org2bd0171">
-<img src="images/github-ecosystem.png  results" alt="github-ecosystem.png  results">
+<figure id="orgce92e55">
+<img src="github-ecosystem.png  results" alt="github-ecosystem.png  results">
 
 </figure>
 </div>
 </div>
 </div>
 <div id="outline-container-conclusion-cap1" class="outline-3">
-<h3 id="conclusion-cap1">Conclusión del Capítulo 1</h3>
+<h3 id="conclusion-cap1"><span class="section-number-3">1.5.</span> Conclusión del Capítulo 1</h3>
 <div class="outline-text-3" id="text-conclusion-cap1">
 <p>
 GitHub ha recorrido un largo camino desde su creación en 2008. De ser una simple interfaz web para Git, se ha convertido en el centro del ecosistema de desarrollo de software moderno. Su evolución refleja y ha impulsado cambios fundamentales en cómo creamos software:
@@ -299,70 +555,82 @@ La globalización de los equipos de desarrollo
 <p>
 En el próximo capítulo, exploraremos en detalle cómo trabajar con GitHub, desde los conceptos básicos hasta flujos de trabajo avanzados, con ejemplos prácticos que te permitirán aprovechar al máximo esta poderosa plataforma.
 </p>
+
+
+
+
+
+
+
+<p>
+Capítulo 2: Trabajando con GitHub - De Principiante a Experto
+</p>
+<p>
+:CUSTOM<sub>ID</sub>: cap2-trabajando-con-github
+</p>
 </div>
 </div>
 </div>
-<div id="outline-container-cap2-trabajando-con-github" class="outline-2">
-<h2 id="cap2-trabajando-con-github">Capítulo 2: Trabajando con GitHub - De Principiante a Experto</h2>
-<div class="outline-text-2" id="text-cap2-trabajando-con-github">
+<div id="outline-container-org22b26ed" class="outline-2">
+<h2 id="org22b26ed"><span class="section-number-2">2.</span> Capítulo 2: Introducción a Git y GitHub</h2>
+<div class="outline-text-2" id="text-2">
 </div>
 <div id="outline-container-intro-git-github" class="outline-3">
-<h3 id="intro-git-github">Introducción a Git y GitHub</h3>
+<h3 id="intro-git-github"><span class="section-number-3">2.1.</span> Introducción a Git y GitHub</h3>
 <div class="outline-text-3" id="text-intro-git-github">
 <p>
 Antes de profundizar en GitHub, es fundamental entender los conceptos básicos de Git, ya que GitHub se basa en este sistema de control de versiones. En esta sección, exploraremos los fundamentos de Git y cómo se relacionan con GitHub.
 </p>
 </div>
 <div id="outline-container-conceptos-git" class="outline-4">
-<h4 id="conceptos-git">Conceptos fundamentales de Git</h4>
+<h4 id="conceptos-git"><span class="section-number-4">2.1.1.</span> Conceptos fundamentales de Git</h4>
 <div class="outline-text-4" id="text-conceptos-git">
 </div>
-<ul class="org-ul">
-<li><a id="orgcd71e58"></a>Repositorio<br>
-<div class="outline-text-5" id="text-orgcd71e58">
+<ol class="org-ol">
+<li><a id="org7c64b62"></a>Repositorio<br>
+<div class="outline-text-5" id="text-2-1-1-1">
 <p>
 Un repositorio (o repo) es donde Git almacena todo el historial de cambios de un proyecto. Consiste en archivos, directorios y un directorio especial .git que contiene toda la información de control de versiones.
 </p>
 </div>
 </li>
-<li><a id="org45828b5"></a>Commit<br>
-<div class="outline-text-5" id="text-org45828b5">
+<li><a id="orgf5aae87"></a>Commit<br>
+<div class="outline-text-5" id="text-2-1-1-2">
 <p>
 Un commit es una instantánea de los cambios realizados en un momento específico. Cada commit tiene un identificador único (hash SHA-1) y contiene metadatos como autor, fecha y mensaje descriptivo.
 </p>
 </div>
 </li>
-<li><a id="orgbf27d4d"></a>Rama (Branch)<br>
-<div class="outline-text-5" id="text-orgbf27d4d">
+<li><a id="org813f2a7"></a>Rama (Branch)<br>
+<div class="outline-text-5" id="text-2-1-1-3">
 <p>
 Una rama representa una línea independiente de desarrollo. La rama principal por defecto tradicionalmente se llamaba master, aunque ahora GitHub utiliza main como estándar. Las ramas permiten trabajar en diferentes características o correcciones sin afectar al código principal.
 </p>
 </div>
 </li>
-<li><a id="orgdf5d53e"></a>Merge<br>
-<div class="outline-text-5" id="text-orgdf5d53e">
+<li><a id="orgdb34efe"></a>Merge<br>
+<div class="outline-text-5" id="text-2-1-1-4">
 <p>
 El proceso de combinar los cambios de una rama con otra. Git intenta resolver automáticamente las diferencias, pero a veces requiere intervención manual cuando hay conflictos.
 </p>
 </div>
 </li>
-<li><a id="orgfee4b7c"></a>Remoto (Remote)<br>
-<div class="outline-text-5" id="text-orgfee4b7c">
+<li><a id="org2051576"></a>Remoto (Remote)<br>
+<div class="outline-text-5" id="text-2-1-1-5">
 <p>
 Un repositorio remoto es una versión del proyecto alojada en Internet o en una red. En GitHub, cada repositorio tiene al menos un remoto (llamado origin por defecto).
 </p>
 
-
-<figure id="orga310665">
-<img src="images/git-conceptos.png  results" alt="git-conceptos.png  results">
+<figure id="org381ee4f">
+<img src="git-conceptos.png  results" alt="git-conceptos.png  results">
 
 </figure>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 <div id="outline-container-diferencia-git-github" class="outline-4">
-<h4 id="diferencia-git-github">Diferencia entre Git y GitHub</h4>
+<h4 id="diferencia-git-github"><span class="section-number-4">2.1.2.</span> Diferencia entre Git y GitHub</h4>
 <div class="outline-text-4" id="text-diferencia-git-github">
 <p>
 Es importante distinguir entre Git y GitHub:
@@ -378,27 +646,27 @@ Podemos pensar en Git como el motor y GitHub como el servicio construido sobre e
 </p>
 
 
-<figure id="org9e37070">
-<img src="images/git-vs-github.png  results" alt="git-vs-github.png  results">
+<figure id="org0c153b4">
+<img src="git-vs-github.png  results" alt="git-vs-github.png  results">
 
 </figure>
 </div>
 </div>
 </div>
 <div id="outline-container-primeros-pasos" class="outline-3">
-<h3 id="primeros-pasos">Primeros pasos con GitHub</h3>
+<h3 id="primeros-pasos"><span class="section-number-3">2.2.</span> Primeros pasos con GitHub</h3>
 <div class="outline-text-3" id="text-primeros-pasos">
 <p>
 En esta sección, aprenderemos a configurar y comenzar a usar GitHub, desde la creación de una cuenta hasta los primeros comandos.
 </p>
 </div>
 <div id="outline-container-config-inicial" class="outline-4">
-<h4 id="config-inicial">Configuración inicial</h4>
+<h4 id="config-inicial"><span class="section-number-4">2.2.1.</span> Configuración inicial</h4>
 <div class="outline-text-4" id="text-config-inicial">
 </div>
-<ul class="org-ul">
-<li><a id="org6a2600d"></a>Crear una cuenta en GitHub<br>
-<div class="outline-text-5" id="text-org6a2600d">
+<ol class="org-ol">
+<li><a id="org659721e"></a>Crear una cuenta en GitHub<br>
+<div class="outline-text-5" id="text-2-2-1-1">
 <p>
 Visita GitHub.com
 Haz clic en "Sign up" y sigue las instrucciones
@@ -407,8 +675,8 @@ Verifica tu dirección de correo electrónico
 </p>
 </div>
 </li>
-<li><a id="org013fe22"></a>Instalar Git<br>
-<div class="outline-text-5" id="text-org013fe22">
+<li><a id="org764e9fe"></a>Instalar Git<br>
+<div class="outline-text-5" id="text-2-2-1-2">
 <p>
 Antes de usar GitHub, necesitas instalar Git en tu computadora:
 En Linux (Debian/Ubuntu):
@@ -425,8 +693,8 @@ bash# Descarga e instala Git desde:
 </p>
 </div>
 </li>
-<li><a id="org2891c5a"></a>Configurar Git<br>
-<div class="outline-text-5" id="text-org2891c5a">
+<li><a id="org8384c9f"></a>Configurar Git<br>
+<div class="outline-text-5" id="text-2-2-1-3">
 <p>
 Una vez instalado Git, configúralo con tu información:
 bashgit config &#x2013;global user.name "Tu Nombre"
@@ -438,8 +706,8 @@ git config &#x2013;global core.editor "code &#x2013;wait"  # Para Visual Studio 
 </p>
 </div>
 </li>
-<li><a id="orgad0320b"></a>Autenticación en GitHub<br>
-<div class="outline-text-5" id="text-orgad0320b">
+<li><a id="orgf678c88"></a>Autenticación en GitHub<br>
+<div class="outline-text-5" id="text-2-2-1-4">
 <p>
 GitHub ya no acepta autenticación por contraseña para operaciones Git. En su lugar, debes usar:
 </p>
@@ -470,18 +738,18 @@ Copia la clave pública y agrégala en GitHub: Settings &gt; SSH and GPG keys
 </p>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 <div id="outline-container-comandos-basicos" class="outline-4">
-<h4 id="comandos-basicos">Comandos básicos de Git</h4>
+<h4 id="comandos-basicos"><span class="section-number-4">2.2.2.</span> Comandos básicos de Git</h4>
 <div class="outline-text-4" id="text-comandos-basicos">
 <p>
 Veamos los comandos más utilizados en Git:
 </p>
 </div>
-<ul class="org-ul">
-<li><a id="org09a49be"></a>Iniciar un repositorio<br>
-<div class="outline-text-5" id="text-org09a49be">
+<ol class="org-ol">
+<li><a id="org34fbcb7"></a>Iniciar un repositorio<br>
+<div class="outline-text-5" id="text-2-2-2-1">
 <p>
 bash# Crear un nuevo repositorio
 git init mi-proyecto
@@ -493,8 +761,8 @@ git init
 </p>
 </div>
 </li>
-<li><a id="org2c72fcf"></a>Clonar un repositorio existente<br>
-<div class="outline-text-5" id="text-org2c72fcf">
+<li><a id="orgab1bfbe"></a>Clonar un repositorio existente<br>
+<div class="outline-text-5" id="text-2-2-2-2">
 <p>
 bash# Clonar desde GitHub
 git clone <a href="https://github.com/usuario/repositorio.git">https://github.com/usuario/repositorio.git</a>
@@ -505,8 +773,8 @@ git clone -b nombre-rama <a href="https://github.com/usuario/repositorio.git">ht
 </p>
 </div>
 </li>
-<li><a id="org5e8f75a"></a>Gestionar cambios<br>
-<div class="outline-text-5" id="text-org5e8f75a">
+<li><a id="org47d65b7"></a>Gestionar cambios<br>
+<div class="outline-text-5" id="text-2-2-2-3">
 <p>
 bash# Ver el estado de los archivos
 git status
@@ -526,8 +794,8 @@ git commit -am "Mensaje descriptivo"
 </p>
 </div>
 </li>
-<li><a id="org543c404"></a>Trabajar con ramas<br>
-<div class="outline-text-5" id="text-org543c404">
+<li><a id="org9e55a73"></a>Trabajar con ramas<br>
+<div class="outline-text-5" id="text-2-2-2-4">
 <p>
 bash# Ver ramas
 git branch
@@ -550,8 +818,8 @@ git merge otra-rama
 </p>
 </div>
 </li>
-<li><a id="org11bd213"></a>Sincronizar con GitHub<br>
-<div class="outline-text-5" id="text-org11bd213">
+<li><a id="org3541d56"></a>Sincronizar con GitHub<br>
+<div class="outline-text-5" id="text-2-2-2-5">
 <p>
 bash# Añadir un remoto
 git remote add origin <a href="https://github.com/usuario/repositorio.git">https://github.com/usuario/repositorio.git</a>
@@ -571,21 +839,21 @@ git remote -v
 </p>
 
 
-<figure id="org2aceca3">
-<img src="images/git-workflow-basico.png" alt="git-workflow-basico.png">
+<figure id="orgc6773bc">
+<img src="git-workflow-basico.png" alt="git-workflow-basico.png">
 
 </figure>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 <div id="outline-container-creacion-repos" class="outline-4">
-<h4 id="creacion-repos">Creación y gestión de repositorios en GitHub</h4>
+<h4 id="creacion-repos"><span class="section-number-4">2.2.3.</span> Creación y gestión de repositorios en GitHub</h4>
 <div class="outline-text-4" id="text-creacion-repos">
 </div>
-<ul class="org-ul">
-<li><a id="orgdf67475"></a>Crear un repositorio en GitHub<br>
-<div class="outline-text-5" id="text-orgdf67475">
+<ol class="org-ol">
+<li><a id="org185cb65"></a>Crear un repositorio en GitHub<br>
+<div class="outline-text-5" id="text-2-2-3-1">
 <p>
 Inicia sesión en GitHub
 Haz clic en el botón "+" en la esquina superior derecha
@@ -607,8 +875,8 @@ Haz clic en "Create repository"
 </p>
 </div>
 </li>
-<li><a id="org55f9034"></a>Gestionar un repositorio existente<br>
-<div class="outline-text-5" id="text-org55f9034">
+<li><a id="org7709c39"></a>Gestionar un repositorio existente<br>
+<div class="outline-text-5" id="text-2-2-3-2">
 <p>
 Una vez creado el repositorio, puedes:
 </p>
@@ -622,8 +890,8 @@ Configurar GitHub Pages para sitios web
 </p>
 </div>
 </li>
-<li><a id="orgc2c6a95"></a>Conectar un repositorio local con GitHub<br>
-<div class="outline-text-5" id="text-orgc2c6a95">
+<li><a id="org8b5a4a5"></a>Conectar un repositorio local con GitHub<br>
+<div class="outline-text-5" id="text-2-2-3-3">
 <p>
 Si ya tienes un repositorio local y quieres subirlo a GitHub:
 bash# Dentro de tu repositorio local
@@ -633,26 +901,26 @@ git push -u origin main
 </p>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 </div>
 <div id="outline-container-flujos-colaborativos" class="outline-3">
-<h3 id="flujos-colaborativos">Flujos de trabajo colaborativos en GitHub</h3>
+<h3 id="flujos-colaborativos"><span class="section-number-3">2.3.</span> Flujos de trabajo colaborativos en GitHub</h3>
 <div class="outline-text-3" id="text-flujos-colaborativos">
 <p>
 GitHub facilita varios flujos de trabajo para la colaboración en equipos. Veamos los más comunes:
 </p>
 </div>
 <div id="outline-container-github-flow" class="outline-4">
-<h4 id="github-flow">GitHcub Flow</h4>
+<h4 id="github-flow"><span class="section-number-4">2.3.1.</span> GitHcub Flow</h4>
 <div class="outline-text-4" id="text-github-flow">
 <p>
 GitHub Flow es un flujo de trabajo ligero basado en ramas. Es simple y adecuado para equipos que realizan despliegues frecuentes.
 </p>
 </div>
-<ul class="org-ul">
-<li><a id="org73e096e"></a>Pasos del GitHub Flow:<br>
-<div class="outline-text-5" id="text-org73e096e">
+<ol class="org-ol">
+<li><a id="org94f341f"></a>Pasos del GitHub Flow:<br>
+<div class="outline-text-5" id="text-2-3-1-1">
 <p>
 Crear una rama: Crea una rama desde main para trabajar en una nueva característica o corrección
 Hacer commits: Realiza cambios y haz commits frecuentes
@@ -662,14 +930,14 @@ Merge y despliegue: Una vez aprobado, fusiona a main y despliega
 </p>
 
 
-<figure id="orgf9472ad">
-<img src="images/github-flow.png  results" alt="github-flow.png  results">
+<figure id="org7c2b980">
+<img src="github-flow.png  results" alt="github-flow.png  results">
 
 </figure>
 </div>
 </li>
-<li><a id="org8298261"></a>Ejemplo práctico de GitHub Flow:<br>
-<div class="outline-text-5" id="text-org8298261">
+<li><a id="orgee20aa3"></a>Ejemplo práctico de GitHub Flow:<br>
+<div class="outline-text-5" id="text-2-3-1-2">
 <p>
 bash# 1. Crear una rama para una nueva característica
 git checkout main
@@ -702,18 +970,18 @@ git push origin &#x2013;delete feature-login-system  # Borrar en remoto
 </p>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 <div id="outline-container-git-flow" class="outline-4">
-<h4 id="git-flow">Git Flow</h4>
+<h4 id="git-flow"><span class="section-number-4">2.3.2.</span> Git Flow</h4>
 <div class="outline-text-4" id="text-git-flow">
 <p>
 Git Flow es un modelo más estructurado, ideal para proyectos con ciclos de lanzamiento planificados. Define tipos específicos de ramas con propósitos particulares.
 </p>
 </div>
-<ul class="org-ul">
-<li><a id="orgca9fb1f"></a>Ramas principales en Git Flow:<br>
-<div class="outline-text-5" id="text-orgca9fb1f">
+<ol class="org-ol">
+<li><a id="org917242f"></a>Ramas principales en Git Flow:<br>
+<div class="outline-text-5" id="text-2-3-2-1">
 <p>
 main/master: Solo contiene código de producción estable
 develop: Rama de integración para características
@@ -723,8 +991,8 @@ hotfix/*: Correcciones urgentes en producción
 </p>
 </div>
 </li>
-<li><a id="org76c1b4c"></a>Ciclo de vida en Git Flow:<br>
-<div class="outline-text-5" id="text-org76c1b4c">
+<li><a id="orgfcebbf6"></a>Ciclo de vida en Git Flow:<br>
+<div class="outline-text-5" id="text-2-3-2-2">
 <p>
 Las características se desarrollan en ramas feature/*
 Se integran en develop
@@ -734,24 +1002,24 @@ Las correcciones críticas se hacen en ramas hotfix/* y se fusionan en ambas ram
 </p>
 
 
-<figure id="org534267e">
-<img src="images/git-flow.png" alt="git-flow.png">
+<figure id="org10d64ee">
+<img src="git-flow.png" alt="git-flow.png">
 
 </figure>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 <div id="outline-container-trunk-based" class="outline-4">
-<h4 id="trunk-based">Trunk-Based Development</h4>
+<h4 id="trunk-based"><span class="section-number-4">2.3.3.</span> Trunk-Based Development</h4>
 <div class="outline-text-4" id="text-trunk-based">
 <p>
 Este enfoque promueve commits pequeños y frecuentes directamente en la rama principal (trunk). Es popular en equipos que practican integración continua y entrega continua (CI/CD).
 </p>
 </div>
-<ul class="org-ul">
-<li><a id="orgc110032"></a>Características del Trunk-Based Development:<br>
-<div class="outline-text-5" id="text-orgc110032">
+<ol class="org-ol">
+<li><a id="orgb70afff"></a>Características del Trunk-Based Development:<br>
+<div class="outline-text-5" id="text-2-3-3-1">
 <p>
 Commits pequeños y frecuentes
 Ramas de corta duración (menos de un día)
@@ -763,24 +1031,24 @@ Integración continua
 
 
 
-<figure id="org5ffa0e4">
-<img src="images/trunk-based-dev.png" alt="trunk-based-dev.png">
+<figure id="orgc2c8aac">
+<img src="trunk-based-dev.png" alt="trunk-based-dev.png">
 
 </figure>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 </div>
 <div id="outline-container-pull-requests" class="outline-3">
-<h3 id="pull-requests">Pull Requests y Code Reviews</h3>
+<h3 id="pull-requests"><span class="section-number-3">2.4.</span> Pull Requests y Code Reviews</h3>
 <div class="outline-text-3" id="text-pull-requests">
 <p>
 Los Pull Requests (PR) son una de las características más poderosas de GitHub, permitiendo revisiones de código estructuradas antes de integrar cambios.
 </p>
 </div>
 <div id="outline-container-anatomia-pr" class="outline-4">
-<h4 id="anatomia-pr">Anatomía de un Pull Request</h4>
+<h4 id="anatomia-pr"><span class="section-number-4">2.4.1.</span> Anatomía de un Pull Request</h4>
 <div class="outline-text-4" id="text-anatomia-pr">
 <p>
 Un Pull Request consiste en:
@@ -798,7 +1066,7 @@ Conversación: Comentarios y discusiones sobre el código
 </div>
 </div>
 <div id="outline-container-crear-pr" class="outline-4">
-<h4 id="crear-pr">Creando un Pull Request efectivo</h4>
+<h4 id="crear-pr"><span class="section-number-4">2.4.2.</span> Creando un Pull Request efectivo</h4>
 <div class="outline-text-4" id="text-crear-pr">
 <p>
 Prepara tu rama:
@@ -843,9 +1111,9 @@ Asigna revisores
 Añade etiquetas relevantes
 </p>
 </div>
-<ul class="org-ul">
-<li><a id="org75497ec"></a>Plantilla de descripción para Pull Requests<br>
-<div class="outline-text-5" id="text-org75497ec">
+<ol class="org-ol">
+<li><a id="orgd6ef191"></a>Plantilla de descripción para Pull Requests<br>
+<div class="outline-text-5" id="text-2-4-2-1">
 <p>
 markdown## Descripción
 [Explicación clara de los cambios realizados]
@@ -883,18 +1151,18 @@ GitHub permite crear plantillas de PR para tu repositorio añadiendo un archivo 
 </p>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 <div id="outline-container-code-reviews" class="outline-4">
-<h4 id="code-reviews">Realizando Code Reviews efectivas</h4>
+<h4 id="code-reviews"><span class="section-number-4">2.4.3.</span> Realizando Code Reviews efectivas</h4>
 <div class="outline-text-4" id="text-code-reviews">
 <p>
 Las revisiones de código son fundamentales para mantener la calidad y compartir conocimiento. Aquí hay algunas prácticas recomendadas:
 </p>
 </div>
-<ul class="org-ul">
-<li><a id="orgcdc0571"></a>Para revisores:<br>
-<div class="outline-text-5" id="text-orgcdc0571">
+<ol class="org-ol">
+<li><a id="orgff8886b"></a>Para revisores:<br>
+<div class="outline-text-5" id="text-2-4-3-1">
 <p>
 Sé respetuoso y constructivo:
 </p>
@@ -929,8 +1197,8 @@ Revisiones con estados (Approve, Request changes, Comment)
 </p>
 </div>
 </li>
-<li><a id="org85a618f"></a>Para autores:<br>
-<div class="outline-text-5" id="text-org85a618f">
+<li><a id="org021dfdf"></a>Para autores:<br>
+<div class="outline-text-5" id="text-2-4-3-2">
 <p>
 Facilita la revisión:
 </p>
@@ -953,29 +1221,29 @@ Agradece el feedback
 </p>
 
 
-<figure id="orgf958193">
-<img src="images/code-review-process.png" alt="code-review-process.png">
+<figure id="orgbfcccbe">
+<img src="code-review-process.png" alt="code-review-process.png">
 
 </figure>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 </div>
 <div id="outline-container-github-actions" class="outline-3">
-<h3 id="github-actions">GitHub Actions: Automatización y CI/CD</h3>
+<h3 id="github-actions"><span class="section-number-3">2.5.</span> GitHub Actions: Automatización y CI/CD</h3>
 <div class="outline-text-3" id="text-github-actions">
 <p>
 GitHub Actions es un sistema de automatización integrado que permite definir flujos de trabajo personalizados directamente en tu repositorio.
 </p>
 </div>
 <div id="outline-container-conceptos-actions" class="outline-4">
-<h4 id="conceptos-actions">Conceptos básicos de GitHub Actions</h4>
+<h4 id="conceptos-actions"><span class="section-number-4">2.5.1.</span> Conceptos básicos de GitHub Actions</h4>
 <div class="outline-text-4" id="text-conceptos-actions">
 </div>
-<ul class="org-ul">
-<li><a id="org85d2d8f"></a>Componentes principales:<br>
-<div class="outline-text-5" id="text-org85d2d8f">
+<ol class="org-ol">
+<li><a id="orgb356715"></a>Componentes principales:<br>
+<div class="outline-text-5" id="text-2-5-1-1">
 <p>
 Workflows: Procesos automatizados configurados en archivos YAML
 Events: Disparadores que inician un workflow (push, pull request, etc.)
@@ -986,8 +1254,8 @@ Runners: Servidores que ejecutan los workflows
 </p>
 </div>
 </li>
-<li><a id="orgdbc2d15"></a>Estructura de un workflow:<br>
-<div class="outline-text-5" id="text-orgdbc2d15">
+<li><a id="org6e9a4f3"></a>Estructura de un workflow:<br>
+<div class="outline-text-5" id="text-2-5-1-2">
 <p>
 yamlname: CI/CD Pipeline
 </p>
@@ -1025,15 +1293,15 @@ run: npm test</li>
 </ul>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 <div id="outline-container-casos-uso-actions" class="outline-4">
-<h4 id="casos-uso-actions">Casos de uso comunes</h4>
+<h4 id="casos-uso-actions"><span class="section-number-4">2.5.2.</span> Casos de uso comunes</h4>
 <div class="outline-text-4" id="text-casos-uso-actions">
 </div>
-<ul class="org-ul">
-<li><a id="orgc03c304"></a>Integración Continua (CI)<br>
-<div class="outline-text-5" id="text-orgc03c304">
+<ol class="org-ol">
+<li><a id="org662c94e"></a>Integración Continua (CI)<br>
+<div class="outline-text-5" id="text-2-5-2-1">
 <p>
 yamlname: Continuous Integration
 </p>
@@ -1077,8 +1345,8 @@ run: pytest</li>
 </ul>
 </div>
 </li>
-<li><a id="orgcc04aa7"></a>Despliegue Continuo (CD)<br>
-<div class="outline-text-5" id="text-orgcc04aa7">
+<li><a id="org5aa55cb"></a>Despliegue Continuo (CD)<br>
+<div class="outline-text-5" id="text-2-5-2-2">
 <p>
 yamlname: Deploy to Production
 </p>
@@ -1125,8 +1393,8 @@ env:
 </ul>
 </div>
 </li>
-<li><a id="org2f4c890"></a>Automatización de tareas<br>
-<div class="outline-text-5" id="text-org2f4c890">
+<li><a id="org2255e2f"></a>Automatización de tareas<br>
+<div class="outline-text-5" id="text-2-5-2-3">
 <p>
 yamlname: Auto Assign Issues
 </p>
@@ -1158,24 +1426,24 @@ with:
 </ul>
 
 
-<figure id="org4ae57bb">
-<img src="images/github-actions-components.png  results" alt="github-actions-components.png  results">
+<figure id="org3c64938">
+<img src="github-actions-components.png  results" alt="github-actions-components.png  results">
 
 </figure>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 <div id="outline-container-secretos-actions" class="outline-4">
-<h4 id="secretos-actions">Secretos y variables de entorno</h4>
+<h4 id="secretos-actions"><span class="section-number-4">2.5.3.</span> Secretos y variables de entorno</h4>
 <div class="outline-text-4" id="text-secretos-actions">
 <p>
 GitHub Actions permite manejar información sensible de forma segura:
 </p>
 </div>
-<ul class="org-ul">
-<li><a id="org613a65d"></a>Configuración de secretos:<br>
-<div class="outline-text-5" id="text-org613a65d">
+<ol class="org-ol">
+<li><a id="orgac154b0"></a>Configuración de secretos:<br>
+<div class="outline-text-5" id="text-2-5-3-1">
 <p>
 En tu repositorio, ve a Settings &gt; Secrets and variables &gt; Actions
 Haz clic en "New repository secret"
@@ -1183,8 +1451,8 @@ Introduce el nombre y valor del secreto
 </p>
 </div>
 </li>
-<li><a id="orgcf34b2c"></a>Uso en workflows:<br>
-<div class="outline-text-5" id="text-orgcf34b2c">
+<li><a id="orge0ec25a"></a>Uso en workflows:<br>
+<div class="outline-text-5" id="text-2-5-3-2">
 <p>
 yamljobs:
   deploy:
@@ -1201,23 +1469,23 @@ run: |
 </ul>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 </div>
 <div id="outline-container-caracteristicas-avanzadas" class="outline-3">
-<h3 id="caracteristicas-avanzadas">Características avanzadas de GitHub</h3>
+<h3 id="caracteristicas-avanzadas"><span class="section-number-3">2.6.</span> Características avanzadas de GitHub</h3>
 <div class="outline-text-3" id="text-caracteristicas-avanzadas">
 <p>
 GitHub ofrece muchas características avanzadas que pueden mejorar significativamente tu flujo de trabajo. Veamos algunas de las más útiles:
 </p>
 </div>
 <div id="outline-container-issues-projects" class="outline-4">
-<h4 id="issues-projects">GitHub Issues y Projects</h4>
+<h4 id="issues-projects"><span class="section-number-4">2.6.1.</span> GitHub Issues y Projects</h4>
 <div class="outline-text-4" id="text-issues-projects">
 </div>
-<ul class="org-ul">
-<li><a id="org8a1dc68"></a>Issues<br>
-<div class="outline-text-5" id="text-org8a1dc68">
+<ol class="org-ol">
+<li><a id="org2a26086"></a>Issues<br>
+<div class="outline-text-5" id="text-2-6-1-1">
 <p>
 Los issues son el sistema de seguimiento de problemas de GitHub. Puedes usarlos para:
 </p>
@@ -1230,8 +1498,8 @@ Hacer preguntas o iniciar discusiones
 </p>
 </div>
 </li>
-<li><a id="orgaa1d68e"></a>Anatomía de un issue:<br>
-<div class="outline-text-5" id="text-orgaa1d68e">
+<li><a id="org874c51c"></a>Anatomía de un issue:<br>
+<div class="outline-text-5" id="text-2-6-1-2">
 <p>
 Título descriptivo
 Descripción detallada
@@ -1243,8 +1511,8 @@ Comentarios (discusión)
 </p>
 </div>
 </li>
-<li><a id="orgacd9300"></a>Plantillas de issues:<br>
-<div class="outline-text-5" id="text-orgacd9300">
+<li><a id="org0f3f357"></a>Plantillas de issues:<br>
+<div class="outline-text-5" id="text-2-6-1-3">
 <p>
 Puedes crear plantillas para diferentes tipos de issues añadiendo archivos en .github/ISSUE<sub>TEMPLATE</sub>/.
 Ejemplo de plantilla para reportar bugs:
@@ -1297,8 +1565,8 @@ Cualquier otra información relevante.
 </p>
 </div>
 </li>
-<li><a id="org2193613"></a>GitHub Projects<br>
-<div class="outline-text-5" id="text-org2193613">
+<li><a id="org25915a3"></a>GitHub Projects<br>
+<div class="outline-text-5" id="text-2-6-1-4">
 <p>
 Projects es la herramienta de gestión de proyectos integrada en GitHub, con tableros estilo Kanban:
 </p>
@@ -1311,24 +1579,24 @@ Automatización: Mover issues entre columnas automáticamente
 </p>
 
 
-<figure id="orgf772936">
-<img src="images/github-projects.png" alt="github-projects.png">
+<figure id="org04b898d">
+<img src="github-projects.png  results" alt="github-projects.png  results">
 
 </figure>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 <div id="outline-container-github-pages" class="outline-4">
-<h4 id="github-pages">GitHub Pages</h4>
+<h4 id="github-pages"><span class="section-number-4">2.6.2.</span> GitHub Pages</h4>
 <div class="outline-text-4" id="text-github-pages">
 <p>
 GitHub Pages permite publicar sitios web directamente desde tu repositorio:
 </p>
 </div>
-<ul class="org-ul">
-<li><a id="org47d8773"></a>Configuración básica:<br>
-<div class="outline-text-5" id="text-org47d8773">
+<ol class="org-ol">
+<li><a id="orgc79bd17"></a>Configuración básica:<br>
+<div class="outline-text-5" id="text-2-6-2-1">
 <p>
 Crea un repositorio llamado username.github.io (donde username es tu nombre de usuario)
 Añade archivos HTML, CSS y JavaScript
@@ -1336,8 +1604,8 @@ Activa GitHub Pages en Settings &gt; Pages
 </p>
 </div>
 </li>
-<li><a id="orgff5cff2"></a>Opciones de publicación:<br>
-<div class="outline-text-5" id="text-orgff5cff2">
+<li><a id="orgc080160"></a>Opciones de publicación:<br>
+<div class="outline-text-5" id="text-2-6-2-2">
 <p>
 Rama: Puedes publicar desde la rama main, gh-pages u otra
 Carpeta: Puedes elegir la carpeta raíz o /docs
@@ -1345,8 +1613,8 @@ Generadores: Jekyll integrado o cualquier generador de sitios estáticos
 </p>
 </div>
 </li>
-<li><a id="orgd7416e6"></a>Dominios personalizados:<br>
-<div class="outline-text-5" id="text-orgd7416e6">
+<li><a id="org5351da8"></a>Dominios personalizados:<br>
+<div class="outline-text-5" id="text-2-6-2-3">
 <p>
 Añade un archivo CNAME con tu dominio
 Configura los registros DNS
@@ -1354,8 +1622,8 @@ Activa HTTPS en la configuración
 </p>
 </div>
 </li>
-<li><a id="orge12bb29"></a>Ejemplo de flujo:<br>
-<div class="outline-text-5" id="text-orge12bb29">
+<li><a id="org7dbf75c"></a>Ejemplo de flujo:<br>
+<div class="outline-text-5" id="text-2-6-2-4">
 <p>
 bash# Crear sitio local
 mkdir mi-sitio
@@ -1372,18 +1640,18 @@ git push -u origin main
 </p>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 <div id="outline-container-github-wikis" class="outline-4">
-<h4 id="github-wikis">GitHub Wikis</h4>
+<h4 id="github-wikis"><span class="section-number-4">2.6.3.</span> GitHub Wikis</h4>
 <div class="outline-text-4" id="text-github-wikis">
 <p>
 Las wikis son ideales para documentación extensa:
 </p>
 </div>
-<ul class="org-ul">
-<li><a id="orgd134cef"></a>Características:<br>
-<div class="outline-text-5" id="text-orgd134cef">
+<ol class="org-ol">
+<li><a id="org2852e55"></a>Características:<br>
+<div class="outline-text-5" id="text-2-6-3-1">
 <p>
 Editor Markdown/HTML
 Historial de versiones
@@ -1392,8 +1660,8 @@ Puede clonarse como un repositorio Git
 </p>
 </div>
 </li>
-<li><a id="org9dd9541"></a>Ejemplo de estructura:<br>
-<div class="outline-text-5" id="text-org9dd9541">
+<li><a id="orgacc311b"></a>Ejemplo de estructura:<br>
+<div class="outline-text-5" id="text-2-6-3-2">
 <p>
 Home (página principal)
 Guía de instalación
@@ -1404,8 +1672,8 @@ FAQ
 </p>
 </div>
 </li>
-<li><a id="orga4ca373"></a>Comandos para trabajar con wikis:<br>
-<div class="outline-text-5" id="text-orga4ca373">
+<li><a id="orgb21eeea"></a>Comandos para trabajar con wikis:<br>
+<div class="outline-text-5" id="text-2-6-3-3">
 <p>
 bash# Clonar una wiki
 git clone <a href="https://github.com/username/repo.wiki.git">https://github.com/username/repo.wiki.git</a>
@@ -1422,18 +1690,18 @@ git push
 </p>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 <div id="outline-container-codespaces" class="outline-4">
-<h4 id="codespaces">GitHub Codespaces</h4>
+<h4 id="codespaces"><span class="section-number-4">2.6.4.</span> GitHub Codespaces</h4>
 <div class="outline-text-4" id="text-codespaces">
 <p>
 Codespaces proporciona entornos de desarrollo basados en la nube:
 </p>
 </div>
-<ul class="org-ul">
-<li><a id="org5206347"></a>Características principales:<br>
-<div class="outline-text-5" id="text-org5206347">
+<ol class="org-ol">
+<li><a id="orgb0e72e8"></a>Características principales:<br>
+<div class="outline-text-5" id="text-2-6-4-1">
 <p>
 Entorno de desarrollo completo en el navegador
 VS Code integrado
@@ -1443,8 +1711,8 @@ Prebuilds para iniciar más rápido
 </p>
 </div>
 </li>
-<li><a id="org8e153be"></a>Configuración básica:<br>
-<div class="outline-text-5" id="text-org8e153be">
+<li><a id="org7ce1c3d"></a>Configuración básica:<br>
+<div class="outline-text-5" id="text-2-6-4-2">
 <p>
 Crea un archivo .devcontainer/devcontainer.json:
 </p>
@@ -1472,39 +1740,32 @@ Desarrolla, ejecuta y prueba directamente en la nube
 </p>
 
 
-<figure id="org692d7aa">
+<figure id="org3d84c5f">
 <img src="github-codespaces.png  results" alt="github-codespaces.png  results">
-
-</figure>
-
-
-
-<figure id="org439ab1d">
-<img src="images/github-codespaces.png  results" alt="github-codespaces.png  results">
 
 </figure>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 </div>
 <div id="outline-container-buenas-practicas" class="outline-3">
-<h3 id="buenas-practicas">Buenas prácticas y consejos avanzados</h3>
+<h3 id="buenas-practicas"><span class="section-number-3">2.7.</span> Buenas prácticas y consejos avanzados</h3>
 <div class="outline-text-3" id="text-buenas-practicas">
 <p>
 Para finalizar, veamos algunas recomendaciones para trabajar de forma efectiva con GitHub:
 </p>
 </div>
 <div id="outline-container-convenciones-commits" class="outline-4">
-<h4 id="convenciones-commits">Convenciones de commits</h4>
+<h4 id="convenciones-commits"><span class="section-number-4">2.7.1.</span> Convenciones de commits</h4>
 <div class="outline-text-4" id="text-convenciones-commits">
 <p>
 Adoptar un estándar para mensajes de commit mejora la legibilidad y facilita la generación de changelogs automáticos.
 </p>
 </div>
-<ul class="org-ul">
-<li><a id="orge580685"></a>Conventional Commits:<br>
-<div class="outline-text-5" id="text-orge580685">
+<ol class="org-ol">
+<li><a id="orgbdd8bf3"></a>Conventional Commits:<br>
+<div class="outline-text-5" id="text-2-7-1-1">
 <p>
 &lt;tipo&gt;[ámbito opcional]: &lt;descripción&gt;
 </p>
@@ -1542,18 +1803,18 @@ docs: actualizar instrucciones de instalación
 </p>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 <div id="outline-container-archivos-esenciales" class="outline-4">
-<h4 id="archivos-esenciales">Archivos esenciales para repositorios</h4>
+<h4 id="archivos-esenciales"><span class="section-number-4">2.7.2.</span> Archivos esenciales para repositorios</h4>
 <div class="outline-text-4" id="text-archivos-esenciales">
 <p>
 Estos archivos mejoran significativamente la calidad y usabilidad de tu repositorio:
 </p>
 </div>
-<ul class="org-ul">
-<li><a id="org9b0ce20"></a>README.md<br>
-<div class="outline-text-5" id="text-org9b0ce20">
+<ol class="org-ol">
+<li><a id="orgf6fadf9"></a>README.md<br>
+<div class="outline-text-5" id="text-2-7-2-1">
 <p>
 Primer archivo que verán los visitantes. Debe incluir:
 </p>
@@ -1567,8 +1828,8 @@ Licencia
 </p>
 </div>
 </li>
-<li><a id="org298037e"></a>.gitignore<br>
-<div class="outline-text-5" id="text-org298037e">
+<li><a id="org7868658"></a>.gitignore<br>
+<div class="outline-text-5" id="text-2-7-2-2">
 <p>
 Especifica archivos que Git debe ignorar:
 </p>
@@ -1598,8 +1859,8 @@ Thumbs.db
 </p>
 </div>
 </li>
-<li><a id="org0d2be18"></a>LICENSE<br>
-<div class="outline-text-5" id="text-org0d2be18">
+<li><a id="orgf2c9218"></a>LICENSE<br>
+<div class="outline-text-5" id="text-2-7-2-3">
 <p>
 Define cómo se puede usar tu código. Opciones comunes:
 </p>
@@ -1612,8 +1873,8 @@ AGPL: Como GPL pero también para software como servicio
 </p>
 </div>
 </li>
-<li><a id="orga7a35eb"></a>CONTRIBUTING.md<br>
-<div class="outline-text-5" id="text-orga7a35eb">
+<li><a id="org837ece8"></a>CONTRIBUTING.md<br>
+<div class="outline-text-5" id="text-2-7-2-4">
 <p>
 Guía para contribuidores:
 </p>
@@ -1626,8 +1887,8 @@ Proceso de pull request
 </p>
 </div>
 </li>
-<li><a id="org99ed7c7"></a>SECURITY.md<br>
-<div class="outline-text-5" id="text-org99ed7c7">
+<li><a id="org6b3e7cf"></a>SECURITY.md<br>
+<div class="outline-text-5" id="text-2-7-2-5">
 <p>
 Política de seguridad:
 </p>
@@ -1639,15 +1900,15 @@ Proceso de divulgación
 </p>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 <div id="outline-container-dependencias-seguridad" class="outline-4">
-<h4 id="dependencias-seguridad">Gestión de dependencias y seguridad</h4>
+<h4 id="dependencias-seguridad"><span class="section-number-4">2.7.3.</span> Gestión de dependencias y seguridad</h4>
 <div class="outline-text-4" id="text-dependencias-seguridad">
 </div>
-<ul class="org-ul">
-<li><a id="org54a313b"></a>Dependabot<br>
-<div class="outline-text-5" id="text-org54a313b">
+<ol class="org-ol">
+<li><a id="org3006d8c"></a>Dependabot<br>
+<div class="outline-text-5" id="text-2-7-3-1">
 <p>
 GitHub incluye Dependabot para gestionar dependencias:
 </p>
@@ -1679,8 +1940,8 @@ También alertará sobre vulnerabilidades de seguridad
 </p>
 </div>
 </li>
-<li><a id="org3479426"></a>Security Scanning<br>
-<div class="outline-text-5" id="text-org3479426">
+<li><a id="org657a9d9"></a>Security Scanning<br>
+<div class="outline-text-5" id="text-2-7-3-2">
 <p>
 GitHub ofrece herramientas de análisis de seguridad:
 </p>
@@ -1735,11 +1996,11 @@ uses: github/codeql-action/analyze@v2</li>
 </ul>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 </div>
 <div id="outline-container-conclusion-cap2" class="outline-3">
-<h3 id="conclusion-cap2">Conclusión del Capítulo 2</h3>
+<h3 id="conclusion-cap2"><span class="section-number-3">2.8.</span> Conclusión del Capítulo 2</h3>
 <div class="outline-text-3" id="text-conclusion-cap2">
 <p>
 En este capítulo, hemos explorado en profundidad cómo trabajar con GitHub, desde los conceptos básicos hasta características avanzadas y buenas prácticas.
@@ -1778,16 +2039,24 @@ Referencias
 </div>
 </div>
 </div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-git.html">git</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-github.html">github</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-colaboracion.html">colaboracion</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-desarrollo_software.html">desarrollo_software</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-codigo_abierto.html">codigo_abierto</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-devops.html">devops</a> </div>]]></description>
-  <category><![CDATA[git]]></category>
-  <category><![CDATA[github]]></category>
-  <category><![CDATA[colaboracion]]></category>
-  <category><![CDATA[desarrollo_software]]></category>
-  <category><![CDATA[codigo_abierto]]></category>
-  <category><![CDATA[devops]]></category>
-  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-09-github-de-sus-or-genes-a-la-pr-ctica.html</link>
-  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-09-github-de-sus-or-genes-a-la-pr-ctica.html</guid>
-  <pubDate>Fri, 09 May 2025 06:49:00 +0200</pubDate>
-</item>
-</channel>
-</rss>
+<div class="taglist"></div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>

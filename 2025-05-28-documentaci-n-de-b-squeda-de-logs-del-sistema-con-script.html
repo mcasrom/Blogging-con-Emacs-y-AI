@@ -186,14 +186,9 @@
 <div id="preamble" class="status"></div>
 <div id="content">
 <div class="post-date">28/05/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-28-documentaci-n-de-b-squeda-de-logs-del-sistema-con-script.html">Documentación de Búsqueda de Logs del Sistema con Script</a></h1>
-<div id="outline-container-org9c54988" class="outline-2">
-<h2 id="org9c54988">Introducción</h2>
-</div>
-
-
-<div id="outline-container-orgfdfadf7" class="outline-2">
-<h2 id="orgfdfadf7">Introducción</h2>
-<div class="outline-text-2" id="text-orgfdfadf7">
+<div id="outline-container-orgc0541d6" class="outline-2">
+<h2 id="orgc0541d6">Introducción</h2>
+<div class="outline-text-2" id="text-orgc0541d6">
 <p>
 Este documento contiene un script en Bash diseñado para buscar archivos de log del sistema en una laptop con Linux. El script explora el directorio `/var/log` en busca de archivos con extensión `.log` y recopila la siguiente información para cada archivo:
 </p>
@@ -209,9 +204,9 @@ Los resultados se ordenan por tamaño de mayor a menor y se presentan en una tab
 </p>
 </div>
 </div>
-<div id="outline-container-orge0722aa" class="outline-2">
-<h2 id="orge0722aa">Script en Bash</h2>
-<div class="outline-text-2" id="text-orge0722aa">
+<div id="outline-container-orgad85b12" class="outline-2">
+<h2 id="orgad85b12">Script en Bash</h2>
+<div class="outline-text-2" id="text-orgad85b12">
 <p>
 El siguiente script en Bash busca archivos de log, los ordena por tamaño y determina si son críticos. Se ha corregido para evitar errores de sintaxis y garantizar compatibilidad.
 </p>
@@ -267,9 +262,9 @@ Para ejecutar el script:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf0f2352" class="outline-2">
-<h2 id="orgf0f2352">Resultados</h2>
-<div class="outline-text-2" id="text-orgf0f2352">
+<div id="outline-container-org5f646ad" class="outline-2">
+<h2 id="org5f646ad">Resultados</h2>
+<div class="outline-text-2" id="text-org5f646ad">
 <p>
 La siguiente tabla contiene los resultados del script, ordenados por tamaño de mayor a menor. Los logs marcados como "Crítico: Sí" deben revisarse para una evaluación posterior.
 </p>
@@ -281,9 +276,9 @@ La siguiente tabla contiene los resultados del script, ordenados por tamaño de 
 </div>
 </div>
 </div>
-<div id="outline-container-org04753bb" class="outline-2">
-<h2 id="org04753bb">Notas</h2>
-<div class="outline-text-2" id="text-org04753bb">
+<div id="outline-container-org763877e" class="outline-2">
+<h2 id="org763877e">Notas</h2>
+<div class="outline-text-2" id="text-org763877e">
 <ul class="org-ul">
 <li><b><b>Ubicación</b></b>: El script busca en `/var/log`. Modifique `LOG<sub>DIR</sub>` en el script para incluir otros directorios si es necesario.</li>
 <li><b><b>Permisos</b></b>: Los archivos de log en `/var/log` a menudo requieren permisos de superusuario. Ejecute el script con `sudo bash ./buscar<sub>logs.sh</sub>` para evitar errores de permisos.</li>

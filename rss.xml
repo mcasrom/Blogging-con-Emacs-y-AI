@@ -4,7 +4,7 @@
 <title><![CDATA[Emacs con esteroides]]></title>
 <description><![CDATA[Emacs con esteroides]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Wed, 28 May 2025 12:56:48 +0200</lastBuildDate>
+<lastBuildDate>Wed, 28 May 2025 13:34:42 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Explorando Shima Spain Village: Un Rincón Español en Japón]]></title>
   <description><![CDATA[
@@ -130,7 +130,7 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[españa]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</guid>
-  <pubDate>Wed, 28 May 2025 12:56:47 +0200</pubDate>
+  <pubDate>Wed, 28 May 2025 13:34:41 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
@@ -915,6 +915,12 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
 </tr>
 
 <tr>
+<td class="org-right">2025-05-28</td>
+<td class="org-left">Nace un blog complementario: "El Mapa y El Código"</td>
+<td class="org-left"><a href="2025-05-28-nace-un-blog-complementario-el-mapa-y-el-c-digo-.html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
@@ -927,7 +933,7 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
 </tr>
 
 <tr>
-<td class="org-right">2025-05-27</td>
+<td class="org-right">2025-05-28</td>
 <td class="org-left">Índice de Publicaciones del Blog</td>
 <td class="org-left"><a href="indice-posts.html">Enlace</a></td>
 </tr>
@@ -956,19 +962,90 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Wed, 28 May 2025 12:53:00 +0200</pubDate>
+  <pubDate>Wed, 28 May 2025 13:30:00 +0200</pubDate>
+</item>
+<item>
+  <title><![CDATA[Nace un blog complementario: "El Mapa y El Código"]]></title>
+  <description><![CDATA[
+<div id="outline-container-org9931f1c" class="outline-2">
+<h2 id="org9931f1c">Un nuevo espacio con la misma energía</h2>
+<div class="outline-text-2" id="text-org9931f1c">
+<p>
+Desde que inicié <b>Emacs con Esteroides</b>, he mantenido un principio claro: usar Emacs no solo como una herramienta, sino como un entorno completo para pensar, escribir, publicar y automatizar. Hoy quiero compartir con quienes siguen este blog una novedad que nace del mismo impulso creativo, la misma atención al detalle y el mismo amor por <b>Org Mode</b> y el flujo de trabajo con Git.
+</p>
+
+<p>
+<b><b>Ha nacido un blog complementario: <a href="https://mcasrom.github.io/geo-ia/">El Mapa y El Código</a></b></b>
+</p>
+
+<p>
+Este nuevo espacio, construido completamente en Emacs y Org Mode, está dedicado al análisis de temas geoestratégicos, geopolíticos y de relaciones de poder global. Si en <b>Emacs con Esteroides</b> exploramos el poder técnico y filosófico de Emacs, en <b>El Mapa y El Código</b> abordamos el poder en su dimensión política y territorial.
+</p>
+</div>
+</div>
+<div id="outline-container-org347914b" class="outline-2">
+<h2 id="org347914b">¿Por qué otro blog?</h2>
+<div class="outline-text-2" id="text-org347914b">
+<p>
+Aunque los dos blogs comparten la misma infraestructura (Emacs + Org + GitHub Pages), el contenido y enfoque de cada uno responde a distintas pasiones: la ingeniería del conocimiento y la ingeniería del mundo. Esta separación permite mantener la claridad temática sin dejar de aprovechar todo el ecosistema de Emacs para escribir, analizar y publicar.
+</p>
+</div>
+</div>
+<div id="outline-container-org83c1de2" class="outline-2">
+<h2 id="org83c1de2">¿Qué puedes esperar de <b>El Mapa y El Código</b>?</h2>
+<div class="outline-text-2" id="text-org83c1de2">
+<ul class="org-ul">
+<li>Análisis actuales sobre conflictos, tensiones y alianzas globales.</li>
+<li>Diagramas en PlantUML y mapas conceptuales generados desde Org.</li>
+<li>Reflexiones críticas sobre los equilibrios de poder emergentes.</li>
+<li>Vinculación con herramientas libres y visualización en Emacs.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org393b469" class="outline-2">
+<h2 id="org393b469">En resumen</h2>
+<div class="outline-text-2" id="text-org393b469">
+<p>
+Si te interesa el uso avanzado de Emacs, <b>Emacs con Esteroides</b> seguirá siendo tu espacio. Pero si también te atrae el análisis geopolítico con una mirada técnica, crítica y libre, te invito a visitar y seguir:
+</p>
+
+<p>
+👉 <a href="https://mcasrom.github.io/El-Mapa-y-el-C-digo/">El Mapa y El Código</a>
+</p>
+
+<p>
+Espero sinceramente que este nuevo proyecto también sea de tu interés.
+</p>
+
+<p>
+
+</p>
+
+
+<blockquote>
+<p>
+<b>Dos blogs, una misma filosofía: pensar, escribir, publicar y compartir desde Emacs.</b>
+</p>
+</blockquote>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-org-mode.html">org-mode</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-geopolitica.html">geopolitica</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-geoestrategia.html">geoestrategia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-blog.html">blog</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-github.html">github</a> </div>]]></description>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[org-mode]]></category>
+  <category><![CDATA[geopolitica]]></category>
+  <category><![CDATA[geoestrategia]]></category>
+  <category><![CDATA[blog]]></category>
+  <category><![CDATA[github]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-28-nace-un-blog-complementario-el-mapa-y-el-c-digo-.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-28-nace-un-blog-complementario-el-mapa-y-el-c-digo-.html</guid>
+  <pubDate>Wed, 28 May 2025 13:07:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Documentación de Búsqueda de Logs del Sistema con Script]]></title>
   <description><![CDATA[
-<div id="outline-container-org9c54988" class="outline-2">
-<h2 id="org9c54988">Introducción</h2>
-</div>
-
-
-<div id="outline-container-orgfdfadf7" class="outline-2">
-<h2 id="orgfdfadf7">Introducción</h2>
-<div class="outline-text-2" id="text-orgfdfadf7">
+<div id="outline-container-orgc0541d6" class="outline-2">
+<h2 id="orgc0541d6">Introducción</h2>
+<div class="outline-text-2" id="text-orgc0541d6">
 <p>
 Este documento contiene un script en Bash diseñado para buscar archivos de log del sistema en una laptop con Linux. El script explora el directorio `/var/log` en busca de archivos con extensión `.log` y recopila la siguiente información para cada archivo:
 </p>
@@ -984,9 +1061,9 @@ Los resultados se ordenan por tamaño de mayor a menor y se presentan en una tab
 </p>
 </div>
 </div>
-<div id="outline-container-orge0722aa" class="outline-2">
-<h2 id="orge0722aa">Script en Bash</h2>
-<div class="outline-text-2" id="text-orge0722aa">
+<div id="outline-container-orgad85b12" class="outline-2">
+<h2 id="orgad85b12">Script en Bash</h2>
+<div class="outline-text-2" id="text-orgad85b12">
 <p>
 El siguiente script en Bash busca archivos de log, los ordena por tamaño y determina si son críticos. Se ha corregido para evitar errores de sintaxis y garantizar compatibilidad.
 </p>
@@ -1042,9 +1119,9 @@ Para ejecutar el script:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf0f2352" class="outline-2">
-<h2 id="orgf0f2352">Resultados</h2>
-<div class="outline-text-2" id="text-orgf0f2352">
+<div id="outline-container-org5f646ad" class="outline-2">
+<h2 id="org5f646ad">Resultados</h2>
+<div class="outline-text-2" id="text-org5f646ad">
 <p>
 La siguiente tabla contiene los resultados del script, ordenados por tamaño de mayor a menor. Los logs marcados como "Crítico: Sí" deben revisarse para una evaluación posterior.
 </p>
@@ -1056,9 +1133,9 @@ La siguiente tabla contiene los resultados del script, ordenados por tamaño de 
 </div>
 </div>
 </div>
-<div id="outline-container-org04753bb" class="outline-2">
-<h2 id="org04753bb">Notas</h2>
-<div class="outline-text-2" id="text-org04753bb">
+<div id="outline-container-org763877e" class="outline-2">
+<h2 id="org763877e">Notas</h2>
+<div class="outline-text-2" id="text-org763877e">
 <ul class="org-ul">
 <li><b><b>Ubicación</b></b>: El script busca en `/var/log`. Modifique `LOG<sub>DIR</sub>` en el script para incluir otros directorios si es necesario.</li>
 <li><b><b>Permisos</b></b>: Los archivos de log en `/var/log` a menudo requieren permisos de superusuario. Ejecute el script con `sudo bash ./buscar<sub>logs.sh</sub>` para evitar errores de permisos.</li>
