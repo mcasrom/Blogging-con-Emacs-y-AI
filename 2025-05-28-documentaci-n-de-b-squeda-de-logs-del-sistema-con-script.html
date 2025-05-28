@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Este documento proporciona un script en Bash para localizar y documentar archivos de log del sistema en una laptop con Linux, incluyendo nombre, tamaño, fecha de última modificación y estado crítico. Los resultados se presentan en una tabla Org-mode ordenada por tamaño de mayor a menor, con identificación de logs críticos para evaluación posterior.">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Documentación de Búsqueda de Logs del Sistema con Script</title>
+<meta property="og:title" content="Documentación de Búsqueda de Logs del Sistema con Script">
+<meta property="og:type" content="article" />
+<meta property="og:description" content="Este documento proporciona un script en Bash para localizar y documentar archivos de log del sistema en una laptop con Linux, incluyendo nombre, tamaño, fecha de última modificación y estado crítico. Los resultados se presentan en una tabla Org-mode ordenada por tamaño de mayor a menor, con identificación de logs críticos para evaluación posterior.">
+<meta property="og:url" content="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-28-documentaci-n-de-b-squeda-de-logs-del-sistema-con-script.html">
+<meta charset='UTF-8'>
+ <!-- ======= SEO y Redes Sociales ======= -->
+       <meta name='author' content='Mike'>
+       <meta name='description' content='Blog sobre Emacs, org-mode, automatización y herramientas avanzadas'>
+       <meta name='keywords' content='Emacs, Org Mode, Linux, Inteligencia Artificial, Automatización, Tutoriales'>
+       <meta property='og:title' content='Emacs con esteroides'>
+       <meta property='og:description' content='Poder y Simplicidad con Emacs, IA y Linux'>
+       <meta property='og:image' content='https://mcasrom.github.io/logo.png'>
+       <meta property='og:url' content='https://mcasrom.github.io/'>
+       <meta property='og:type' content='website'>
+       <meta name='twitter:card' content='summary_large_image'>
+       <meta name='twitter:title' content='Emacs con esteroides'>
+       <meta name='twitter:description' content='Blog sobre Emacs, IA y herramientas avanzadas'>
+       <meta name='twitter:image' content='https://tuusuario.github.io/logo.png'>
+       <link rel='alternate' type='application/rss+xml' href='rss.xml'>
+       <link rel='sitemap' type='application/xml' title='Sitemap' href='sitemap.xml'>
+
+ <!-- === Google Analytics === -->
+       <script async src='https://www.googletagmanager.com/gtag/js?id=G-7YJ0SNJXSJ'></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-7YJ0SNJXSJ');
+       </script>
+
+
+<!-- ======= Estilo y Fuentes ======= -->
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.8em; .85
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
+       </nav>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">28/05/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-28-documentaci-n-de-b-squeda-de-logs-del-sistema-con-script.html">Documentación de Búsqueda de Logs del Sistema con Script</a></h1>
+<div id="outline-container-org9c54988" class="outline-2">
+<h2 id="org9c54988">Introducción</h2>
+</div>
+
+
+<div id="outline-container-orgfdfadf7" class="outline-2">
+<h2 id="orgfdfadf7">Introducción</h2>
+<div class="outline-text-2" id="text-orgfdfadf7">
+<p>
+Este documento contiene un script en Bash diseñado para buscar archivos de log del sistema en una laptop con Linux. El script explora el directorio `/var/log` en busca de archivos con extensión `.log` y recopila la siguiente información para cada archivo:
+</p>
+<ul class="org-ul">
+<li><b>Nombre del Archivo</b>: La ruta completa del archivo de log.</li>
+<li><b>Tamaño</b>: El tamaño del archivo en formato legible (por ejemplo, KB, MB).</li>
+<li><b>Última Modificación</b>: La fecha y hora de la última modificación.</li>
+<li><b>Crítico</b>: Indica si el log es potencialmente crítico ("Sí" o "No"), basado en palabras clave como "error", "fail", "auth" o "syslog".</li>
+</ul>
+
+<p>
+Los resultados se ordenan por tamaño de mayor a menor y se presentan en una tabla Org-mode. Los logs marcados como críticos deben revisarse para evaluar posibles problemas del sistema o eventos de seguridad.
+</p>
+</div>
+</div>
+<div id="outline-container-orge0722aa" class="outline-2">
+<h2 id="orge0722aa">Script en Bash</h2>
+<div class="outline-text-2" id="text-orge0722aa">
+<p>
+El siguiente script en Bash busca archivos de log, los ordena por tamaño y determina si son críticos. Se ha corregido para evitar errores de sintaxis y garantizar compatibilidad.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Definir el directorio de b&#250;squeda de logs</span>
+<span style="color: #1857a4;">LOG_DIR</span>=<span style="color: #a44185;">"/var/log"</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Verificar si el directorio existe</span>
+<span style="color: #219fd5; font-style: italic;">if</span> [ <span style="color: #219fd5; font-weight: bold;">!</span> -d <span style="color: #a44185;">"$LOG_DIR"</span> ]; <span style="color: #219fd5; font-style: italic;">then</span>
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"Error: El directorio $LOG_DIR no existe."</span>
+  <span style="color: #219fd5; font-style: italic;">exit</span> 1
+<span style="color: #219fd5; font-style: italic;">fi</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Imprimir encabezado de la tabla Org-mode</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"| Nombre del Archivo | Tama&#241;o | &#218;ltima Modificaci&#243;n | Cr&#237;tico |"</span>
+<span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"|--------------------|--------|---------------------|---------|"</span>
+
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Buscar archivos .log, recopilar informaci&#243;n, ordenar por tama&#241;o</span>
+find <span style="color: #a44185;">"$LOG_DIR"</span> -type f -name <span style="color: #a44185;">"*.log"</span> -exec /bin/bash -c <span style="color: #a44185;">'</span>
+<span style="color: #a44185;">  for file; do</span>
+<span style="color: #a44185;">    # Obtener tama&#241;o en formato legible</span>
+<span style="color: #a44185;">    size=$(</span><span style="color: #219fd5; font-weight: bold;">ls -lh "$file" | awk "{print \$5}"</span><span style="color: #a44185;">)</span>
+<span style="color: #a44185;">    # Obtener tama&#241;o en bytes para ordenar</span>
+<span style="color: #a44185;">    size_bytes=$(</span><span style="color: #219fd5; font-weight: bold;">ls -l "$file" | awk "{print \$5}"</span><span style="color: #a44185;">)</span>
+<span style="color: #a44185;">    # Obtener fecha de &#250;ltima modificaci&#243;n</span>
+<span style="color: #a44185;">    last_modified=$(</span><span style="color: #219fd5; font-weight: bold;">stat -c %y "$file" | cut -d. -f1</span><span style="color: #a44185;">)</span>
+<span style="color: #a44185;">    # Determinar si el log es cr&#237;tico usando grep</span>
+<span style="color: #a44185;">    if echo "$file" | grep -E -i "error|fail|auth|syslog" &gt;/dev/null; then</span>
+<span style="color: #a44185;">      critical="S&#237;"</span>
+<span style="color: #a44185;">    else</span>
+<span style="color: #a44185;">      critical="No"</span>
+<span style="color: #a44185;">    fi</span>
+<span style="color: #a44185;">    # Imprimir fila con tama&#241;o en bytes para ordenar</span>
+<span style="color: #a44185;">    echo "$size_bytes|$file|$size|$last_modified|$critical"</span>
+<span style="color: #a44185;">  done</span>
+<span style="color: #a44185;">'</span> bash {} + | sort -t<span style="color: #a44185;">"|"</span> -k1 -nr | <span style="color: #219fd5; font-style: italic;">while</span> <span style="color: #1857a4;">IFS</span>=<span style="color: #a44185;">"|"</span> read -r size_bytes file size last_modified critical; <span style="color: #219fd5; font-style: italic;">do</span>
+  <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Imprimir fila en formato Org-mode, sin el tama&#241;o en bytes</span>
+  <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"| $file | $size | $last_modified | $critical |"</span>
+<span style="color: #219fd5; font-style: italic;">done</span>
+</code></pre>
+</div>
+
+<p>
+Para ejecutar el script:
+</p>
+<ol class="org-ol">
+<li>Guarde el script como `buscar<sub>logs.sh</sub>`.</li>
+<li>Haga el script ejecutable: `chmod +x buscar<sub>logs.sh</sub>`.</li>
+<li>Ejecute el script con: `sudo bash ./buscar<sub>logs.sh</sub> &gt; resultados.org`.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgf0f2352" class="outline-2">
+<h2 id="orgf0f2352">Resultados</h2>
+<div class="outline-text-2" id="text-orgf0f2352">
+<p>
+La siguiente tabla contiene los resultados del script, ordenados por tamaño de mayor a menor. Los logs marcados como "Crítico: Sí" deben revisarse para una evaluación posterior.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><code><span style="color: #a44185;">| Nombre del Archivo | Tama&#241;o | &#218;ltima Modificaci&#243;n | Cr&#237;tico |</span>
+<span style="color: #a44185;">|--------------------|--------|---------------------|---------|</span>
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org04753bb" class="outline-2">
+<h2 id="org04753bb">Notas</h2>
+<div class="outline-text-2" id="text-org04753bb">
+<ul class="org-ul">
+<li><b><b>Ubicación</b></b>: El script busca en `/var/log`. Modifique `LOG<sub>DIR</sub>` en el script para incluir otros directorios si es necesario.</li>
+<li><b><b>Permisos</b></b>: Los archivos de log en `/var/log` a menudo requieren permisos de superusuario. Ejecute el script con `sudo bash ./buscar<sub>logs.sh</sub>` para evitar errores de permisos.</li>
+<li><b><b>Logs Críticos</b></b>: Los logs marcados como "Crítico: Sí" contienen palabras clave como "error", "fail", "auth" o "syslog". Revise estos archivos para identificar problemas del sistema o eventos de seguridad.</li>
+<li><b><b>Actualización de Resultados</b></b>: Copie la salida del script (`resultados.org`) en la sección <b>Resultados</b> para actualizar la tabla.</li>
+<li><b><b>Corrección de Errores</b></b>: Se ha reemplazado la sintaxis Bash específica (`=~`) con `grep` para evitar errores de compatibilidad con `sh`.</li>
+<li><b><b>Ejecución con Bash</b></b>: Use `sudo bash ./buscar<sub>logs.sh</sub>` en lugar de `sudo ./buscar<sub>logs.sh</sub>` si persisten problemas de sintaxis, para garantizar que se use Bash.</li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-logs.html">logs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-sistema.html">sistema</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>
