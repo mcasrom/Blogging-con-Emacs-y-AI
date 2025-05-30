@@ -4,13 +4,13 @@
 <title><![CDATA[Emacs con esteroides - geoestrategia]]></title>
 <description><![CDATA[Emacs con esteroides - geoestrategia]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-geoestrategia.html</link>
-<lastBuildDate>Thu, 29 May 2025 01:54:18 +0200</lastBuildDate>
+<lastBuildDate>Fri, 30 May 2025 06:55:52 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Nace un blog complementario: "El Mapa y El Código"]]></title>
   <description><![CDATA[
-<div id="outline-container-orge56ec87" class="outline-2">
-<h2 id="orge56ec87">Un nuevo espacio con la misma energía</h2>
-<div class="outline-text-2" id="text-orge56ec87">
+<div id="outline-container-orgf0906e7" class="outline-2">
+<h2 id="orgf0906e7">Un nuevo espacio con la misma energía</h2>
+<div class="outline-text-2" id="text-orgf0906e7">
 <p>
 Desde que inicié <b>Emacs con Esteroides</b>, he mantenido un principio claro: usar Emacs no solo como una herramienta, sino como un entorno completo para pensar, escribir, publicar y automatizar. Hoy quiero compartir con quienes siguen este blog una novedad que nace del mismo impulso creativo, la misma atención al detalle y el mismo amor por <b>Org Mode</b> y el flujo de trabajo con Git.
 </p>
@@ -24,23 +24,23 @@ Este nuevo espacio, construido completamente en Emacs y Org Mode, está dedicado
 </p>
 
 
-<figure id="orgefa9687">
+<figure id="org7d2682a">
 <a href="https://mcasrom.github.io/geo-ia/" width="800px"><img src="images/logoblog_backup.png" alt="logoblog_backup.png" width="800px"></a>
 
 </figure>
 </div>
 </div>
-<div id="outline-container-orgab6a361" class="outline-2">
-<h2 id="orgab6a361">¿Por qué otro blog?</h2>
-<div class="outline-text-2" id="text-orgab6a361">
+<div id="outline-container-org1eb1806" class="outline-2">
+<h2 id="org1eb1806">¿Por qué otro blog?</h2>
+<div class="outline-text-2" id="text-org1eb1806">
 <p>
 Aunque los dos blogs comparten la misma infraestructura (Emacs + Org + GitHub Pages), el contenido y enfoque de cada uno responde a distintas pasiones: la ingeniería del conocimiento y la ingeniería del mundo. Esta separación permite mantener la claridad temática sin dejar de aprovechar todo el ecosistema de Emacs para escribir, analizar y publicar.
 </p>
 </div>
 </div>
-<div id="outline-container-org83aed79" class="outline-2">
-<h2 id="org83aed79">¿Qué puedes esperar de <b>El Mapa y El Código</b>?</h2>
-<div class="outline-text-2" id="text-org83aed79">
+<div id="outline-container-org2c48267" class="outline-2">
+<h2 id="org2c48267">¿Qué puedes esperar de <b>El Mapa y El Código</b>?</h2>
+<div class="outline-text-2" id="text-org2c48267">
 <ul class="org-ul">
 <li>Análisis actuales sobre conflictos, tensiones y alianzas globales.</li>
 <li>Diagramas en PlantUML y mapas conceptuales generados desde Org.</li>
@@ -49,15 +49,15 @@ Aunque los dos blogs comparten la misma infraestructura (Emacs + Org + GitHub Pa
 </ul>
 </div>
 </div>
-<div id="outline-container-org35ea8e8" class="outline-2">
-<h2 id="org35ea8e8">En resumen</h2>
-<div class="outline-text-2" id="text-org35ea8e8">
+<div id="outline-container-org7ae2157" class="outline-2">
+<h2 id="org7ae2157">En resumen</h2>
+<div class="outline-text-2" id="text-org7ae2157">
 <p>
 Si te interesa el uso avanzado de Emacs, <b>Emacs con Esteroides</b> seguirá siendo tu espacio. Pero si también te atrae el análisis geopolítico con una mirada técnica, crítica y libre, te invito a visitar y seguir:
 </p>
 
 <p>
-👉 <a href="https://mcasrom.github.io/El-Mapa-y-el-C-digo/">El Mapa y El Código</a>
+👉 <a href="https://mcasrom.github.io/geo-ia/">El Mapa y El Código</a>
 </p>
 
 <p>
@@ -65,7 +65,7 @@ Espero sinceramente que este nuevo proyecto también sea de tu interés.
 </p>
 
 
-<figure id="org1f07328">
+<figure id="orgf94c077">
 <img src="images/blog-relacion-diagrama.png" alt="blog-relacion-diagrama.png">
 
 </figure>

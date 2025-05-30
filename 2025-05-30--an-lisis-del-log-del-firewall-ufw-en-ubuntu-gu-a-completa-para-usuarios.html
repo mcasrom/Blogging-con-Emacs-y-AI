@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Guía detallada para localizar, analizar y resumir logs de UFW en Ubuntu.">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Análisis del Log del Firewall UFW en Ubuntu: Guía Completa para Usuarios</title>
+<meta property="og:title" content="Análisis del Log del Firewall UFW en Ubuntu: Guía Completa para Usuarios">
+<meta property="og:type" content="article" />
+<meta property="og:description" content="Guía detallada para localizar, analizar y resumir logs de UFW en Ubuntu.">
+<meta property="og:url" content="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-30--an-lisis-del-log-del-firewall-ufw-en-ubuntu-gu-a-completa-para-usuarios.html">
+<meta charset='UTF-8'>
+ <!-- ======= SEO y Redes Sociales ======= -->
+       <meta name='author' content='Mike'>
+       <meta name='description' content='Blog sobre Emacs, org-mode, automatización y herramientas avanzadas'>
+       <meta name='keywords' content='Emacs, Org Mode, Linux, Inteligencia Artificial, Automatización, Tutoriales'>
+       <meta property='og:title' content='Emacs con esteroides'>
+       <meta property='og:description' content='Poder y Simplicidad con Emacs, IA y Linux'>
+       <meta property='og:image' content='https://mcasrom.github.io/logo.png'>
+       <meta property='og:url' content='https://mcasrom.github.io/'>
+       <meta property='og:type' content='website'>
+       <meta name='twitter:card' content='summary_large_image'>
+       <meta name='twitter:title' content='Emacs con esteroides'>
+       <meta name='twitter:description' content='Blog sobre Emacs, IA y herramientas avanzadas'>
+       <meta name='twitter:image' content='https://tuusuario.github.io/logo.png'>
+       <link rel='alternate' type='application/rss+xml' href='rss.xml'>
+       <link rel='sitemap' type='application/xml' title='Sitemap' href='sitemap.xml'>
+
+ <!-- === Google Analytics === -->
+       <script async src='https://www.googletagmanager.com/gtag/js?id=G-7YJ0SNJXSJ'></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-7YJ0SNJXSJ');
+       </script>
+
+
+<!-- ======= Estilo y Fuentes ======= -->
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.8em; .85
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
+       </nav>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">30/05/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-30--an-lisis-del-log-del-firewall-ufw-en-ubuntu-gu-a-completa-para-usuarios.html">Análisis del Log del Firewall UFW en Ubuntu: Guía Completa para Usuarios</a></h1>
+<div id="outline-container-orgb695410" class="outline-2">
+<h2 id="orgb695410">Introducción</h2>
+<div class="outline-text-2" id="text-orgb695410">
+<p>
+El firewall UFW (Uncomplicated Firewall) es una herramienta sencilla y poderosa para gestionar reglas de firewall en Ubuntu. Analizar sus logs es esencial para monitorear la seguridad de tu sistema, detectar intentos de acceso no autorizados y diagnosticar problemas de red. En este post, aprenderás a localizar los logs de UFW, analizar su contenido, resumir los detalles críticos y organizar la información en una tabla `.org` para un análisis eficiente usando Emacs.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb2c50c2" class="outline-2">
+<h2 id="orgb2c50c2">Localizando los Logs de UFW</h2>
+<div class="outline-text-2" id="text-orgb2c50c2">
+</div>
+<div id="outline-container-org71c6cec" class="outline-3">
+<h3 id="org71c6cec">Paso 1: Verificar si UFW está Registrando Eventos</h3>
+<div class="outline-text-3" id="text-org71c6cec">
+<p>
+Primero, asegúrate de que UFW esté habilitado y configurado para generar logs. Ejecuta en la terminal:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo ufw status
+</code></pre>
+</div>
+
+<p>
+Si ves `logging: on`, UFW está generando logs. Si está desactivado, actívalo con:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo ufw logging on
+</code></pre>
+</div>
+
+<p>
+Puedes ajustar el nivel de logging (`low`, `medium`, `high`):
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo ufw logging medium
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org4997e59" class="outline-3">
+<h3 id="org4997e59">Paso 2: Encontrar el Archivo de Log</h3>
+<div class="outline-text-3" id="text-org4997e59">
+<p>
+UFW suele almacenar sus logs en `/var/log/ufw.log`. Para verificarlo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo ls /var/log/ufw.log
+</code></pre>
+</div>
+
+<p>
+Si no existe, los eventos de UFW pueden estar en los logs del sistema, como `/var/log/syslog` o `/var/log/messages`. Usa `grep` para filtrar:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo grep UFW /var/log/syslog
+</code></pre>
+</div>
+
+<p>
+Para ver los logs en tiempo real:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo tail -f /var/log/ufw.log
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org5b48314" class="outline-3">
+<h3 id="org5b48314">Paso 3: Revisar Logs Rotados</h3>
+<div class="outline-text-3" id="text-org5b48314">
+<p>
+Los logs de UFW pueden rotarse (archivarse). Busca archivos comprimidos:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>ls /var/log/ufw.log*
+</code></pre>
+</div>
+
+<p>
+Para leer un log comprimido:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo zcat /var/log/ufw.log.1.gz
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdf94d97" class="outline-3">
+<h3 id="orgdf94d97">Paso 4: Configuración del Logging</h3>
+<div class="outline-text-3" id="text-orgdf94d97">
+<p>
+Si no ves logs, verifica la configuración en `/etc/ufw/ufw.conf`:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo cat /etc/ufw/ufw.conf
+</code></pre>
+</div>
+
+<p>
+Busca la línea `LOGLEVEL`. Asegúrate de que no esté en `off`. Por ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text"><code>LOGLEVEL=medium
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org5959500" class="outline-2">
+<h2 id="org5959500">Análisis de los Logs de UFW</h2>
+<div class="outline-text-2" id="text-org5959500">
+</div>
+<div id="outline-container-orgb5c8ab3" class="outline-3">
+<h3 id="orgb5c8ab3">Formato de una Entrada de Log</h3>
+<div class="outline-text-3" id="text-orgb5c8ab3">
+<p>
+Los logs de UFW tienen un formato estándar. Aquí tienes un ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text"><code>May 29 19:33:45 laptop kernel: [UFW BLOCK] IN=eth0 OUT= MAC=00:15:5d:01:23:45 SRC=192.168.1.100 DST=192.168.1.101 LEN=60 TOS=0x00 PREC=0x00 TTL=64 ID=12345 PROTO=TCP SPT=12345 DPT=80
+</code></pre>
+</div>
+
+<ul class="org-ul">
+<li><b><b>Fecha y hora</b></b>: `May 29 19:33:45`</li>
+<li><b><b>Host</b></b>: `laptop`</li>
+<li><b><b>Acción</b></b>: `[UFW BLOCK]` (indica que el tráfico fue bloqueado; otras opciones incluyen `[UFW ALLOW]`)</li>
+<li><b><b>Interfaz</b></b>: `IN=eth0` (interfaz de entrada)</li>
+<li><b><b>Direcciones IP</b></b>: `SRC=192.168.1.100` (origen), `DST=192.168.1.101` (destino)</li>
+<li><b><b>Protocolo y puertos</b></b>: `PROTO=TCP SPT=12345 DPT=80` (protocolo TCP, puerto origen 12345, puerto destino 80)</li>
+<li><b><b>Otros detalles</b></b>: `LEN`, `TOS`, `TTL`, etc., describen características del paquete.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org734a2d4" class="outline-3">
+<h3 id="org734a2d4">Herramientas para Análisis</h3>
+<div class="outline-text-3" id="text-org734a2d4">
+<ol class="org-ol">
+<li><b><b>Grep para filtrar eventos específicos</b></b>:
+<ul class="org-ul">
+<li><p>
+Bloqueos de una IP específica:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo grep <span style="color: #a44185;">"SRC=192.168.1.100"</span> /var/log/ufw.log
+</code></pre>
+</div></li>
+<li><p>
+Tráfico en un puerto específico:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo grep <span style="color: #a44185;">"DPT=22"</span> /var/log/ufw.log
+</code></pre>
+</div></li>
+</ul></li>
+
+<li><b><b>Awk para extraer campos</b></b>:
+<ul class="org-ul">
+<li><p>
+Extraer IPs de origen bloqueadas:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo awk <span style="color: #a44185;">'/UFW BLOCK/ {print $13}'</span> /var/log/ufw.log | sort | uniq
+</code></pre>
+</div></li>
+</ul></li>
+
+<li><b><b>Resumen con `wc` y `uniq`</b></b>:
+<ul class="org-ul">
+<li><p>
+Contar eventos de bloqueo:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo grep <span style="color: #a44185;">"UFW BLOCK"</span> /var/log/ufw.log | wc -l
+</code></pre>
+</div></li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orge11e5b9" class="outline-3">
+<h3 id="orge11e5b9">Ejemplo Práctico</h3>
+<div class="outline-text-3" id="text-orge11e5b9">
+<p>
+Supongamos que quieres identificar intentos de acceso al puerto 22 (SSH). Ejecuta:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo grep <span style="color: #a44185;">"DPT=22"</span> /var/log/ufw.log &gt; ssh_attempts.log
+</code></pre>
+</div>
+
+<p>
+Luego, analiza los intentos por IP:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>awk <span style="color: #a44185;">'{print $13}'</span> ssh_attempts.log | sort | uniq -c
+</code></pre>
+</div>
+
+<p>
+Salida de ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text"><code> 5 SRC=192.168.1.100
+10 SRC=203.0.113.50
+</code></pre>
+</div>
+
+<p>
+Esto indica que la IP `203.0.113.50` intentó acceder 10 veces al puerto 22.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org1de198c" class="outline-2">
+<h2 id="org1de198c">Resumen de Detalles Críticos</h2>
+<div class="outline-text-2" id="text-org1de198c">
+<p>
+Los logs de UFW contienen información valiosa para la seguridad. Los detalles críticos a observar incluyen:
+</p>
+<ul class="org-ul">
+<li><b><b>Acciones</b></b>: Bloqueos (`UFW BLOCK`) o permisos (`UFW ALLOW`).</li>
+<li><b><b>Direcciones IP</b></b>: Identificar IPs sospechosas o repetitivas.</li>
+<li><b><b>Puertos de destino</b></b>: Puertos comunes como 22 (SSH), 80 (HTTP) o 443 (HTTPS) son objetivos frecuentes.</li>
+<li><b><b>Protocolos</b></b>: TCP, UDP, etc., para entender el tipo de tráfico.</li>
+<li><b><b>Frecuencia</b></b>: Intentos repetidos pueden indicar un ataque.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc09079d" class="outline-2">
+<h2 id="orgc09079d">Tabla de Detalles Críticos en Formato `.org`</h2>
+<div class="outline-text-2" id="text-orgc09079d">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Aspecto</th>
+<th scope="col" class="org-left">Descripción</th>
+<th scope="col" class="org-left">Comando de Ejemplo</th>
+<th scope="col" class="org-left">Acción Recomendada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Acción del Firewall</td>
+<td class="org-left">Indica si el tráfico fue bloqueado o permitido</td>
+<td class="org-left">`grep "UFW BLOCK" /var/log/ufw.log`</td>
+<td class="org-left">Investigar bloqueos frecuentes</td>
+</tr>
+
+<tr>
+<td class="org-left">IP de Origen (SRC)</td>
+<td class="org-left">Dirección IP que envía el tráfico</td>
+<td class="org-left">`awk '<i>UFW BLOCK</i> {print $13}' /var/log/ufw.log</td>
+<td class="org-left">sort</td>
+<td class="org-left">uniq`</td>
+<td class="org-left">Bloquear IPs sospechosas con UFW</td>
+</tr>
+
+<tr>
+<td class="org-left">Puerto de Destino (DPT)</td>
+<td class="org-left">Puerto al que se dirige el tráfico</td>
+<td class="org-left">`grep "DPT=22" /var/log/ufw.log`</td>
+<td class="org-left">Monitorear puertos sensibles (22, 80, etc.)</td>
+</tr>
+
+<tr>
+<td class="org-left">Protocolo</td>
+<td class="org-left">Tipo de protocolo (TCP, UDP, etc.)</td>
+<td class="org-left">`grep "PROTO=TCP" /var/log/ufw.log`</td>
+<td class="org-left">Identificar protocolos inusuales</td>
+</tr>
+
+<tr>
+<td class="org-left">Frecuencia</td>
+<td class="org-left">Número de eventos por IP o puerto</td>
+<td class="org-left">`grep "UFW BLOCK" /var/log/ufw.log</td>
+<td class="org-left">wc -l`</td>
+<td class="org-left">Configurar alertas para alta frecuencia</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orge4759f7" class="outline-2">
+<h2 id="orge4759f7">Consejos para Emacs con Esteroides</h2>
+<div class="outline-text-2" id="text-orge4759f7">
+<p>
+Si usas Emacs, puedes optimizar el análisis de logs:
+</p>
+<ul class="org-ul">
+<li><b><b>Modo `org-mode`</b></b>: Copia la tabla anterior en un archivo `.org` para organizarla.</li>
+<li><b><b>Modo `shell`</b></b>: Usa `M-x shell` para ejecutar comandos como `grep` o `awk` desde Emacs.</li>
+<li><b><b>Dired</b></b>: Navega por `/var/log/` con `C-x C-f /var/log/ufw.log` y usa `dired-mode` para abrir logs.</li>
+<li><b><b>Tramp</b></b>: Accede a logs en servidores remotos con `/ssh:user@host:/var/log/ufw.log`.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb41186d" class="outline-2">
+<h2 id="orgb41186d">Conclusión</h2>
+<div class="outline-text-2" id="text-orgb41186d">
+<p>
+Analizar los logs de UFW te permite mantener tu sistema seguro y detectar problemas rápidamente. Con herramientas como `grep`, `awk` y Emacs, puedes filtrar, resumir y organizar la información de manera eficiente. Usa la tabla `.org` para mantener un registro claro de los detalles críticos y automatiza el monitoreo para ahorrar tiempo.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Script para monitorear intentos al puerto 22 en tiempo real</span>
+sudo tail -f /var/log/ufw.log | grep <span style="color: #a44185;">"DPT=22"</span>
+</code></pre>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ufw.html">ufw</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-logs.html">logs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-sysadmin.html">sysadmin</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ubuntu.html">ubuntu</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-org-mode.html">org-mode</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>

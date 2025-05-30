@@ -4,7 +4,359 @@
 <title><![CDATA[Emacs con esteroides - ufw]]></title>
 <description><![CDATA[Emacs con esteroides - ufw]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-ufw.html</link>
-<lastBuildDate>Thu, 29 May 2025 01:53:56 +0200</lastBuildDate>
+<lastBuildDate>Fri, 30 May 2025 06:55:28 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Análisis del Log del Firewall UFW en Ubuntu: Guía Completa para Usuarios]]></title>
+  <description><![CDATA[
+<div id="outline-container-orgb695410" class="outline-2">
+<h2 id="orgb695410">Introducción</h2>
+<div class="outline-text-2" id="text-orgb695410">
+<p>
+El firewall UFW (Uncomplicated Firewall) es una herramienta sencilla y poderosa para gestionar reglas de firewall en Ubuntu. Analizar sus logs es esencial para monitorear la seguridad de tu sistema, detectar intentos de acceso no autorizados y diagnosticar problemas de red. En este post, aprenderás a localizar los logs de UFW, analizar su contenido, resumir los detalles críticos y organizar la información en una tabla `.org` para un análisis eficiente usando Emacs.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb2c50c2" class="outline-2">
+<h2 id="orgb2c50c2">Localizando los Logs de UFW</h2>
+<div class="outline-text-2" id="text-orgb2c50c2">
+</div>
+<div id="outline-container-org71c6cec" class="outline-3">
+<h3 id="org71c6cec">Paso 1: Verificar si UFW está Registrando Eventos</h3>
+<div class="outline-text-3" id="text-org71c6cec">
+<p>
+Primero, asegúrate de que UFW esté habilitado y configurado para generar logs. Ejecuta en la terminal:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo ufw status
+</code></pre>
+</div>
+
+<p>
+Si ves `logging: on`, UFW está generando logs. Si está desactivado, actívalo con:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo ufw logging on
+</code></pre>
+</div>
+
+<p>
+Puedes ajustar el nivel de logging (`low`, `medium`, `high`):
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo ufw logging medium
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org4997e59" class="outline-3">
+<h3 id="org4997e59">Paso 2: Encontrar el Archivo de Log</h3>
+<div class="outline-text-3" id="text-org4997e59">
+<p>
+UFW suele almacenar sus logs en `/var/log/ufw.log`. Para verificarlo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo ls /var/log/ufw.log
+</code></pre>
+</div>
+
+<p>
+Si no existe, los eventos de UFW pueden estar en los logs del sistema, como `/var/log/syslog` o `/var/log/messages`. Usa `grep` para filtrar:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo grep UFW /var/log/syslog
+</code></pre>
+</div>
+
+<p>
+Para ver los logs en tiempo real:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo tail -f /var/log/ufw.log
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org5b48314" class="outline-3">
+<h3 id="org5b48314">Paso 3: Revisar Logs Rotados</h3>
+<div class="outline-text-3" id="text-org5b48314">
+<p>
+Los logs de UFW pueden rotarse (archivarse). Busca archivos comprimidos:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>ls /var/log/ufw.log*
+</code></pre>
+</div>
+
+<p>
+Para leer un log comprimido:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo zcat /var/log/ufw.log.1.gz
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdf94d97" class="outline-3">
+<h3 id="orgdf94d97">Paso 4: Configuración del Logging</h3>
+<div class="outline-text-3" id="text-orgdf94d97">
+<p>
+Si no ves logs, verifica la configuración en `/etc/ufw/ufw.conf`:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo cat /etc/ufw/ufw.conf
+</code></pre>
+</div>
+
+<p>
+Busca la línea `LOGLEVEL`. Asegúrate de que no esté en `off`. Por ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text"><code>LOGLEVEL=medium
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org5959500" class="outline-2">
+<h2 id="org5959500">Análisis de los Logs de UFW</h2>
+<div class="outline-text-2" id="text-org5959500">
+</div>
+<div id="outline-container-orgb5c8ab3" class="outline-3">
+<h3 id="orgb5c8ab3">Formato de una Entrada de Log</h3>
+<div class="outline-text-3" id="text-orgb5c8ab3">
+<p>
+Los logs de UFW tienen un formato estándar. Aquí tienes un ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text"><code>May 29 19:33:45 laptop kernel: [UFW BLOCK] IN=eth0 OUT= MAC=00:15:5d:01:23:45 SRC=192.168.1.100 DST=192.168.1.101 LEN=60 TOS=0x00 PREC=0x00 TTL=64 ID=12345 PROTO=TCP SPT=12345 DPT=80
+</code></pre>
+</div>
+
+<ul class="org-ul">
+<li><b><b>Fecha y hora</b></b>: `May 29 19:33:45`</li>
+<li><b><b>Host</b></b>: `laptop`</li>
+<li><b><b>Acción</b></b>: `[UFW BLOCK]` (indica que el tráfico fue bloqueado; otras opciones incluyen `[UFW ALLOW]`)</li>
+<li><b><b>Interfaz</b></b>: `IN=eth0` (interfaz de entrada)</li>
+<li><b><b>Direcciones IP</b></b>: `SRC=192.168.1.100` (origen), `DST=192.168.1.101` (destino)</li>
+<li><b><b>Protocolo y puertos</b></b>: `PROTO=TCP SPT=12345 DPT=80` (protocolo TCP, puerto origen 12345, puerto destino 80)</li>
+<li><b><b>Otros detalles</b></b>: `LEN`, `TOS`, `TTL`, etc., describen características del paquete.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org734a2d4" class="outline-3">
+<h3 id="org734a2d4">Herramientas para Análisis</h3>
+<div class="outline-text-3" id="text-org734a2d4">
+<ol class="org-ol">
+<li><b><b>Grep para filtrar eventos específicos</b></b>:
+<ul class="org-ul">
+<li><p>
+Bloqueos de una IP específica:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo grep <span style="color: #a44185;">"SRC=192.168.1.100"</span> /var/log/ufw.log
+</code></pre>
+</div></li>
+<li><p>
+Tráfico en un puerto específico:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo grep <span style="color: #a44185;">"DPT=22"</span> /var/log/ufw.log
+</code></pre>
+</div></li>
+</ul></li>
+
+<li><b><b>Awk para extraer campos</b></b>:
+<ul class="org-ul">
+<li><p>
+Extraer IPs de origen bloqueadas:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo awk <span style="color: #a44185;">'/UFW BLOCK/ {print $13}'</span> /var/log/ufw.log | sort | uniq
+</code></pre>
+</div></li>
+</ul></li>
+
+<li><b><b>Resumen con `wc` y `uniq`</b></b>:
+<ul class="org-ul">
+<li><p>
+Contar eventos de bloqueo:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo grep <span style="color: #a44185;">"UFW BLOCK"</span> /var/log/ufw.log | wc -l
+</code></pre>
+</div></li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orge11e5b9" class="outline-3">
+<h3 id="orge11e5b9">Ejemplo Práctico</h3>
+<div class="outline-text-3" id="text-orge11e5b9">
+<p>
+Supongamos que quieres identificar intentos de acceso al puerto 22 (SSH). Ejecuta:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo grep <span style="color: #a44185;">"DPT=22"</span> /var/log/ufw.log &gt; ssh_attempts.log
+</code></pre>
+</div>
+
+<p>
+Luego, analiza los intentos por IP:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>awk <span style="color: #a44185;">'{print $13}'</span> ssh_attempts.log | sort | uniq -c
+</code></pre>
+</div>
+
+<p>
+Salida de ejemplo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text"><code> 5 SRC=192.168.1.100
+10 SRC=203.0.113.50
+</code></pre>
+</div>
+
+<p>
+Esto indica que la IP `203.0.113.50` intentó acceder 10 veces al puerto 22.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org1de198c" class="outline-2">
+<h2 id="org1de198c">Resumen de Detalles Críticos</h2>
+<div class="outline-text-2" id="text-org1de198c">
+<p>
+Los logs de UFW contienen información valiosa para la seguridad. Los detalles críticos a observar incluyen:
+</p>
+<ul class="org-ul">
+<li><b><b>Acciones</b></b>: Bloqueos (`UFW BLOCK`) o permisos (`UFW ALLOW`).</li>
+<li><b><b>Direcciones IP</b></b>: Identificar IPs sospechosas o repetitivas.</li>
+<li><b><b>Puertos de destino</b></b>: Puertos comunes como 22 (SSH), 80 (HTTP) o 443 (HTTPS) son objetivos frecuentes.</li>
+<li><b><b>Protocolos</b></b>: TCP, UDP, etc., para entender el tipo de tráfico.</li>
+<li><b><b>Frecuencia</b></b>: Intentos repetidos pueden indicar un ataque.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc09079d" class="outline-2">
+<h2 id="orgc09079d">Tabla de Detalles Críticos en Formato `.org`</h2>
+<div class="outline-text-2" id="text-orgc09079d">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Aspecto</th>
+<th scope="col" class="org-left">Descripción</th>
+<th scope="col" class="org-left">Comando de Ejemplo</th>
+<th scope="col" class="org-left">Acción Recomendada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Acción del Firewall</td>
+<td class="org-left">Indica si el tráfico fue bloqueado o permitido</td>
+<td class="org-left">`grep "UFW BLOCK" /var/log/ufw.log`</td>
+<td class="org-left">Investigar bloqueos frecuentes</td>
+</tr>
+
+<tr>
+<td class="org-left">IP de Origen (SRC)</td>
+<td class="org-left">Dirección IP que envía el tráfico</td>
+<td class="org-left">`awk '<i>UFW BLOCK</i> {print $13}' /var/log/ufw.log</td>
+<td class="org-left">sort</td>
+<td class="org-left">uniq`</td>
+<td class="org-left">Bloquear IPs sospechosas con UFW</td>
+</tr>
+
+<tr>
+<td class="org-left">Puerto de Destino (DPT)</td>
+<td class="org-left">Puerto al que se dirige el tráfico</td>
+<td class="org-left">`grep "DPT=22" /var/log/ufw.log`</td>
+<td class="org-left">Monitorear puertos sensibles (22, 80, etc.)</td>
+</tr>
+
+<tr>
+<td class="org-left">Protocolo</td>
+<td class="org-left">Tipo de protocolo (TCP, UDP, etc.)</td>
+<td class="org-left">`grep "PROTO=TCP" /var/log/ufw.log`</td>
+<td class="org-left">Identificar protocolos inusuales</td>
+</tr>
+
+<tr>
+<td class="org-left">Frecuencia</td>
+<td class="org-left">Número de eventos por IP o puerto</td>
+<td class="org-left">`grep "UFW BLOCK" /var/log/ufw.log</td>
+<td class="org-left">wc -l`</td>
+<td class="org-left">Configurar alertas para alta frecuencia</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orge4759f7" class="outline-2">
+<h2 id="orge4759f7">Consejos para Emacs con Esteroides</h2>
+<div class="outline-text-2" id="text-orge4759f7">
+<p>
+Si usas Emacs, puedes optimizar el análisis de logs:
+</p>
+<ul class="org-ul">
+<li><b><b>Modo `org-mode`</b></b>: Copia la tabla anterior en un archivo `.org` para organizarla.</li>
+<li><b><b>Modo `shell`</b></b>: Usa `M-x shell` para ejecutar comandos como `grep` o `awk` desde Emacs.</li>
+<li><b><b>Dired</b></b>: Navega por `/var/log/` con `C-x C-f /var/log/ufw.log` y usa `dired-mode` para abrir logs.</li>
+<li><b><b>Tramp</b></b>: Accede a logs en servidores remotos con `/ssh:user@host:/var/log/ufw.log`.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb41186d" class="outline-2">
+<h2 id="orgb41186d">Conclusión</h2>
+<div class="outline-text-2" id="text-orgb41186d">
+<p>
+Analizar los logs de UFW te permite mantener tu sistema seguro y detectar problemas rápidamente. Con herramientas como `grep`, `awk` y Emacs, puedes filtrar, resumir y organizar la información de manera eficiente. Usa la tabla `.org` para mantener un registro claro de los detalles críticos y automatiza el monitoreo para ahorrar tiempo.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Script para monitorear intentos al puerto 22 en tiempo real</span>
+sudo tail -f /var/log/ufw.log | grep <span style="color: #a44185;">"DPT=22"</span>
+</code></pre>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ufw.html">ufw</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-logs.html">logs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-sysadmin.html">sysadmin</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ubuntu.html">ubuntu</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-org-mode.html">org-mode</a> </div>]]></description>
+  <category><![CDATA[ufw]]></category>
+  <category><![CDATA[firewall]]></category>
+  <category><![CDATA[logs]]></category>
+  <category><![CDATA[sysadmin]]></category>
+  <category><![CDATA[ubuntu]]></category>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[org-mode]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-30--an-lisis-del-log-del-firewall-ufw-en-ubuntu-gu-a-completa-para-usuarios.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-30--an-lisis-del-log-del-firewall-ufw-en-ubuntu-gu-a-completa-para-usuarios.html</guid>
+  <pubDate>Fri, 30 May 2025 06:43:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[🔥 UFW en acción: Controla tu firewall desde Emacs como un ninja (ii)]]></title>
   <description><![CDATA[
