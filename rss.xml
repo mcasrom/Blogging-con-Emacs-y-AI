@@ -4,7 +4,7 @@
 <title><![CDATA[Emacs con esteroides]]></title>
 <description><![CDATA[Emacs con esteroides]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Fri, 30 May 2025 08:17:53 +0200</lastBuildDate>
+<lastBuildDate>Tue, 03 Jun 2025 09:43:13 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Explorando Shima Spain Village: Un Rincón Español en Japón]]></title>
   <description><![CDATA[
@@ -130,7 +130,7 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[españa]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</guid>
-  <pubDate>Fri, 30 May 2025 08:17:53 +0200</pubDate>
+  <pubDate>Tue, 03 Jun 2025 09:43:13 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
@@ -927,13 +927,19 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
 </tr>
 
 <tr>
+<td class="org-right">2025-06-03</td>
+<td class="org-left">Notas sobre Gestión de Seguridad en un Laptop</td>
+<td class="org-left"><a href="2025-06-03-notas-sobre-gesti-n-de-seguridad-en-un-laptop.html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
 </tr>
 
 <tr>
-<td class="org-right">2025-05-30</td>
+<td class="org-right">2025-06-03</td>
 <td class="org-left">Artículos recientes sobre geopolítica y estrategia</td>
 <td class="org-left"><a href="geopolitica.html">Enlace</a></td>
 </tr>
@@ -968,7 +974,282 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Fri, 30 May 2025 08:12:00 +0200</pubDate>
+  <pubDate>Tue, 03 Jun 2025 09:41:00 +0200</pubDate>
+</item>
+<item>
+  <title><![CDATA[Notas sobre Gestión de Seguridad en un Laptop]]></title>
+  <description><![CDATA[
+<div id="outline-container-org752d291" class="outline-2">
+<h2 id="org752d291">Introducción</h2>
+<div class="outline-text-2" id="text-org752d291">
+<p>
+Este documento organiza las tareas y prácticas para proteger una laptop con Linux frente a ciberamenazas. Utiliza Org-mode para programar revisiones, registrar configuraciones y ejecutar scripts de seguridad.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd5b8257" class="outline-2">
+<h2 id="orgd5b8257">Medidas Generales de Seguridad</h2>
+<div class="outline-text-2" id="text-orgd5b8257">
+</div>
+<div id="outline-container-org82dd273" class="outline-3">
+<h3 id="org82dd273">Actualizaciones del Sistema</h3>
+<div class="outline-text-3" id="text-org82dd273">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Verificar actualizaciones del sistema
+SCHEDULED: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-06-10 mar 09:00 +1w&gt;</span></span>
+<ul class="org-ul">
+<li>Ejecutar <code>sudo apt update &amp;&amp; sudo apt upgrade</code> (Debian/Ubuntu) o <code>sudo dnf upgrade</code> (Fedora)</li>
+<li>Comprobar paquetes obsoletos: <code>apt list --upgradable</code></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org61c2468" class="outline-3">
+<h3 id="org61c2468">Cortafuegos</h3>
+<div class="outline-text-3" id="text-org61c2468">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Revisar estado de ufw
+SCHEDULED: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-06-15 dom +1m&gt;</span></span>
+<ul class="org-ul">
+<li>Ejecutar <code>sudo ufw status</code></li>
+<li>Configurar reglas: <code>sudo ufw allow ssh</code></li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> Verificar reglas activas</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfcbedea" class="outline-3">
+<h3 id="orgfcbedea">Contraseñas</h3>
+<div class="outline-text-3" id="text-orgfcbedea">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Actualizar contraseñas críticas
+DEADLINE: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-07-01 mar&gt;</span></span>
+<ul class="org-ul">
+<li>Usar <code>pass</code> o <code>pwgen -s 20 1</code> para generar contraseñas seguras</li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> Verificar 2FA en cuentas críticas</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org13f587e" class="outline-3">
+<h3 id="org13f587e">Cifrado de Disco</h3>
+<div class="outline-text-3" id="text-org13f587e">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Verificar respaldo de datos cifrados
+SCHEDULED: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-06-15 dom +2w&gt;</span></span>
+<ul class="org-ul">
+<li>Confirmar que el respaldo está cifrado</li>
+<li>Usar <code>cryptsetup luksFormat /dev/sdX</code> para nuevas particiones</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb0619c7" class="outline-3">
+<h3 id="orgb0619c7">Software y Permisos</h3>
+<div class="outline-text-3" id="text-orgb0619c7">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Revisar software instalado
+<ul class="org-ul">
+<li>Ejecutar <code>dpkg -l</code> para listar paquetes</li>
+<li>Verificar firmas GPG de nuevos paquetes</li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> Comprobar permisos: <code>ls -l</code></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge9e92e5" class="outline-3">
+<h3 id="orge9e92e5">Monitoreo de Red y Procesos</h3>
+<div class="outline-text-3" id="text-orge9e92e5">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Escanear procesos
+SCHEDULED: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-06-07 sáb +1w&gt;</span></span>
+<ul class="org-ul">
+<li>Usar <code>htop</code> o <code>ps aux</code> para revisar procesos sospechosos</li>
+<li>Escanear red con <code>nmap localhost</code></li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> Revisar logs: <code>sudo journalctl -p 3 -xb</code></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge3e1035" class="outline-2">
+<h2 id="orge3e1035">Seguridad Específica en Linux</h2>
+<div class="outline-text-2" id="text-orge3e1035">
+</div>
+<div id="outline-container-org54eee0c" class="outline-3">
+<h3 id="org54eee0c">SELinux/AppArmor</h3>
+<div class="outline-text-3" id="text-org54eee0c">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Verificar configuración
+SCHEDULED: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-06-20 vie&gt;</span></span>
+<ul class="org-ul">
+<li>Comprobar estado: <code>sestatus</code> (SELinux) o <code>sudo apparmor_status</code> (AppArmor)</li>
+<li>Revisar perfiles activos</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3e7ada5" class="outline-3">
+<h3 id="org3e7ada5">Seguridad de Arranque</h3>
+<div class="outline-text-3" id="text-org3e7ada5">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Configurar seguridad de GRUB
+DEADLINE: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-06-10 mar&gt;</span></span>
+<ul class="org-ul">
+<li>Establecer contraseña en GRUB</li>
+<li>Verificar Secure Boot</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7884c17" class="outline-3">
+<h3 id="org7884c17">VPN y Navegación Segura</h3>
+<div class="outline-text-3" id="text-org7884c17">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Revisar configuración de VPN
+SCHEDULED: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-06-05 jue +1m&gt;</span></span>
+<ul class="org-ul">
+<li>Confirmar conexión VPN activa (ProtonVPN o Mullvad)</li>
+<li>Actualizar extensiones del navegador (uBlock Origin, HTTPS Everywhere)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf892f70" class="outline-2">
+<h2 id="orgf892f70">Respaldo de Datos</h2>
+<div class="outline-text-2" id="text-orgf892f70">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Realizar respaldo completo
+SCHEDULED: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-06-30 lun +1m&gt;</span></span>
+<ul class="org-ul">
+<li>Ejecutar <code>rsync -avh /home/usuario /ruta/respaldo</code></li>
+<li>Verificar integridad con <code>sha256sum</code></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5a16bfb" class="outline-2">
+<h2 id="org5a16bfb">Diagrama de Medidas de Seguridad</h2>
+<div class="outline-text-2" id="text-org5a16bfb">
+
+<figure id="orgf0efd3f">
+<img src="images/seguridad_diagrama.png" alt="seguridad_diagrama.png" width="800px">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org1a511e7" class="outline-2">
+<h2 id="org1a511e7">Scripts de Seguridad</h2>
+<div class="outline-text-2" id="text-org1a511e7">
+<div class="org-src-container">
+<pre class="src src-sh"><code><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Script para verificar actualizaciones</span>
+sudo apt update
+apt list --upgradable
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org117e187" class="outline-2">
+<h2 id="org117e187">Configuración de Emacs</h2>
+<div class="outline-text-2" id="text-org117e187">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Configurar acceso rápido a este archivo
+<ul class="org-ul">
+<li><p>
+Agregar a <code>~/.emacs.d/init.el</code>:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(global-set-key (kbd <span style="color: #a44185;">"C-c s"</span>) (<span style="color: #219fd5; font-style: italic;">lambda</span> () (<span style="color: #219fd5; font-style: italic;">interactive</span>) (find-file <span style="color: #a44185;">"~/.emacs.d/seguridad.org"</span>)))
+</code></pre>
+</div></li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> Habilitar Org-agenda
+<ul class="org-ul">
+<li>Configurar: <code>(setq org-agenda-files '("~/.emacs.d/seguridad.org"))</code></li>
+<li>Activar log: <code>(setq org-agenda-start-with-log-mode t)</code></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org21a5568" class="outline-2">
+<h2 id="org21a5568">Notas Adicionales</h2>
+<div class="outline-text-2" id="text-org21a5568">
+<ul class="org-ul">
+<li>Consultar documentación: <code>man cryptsetup</code>, <code>man ufw</code></li>
+<li>Buscar en foros de Linux o X para consejos actualizados</li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ciberamenazas.html">ciberamenazas</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-laptop.html">laptop</a> </div>]]></description>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[ciberamenazas]]></category>
+  <category><![CDATA[laptop]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-03-notas-sobre-gesti-n-de-seguridad-en-un-laptop.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-03-notas-sobre-gesti-n-de-seguridad-en-un-laptop.html</guid>
+  <pubDate>Tue, 03 Jun 2025 09:35:00 +0200</pubDate>
+</item>
+<item>
+  <title><![CDATA[Artículos recientes sobre geopolítica y estrategia]]></title>
+  <description><![CDATA[
+<div id="outline-container-orgf1d4775" class="outline-2">
+<h2 id="orgf1d4775">Recopilación de fuentes RSS relevantes (últimos 5 días):</h2>
+<div class="outline-text-2" id="text-orgf1d4775">
+
+<figure id="orgcff4183">
+<img src="images/diagrama_geo.png" alt="diagrama_geo.png">
+
+</figure>
+
+<ul class="org-ul">
+<li><a href="https://www.realcleardefense.com/2025/05/21/geopolitics_used_and_abused_1111548.html">Geopolitics Used and Abused</a> (2025-06-02)</li>
+<li><a href="https://www.nytimes.com/2025/05/27/world/europe/france-crypto-kidnappings.html">French Crypto Chiefs Step Up Security After Violent Kidnappings</a> (2025-05-29)</li>
+<li><a href="https://www.nytimes.com/2025/05/29/us/politics/trump-tariffs-trade-policy.html">Tariff Rulings Inject New Uncertainty Into Trump Trade Strategy</a> (2025-05-30)</li>
+<li><a href="https://www.nytimes.com/2025/05/29/us/politics/trump-tariffs-trade-strategy.html">Court Tariffs Ruling Upends Trump’s Trade Strategy</a> (2025-05-29)</li>
+<li><a href="https://www.elmundo.es/espana/2025/05/29/68389b9fe85eceaa408b45ae.html">El PP se propone atraer a votantes del PSOE de Page y Lambán a la concentración para "el fin de Sánchez"</a> (2025-05-29)</li>
+<li><a href="https://www.realcleardefense.com/2025/05/29/gao_no_clear_plan_for_supporting_guam_missile_defense_system_1113226.html">GAO: No Clear Plan for Supporting Guam Missile Defense System</a> (2025-05-29)</li>
+<li><a href="https://www.realcleardefense.com/2025/05/29/re-imagining_americas_defense_industrial_base_1113131.html">Re-Imagining America's Defense Industrial Base</a> (2025-05-29)</li>
+<li><a href="https://www.realcleardefense.com/2025/05/29/5_ways_the_military_industrial_complex_is_a_killer_1113196.html">5 Ways the Military Industrial Complex Is a Killer</a> (2025-05-29)</li>
+<li><a href="https://www.realcleardefense.com/2025/05/29/if_you_want_a_more_lethal_military_have_generals_compete_in_wargames_1113192.html">If You Want a More Lethal Military, Have Generals Compete in Wargames</a> (2025-05-29)</li>
+<li><a href="https://www.realcleardefense.com/2025/05/29/uncensored_ai_models_pose_an_urgent_risk_to_global_security_1113220.html">Uncensored AI Models Pose an Urgent Risk to Global Security</a> (2025-05-29)</li>
+<li><a href="https://foreignpolicy.com/2025/05/30/fdr-roosevelt-national-security-us-foreign-policy-history-quarantine-speech/">How FDR Invented National Security</a> (2025-05-30)</li>
+<li><a href="https://foreignpolicy.com/2025/05/30/pakistan-munir-military-leader-strategy/">Pakistan’s Military Leader Thinks Differently</a> (2025-05-30)</li>
+<li><a href="https://www.nytimes.com/2025/05/30/world/canada/haskell-free-library-opera-house-quebec-vermont-border.html">A Library on the Canada-U.S.Border Is Ensnared by Trump’s Foreign Policy</a> (2025-05-30)</li>
+<li><a href="https://www.nytimes.com/2025/05/30/climate/charleston-oil-companies-lawsuit.html">A Court Debates Whether a Climate Lawsuit Threatens National Security</a> (2025-06-01)</li>
+<li><a href="https://www.elmundo.es/espana/2025/05/30/6839d387fc6c83fa0c8b4588.html">Las federaciones del PSOE dejan solos a los ministros en la defensa de la gestión del 'caso fontanera'</a> (2025-05-30)</li>
+<li><a href="https://www.lemonde.fr/les-decodeurs/article/2025/05/31/des-collaborations-scientifiques-europe-israel-critiquees-en-raison-de-leurs-potentielles-applications-militaires_6609418_4355770.html">Des collaborations scientifiques Europe-Israël critiquées en raison de leurs potentielles applications militaires</a> (2025-05-31)</li>
+<li><a href="https://www.lemonde.fr/international/article/2025/05/31/pete-hegseth-le-secretaire-a-la-defense-americain-affirme-que-la-chine-se-prepare-a-potentiellement-utiliser-la-force-militaire-en-asie_6609397_3210.html">Pete Hegseth, le secrétaire à la défense américain, affirme que la Chine se prépare « à potentiellement utiliser la force militaire » en Asie</a> (2025-05-31)</li>
+<li><a href="https://www.realcleardefense.com/2025/05/30/pentagon_ends_new_radar_effort_meant_for_guam_missile_defense_1113494.html">Pentagon Ends New Radar Effort Meant for Guam Missile Defense</a> (2025-05-30)</li>
+<li><a href="https://www.realcleardefense.com/2025/05/30/the_real_golden_dome_opportunity__defense_acquisition_reform_1113370.html">The Real Golden Dome Opportunity – Defense Acquisition Reform</a> (2025-05-30)</li>
+<li><a href="https://foreignpolicy.com/2025/06/02/iran-us-nuclear-weapon-negotiations-diplomacy/">The False Binary at the Heart of Trump’s Iran Strategy</a> (2025-06-02)</li>
+<li><a href="https://www.nytimes.com/2025/06/02/world/europe/uk-defense-review-starmer-nuclear-submarines.html">U.K. Faces Most Serious Military Threat Since Cold War, Starmer Says</a> (2025-06-02)</li>
+<li><a href="https://www.nytimes.com/2025/06/02/world/asia/south-korea-election-security.html">Bulletproof Vests and Glass: South Korean Candidate Tightens Security</a> (2025-06-02)</li>
+<li><a href="https://www.nytimes.com/2025/06/02/world/europe/germany-asylum-seekers-border-eu.html">German Border Police Barred From Rejecting Asylum Seekers Arriving From E.U. Nations Without Review</a> (2025-06-02)</li>
+<li><a href="https://www.nytimes.com/2025/05/31/world/middleeast/muhammad-sinwar-hamas-israel.html">Muhammad Sinwar, a Top Military Leader of Hamas, Is Dead, Israel Says</a> (2025-05-31)</li>
+<li><a href="https://www.nytimes.com/2025/05/31/world/asia/hegseth-security-allies-china.html">Hegseth, at Security Forum, Vows to Strengthen America’s Asian Alliances</a> (2025-05-31)</li>
+<li><a href="https://www.lemonde.fr/international/live/2025/06/03/en-direct-guerre-a-gaza-trois-soldats-israeliens-tues-dans-le-nord-du-territoire-palestinien_6609400_3210.html">En direct, guerre à Gaza : au moins 15 personnes tuées au nord-ouest de Rafah, selon la défense civile</a> (2025-06-03)</li>
+<li><a href="https://www.lemonde.fr/international/article/2025/06/03/au-royaume-uni-la-defense-se-recentre-sur-l-otan-et-la-dissuasion-nucleaire_6610281_3210.html">Au Royaume-Uni, la défense se recentre sur l’OTAN et la dissuasion nucléaire</a> (2025-06-03)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/02/hemispheric_defense_an_idea_whose_time_has_come_1113756.html">Hemispheric Defense: An Idea Whose Time Has Come</a> (2025-06-02)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/02/hegseth_warns_chinese_military_action_against_taiwan_could_be_imminent_1113753.html">Hegseth Warns Chinese Military Action Against Taiwan 'Could Be Imminent'</a> (2025-06-02)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/02/carneys_blarney_europe_wont_fix_canadas_defense_crisis_1113840.html">Carney's Blarney: Europe Won't Fix Canada's Defense Crisis</a> (2025-06-02)</li>
+<li><a href="https://www.washingtonpost.com/world/2025/05/31/india-delegation-pakistan-conflict-trump/">India launches global charm offensive after conflict with Pakistan</a> (2025-06-01)</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><a href="file:///home/mike/myblog/public/geopolitica.html">Último en Geopolítica</a></li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-geopolitica.html">geopolitica</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-estrategia.html">estrategia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-opiniones.html">opiniones</a> </div>]]></description>
+  <category><![CDATA[geopolitica]]></category>
+  <category><![CDATA[estrategia]]></category>
+  <category><![CDATA[opiniones]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/geopolitica.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/geopolitica.html</guid>
+  <pubDate>Tue, 03 Jun 2025 00:00:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Análisis del Log del Firewall UFW en Ubuntu: Guía Completa para Usuarios]]></title>
@@ -1321,58 +1602,6 @@ sudo tail -f /var/log/ufw.log | grep <span style="color: #a44185;">"DPT=22"</spa
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-30--an-lisis-del-log-del-firewall-ufw-en-ubuntu-gu-a-completa-para-usuarios.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-05-30--an-lisis-del-log-del-firewall-ufw-en-ubuntu-gu-a-completa-para-usuarios.html</guid>
   <pubDate>Fri, 30 May 2025 06:43:00 +0200</pubDate>
-</item>
-<item>
-  <title><![CDATA[Artículos recientes sobre geopolítica y estrategia]]></title>
-  <description><![CDATA[
-<div id="outline-container-org4bc5ead" class="outline-2">
-<h2 id="org4bc5ead">Recopilación de fuentes RSS relevantes (últimos 5 días):</h2>
-<div class="outline-text-2" id="text-org4bc5ead">
-
-<figure id="orgc13df0c">
-<img src="images/diagrama_geo.png" alt="diagrama_geo.png">
-
-</figure>
-
-<ul class="org-ul">
-<li><a href="https://www.realcleardefense.com/2025/05/21/australias_littoral_defense_strategy_and_regional_security_1111533.html">Australia's Littoral Defense Strategy and Regional Security</a> (2025-05-28)</li>
-<li><a href="https://www.realcleardefense.com/2025/05/21/maritime_rights_and_national_security_chinas_security_discourse_1111526.html">Maritime Rights and National Security: China's Security Discourse</a> (2025-05-26)</li>
-<li><a href="https://www.realcleardefense.com/2025/05/21/geopolitics_used_and_abused_1111548.html">Geopolitics Used and Abused</a> (2025-05-28)</li>
-<li><a href="https://www.lemonde.fr/international/live/2025/05/25/en-direct-guerre-a-gaza-neuf-enfants-d-un-couple-de-medecins-tues-dans-une-frappe-israelienne-selon-la-defense-civile_6608186_3210.html">En direct, guerre à Gaza : neuf enfants d’un couple de médecins tués dans une frappe israélienne, selon la défense civile</a> (2025-05-25)</li>
-<li><a href="https://www.nytimes.com/2025/05/26/world/europe/nato-summit-trump-ukraine.html">NATO Wants a Cordial Summit, but Trump or Zelensky Could Disrupt It</a> (2025-05-26)</li>
-<li><a href="https://www.nytimes.com/2025/05/25/world/europe/syria-trump-israel-airstrikes.html">Trump’s Warming Toward Syria Complicates Israel’s Military Strategy</a> (2025-05-27)</li>
-<li><a href="https://www.elmundo.es/espana/encuestas/2025/05/25/6833059121efa0f80b8b459d.html">El fortín asturiano del PSOE, en manos de 35.000 votantes indecisos</a> (2025-05-25)</li>
-<li><a href="https://www.elmundo.es/internacional/2025/05/26/6833f7c1fdddffd43f8b459a.html">El chavismo canta victoria pero Machado exige a los militares que actúen tras el fiasco electoral de Maduro</a> (2025-05-26)</li>
-<li><a href="https://www.lemonde.fr/afrique/article/2025/05/26/l-ouganda-annonce-suspendre-toute-cooperation-militaire-avec-l-allemagne_6608556_3212.html">L’Ouganda annonce suspendre toute coopération militaire avec l’Allemagne</a> (2025-05-26)</li>
-<li><a href="https://www.lemonde.fr/international/article/2025/05/26/en-ukraine-la-defense-antiaerienne-peine-a-faire-face-a-l-intensification-des-frappes-russes_6608414_3210.html">En Ukraine, la défense antiaérienne peine à faire face à l’intensification des frappes russes</a> (2025-05-26)</li>
-<li><a href="https://www.washingtonpost.com/world/2025/05/26/ukraine-patriot-missiles-air-defense-raytheon/">Slammed by Russian missiles, Ukraine seeks more U.S. air defense systems</a> (2025-05-26)</li>
-<li><a href="https://www.lemonde.fr/international/article/2025/05/26/une-ecole-de-la-bande-de-gaza-detruite-par-un-bombardement-israelien-au-moins-36-personnes-tuees-selon-la-defense-civile-palestinienne_6608623_3210.html">Une école de la bande de Gaza détruite par un bombardement israélien, au moins 36 personnes tuées, selon la défense civile palestinienne</a> (2025-05-26)</li>
-<li><a href="https://www.elmundo.es/espana/2025/05/26/68349fdde4d4d8ae2b8b45b2.html">Despliegue social para combatir el gasto militar: gafas para niños, comedores escolares saludables, planes de vivienda&#x2026;</a> (2025-05-26)</li>
-<li><a href="https://www.elmundo.es/yodona/lifestyle/2025/05/26/67f3b1f921efa05b798b458a.html">Ana Cela, la filóloga que ha convertido la tienda del Thyssen en una obra de arte: "Es una extensión de mí"</a> (2025-05-26)</li>
-<li><a href="https://www.nytimes.com/2025/05/27/world/europe/france-crypto-kidnappings.html">French Crypto Chiefs Step Up Security After Violent Kidnappings</a> (2025-05-28)</li>
-<li><a href="https://www.nytimes.com/2025/05/27/world/europe/germany-military-russia-trump.html">Caught Between Russia and the U.S., Germany Aims to Be a Stronger Force in NATO</a> (2025-05-27)</li>
-<li><a href="https://foreignpolicy.com/2025/05/27/trump-nuclear-crisis-signaling/">The U.S. Military Needs to Relearn Nuclear Signaling</a> (2025-05-27)</li>
-<li><a href="https://www.lemonde.fr/international/article/2025/05/27/defense-le-plan-de-financement-de-l-union-europeenne-prend-forme_6608866_3210.html">Défense : le plan de financement de l’Union européenne prend forme</a> (2025-05-27)</li>
-<li><a href="https://www.realcleardefense.com/2025/05/28/navy_seal_team_6_operator_to_become_militarys_top_enlisted_leader_1112947.html">Navy SEAL Team 6 Operator To Become Military's Top Enlisted Leader</a> (2025-05-28)</li>
-<li><a href="https://www.realcleardefense.com/2025/05/28/land_forces_tool_up_for_potential_pacific_conflict_1112946.html">Land Forces Tool Up for Potential Pacific Conflict</a> (2025-05-28)</li>
-<li><a href="https://www.elmundo.es/ciencia-y-salud/salud/2025/05/28/6837706fe4d4d882218b4586.html">Los MIR revierten la tendencia: agotan todas las plazas, incluida Medicina de Familia</a> (2025-05-28)</li>
-<li><a href="https://www.lemonde.fr/international/article/2025/05/28/guerre-en-ukraine-l-allemagne-annonce-de-nouvelles-cooperations-financieres-et-militaires-avec-kiev_6609022_3210.html">Guerre en Ukraine : l’Allemagne annonce de nouvelles coopérations financières et militaires avec Kiev</a> (2025-05-28)</li>
-<li><a href="https://www.elmundo.es/espana/2025/05/28/68372859e85ecea44d8b4576.html">'Troublemaker' Sánchez: la reputación de España en Europa se agrieta por la presión con el catalán, las dudas en la OTAN y la "discrecionalidad" en BBVA-Sabadell</a> (2025-05-28)</li>
-</ul>
-
-
-<ul class="org-ul">
-<li><a href="file:///home/mike/myblog/public/geopolitica.html">Último en Geopolítica</a></li>
-</ul>
-</div>
-</div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-geopolitica.html">geopolitica</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-estrategia.html">estrategia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-opiniones.html">opiniones</a> </div>]]></description>
-  <category><![CDATA[geopolitica]]></category>
-  <category><![CDATA[estrategia]]></category>
-  <category><![CDATA[opiniones]]></category>
-  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/geopolitica.html</link>
-  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/geopolitica.html</guid>
-  <pubDate>Fri, 30 May 2025 00:00:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Nace un blog complementario: "El Mapa y El Código"]]></title>

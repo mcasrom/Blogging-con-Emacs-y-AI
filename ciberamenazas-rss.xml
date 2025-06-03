@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title><![CDATA[Emacs con esteroides - ciberamenazas]]></title>
+<description><![CDATA[Emacs con esteroides - ciberamenazas]]></description>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-ciberamenazas.html</link>
+<lastBuildDate>Tue, 03 Jun 2025 09:43:28 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Notas sobre Gestión de Seguridad en un Laptop]]></title>
+  <description><![CDATA[
+<div id="outline-container-org752d291" class="outline-2">
+<h2 id="org752d291">Introducción</h2>
+<div class="outline-text-2" id="text-org752d291">
+<p>
+Este documento organiza las tareas y prácticas para proteger una laptop con Linux frente a ciberamenazas. Utiliza Org-mode para programar revisiones, registrar configuraciones y ejecutar scripts de seguridad.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd5b8257" class="outline-2">
+<h2 id="orgd5b8257">Medidas Generales de Seguridad</h2>
+<div class="outline-text-2" id="text-orgd5b8257">
+</div>
+<div id="outline-container-org82dd273" class="outline-3">
+<h3 id="org82dd273">Actualizaciones del Sistema</h3>
+<div class="outline-text-3" id="text-org82dd273">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Verificar actualizaciones del sistema
+SCHEDULED: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-06-10 mar 09:00 +1w&gt;</span></span>
+<ul class="org-ul">
+<li>Ejecutar <code>sudo apt update &amp;&amp; sudo apt upgrade</code> (Debian/Ubuntu) o <code>sudo dnf upgrade</code> (Fedora)</li>
+<li>Comprobar paquetes obsoletos: <code>apt list --upgradable</code></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org61c2468" class="outline-3">
+<h3 id="org61c2468">Cortafuegos</h3>
+<div class="outline-text-3" id="text-org61c2468">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Revisar estado de ufw
+SCHEDULED: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-06-15 dom +1m&gt;</span></span>
+<ul class="org-ul">
+<li>Ejecutar <code>sudo ufw status</code></li>
+<li>Configurar reglas: <code>sudo ufw allow ssh</code></li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> Verificar reglas activas</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfcbedea" class="outline-3">
+<h3 id="orgfcbedea">Contraseñas</h3>
+<div class="outline-text-3" id="text-orgfcbedea">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Actualizar contraseñas críticas
+DEADLINE: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-07-01 mar&gt;</span></span>
+<ul class="org-ul">
+<li>Usar <code>pass</code> o <code>pwgen -s 20 1</code> para generar contraseñas seguras</li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> Verificar 2FA en cuentas críticas</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org13f587e" class="outline-3">
+<h3 id="org13f587e">Cifrado de Disco</h3>
+<div class="outline-text-3" id="text-org13f587e">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Verificar respaldo de datos cifrados
+SCHEDULED: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-06-15 dom +2w&gt;</span></span>
+<ul class="org-ul">
+<li>Confirmar que el respaldo está cifrado</li>
+<li>Usar <code>cryptsetup luksFormat /dev/sdX</code> para nuevas particiones</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb0619c7" class="outline-3">
+<h3 id="orgb0619c7">Software y Permisos</h3>
+<div class="outline-text-3" id="text-orgb0619c7">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Revisar software instalado
+<ul class="org-ul">
+<li>Ejecutar <code>dpkg -l</code> para listar paquetes</li>
+<li>Verificar firmas GPG de nuevos paquetes</li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> Comprobar permisos: <code>ls -l</code></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge9e92e5" class="outline-3">
+<h3 id="orge9e92e5">Monitoreo de Red y Procesos</h3>
+<div class="outline-text-3" id="text-orge9e92e5">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Escanear procesos
+SCHEDULED: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-06-07 sáb +1w&gt;</span></span>
+<ul class="org-ul">
+<li>Usar <code>htop</code> o <code>ps aux</code> para revisar procesos sospechosos</li>
+<li>Escanear red con <code>nmap localhost</code></li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> Revisar logs: <code>sudo journalctl -p 3 -xb</code></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge3e1035" class="outline-2">
+<h2 id="orge3e1035">Seguridad Específica en Linux</h2>
+<div class="outline-text-2" id="text-orge3e1035">
+</div>
+<div id="outline-container-org54eee0c" class="outline-3">
+<h3 id="org54eee0c">SELinux/AppArmor</h3>
+<div class="outline-text-3" id="text-org54eee0c">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Verificar configuración
+SCHEDULED: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-06-20 vie&gt;</span></span>
+<ul class="org-ul">
+<li>Comprobar estado: <code>sestatus</code> (SELinux) o <code>sudo apparmor_status</code> (AppArmor)</li>
+<li>Revisar perfiles activos</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3e7ada5" class="outline-3">
+<h3 id="org3e7ada5">Seguridad de Arranque</h3>
+<div class="outline-text-3" id="text-org3e7ada5">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Configurar seguridad de GRUB
+DEADLINE: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-06-10 mar&gt;</span></span>
+<ul class="org-ul">
+<li>Establecer contraseña en GRUB</li>
+<li>Verificar Secure Boot</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7884c17" class="outline-3">
+<h3 id="org7884c17">VPN y Navegación Segura</h3>
+<div class="outline-text-3" id="text-org7884c17">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Revisar configuración de VPN
+SCHEDULED: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-06-05 jue +1m&gt;</span></span>
+<ul class="org-ul">
+<li>Confirmar conexión VPN activa (ProtonVPN o Mullvad)</li>
+<li>Actualizar extensiones del navegador (uBlock Origin, HTTPS Everywhere)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf892f70" class="outline-2">
+<h2 id="orgf892f70">Respaldo de Datos</h2>
+<div class="outline-text-2" id="text-orgf892f70">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Realizar respaldo completo
+SCHEDULED: <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-06-30 lun +1m&gt;</span></span>
+<ul class="org-ul">
+<li>Ejecutar <code>rsync -avh /home/usuario /ruta/respaldo</code></li>
+<li>Verificar integridad con <code>sha256sum</code></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5a16bfb" class="outline-2">
+<h2 id="org5a16bfb">Diagrama de Medidas de Seguridad</h2>
+<div class="outline-text-2" id="text-org5a16bfb">
+
+<figure id="orgf0efd3f">
+<img src="images/seguridad_diagrama.png" alt="seguridad_diagrama.png" width="800px">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org1a511e7" class="outline-2">
+<h2 id="org1a511e7">Scripts de Seguridad</h2>
+<div class="outline-text-2" id="text-org1a511e7">
+<div class="org-src-container">
+<pre class="src src-sh"><code><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Script para verificar actualizaciones</span>
+sudo apt update
+apt list --upgradable
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org117e187" class="outline-2">
+<h2 id="org117e187">Configuración de Emacs</h2>
+<div class="outline-text-2" id="text-org117e187">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Configurar acceso rápido a este archivo
+<ul class="org-ul">
+<li><p>
+Agregar a <code>~/.emacs.d/init.el</code>:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(global-set-key (kbd <span style="color: #a44185;">"C-c s"</span>) (<span style="color: #219fd5; font-style: italic;">lambda</span> () (<span style="color: #219fd5; font-style: italic;">interactive</span>) (find-file <span style="color: #a44185;">"~/.emacs.d/seguridad.org"</span>)))
+</code></pre>
+</div></li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> Habilitar Org-agenda
+<ul class="org-ul">
+<li>Configurar: <code>(setq org-agenda-files '("~/.emacs.d/seguridad.org"))</code></li>
+<li>Activar log: <code>(setq org-agenda-start-with-log-mode t)</code></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org21a5568" class="outline-2">
+<h2 id="org21a5568">Notas Adicionales</h2>
+<div class="outline-text-2" id="text-org21a5568">
+<ul class="org-ul">
+<li>Consultar documentación: <code>man cryptsetup</code>, <code>man ufw</code></li>
+<li>Buscar en foros de Linux o X para consejos actualizados</li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ciberamenazas.html">ciberamenazas</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-laptop.html">laptop</a> </div>]]></description>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[ciberamenazas]]></category>
+  <category><![CDATA[laptop]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-03-notas-sobre-gesti-n-de-seguridad-en-un-laptop.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-03-notas-sobre-gesti-n-de-seguridad-en-un-laptop.html</guid>
+  <pubDate>Tue, 03 Jun 2025 09:35:00 +0200</pubDate>
+</item>
+</channel>
+</rss>
