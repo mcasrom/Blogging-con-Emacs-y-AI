@@ -4,13 +4,13 @@
 <title><![CDATA[Emacs con esteroides - ubuntu]]></title>
 <description><![CDATA[Emacs con esteroides - ubuntu]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-ubuntu.html</link>
-<lastBuildDate>Thu, 05 Jun 2025 14:32:56 +0200</lastBuildDate>
+<lastBuildDate>Thu, 05 Jun 2025 22:16:55 +0200</lastBuildDate>
 <item>
   <title><![CDATA[¿Formo Parte de una Botnet? Guía Avanzada de Detección y Prevención en Linux]]></title>
   <description><![CDATA[
-<div id="outline-container-orge35a4aa" class="outline-2">
-<h2 id="orge35a4aa">Introducción</h2>
-<div class="outline-text-2" id="text-orge35a4aa">
+<div id="outline-container-org6ec2f7a" class="outline-2">
+<h2 id="org6ec2f7a">Introducción</h2>
+<div class="outline-text-2" id="text-org6ec2f7a">
 <p>
 Una <b>botnet</b> es una red de dispositivos comprometidos que, sin el conocimiento del usuario, son controlados remotamente por atacantes para ejecutar acciones maliciosas como ataques DDoS, minería de criptomonedas, envío masivo de spam, escaneo de redes o distribución de malware.
 </p>
@@ -25,19 +25,19 @@ En esta guía analizamos en profundidad cómo detectar señales de compromiso, q
 
 
 
-<figure id="orgeb842a4">
+<figure id="orgca0a880">
 <img src="images/detect-botnet.png" alt="detect-botnet.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org5d6622f" class="outline-2">
-<h2 id="org5d6622f">Indicadores de Compromiso en Sistemas Ubuntu</h2>
-<div class="outline-text-2" id="text-org5d6622f">
+<div id="outline-container-orgf90135a" class="outline-2">
+<h2 id="orgf90135a">Indicadores de Compromiso en Sistemas Ubuntu</h2>
+<div class="outline-text-2" id="text-orgf90135a">
 </div>
-<div id="outline-container-org4b0c4fc" class="outline-3">
-<h3 id="org4b0c4fc">Comportamiento del sistema</h3>
-<div class="outline-text-3" id="text-org4b0c4fc">
+<div id="outline-container-org5d4d138" class="outline-3">
+<h3 id="org5d4d138">Comportamiento del sistema</h3>
+<div class="outline-text-3" id="text-org5d4d138">
 <ul class="org-ul">
 <li>Consumo anormal de CPU/RAM sin procesos legítimos que lo justifiquen.</li>
 <li>Congelamientos o lentitud inesperada, especialmente tras el arranque.</li>
@@ -46,9 +46,9 @@ En esta guía analizamos en profundidad cómo detectar señales de compromiso, q
 </ul>
 </div>
 </div>
-<div id="outline-container-orgee701a5" class="outline-3">
-<h3 id="orgee701a5">Análisis forense inicial</h3>
-<div class="outline-text-3" id="text-orgee701a5">
+<div id="outline-container-orga3735ae" class="outline-3">
+<h3 id="orga3735ae">Análisis forense inicial</h3>
+<div class="outline-text-3" id="text-orga3735ae">
 <p>
 Usa `uptime` y `last` para identificar sesiones prolongadas y tiempos de actividad sospechosos.
 </p>
@@ -61,13 +61,13 @@ last
 </div>
 </div>
 </div>
-<div id="outline-container-orgad4b5a6" class="outline-2">
-<h2 id="orgad4b5a6">Revisión Detallada del Sistema</h2>
-<div class="outline-text-2" id="text-orgad4b5a6">
+<div id="outline-container-org2ca65ee" class="outline-2">
+<h2 id="org2ca65ee">Revisión Detallada del Sistema</h2>
+<div class="outline-text-2" id="text-org2ca65ee">
 </div>
-<div id="outline-container-org2021b6d" class="outline-3">
-<h3 id="org2021b6d">1. Monitorización de Procesos</h3>
-<div class="outline-text-3" id="text-org2021b6d">
+<div id="outline-container-orgf2c0610" class="outline-3">
+<h3 id="orgf2c0610">1. Monitorización de Procesos</h3>
+<div class="outline-text-3" id="text-orgf2c0610">
 <div class="org-src-container">
 <pre class="src src-bash"><code>ps aux --sort=-%cpu | head
 top
@@ -85,9 +85,9 @@ Busca procesos con nombres engañosos como:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgef30200" class="outline-3">
-<h3 id="orgef30200">2. Conexiones de Red Activas</h3>
-<div class="outline-text-3" id="text-orgef30200">
+<div id="outline-container-org5f71543" class="outline-3">
+<h3 id="org5f71543">2. Conexiones de Red Activas</h3>
+<div class="outline-text-3" id="text-org5f71543">
 <div class="org-src-container">
 <pre class="src src-bash"><code>sudo ss -pant
 sudo netstat -plant
@@ -99,9 +99,9 @@ Analiza conexiones a IPs externas en puertos altos (4444, 6667, 1337), típicos 
 </p>
 </div>
 </div>
-<div id="outline-container-org1837d88" class="outline-3">
-<h3 id="org1837d88">3. Escaneo de Rootkits</h3>
-<div class="outline-text-3" id="text-org1837d88">
+<div id="outline-container-orgf58bd27" class="outline-3">
+<h3 id="orgf58bd27">3. Escaneo de Rootkits</h3>
+<div class="outline-text-3" id="text-orgf58bd27">
 <div class="org-src-container">
 <pre class="src src-bash"><code>sudo apt install chkrootkit rkhunter
 sudo chkrootkit
@@ -114,9 +114,9 @@ Estos buscan manipulaciones en binarios del sistema, hooks en bibliotecas, rootk
 </p>
 </div>
 </div>
-<div id="outline-container-org79f3b6f" class="outline-3">
-<h3 id="org79f3b6f">4. Revisión del Sistema de Archivos</h3>
-<div class="outline-text-3" id="text-org79f3b6f">
+<div id="outline-container-orgfef2f19" class="outline-3">
+<h3 id="orgfef2f19">4. Revisión del Sistema de Archivos</h3>
+<div class="outline-text-3" id="text-orgfef2f19">
 <p>
 Busca binarios ejecutables en ubicaciones sospechosas:
 </p>
@@ -137,9 +137,9 @@ ls -la /etc/cron.*
 </div>
 </div>
 </div>
-<div id="outline-container-org1522b5f" class="outline-3">
-<h3 id="org1522b5f">5. Análisis de Logs</h3>
-<div class="outline-text-3" id="text-org1522b5f">
+<div id="outline-container-orgb8ec3b5" class="outline-3">
+<h3 id="orgb8ec3b5">5. Análisis de Logs</h3>
+<div class="outline-text-3" id="text-orgb8ec3b5">
 <div class="org-src-container">
 <pre class="src src-bash"><code>journalctl -xe | grep -i ssh
 grep -i <span style="color: #a44185;">"reverse shell"</span> /var/log/*
@@ -151,9 +151,9 @@ Busca conexiones entrantes inesperadas, cambios de permisos, autenticaciones fal
 </p>
 </div>
 </div>
-<div id="outline-container-orga92ea4e" class="outline-3">
-<h3 id="orga92ea4e">6. Inspección de Tráfico de Red</h3>
-<div class="outline-text-3" id="text-orga92ea4e">
+<div id="outline-container-org6a02bc9" class="outline-3">
+<h3 id="org6a02bc9">6. Inspección de Tráfico de Red</h3>
+<div class="outline-text-3" id="text-org6a02bc9">
 <p>
 Puedes usar `tcpdump` o `wireshark` para analizar tráfico en tiempo real.
 </p>
@@ -168,9 +168,9 @@ Busca patrones de beaconing o actividad periódica hacia una misma IP.
 </p>
 </div>
 </div>
-<div id="outline-container-org6e2f29f" class="outline-3">
-<h3 id="org6e2f29f">7. Auditoría del Sistema</h3>
-<div class="outline-text-3" id="text-org6e2f29f">
+<div id="outline-container-org5ecb906" class="outline-3">
+<h3 id="org5ecb906">7. Auditoría del Sistema</h3>
+<div class="outline-text-3" id="text-org5ecb906">
 <div class="org-src-container">
 <pre class="src src-bash"><code>sudo apt install lynis
 sudo lynis audit system
@@ -183,9 +183,9 @@ Lynis proporciona un informe completo sobre la postura de seguridad del sistema,
 </div>
 </div>
 </div>
-<div id="outline-container-orgc809433" class="outline-2">
-<h2 id="orgc809433">Comprobación de Persistencia y Escalada</h2>
-<div class="outline-text-2" id="text-orgc809433">
+<div id="outline-container-org7165f76" class="outline-2">
+<h2 id="org7165f76">Comprobación de Persistencia y Escalada</h2>
+<div class="outline-text-2" id="text-org7165f76">
 <p>
 Revisa scripts de inicio del sistema:
 </p>
@@ -202,9 +202,9 @@ Algunas botnets modifican `.bashrc`, `.profile` o `.bash<sub>profile</sub>` para
 </p>
 </div>
 </div>
-<div id="outline-container-org8650515" class="outline-2">
-<h2 id="org8650515">Evaluación de la Configuración de Red</h2>
-<div class="outline-text-2" id="text-org8650515">
+<div id="outline-container-org39b0493" class="outline-2">
+<h2 id="org39b0493">Evaluación de la Configuración de Red</h2>
+<div class="outline-text-2" id="text-org39b0493">
 <p>
 Verifica los DNS configurados:
 </p>
@@ -219,9 +219,9 @@ DNS no confiables pueden ser usados para redirigir tráfico legítimo hacia domi
 </p>
 </div>
 </div>
-<div id="outline-container-orgadfb8fa" class="outline-2">
-<h2 id="orgadfb8fa">Herramientas Recomendadas Adicionales</h2>
-<div class="outline-text-2" id="text-orgadfb8fa">
+<div id="outline-container-org87ca2e7" class="outline-2">
+<h2 id="org87ca2e7">Herramientas Recomendadas Adicionales</h2>
+<div class="outline-text-2" id="text-org87ca2e7">
 <table border="2" rules="all" frame="all">
 <caption class="t-above"><span class="table-number">Table 1:</span> Tabla de herramientas Recomendadadas Adicionales</caption>
 
@@ -337,9 +337,9 @@ DNS no confiables pueden ser usados para redirigir tráfico legítimo hacia domi
 </table>
 </div>
 </div>
-<div id="outline-container-orgec187bc" class="outline-2">
-<h2 id="orgec187bc">Medidas a Tomar en Caso de Sospecha</h2>
-<div class="outline-text-2" id="text-orgec187bc">
+<div id="outline-container-orga10c30b" class="outline-2">
+<h2 id="orga10c30b">Medidas a Tomar en Caso de Sospecha</h2>
+<div class="outline-text-2" id="text-orga10c30b">
 <ol class="org-ol">
 <li><b><b>Desconexión inmediata</b></b> del sistema de redes públicas o internas.</li>
 <li><b><b>Respaldo</b></b> de archivos críticos (documentos, claves, configuraciones).</li>
@@ -351,9 +351,9 @@ DNS no confiables pueden ser usados para redirigir tráfico legítimo hacia domi
 </ol>
 </div>
 </div>
-<div id="outline-container-org5e13b5b" class="outline-2">
-<h2 id="org5e13b5b">Medidas Preventivas Recomendadas</h2>
-<div class="outline-text-2" id="text-org5e13b5b">
+<div id="outline-container-orgff72b1a" class="outline-2">
+<h2 id="orgff72b1a">Medidas Preventivas Recomendadas</h2>
+<div class="outline-text-2" id="text-orgff72b1a">
 <ul class="org-ul">
 <li><p>
 Mantén el sistema actualizado:  
@@ -378,9 +378,9 @@ sudo ufw enable
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc026c62" class="outline-2">
-<h2 id="orgc026c62">Conclusión</h2>
-<div class="outline-text-2" id="text-orgc026c62">
+<div id="outline-container-orgfb1d5e3" class="outline-2">
+<h2 id="orgfb1d5e3">Conclusión</h2>
+<div class="outline-text-2" id="text-orgfb1d5e3">
 <p>
 Detectar si tu máquina Ubuntu forma parte de una botnet no es trivial, pero tampoco imposible. Con una mentalidad proactiva y un enfoque sistemático, puedes identificar señales claras de compromiso y tomar medidas para mitigar el riesgo. Un sistema comprometido no debe confiarse ni "limpiarse por partes": la única forma segura de eliminar una botnet es formatear, reinstalar, y adoptar mejores prácticas.
 </p>
@@ -390,9 +390,9 @@ La seguridad no es un estado, es un proceso. Inicia hoy una cultura de vigilanci
 </p>
 </div>
 </div>
-<div id="outline-container-org2c96377" class="outline-2">
-<h2 id="org2c96377">Referencias</h2>
-<div class="outline-text-2" id="text-org2c96377">
+<div id="outline-container-org07a0eca" class="outline-2">
+<h2 id="org07a0eca">Referencias</h2>
+<div class="outline-text-2" id="text-org07a0eca">
 <ul class="org-ul">
 <li><a href="https://wiki.ubuntu.com/Security">https://wiki.ubuntu.com/Security</a></li>
 <li><a href="https://cisofy.com/lynis/">https://cisofy.com/lynis/</a></li>
@@ -408,7 +408,7 @@ La seguridad no es un estado, es un proceso. Inicia hoy una cultura de vigilanci
 </blockquote>
 </div>
 </div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ubuntu.html">ubuntu</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-botnet.html">botnet</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-análisis.html">análisis</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-herramientas.html">herramientas</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-prevención.html">prevención</a> </div>]]></description>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ubuntu.html">ubuntu</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-botnet.html">botnet</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-análisis.html">análisis</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-herramientas.html">herramientas</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-prevención.html">prevención</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
   <category><![CDATA[linux]]></category>
   <category><![CDATA[ubuntu]]></category>
   <category><![CDATA[botnet]]></category>
@@ -416,6 +416,7 @@ La seguridad no es un estado, es un proceso. Inicia hoy una cultura de vigilanci
   <category><![CDATA[análisis]]></category>
   <category><![CDATA[herramientas]]></category>
   <category><![CDATA[prevención]]></category>
+  <category><![CDATA[tutoriales]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-05--formo-parte-de-una-botnet-gu-a-avanzada-de-detecci-n-y-prevenci-n-en-linux.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-05--formo-parte-de-una-botnet-gu-a-avanzada-de-detecci-n-y-prevenci-n-en-linux.html</guid>
   <pubDate>Thu, 05 Jun 2025 14:24:00 +0200</pubDate>

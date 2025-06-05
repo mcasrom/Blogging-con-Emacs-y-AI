@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Documento detallado y analítico para blog EMACS con Esteroides sobre ciberseguridad, defensa contra APT en Linux.">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Cómo hacer frente a las APT (Amenazas Persistentes Avanzadas) en Linux</title>
+<meta property="og:title" content="Cómo hacer frente a las APT (Amenazas Persistentes Avanzadas) en Linux">
+<meta property="og:type" content="article" />
+<meta property="og:description" content="Documento detallado y analítico para blog EMACS con Esteroides sobre ciberseguridad, defensa contra APT en Linux.">
+<meta property="og:url" content="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-05-c-mo-hacer-frente-a-las-apt-amenazas-persistentes-avanzadas-en-linux.html">
+<meta property="og:image" content="https://mcasrom.github.io/Blogging-con-Emacs-y-AI//images/flujo_defensa_apt_completo.png">
+<meta charset='UTF-8'>
+ <!-- ======= SEO y Redes Sociales ======= -->
+       <meta name='author' content='Mike'>
+       <meta name='description' content='Blog sobre Emacs, org-mode, automatización y herramientas avanzadas'>
+       <meta name='keywords' content='Emacs, Org Mode, Linux, Inteligencia Artificial, Automatización, Tutoriales'>
+       <meta property='og:title' content='Emacs con esteroides'>
+       <meta property='og:description' content='Poder y Simplicidad con Emacs, IA y Linux'>
+       <meta property='og:image' content='https://mcasrom.github.io/logo.png'>
+       <meta property='og:url' content='https://mcasrom.github.io/'>
+       <meta property='og:type' content='website'>
+       <meta name='twitter:card' content='summary_large_image'>
+       <meta name='twitter:title' content='Emacs con esteroides'>
+       <meta name='twitter:description' content='Blog sobre Emacs, IA y herramientas avanzadas'>
+       <meta name='twitter:image' content='https://tuusuario.github.io/logo.png'>
+       <link rel='alternate' type='application/rss+xml' href='rss.xml'>
+       <link rel='sitemap' type='application/xml' title='Sitemap' href='sitemap.xml'>
+
+ <!-- === Google Analytics === -->
+       <script async src='https://www.googletagmanager.com/gtag/js?id=G-7YJ0SNJXSJ'></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-7YJ0SNJXSJ');
+       </script>
+
+
+<!-- ======= Estilo y Fuentes ======= -->
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.8em; .85
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
+       </nav>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">05/06/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-05-c-mo-hacer-frente-a-las-apt-amenazas-persistentes-avanzadas-en-linux.html">Cómo hacer frente a las APT (Amenazas Persistentes Avanzadas) en Linux</a></h1>
+<div id="outline-container-org921107e" class="outline-2">
+<h2 id="org921107e">Introducción a las APT y su Impacto</h2>
+<div class="outline-text-2" id="text-org921107e">
+<p>
+Las Amenazas Persistentes Avanzadas (APT) son ataques sofisticados, sigilosos y prolongados, diseñados para infiltrarse en sistemas, mantener acceso a largo plazo y extraer información sensible. Estas amenazas suelen ser ejecutadas por actores con recursos significativos, como grupos patrocinados por estados o cibercriminales avanzados. En entornos Linux, la percepción de seguridad inherente puede generar complacencia, pero los sistemas Linux no son inmunes a las APT. La defensa efectiva requiere una combinación de herramientas especializadas, buenas prácticas de seguridad (como el bastionado o <b>hardening</b>), monitoreo continuo y una respuesta rápida ante incidentes.
+</p>
+
+<p>
+Este documento proporciona una estrategia integral para proteger sistemas Linux contra APT, con ejemplos prácticos, un calendario detallado en org-mode, configuraciones de herramientas, tablas comparativas y diagramas visuales generados con PlantUML.
+</p>
+</div>
+</div>
+<div id="outline-container-org660a85b" class="outline-2">
+<h2 id="org660a85b">Estrategia General para Combatir APT en Linux</h2>
+<div class="outline-text-2" id="text-org660a85b">
+<p>
+La defensa contra APT en Linux se basa en cinco pilares fundamentales:
+</p>
+<ol class="org-ol">
+<li><b><b>Prevención:</b></b> Bastionado del sistema, configuración segura y actualizaciones regulares.</li>
+<li><b><b>Detección:</b></b> Monitoreo continuo mediante IDS/IPS, EDR y SIEM.</li>
+<li><b><b>Análisis:</b></b> Escaneo de vulnerabilidades, análisis de tráfico y correlación de eventos.</li>
+<li><b><b>Respuesta:</b></b> Pruebas de penetración controladas y planes de respuesta ante incidentes.</li>
+<li><b><b>Documentación:</b></b> Registro detallado de hallazgos, auditorías y lecciones aprendidas.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org115b4a8" class="outline-2">
+<h2 id="org115b4a8">Herramientas Efectivas en Linux para Combatir APT</h2>
+<div class="outline-text-2" id="text-org115b4a8">
+</div>
+<div id="outline-container-org3968030" class="outline-3">
+<h3 id="org3968030">Detección y Mitigación</h3>
+<div class="outline-text-3" id="text-org3968030">
+<ul class="org-ul">
+<li><b><b>IDS/IPS (Intrusion Detection/Prevention Systems):</b></b>
+<ul class="org-ul">
+<li><b><b>Snort:</b></b> Sistema de detección y prevención de intrusos de código abierto, ideal para detectar patrones de ataques conocidos.</li>
+<li><b><b>Suricata:</b></b> Similar a Snort, pero con soporte para múltiples hilos y análisis de tráfico más avanzado.</li>
+<li><b><b>Zeek:</b></b> Enfocado en el análisis de red, genera registros detallados para correlación de eventos.</li>
+</ul></li>
+<li><b><b>EDR (Endpoint Detection and Response):</b></b>
+<ul class="org-ul">
+<li><b><b>Wazuh:</b></b> Plataforma de código abierto que combina HIDS (Host Intrusion Detection System) con capacidades EDR, integrándose con SIEM.</li>
+<li><b><b>OSSEC:</b></b> HIDS robusto para monitoreo de integridad de archivos, detección de rootkits y análisis de logs.</li>
+</ul></li>
+<li><b><b>Sandboxing:</b></b>
+<ul class="org-ul">
+<li><b><b>Firejail:</b></b> Aísla aplicaciones en entornos seguros para mitigar riesgos de explotación.</li>
+<li><b><b>Cuckoo Sandbox:</b></b> Analiza malware en un entorno controlado, ideal para estudiar payloads de APT.</li>
+</ul></li>
+<li><b><b>SIEM (Security Information and Event Management):</b></b>
+<ul class="org-ul">
+<li><b><b>ELK Stack (Elasticsearch, Logstash, Kibana):</b></b> Plataforma para correlación, análisis y visualización de logs.</li>
+<li><b><b>Graylog:</b></b> Alternativa a ELK con interfaz amigable y capacidades de búsqueda avanzada.</li>
+</ul></li>
+<li><b><b>Escaneo de Vulnerabilidades:</b></b>
+<ul class="org-ul">
+<li><b><b>OpenVAS:</b></b> Escáner completo para identificar vulnerabilidades en sistemas y aplicaciones.</li>
+<li><b><b>Lynis:</b></b> Auditoría de seguridad específica para Linux, enfocada en configuraciones y hardening.</li>
+<li><b><b>Nmap:</b></b> Herramienta de descubrimiento de red y mapeo de puertos.</li>
+</ul></li>
+<li><b><b>Análisis de Tráfico:</b></b>
+<ul class="org-ul">
+<li><b><b>Wireshark:</b></b> Analizador de paquetes para inspección detallada de tráfico de red.</li>
+<li><b><b>tcpdump:</b></b> Captura de paquetes en tiempo real, útil para análisis forense.</li>
+</ul></li>
+<li><b><b>Pruebas de Penetración:</b></b>
+<ul class="org-ul">
+<li><b><b>Kali Linux:</b></b> Distribución especializada con herramientas preinstaladas para pentesting.</li>
+<li><b><b>Metasploit Framework:</b></b> Plataforma para pruebas de explotación y simulación de ataques.</li>
+<li><b><b>Burp Suite:</b></b> Herramienta para pruebas de aplicaciones web, útil contra APT que explotan vulnerabilidades web.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgeb7af51" class="outline-3">
+<h3 id="orgeb7af51">Configuración Ejemplo: Instalación y Regla Básica de Suricata</h3>
+<div class="outline-text-3" id="text-orgeb7af51">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Instalaci&#243;n de Suricata en Ubuntu/Debian</span>
+sudo apt update &amp;&amp; sudo apt install suricata -y
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n de una regla b&#225;sica para detectar tr&#225;fico sospechoso</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">'alert tcp any any -&gt; any 80 (msg:"Tr&#225;fico HTTP sospechoso"; content:"GET /malicious"; sid:1000001; rev:1;)'</span> | sudo tee -a /etc/suricata/rules/custom.rules
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Actualizar y ejecutar Suricata</span>
+sudo suricata-update
+sudo suricata -c /etc/suricata/suricata.yaml -i eth0
+</code></pre>
+</div>
+<p>
+<span class="underline">Esta regla detecta intentos de acceso a URLs con "/malicious" en tráfico HTTP.</span>
+</p>
+</div>
+</div>
+<div id="outline-container-orgbac4832" class="outline-3">
+<h3 id="orgbac4832">Configuración Ejemplo: Escaneo con OpenVAS</h3>
+<div class="outline-text-3" id="text-orgbac4832">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Instalaci&#243;n de OpenVAS en Kali Linux</span>
+sudo apt update &amp;&amp; sudo apt install openvas -y
+sudo gvm-setup
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Iniciar escaneo de una red</span>
+gvm-start
+openvas --scan-target=192.168.1.0/24
+</code></pre>
+</div>
+<p>
+<span class="underline">Este comando inicia un escaneo de vulnerabilidades en una red local.</span>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6e7fb9e" class="outline-2">
+<h2 id="org6e7fb9e">Flujo de Defensa contra APT en Linux</h2>
+<div class="outline-text-2" id="text-org6e7fb9e">
+<p>
+#+BEGIN<sub>SRC</sub> org
+</p>
+</div>
+</div>
+<div id="outline-container-org3774b77" class="outline-2">
+<h2 id="org3774b77">Flujo típico de defensa contra APT en Linux</h2>
+<div class="outline-text-2" id="text-org3774b77">
+<ol class="org-ol">
+<li>Bastionado inicial del sistema (hardening)
+<ul class="org-ul">
+<li>Configurar cortafuegos (iptables/ufw).</li>
+<li>Deshabilitar servicios innecesarios.</li>
+<li>Aplicar permisos estrictos (chmod/chown).</li>
+</ul></li>
+<li>Escaneo de vulnerabilidades semanal (OpenVAS/Nmap)
+<ul class="org-ul">
+<li>Identificar puertos abiertos y servicios vulnerables.</li>
+</ul></li>
+<li>Monitoreo continuo de logs (Wazuh/OSSEC + SIEM)
+<ul class="org-ul">
+<li>Configurar alertas para eventos sospechosos.</li>
+</ul></li>
+<li>Análisis de tráfico en tiempo real (Suricata/Wireshark)
+<ul class="org-ul">
+<li>Detectar anomalías en patrones de red.</li>
+</ul></li>
+<li>Pruebas de penetración mensuales (Kali Linux/Metasploit)
+<ul class="org-ul">
+<li>Simular ataques para evaluar defensas.</li>
+</ul></li>
+<li>Respuesta ante incidentes y remediación
+<ul class="org-ul">
+<li>Aislar sistemas comprometidos y aplicar parches.</li>
+</ul></li>
+<li>Documentación y reporte de hallazgos
+<ul class="org-ul">
+<li>Registrar incidentes y lecciones aprendidas en org-mode.</li>
+</ul></li>
+</ol>
+<p>
+#+END<sub>SRC</sub>
+</p>
+</div>
+<div id="outline-container-org68d91de" class="outline-3">
+<h3 id="org68d91de">Ejemplo Avanzado: Script de Hardening Básico</h3>
+<div class="outline-text-3" id="text-org68d91de">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Script de hardening b&#225;sico para Linux</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Aplicando configuraci&#243;n de hardening..."</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Configurar cortafuegos con ufw</span>
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw enable
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Deshabilitar root login en SSH</span>
+sudo sed -i <span style="color: #005F00;">'s/PermitRootLogin yes/PermitRootLogin no/'</span> /etc/ssh/sshd_config
+sudo systemctl restart sshd
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Actualizar sistema</span>
+sudo apt update &amp;&amp; sudo apt upgrade -y
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Instalar y configurar fail2ban</span>
+sudo apt install fail2ban -y
+sudo systemctl enable fail2ban
+sudo systemctl start fail2ban
+
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Hardening completado."</span>
+</code></pre>
+</div>
+<p>
+<span class="underline">Este script configura un cortafuegos, deshabilita el acceso root por SSH, actualiza el sistema e instala fail2ban para protección contra intentos de fuerza bruta.</span>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbb04bf9" class="outline-2">
+<h2 id="orgbb04bf9">Calendario y Acciones en .org mode</h2>
+<div class="outline-text-2" id="text-orgbb04bf9">
+<p>
+#+BEGIN<sub>SRC</sub> org
+</p>
+</div>
+</div>
+<div id="outline-container-orge2d4831" class="outline-2">
+<h2 id="orge2d4831">Calendario de Acciones de Defensa APT&#xa0;&#xa0;&#xa0;<span class="tag"><span class="calendar">calendar</span></span></h2>
+<div class="outline-text-2" id="text-orge2d4831">
+</div>
+<div id="outline-container-org0cb3e48" class="outline-3">
+<h3 id="org0cb3e48">Semana 1</h3>
+<div class="outline-text-3" id="text-org0cb3e48">
+</div>
+<div id="outline-container-orgb8aaf7b" class="outline-4">
+<h4 id="orgb8aaf7b">Lunes</h4>
+<div class="outline-text-4" id="text-orgb8aaf7b">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Bastionado inicial del sistema (aplicar hardening con script)</li>
+<li class="off"><code>[&#xa0;]</code> Configuración de IDS/IPS (Snort/Suricata)</li>
+<li class="off"><code>[&#xa0;]</code> Instalación de Wazuh/OSSEC para monitoreo de endpoints</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge3edc77" class="outline-4">
+<h4 id="orge3edc77">Miércoles</h4>
+<div class="outline-text-4" id="text-orge3edc77">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Escaneo de vulnerabilidades con OpenVAS</li>
+<li class="off"><code>[&#xa0;]</code> Revisión de configuraciones de seguridad con Lynis</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org05c2601" class="outline-4">
+<h4 id="org05c2601">Viernes</h4>
+<div class="outline-text-4" id="text-org05c2601">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Análisis de tráfico con Wireshark</li>
+<li class="off"><code>[&#xa0;]</code> Configuración de alertas en ELK Stack/Graylog</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org971c1b9" class="outline-3">
+<h3 id="org971c1b9">Semana 2</h3>
+<div class="outline-text-3" id="text-org971c1b9">
+</div>
+<div id="outline-container-org1990027" class="outline-4">
+<h4 id="org1990027">Lunes</h4>
+<div class="outline-text-4" id="text-org1990027">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Revisión y correlación de logs en SIEM</li>
+<li class="off"><code>[&#xa0;]</code> Actualización de firmas para Suricata/Snort</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1ffcbfd" class="outline-4">
+<h4 id="org1ffcbfd">Miércoles</h4>
+<div class="outline-text-4" id="text-org1ffcbfd">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Prueba de penetración interna con Metasploit</li>
+<li class="off"><code>[&#xa0;]</code> Simulación de ataque de phishing (ingeniería social controlada)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgeb18ab7" class="outline-4">
+<h4 id="orgeb18ab7">Viernes</h4>
+<div class="outline-text-4" id="text-orgeb18ab7">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Revisión de permisos de usuarios y grupos</li>
+<li class="off"><code>[&#xa0;]</code> Verificación de integridad de archivos con OSSEC</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org89fae5b" class="outline-3">
+<h3 id="org89fae5b">Semana 3</h3>
+<div class="outline-text-3" id="text-org89fae5b">
+</div>
+<div id="outline-container-orgf8119f0" class="outline-4">
+<h4 id="orgf8119f0">Lunes</h4>
+<div class="outline-text-4" id="text-orgf8119f0">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Actualización de reglas SIEM y políticas de detección</li>
+<li class="off"><code>[&#xa0;]</code> Configuración de sandboxing con Firejail para aplicaciones críticas</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org34238a9" class="outline-4">
+<h4 id="org34238a9">Miércoles</h4>
+<div class="outline-text-4" id="text-org34238a9">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Análisis de endpoints con Wazuh/OSSEC</li>
+<li class="off"><code>[&#xa0;]</code> Escaneo de red con Nmap para detectar dispositivos no autorizados</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgad47cad" class="outline-4">
+<h4 id="orgad47cad">Viernes</h4>
+<div class="outline-text-4" id="text-orgad47cad">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Revisión de políticas de acceso y permisos</li>
+<li class="off"><code>[&#xa0;]</code> Generación de reportes semanales en org-mode</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org46d4a54" class="outline-3">
+<h3 id="org46d4a54">Semana 4</h3>
+<div class="outline-text-3" id="text-org46d4a54">
+</div>
+<div id="outline-container-org275b9f1" class="outline-4">
+<h4 id="org275b9f1">Lunes</h4>
+<div class="outline-text-4" id="text-org275b9f1">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Auditoría completa del sistema y documentación de hallazgos</li>
+<li class="off"><code>[&#xa0;]</code> Backup de logs críticos</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf9b6fd6" class="outline-4">
+<h4 id="orgf9b6fd6">Miércoles</h4>
+<div class="outline-text-4" id="text-orgf9b6fd6">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Sesión de formación interna sobre nuevas amenazas</li>
+<li class="off"><code>[&#xa0;]</code> Revisión de configuraciones de cortafuegos</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc1b4d58" class="outline-4">
+<h4 id="orgc1b4d58">Viernes</h4>
+<div class="outline-text-4" id="text-orgc1b4d58">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Revisión de planes de respuesta ante incidentes</li>
+<li class="off"><code>[&#xa0;]</code> Simulación de incidente y prueba de recuperación</li>
+</ul>
+<p>
+#+END<sub>SRC</sub>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd329aec" class="outline-2">
+<h2 id="orgd329aec">Tabla: Comparación de Herramientas Clave</h2>
+<div class="outline-text-2" id="text-orgd329aec">
+<table border="2" rules="all" frame="border" class="table table-striped">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Herramienta</th>
+<th scope="col" class="org-left">Función principal</th>
+<th scope="col" class="org-left">Periodicidad recomendada</th>
+<th scope="col" class="org-left">Ventajas</th>
+<th scope="col" class="org-left">Limitaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Snort/Suricata</td>
+<td class="org-left">IDS/IPS, detección de intrusos</td>
+<td class="org-left">Permanente</td>
+<td class="org-left">Alta personalización, reglas activas</td>
+<td class="org-left">Requiere configuración avanzada</td>
+</tr>
+
+<tr>
+<td class="org-left">Wazuh/OSSEC</td>
+<td class="org-left">EDR, monitoreo de endpoints</td>
+<td class="org-left">Permanente</td>
+<td class="org-left">Integración con SIEM, ligero</td>
+<td class="org-left">Curva de aprendizaje para alertas</td>
+</tr>
+
+<tr>
+<td class="org-left">OpenVAS</td>
+<td class="org-left">Escaneo de vulnerabilidades</td>
+<td class="org-left">Semanal</td>
+<td class="org-left">Amplia base de datos de vulnerabilidad</td>
+<td class="org-left">Tiempo de escaneo prolongado</td>
+</tr>
+
+<tr>
+<td class="org-left">Nmap</td>
+<td class="org-left">Descubrimiento de red</td>
+<td class="org-left">Semanal</td>
+<td class="org-left">Rápido, versátil</td>
+<td class="org-left">Limitado a nivel de red</td>
+</tr>
+
+<tr>
+<td class="org-left">Wireshark</td>
+<td class="org-left">Análisis de tráfico</td>
+<td class="org-left">Bajo demanda</td>
+<td class="org-left">Detallado, interfaz gráfica</td>
+<td class="org-left">Requiere experiencia para análisis</td>
+</tr>
+
+<tr>
+<td class="org-left">Metasploit</td>
+<td class="org-left">Pruebas de penetración</td>
+<td class="org-left">Mensual</td>
+<td class="org-left">Amplio soporte de exploits</td>
+<td class="org-left">Riesgo si no se usa en entorno seguro</td>
+</tr>
+
+<tr>
+<td class="org-left">ELK Stack/Graylog</td>
+<td class="org-left">SIEM, correlación de eventos</td>
+<td class="org-left">Permanente</td>
+<td class="org-left">Visualización avanzada, escalable</td>
+<td class="org-left">Consumo de recursos elevado</td>
+</tr>
+
+<tr>
+<td class="org-left">Firejail</td>
+<td class="org-left">Sandboxing de aplicaciones</td>
+<td class="org-left">Permanente</td>
+<td class="org-left">Ligero, fácil de implementar</td>
+<td class="org-left">Limitado a aplicaciones específicas</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org2c9229f" class="outline-2">
+<h2 id="org2c9229f">Diagrama PlantUML: Flujo Completo de Defensa APT</h2>
+<div class="outline-text-2" id="text-org2c9229f">
+
+<figure id="org675788c">
+<img src="images/flujo_defensa_apt_completo.png" alt="flujo_defensa_apt_completo.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orgc0316e6" class="outline-2">
+<h2 id="orgc0316e6">Respuesta ante Incidentes: Ejemplo Práctico</h2>
+<div class="outline-text-2" id="text-orgc0316e6">
+<p>
+En caso de detectar una APT, se debe seguir un flujo estructurado:
+</p>
+<ol class="org-ol">
+<li><b><b>Identificación:</b></b> Usar Wazuh para detectar accesos no autorizados o cambios en archivos críticos.</li>
+<li><b><b>Contención:</b></b> Aislar el sistema comprometido (e.g., desconectar de la red).</li>
+<li><b><b>Análisis:</b></b> Usar Wireshark para analizar tráfico y Cuckoo Sandbox para estudiar malware.</li>
+<li><b><b>Remediación:</b></b> Aplicar parches, restaurar desde backups y actualizar reglas de IDS/IPS.</li>
+<li><b><b>Documentación:</b></b> Registrar el incidente en org-mode con detalles y lecciones aprendidas.</li>
+</ol>
+</div>
+<div id="outline-container-orga929dc5" class="outline-3">
+<h3 id="orga929dc5">Ejemplo de Registro de Incidente en org-mode</h3>
+<div class="outline-text-3" id="text-orga929dc5">
+<p>
+#+BEGIN<sub>SRC</sub> org
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf9136fb" class="outline-2">
+<h2 id="orgf9136fb">Incidente de Seguridad: Acceso no autorizado detectado</h2>
+<div class="outline-text-2" id="text-orgf9136fb">
+</div>
+<div id="outline-container-org9f0dcfe" class="outline-3">
+<h3 id="org9f0dcfe">Descripción</h3>
+<div class="outline-text-3" id="text-org9f0dcfe">
+<ul class="org-ul">
+<li>Sistema afectado: Servidor Ubuntu 20.04 (IP: 192.168.1.100)</li>
+<li>Herramienta de detección: Wazuh</li>
+<li>Evento: Acceso no autorizado a /etc/passwd</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdb3a195" class="outline-3">
+<h3 id="orgdb3a195">Acciones tomadas</h3>
+<div class="outline-text-3" id="text-orgdb3a195">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> Aislar servidor (desconectar eth0)</li>
+<li class="on"><code>[X]</code> Analizar tráfico con Wireshark</li>
+<li class="on"><code>[X]</code> Restaurar archivo desde backup</li>
+<li class="on"><code>[X]</code> Actualizar reglas Suricata</li>
+<li class="on"><code>[X]</code> Aplicar parches de seguridad</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge6e6a2a" class="outline-3">
+<h3 id="orge6e6a2a">Lecciones aprendidas</h3>
+<div class="outline-text-3" id="text-orge6e6a2a">
+<ul class="org-ul">
+<li>Implementar autenticación multifactor.</li>
+<li>Reducir permisos en directorios críticos.</li>
+</ul>
+<p>
+#+END<sub>SRC</sub>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6cae40d" class="outline-2">
+<h2 id="org6cae40d">Recomendaciones Adicionales</h2>
+<div class="outline-text-2" id="text-org6cae40d">
+<ul class="org-ul">
+<li><b><b>Automatización:</b></b> Usar Ansible o scripts Bash para automatizar tareas de hardening y monitoreo.</li>
+<li><b><b>Capacitación:</b></b> Realizar simulaciones regulares de ataques (e.g., phishing) para entrenar al personal.</li>
+<li><b><b>Backups:</b></b> Mantener copias de seguridad cifradas y fuera de línea.</li>
+<li><b><b>Actualizaciones:</b></b> Aplicar parches de seguridad de forma inmediata tras su publicación.</li>
+<li><b><b>Comunidad:</b></b> Participar en foros como el de Kali Linux o Wazuh para estar al tanto de nuevas amenazas.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge11cae1" class="outline-2">
+<h2 id="orge11cae1">Referencias</h2>
+<div class="outline-text-2" id="text-orge11cae1">
+<ul class="org-ul">
+<li>[1] MSMK University: IDS e IPS Defensas esenciales contra los APT</li>
+<li>[2] Wazuh Documentation: Guía de Implementación de EDR en Linux</li>
+<li>[3] TuxCare: 25+ Herramientas de seguridad esenciales para Linux</li>
+<li>[4] Alapsi: Kali Linux: Tu Herramienta Esencial en Ciberseguridad</li>
+<li>[5] Kiteworks: Guía Completa de Protección Avanzada contra Amenazas (ATP)</li>
+<li>[6] Achirou: Las 15 mejores herramientas de ciberseguridad en 2025</li>
+<li>[7] INCIBE-CERT: Bastionado de sistemas: el caso de Linux</li>
+<li>[8] Checkpoint: ¿Qué es la protección avanzada contra amenazas (ATP)?</li>
+<li>[9] Suricata Documentation: Writing Custom Rules</li>
+<li>[10] OpenVAS Community: Guía de Escaneo de Vulnerabilidades</li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ciberseguridad.html">ciberseguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-apt.html">APT</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">Linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">EMACS</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-org-mode.html">org-mode</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-herramientas.html">herramientas</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-defensa.html">defensa</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ids.html">IDS</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-edr.html">EDR</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-siem.html">SIEM</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-hardening.html">hardening</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-pentesting.html">pentesting</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>
