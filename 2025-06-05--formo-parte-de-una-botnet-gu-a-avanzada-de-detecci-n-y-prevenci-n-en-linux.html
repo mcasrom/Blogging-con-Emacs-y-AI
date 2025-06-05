@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Guía técnica para identificar, analizar y prevenir la inclusión de tu sistema Ubuntu en una botnet.">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>¿Formo Parte de una Botnet? Guía Avanzada de Detección y Prevención en Linux</title>
+<meta property="og:title" content="¿Formo Parte de una Botnet? Guía Avanzada de Detección y Prevención en Linux">
+<meta property="og:type" content="article" />
+<meta property="og:description" content="Guía técnica para identificar, analizar y prevenir la inclusión de tu sistema Ubuntu en una botnet.">
+<meta property="og:url" content="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-05--formo-parte-de-una-botnet-gu-a-avanzada-de-detecci-n-y-prevenci-n-en-linux.html">
+<meta property="og:image" content="https://mcasrom.github.io/Blogging-con-Emacs-y-AI//images/detect-botnet.png">
+<meta charset='UTF-8'>
+ <!-- ======= SEO y Redes Sociales ======= -->
+       <meta name='author' content='Mike'>
+       <meta name='description' content='Blog sobre Emacs, org-mode, automatización y herramientas avanzadas'>
+       <meta name='keywords' content='Emacs, Org Mode, Linux, Inteligencia Artificial, Automatización, Tutoriales'>
+       <meta property='og:title' content='Emacs con esteroides'>
+       <meta property='og:description' content='Poder y Simplicidad con Emacs, IA y Linux'>
+       <meta property='og:image' content='https://mcasrom.github.io/logo.png'>
+       <meta property='og:url' content='https://mcasrom.github.io/'>
+       <meta property='og:type' content='website'>
+       <meta name='twitter:card' content='summary_large_image'>
+       <meta name='twitter:title' content='Emacs con esteroides'>
+       <meta name='twitter:description' content='Blog sobre Emacs, IA y herramientas avanzadas'>
+       <meta name='twitter:image' content='https://tuusuario.github.io/logo.png'>
+       <link rel='alternate' type='application/rss+xml' href='rss.xml'>
+       <link rel='sitemap' type='application/xml' title='Sitemap' href='sitemap.xml'>
+
+ <!-- === Google Analytics === -->
+       <script async src='https://www.googletagmanager.com/gtag/js?id=G-7YJ0SNJXSJ'></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-7YJ0SNJXSJ');
+       </script>
+
+
+<!-- ======= Estilo y Fuentes ======= -->
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.8em; .85
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='calendario-grande.html'>Calendario</a> |
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
+       </nav>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">05/06/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-05--formo-parte-de-una-botnet-gu-a-avanzada-de-detecci-n-y-prevenci-n-en-linux.html">¿Formo Parte de una Botnet? Guía Avanzada de Detección y Prevención en Linux</a></h1>
+<div id="outline-container-orge35a4aa" class="outline-2">
+<h2 id="orge35a4aa">Introducción</h2>
+<div class="outline-text-2" id="text-orge35a4aa">
+<p>
+Una <b>botnet</b> es una red de dispositivos comprometidos que, sin el conocimiento del usuario, son controlados remotamente por atacantes para ejecutar acciones maliciosas como ataques DDoS, minería de criptomonedas, envío masivo de spam, escaneo de redes o distribución de malware.
+</p>
+
+<p>
+Ubuntu, por ser un sistema Linux ampliamente utilizado, no es inmune. Si bien su arquitectura ofrece robustez, un sistema desactualizado, mal configurado o con software vulnerable puede ser fácilmente absorbido por una botnet.
+</p>
+
+<p>
+En esta guía analizamos en profundidad cómo detectar señales de compromiso, qué herramientas usar, cómo interpretar sus salidas, y qué medidas tomar en caso de confirmarse una infección.
+</p>
+
+
+
+<figure id="orgeb842a4">
+<img src="images/detect-botnet.png" alt="detect-botnet.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org5d6622f" class="outline-2">
+<h2 id="org5d6622f">Indicadores de Compromiso en Sistemas Ubuntu</h2>
+<div class="outline-text-2" id="text-org5d6622f">
+</div>
+<div id="outline-container-org4b0c4fc" class="outline-3">
+<h3 id="org4b0c4fc">Comportamiento del sistema</h3>
+<div class="outline-text-3" id="text-org4b0c4fc">
+<ul class="org-ul">
+<li>Consumo anormal de CPU/RAM sin procesos legítimos que lo justifiquen.</li>
+<li>Congelamientos o lentitud inesperada, especialmente tras el arranque.</li>
+<li>Reducción de espacio en disco sin archivos visibles que lo expliquen.</li>
+<li>Nuevas conexiones de red o puertos abiertos sin que se haya instalado ningún servicio.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgee701a5" class="outline-3">
+<h3 id="orgee701a5">Análisis forense inicial</h3>
+<div class="outline-text-3" id="text-orgee701a5">
+<p>
+Usa `uptime` y `last` para identificar sesiones prolongadas y tiempos de actividad sospechosos.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>uptime
+last
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgad4b5a6" class="outline-2">
+<h2 id="orgad4b5a6">Revisión Detallada del Sistema</h2>
+<div class="outline-text-2" id="text-orgad4b5a6">
+</div>
+<div id="outline-container-org2021b6d" class="outline-3">
+<h3 id="org2021b6d">1. Monitorización de Procesos</h3>
+<div class="outline-text-3" id="text-org2021b6d">
+<div class="org-src-container">
+<pre class="src src-bash"><code>ps aux --sort=-%cpu | head
+top
+htop
+</code></pre>
+</div>
+
+<p>
+Busca procesos con nombres engañosos como:
+</p>
+<ul class="org-ul">
+<li>`kworker/0:0` falsos (cuando hay varios iguales).</li>
+<li>`crond` o `sshd` duplicados.</li>
+<li>Procesos binarios ejecutados desde `/tmp`, `/dev/shm` o `/var/tmp`.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgef30200" class="outline-3">
+<h3 id="orgef30200">2. Conexiones de Red Activas</h3>
+<div class="outline-text-3" id="text-orgef30200">
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo ss -pant
+sudo netstat -plant
+</code></pre>
+</div>
+
+<p>
+Analiza conexiones a IPs externas en puertos altos (4444, 6667, 1337), típicos en botnets. Complementa con `whois` o `ipinfo.io` para identificar destinos.
+</p>
+</div>
+</div>
+<div id="outline-container-org1837d88" class="outline-3">
+<h3 id="org1837d88">3. Escaneo de Rootkits</h3>
+<div class="outline-text-3" id="text-org1837d88">
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo apt install chkrootkit rkhunter
+sudo chkrootkit
+sudo rkhunter --update &amp;&amp; sudo rkhunter --checkall
+</code></pre>
+</div>
+
+<p>
+Estos buscan manipulaciones en binarios del sistema, hooks en bibliotecas, rootkits en el kernel y alteraciones de permisos.
+</p>
+</div>
+</div>
+<div id="outline-container-org79f3b6f" class="outline-3">
+<h3 id="org79f3b6f">4. Revisión del Sistema de Archivos</h3>
+<div class="outline-text-3" id="text-org79f3b6f">
+<p>
+Busca binarios ejecutables en ubicaciones sospechosas:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>find / -type f -perm -111 -exec ls -l {} <span style="color: #a44185;">\;</span> 2&gt;/dev/null | grep -E <span style="color: #a44185;">"/tmp|/var/tmp|/dev/shm"</span>
+</code></pre>
+</div>
+
+<p>
+Revisa scripts automatizados en cron que podrían persistir malware:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>crontab -l
+ls -la /etc/cron.*
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1522b5f" class="outline-3">
+<h3 id="org1522b5f">5. Análisis de Logs</h3>
+<div class="outline-text-3" id="text-org1522b5f">
+<div class="org-src-container">
+<pre class="src src-bash"><code>journalctl -xe | grep -i ssh
+grep -i <span style="color: #a44185;">"reverse shell"</span> /var/log/*
+</code></pre>
+</div>
+
+<p>
+Busca conexiones entrantes inesperadas, cambios de permisos, autenticaciones fallidas repetidas o sesiones abiertas fuera del horario normal.
+</p>
+</div>
+</div>
+<div id="outline-container-orga92ea4e" class="outline-3">
+<h3 id="orga92ea4e">6. Inspección de Tráfico de Red</h3>
+<div class="outline-text-3" id="text-orga92ea4e">
+<p>
+Puedes usar `tcpdump` o `wireshark` para analizar tráfico en tiempo real.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo tcpdump -i any -n port not 22 and not 80 and not 443
+</code></pre>
+</div>
+
+<p>
+Busca patrones de beaconing o actividad periódica hacia una misma IP.
+</p>
+</div>
+</div>
+<div id="outline-container-org6e2f29f" class="outline-3">
+<h3 id="org6e2f29f">7. Auditoría del Sistema</h3>
+<div class="outline-text-3" id="text-org6e2f29f">
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo apt install lynis
+sudo lynis audit system
+</code></pre>
+</div>
+
+<p>
+Lynis proporciona un informe completo sobre la postura de seguridad del sistema, servicios activos, vulnerabilidades y configuraciones débiles.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc809433" class="outline-2">
+<h2 id="orgc809433">Comprobación de Persistencia y Escalada</h2>
+<div class="outline-text-2" id="text-orgc809433">
+<p>
+Revisa scripts de inicio del sistema:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>ls -la /etc/init.d/
+ls -la ~/.config/autostart/
+cat ~/.bashrc | grep -i curl
+</code></pre>
+</div>
+
+<p>
+Algunas botnets modifican `.bashrc`, `.profile` o `.bash<sub>profile</sub>` para reactivar malware tras el reinicio.
+</p>
+</div>
+</div>
+<div id="outline-container-org8650515" class="outline-2">
+<h2 id="org8650515">Evaluación de la Configuración de Red</h2>
+<div class="outline-text-2" id="text-org8650515">
+<p>
+Verifica los DNS configurados:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>cat /etc/resolv.conf
+</code></pre>
+</div>
+
+<p>
+DNS no confiables pueden ser usados para redirigir tráfico legítimo hacia dominios de control.
+</p>
+</div>
+</div>
+<div id="outline-container-orgadfb8fa" class="outline-2">
+<h2 id="orgadfb8fa">Herramientas Recomendadas Adicionales</h2>
+<div class="outline-text-2" id="text-orgadfb8fa">
+<table border="2" rules="all" frame="all">
+<caption class="t-above"><span class="table-number">Table 1:</span> Tabla de herramientas Recomendadadas Adicionales</caption>
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Herramienta</th>
+<th scope="col" class="org-left">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>ufw</b></td>
+<td class="org-left">Firewall de configuración sencilla</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>fail2ban</b></td>
+<td class="org-left">Protección contra fuerza bruta</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>logwatch</b></td>
+<td class="org-left">Reportes automáticos de actividad sospechosa</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>AppArmor</b></td>
+<td class="org-left">Contención de procesos potencialmente maliciosos</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>clamav</b></td>
+<td class="org-left">Análisis antivirus</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br>
+</p>
+
+<table border="2" rules="all" frame="all">
+<caption class="t-above"><span class="table-number">Table 2:</span> Tabla de herramientas y señales de detección de botnets en Ubuntu</caption>
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Categoría</b></th>
+<th scope="col" class="org-left"><b>Herramienta/Comando</b></th>
+<th scope="col" class="org-left"><b>Objetivo</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Análisis de procesos</td>
+<td class="org-left">`ps`, `top`, `htop`</td>
+<td class="org-left">Detectar procesos ocultos o sospechosos</td>
+</tr>
+
+<tr>
+<td class="org-left">Conexiones de red</td>
+<td class="org-left">`ss`, `netstat`, `tcpdump`</td>
+<td class="org-left">Ver conexiones activas y destinos externos</td>
+</tr>
+
+<tr>
+<td class="org-left">Rootkits y malware</td>
+<td class="org-left">`chkrootkit`, `rkhunter`</td>
+<td class="org-left">Escaneo de rootkits conocidos</td>
+</tr>
+
+<tr>
+<td class="org-left">Sistema de archivos</td>
+<td class="org-left">`find`, `ls`, `strings`</td>
+<td class="org-left">Binarios ocultos en carpetas temporales</td>
+</tr>
+
+<tr>
+<td class="org-left">Persistencia y cron</td>
+<td class="org-left">`crontab`, `systemctl`</td>
+<td class="org-left">Ver tareas automatizadas sospechosas</td>
+</tr>
+
+<tr>
+<td class="org-left">Logs del sistema</td>
+<td class="org-left">`journalctl`, `logwatch`</td>
+<td class="org-left">Detectar comportamientos anómalos</td>
+</tr>
+
+<tr>
+<td class="org-left">Auditoría de seguridad</td>
+<td class="org-left">`lynis`, `clamav`</td>
+<td class="org-left">Estado general de seguridad</td>
+</tr>
+
+<tr>
+<td class="org-left">Protección y prevención</td>
+<td class="org-left">`ufw`, `AppArmor`, `fail2ban`</td>
+<td class="org-left">Cortafuegos, defensa y contención</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgec187bc" class="outline-2">
+<h2 id="orgec187bc">Medidas a Tomar en Caso de Sospecha</h2>
+<div class="outline-text-2" id="text-orgec187bc">
+<ol class="org-ol">
+<li><b><b>Desconexión inmediata</b></b> del sistema de redes públicas o internas.</li>
+<li><b><b>Respaldo</b></b> de archivos críticos (documentos, claves, configuraciones).</li>
+<li>Análisis con <b>chkrootkit</b>, <b>rkhunter</b>, <b>clamav</b>, y revisión manual de procesos y logs.</li>
+<li>Si hay evidencia de infección: realizar una <b>reinstalación limpia del sistema</b> desde medios verificados.</li>
+<li>Cambiar contraseñas desde un sistema limpio, incluyendo SSH, correo, VPN, etc.</li>
+<li>Verificar cuentas SSH en `~/.ssh/authorized<sub>keys</sub>` y rotar llaves si se sospecha compromiso.</li>
+<li>Informar a otros administradores o usuarios si el sistema ha participado en ataques (por ética y cumplimiento legal).</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org5e13b5b" class="outline-2">
+<h2 id="org5e13b5b">Medidas Preventivas Recomendadas</h2>
+<div class="outline-text-2" id="text-org5e13b5b">
+<ul class="org-ul">
+<li><p>
+Mantén el sistema actualizado:  
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo apt update &amp;&amp; sudo apt upgrade -y  
+</code></pre>
+</div></li>
+<li><p>
+Configura reglas estrictas con `ufw`:  
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo ufw default deny incoming  
+sudo ufw allow ssh  
+sudo ufw enable  
+</code></pre>
+</div></li>
+<li>Activa `AppArmor` y configura perfiles para servicios expuestos.</li>
+<li>Utiliza llaves SSH en lugar de contraseñas.</li>
+<li>Limita el número de servicios activos. Usa `systemctl` para desactivar lo innecesario.</li>
+<li>Monitoriza periódicamente con scripts personalizados, <b>tripwire</b>, o herramientas como <b>osquery</b>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc026c62" class="outline-2">
+<h2 id="orgc026c62">Conclusión</h2>
+<div class="outline-text-2" id="text-orgc026c62">
+<p>
+Detectar si tu máquina Ubuntu forma parte de una botnet no es trivial, pero tampoco imposible. Con una mentalidad proactiva y un enfoque sistemático, puedes identificar señales claras de compromiso y tomar medidas para mitigar el riesgo. Un sistema comprometido no debe confiarse ni "limpiarse por partes": la única forma segura de eliminar una botnet es formatear, reinstalar, y adoptar mejores prácticas.
+</p>
+
+<p>
+La seguridad no es un estado, es un proceso. Inicia hoy una cultura de vigilancia digital.
+</p>
+</div>
+</div>
+<div id="outline-container-org2c96377" class="outline-2">
+<h2 id="org2c96377">Referencias</h2>
+<div class="outline-text-2" id="text-org2c96377">
+<ul class="org-ul">
+<li><a href="https://wiki.ubuntu.com/Security">https://wiki.ubuntu.com/Security</a></li>
+<li><a href="https://cisofy.com/lynis/">https://cisofy.com/lynis/</a></li>
+<li><a href="https://github.com/rkhunter/rkhunter">https://github.com/rkhunter/rkhunter</a></li>
+<li><a href="https://www.clamav.net/">https://www.clamav.net/</a></li>
+</ul>
+
+<blockquote>
+<p>
+“No hay sistemas seguros, solo sistemas vigilados.”  
+— Parafraseando a Bruce Schneier
+</p>
+</blockquote>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ubuntu.html">ubuntu</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-botnet.html">botnet</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-análisis.html">análisis</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-herramientas.html">herramientas</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-prevención.html">prevención</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>
