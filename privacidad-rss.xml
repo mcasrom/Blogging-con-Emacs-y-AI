@@ -4,7 +4,447 @@
 <title><![CDATA[Emacs con esteroides - privacidad]]></title>
 <description><![CDATA[Emacs con esteroides - privacidad]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-privacidad.html</link>
-<lastBuildDate>Thu, 05 Jun 2025 22:16:55 +0200</lastBuildDate>
+<lastBuildDate>Sun, 08 Jun 2025 23:38:12 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Explorando VPNs: Orígenes, Evolución, Beneficios y Configuración de una VPN Gratuita en Linux]]></title>
+  <description><![CDATA[
+<div id="outline-container-org5610a4a" class="outline-2">
+<h2 id="org5610a4a">Introducción a las VPNs</h2>
+<div class="outline-text-2" id="text-org5610a4a">
+<p>
+Las Redes Privadas Virtuales (VPNs, por sus siglas en inglés) se han convertido en herramientas esenciales para proteger la privacidad y la seguridad en línea en un mundo cada vez más conectado. Una VPN crea un túnel seguro y cifrado entre tu dispositivo y un servidor remoto, ocultando tu dirección IP y protegiendo tus datos de miradas indiscretas. Este artículo explora los orígenes, el desarrollo y las razones para usar VPNs, sus capacidades de protección y ofrece una guía práctica para configurar una VPN gratuita en Linux utilizando Emacs Org-mode para la documentación y PlantUML para visualizaciones. Ya seas un entusiasta de la privacidad o un usuario de Linux buscando mejorar tu seguridad, esta guía ofrece un enfoque detallado impulsado por Emacs para entender e implementar VPNs.
+</p>
+</div>
+</div>
+<div id="outline-container-orga8fc52a" class="outline-2">
+<h2 id="orga8fc52a">Orígenes y Evolución de las VPNs</h2>
+<div class="outline-text-2" id="text-orga8fc52a">
+</div>
+<div id="outline-container-org80bf0c7" class="outline-3">
+<h3 id="org80bf0c7">Orígenes</h3>
+<div class="outline-text-3" id="text-org80bf0c7">
+<p>
+El concepto de las VPNs surgió en la década de 1990, cuando las organizaciones buscaban formas seguras de conectar oficinas remotas y empleados a través de la internet pública. En 1996, Gurdeep Singh-Pall, un empleado de Microsoft, desarrolló el Protocolo de Túnel Punto a Punto (PPTP), uno de los primeros protocolos de VPN. El PPTP permitía la transmisión segura de datos a través de internet al encapsular paquetes de datos en un túnel seguro, marcando el nacimiento de las VPNs modernas.
+</p>
+</div>
+</div>
+<div id="outline-container-org8595bcd" class="outline-3">
+<h3 id="org8595bcd">Desarrollo</h3>
+<div class="outline-text-3" id="text-org8595bcd">
+<p>
+A lo largo de los años, la tecnología de las VPNs evolucionó significativamente:
+</p>
+<ul class="org-ul">
+<li><b><b>1990s</b></b>: PPTP y el Protocolo de Túnel de Capa 2 (L2TP) sentaron las bases para el acceso remoto seguro.</li>
+<li><b><b>2000s</b></b>: La introducción de OpenVPN, un protocolo de VPN de código abierto, ofreció un cifrado robusto y flexibilidad, ganando popularidad entre empresas e individuos.</li>
+<li><b><b>2010s</b></b>: El auge de los servicios de VPN para consumidores, como NordVPN, ExpressVPN y Mullvad, abordó preocupaciones crecientes sobre privacidad en línea, vigilancia y restricciones geográficas.</li>
+<li><b><b>2020s</b></b>: Protocolos modernos como WireGuard surgieron, ofreciendo un rendimiento más rápido y una seguridad más sólida. Las VPNs descentralizadas (dVPNs) también ganaron terreno, aprovechando blockchain para soluciones de privacidad entre pares [].</li>
+</ul>
+
+<p>
+Hoy en día, millones de personas usan VPNs para proteger su privacidad, eludir la censura y acceder a contenido restringido. Las soluciones de código abierto y las VPNs gratuitas han hecho que esta tecnología sea accesible para los usuarios de Linux, alineándose con la ética de código abierto de la comunidad de Emacs.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org5c74589" class="outline-2">
+<h2 id="org5c74589">¿Por Qué Usar una VPN? Razones y Motivaciones Clave</h2>
+<div class="outline-text-2" id="text-org5c74589">
+<p>
+Las VPNs cumplen múltiples propósitos, siendo valiosas para usuarios de Linux, desarrolladores y defensores de la privacidad. A continuación, se presenta una tabla que resume las principales razones para usar una VPN, con explicaciones detalladas:
+</p>
+
+<p>
+<br>
+</p>
+
+<table border="2" rules="all" frame="box">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Razón</th>
+<th scope="col" class="org-left">Descripción</th>
+<th scope="col" class="org-left">Ejemplo de Caso de Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Protección de Privacidad</td>
+<td class="org-left">Oculta tu dirección IP, evitando que ISPs y sitios web rastreen tu ubicación o actividades.</td>
+<td class="org-left">Ocultar hábitos de navegación de los ISPs.</td>
+</tr>
+
+<tr>
+<td class="org-left">Seguridad de Datos</td>
+<td class="org-left">Cifra los datos para protegerlos contra escuchas en redes Wi-Fi públicas o inseguras.</td>
+<td class="org-left">Proteger datos en una red Wi-Fi de una cafetería.</td>
+</tr>
+
+<tr>
+<td class="org-left">Elusión de Censura</td>
+<td class="org-left">Supera restricciones gubernamentales o institucionales para acceder a contenido bloqueado.</td>
+<td class="org-left">Acceder a sitios de noticias en regiones restringidas.</td>
+</tr>
+
+<tr>
+<td class="org-left">Superar Restricciones Geográficas</td>
+<td class="org-left">Desbloquea contenido bloqueado por región, como servicios de streaming o sitios web.</td>
+<td class="org-left">Ver Netflix de EE.UU. desde el extranjero.</td>
+</tr>
+
+<tr>
+<td class="org-left">Anonimato</td>
+<td class="org-left">Reduce la trazabilidad, protegiendo contra anuncios dirigidos o perfiles.</td>
+<td class="org-left">Investigación o activismo anónimo.</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br>
+</p>
+
+<p>
+<b><b>Diagrama PlantUML: Casos de Uso de VPNs</b></b>
+Para visualizar las relaciones entre los casos de uso de las VPNs, aquí hay un diagrama de componentes en PlantUML:
+</p>
+
+
+<figure id="orgc472623">
+<img src="images/casos-uso-vpn.png" alt="casos-uso-vpn.png">
+
+</figure>
+
+<p>
+<br>
+</p>
+
+<p>
+Este diagrama ilustra cómo un usuario interactúa con varios servicios de VPN para lograr resultados específicos, renderizado sin problemas en Org-mode con PlantUML.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc85a936" class="outline-2">
+<h2 id="orgc85a936">¿Qué Protegen las VPNs?</h2>
+<div class="outline-text-2" id="text-orgc85a936">
+<p>
+Las VPNs ofrecen múltiples capas de protección, cruciales para usuarios de Linux que manejan datos sensibles o trabajan en entornos de código abierto. La siguiente tabla detalla qué protegen las VPNs:
+</p>
+
+<p>
+<br>
+</p>
+
+<table border="2" rules="all" frame="box">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Aspecto Protegido</th>
+<th scope="col" class="org-left">Cómo lo Protegen las VPNs</th>
+<th scope="col" class="org-left">Importancia para Usuarios de Linux</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Dirección IP</td>
+<td class="org-left">Oculta tu IP real con la IP del servidor VPN, escondiendo tu ubicación.</td>
+<td class="org-left">Evita el rastreo durante contribuciones de código abierto.</td>
+</tr>
+
+<tr>
+<td class="org-left">Transmisión de Datos</td>
+<td class="org-left">Usa cifrado (e.g., AES-256, ChaCha20) para asegurar datos en tránsito.</td>
+<td class="org-left">Protege código o datos enviados por redes públicas.</td>
+</tr>
+
+<tr>
+<td class="org-left">Consultas DNS</td>
+<td class="org-left">Enruta las solicitudes DNS a través de la VPN para evitar fugas a ISPs.</td>
+<td class="org-left">Garantiza privacidad en búsquedas de dominios.</td>
+</tr>
+
+<tr>
+<td class="org-left">Identidad en Línea</td>
+<td class="org-left">Reduce la trazabilidad al anonimizar tu huella digital.</td>
+<td class="org-left">Crucial para desarrolladores enfocados en privacidad.</td>
+</tr>
+
+<tr>
+<td class="org-left">Fugas WebRTC e IPv6</td>
+<td class="org-left">Bloquea WebRTC e IPv6 para evitar exposición de datos no intencional.</td>
+<td class="org-left">Mejora la seguridad en sistemas Linux modernos.</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<b><b>Diagrama PlantUML: Capas de Protección de VPN</b></b>
+Aquí hay un diagrama de secuencia en PlantUML que muestra cómo una VPN protege el flujo de datos de un usuario de Linux:
+</p>
+
+
+<figure id="orga6793ce">
+<img src="images/secuencia-proteccion-vpn.png" alt="secuencia-proteccion-vpn.png">
+
+</figure>
+
+<p>
+<br>
+</p>
+
+<p>
+Este diagrama muestra el flujo de datos seguro desde un cliente Linux a través de un servidor VPN hasta un sitio web objetivo, asegurando una comunicación cifrada.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd9e5e0e" class="outline-2">
+<h2 id="orgd9e5e0e">Estado Actual de las VPNs (2025)</h2>
+<div class="outline-text-2" id="text-orgd9e5e0e">
+<p>
+A partir de 2025, las VPNs continúan evolucionando:
+</p>
+<ul class="org-ul">
+<li><b><b>Protocolos</b></b>: WireGuard se ha convertido en un estándar por su velocidad y seguridad, superando a protocolos más antiguos como OpenVPN en muchos casos [].</li>
+<li><b><b>VPNs Gratuitas</b></b>: Servicios como ProtonVPN y FreePN ofrecen niveles gratuitos con limitaciones, ideales para usuarios de Linux que buscan soluciones rentables [].</li>
+<li><b><b>VPNs Descentralizadas</b></b>: Proyectos como ArgoVPN y Sentinel aprovechan redes entre pares para un acceso resistente a la censura [].</li>
+<li><b><b>Soporte para Linux</b></b>: Aunque algunos proveedores tienen retrasos en el soporte para Linux (e.g., problemas con la GUI de ProtonVPN), herramientas de código abierto como OpenVPN y WireGuard son bien soportadas [].</li>
+</ul>
+
+<p>
+Los usuarios de Emacs pueden aprovechar Org-mode para documentar configuraciones de VPN e integrar PlantUML para visualizar configuraciones de red, mejorando la productividad y la claridad.
+</p>
+</div>
+</div>
+<div id="outline-container-org9064cd0" class="outline-2">
+<h2 id="org9064cd0">Instalación y Uso de una VPN Gratuita en Linux: Ejemplo con ProtonVPN</h2>
+<div class="outline-text-2" id="text-org9064cd0">
+<p>
+ProtonVPN ofrece un nivel gratuito compatible con Linux, lo que lo convierte en una excelente opción para usuarios de Emacs. A continuación, se presenta una guía paso a paso para instalar y usar ProtonVPN en una distribución de Linux (e.g., Ubuntu/Debian), con Org-mode para documentación y PlantUML para visualización.
+</p>
+
+<p>
+<b><b>Paso 1: Instalar ProtonVPN</b></b>
+ProtonVPN proporciona un cliente CLI para Linux, que se integra bien con los flujos de trabajo de Emacs. Sigue estos pasos:
+</p>
+
+<ol class="org-ol">
+<li><b><b>Descargar el Paquete CLI de ProtonVPN</b></b>:
+<ul class="org-ul">
+<li>Visita el sitio web oficial de ProtonVPN y descarga el paquete `.deb` para sistemas basados en Debian o sigue las instrucciones para otras distribuciones.</li>
+<li><p>
+Comando:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><code>wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb
+sudo dpkg -i protonvpn-stable-release_1.0.3-3_all.deb
+sudo apt update
+sudo apt install -y proton-vpn-gnome-desktop
+</code></pre>
+</div></li>
+</ul></li>
+
+<li><b><b>Instalar Dependencias</b></b>:
+<ul class="org-ul">
+<li><p>
+Asegúrate de que OpenVPN y NetworkManager estén instalados:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><code>sudo apt install -y openvpn network-manager-openvpn
+</code></pre>
+</div></li>
+</ul></li>
+
+<li><b><b>Iniciar Sesión en ProtonVPN</b></b>:
+<ul class="org-ul">
+<li><p>
+Inicializa el cliente CLI de ProtonVPN:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><code>protonvpn-cli login &lt;tu-usuario-de-protonvpn&gt;
+</code></pre>
+</div></li>
+<li>Sigue las indicaciones para ingresar tu contraseña.</li>
+</ul></li>
+
+<li><b><b>Conectar a un Servidor VPN</b></b>:
+<ul class="org-ul">
+<li><p>
+Conéctate al servidor gratuito más rápido:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><code>protonvpn-cli connect --fastest
+</code></pre>
+</div></li>
+</ul></li>
+</ol>
+
+<p>
+<b><b>Paso 2: Verificar la Conexión</b></b>
+</p>
+<ul class="org-ul">
+<li><p>
+Comprueba tu dirección IP para confirmar que la VPN está activa:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><code>curl https://api.ipify.org
+</code></pre>
+</div></li>
+<li>La salida debe ser diferente a tu IP real, indicando que la VPN está funcionando.</li>
+</ul>
+
+<p>
+<b><b>Paso 3: Documentar en Org-mode</b></b>
+Los usuarios de Emacs pueden documentar la configuración en un archivo Org-mode para una referencia fácil y publicación en GitHub. Aquí hay un fragmento de ejemplo en Org-mode:
+</p>
+
+<p>
+#+BEGIN<sub>SRC</sub> org
+</p>
+</div>
+</div>
+<div id="outline-container-org5f4a1bc" class="outline-2">
+<h2 id="org5f4a1bc">Configuración de ProtonVPN en Linux</h2>
+<div class="outline-text-2" id="text-org5f4a1bc">
+</div>
+<div id="outline-container-org2da52dc" class="outline-3">
+<h3 id="org2da52dc">Instalación</h3>
+<div class="outline-text-3" id="text-org2da52dc">
+<div class="org-src-container">
+<pre class="src src-sh"><code>sudo apt install -y proton-vpn-gnome-desktop openvpn network-manager-openvpn
+protonvpn-cli login &lt;usuario&gt;
+protonvpn-cli connect --fastest
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1a3ee6c" class="outline-3">
+<h3 id="org1a3ee6c">Verificación</h3>
+<div class="outline-text-3" id="text-org1a3ee6c">
+<div class="org-src-container">
+<pre class="src src-sh"><code>curl https://api.ipify.org
+</code></pre>
+</div>
+<p>
+#+END<sub>SRC</sub>
+</p>
+
+<p>
+<b><b>Paso 4: Visualizar con PlantUML</b></b>
+Para ilustrar el proceso de conexión de ProtonVPN, usa este diagrama de actividad en PlantUML:
+</p>
+
+
+<figure id="org8f51587">
+<img src="images/flujo-protonvpn.png" alt="flujo-protonvpn.png">
+
+</figure>
+
+<p>
+<br>
+</p>
+
+<p>
+<b><b>Paso 5: Publicar en GitHub</b></b>
+Para publicar este artículo en GitHub:
+</p>
+<ol class="org-ol">
+<li>Guarda la configuración de ProtonVPN como `vpn-blog-post-es.org` en tu repositorio.</li>
+<li>Usa un generador de sitios estáticos como Hugo o Jekyll con soporte para Org-mode (e.g., `ox-hugo`) para convertir el archivo Org a HTML.</li>
+<li>Sube el repositorio a GitHub, asegurándote de que los diagramas PlantUML se rendericen usando una Acción de GitHub [].</li>
+</ol>
+
+<p>
+<b><b>Flujo de Trabajo de GitHub para PlantUML</b></b>
+</p>
+<div class="org-src-container">
+<pre class="src src-yaml"><code><span style="color: #004651;">name</span>: Renderizar Diagramas PlantUML
+<span style="color: #AF005F;">on</span>: [push]
+<span style="color: #004651;">jobs</span>:
+  <span style="color: #004651;">build</span>:
+    <span style="color: #004651;">runs-on</span>: ubuntu-latest
+    <span style="color: #004651;">steps</span>:
+    - <span style="color: #004651;">uses</span>: actions/checkout@v3
+    - <span style="color: #004651;">name</span>: Renderizar PlantUML
+      <span style="color: #004651;">uses</span>: docker://plantuml/plantuml
+      <span style="color: #004651;">run</span>: |
+        <span style="color: #005F00;">for file in *.org; do</span>
+<span style="color: #005F00;">          java -jar /plantuml.jar -tpng $file</span>
+<span style="color: #005F00;">        done</span>
+    - <span style="color: #004651;">name</span>: Confirmar Diagramas
+      <span style="color: #004651;">run</span>: |
+        git config --global user.name <span style="color: #005F00;">"GitHub Action"</span>
+        git config --global user.email <span style="color: #005F00;">"action@github.com"</span>
+<span style="color: #005F00;">        git add *.png</span>
+        git commit -m <span style="color: #005F00;">"Agregar diagramas PlantUML renderizados"</span>
+<span style="color: #005F00;">        git push</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org80c515c" class="outline-2">
+<h2 id="org80c515c">Mejores Prácticas para el Uso de VPNs en Linux</h2>
+<div class="outline-text-2" id="text-org80c515c">
+<ul class="org-ul">
+<li><b><b>Verificar Fugas</b></b>: Usa herramientas como `dnsleaktest.com` para asegurarte de que no haya fugas de DNS o IP [].</li>
+<li><b><b>Activar Kill Switch</b></b>: Configura tu cliente VPN para bloquear el acceso a internet si la VPN se desconecta.</li>
+<li><b><b>Usar Herramientas de Código Abierto</b></b>: Prefiere protocolos de VPN de código abierto como OpenVPN o WireGuard por su transparencia [].</li>
+<li><b><b>Actualizaciones Regulares</b></b>: Mantén actualizados tu cliente VPN y tu sistema para corregir vulnerabilidades.</li>
+<li><b><b>Integración con Emacs</b></b>: Usa Org-mode para crear scripts y automatizar conexiones VPN, e.g., con `org-babel` para ejecutar comandos de shell.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org869cacf" class="outline-2">
+<h2 id="org869cacf">Conclusión</h2>
+<div class="outline-text-2" id="text-org869cacf">
+<p>
+Las VPNs son herramientas poderosas para mejorar la privacidad y la seguridad en Linux, con una rica historia y avances continuos. Al aprovechar VPNs gratuitas como ProtonVPN y documentar configuraciones con Emacs Org-mode y PlantUML, los usuarios de Linux pueden mantener flujos de trabajo seguros y bien documentados. Publicar en GitHub asegura que tu conocimiento se comparta con la comunidad de código abierto, alineándose con la filosofía de colaboración y transparencia de Emacs.
+</p>
+</div>
+</div>
+<div id="outline-container-org41d04a1" class="outline-2">
+<h2 id="org41d04a1">Referencias</h2>
+<div class="outline-text-2" id="text-org41d04a1">
+<div class="org-src-container">
+<pre class="src src-org"><code>- [Web:1] Publicaci&#243;n de Reddit sobre la hoja de ruta de ProtonVPN, <span style="color: #009B7C; font-weight: bold; text-decoration: underline;"><a href="https://www.reddit.com/r/ProtonVPN/comments/yn3m0y/the_proton_vpn_roadmap/">https://www.reddit.com/r/ProtonVPN/comments/yn3m0y/the_proton_vpn_roadmap/</a></span>
+- [Web:6] Gu&#237;a de CNET sobre servicios VPN, <span style="color: #009B7C; font-weight: bold; text-decoration: underline;"><a href="https://www.cnet.com/tech/services-and-software/best-vpn/">https://www.cnet.com/tech/services-and-software/best-vpn/</a></span>
+- [Web:14] Repositorio de GitHub sobre Awesome VPN Network, <span style="color: #009B7C; font-weight: bold; text-decoration: underline;"><a href="https://github.com/GNU-Linux-libre/Awesome-VPN-Network">https://github.com/GNU-Linux-libre/Awesome-VPN-Network</a></span>
+- [Web:15] Repositorio de GitHub de OpenVPN, <span style="color: #009B7C; font-weight: bold; text-decoration: underline;"><a href="https://github.com/OpenVPN/openvpn">https://github.com/OpenVPN/openvpn</a></span>
+- [Web:20] Gu&#237;a de Inicio R&#225;pido de PlantUML, <span style="color: #009B7C; font-weight: bold; text-decoration: underline;"><a href="https://plantuml.com">https://plantuml.com</a></span>
+</code></pre>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-vpn.html">vpn</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-privacidad.html">privacidad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-software-libre.html">software-libre</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-plantuml.html">plantuml</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-org-mode.html">org-mode</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-github.html">github</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[vpn]]></category>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[privacidad]]></category>
+  <category><![CDATA[software-libre]]></category>
+  <category><![CDATA[plantuml]]></category>
+  <category><![CDATA[org-mode]]></category>
+  <category><![CDATA[github]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-08-explorando-vpns-or-genes-evoluci-n-beneficios-y-configuraci-n-de-una-vpn-gratuita-en-linux.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-08-explorando-vpns-or-genes-evoluci-n-beneficios-y-configuraci-n-de-una-vpn-gratuita-en-linux.html</guid>
+  <pubDate>Sun, 08 Jun 2025 23:16:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[VPNs: Protección, Privacidad y Alternativas en Linux]]></title>
   <description><![CDATA[
