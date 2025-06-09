@@ -4,7 +4,7 @@
 <title><![CDATA[Emacs con esteroides]]></title>
 <description><![CDATA[Emacs con esteroides]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Sun, 08 Jun 2025 23:37:33 +0200</lastBuildDate>
+<lastBuildDate>Mon, 09 Jun 2025 22:22:37 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Explorando Shima Spain Village: Un Rincón Español en Japón]]></title>
   <description><![CDATA[
@@ -130,7 +130,7 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[españa]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</guid>
-  <pubDate>Sun, 08 Jun 2025 23:37:33 +0200</pubDate>
+  <pubDate>Mon, 09 Jun 2025 22:22:37 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
@@ -951,19 +951,25 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
 </tr>
 
 <tr>
+<td class="org-right">2025-06-09</td>
+<td class="org-left">Sistema Completo de Monitoreo de Integridad en Linux con Hashes</td>
+<td class="org-left"><a href="2025-06-09-sistema-completo-de-monitoreo-de-integridad-en-linux-con-hashes.html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
 </tr>
 
 <tr>
-<td class="org-right">2025-06-05</td>
+<td class="org-right">2025-06-09</td>
 <td class="org-left">Artículos recientes sobre geopolítica y estrategia</td>
 <td class="org-left"><a href="geopolitica.html">Enlace</a></td>
 </tr>
 
 <tr>
-<td class="org-right">2025-06-05</td>
+<td class="org-right">2025-06-08</td>
 <td class="org-left">Índice de Publicaciones del Blog</td>
 <td class="org-left"><a href="indice-posts.html">Enlace</a></td>
 </tr>
@@ -992,7 +998,456 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Sun, 08 Jun 2025 23:23:00 +0200</pubDate>
+  <pubDate>Mon, 09 Jun 2025 22:17:00 +0200</pubDate>
+</item>
+<item>
+  <title><![CDATA[Sistema Completo de Monitoreo de Integridad en Linux con Hashes]]></title>
+  <description><![CDATA[
+<div id="outline-container-orge73d82b" class="outline-2">
+<h2 id="orge73d82b">Introducción</h2>
+<div class="outline-text-2" id="text-orge73d82b">
+<p>
+Sistema completo para detectar modificaciones no autorizadas en sistemas Linux mediante hashes criptográficos, con almacenamiento seguro y control de versiones.
+</p>
+</div>
+<div id="outline-container-orgfaa68a2" class="outline-3">
+<h3 id="orgfaa68a2">Diagrama del Sistema Completo:</h3>
+<div class="outline-text-3" id="text-orgfaa68a2">
+
+<figure id="orgd64b8e7">
+<img src="images/sistema-completo.png" alt="sistema-completo.png">
+
+</figure>
+
+<p>
+<br>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org5a5f59c" class="outline-2">
+<h2 id="org5a5f59c">Fase 1: Creación del Script Base</h2>
+<div class="outline-text-2" id="text-org5a5f59c">
+</div>
+<div id="outline-container-org8d122b8" class="outline-3">
+<h3 id="org8d122b8">Script de Generación de Hashes (`monitor<sub>integridad.sh</sub>`):</h3>
+<div class="outline-text-3" id="text-org8d122b8">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Generaci&#243;n inicial de hashes</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n b&#225;sica</span>
+<span style="color: #004651;">TARGETS</span>=(
+    /bin
+    /sbin
+    /usr/bin
+    /usr/sbin
+    /etc
+    /lib/modules
+    /etc/init.d
+)
+
+<span style="color: #AF8700;">generate_hashes</span>() {
+    <span style="color: #1F55A0;">local</span> <span style="color: #004651;">output_file</span>=$<span style="color: #004651;">1</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"# Hashes de Integridad - $(</span><span style="color: #1F55A0; font-weight: bold;">date</span><span style="color: #005F00;">)"</span> &gt; <span style="color: #005F00;">"$output_file"</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"# Sistema: $(</span><span style="color: #1F55A0; font-weight: bold;">uname -a</span><span style="color: #005F00;">)"</span> &gt;&gt; <span style="color: #005F00;">"$output_file"</span>
+
+    <span style="color: #D70000;">for</span> target<span style="color: #D70000;"> in</span> <span style="color: #005F00;">"${TARGETS[@]}"</span>; <span style="color: #D70000;">do</span>
+        <span style="color: #D70000;">if</span> [ -e <span style="color: #005F00;">"$target"</span> ]; <span style="color: #D70000;">then</span>
+            <span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"\n# Directorio: $target"</span> &gt;&gt; <span style="color: #005F00;">"$output_file"</span>
+            find <span style="color: #005F00;">"$target"</span> -type f -exec sha256sum {} <span style="color: #005F00;">\;</span> &gt;&gt; <span style="color: #005F00;">"$output_file"</span>
+        <span style="color: #D70000;">fi</span>
+    <span style="color: #D70000;">done</span>
+}
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Uso b&#225;sico</span>
+<span style="color: #004651;">OUTPUT_FILE</span>=<span style="color: #005F00;">"hashes_base.sha256"</span>
+generate_hashes <span style="color: #005F00;">"$OUTPUT_FILE"</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Hashes generados en $OUTPUT_FILE"</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc97f3fe" class="outline-2">
+<h2 id="orgc97f3fe">Fase 2: Almacenamiento Seguro con Control de Versiones</h2>
+<div class="outline-text-2" id="text-orgc97f3fe">
+</div>
+<div id="outline-container-org41f3dbc" class="outline-3">
+<h3 id="org41f3dbc">Estructura de Directorios:</h3>
+<div class="outline-text-3" id="text-org41f3dbc">
+
+<figure id="orgeb69ed3">
+<img src="images/estructura-almacenamiento.png" alt="estructura-almacenamiento.png">
+
+</figure>
+
+<p>
+<br>
+</p>
+</div>
+</div>
+<div id="outline-container-org8c7884a" class="outline-3">
+<h3 id="org8c7884a">Script Mejorado con Almacenamiento Seguro:</h3>
+<div class="outline-text-3" id="text-org8c7884a">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n de almacenamiento seguro</span>
+<span style="color: #004651;">VAULT_DIR</span>=<span style="color: #005F00;">"/var/log/integridad/vault"</span>
+<span style="color: #004651;">CONFIG_DIR</span>=<span style="color: #005F00;">"/var/log/integridad/config"</span>
+<span style="color: #004651;">LOG_FILE</span>=<span style="color: #005F00;">"/var/log/integridad/logs/integridad.log"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Inicializaci&#243;n</span>
+mkdir -p {$<span style="color: #004651;">VAULT_DIR</span>/hashes,$<span style="color: #004651;">VAULT_DIR</span>/firmas,$<span style="color: #004651;">VAULT_DIR</span>/backups,$<span style="color: #004651;">CONFIG_DIR</span>}
+<span style="color: #004651;">TIMESTAMP</span>=$(<span style="color: #1F55A0; font-weight: bold;">date +%Y%m%d_%H%M%S</span>)
+<span style="color: #004651;">HASH_FILE</span>=<span style="color: #005F00;">"$VAULT_DIR/hashes/$TIMESTAMP.sha256"</span>
+<span style="color: #004651;">SIG_FILE</span>=<span style="color: #005F00;">"$VAULT_DIR/firmas/$TIMESTAMP.sig"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Funci&#243;n de generaci&#243;n mejorada</span>
+<span style="color: #AF8700;">generate_hashes</span>() {
+    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">... (funci&#243;n anterior mejorada)</span>
+    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">A&#241;ade metadatos adicionales</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"# Metadata:"</span> &gt;&gt; <span style="color: #005F00;">"$HASH_FILE"</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"# Generated: $(</span><span style="color: #1F55A0; font-weight: bold;">date --iso-8601=seconds</span><span style="color: #005F00;">)"</span> &gt;&gt; <span style="color: #005F00;">"$HASH_FILE"</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"# Hostname: $(</span><span style="color: #1F55A0; font-weight: bold;">hostname -f</span><span style="color: #005F00;">)"</span> &gt;&gt; <span style="color: #005F00;">"$HASH_FILE"</span>
+}
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Firmado y backup</span>
+gpg --batch --yes --detach-sign --armor <span style="color: #005F00;">\</span>
+    -o <span style="color: #005F00;">"$SIG_FILE"</span> <span style="color: #005F00;">"$HASH_FILE"</span>
+
+tar czf - <span style="color: #005F00;">"$HASH_FILE"</span> <span style="color: #005F00;">"$SIG_FILE"</span> | <span style="color: #005F00;">\</span>
+gpg --batch --encrypt --recipient <span style="color: #005F00;">"security@example.com"</span> <span style="color: #005F00;">\</span>
+&gt; <span style="color: #005F00;">"$VAULT_DIR/backups/$TIMESTAMP.tar.gpg"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Control de versiones</span>
+git -C <span style="color: #005F00;">"/var/log/integridad"</span> add vault/
+git -C <span style="color: #005F00;">"/var/log/integridad"</span> commit -m <span style="color: #005F00;">"Update $TIMESTAMP"</span> <span style="color: #005F00;">\</span>
+&gt;&gt; <span style="color: #005F00;">"$LOG_FILE"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Rotaci&#243;n (conservar 30 d&#237;as)</span>
+find <span style="color: #005F00;">"$VAULT_DIR/hashes"</span> -mtime +30 -delete
+find <span style="color: #005F00;">"$VAULT_DIR/firmas"</span> -mtime +30 -delete
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org89418ad" class="outline-2">
+<h2 id="org89418ad">Fase 3: Verificación y Monitoreo</h2>
+<div class="outline-text-2" id="text-org89418ad">
+</div>
+<div id="outline-container-org8652a3e" class="outline-3">
+<h3 id="org8652a3e">Script de Verificación (`verificar<sub>integridad.sh</sub>`):</h3>
+<div class="outline-text-3" id="text-org8652a3e">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Par&#225;metros configurables</span>
+<span style="color: #004651;">REFERENCE</span>=<span style="color: #005F00;">"${1:-$(</span><span style="color: #1F55A0; font-weight: bold;">ls -t /var/log/integridad/vault/hashes/*.sha256 | head -2 | tail -1</span><span style="color: #005F00;">)}"</span>
+<span style="color: #004651;">CURRENT</span>=<span style="color: #005F00;">"/tmp/current_hashes.$$.sha256"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Generar hashes actuales</span>
+monitor_integridad.sh --quick <span style="color: #005F00;">"$CURRENT"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Comparaci&#243;n avanzada</span>
+<span style="color: #004651;">diff_output</span>=<span style="color: #005F00;">"/var/log/integridad/diff_$(</span><span style="color: #1F55A0; font-weight: bold;">date +%s</span><span style="color: #005F00;">).diff"</span>
+diff -u &lt;(sort <span style="color: #005F00;">"$REFERENCE"</span>) &lt;(sort <span style="color: #005F00;">"$CURRENT"</span>) &gt; <span style="color: #005F00;">"$diff_output"</span>
+
+<span style="color: #D70000;">if</span> [ -s <span style="color: #005F00;">"$diff_output"</span> ]; <span style="color: #D70000;">then</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"ALERTA: Cambios detectados"</span> &gt;&amp;2
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Detalles en $diff_output"</span> &gt;&amp;2
+    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Opcional: Enviar email de alerta</span>
+<span style="color: #D70000;">else</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"OK: No se detectaron cambios"</span>
+    rm <span style="color: #005F00;">"$diff_output"</span>
+<span style="color: #D70000;">fi</span>
+
+rm <span style="color: #005F00;">"$CURRENT"</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd2adbc7" class="outline-2">
+<h2 id="orgd2adbc7">Fase 4: Automatización con Cron</h2>
+<div class="outline-text-2" id="text-orgd2adbc7">
+</div>
+<div id="outline-container-orgf990722" class="outline-3">
+<h3 id="orgf990722">Configuración recomendada:</h3>
+<div class="outline-text-3" id="text-orgf990722">
+<div class="org-src-container">
+<pre class="src src-cron"><code># Ejemplo crontab para root
+0 3 * * * /usr/local/bin/monitor_integridad.sh &gt;&gt; /var/log/integridad/cron.log 2&gt;&amp;1
+0 4 * * 0 /usr/local/bin/verificar_integridad.sh /var/log/integridad/vault/hashes/last_known_good.sha256
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org42df2f4" class="outline-2">
+<h2 id="org42df2f4">Tablas de Referencia Rápida</h2>
+<div class="outline-text-2" id="text-org42df2f4">
+</div>
+<div id="outline-container-orgd5f91c2" class="outline-3">
+<h3 id="orgd5f91c2">Comparación de Estrategias de Almacenamiento:</h3>
+<div class="outline-text-3" id="text-orgd5f91c2">
+<table border="1" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Estrategia</th>
+<th scope="col" class="org-left">Ventajas</th>
+<th scope="col" class="org-left">Desventajas</th>
+<th scope="col" class="org-left">Uso Recomendado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Local plano</td>
+<td class="org-left">Simple</td>
+<td class="org-left">Sin versionado</td>
+<td class="org-left">Pruebas iniciales</td>
+</tr>
+
+<tr>
+<td class="org-left">Git</td>
+<td class="org-left">Historial completo</td>
+<td class="org-left">Requiere mantenimiento</td>
+<td class="org-left">Entornos desarrollo</td>
+</tr>
+
+<tr>
+<td class="org-left">GPG + Backup</td>
+<td class="org-left">Máxima seguridad</td>
+<td class="org-left">Complejidad configuración</td>
+<td class="org-left">Producción crítica</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br>
+</p>
+</div>
+</div>
+<div id="outline-container-org003c75b" class="outline-3">
+<h3 id="org003c75b">Política de Retención:</h3>
+<div class="outline-text-3" id="text-org003c75b">
+<table border="1" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Tipo Archivo</th>
+<th scope="col" class="org-left">Retención</th>
+<th scope="col" class="org-left">Compresión</th>
+<th scope="col" class="org-left">Encriptación</th>
+<th scope="col" class="org-left">Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Hashes brutos</td>
+<td class="org-left">30 días</td>
+<td class="org-left">No</td>
+<td class="org-left">No</td>
+<td class="org-left">hashes<sub>20231115.sha256</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">Firmas GPG</td>
+<td class="org-left">30 días</td>
+<td class="org-left">No</td>
+<td class="org-left">No</td>
+<td class="org-left">hashes<sub>20231115.sig</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">Backups</td>
+<td class="org-left">1 año</td>
+<td class="org-left">Sí</td>
+<td class="org-left">Sí</td>
+<td class="org-left">backup<sub>20231115.tar.gpg</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">Logs</td>
+<td class="org-left">6 meses</td>
+<td class="org-left">Sí</td>
+<td class="org-left">No</td>
+<td class="org-left">integridad.log.1.gz</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-org2d248ff" class="outline-2">
+<h2 id="org2d248ff">Integración con Emacs</h2>
+<div class="outline-text-2" id="text-org2d248ff">
+<p>
+Para gestión desde Emacs:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">integrity-monitor-run</span> ()
+  <span style="color: #004700; font-style: italic;">"Ejecutar monitor de integridad"</span>
+  (<span style="color: #D70000;">interactive</span>)
+  (async-shell-command <span style="color: #005F00;">"monitor_integridad.sh"</span> <span style="color: #005F00;">"*Integrity Monitor*"</span>))
+
+(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">integrity-verify</span> (<span style="color: #1F55A0;">&amp;optional</span> ref-file)
+  <span style="color: #004700; font-style: italic;">"Verificar integridad contra referencia"</span>
+  (<span style="color: #D70000;">interactive</span> <span style="color: #005F00;">"fArchivo de referencia: "</span>)
+  (<span style="color: #D70000;">let</span> ((cmd (format <span style="color: #005F00;">"verificar_integridad.sh %s"</span> (<span style="color: #D70000;">or</span> ref-file <span style="color: #005F00;">""</span>))))
+  (compile cmd))
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6712c4f" class="outline-2">
+<h2 id="org6712c4f">Conclusión</h2>
+<div class="outline-text-2" id="text-org6712c4f">
+<p>
+Este sistema completo proporciona:
+</p>
+<ol class="org-ol">
+<li>Generación segura de hashes</li>
+<li>Almacenamiento con control de versiones</li>
+<li>Verificación automatizada</li>
+<li>Historial auditado</li>
+</ol>
+</div>
+<div id="outline-container-org5e15b93" class="outline-3">
+<h3 id="org5e15b93">Próximos pasos:</h3>
+<div class="outline-text-3" id="text-org5e15b93">
+<ul class="org-ul">
+<li>Implementar notificaciones por email</li>
+<li>Configurar almacenamiento remoto</li>
+<li>Integrar con sistemas SIEM</li>
+</ul>
+
+
+<figure id="org3e9f40a">
+<img src="images/workflow-final.png" alt="workflow-final.png">
+
+</figure>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-hashes.html">hashes</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-integridad.html">integridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-monitoreo.html">monitoreo</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-deteccion-cambios.html">deteccion-cambios</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gpg.html">gpg</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-git.html">git</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-almacenamiento-seguro.html">almacenamiento-seguro</a> </div>]]></description>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[hashes]]></category>
+  <category><![CDATA[integridad]]></category>
+  <category><![CDATA[monitoreo]]></category>
+  <category><![CDATA[deteccion-cambios]]></category>
+  <category><![CDATA[gpg]]></category>
+  <category><![CDATA[git]]></category>
+  <category><![CDATA[almacenamiento-seguro]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-09-sistema-completo-de-monitoreo-de-integridad-en-linux-con-hashes.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-09-sistema-completo-de-monitoreo-de-integridad-en-linux-con-hashes.html</guid>
+  <pubDate>Mon, 09 Jun 2025 18:55:00 +0200</pubDate>
+</item>
+<item>
+  <title><![CDATA[Artículos recientes sobre geopolítica y estrategia]]></title>
+  <description><![CDATA[
+<div id="outline-container-orgcdb95cd" class="outline-2">
+<h2 id="orgcdb95cd">Recopilación de fuentes RSS relevantes (últimos 5 días):</h2>
+<div class="outline-text-2" id="text-orgcdb95cd">
+
+<figure id="org4796110">
+<img src="images/diagrama_geo.png" alt="diagrama_geo.png">
+
+</figure>
+
+<ul class="org-ul">
+<li><a href="https://www.realcleardefense.com/2025/05/21/geopolitics_used_and_abused_1111548.html">Geopolitics Used and Abused</a> (2025-06-07)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/02/carneys_blarney_europe_wont_fix_canadas_defense_crisis_1113840.html">Carney's Blarney: Europe Won't Fix Canada's Defense Crisis</a> (2025-06-07)</li>
+<li><a href="https://www.nytimes.com/2025/06/04/world/europe/ukraine-russia-drones-nato.html">Drone Attacks Are the New Front in War. Can NATO Keep Up?</a> (2025-06-05)</li>
+<li><a href="https://www.elmundo.es/internacional/2025/06/04/684087e521efa038578b45e6.html">Siete años de cárcel para los okupas y policías con permiso para infiltrarse en la Mafia&#x2026; Así es el nuevo decreto de seguridad de Meloni</a> (2025-06-04)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/05/peace_in_ukraine_and_the_realities_of_geopolitics_1114649.html">Peace in Ukraine and the Realities of Geopolitics</a> (2025-06-05)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/05/senate_unveils_its_version_of_150b_defense_reconciliation_package_1114654.html">Senate Unveils Its Version of $150B Defense Reconciliation Package</a> (2025-06-05)</li>
+<li><a href="https://www.elmundo.es/espana/2025/06/05/68418918e4d4d844128b456f.html">Robles se enroca en el 2% de gasto en Defensa y EEUU se lo vuelve a dejar claro: la OTAN "se comprometerá con el 5% en cuestión de semanas"</a> (2025-06-05)</li>
+<li><a href="https://www.elmundo.es/madrid/2025/06/05/68415267fc6c833f228b459c.html">Noche de tensión en Lavapiés tras una reyerta multitudinaria que acabó con nueve detenidos y cuatro policías heridos al ser agredidos a golpes y pedradas</a> (2025-06-05)</li>
+<li><a href="https://www.nytimes.com/2025/06/05/world/middleeast/israel-hostages-haggai.html">Israeli Military Recovers Bodies of Two Hostages Taken in Oct. 7 Attack</a> (2025-06-05)</li>
+<li><a href="https://www.lemonde.fr/international/article/2025/06/05/l-allemagne-va-avoir-besoin-de-50-000-a-60-000-soldats-supplementaires-estime-son-ministre-de-la-defense_6610640_3210.html">L’Allemagne va avoir besoin de « 50 000 à 60 000 » soldats supplémentaires, estime son ministre de la défense</a> (2025-06-05)</li>
+<li><a href="https://www.nytimes.com/2025/06/05/world/europe/nato-defense-ministers-spending.html">Goal to Spend 5 Percent on Militaries Splits NATO Allies</a> (2025-06-05)</li>
+<li><a href="https://www.elmundo.es/internacional/2025/06/05/6841b9ddfc6c83e2398b45de.html">Rutte ignora a España y confirma que propondrá a los aliados un gasto en Defensa del 5% con la fórmula 3,5+1,5: " Si no lo hacemos, no estaremos seguros"</a> (2025-06-05)</li>
+<li><a href="https://www.elmundo.es/papel/lideres/2025/06/05/684070c1e9cf4ac6708b45a4.html">Cuatro jóvenes prodigio en defensa de la inteligencia artificial: "La tecnología no es neutra; debemos preguntarnos qué tipo de intereses tenemos como sociedad"</a> (2025-06-05)</li>
+<li><a href="https://www.lemonde.fr/economie/article/2025/06/05/a-fos-sur-mer-les-dockers-cgt-bloquent-trois-conteneurs-de-composants-militaires-a-destination-d-israel_6610731_3234.html">A Fos-sur-Mer, les dockers CGT bloquent trois conteneurs de composants militaires à destination d’Israël</a> (2025-06-05)</li>
+<li><a href="https://www.lemonde.fr/international/article/2025/06/05/otan-les-allies-d-accord-pour-augmenter-les-depenses-de-defense-jusqu-a-5-de-leur-pib_6610704_3210.html">OTAN : les alliés affichent un accord pour augmenter les dépenses de défense jusqu’à 5 % de leur PIB</a> (2025-06-05)</li>
+<li><a href="https://www.lemonde.fr/economie/article/2025/06/05/guerre-commerciale-les-tensions-entre-la-chine-et-les-etats-unis-reprennent_6610683_3234.html">Guerre commerciale : les tensions entre la Chine et les Etats-Unis reprennent</a> (2025-06-05)</li>
+<li><a href="https://www.elconfidencialdigital.com/articulo/defensa/defensa-alerta-grupo-hackers-vinculados-inteligencia-militar-rusa/20250605190000967045.html">Defensa alerta sobre un grupo de hackers vinculados a la inteligencia militar rusa</a> (2025-06-05)</li>
+<li><a href="https://www.washingtonpost.com/world/2025/06/05/nato-spending-trump-hegseth-military/">NATO nears deal to grant Trump’s wish for giant military spending increase</a> (2025-06-06)</li>
+<li><a href="https://www.elmundo.es/internacional/2025/06/05/6841cf04fc6c830d6c8b45ca.html">Sánchez desata el "malestar" y la "frustración" entre los aliados con su rebeldía ante la OTAN: "Arrastra los pies en el gasto en Defensa"</a> (2025-06-05)</li>
+<li><a href="https://www.elmundo.es/espana/extremadura/2025/06/06/68429e1cfc6c8377048b4578.html">'Caso David Sánchez': las asociaciones judiciales salen en defensa de la juez Beatriz Biedma ante las "presiones externas" que sufre</a> (2025-06-06)</li>
+<li><a href="https://www.lemonde.fr/international/article/2025/06/06/au-lendemain-de-sa-dispute-publique-avec-elon-musk-donald-trump-minimise-les-tensions-avec-son-ancien-allie_6610807_3210.html">Au lendemain de sa dispute publique avec Elon Musk, Donald Trump minimise les tensions avec son ancien allié</a> (2025-06-06)</li>
+<li><a href="https://www.elconfidencialdigital.com/articulo/defensa/defensa-confirma-visita-felipe-vi-ejercicio-militar-eslovaquia-que-adelanto-ecd/20250606130000967157.html">Defensa confirma la visita de Felipe VI a un ejercicio militar en Eslovaquia que adelantó ECD</a> (2025-06-06)</li>
+<li><a href="https://www.elconfidencialdigital.com/articulo/defensa/santa-cruz-tenerife-via-clave-que-quedara-inhabilitada-desfile-militar-7-junio/20250606104144967104.html">Santa Cruz de Tenerife: la vía clave que quedará inhabilitada durante el desfile militar del 7 de junio</a> (2025-06-06)</li>
+<li><a href="https://www.elconfidencialdigital.com/articulo/dinero/empresa-sancionada-mas-14000-euros-alta-tardia-seguridad-social/20250606070000966917.html">Una empresa sancionada con más de 14.000 euros por alta tardía en la Seguridad Social</a> (2025-06-06)</li>
+<li><a href="https://www.lemonde.fr/international/live/2025/06/06/en-direct-guerre-en-ukraine-le-kremlin-qualifie-le-conflit-en-ukraine-d-existentiel-pour-la-russie_6609764_3210.html">En direct, guerre en Ukraine : le Kremlin qualifie le conflit en Ukraine d’« existentiel » pour la Russie</a> (2025-06-06)</li>
+<li><a href="https://www.elmundo.es/madrid/2025/06/06/6842d16ce85eceec658b45b4.html">Huyen en un coche de la Policía desde Lavapiés, chocan contra un árbol junto al Tanatorio Sur y tres de ellos acaban detenidos</a> (2025-06-06)</li>
+<li><a href="https://www.lemonde.fr/international/article/2025/06/07/la-france-ne-vend-pas-d-armes-a-israel-reaffirme-le-ministre-des-armees-apres-le-refus-de-dockers-de-charger-un-conteneur-de-composants-militaires_6611077_3210.html">La France ne vend pas d’armes à Israël, réaffirme le ministre des armées après le refus de dockers de charger un conteneur de composants militaires</a> (2025-06-07)</li>
+<li><a href="https://www.lemonde.fr/international/article/2025/06/07/aux-etats-unis-la-cour-supreme-autorise-le-doge-a-acceder-aux-donnees-sensibles-de-la-securite-sociale_6610884_3210.html">Aux Etats-Unis, la Cour suprême autorise le DOGE à accéder aux données sensibles de la Sécurité sociale</a> (2025-06-07)</li>
+<li><a href="https://www.lemonde.fr/international/live/2025/06/07/en-direct-guerre-a-gaza-la-defense-civile-palestinienne-fait-etat-de-38-morts-dans-des-operations-israeliennes-vendredi_6609400_3210.html">En direct, guerre à Gaza : la défense civile palestinienne fait état de 38 morts dans des opérations israéliennes vendredi</a> (2025-06-07)</li>
+<li><a href="https://www.elmundo.es/espana/2025/06/07/684403fce4d4d8f5018b4578.html">A Sánchez se le abre otra crisis: IU amenaza con salir del Gobierno si acepta la "locura" del 5% de gasto que exige la OTAN</a> (2025-06-07)</li>
+<li><a href="https://www.lemonde.fr/international/live/2025/06/07/en-direct-guerre-a-gaza-le-bateau-humanitaire-madleen-se-rapproche-de-l-enclave-palestinienne_6609400_3210.html">En direct, guerre à Gaza : la défense civile de Gaza fait état de trente-six morts, dont six dans des tirs israéliens près d’un centre d’aide</a> (2025-06-07)</li>
+<li><a href="https://www.washingtonpost.com/world/2025/06/07/trump-travel-ban-civil-wars/">Trump travel ban targets nations mired in civil wars or armed conflicts</a> (2025-06-07)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/07/nato_tests_unmanned_surface_vessels_in_the_baltic_sea_1115148.html">NATO Tests Unmanned Surface Vessels in the Baltic Sea</a> (2025-06-07)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/07/the_geopolitics_of_darwin_australia_1115156.html">The Geopolitics of Darwin, Australia</a> (2025-06-07)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/07/gutting_military_testing_office_may_be_the_deadliest_move_yet_1115168.html">Gutting Military Testing Office May Be the Deadliest Move Yet</a> (2025-06-07)</li>
+<li><a href="https://www.elmundo.es/deportes/futbol/uefa-nations-league/2025/06/07/684433f8e9cf4aa5408b4571.html">Ocho nonatos y adultos de 10 años: ¿dónde estaban los jugadores de la selección cuando debutó Cristiano?</a> (2025-06-07)</li>
+<li><a href="https://www.elmundo.es/andalucia/2025/06/07/6844978821efa0b7478b4585.html">Detenido un hombre en Marbella por el asesinato de su pareja</a> (2025-06-08)</li>
+<li><a href="https://www.elmundo.es/cultura/musica/2025/06/08/6844b63ee9cf4ac14f8b4581.html">El fiestón de cumpleaños de Natos y Waor para 60.000 personas en Madrid: puro rap que haría estar orgulloso a los chavales que empezaron llenando casas okupa</a> (2025-06-08)</li>
+<li><a href="https://www.nytimes.com/2025/06/07/world/americas/colombia-senator-shot.html">A Colombian Senator, Miguel Uribe, Is Shot at a Campaign Event</a> (2025-06-09)</li>
+<li><a href="https://www.nytimes.com/2025/06/08/world/asia/japan-military-trump-china.html">Japan Flexes Its Military Muscle at China, and Trump</a> (2025-06-09)</li>
+<li><a href="https://www.elconfidencialdigital.com/articulo/defensa/espana-desafia-trump-otan-dato-que-revela-resistencia-nuevo-gasto-militar/20250607172912967305.html">España desafía a Trump en la OTAN: el dato que revela su resistencia al nuevo gasto militar</a> (2025-06-07)</li>
+<li><a href="https://www.lemonde.fr/m-le-mag/article/2025/06/08/lac-ontario-et-au-milieu-coule-une-frontiere-je-ne-suis-pas-devenue-antiamericaine-mais-je-n-irai-pas-aux-etats-unis-cette-annee-je-me-demande-si-on-n-existe-pas-mieux-sans-eux_6611135_4500055.html">Lac Ontario, et au milieu coule une frontière : « Je ne suis pas devenue antiaméricaine, mais je n’irai pas aux Etats-Unis cette année. Je me demande si on n’existe pas mieux sans eux ? »</a> (2025-06-08)</li>
+<li><a href="https://www.nytimes.com/2025/06/08/world/europe/helping-save-kyiv-from-drones-volunteers-caffeine-and-vintage-guns.html">Russian Drone Swarms Test a Volunteer Air-Defense Unit Near Kyiv</a> (2025-06-08)</li>
+<li><a href="https://www.lemonde.fr/international/article/2025/06/08/le-pape-leon-xiv-appelle-a-ouvrir-les-frontieres-et-condamne-l-esprit-d-exclusion_6611341_3210.html">Le pape Léon XIV appelle à « ouvrir les frontières » et condamne l’« esprit d’exclusion »</a> (2025-06-08)</li>
+<li><a href="https://www.elmundo.es/andalucia/2025/06/09/6845e66afc6c83b0528b4589.html">"Irascible, violento y conflictivo", así describen al hombre detenido por golpear a su pareja hasta la muerte en Marbella</a> (2025-06-09)</li>
+<li><a href="https://www.elconfidencialdigital.com/articulo/politica/gobierno-mark-rutte-solo-paises-otan-decidiremos-gasto-militar/20250609050000967139.html">El Gobierno, contra Mark Rutte: “Solo los países de la OTAN decidiremos el gasto militar”</a> (2025-06-09)</li>
+<li><a href="https://www.elconfidencialdigital.com/articulo/el-chivato/deficit-alojamientos-academia-medicos-militares-empieza-resolverse/20250609050000967121.html">El déficit de alojamientos en la academia de médicos militares empieza a resolverse</a> (2025-06-09)</li>
+<li><a href="https://www.nytimes.com/2025/06/08/world/americas/colombia-uribe-turbay-shooting.html">Attack on Colombia Senator, Miguel Uribe Turbay, Caught on Video</a> (2025-06-09)</li>
+<li><a href="https://www.nytimes.com/2025/06/08/briefing/national-guard-protest-russia-french-open.html">Monday Briefing: Tensions Flare in Los Angeles</a> (2025-06-08)</li>
+<li><a href="https://www.lemonde.fr/international/article/2025/06/09/a-los-angeles-une-nouvelle-journee-de-tensions-sous-le-regard-de-la-garde-nationale-c-est-du-pur-spectacle-de-la-provocation_6611582_3210.html">A Los Angeles, une nouvelle journée de tensions sous le regard de la garde nationale : « C’est du pur spectacle, de la provocation »</a> (2025-06-09)</li>
+<li><a href="https://www.lemonde.fr/economie/article/2025/06/08/alors-que-renault-pourrait-produire-des-drones-les-constructeurs-automobiles-prennent-le-virage-de-la-defense_6611366_3234.html">Renault pourrait produire des drones en Ukraine, une annonce qui préfigure la diversification de l’industrie automobile dans la défense</a> (2025-06-08)</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><a href="file:///home/mike/myblog/public/geopolitica.html">Último en Geopolítica</a></li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-geopolitica.html">geopolitica</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-estrategia.html">estrategia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-opiniones.html">opiniones</a> </div>]]></description>
+  <category><![CDATA[geopolitica]]></category>
+  <category><![CDATA[estrategia]]></category>
+  <category><![CDATA[opiniones]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/geopolitica.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/geopolitica.html</guid>
+  <pubDate>Mon, 09 Jun 2025 00:00:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Explorando VPNs: Orígenes, Evolución, Beneficios y Configuración de una VPN Gratuita en Linux]]></title>
@@ -2406,59 +2861,6 @@ La seguridad no es un estado, es un proceso. Inicia hoy una cultura de vigilanci
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-05--formo-parte-de-una-botnet-gu-a-avanzada-de-detecci-n-y-prevenci-n-en-linux.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-05--formo-parte-de-una-botnet-gu-a-avanzada-de-detecci-n-y-prevenci-n-en-linux.html</guid>
   <pubDate>Thu, 05 Jun 2025 14:24:00 +0200</pubDate>
-</item>
-<item>
-  <title><![CDATA[Artículos recientes sobre geopolítica y estrategia]]></title>
-  <description><![CDATA[
-<div id="outline-container-orgfe44f84" class="outline-2">
-<h2 id="orgfe44f84">Recopilación de fuentes RSS relevantes (últimos 5 días):</h2>
-<div class="outline-text-2" id="text-orgfe44f84">
-
-<figure id="orge2a2edd">
-<img src="images/diagrama_geo.png" alt="diagrama_geo.png">
-
-</figure>
-
-<ul class="org-ul">
-<li><a href="https://www.realcleardefense.com/2025/05/21/geopolitics_used_and_abused_1111548.html">Geopolitics Used and Abused</a> (2025-06-04)</li>
-<li><a href="https://www.nytimes.com/2025/05/30/climate/charleston-oil-companies-lawsuit.html">A Court Debates Whether a Climate Lawsuit Threatens National Security</a> (2025-06-01)</li>
-<li><a href="https://foreignpolicy.com/2025/06/02/iran-us-nuclear-weapon-negotiations-diplomacy/">The False Binary at the Heart of Trump’s Iran Strategy</a> (2025-06-02)</li>
-<li><a href="https://www.nytimes.com/2025/06/02/world/europe/uk-defense-review-starmer-nuclear-submarines.html">U.K. Faces Most Serious Military Threat Since Cold War, Starmer Says</a> (2025-06-02)</li>
-<li><a href="https://www.nytimes.com/2025/06/02/world/asia/south-korea-election-security.html">Bulletproof Vests and Glass: South Korean Candidate Tightens Security</a> (2025-06-02)</li>
-<li><a href="https://www.nytimes.com/2025/06/02/world/europe/germany-asylum-seekers-border-eu.html">German Border Police Barred From Rejecting Asylum Seekers Arriving From E.U. Nations Without Review</a> (2025-06-02)</li>
-<li><a href="https://www.nytimes.com/2025/05/31/world/middleeast/muhammad-sinwar-hamas-israel.html">Muhammad Sinwar, a Top Military Leader of Hamas, Is Dead, Israel Says</a> (2025-05-31)</li>
-<li><a href="https://www.nytimes.com/2025/05/31/world/asia/hegseth-security-allies-china.html">Hegseth, at Security Forum, Vows to Strengthen America’s Asian Alliances</a> (2025-05-31)</li>
-<li><a href="https://www.lemonde.fr/international/live/2025/06/03/en-direct-guerre-a-gaza-trois-soldats-israeliens-tues-dans-le-nord-du-territoire-palestinien_6609400_3210.html">En direct, guerre à Gaza : au moins 15 personnes tuées au nord-ouest de Rafah, selon la défense civile</a> (2025-06-03)</li>
-<li><a href="https://www.lemonde.fr/international/article/2025/06/03/au-royaume-uni-la-defense-se-recentre-sur-l-otan-et-la-dissuasion-nucleaire_6610281_3210.html">Au Royaume-Uni, la défense se recentre sur l’OTAN et la dissuasion nucléaire</a> (2025-06-03)</li>
-<li><a href="https://www.realcleardefense.com/2025/06/02/hemispheric_defense_an_idea_whose_time_has_come_1113756.html">Hemispheric Defense: An Idea Whose Time Has Come</a> (2025-06-02)</li>
-<li><a href="https://www.realcleardefense.com/2025/06/02/hegseth_warns_chinese_military_action_against_taiwan_could_be_imminent_1113753.html">Hegseth Warns Chinese Military Action Against Taiwan 'Could Be Imminent'</a> (2025-06-02)</li>
-<li><a href="https://www.realcleardefense.com/2025/06/02/carneys_blarney_europe_wont_fix_canadas_defense_crisis_1113840.html">Carney's Blarney: Europe Won't Fix Canada's Defense Crisis</a> (2025-06-04)</li>
-<li><a href="https://www.washingtonpost.com/world/2025/05/31/india-delegation-pakistan-conflict-trump/">India launches global charm offensive after conflict with Pakistan</a> (2025-06-01)</li>
-<li><a href="https://www.elmundo.es/internacional/2025/06/04/6840681821efa044528b45e7.html">EEUU presiona directamente a Sánchez para que eleve el gasto en Defensa: "Cada aliado debe llegar al 5%, incluidos nuestros amigos de España"</a> (2025-06-04)</li>
-<li><a href="https://www.realcleardefense.com/2025/06/04/its_time_to_restructure_the_us_militarys_command_plan_1114326.html">It's Time To Restructure the U.S. Military's Command Plan</a> (2025-06-04)</li>
-<li><a href="https://www.nytimes.com/2025/06/04/world/europe/ukraine-russia-drones-nato.html">Drone Attacks Are the New Front in War. Can NATO Keep Up?</a> (2025-06-05)</li>
-<li><a href="https://www.nytimes.com/2025/06/03/world/europe/meloni-macron-meeting-europe-trade-war-trump.html">Macron and Meloni Meet, Searching for Unity in a World of Conflict</a> (2025-06-03)</li>
-<li><a href="https://www.lemonde.fr/international/article/2025/06/04/guerre-en-ukraine-les-russes-accelerent-l-integration-de-nouvelles-technologies-militaires_6610564_3210.html">Guerre en Ukraine : les Russes accélèrent l’intégration de nouvelles technologies militaires</a> (2025-06-04)</li>
-<li><a href="https://www.lemonde.fr/international/video/2025/06/04/l-administration-trump-veut-rebaptiser-un-navire-militaire-portant-le-nom-d-un-pionner-des-droits-des-homosexuels_6610557_3210.html">L’administration Trump veut rebaptiser un navire militaire portant le nom d’un pionnier des droits des homosexuels</a> (2025-06-04)</li>
-<li><a href="https://www.elconfidencialdigital.com/articulo/defensa/tenerife-acoge-mayor-desfile-militar-40-anos-3266-efectivos-presencia-reyes/20250604150928966786.html">Tenerife acoge el mayor desfile militar en 40 años: 3.266 efectivos y presencia de los Reyes</a> (2025-06-04)</li>
-<li><a href="https://www.washingtonpost.com/world/2025/06/04/india-news-channels-misinformation-pakistan-conflict/">How misinformation overtook Indian newsrooms amid conflict with Pakistan</a> (2025-06-04)</li>
-<li><a href="https://www.washingtonpost.com/world/2025/06/03/nippon-steel-us-tariffs-outrage/">In Japan, a U.S. security ally, anger over ‘unacceptable’ steel treatment</a> (2025-06-03)</li>
-<li><a href="https://www.elmundo.es/internacional/2025/06/04/684087e521efa038578b45e6.html">Siete años de cárcel para los okupas y policías con permiso para infiltrarse en la Mafia&#x2026; Así es el nuevo decreto de seguridad de Meloni</a> (2025-06-04)</li>
-</ul>
-
-
-<ul class="org-ul">
-<li><a href="file:///home/mike/myblog/public/geopolitica.html">Último en Geopolítica</a></li>
-</ul>
-</div>
-</div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-geopolitica.html">geopolitica</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-estrategia.html">estrategia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-opiniones.html">opiniones</a> </div>]]></description>
-  <category><![CDATA[geopolitica]]></category>
-  <category><![CDATA[estrategia]]></category>
-  <category><![CDATA[opiniones]]></category>
-  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/geopolitica.html</link>
-  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/geopolitica.html</guid>
-  <pubDate>Thu, 05 Jun 2025 00:00:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Notas sobre Gestión de Seguridad en un Laptop]]></title>

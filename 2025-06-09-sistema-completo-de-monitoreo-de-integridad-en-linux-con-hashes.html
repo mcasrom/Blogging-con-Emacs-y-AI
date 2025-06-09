@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Guía paso a paso para implementar un sistema de verificación de integridad mediante hashes SHA-256 con almacenamiento seguro y control de versiones">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Sistema Completo de Monitoreo de Integridad en Linux con Hashes</title>
+<meta property="og:title" content="Sistema Completo de Monitoreo de Integridad en Linux con Hashes">
+<meta property="og:type" content="article" />
+<meta property="og:description" content="Guía paso a paso para implementar un sistema de verificación de integridad mediante hashes SHA-256 con almacenamiento seguro y control de versiones">
+<meta property="og:url" content="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-09-sistema-completo-de-monitoreo-de-integridad-en-linux-con-hashes.html">
+<meta property="og:image" content="https://mcasrom.github.io/Blogging-con-Emacs-y-AI//images/workflow-final.png">
+<meta charset='UTF-8'>
+ <!-- ======= SEO y Redes Sociales ======= -->
+       <meta name='author' content='Mike'>
+       <meta name='description' content='Blog sobre Emacs, org-mode, automatización y herramientas avanzadas'>
+       <meta name='keywords' content='Emacs, Org Mode, Linux, Inteligencia Artificial, Automatización, Tutoriales'>
+       <meta property='og:title' content='Emacs con esteroides'>
+       <meta property='og:description' content='Poder y Simplicidad con Emacs, IA y Linux'>
+       <meta property='og:image' content='https://mcasrom.github.io/logo.png'>
+       <meta property='og:url' content='https://mcasrom.github.io/'>
+       <meta property='og:type' content='website'>
+       <meta name='twitter:card' content='summary_large_image'>
+       <meta name='twitter:title' content='Emacs con esteroides'>
+       <meta name='twitter:description' content='Blog sobre Emacs, IA y herramientas avanzadas'>
+       <meta name='twitter:image' content='https://tuusuario.github.io/logo.png'>
+       <link rel='alternate' type='application/rss+xml' href='rss.xml'>
+       <link rel='sitemap' type='application/xml' title='Sitemap' href='sitemap.xml'>
+
+ <!-- === Google Analytics === -->
+       <script async src='https://www.googletagmanager.com/gtag/js?id=G-7YJ0SNJXSJ'></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-7YJ0SNJXSJ');
+       </script>
+
+
+<!-- ======= Estilo y Fuentes ======= -->
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.8em; .85
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
+       </nav>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">09/06/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-09-sistema-completo-de-monitoreo-de-integridad-en-linux-con-hashes.html">Sistema Completo de Monitoreo de Integridad en Linux con Hashes</a></h1>
+<div id="outline-container-orge73d82b" class="outline-2">
+<h2 id="orge73d82b">Introducción</h2>
+<div class="outline-text-2" id="text-orge73d82b">
+<p>
+Sistema completo para detectar modificaciones no autorizadas en sistemas Linux mediante hashes criptográficos, con almacenamiento seguro y control de versiones.
+</p>
+</div>
+<div id="outline-container-orgfaa68a2" class="outline-3">
+<h3 id="orgfaa68a2">Diagrama del Sistema Completo:</h3>
+<div class="outline-text-3" id="text-orgfaa68a2">
+
+<figure id="orgd64b8e7">
+<img src="images/sistema-completo.png" alt="sistema-completo.png">
+
+</figure>
+
+<p>
+<br>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org5a5f59c" class="outline-2">
+<h2 id="org5a5f59c">Fase 1: Creación del Script Base</h2>
+<div class="outline-text-2" id="text-org5a5f59c">
+</div>
+<div id="outline-container-org8d122b8" class="outline-3">
+<h3 id="org8d122b8">Script de Generación de Hashes (`monitor<sub>integridad.sh</sub>`):</h3>
+<div class="outline-text-3" id="text-org8d122b8">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Generaci&#243;n inicial de hashes</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n b&#225;sica</span>
+<span style="color: #004651;">TARGETS</span>=(
+    /bin
+    /sbin
+    /usr/bin
+    /usr/sbin
+    /etc
+    /lib/modules
+    /etc/init.d
+)
+
+<span style="color: #AF8700;">generate_hashes</span>() {
+    <span style="color: #1F55A0;">local</span> <span style="color: #004651;">output_file</span>=$<span style="color: #004651;">1</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"# Hashes de Integridad - $(</span><span style="color: #1F55A0; font-weight: bold;">date</span><span style="color: #005F00;">)"</span> &gt; <span style="color: #005F00;">"$output_file"</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"# Sistema: $(</span><span style="color: #1F55A0; font-weight: bold;">uname -a</span><span style="color: #005F00;">)"</span> &gt;&gt; <span style="color: #005F00;">"$output_file"</span>
+
+    <span style="color: #D70000;">for</span> target<span style="color: #D70000;"> in</span> <span style="color: #005F00;">"${TARGETS[@]}"</span>; <span style="color: #D70000;">do</span>
+        <span style="color: #D70000;">if</span> [ -e <span style="color: #005F00;">"$target"</span> ]; <span style="color: #D70000;">then</span>
+            <span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"\n# Directorio: $target"</span> &gt;&gt; <span style="color: #005F00;">"$output_file"</span>
+            find <span style="color: #005F00;">"$target"</span> -type f -exec sha256sum {} <span style="color: #005F00;">\;</span> &gt;&gt; <span style="color: #005F00;">"$output_file"</span>
+        <span style="color: #D70000;">fi</span>
+    <span style="color: #D70000;">done</span>
+}
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Uso b&#225;sico</span>
+<span style="color: #004651;">OUTPUT_FILE</span>=<span style="color: #005F00;">"hashes_base.sha256"</span>
+generate_hashes <span style="color: #005F00;">"$OUTPUT_FILE"</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Hashes generados en $OUTPUT_FILE"</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc97f3fe" class="outline-2">
+<h2 id="orgc97f3fe">Fase 2: Almacenamiento Seguro con Control de Versiones</h2>
+<div class="outline-text-2" id="text-orgc97f3fe">
+</div>
+<div id="outline-container-org41f3dbc" class="outline-3">
+<h3 id="org41f3dbc">Estructura de Directorios:</h3>
+<div class="outline-text-3" id="text-org41f3dbc">
+
+<figure id="orgeb69ed3">
+<img src="images/estructura-almacenamiento.png" alt="estructura-almacenamiento.png">
+
+</figure>
+
+<p>
+<br>
+</p>
+</div>
+</div>
+<div id="outline-container-org8c7884a" class="outline-3">
+<h3 id="org8c7884a">Script Mejorado con Almacenamiento Seguro:</h3>
+<div class="outline-text-3" id="text-org8c7884a">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n de almacenamiento seguro</span>
+<span style="color: #004651;">VAULT_DIR</span>=<span style="color: #005F00;">"/var/log/integridad/vault"</span>
+<span style="color: #004651;">CONFIG_DIR</span>=<span style="color: #005F00;">"/var/log/integridad/config"</span>
+<span style="color: #004651;">LOG_FILE</span>=<span style="color: #005F00;">"/var/log/integridad/logs/integridad.log"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Inicializaci&#243;n</span>
+mkdir -p {$<span style="color: #004651;">VAULT_DIR</span>/hashes,$<span style="color: #004651;">VAULT_DIR</span>/firmas,$<span style="color: #004651;">VAULT_DIR</span>/backups,$<span style="color: #004651;">CONFIG_DIR</span>}
+<span style="color: #004651;">TIMESTAMP</span>=$(<span style="color: #1F55A0; font-weight: bold;">date +%Y%m%d_%H%M%S</span>)
+<span style="color: #004651;">HASH_FILE</span>=<span style="color: #005F00;">"$VAULT_DIR/hashes/$TIMESTAMP.sha256"</span>
+<span style="color: #004651;">SIG_FILE</span>=<span style="color: #005F00;">"$VAULT_DIR/firmas/$TIMESTAMP.sig"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Funci&#243;n de generaci&#243;n mejorada</span>
+<span style="color: #AF8700;">generate_hashes</span>() {
+    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">... (funci&#243;n anterior mejorada)</span>
+    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">A&#241;ade metadatos adicionales</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"# Metadata:"</span> &gt;&gt; <span style="color: #005F00;">"$HASH_FILE"</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"# Generated: $(</span><span style="color: #1F55A0; font-weight: bold;">date --iso-8601=seconds</span><span style="color: #005F00;">)"</span> &gt;&gt; <span style="color: #005F00;">"$HASH_FILE"</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"# Hostname: $(</span><span style="color: #1F55A0; font-weight: bold;">hostname -f</span><span style="color: #005F00;">)"</span> &gt;&gt; <span style="color: #005F00;">"$HASH_FILE"</span>
+}
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Firmado y backup</span>
+gpg --batch --yes --detach-sign --armor <span style="color: #005F00;">\</span>
+    -o <span style="color: #005F00;">"$SIG_FILE"</span> <span style="color: #005F00;">"$HASH_FILE"</span>
+
+tar czf - <span style="color: #005F00;">"$HASH_FILE"</span> <span style="color: #005F00;">"$SIG_FILE"</span> | <span style="color: #005F00;">\</span>
+gpg --batch --encrypt --recipient <span style="color: #005F00;">"security@example.com"</span> <span style="color: #005F00;">\</span>
+&gt; <span style="color: #005F00;">"$VAULT_DIR/backups/$TIMESTAMP.tar.gpg"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Control de versiones</span>
+git -C <span style="color: #005F00;">"/var/log/integridad"</span> add vault/
+git -C <span style="color: #005F00;">"/var/log/integridad"</span> commit -m <span style="color: #005F00;">"Update $TIMESTAMP"</span> <span style="color: #005F00;">\</span>
+&gt;&gt; <span style="color: #005F00;">"$LOG_FILE"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Rotaci&#243;n (conservar 30 d&#237;as)</span>
+find <span style="color: #005F00;">"$VAULT_DIR/hashes"</span> -mtime +30 -delete
+find <span style="color: #005F00;">"$VAULT_DIR/firmas"</span> -mtime +30 -delete
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org89418ad" class="outline-2">
+<h2 id="org89418ad">Fase 3: Verificación y Monitoreo</h2>
+<div class="outline-text-2" id="text-org89418ad">
+</div>
+<div id="outline-container-org8652a3e" class="outline-3">
+<h3 id="org8652a3e">Script de Verificación (`verificar<sub>integridad.sh</sub>`):</h3>
+<div class="outline-text-3" id="text-org8652a3e">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Par&#225;metros configurables</span>
+<span style="color: #004651;">REFERENCE</span>=<span style="color: #005F00;">"${1:-$(</span><span style="color: #1F55A0; font-weight: bold;">ls -t /var/log/integridad/vault/hashes/*.sha256 | head -2 | tail -1</span><span style="color: #005F00;">)}"</span>
+<span style="color: #004651;">CURRENT</span>=<span style="color: #005F00;">"/tmp/current_hashes.$$.sha256"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Generar hashes actuales</span>
+monitor_integridad.sh --quick <span style="color: #005F00;">"$CURRENT"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Comparaci&#243;n avanzada</span>
+<span style="color: #004651;">diff_output</span>=<span style="color: #005F00;">"/var/log/integridad/diff_$(</span><span style="color: #1F55A0; font-weight: bold;">date +%s</span><span style="color: #005F00;">).diff"</span>
+diff -u &lt;(sort <span style="color: #005F00;">"$REFERENCE"</span>) &lt;(sort <span style="color: #005F00;">"$CURRENT"</span>) &gt; <span style="color: #005F00;">"$diff_output"</span>
+
+<span style="color: #D70000;">if</span> [ -s <span style="color: #005F00;">"$diff_output"</span> ]; <span style="color: #D70000;">then</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"ALERTA: Cambios detectados"</span> &gt;&amp;2
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Detalles en $diff_output"</span> &gt;&amp;2
+    <span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Opcional: Enviar email de alerta</span>
+<span style="color: #D70000;">else</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"OK: No se detectaron cambios"</span>
+    rm <span style="color: #005F00;">"$diff_output"</span>
+<span style="color: #D70000;">fi</span>
+
+rm <span style="color: #005F00;">"$CURRENT"</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd2adbc7" class="outline-2">
+<h2 id="orgd2adbc7">Fase 4: Automatización con Cron</h2>
+<div class="outline-text-2" id="text-orgd2adbc7">
+</div>
+<div id="outline-container-orgf990722" class="outline-3">
+<h3 id="orgf990722">Configuración recomendada:</h3>
+<div class="outline-text-3" id="text-orgf990722">
+<div class="org-src-container">
+<pre class="src src-cron"><code># Ejemplo crontab para root
+0 3 * * * /usr/local/bin/monitor_integridad.sh &gt;&gt; /var/log/integridad/cron.log 2&gt;&amp;1
+0 4 * * 0 /usr/local/bin/verificar_integridad.sh /var/log/integridad/vault/hashes/last_known_good.sha256
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org42df2f4" class="outline-2">
+<h2 id="org42df2f4">Tablas de Referencia Rápida</h2>
+<div class="outline-text-2" id="text-org42df2f4">
+</div>
+<div id="outline-container-orgd5f91c2" class="outline-3">
+<h3 id="orgd5f91c2">Comparación de Estrategias de Almacenamiento:</h3>
+<div class="outline-text-3" id="text-orgd5f91c2">
+<table border="1" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Estrategia</th>
+<th scope="col" class="org-left">Ventajas</th>
+<th scope="col" class="org-left">Desventajas</th>
+<th scope="col" class="org-left">Uso Recomendado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Local plano</td>
+<td class="org-left">Simple</td>
+<td class="org-left">Sin versionado</td>
+<td class="org-left">Pruebas iniciales</td>
+</tr>
+
+<tr>
+<td class="org-left">Git</td>
+<td class="org-left">Historial completo</td>
+<td class="org-left">Requiere mantenimiento</td>
+<td class="org-left">Entornos desarrollo</td>
+</tr>
+
+<tr>
+<td class="org-left">GPG + Backup</td>
+<td class="org-left">Máxima seguridad</td>
+<td class="org-left">Complejidad configuración</td>
+<td class="org-left">Producción crítica</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br>
+</p>
+</div>
+</div>
+<div id="outline-container-org003c75b" class="outline-3">
+<h3 id="org003c75b">Política de Retención:</h3>
+<div class="outline-text-3" id="text-org003c75b">
+<table border="1" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Tipo Archivo</th>
+<th scope="col" class="org-left">Retención</th>
+<th scope="col" class="org-left">Compresión</th>
+<th scope="col" class="org-left">Encriptación</th>
+<th scope="col" class="org-left">Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Hashes brutos</td>
+<td class="org-left">30 días</td>
+<td class="org-left">No</td>
+<td class="org-left">No</td>
+<td class="org-left">hashes<sub>20231115.sha256</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">Firmas GPG</td>
+<td class="org-left">30 días</td>
+<td class="org-left">No</td>
+<td class="org-left">No</td>
+<td class="org-left">hashes<sub>20231115.sig</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">Backups</td>
+<td class="org-left">1 año</td>
+<td class="org-left">Sí</td>
+<td class="org-left">Sí</td>
+<td class="org-left">backup<sub>20231115.tar.gpg</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">Logs</td>
+<td class="org-left">6 meses</td>
+<td class="org-left">Sí</td>
+<td class="org-left">No</td>
+<td class="org-left">integridad.log.1.gz</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-org2d248ff" class="outline-2">
+<h2 id="org2d248ff">Integración con Emacs</h2>
+<div class="outline-text-2" id="text-org2d248ff">
+<p>
+Para gestión desde Emacs:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">integrity-monitor-run</span> ()
+  <span style="color: #004700; font-style: italic;">"Ejecutar monitor de integridad"</span>
+  (<span style="color: #D70000;">interactive</span>)
+  (async-shell-command <span style="color: #005F00;">"monitor_integridad.sh"</span> <span style="color: #005F00;">"*Integrity Monitor*"</span>))
+
+(<span style="color: #D70000;">defun</span> <span style="color: #AF8700;">integrity-verify</span> (<span style="color: #1F55A0;">&amp;optional</span> ref-file)
+  <span style="color: #004700; font-style: italic;">"Verificar integridad contra referencia"</span>
+  (<span style="color: #D70000;">interactive</span> <span style="color: #005F00;">"fArchivo de referencia: "</span>)
+  (<span style="color: #D70000;">let</span> ((cmd (format <span style="color: #005F00;">"verificar_integridad.sh %s"</span> (<span style="color: #D70000;">or</span> ref-file <span style="color: #005F00;">""</span>))))
+  (compile cmd))
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6712c4f" class="outline-2">
+<h2 id="org6712c4f">Conclusión</h2>
+<div class="outline-text-2" id="text-org6712c4f">
+<p>
+Este sistema completo proporciona:
+</p>
+<ol class="org-ol">
+<li>Generación segura de hashes</li>
+<li>Almacenamiento con control de versiones</li>
+<li>Verificación automatizada</li>
+<li>Historial auditado</li>
+</ol>
+</div>
+<div id="outline-container-org5e15b93" class="outline-3">
+<h3 id="org5e15b93">Próximos pasos:</h3>
+<div class="outline-text-3" id="text-org5e15b93">
+<ul class="org-ul">
+<li>Implementar notificaciones por email</li>
+<li>Configurar almacenamiento remoto</li>
+<li>Integrar con sistemas SIEM</li>
+</ul>
+
+
+<figure id="org3e9f40a">
+<img src="images/workflow-final.png" alt="workflow-final.png">
+
+</figure>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-hashes.html">hashes</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-integridad.html">integridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-monitoreo.html">monitoreo</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-deteccion-cambios.html">deteccion-cambios</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gpg.html">gpg</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-git.html">git</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-almacenamiento-seguro.html">almacenamiento-seguro</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>
