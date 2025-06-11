@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Guía práctica y automatizada para reforzar tu laptop Linux contra ciberataques con un script Bash paso a paso">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Script Refuerzo Rápido de Ciberseguridad para tu Laptop Linux</title>
+<meta property="og:title" content="Script Refuerzo Rápido de Ciberseguridad para tu Laptop Linux">
+<meta property="og:type" content="article" />
+<meta property="og:description" content="Guía práctica y automatizada para reforzar tu laptop Linux contra ciberataques con un script Bash paso a paso">
+<meta property="og:url" content="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-11-script-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux.html">
+<meta charset='UTF-8'>
+ <!-- ======= SEO y Redes Sociales ======= -->
+       <meta name='author' content='Mike'>
+       <meta name='description' content='Blog sobre Emacs, org-mode, automatización y herramientas avanzadas'>
+       <meta name='keywords' content='Emacs, Org Mode, Linux, Inteligencia Artificial, Automatización, Tutoriales'>
+       <meta property='og:title' content='Emacs con esteroides'>
+       <meta property='og:description' content='Poder y Simplicidad con Emacs, IA y Linux'>
+       <meta property='og:image' content='https://mcasrom.github.io/logo.png'>
+       <meta property='og:url' content='https://mcasrom.github.io/'>
+       <meta property='og:type' content='website'>
+       <meta name='twitter:card' content='summary_large_image'>
+       <meta name='twitter:title' content='Emacs con esteroides'>
+       <meta name='twitter:description' content='Blog sobre Emacs, IA y herramientas avanzadas'>
+       <meta name='twitter:image' content='https://tuusuario.github.io/logo.png'>
+       <link rel='alternate' type='application/rss+xml' href='rss.xml'>
+       <link rel='sitemap' type='application/xml' title='Sitemap' href='sitemap.xml'>
+
+ <!-- === Google Analytics === -->
+       <script async src='https://www.googletagmanager.com/gtag/js?id=G-7YJ0SNJXSJ'></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-7YJ0SNJXSJ');
+       </script>
+
+
+<!-- ======= Estilo y Fuentes ======= -->
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.8em; .85
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
+       </nav>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">11/06/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-11-script-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux.html">Script Refuerzo Rápido de Ciberseguridad para tu Laptop Linux</a></h1>
+<div id="outline-container-org54159eb" class="outline-2">
+<h2 id="org54159eb">Introducción</h2>
+<div class="outline-text-2" id="text-org54159eb">
+<p>
+En el mundo actual, donde la movilidad y la conectividad son constantes, proteger tu laptop Linux es esencial. Ya sea que uses tu equipo para trabajar, estudiar o simplemente navegar, estás expuesto a amenazas comunes como escaneos de puertos, ataques por fuerza bruta y servicios mal configurados.
+</p>
+
+<p>
+Este post te guiará a través de un enfoque automatizado para aplicar medidas básicas de ciberseguridad en tu laptop Linux usando un único script en Bash. Ideal para quienes desean una solución rápida, efectiva y sin complicaciones.
+</p>
+</div>
+</div>
+<div id="outline-container-org73f7ce3" class="outline-2">
+<h2 id="org73f7ce3">Diagrama del flujo del script</h2>
+<div class="outline-text-2" id="text-org73f7ce3">
+<p>
+El siguiente diagrama PlantUML resume el proceso que sigue el script paso a paso:
+</p>
+
+
+<figure id="org6ec299d">
+<img src="images/diagrama_refuerzo.png" alt="diagrama_refuerzo.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org19dd17a" class="outline-2">
+<h2 id="org19dd17a">Objetivo del script</h2>
+<div class="outline-text-2" id="text-org19dd17a">
+<p>
+Este script realiza las siguientes acciones:
+</p>
+
+<ul class="org-ul">
+<li>Actualiza tu sistema a la última versión estable.</li>
+<li>Configura y activa el firewall UFW con reglas seguras.</li>
+<li>Instala y activa `fail2ban` para bloquear ataques por fuerza bruta.</li>
+<li>Aplica endurecimiento básico de red con `sysctl`.</li>
+<li>Revisa los permisos de tu carpeta `.ssh`.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfc1d6fe" class="outline-2">
+<h2 id="orgfc1d6fe">Requisitos</h2>
+<div class="outline-text-2" id="text-orgfc1d6fe">
+<ul class="org-ul">
+<li>Sistema Linux basado en Debian (Ubuntu, Mint) o Arch.</li>
+<li>Acceso de superusuario (sudo).</li>
+<li>Conexión a internet.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0861e20" class="outline-2">
+<h2 id="org0861e20">Guía de instalación</h2>
+<div class="outline-text-2" id="text-org0861e20">
+<p>
+<b><b>Paso 1: Crear el script</b></b>
+</p>
+
+<p>
+Crea un archivo llamado <code>refuerzo_basico.sh</code> con el siguiente contenido:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Reforzamiento b&#225;sico de ciberseguridad para Linux</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Autor: Mike (geoemacs.netlify.app)</span>
+
+<span style="color: #1F55A0;">set</span> -e
+
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128272; Iniciando proceso de refuerzo de seguridad para tu laptop Linux..."</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">1. Actualizar el sistema</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128230; Actualizando el sistema..."</span>
+<span style="color: #D70000;">if </span><span style="color: #1F55A0;">command</span> -v apt &gt;/dev/null; <span style="color: #D70000;">then</span>
+    sudo apt update &amp;&amp; sudo apt upgrade -y
+<span style="color: #D70000;">elif </span><span style="color: #1F55A0;">command</span> -v pacman &gt;/dev/null; <span style="color: #D70000;">then</span>
+    sudo pacman -Syu --noconfirm
+<span style="color: #D70000;">fi</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">2. Activar y configurar firewall (UFW)</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128737;&#65039; Configurando firewall con UFW..."</span>
+sudo apt install -y ufw 2&gt;/dev/null || <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"ufw ya instalado o no disponible"</span>
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow OpenSSH
+sudo ufw enable
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">3. Instalar y activar fail2ban</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128683; Instalando fail2ban..."</span>
+sudo apt install -y fail2ban 2&gt;/dev/null || <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"fail2ban ya instalado o no disponible"</span>
+sudo systemctl enable --now fail2ban
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">4. Fortalecer configuraci&#243;n de red</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#127760; Aplicando configuraciones de red con sysctl..."</span>
+sudo tee /etc/sysctl.d/99-hardening.conf &gt; /dev/null &lt;&lt;EOF
+<span style="color: #005F00;"># Evitar redirecciones IP</span>
+<span style="color: #005F00;">net.ipv4.conf.all.accept_redirects = 0</span>
+<span style="color: #005F00;">net.ipv6.conf.all.accept_redirects = 0</span>
+<span style="color: #005F00;"># Evitar ataques de spoofing</span>
+<span style="color: #005F00;">net.ipv4.conf.all.rp_filter = 1</span>
+<span style="color: #005F00;"># Deshabilitar paquetes de fuente falsa</span>
+<span style="color: #005F00;">net.ipv4.conf.all.send_redirects = 0</span>
+<span style="color: #005F00;">EOF</span>
+
+sudo sysctl --system
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">5. Revisar permisos cr&#237;ticos</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128270; Revisando permisos de archivos cr&#237;ticos..."</span>
+sudo chmod 700 ~/.ssh
+sudo chmod 600 ~/.ssh/authorized_keys 2&gt;/dev/null || true
+sudo chown -R $(<span style="color: #1F55A0; font-weight: bold;">whoami</span>):$(<span style="color: #1F55A0; font-weight: bold;">whoami</span>) ~/.ssh
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">6. Reporte r&#225;pido</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#9989; Revisi&#243;n r&#225;pida:"</span>
+sudo ufw status
+systemctl status fail2ban | grep Active
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128074; Reforzamiento b&#225;sico completado."</span>
+</code></pre>
+</div>
+
+<p>
+<b><b>Paso 2: Dar permisos y ejecutar</b></b>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell"><code>chmod +x refuerzo_basico.sh
+./refuerzo_basico.sh
+</code></pre>
+</div>
+
+<p>
+<b><b>Paso 3: Comprobación final</b></b>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell"><code>sudo ufw status
+sudo fail2ban-client status
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1d9efc7" class="outline-2">
+<h2 id="org1d9efc7">Conclusión</h2>
+<div class="outline-text-2" id="text-org1d9efc7">
+<p>
+Este script proporciona un refuerzo básico pero poderoso que puede aplicarse en menos de 5 minutos. Ideal para laptops personales o equipos recién instalados. Si deseas un nivel más avanzado de hardening, puedes complementar con herramientas como <b>lynis</b>, <b>rkhunter</b> o políticas AppArmor/SELinux.
+</p>
+</div>
+</div>
+<div id="outline-container-org890666c" class="outline-2">
+<h2 id="org890666c">Referencias</h2>
+<div class="outline-text-2" id="text-org890666c">
+<ul class="org-ul">
+<li><a href="https://wiki.ubuntu.com/UncomplicatedFirewall">https://wiki.ubuntu.com/UncomplicatedFirewall</a></li>
+<li><a href="https://www.fail2ban.org/">https://www.fail2ban.org/</a></li>
+<li><a href="https://www.kernel.org/doc/html/latest/admin-guide/sysctl/index.html">https://www.kernel.org/doc/html/latest/admin-guide/sysctl/index.html</a></li>
+<li><a href="https://cisofy.com/lynis/">https://cisofy.com/lynis/</a></li>
+<li><a href="https://github.com/mcasrom/geo-ia">https://github.com/mcasrom/geo-ia</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4b93b55" class="outline-2">
+<h2 id="org4b93b55">Comentarios finales</h2>
+<div class="outline-text-2" id="text-org4b93b55">
+<p>
+¿Te gustaría extender esto con análisis semántico de logs, informes PDF automáticos o notificaciones vía Telegram cuando se detecte actividad sospechosa? ¡Próximamente!
+</p>
+
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-11-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux-semantica">- 2025-06-11-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux-semantica</a>
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-script.html">script</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ufw.html">ufw</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-fail2ban.html">fail2ban</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-sysctl.html">sysctl</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-hardening.html">hardening</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-laptop.html">laptop</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>

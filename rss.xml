@@ -4,7 +4,7 @@
 <title><![CDATA[Emacs con esteroides]]></title>
 <description><![CDATA[Emacs con esteroides]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Mon, 09 Jun 2025 22:22:37 +0200</lastBuildDate>
+<lastBuildDate>Wed, 11 Jun 2025 20:38:09 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Explorando Shima Spain Village: Un Rincón Español en Japón]]></title>
   <description><![CDATA[
@@ -130,7 +130,7 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[españa]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</guid>
-  <pubDate>Mon, 09 Jun 2025 22:22:37 +0200</pubDate>
+  <pubDate>Wed, 11 Jun 2025 20:38:08 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
@@ -957,19 +957,31 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
 </tr>
 
 <tr>
+<td class="org-right">2025-06-11</td>
+<td class="org-left">Refuerzo Rápido de Ciberseguridad para tu Laptop Linux Semantica</td>
+<td class="org-left"><a href="2025-06-11-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux-semantica.html">Enlace</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2025-06-11</td>
+<td class="org-left">Script Refuerzo Rápido de Ciberseguridad para tu Laptop Linux</td>
+<td class="org-left"><a href="2025-06-11-script-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux.html">Enlace</a></td>
+</tr>
+
+<tr>
 <td class="org-right">2025-03-11</td>
 <td class="org-left">Contacto</td>
 <td class="org-left"><a href="contacto.html">Enlace</a></td>
 </tr>
 
 <tr>
-<td class="org-right">2025-06-09</td>
+<td class="org-right">2025-06-11</td>
 <td class="org-left">Artículos recientes sobre geopolítica y estrategia</td>
 <td class="org-left"><a href="geopolitica.html">Enlace</a></td>
 </tr>
 
 <tr>
-<td class="org-right">2025-06-08</td>
+<td class="org-right">2025-06-09</td>
 <td class="org-left">Índice de Publicaciones del Blog</td>
 <td class="org-left"><a href="indice-posts.html">Enlace</a></td>
 </tr>
@@ -998,7 +1010,393 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Mon, 09 Jun 2025 22:17:00 +0200</pubDate>
+  <pubDate>Wed, 11 Jun 2025 20:36:00 +0200</pubDate>
+</item>
+<item>
+  <title><![CDATA[Refuerzo Rápido de Ciberseguridad para tu Laptop Linux Semantica]]></title>
+  <description><![CDATA[
+<div id="outline-container-orge0809a7" class="outline-2">
+<h2 id="orge0809a7">Introducción</h2>
+<div class="outline-text-2" id="text-orge0809a7">
+<p>
+La seguridad digital no termina tras aplicar un firewall y endurecer el sistema. Es fundamental <b>analizar lo que está ocurriendo</b> en nuestros registros de sistema, porque ahí se esconden muchas pistas sobre accesos sospechosos, ataques de fuerza bruta o errores de configuración que podrían explotarse.
+</p>
+
+<p>
+Esta guía incluye:
+</p>
+<ul class="org-ul">
+<li>Un script de refuerzo rápido de seguridad.</li>
+<li>Un análisis semántico de logs básicos del sistema (`auth.log`, `syslog`, `journalctl`).</li>
+<li>Exportación de hallazgos clave a un fichero de texto para revisión o envío automático.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb1290ef" class="outline-2">
+<h2 id="orgb1290ef">Diagrama de flujo de seguridad</h2>
+<div class="outline-text-2" id="text-orgb1290ef">
+
+<figure id="org81e865e">
+<img src="images/diagrama_seguridad_total.png" alt="diagrama_seguridad_total.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org3cb1147" class="outline-2">
+<h2 id="org3cb1147">Análisis semántico de logs del sistema</h2>
+<div class="outline-text-2" id="text-org3cb1147">
+<p>
+Usaremos `journalctl`, `grep`, y expresiones regulares para extraer:
+</p>
+
+<ul class="org-ul">
+<li>Inicios de sesión fallidos y exitosos.</li>
+<li>Intentos de login como root.</li>
+<li>Reinicios sospechosos o caídas de servicios.</li>
+<li>Errores frecuentes o advertencias de seguridad.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128269; An&#225;lisis sem&#225;ntico b&#225;sico de logs:"</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"-------------------------------------"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Revisar fallos de login</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128204; Fallos de login detectados:"</span>
+journalctl -xe | grep -Ei <span style="color: #005F00;">"failed password|authentication failure"</span> | tail -n 10
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Intentos de login como root</span>
+<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"\n&#128680; Intentos de login como root:"</span>
+grep <span style="color: #005F00;">"root"</span> /var/log/auth.log | grep <span style="color: #005F00;">"Failed"</span> | tail -n 10
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Servicios ca&#237;dos o reiniciados</span>
+<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"\n&#9888;&#65039; Servicios con errores recientes:"</span>
+journalctl -p err -xb | tail -n 10
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Inicios de sesi&#243;n exitosos recientes</span>
+<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"\n&#9989; Inicios de sesi&#243;n exitosos:"</span>
+last -n 5
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgce010f1" class="outline-2">
+<h2 id="orgce010f1">Exportar informe de amenazas detectadas</h2>
+<div class="outline-text-2" id="text-orgce010f1">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Guardando informe de seguridad en ~/informe_seguridad.txt..."</span>
+{
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Informe de Seguridad - $(</span><span style="color: #1F55A0; font-weight: bold;">date</span><span style="color: #005F00;">)"</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"-------------------------------"</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"FALLOS DE LOGIN:"</span>
+    journalctl -xe | grep -Ei <span style="color: #005F00;">"failed password|authentication failure"</span> | tail -n 10
+    <span style="color: #1F55A0;">echo</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"INTENTOS DE LOGIN COMO ROOT:"</span>
+    grep <span style="color: #005F00;">"root"</span> /var/log/auth.log | grep <span style="color: #005F00;">"Failed"</span> | tail -n 10
+    <span style="color: #1F55A0;">echo</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"ERRORES CR&#205;TICOS EN EL SISTEMA:"</span>
+    journalctl -p err -xb | tail -n 10
+    <span style="color: #1F55A0;">echo</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"INICIOS DE SESI&#211;N EXITOSOS:"</span>
+    last -n 5
+} &gt; ~/informe_seguridad.txt
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Informe generado en ~/informe_seguridad.txt"</span>
+</code></pre>
+</div>
+
+<p>
+<b><b>Ejecutar:</b></b>
+</p>
+
+<p>
+```bash
+chmod +x exportar<sub>logs.sh</sub>
+./exportar<sub>logs.sh</sub>
+</p>
+
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-11-script-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux">2025-06-11-script-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux</a>
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ciberseguridad.html">ciberseguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-logs.html">logs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-automatización.html">automatización</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-orgmode.html">orgmode</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[ciberseguridad]]></category>
+  <category><![CDATA[bash]]></category>
+  <category><![CDATA[logs]]></category>
+  <category><![CDATA[automatización]]></category>
+  <category><![CDATA[orgmode]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-11-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux-semantica.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-11-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux-semantica.html</guid>
+  <pubDate>Wed, 11 Jun 2025 20:28:00 +0200</pubDate>
+</item>
+<item>
+  <title><![CDATA[Script Refuerzo Rápido de Ciberseguridad para tu Laptop Linux]]></title>
+  <description><![CDATA[
+<div id="outline-container-org54159eb" class="outline-2">
+<h2 id="org54159eb">Introducción</h2>
+<div class="outline-text-2" id="text-org54159eb">
+<p>
+En el mundo actual, donde la movilidad y la conectividad son constantes, proteger tu laptop Linux es esencial. Ya sea que uses tu equipo para trabajar, estudiar o simplemente navegar, estás expuesto a amenazas comunes como escaneos de puertos, ataques por fuerza bruta y servicios mal configurados.
+</p>
+
+<p>
+Este post te guiará a través de un enfoque automatizado para aplicar medidas básicas de ciberseguridad en tu laptop Linux usando un único script en Bash. Ideal para quienes desean una solución rápida, efectiva y sin complicaciones.
+</p>
+</div>
+</div>
+<div id="outline-container-org73f7ce3" class="outline-2">
+<h2 id="org73f7ce3">Diagrama del flujo del script</h2>
+<div class="outline-text-2" id="text-org73f7ce3">
+<p>
+El siguiente diagrama PlantUML resume el proceso que sigue el script paso a paso:
+</p>
+
+
+<figure id="org6ec299d">
+<img src="images/diagrama_refuerzo.png" alt="diagrama_refuerzo.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org19dd17a" class="outline-2">
+<h2 id="org19dd17a">Objetivo del script</h2>
+<div class="outline-text-2" id="text-org19dd17a">
+<p>
+Este script realiza las siguientes acciones:
+</p>
+
+<ul class="org-ul">
+<li>Actualiza tu sistema a la última versión estable.</li>
+<li>Configura y activa el firewall UFW con reglas seguras.</li>
+<li>Instala y activa `fail2ban` para bloquear ataques por fuerza bruta.</li>
+<li>Aplica endurecimiento básico de red con `sysctl`.</li>
+<li>Revisa los permisos de tu carpeta `.ssh`.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfc1d6fe" class="outline-2">
+<h2 id="orgfc1d6fe">Requisitos</h2>
+<div class="outline-text-2" id="text-orgfc1d6fe">
+<ul class="org-ul">
+<li>Sistema Linux basado en Debian (Ubuntu, Mint) o Arch.</li>
+<li>Acceso de superusuario (sudo).</li>
+<li>Conexión a internet.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0861e20" class="outline-2">
+<h2 id="org0861e20">Guía de instalación</h2>
+<div class="outline-text-2" id="text-org0861e20">
+<p>
+<b><b>Paso 1: Crear el script</b></b>
+</p>
+
+<p>
+Crea un archivo llamado <code>refuerzo_basico.sh</code> con el siguiente contenido:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Reforzamiento b&#225;sico de ciberseguridad para Linux</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Autor: Mike (geoemacs.netlify.app)</span>
+
+<span style="color: #1F55A0;">set</span> -e
+
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128272; Iniciando proceso de refuerzo de seguridad para tu laptop Linux..."</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">1. Actualizar el sistema</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128230; Actualizando el sistema..."</span>
+<span style="color: #D70000;">if </span><span style="color: #1F55A0;">command</span> -v apt &gt;/dev/null; <span style="color: #D70000;">then</span>
+    sudo apt update &amp;&amp; sudo apt upgrade -y
+<span style="color: #D70000;">elif </span><span style="color: #1F55A0;">command</span> -v pacman &gt;/dev/null; <span style="color: #D70000;">then</span>
+    sudo pacman -Syu --noconfirm
+<span style="color: #D70000;">fi</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">2. Activar y configurar firewall (UFW)</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128737;&#65039; Configurando firewall con UFW..."</span>
+sudo apt install -y ufw 2&gt;/dev/null || <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"ufw ya instalado o no disponible"</span>
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow OpenSSH
+sudo ufw enable
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">3. Instalar y activar fail2ban</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128683; Instalando fail2ban..."</span>
+sudo apt install -y fail2ban 2&gt;/dev/null || <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"fail2ban ya instalado o no disponible"</span>
+sudo systemctl enable --now fail2ban
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">4. Fortalecer configuraci&#243;n de red</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#127760; Aplicando configuraciones de red con sysctl..."</span>
+sudo tee /etc/sysctl.d/99-hardening.conf &gt; /dev/null &lt;&lt;EOF
+<span style="color: #005F00;"># Evitar redirecciones IP</span>
+<span style="color: #005F00;">net.ipv4.conf.all.accept_redirects = 0</span>
+<span style="color: #005F00;">net.ipv6.conf.all.accept_redirects = 0</span>
+<span style="color: #005F00;"># Evitar ataques de spoofing</span>
+<span style="color: #005F00;">net.ipv4.conf.all.rp_filter = 1</span>
+<span style="color: #005F00;"># Deshabilitar paquetes de fuente falsa</span>
+<span style="color: #005F00;">net.ipv4.conf.all.send_redirects = 0</span>
+<span style="color: #005F00;">EOF</span>
+
+sudo sysctl --system
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">5. Revisar permisos cr&#237;ticos</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128270; Revisando permisos de archivos cr&#237;ticos..."</span>
+sudo chmod 700 ~/.ssh
+sudo chmod 600 ~/.ssh/authorized_keys 2&gt;/dev/null || true
+sudo chown -R $(<span style="color: #1F55A0; font-weight: bold;">whoami</span>):$(<span style="color: #1F55A0; font-weight: bold;">whoami</span>) ~/.ssh
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">6. Reporte r&#225;pido</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#9989; Revisi&#243;n r&#225;pida:"</span>
+sudo ufw status
+systemctl status fail2ban | grep Active
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128074; Reforzamiento b&#225;sico completado."</span>
+</code></pre>
+</div>
+
+<p>
+<b><b>Paso 2: Dar permisos y ejecutar</b></b>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell"><code>chmod +x refuerzo_basico.sh
+./refuerzo_basico.sh
+</code></pre>
+</div>
+
+<p>
+<b><b>Paso 3: Comprobación final</b></b>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell"><code>sudo ufw status
+sudo fail2ban-client status
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1d9efc7" class="outline-2">
+<h2 id="org1d9efc7">Conclusión</h2>
+<div class="outline-text-2" id="text-org1d9efc7">
+<p>
+Este script proporciona un refuerzo básico pero poderoso que puede aplicarse en menos de 5 minutos. Ideal para laptops personales o equipos recién instalados. Si deseas un nivel más avanzado de hardening, puedes complementar con herramientas como <b>lynis</b>, <b>rkhunter</b> o políticas AppArmor/SELinux.
+</p>
+</div>
+</div>
+<div id="outline-container-org890666c" class="outline-2">
+<h2 id="org890666c">Referencias</h2>
+<div class="outline-text-2" id="text-org890666c">
+<ul class="org-ul">
+<li><a href="https://wiki.ubuntu.com/UncomplicatedFirewall">https://wiki.ubuntu.com/UncomplicatedFirewall</a></li>
+<li><a href="https://www.fail2ban.org/">https://www.fail2ban.org/</a></li>
+<li><a href="https://www.kernel.org/doc/html/latest/admin-guide/sysctl/index.html">https://www.kernel.org/doc/html/latest/admin-guide/sysctl/index.html</a></li>
+<li><a href="https://cisofy.com/lynis/">https://cisofy.com/lynis/</a></li>
+<li><a href="https://github.com/mcasrom/geo-ia">https://github.com/mcasrom/geo-ia</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4b93b55" class="outline-2">
+<h2 id="org4b93b55">Comentarios finales</h2>
+<div class="outline-text-2" id="text-org4b93b55">
+<p>
+¿Te gustaría extender esto con análisis semántico de logs, informes PDF automáticos o notificaciones vía Telegram cuando se detecte actividad sospechosa? ¡Próximamente!
+</p>
+
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-11-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux-semantica">- 2025-06-11-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux-semantica</a>
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-script.html">script</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ufw.html">ufw</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-fail2ban.html">fail2ban</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-sysctl.html">sysctl</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-hardening.html">hardening</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-laptop.html">laptop</a> </div>]]></description>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[script]]></category>
+  <category><![CDATA[bash]]></category>
+  <category><![CDATA[firewall]]></category>
+  <category><![CDATA[ufw]]></category>
+  <category><![CDATA[fail2ban]]></category>
+  <category><![CDATA[sysctl]]></category>
+  <category><![CDATA[hardening]]></category>
+  <category><![CDATA[laptop]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-11-script-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-11-script-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux.html</guid>
+  <pubDate>Wed, 11 Jun 2025 20:14:00 +0200</pubDate>
+</item>
+<item>
+  <title><![CDATA[Artículos recientes sobre geopolítica y estrategia]]></title>
+  <description><![CDATA[
+<div id="outline-container-org00df6d3" class="outline-2">
+<h2 id="org00df6d3">Recopilación de fuentes RSS relevantes (últimos 5 días):</h2>
+<div class="outline-text-2" id="text-org00df6d3">
+
+<figure id="org8c7dc75">
+<img src="images/diagrama_geo.png" alt="diagrama_geo.png">
+
+</figure>
+
+<ul class="org-ul">
+<li><a href="https://www.realcleardefense.com/2025/05/21/geopolitics_used_and_abused_1111548.html">Geopolitics Used and Abused</a> (2025-06-10)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/02/carneys_blarney_europe_wont_fix_canadas_defense_crisis_1113840.html">Carney's Blarney: Europe Won't Fix Canada's Defense Crisis</a> (2025-06-10)</li>
+<li><a href="https://www.lemonde.fr/international/article/2025/06/07/la-france-ne-vend-pas-d-armes-a-israel-reaffirme-le-ministre-des-armees-apres-le-refus-de-dockers-de-charger-un-conteneur-de-composants-militaires_6611077_3210.html">La France ne vend pas d’armes à Israël, réaffirme le ministre des armées après le refus de dockers de charger un conteneur de composants militaires</a> (2025-06-07)</li>
+<li><a href="https://www.lemonde.fr/international/article/2025/06/07/aux-etats-unis-la-cour-supreme-autorise-le-doge-a-acceder-aux-donnees-sensibles-de-la-securite-sociale_6610884_3210.html">Aux Etats-Unis, la Cour suprême autorise le DOGE à accéder aux données sensibles de la Sécurité sociale</a> (2025-06-07)</li>
+<li><a href="https://www.lemonde.fr/international/live/2025/06/07/en-direct-guerre-a-gaza-la-defense-civile-palestinienne-fait-etat-de-38-morts-dans-des-operations-israeliennes-vendredi_6609400_3210.html">En direct, guerre à Gaza : la défense civile palestinienne fait état de 38 morts dans des opérations israéliennes vendredi</a> (2025-06-07)</li>
+<li><a href="https://www.elmundo.es/espana/2025/06/07/684403fce4d4d8f5018b4578.html">A Sánchez se le abre otra crisis: IU amenaza con salir del Gobierno si acepta la "locura" del 5% de gasto que exige la OTAN</a> (2025-06-07)</li>
+<li><a href="https://www.lemonde.fr/international/live/2025/06/07/en-direct-guerre-a-gaza-le-bateau-humanitaire-madleen-se-rapproche-de-l-enclave-palestinienne_6609400_3210.html">En direct, guerre à Gaza : la défense civile de Gaza fait état de trente-six morts, dont six dans des tirs israéliens près d’un centre d’aide</a> (2025-06-07)</li>
+<li><a href="https://www.washingtonpost.com/world/2025/06/07/trump-travel-ban-civil-wars/">Trump travel ban targets nations mired in civil wars or armed conflicts</a> (2025-06-07)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/07/nato_tests_unmanned_surface_vessels_in_the_baltic_sea_1115148.html">NATO Tests Unmanned Surface Vessels in the Baltic Sea</a> (2025-06-07)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/07/the_geopolitics_of_darwin_australia_1115156.html">The Geopolitics of Darwin, Australia</a> (2025-06-07)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/07/gutting_military_testing_office_may_be_the_deadliest_move_yet_1115168.html">Gutting Military Testing Office May Be the Deadliest Move Yet</a> (2025-06-07)</li>
+<li><a href="https://www.elmundo.es/deportes/futbol/uefa-nations-league/2025/06/07/684433f8e9cf4aa5408b4571.html">Ocho nonatos y adultos de 10 años: ¿dónde estaban los jugadores de la selección cuando debutó Cristiano?</a> (2025-06-07)</li>
+<li><a href="https://www.elmundo.es/andalucia/2025/06/07/6844978821efa0b7478b4585.html">Detenido un hombre en Marbella por el asesinato de su pareja</a> (2025-06-08)</li>
+<li><a href="https://www.elmundo.es/cultura/musica/2025/06/08/6844b63ee9cf4ac14f8b4581.html">El fiestón de cumpleaños de Natos y Waor para 60.000 personas en Madrid: puro rap que haría estar orgulloso a los chavales que empezaron llenando casas okupa</a> (2025-06-08)</li>
+<li><a href="https://www.nytimes.com/2025/06/07/world/americas/colombia-senator-shot.html">A Colombian Senator, Miguel Uribe, Is Shot at a Campaign Event</a> (2025-06-09)</li>
+<li><a href="https://www.nytimes.com/2025/06/08/world/asia/japan-military-trump-china.html">Japan Flexes Its Military Muscle at China, and Trump</a> (2025-06-09)</li>
+<li><a href="https://www.elconfidencialdigital.com/articulo/defensa/espana-desafia-trump-otan-dato-que-revela-resistencia-nuevo-gasto-militar/20250607172912967305.html">España desafía a Trump en la OTAN: el dato que revela su resistencia al nuevo gasto militar</a> (2025-06-07)</li>
+<li><a href="https://www.lemonde.fr/m-le-mag/article/2025/06/08/lac-ontario-et-au-milieu-coule-une-frontiere-je-ne-suis-pas-devenue-antiamericaine-mais-je-n-irai-pas-aux-etats-unis-cette-annee-je-me-demande-si-on-n-existe-pas-mieux-sans-eux_6611135_4500055.html">Lac Ontario, et au milieu coule une frontière : « Je ne suis pas devenue antiaméricaine, mais je n’irai pas aux Etats-Unis cette année. Je me demande si on n’existe pas mieux sans eux ? »</a> (2025-06-08)</li>
+<li><a href="https://www.nytimes.com/2025/06/08/world/europe/helping-save-kyiv-from-drones-volunteers-caffeine-and-vintage-guns.html">Russian Drone Swarms Test a Volunteer Air-Defense Unit Near Kyiv</a> (2025-06-08)</li>
+<li><a href="https://www.lemonde.fr/international/article/2025/06/08/le-pape-leon-xiv-appelle-a-ouvrir-les-frontieres-et-condamne-l-esprit-d-exclusion_6611341_3210.html">Le pape Léon XIV appelle à « ouvrir les frontières » et condamne l’« esprit d’exclusion »</a> (2025-06-08)</li>
+<li><a href="https://www.elmundo.es/andalucia/2025/06/09/6845e66afc6c83b0528b4589.html">"Irascible, violento y conflictivo", así describen al hombre detenido por golpear a su pareja hasta la muerte en Marbella</a> (2025-06-09)</li>
+<li><a href="https://www.elconfidencialdigital.com/articulo/politica/gobierno-mark-rutte-solo-paises-otan-decidiremos-gasto-militar/20250609050000967139.html">El Gobierno, contra Mark Rutte: “Solo los países de la OTAN decidiremos el gasto militar”</a> (2025-06-09)</li>
+<li><a href="https://www.elconfidencialdigital.com/articulo/el-chivato/deficit-alojamientos-academia-medicos-militares-empieza-resolverse/20250609050000967121.html">El déficit de alojamientos en la academia de médicos militares empieza a resolverse</a> (2025-06-09)</li>
+<li><a href="https://www.nytimes.com/2025/06/08/world/americas/colombia-uribe-turbay-shooting.html">Attack on Colombia Senator, Miguel Uribe Turbay, Caught on Video</a> (2025-06-09)</li>
+<li><a href="https://www.nytimes.com/2025/06/08/briefing/national-guard-protest-russia-french-open.html">Monday Briefing: Tensions Flare in Los Angeles</a> (2025-06-10)</li>
+<li><a href="https://www.lemonde.fr/international/article/2025/06/09/a-los-angeles-une-nouvelle-journee-de-tensions-sous-le-regard-de-la-garde-nationale-c-est-du-pur-spectacle-de-la-provocation_6611582_3210.html">A Los Angeles, une nouvelle journée de tensions sous le regard de la garde nationale : « C’est du pur spectacle, de la provocation »</a> (2025-06-09)</li>
+<li><a href="https://www.lemonde.fr/economie/article/2025/06/08/alors-que-renault-pourrait-produire-des-drones-les-constructeurs-automobiles-prennent-le-virage-de-la-defense_6611366_3234.html">Renault pourrait produire des drones en Ukraine, une annonce qui préfigure la diversification de l’industrie automobile dans la défense</a> (2025-06-08)</li>
+<li><a href="https://www.nytimes.com/2025/06/09/world/europe/nato-spending-russia.html">NATO Chief Urges Members to Spend Far More on Military</a> (2025-06-09)</li>
+<li><a href="https://www.lemonde.fr/international/article/2025/06/09/vive-passe-d-armes-entre-donald-trump-et-gavin-newsom-le-gouverneur-de-californie-apres-les-heurts-et-le-deploiement-de-la-garde-nationale-a-los-angeles_6611777_3210.html">Le conflit s’envenime entre Donald Trump et l’Etat de Californie, après l’envoi de centaines de militaires</a> (2025-06-09)</li>
+<li><a href="https://www.lemonde.fr/international/live/2025/06/09/en-direct-guerre-en-ukraine-face-a-la-russie-il-n-y-a-plus-d-est-ou-d-ouest-il-n-y-a-que-l-otan-affirme-mark-rutte_6611146_3210.html">En direct, guerre en Ukraine : face à la Russie, « il n’y a plus d’Est ou d’Ouest. Il n’y a que l’OTAN », affirme Mark Rutte</a> (2025-06-09)</li>
+<li><a href="https://www.lemonde.fr/international/article/2025/06/09/tensions-politiques-en-colombie-apres-une-tentative-d-assassinat-contre-un-dirigeant-de-l-opposition_6611727_3210.html">Tensions politiques en Colombie après une tentative d’assassinat contre un dirigeant de l’opposition</a> (2025-06-09)</li>
+<li><a href="https://www.lemonde.fr/afrique/article/2025/06/09/conflit-en-rdc-le-rwanda-se-retire-de-la-communaute-economique-des-etats-de-l-afrique-centrale_6611654_3212.html">Conflit en RDC : le Rwanda se retire de la Communauté économique des Etats de l’Afrique centrale</a> (2025-06-09)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/09/streamlining_defense_acquisition_supports_our_warfighters_1115296.html">Streamlining Defense Acquisition Supports Our Warfighters</a> (2025-06-09)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/09/the_evolution_of_the_global_defense_industry_1115294.html">The Evolution of the Global Defense Industry</a> (2025-06-09)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/09/uk_confirms_aim_to_buy_f-35a_for_nato_nuclear_strike_role_1115306.html">U.K. Confirms Aim To Buy F-35A for NATO Nuclear Strike Role</a> (2025-06-09)</li>
+<li><a href="https://www.nytimes.com/2025/06/09/world/canada/carney-canada-nato-military-spending.html">Canada Commits Billions in Defense Spending to Meet NATO Target, Mark Carney Says</a> (2025-06-10)</li>
+<li><a href="https://www.nytimes.com/2025/06/10/business/economy/us-china-trade-deal.html">U.S. and China Agree to Resume Trade Truce After Tensions Escalated</a> (2025-06-11)</li>
+<li><a href="https://www.nytimes.com/2025/06/11/world/europe/france-senator-malhuret-trump-europe.html">This French Senator Has Become Trump’s European Nemesis</a> (2025-06-11)</li>
+<li><a href="https://www.elmundo.es/espana/2025/06/11/6849321221efa0c5288b457d.html">El TSJ de Madrid ordena investigar si hay conflicto de interés de Pedro Sánchez en el rescate de Air Europa por negociar al tiempo su esposa patrocinios con Globalia</a> (2025-06-11)</li>
+<li><a href="https://www.lemonde.fr/international/live/2025/06/11/en-direct-guerre-a-gaza-au-moins-31-palestiniens-tues-par-des-tirs-israeliens-a-un-point-de-distribution-d-aide-selon-la-defense-civile-palestinienne_6612124_3210.html">En direct, guerre à Gaza : au moins 31 Palestiniens tués par des tirs israéliens à un point de distribution d’aide, selon la défense civile palestinienne</a> (2025-06-11)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/10/hasc_leaders_release_new_defense_acquisition_reform_plan_1115515.html">HASC Leaders Release New Defense Acquisition Reform Plan</a> (2025-06-10)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/10/how_defense_reconciliation_could_fund_indo-pacific_deterrence_1115587.html">How Defense Reconciliation Could Fund Indo-Pacific Deterrence</a> (2025-06-10)</li>
+<li><a href="https://www.realcleardefense.com/2025/06/10/all_us_military_installations_and_ranges_to_operate_drones_1115617.html">All U.S. Military Installations and Ranges To Operate Drones</a> (2025-06-10)</li>
+<li><a href="https://www.washingtonpost.com/world/2025/06/11/bts-discharge-military-south-korea/">K-pop supergroup BTS nears reunion as two more members end military service</a> (2025-06-11)</li>
+<li><a href="https://www.washingtonpost.com/world/2025/06/10/pakistan-military-defense-budget-india/">Pakistan to boost defense spending after military showdown with India</a> (2025-06-10)</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><a href="file:///home/mike/myblog/public/geopolitica.html">Último en Geopolítica</a></li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-geopolitica.html">geopolitica</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-estrategia.html">estrategia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-opiniones.html">opiniones</a> </div>]]></description>
+  <category><![CDATA[geopolitica]]></category>
+  <category><![CDATA[estrategia]]></category>
+  <category><![CDATA[opiniones]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/geopolitica.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/geopolitica.html</guid>
+  <pubDate>Wed, 11 Jun 2025 00:00:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Sistema Completo de Monitoreo de Integridad en Linux con Hashes]]></title>
@@ -1368,86 +1766,6 @@ Este sistema completo proporciona:
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-09-sistema-completo-de-monitoreo-de-integridad-en-linux-con-hashes.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-09-sistema-completo-de-monitoreo-de-integridad-en-linux-con-hashes.html</guid>
   <pubDate>Mon, 09 Jun 2025 18:55:00 +0200</pubDate>
-</item>
-<item>
-  <title><![CDATA[Artículos recientes sobre geopolítica y estrategia]]></title>
-  <description><![CDATA[
-<div id="outline-container-orgcdb95cd" class="outline-2">
-<h2 id="orgcdb95cd">Recopilación de fuentes RSS relevantes (últimos 5 días):</h2>
-<div class="outline-text-2" id="text-orgcdb95cd">
-
-<figure id="org4796110">
-<img src="images/diagrama_geo.png" alt="diagrama_geo.png">
-
-</figure>
-
-<ul class="org-ul">
-<li><a href="https://www.realcleardefense.com/2025/05/21/geopolitics_used_and_abused_1111548.html">Geopolitics Used and Abused</a> (2025-06-07)</li>
-<li><a href="https://www.realcleardefense.com/2025/06/02/carneys_blarney_europe_wont_fix_canadas_defense_crisis_1113840.html">Carney's Blarney: Europe Won't Fix Canada's Defense Crisis</a> (2025-06-07)</li>
-<li><a href="https://www.nytimes.com/2025/06/04/world/europe/ukraine-russia-drones-nato.html">Drone Attacks Are the New Front in War. Can NATO Keep Up?</a> (2025-06-05)</li>
-<li><a href="https://www.elmundo.es/internacional/2025/06/04/684087e521efa038578b45e6.html">Siete años de cárcel para los okupas y policías con permiso para infiltrarse en la Mafia&#x2026; Así es el nuevo decreto de seguridad de Meloni</a> (2025-06-04)</li>
-<li><a href="https://www.realcleardefense.com/2025/06/05/peace_in_ukraine_and_the_realities_of_geopolitics_1114649.html">Peace in Ukraine and the Realities of Geopolitics</a> (2025-06-05)</li>
-<li><a href="https://www.realcleardefense.com/2025/06/05/senate_unveils_its_version_of_150b_defense_reconciliation_package_1114654.html">Senate Unveils Its Version of $150B Defense Reconciliation Package</a> (2025-06-05)</li>
-<li><a href="https://www.elmundo.es/espana/2025/06/05/68418918e4d4d844128b456f.html">Robles se enroca en el 2% de gasto en Defensa y EEUU se lo vuelve a dejar claro: la OTAN "se comprometerá con el 5% en cuestión de semanas"</a> (2025-06-05)</li>
-<li><a href="https://www.elmundo.es/madrid/2025/06/05/68415267fc6c833f228b459c.html">Noche de tensión en Lavapiés tras una reyerta multitudinaria que acabó con nueve detenidos y cuatro policías heridos al ser agredidos a golpes y pedradas</a> (2025-06-05)</li>
-<li><a href="https://www.nytimes.com/2025/06/05/world/middleeast/israel-hostages-haggai.html">Israeli Military Recovers Bodies of Two Hostages Taken in Oct. 7 Attack</a> (2025-06-05)</li>
-<li><a href="https://www.lemonde.fr/international/article/2025/06/05/l-allemagne-va-avoir-besoin-de-50-000-a-60-000-soldats-supplementaires-estime-son-ministre-de-la-defense_6610640_3210.html">L’Allemagne va avoir besoin de « 50 000 à 60 000 » soldats supplémentaires, estime son ministre de la défense</a> (2025-06-05)</li>
-<li><a href="https://www.nytimes.com/2025/06/05/world/europe/nato-defense-ministers-spending.html">Goal to Spend 5 Percent on Militaries Splits NATO Allies</a> (2025-06-05)</li>
-<li><a href="https://www.elmundo.es/internacional/2025/06/05/6841b9ddfc6c83e2398b45de.html">Rutte ignora a España y confirma que propondrá a los aliados un gasto en Defensa del 5% con la fórmula 3,5+1,5: " Si no lo hacemos, no estaremos seguros"</a> (2025-06-05)</li>
-<li><a href="https://www.elmundo.es/papel/lideres/2025/06/05/684070c1e9cf4ac6708b45a4.html">Cuatro jóvenes prodigio en defensa de la inteligencia artificial: "La tecnología no es neutra; debemos preguntarnos qué tipo de intereses tenemos como sociedad"</a> (2025-06-05)</li>
-<li><a href="https://www.lemonde.fr/economie/article/2025/06/05/a-fos-sur-mer-les-dockers-cgt-bloquent-trois-conteneurs-de-composants-militaires-a-destination-d-israel_6610731_3234.html">A Fos-sur-Mer, les dockers CGT bloquent trois conteneurs de composants militaires à destination d’Israël</a> (2025-06-05)</li>
-<li><a href="https://www.lemonde.fr/international/article/2025/06/05/otan-les-allies-d-accord-pour-augmenter-les-depenses-de-defense-jusqu-a-5-de-leur-pib_6610704_3210.html">OTAN : les alliés affichent un accord pour augmenter les dépenses de défense jusqu’à 5 % de leur PIB</a> (2025-06-05)</li>
-<li><a href="https://www.lemonde.fr/economie/article/2025/06/05/guerre-commerciale-les-tensions-entre-la-chine-et-les-etats-unis-reprennent_6610683_3234.html">Guerre commerciale : les tensions entre la Chine et les Etats-Unis reprennent</a> (2025-06-05)</li>
-<li><a href="https://www.elconfidencialdigital.com/articulo/defensa/defensa-alerta-grupo-hackers-vinculados-inteligencia-militar-rusa/20250605190000967045.html">Defensa alerta sobre un grupo de hackers vinculados a la inteligencia militar rusa</a> (2025-06-05)</li>
-<li><a href="https://www.washingtonpost.com/world/2025/06/05/nato-spending-trump-hegseth-military/">NATO nears deal to grant Trump’s wish for giant military spending increase</a> (2025-06-06)</li>
-<li><a href="https://www.elmundo.es/internacional/2025/06/05/6841cf04fc6c830d6c8b45ca.html">Sánchez desata el "malestar" y la "frustración" entre los aliados con su rebeldía ante la OTAN: "Arrastra los pies en el gasto en Defensa"</a> (2025-06-05)</li>
-<li><a href="https://www.elmundo.es/espana/extremadura/2025/06/06/68429e1cfc6c8377048b4578.html">'Caso David Sánchez': las asociaciones judiciales salen en defensa de la juez Beatriz Biedma ante las "presiones externas" que sufre</a> (2025-06-06)</li>
-<li><a href="https://www.lemonde.fr/international/article/2025/06/06/au-lendemain-de-sa-dispute-publique-avec-elon-musk-donald-trump-minimise-les-tensions-avec-son-ancien-allie_6610807_3210.html">Au lendemain de sa dispute publique avec Elon Musk, Donald Trump minimise les tensions avec son ancien allié</a> (2025-06-06)</li>
-<li><a href="https://www.elconfidencialdigital.com/articulo/defensa/defensa-confirma-visita-felipe-vi-ejercicio-militar-eslovaquia-que-adelanto-ecd/20250606130000967157.html">Defensa confirma la visita de Felipe VI a un ejercicio militar en Eslovaquia que adelantó ECD</a> (2025-06-06)</li>
-<li><a href="https://www.elconfidencialdigital.com/articulo/defensa/santa-cruz-tenerife-via-clave-que-quedara-inhabilitada-desfile-militar-7-junio/20250606104144967104.html">Santa Cruz de Tenerife: la vía clave que quedará inhabilitada durante el desfile militar del 7 de junio</a> (2025-06-06)</li>
-<li><a href="https://www.elconfidencialdigital.com/articulo/dinero/empresa-sancionada-mas-14000-euros-alta-tardia-seguridad-social/20250606070000966917.html">Una empresa sancionada con más de 14.000 euros por alta tardía en la Seguridad Social</a> (2025-06-06)</li>
-<li><a href="https://www.lemonde.fr/international/live/2025/06/06/en-direct-guerre-en-ukraine-le-kremlin-qualifie-le-conflit-en-ukraine-d-existentiel-pour-la-russie_6609764_3210.html">En direct, guerre en Ukraine : le Kremlin qualifie le conflit en Ukraine d’« existentiel » pour la Russie</a> (2025-06-06)</li>
-<li><a href="https://www.elmundo.es/madrid/2025/06/06/6842d16ce85eceec658b45b4.html">Huyen en un coche de la Policía desde Lavapiés, chocan contra un árbol junto al Tanatorio Sur y tres de ellos acaban detenidos</a> (2025-06-06)</li>
-<li><a href="https://www.lemonde.fr/international/article/2025/06/07/la-france-ne-vend-pas-d-armes-a-israel-reaffirme-le-ministre-des-armees-apres-le-refus-de-dockers-de-charger-un-conteneur-de-composants-militaires_6611077_3210.html">La France ne vend pas d’armes à Israël, réaffirme le ministre des armées après le refus de dockers de charger un conteneur de composants militaires</a> (2025-06-07)</li>
-<li><a href="https://www.lemonde.fr/international/article/2025/06/07/aux-etats-unis-la-cour-supreme-autorise-le-doge-a-acceder-aux-donnees-sensibles-de-la-securite-sociale_6610884_3210.html">Aux Etats-Unis, la Cour suprême autorise le DOGE à accéder aux données sensibles de la Sécurité sociale</a> (2025-06-07)</li>
-<li><a href="https://www.lemonde.fr/international/live/2025/06/07/en-direct-guerre-a-gaza-la-defense-civile-palestinienne-fait-etat-de-38-morts-dans-des-operations-israeliennes-vendredi_6609400_3210.html">En direct, guerre à Gaza : la défense civile palestinienne fait état de 38 morts dans des opérations israéliennes vendredi</a> (2025-06-07)</li>
-<li><a href="https://www.elmundo.es/espana/2025/06/07/684403fce4d4d8f5018b4578.html">A Sánchez se le abre otra crisis: IU amenaza con salir del Gobierno si acepta la "locura" del 5% de gasto que exige la OTAN</a> (2025-06-07)</li>
-<li><a href="https://www.lemonde.fr/international/live/2025/06/07/en-direct-guerre-a-gaza-le-bateau-humanitaire-madleen-se-rapproche-de-l-enclave-palestinienne_6609400_3210.html">En direct, guerre à Gaza : la défense civile de Gaza fait état de trente-six morts, dont six dans des tirs israéliens près d’un centre d’aide</a> (2025-06-07)</li>
-<li><a href="https://www.washingtonpost.com/world/2025/06/07/trump-travel-ban-civil-wars/">Trump travel ban targets nations mired in civil wars or armed conflicts</a> (2025-06-07)</li>
-<li><a href="https://www.realcleardefense.com/2025/06/07/nato_tests_unmanned_surface_vessels_in_the_baltic_sea_1115148.html">NATO Tests Unmanned Surface Vessels in the Baltic Sea</a> (2025-06-07)</li>
-<li><a href="https://www.realcleardefense.com/2025/06/07/the_geopolitics_of_darwin_australia_1115156.html">The Geopolitics of Darwin, Australia</a> (2025-06-07)</li>
-<li><a href="https://www.realcleardefense.com/2025/06/07/gutting_military_testing_office_may_be_the_deadliest_move_yet_1115168.html">Gutting Military Testing Office May Be the Deadliest Move Yet</a> (2025-06-07)</li>
-<li><a href="https://www.elmundo.es/deportes/futbol/uefa-nations-league/2025/06/07/684433f8e9cf4aa5408b4571.html">Ocho nonatos y adultos de 10 años: ¿dónde estaban los jugadores de la selección cuando debutó Cristiano?</a> (2025-06-07)</li>
-<li><a href="https://www.elmundo.es/andalucia/2025/06/07/6844978821efa0b7478b4585.html">Detenido un hombre en Marbella por el asesinato de su pareja</a> (2025-06-08)</li>
-<li><a href="https://www.elmundo.es/cultura/musica/2025/06/08/6844b63ee9cf4ac14f8b4581.html">El fiestón de cumpleaños de Natos y Waor para 60.000 personas en Madrid: puro rap que haría estar orgulloso a los chavales que empezaron llenando casas okupa</a> (2025-06-08)</li>
-<li><a href="https://www.nytimes.com/2025/06/07/world/americas/colombia-senator-shot.html">A Colombian Senator, Miguel Uribe, Is Shot at a Campaign Event</a> (2025-06-09)</li>
-<li><a href="https://www.nytimes.com/2025/06/08/world/asia/japan-military-trump-china.html">Japan Flexes Its Military Muscle at China, and Trump</a> (2025-06-09)</li>
-<li><a href="https://www.elconfidencialdigital.com/articulo/defensa/espana-desafia-trump-otan-dato-que-revela-resistencia-nuevo-gasto-militar/20250607172912967305.html">España desafía a Trump en la OTAN: el dato que revela su resistencia al nuevo gasto militar</a> (2025-06-07)</li>
-<li><a href="https://www.lemonde.fr/m-le-mag/article/2025/06/08/lac-ontario-et-au-milieu-coule-une-frontiere-je-ne-suis-pas-devenue-antiamericaine-mais-je-n-irai-pas-aux-etats-unis-cette-annee-je-me-demande-si-on-n-existe-pas-mieux-sans-eux_6611135_4500055.html">Lac Ontario, et au milieu coule une frontière : « Je ne suis pas devenue antiaméricaine, mais je n’irai pas aux Etats-Unis cette année. Je me demande si on n’existe pas mieux sans eux ? »</a> (2025-06-08)</li>
-<li><a href="https://www.nytimes.com/2025/06/08/world/europe/helping-save-kyiv-from-drones-volunteers-caffeine-and-vintage-guns.html">Russian Drone Swarms Test a Volunteer Air-Defense Unit Near Kyiv</a> (2025-06-08)</li>
-<li><a href="https://www.lemonde.fr/international/article/2025/06/08/le-pape-leon-xiv-appelle-a-ouvrir-les-frontieres-et-condamne-l-esprit-d-exclusion_6611341_3210.html">Le pape Léon XIV appelle à « ouvrir les frontières » et condamne l’« esprit d’exclusion »</a> (2025-06-08)</li>
-<li><a href="https://www.elmundo.es/andalucia/2025/06/09/6845e66afc6c83b0528b4589.html">"Irascible, violento y conflictivo", así describen al hombre detenido por golpear a su pareja hasta la muerte en Marbella</a> (2025-06-09)</li>
-<li><a href="https://www.elconfidencialdigital.com/articulo/politica/gobierno-mark-rutte-solo-paises-otan-decidiremos-gasto-militar/20250609050000967139.html">El Gobierno, contra Mark Rutte: “Solo los países de la OTAN decidiremos el gasto militar”</a> (2025-06-09)</li>
-<li><a href="https://www.elconfidencialdigital.com/articulo/el-chivato/deficit-alojamientos-academia-medicos-militares-empieza-resolverse/20250609050000967121.html">El déficit de alojamientos en la academia de médicos militares empieza a resolverse</a> (2025-06-09)</li>
-<li><a href="https://www.nytimes.com/2025/06/08/world/americas/colombia-uribe-turbay-shooting.html">Attack on Colombia Senator, Miguel Uribe Turbay, Caught on Video</a> (2025-06-09)</li>
-<li><a href="https://www.nytimes.com/2025/06/08/briefing/national-guard-protest-russia-french-open.html">Monday Briefing: Tensions Flare in Los Angeles</a> (2025-06-08)</li>
-<li><a href="https://www.lemonde.fr/international/article/2025/06/09/a-los-angeles-une-nouvelle-journee-de-tensions-sous-le-regard-de-la-garde-nationale-c-est-du-pur-spectacle-de-la-provocation_6611582_3210.html">A Los Angeles, une nouvelle journée de tensions sous le regard de la garde nationale : « C’est du pur spectacle, de la provocation »</a> (2025-06-09)</li>
-<li><a href="https://www.lemonde.fr/economie/article/2025/06/08/alors-que-renault-pourrait-produire-des-drones-les-constructeurs-automobiles-prennent-le-virage-de-la-defense_6611366_3234.html">Renault pourrait produire des drones en Ukraine, une annonce qui préfigure la diversification de l’industrie automobile dans la défense</a> (2025-06-08)</li>
-</ul>
-
-
-<ul class="org-ul">
-<li><a href="file:///home/mike/myblog/public/geopolitica.html">Último en Geopolítica</a></li>
-</ul>
-</div>
-</div>
-<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-geopolitica.html">geopolitica</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-estrategia.html">estrategia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-opiniones.html">opiniones</a> </div>]]></description>
-  <category><![CDATA[geopolitica]]></category>
-  <category><![CDATA[estrategia]]></category>
-  <category><![CDATA[opiniones]]></category>
-  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/geopolitica.html</link>
-  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/geopolitica.html</guid>
-  <pubDate>Mon, 09 Jun 2025 00:00:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Explorando VPNs: Orígenes, Evolución, Beneficios y Configuración de una VPN Gratuita en Linux]]></title>

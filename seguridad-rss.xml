@@ -4,7 +4,319 @@
 <title><![CDATA[Emacs con esteroides - seguridad]]></title>
 <description><![CDATA[Emacs con esteroides - seguridad]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-seguridad.html</link>
-<lastBuildDate>Mon, 09 Jun 2025 22:24:30 +0200</lastBuildDate>
+<lastBuildDate>Wed, 11 Jun 2025 20:38:37 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Refuerzo Rápido de Ciberseguridad para tu Laptop Linux Semantica]]></title>
+  <description><![CDATA[
+<div id="outline-container-orge0809a7" class="outline-2">
+<h2 id="orge0809a7">Introducción</h2>
+<div class="outline-text-2" id="text-orge0809a7">
+<p>
+La seguridad digital no termina tras aplicar un firewall y endurecer el sistema. Es fundamental <b>analizar lo que está ocurriendo</b> en nuestros registros de sistema, porque ahí se esconden muchas pistas sobre accesos sospechosos, ataques de fuerza bruta o errores de configuración que podrían explotarse.
+</p>
+
+<p>
+Esta guía incluye:
+</p>
+<ul class="org-ul">
+<li>Un script de refuerzo rápido de seguridad.</li>
+<li>Un análisis semántico de logs básicos del sistema (`auth.log`, `syslog`, `journalctl`).</li>
+<li>Exportación de hallazgos clave a un fichero de texto para revisión o envío automático.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb1290ef" class="outline-2">
+<h2 id="orgb1290ef">Diagrama de flujo de seguridad</h2>
+<div class="outline-text-2" id="text-orgb1290ef">
+
+<figure id="org81e865e">
+<img src="images/diagrama_seguridad_total.png" alt="diagrama_seguridad_total.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org3cb1147" class="outline-2">
+<h2 id="org3cb1147">Análisis semántico de logs del sistema</h2>
+<div class="outline-text-2" id="text-org3cb1147">
+<p>
+Usaremos `journalctl`, `grep`, y expresiones regulares para extraer:
+</p>
+
+<ul class="org-ul">
+<li>Inicios de sesión fallidos y exitosos.</li>
+<li>Intentos de login como root.</li>
+<li>Reinicios sospechosos o caídas de servicios.</li>
+<li>Errores frecuentes o advertencias de seguridad.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128269; An&#225;lisis sem&#225;ntico b&#225;sico de logs:"</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"-------------------------------------"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Revisar fallos de login</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128204; Fallos de login detectados:"</span>
+journalctl -xe | grep -Ei <span style="color: #005F00;">"failed password|authentication failure"</span> | tail -n 10
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Intentos de login como root</span>
+<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"\n&#128680; Intentos de login como root:"</span>
+grep <span style="color: #005F00;">"root"</span> /var/log/auth.log | grep <span style="color: #005F00;">"Failed"</span> | tail -n 10
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Servicios ca&#237;dos o reiniciados</span>
+<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"\n&#9888;&#65039; Servicios con errores recientes:"</span>
+journalctl -p err -xb | tail -n 10
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Inicios de sesi&#243;n exitosos recientes</span>
+<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"\n&#9989; Inicios de sesi&#243;n exitosos:"</span>
+last -n 5
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgce010f1" class="outline-2">
+<h2 id="orgce010f1">Exportar informe de amenazas detectadas</h2>
+<div class="outline-text-2" id="text-orgce010f1">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Guardando informe de seguridad en ~/informe_seguridad.txt..."</span>
+{
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Informe de Seguridad - $(</span><span style="color: #1F55A0; font-weight: bold;">date</span><span style="color: #005F00;">)"</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"-------------------------------"</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"FALLOS DE LOGIN:"</span>
+    journalctl -xe | grep -Ei <span style="color: #005F00;">"failed password|authentication failure"</span> | tail -n 10
+    <span style="color: #1F55A0;">echo</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"INTENTOS DE LOGIN COMO ROOT:"</span>
+    grep <span style="color: #005F00;">"root"</span> /var/log/auth.log | grep <span style="color: #005F00;">"Failed"</span> | tail -n 10
+    <span style="color: #1F55A0;">echo</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"ERRORES CR&#205;TICOS EN EL SISTEMA:"</span>
+    journalctl -p err -xb | tail -n 10
+    <span style="color: #1F55A0;">echo</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"INICIOS DE SESI&#211;N EXITOSOS:"</span>
+    last -n 5
+} &gt; ~/informe_seguridad.txt
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Informe generado en ~/informe_seguridad.txt"</span>
+</code></pre>
+</div>
+
+<p>
+<b><b>Ejecutar:</b></b>
+</p>
+
+<p>
+```bash
+chmod +x exportar<sub>logs.sh</sub>
+./exportar<sub>logs.sh</sub>
+</p>
+
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-11-script-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux">2025-06-11-script-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux</a>
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ciberseguridad.html">ciberseguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-logs.html">logs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-automatización.html">automatización</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-orgmode.html">orgmode</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[ciberseguridad]]></category>
+  <category><![CDATA[bash]]></category>
+  <category><![CDATA[logs]]></category>
+  <category><![CDATA[automatización]]></category>
+  <category><![CDATA[orgmode]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-11-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux-semantica.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-11-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux-semantica.html</guid>
+  <pubDate>Wed, 11 Jun 2025 20:28:00 +0200</pubDate>
+</item>
+<item>
+  <title><![CDATA[Script Refuerzo Rápido de Ciberseguridad para tu Laptop Linux]]></title>
+  <description><![CDATA[
+<div id="outline-container-org54159eb" class="outline-2">
+<h2 id="org54159eb">Introducción</h2>
+<div class="outline-text-2" id="text-org54159eb">
+<p>
+En el mundo actual, donde la movilidad y la conectividad son constantes, proteger tu laptop Linux es esencial. Ya sea que uses tu equipo para trabajar, estudiar o simplemente navegar, estás expuesto a amenazas comunes como escaneos de puertos, ataques por fuerza bruta y servicios mal configurados.
+</p>
+
+<p>
+Este post te guiará a través de un enfoque automatizado para aplicar medidas básicas de ciberseguridad en tu laptop Linux usando un único script en Bash. Ideal para quienes desean una solución rápida, efectiva y sin complicaciones.
+</p>
+</div>
+</div>
+<div id="outline-container-org73f7ce3" class="outline-2">
+<h2 id="org73f7ce3">Diagrama del flujo del script</h2>
+<div class="outline-text-2" id="text-org73f7ce3">
+<p>
+El siguiente diagrama PlantUML resume el proceso que sigue el script paso a paso:
+</p>
+
+
+<figure id="org6ec299d">
+<img src="images/diagrama_refuerzo.png" alt="diagrama_refuerzo.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org19dd17a" class="outline-2">
+<h2 id="org19dd17a">Objetivo del script</h2>
+<div class="outline-text-2" id="text-org19dd17a">
+<p>
+Este script realiza las siguientes acciones:
+</p>
+
+<ul class="org-ul">
+<li>Actualiza tu sistema a la última versión estable.</li>
+<li>Configura y activa el firewall UFW con reglas seguras.</li>
+<li>Instala y activa `fail2ban` para bloquear ataques por fuerza bruta.</li>
+<li>Aplica endurecimiento básico de red con `sysctl`.</li>
+<li>Revisa los permisos de tu carpeta `.ssh`.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfc1d6fe" class="outline-2">
+<h2 id="orgfc1d6fe">Requisitos</h2>
+<div class="outline-text-2" id="text-orgfc1d6fe">
+<ul class="org-ul">
+<li>Sistema Linux basado en Debian (Ubuntu, Mint) o Arch.</li>
+<li>Acceso de superusuario (sudo).</li>
+<li>Conexión a internet.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0861e20" class="outline-2">
+<h2 id="org0861e20">Guía de instalación</h2>
+<div class="outline-text-2" id="text-org0861e20">
+<p>
+<b><b>Paso 1: Crear el script</b></b>
+</p>
+
+<p>
+Crea un archivo llamado <code>refuerzo_basico.sh</code> con el siguiente contenido:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Reforzamiento b&#225;sico de ciberseguridad para Linux</span>
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Autor: Mike (geoemacs.netlify.app)</span>
+
+<span style="color: #1F55A0;">set</span> -e
+
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128272; Iniciando proceso de refuerzo de seguridad para tu laptop Linux..."</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">1. Actualizar el sistema</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128230; Actualizando el sistema..."</span>
+<span style="color: #D70000;">if </span><span style="color: #1F55A0;">command</span> -v apt &gt;/dev/null; <span style="color: #D70000;">then</span>
+    sudo apt update &amp;&amp; sudo apt upgrade -y
+<span style="color: #D70000;">elif </span><span style="color: #1F55A0;">command</span> -v pacman &gt;/dev/null; <span style="color: #D70000;">then</span>
+    sudo pacman -Syu --noconfirm
+<span style="color: #D70000;">fi</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">2. Activar y configurar firewall (UFW)</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128737;&#65039; Configurando firewall con UFW..."</span>
+sudo apt install -y ufw 2&gt;/dev/null || <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"ufw ya instalado o no disponible"</span>
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow OpenSSH
+sudo ufw enable
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">3. Instalar y activar fail2ban</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128683; Instalando fail2ban..."</span>
+sudo apt install -y fail2ban 2&gt;/dev/null || <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"fail2ban ya instalado o no disponible"</span>
+sudo systemctl enable --now fail2ban
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">4. Fortalecer configuraci&#243;n de red</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#127760; Aplicando configuraciones de red con sysctl..."</span>
+sudo tee /etc/sysctl.d/99-hardening.conf &gt; /dev/null &lt;&lt;EOF
+<span style="color: #005F00;"># Evitar redirecciones IP</span>
+<span style="color: #005F00;">net.ipv4.conf.all.accept_redirects = 0</span>
+<span style="color: #005F00;">net.ipv6.conf.all.accept_redirects = 0</span>
+<span style="color: #005F00;"># Evitar ataques de spoofing</span>
+<span style="color: #005F00;">net.ipv4.conf.all.rp_filter = 1</span>
+<span style="color: #005F00;"># Deshabilitar paquetes de fuente falsa</span>
+<span style="color: #005F00;">net.ipv4.conf.all.send_redirects = 0</span>
+<span style="color: #005F00;">EOF</span>
+
+sudo sysctl --system
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">5. Revisar permisos cr&#237;ticos</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128270; Revisando permisos de archivos cr&#237;ticos..."</span>
+sudo chmod 700 ~/.ssh
+sudo chmod 600 ~/.ssh/authorized_keys 2&gt;/dev/null || true
+sudo chown -R $(<span style="color: #1F55A0; font-weight: bold;">whoami</span>):$(<span style="color: #1F55A0; font-weight: bold;">whoami</span>) ~/.ssh
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">6. Reporte r&#225;pido</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#9989; Revisi&#243;n r&#225;pida:"</span>
+sudo ufw status
+systemctl status fail2ban | grep Active
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128074; Reforzamiento b&#225;sico completado."</span>
+</code></pre>
+</div>
+
+<p>
+<b><b>Paso 2: Dar permisos y ejecutar</b></b>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell"><code>chmod +x refuerzo_basico.sh
+./refuerzo_basico.sh
+</code></pre>
+</div>
+
+<p>
+<b><b>Paso 3: Comprobación final</b></b>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell"><code>sudo ufw status
+sudo fail2ban-client status
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1d9efc7" class="outline-2">
+<h2 id="org1d9efc7">Conclusión</h2>
+<div class="outline-text-2" id="text-org1d9efc7">
+<p>
+Este script proporciona un refuerzo básico pero poderoso que puede aplicarse en menos de 5 minutos. Ideal para laptops personales o equipos recién instalados. Si deseas un nivel más avanzado de hardening, puedes complementar con herramientas como <b>lynis</b>, <b>rkhunter</b> o políticas AppArmor/SELinux.
+</p>
+</div>
+</div>
+<div id="outline-container-org890666c" class="outline-2">
+<h2 id="org890666c">Referencias</h2>
+<div class="outline-text-2" id="text-org890666c">
+<ul class="org-ul">
+<li><a href="https://wiki.ubuntu.com/UncomplicatedFirewall">https://wiki.ubuntu.com/UncomplicatedFirewall</a></li>
+<li><a href="https://www.fail2ban.org/">https://www.fail2ban.org/</a></li>
+<li><a href="https://www.kernel.org/doc/html/latest/admin-guide/sysctl/index.html">https://www.kernel.org/doc/html/latest/admin-guide/sysctl/index.html</a></li>
+<li><a href="https://cisofy.com/lynis/">https://cisofy.com/lynis/</a></li>
+<li><a href="https://github.com/mcasrom/geo-ia">https://github.com/mcasrom/geo-ia</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4b93b55" class="outline-2">
+<h2 id="org4b93b55">Comentarios finales</h2>
+<div class="outline-text-2" id="text-org4b93b55">
+<p>
+¿Te gustaría extender esto con análisis semántico de logs, informes PDF automáticos o notificaciones vía Telegram cuando se detecte actividad sospechosa? ¡Próximamente!
+</p>
+
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-11-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux-semantica">- 2025-06-11-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux-semantica</a>
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-script.html">script</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-firewall.html">firewall</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ufw.html">ufw</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-fail2ban.html">fail2ban</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-sysctl.html">sysctl</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-hardening.html">hardening</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-laptop.html">laptop</a> </div>]]></description>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[script]]></category>
+  <category><![CDATA[bash]]></category>
+  <category><![CDATA[firewall]]></category>
+  <category><![CDATA[ufw]]></category>
+  <category><![CDATA[fail2ban]]></category>
+  <category><![CDATA[sysctl]]></category>
+  <category><![CDATA[hardening]]></category>
+  <category><![CDATA[laptop]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-11-script-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-11-script-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux.html</guid>
+  <pubDate>Wed, 11 Jun 2025 20:14:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[Sistema Completo de Monitoreo de Integridad en Linux con Hashes]]></title>
   <description><![CDATA[

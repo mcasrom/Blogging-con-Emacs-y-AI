@@ -4,7 +4,127 @@
 <title><![CDATA[Emacs con esteroides - ciberseguridad]]></title>
 <description><![CDATA[Emacs con esteroides - ciberseguridad]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-ciberseguridad.html</link>
-<lastBuildDate>Mon, 09 Jun 2025 22:24:24 +0200</lastBuildDate>
+<lastBuildDate>Wed, 11 Jun 2025 20:38:36 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Refuerzo Rápido de Ciberseguridad para tu Laptop Linux Semantica]]></title>
+  <description><![CDATA[
+<div id="outline-container-orge0809a7" class="outline-2">
+<h2 id="orge0809a7">Introducción</h2>
+<div class="outline-text-2" id="text-orge0809a7">
+<p>
+La seguridad digital no termina tras aplicar un firewall y endurecer el sistema. Es fundamental <b>analizar lo que está ocurriendo</b> en nuestros registros de sistema, porque ahí se esconden muchas pistas sobre accesos sospechosos, ataques de fuerza bruta o errores de configuración que podrían explotarse.
+</p>
+
+<p>
+Esta guía incluye:
+</p>
+<ul class="org-ul">
+<li>Un script de refuerzo rápido de seguridad.</li>
+<li>Un análisis semántico de logs básicos del sistema (`auth.log`, `syslog`, `journalctl`).</li>
+<li>Exportación de hallazgos clave a un fichero de texto para revisión o envío automático.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb1290ef" class="outline-2">
+<h2 id="orgb1290ef">Diagrama de flujo de seguridad</h2>
+<div class="outline-text-2" id="text-orgb1290ef">
+
+<figure id="org81e865e">
+<img src="images/diagrama_seguridad_total.png" alt="diagrama_seguridad_total.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org3cb1147" class="outline-2">
+<h2 id="org3cb1147">Análisis semántico de logs del sistema</h2>
+<div class="outline-text-2" id="text-org3cb1147">
+<p>
+Usaremos `journalctl`, `grep`, y expresiones regulares para extraer:
+</p>
+
+<ul class="org-ul">
+<li>Inicios de sesión fallidos y exitosos.</li>
+<li>Intentos de login como root.</li>
+<li>Reinicios sospechosos o caídas de servicios.</li>
+<li>Errores frecuentes o advertencias de seguridad.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128269; An&#225;lisis sem&#225;ntico b&#225;sico de logs:"</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"-------------------------------------"</span>
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Revisar fallos de login</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"&#128204; Fallos de login detectados:"</span>
+journalctl -xe | grep -Ei <span style="color: #005F00;">"failed password|authentication failure"</span> | tail -n 10
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Intentos de login como root</span>
+<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"\n&#128680; Intentos de login como root:"</span>
+grep <span style="color: #005F00;">"root"</span> /var/log/auth.log | grep <span style="color: #005F00;">"Failed"</span> | tail -n 10
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Servicios ca&#237;dos o reiniciados</span>
+<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"\n&#9888;&#65039; Servicios con errores recientes:"</span>
+journalctl -p err -xb | tail -n 10
+
+<span style="color: #4E4E4E; font-style: italic;"># </span><span style="color: #4E4E4E; font-style: italic;">Inicios de sesi&#243;n exitosos recientes</span>
+<span style="color: #1F55A0;">echo</span> -e <span style="color: #005F00;">"\n&#9989; Inicios de sesi&#243;n exitosos:"</span>
+last -n 5
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgce010f1" class="outline-2">
+<h2 id="orgce010f1">Exportar informe de amenazas detectadas</h2>
+<div class="outline-text-2" id="text-orgce010f1">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Guardando informe de seguridad en ~/informe_seguridad.txt..."</span>
+{
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Informe de Seguridad - $(</span><span style="color: #1F55A0; font-weight: bold;">date</span><span style="color: #005F00;">)"</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"-------------------------------"</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"FALLOS DE LOGIN:"</span>
+    journalctl -xe | grep -Ei <span style="color: #005F00;">"failed password|authentication failure"</span> | tail -n 10
+    <span style="color: #1F55A0;">echo</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"INTENTOS DE LOGIN COMO ROOT:"</span>
+    grep <span style="color: #005F00;">"root"</span> /var/log/auth.log | grep <span style="color: #005F00;">"Failed"</span> | tail -n 10
+    <span style="color: #1F55A0;">echo</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"ERRORES CR&#205;TICOS EN EL SISTEMA:"</span>
+    journalctl -p err -xb | tail -n 10
+    <span style="color: #1F55A0;">echo</span>
+    <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"INICIOS DE SESI&#211;N EXITOSOS:"</span>
+    last -n 5
+} &gt; ~/informe_seguridad.txt
+<span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Informe generado en ~/informe_seguridad.txt"</span>
+</code></pre>
+</div>
+
+<p>
+<b><b>Ejecutar:</b></b>
+</p>
+
+<p>
+```bash
+chmod +x exportar<sub>logs.sh</sub>
+./exportar<sub>logs.sh</sub>
+</p>
+
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-11-script-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux">2025-06-11-script-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux</a>
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-linux.html">linux</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-ciberseguridad.html">ciberseguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-bash.html">bash</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-logs.html">logs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-automatización.html">automatización</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-orgmode.html">orgmode</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[ciberseguridad]]></category>
+  <category><![CDATA[bash]]></category>
+  <category><![CDATA[logs]]></category>
+  <category><![CDATA[automatización]]></category>
+  <category><![CDATA[orgmode]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-11-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux-semantica.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-11-refuerzo-r-pido-de-ciberseguridad-para-tu-laptop-linux-semantica.html</guid>
+  <pubDate>Wed, 11 Jun 2025 20:28:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[Cómo hacer frente a las APT (Amenazas Persistentes Avanzadas) en Linux]]></title>
   <description><![CDATA[
