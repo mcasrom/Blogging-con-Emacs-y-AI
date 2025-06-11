@@ -4,13 +4,13 @@
 <title><![CDATA[Emacs con esteroides - automatización]]></title>
 <description><![CDATA[Emacs con esteroides - automatización]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-automatización.html</link>
-<lastBuildDate>Wed, 11 Jun 2025 20:38:29 +0200</lastBuildDate>
+<lastBuildDate>Wed, 11 Jun 2025 20:55:10 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Refuerzo Rápido de Ciberseguridad para tu Laptop Linux Semantica]]></title>
   <description><![CDATA[
-<div id="outline-container-orge0809a7" class="outline-2">
-<h2 id="orge0809a7">Introducción</h2>
-<div class="outline-text-2" id="text-orge0809a7">
+<div id="outline-container-org77278a5" class="outline-2">
+<h2 id="org77278a5">Introducción</h2>
+<div class="outline-text-2" id="text-org77278a5">
 <p>
 La seguridad digital no termina tras aplicar un firewall y endurecer el sistema. Es fundamental <b>analizar lo que está ocurriendo</b> en nuestros registros de sistema, porque ahí se esconden muchas pistas sobre accesos sospechosos, ataques de fuerza bruta o errores de configuración que podrían explotarse.
 </p>
@@ -25,19 +25,19 @@ Esta guía incluye:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb1290ef" class="outline-2">
-<h2 id="orgb1290ef">Diagrama de flujo de seguridad</h2>
-<div class="outline-text-2" id="text-orgb1290ef">
+<div id="outline-container-orgaf7c39c" class="outline-2">
+<h2 id="orgaf7c39c">Diagrama de flujo de seguridad</h2>
+<div class="outline-text-2" id="text-orgaf7c39c">
 
-<figure id="org81e865e">
+<figure id="org02b3a52">
 <img src="images/diagrama_seguridad_total.png" alt="diagrama_seguridad_total.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org3cb1147" class="outline-2">
-<h2 id="org3cb1147">Análisis semántico de logs del sistema</h2>
-<div class="outline-text-2" id="text-org3cb1147">
+<div id="outline-container-orgae7a0c3" class="outline-2">
+<h2 id="orgae7a0c3">Análisis semántico de logs del sistema</h2>
+<div class="outline-text-2" id="text-orgae7a0c3">
 <p>
 Usaremos `journalctl`, `grep`, y expresiones regulares para extraer:
 </p>
@@ -72,9 +72,9 @@ last -n 5
 </div>
 </div>
 </div>
-<div id="outline-container-orgce010f1" class="outline-2">
-<h2 id="orgce010f1">Exportar informe de amenazas detectadas</h2>
-<div class="outline-text-2" id="text-orgce010f1">
+<div id="outline-container-org53411d9" class="outline-2">
+<h2 id="org53411d9">Exportar informe de amenazas detectadas</h2>
+<div class="outline-text-2" id="text-org53411d9">
 <div class="org-src-container">
 <pre class="src src-bash"><code><span style="color: #4E4E4E; font-style: italic;">#</span><span style="color: #4E4E4E; font-style: italic;">!/bin/</span><span style="color: #D70000;">bash</span>
 <span style="color: #1F55A0;">echo</span> <span style="color: #005F00;">"Guardando informe de seguridad en ~/informe_seguridad.txt..."</span>
