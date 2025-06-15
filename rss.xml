@@ -4,7 +4,7 @@
 <title><![CDATA[Emacs con esteroides]]></title>
 <description><![CDATA[Emacs con esteroides]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/</link>
-<lastBuildDate>Sun, 15 Jun 2025 14:47:31 +0200</lastBuildDate>
+<lastBuildDate>Sun, 15 Jun 2025 14:52:32 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Explorando Shima Spain Village: Un Rincón Español en Japón]]></title>
   <description><![CDATA[
@@ -130,7 +130,7 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[españa]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-03-18-explorando-shima-spain-village:-un-rinc%C3%B3n-espa%C3%B1ol-en-jap%C3%B3n.html</guid>
-  <pubDate>Sun, 15 Jun 2025 14:47:31 +0200</pubDate>
+  <pubDate>Sun, 15 Jun 2025 14:52:32 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[Índice de Publicaciones del Blog]]></title>
@@ -987,7 +987,7 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
 </tr>
 
 <tr>
-<td class="org-right">2025-06-11</td>
+<td class="org-right">2025-06-15</td>
 <td class="org-left">Índice de Publicaciones del Blog</td>
 <td class="org-left"><a href="indice-posts.html">Enlace</a></td>
 </tr>
@@ -1016,29 +1016,14 @@ Si planeas visitar Japón, no dudes en incluir Shima Spain Village en tu itinera
   <category><![CDATA[blog]]></category>
   <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</link>
   <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/indice-posts.html</guid>
-  <pubDate>Sun, 15 Jun 2025 14:45:00 +0200</pubDate>
+  <pubDate>Sun, 15 Jun 2025 14:51:00 +0200</pubDate>
 </item>
 <item>
   <title><![CDATA[El Principio de Peter: Análisis Profundo de su Origen, Evolución, Desarrollo y Consecuencias]]></title>
   <description><![CDATA[
-<nav id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#org5029bbe">1. Introducción</a></li>
-<li><a href="#org2e46750">2. Origen Histórico y Conceptual</a></li>
-<li><a href="#org54d4369">3. Evolución y Desarrollo del Principio</a></li>
-<li><a href="#org7df91ff">4. Consecuencias Organizacionales</a></li>
-<li><a href="#org74b823f">5. Análisis Crítico y Reflexiones</a></li>
-<li><a href="#org5ab972c">6. Ejemplos Prácticos</a></li>
-<li><a href="#orga37de1e">7. Diagramas en PlantUML</a></li>
-<li><a href="#orgaf2cd15">8. Referencias Documentales</a></li>
-</ul>
-</div>
-</nav>
-<div id="outline-container-org5029bbe" class="outline-2">
-<h2 id="org5029bbe"><span class="section-number-2">1.</span> Introducción</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orga8377a1" class="outline-2">
+<h2 id="orga8377a1">Introducción</h2>
+<div class="outline-text-2" id="text-orga8377a1">
 <p>
 El <b><b>Principio de Peter</b></b> es una teoría de administración y comportamiento organizacional formulada por Laurence J. Peter en 1969, que explica un fenómeno común en las jerarquías: los empleados son promovidos en función de su desempeño en su puesto actual hasta alcanzar un nivel donde ya no son competentes para las nuevas responsabilidades, quedando atrapados en ese "nivel de incompetencia"[3][1][7].
 </p>
@@ -1048,9 +1033,9 @@ Este principio no solo describe un problema organizacional sino que invita a ref
 </p>
 </div>
 </div>
-<div id="outline-container-org2e46750" class="outline-2">
-<h2 id="org2e46750"><span class="section-number-2">2.</span> Origen Histórico y Conceptual</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org84fc64f" class="outline-2">
+<h2 id="org84fc64f">Origen Histórico y Conceptual</h2>
+<div class="outline-text-2" id="text-org84fc64f">
 <p>
 El origen conceptual del Principio de Peter se remonta a un aforismo del filósofo español José Ortega y Gasset en la década de 1910:
 </p>
@@ -1068,9 +1053,9 @@ Peter denominó a su estudio "jerarquiología", la ciencia de las jerarquías, y
 </p>
 </div>
 </div>
-<div id="outline-container-org54d4369" class="outline-2">
-<h2 id="org54d4369"><span class="section-number-2">3.</span> Evolución y Desarrollo del Principio</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-orgf70b054" class="outline-2">
+<h2 id="orgf70b054">Evolución y Desarrollo del Principio</h2>
+<div class="outline-text-2" id="text-orgf70b054">
 <p>
 El Principio de Peter se basa en tres premisas fundamentales:
 </p>
@@ -1092,9 +1077,9 @@ Este fenómeno se repite y se acumula en niveles superiores, generando una jerar
 </p>
 </div>
 </div>
-<div id="outline-container-org7df91ff" class="outline-2">
-<h2 id="org7df91ff"><span class="section-number-2">4.</span> Consecuencias Organizacionales</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-orgf21089f" class="outline-2">
+<h2 id="orgf21089f">Consecuencias Organizacionales</h2>
+<div class="outline-text-2" id="text-orgf21089f">
 <table border="2" rules="all" frame="border">
 
 
@@ -1142,9 +1127,9 @@ Este fenómeno se repite y se acumula en niveles superiores, generando una jerar
 </p>
 </div>
 </div>
-<div id="outline-container-org74b823f" class="outline-2">
-<h2 id="org74b823f"><span class="section-number-2">5.</span> Análisis Crítico y Reflexiones</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-orgdd185f2" class="outline-2">
+<h2 id="orgdd185f2">Análisis Crítico y Reflexiones</h2>
+<div class="outline-text-2" id="text-orgdd185f2">
 <p>
 Aunque el Principio de Peter describe un fenómeno real y observable, no debe entenderse como una sentencia fatalista. Más bien, es una llamada de atención para que las organizaciones reconsideren:
 </p>
@@ -1164,9 +1149,9 @@ El Principio de Peter también invita a los empleados a ser conscientes de las h
 </p>
 </div>
 </div>
-<div id="outline-container-org5ab972c" class="outline-2">
-<h2 id="org5ab972c"><span class="section-number-2">6.</span> Ejemplos Prácticos</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-org9dc3c77" class="outline-2">
+<h2 id="org9dc3c77">Ejemplos Prácticos</h2>
+<div class="outline-text-2" id="text-org9dc3c77">
 <ul class="org-ul">
 <li>Un excelente programador ascendido a jefe de proyecto sin habilidades de gestión puede generar conflictos y retrasos.</li>
 
@@ -1176,11 +1161,11 @@ El Principio de Peter también invita a los empleados a ser conscientes de las h
 </ul>
 </div>
 </div>
-<div id="outline-container-orga37de1e" class="outline-2">
-<h2 id="orga37de1e"><span class="section-number-2">7.</span> Diagramas en PlantUML</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-org897d26e" class="outline-2">
+<h2 id="org897d26e">Diagramas en PlantUML</h2>
+<div class="outline-text-2" id="text-org897d26e">
 
-<figure id="org740808d">
+<figure id="orgdccbd87">
 <img src="images/principio-peter-origen.png" alt="principio-peter-origen.png">
 
 </figure>
@@ -1191,7 +1176,7 @@ El Principio de Peter también invita a los empleados a ser conscientes de las h
 
 
 
-<figure id="orgc8a56da">
+<figure id="org1637fcb">
 <img src="images/principio-peter-evolucion.png" alt="principio-peter-evolucion.png">
 
 </figure>
@@ -1202,7 +1187,7 @@ El Principio de Peter también invita a los empleados a ser conscientes de las h
 
 
 
-<figure id="orgf37cf45">
+<figure id="org9727894">
 <img src="images/principio-peter-consecuencias.png" alt="principio-peter-consecuencias.png">
 
 </figure>
@@ -1212,9 +1197,9 @@ El Principio de Peter también invita a los empleados a ser conscientes de las h
 </p>
 </div>
 </div>
-<div id="outline-container-orgaf2cd15" class="outline-2">
-<h2 id="orgaf2cd15"><span class="section-number-2">8.</span> Referencias Documentales</h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-org23d0c6d" class="outline-2">
+<h2 id="org23d0c6d">Referencias Documentales</h2>
+<div class="outline-text-2" id="text-org23d0c6d">
 <ul class="org-ul">
 <li>Wikipedia: Principio de Peter, <a href="https://es.wikipedia.org/wiki/Principio_de_Peter">https://es.wikipedia.org/wiki/Principio_de_Peter</a>[3]</li>
 <li>Consuunt: Principio de Peter explicado con ejemplos, <a href="https://www.consuunt.es/principio-de-peter/">https://www.consuunt.es/principio-de-peter/</a>[1]</li>
