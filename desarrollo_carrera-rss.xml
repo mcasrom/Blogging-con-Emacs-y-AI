@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title><![CDATA[Emacs con esteroides - desarrollo_carrera]]></title>
+<description><![CDATA[Emacs con esteroides - desarrollo_carrera]]></description>
+<link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-desarrollo_carrera.html</link>
+<lastBuildDate>Sun, 15 Jun 2025 14:47:32 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[El Principio de Peter: Análisis Profundo de su Origen, Evolución, Desarrollo y Consecuencias]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org5029bbe">1. Introducción</a></li>
+<li><a href="#org2e46750">2. Origen Histórico y Conceptual</a></li>
+<li><a href="#org54d4369">3. Evolución y Desarrollo del Principio</a></li>
+<li><a href="#org7df91ff">4. Consecuencias Organizacionales</a></li>
+<li><a href="#org74b823f">5. Análisis Crítico y Reflexiones</a></li>
+<li><a href="#org5ab972c">6. Ejemplos Prácticos</a></li>
+<li><a href="#orga37de1e">7. Diagramas en PlantUML</a></li>
+<li><a href="#orgaf2cd15">8. Referencias Documentales</a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-org5029bbe" class="outline-2">
+<h2 id="org5029bbe"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+El <b><b>Principio de Peter</b></b> es una teoría de administración y comportamiento organizacional formulada por Laurence J. Peter en 1969, que explica un fenómeno común en las jerarquías: los empleados son promovidos en función de su desempeño en su puesto actual hasta alcanzar un nivel donde ya no son competentes para las nuevas responsabilidades, quedando atrapados en ese "nivel de incompetencia"[3][1][7].
+</p>
+
+<p>
+Este principio no solo describe un problema organizacional sino que invita a reflexionar sobre cómo se gestionan los ascensos y el desarrollo profesional, y cómo evitar que la eficiencia y motivación se deterioren en las empresas.
+</p>
+</div>
+</div>
+<div id="outline-container-org2e46750" class="outline-2">
+<h2 id="org2e46750"><span class="section-number-2">2.</span> Origen Histórico y Conceptual</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+El origen conceptual del Principio de Peter se remonta a un aforismo del filósofo español José Ortega y Gasset en la década de 1910:
+</p>
+
+<p>
+&gt; "Todos los empleados públicos deberían descender a su grado inmediato inferior, porque han sido ascendidos hasta volverse incompetentes"[3][5][7].
+</p>
+
+<p>
+Laurence J. Peter, pedagogo canadiense y profesor de Ciencias de la Educación, observó en la práctica cotidiana de las organizaciones que el fenómeno era generalizado. Tras analizar cientos de casos de incompetencia en puestos jerárquicos, publicó en 1969 el libro <b>The Peter Principle</b>, junto con Raymond Hull, donde formalizó esta teoría[3][5][6].
+</p>
+
+<p>
+Peter denominó a su estudio "jerarquiología", la ciencia de las jerarquías, y con humor y rigor mostró que en las estructuras piramidales rígidas, los ascensos basados exclusivamente en el desempeño previo generan ineficiencia a mediano plazo[3][6].
+</p>
+</div>
+</div>
+<div id="outline-container-org54d4369" class="outline-2">
+<h2 id="org54d4369"><span class="section-number-2">3.</span> Evolución y Desarrollo del Principio</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+El Principio de Peter se basa en tres premisas fundamentales:
+</p>
+
+<ol class="org-ol">
+<li>Las organizaciones están estructuradas jerárquicamente, con una forma piramidal[6].</li>
+
+<li>Los puestos tienen funciones rígidas e invariables, que requieren habilidades específicas distintas según el nivel[1][6].</li>
+
+<li>El desempeño en un puesto no garantiza competencia en el siguiente, pues las habilidades necesarias cambian conforme se asciende[1][7].</li>
+</ol>
+
+<p>
+Por ejemplo, un técnico excelente puede ser promovido a jefe de equipo, un puesto que requiere habilidades de liderazgo y comunicación que no necesariamente posee. Si no se adapta, se vuelve incompetente funcionalmente, pero permanece en el cargo porque fue promovido por méritos anteriores[4][10].
+</p>
+
+<p>
+Este fenómeno se repite y se acumula en niveles superiores, generando una jerarquía donde muchos puestos clave están ocupados por personas incompetentes para sus funciones reales[3][9].
+</p>
+</div>
+</div>
+<div id="outline-container-org7df91ff" class="outline-2">
+<h2 id="org7df91ff"><span class="section-number-2">4.</span> Consecuencias Organizacionales</h2>
+<div class="outline-text-2" id="text-4">
+<table border="2" rules="all" frame="border">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Consecuencia</th>
+<th scope="col" class="org-left">Descripción detallada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Ineficiencia organizacional</td>
+<td class="org-left">La acumulación de incompetentes en niveles altos reduce la productividad y calidad de la toma de decisiones[2][3][9].</td>
+</tr>
+
+<tr>
+<td class="org-left">Desmotivación del personal</td>
+<td class="org-left">Los empleados competentes en niveles inferiores pueden frustrarse al ver que las promociones no consideran la aptitud real[2][4].</td>
+</tr>
+
+<tr>
+<td class="org-left">Alta rotación de personal</td>
+<td class="org-left">La mala gestión y decisiones erróneas derivadas de incompetencia incrementan la rotación y pérdida de talento[2][9].</td>
+</tr>
+
+<tr>
+<td class="org-left">Estancamiento profesional</td>
+<td class="org-left">Los empleados alcanzan un tope donde no pueden seguir creciendo, afectando su desarrollo y la innovación organizacional[10].</td>
+</tr>
+
+<tr>
+<td class="org-left">Costos económicos</td>
+<td class="org-left">La ineficiencia y errores gerenciales impactan directamente en los resultados financieros y competitividad empresarial[4][9].</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br>
+</p>
+</div>
+</div>
+<div id="outline-container-org74b823f" class="outline-2">
+<h2 id="org74b823f"><span class="section-number-2">5.</span> Análisis Crítico y Reflexiones</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Aunque el Principio de Peter describe un fenómeno real y observable, no debe entenderse como una sentencia fatalista. Más bien, es una llamada de atención para que las organizaciones reconsideren:
+</p>
+
+<ul class="org-ul">
+<li><b><b>Criterios de promoción:</b></b> No solo evaluar el desempeño pasado, sino la capacidad de adaptación, aprendizaje y competencias para el nuevo rol[10].</li>
+
+<li><b><b>Formación y desarrollo:</b></b> Preparar a los empleados para las nuevas responsabilidades mediante capacitación, mentoring y evaluación continua[10].</li>
+
+<li><b><b>Flexibilidad organizacional:</b></b> Permitir movilidad lateral, retrocesos o cambios de rol para evitar estancamientos y pérdida de talento[6].</li>
+
+<li><b><b>Evaluación del potencial:</b></b> Incorporar herramientas psicológicas y de gestión para identificar aptitudes reales más allá del desempeño técnico[7].</li>
+</ul>
+
+<p>
+El Principio de Peter también invita a los empleados a ser conscientes de las habilidades que requieren los nuevos puestos y a prepararse activamente para afrontarlos, evitando caer en la incompetencia funcional[10].
+</p>
+</div>
+</div>
+<div id="outline-container-org5ab972c" class="outline-2">
+<h2 id="org5ab972c"><span class="section-number-2">6.</span> Ejemplos Prácticos</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Un excelente programador ascendido a jefe de proyecto sin habilidades de gestión puede generar conflictos y retrasos.</li>
+
+<li>Un comercial sobresaliente promovido a gerente de ventas sin capacidad para motivar y dirigir equipos puede afectar los resultados globales.</li>
+
+<li>Un médico brillante que se convierte en director de hospital sin formación administrativa puede tomar decisiones erróneas que impactan la atención[5][9].</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga37de1e" class="outline-2">
+<h2 id="orga37de1e"><span class="section-number-2">7.</span> Diagramas en PlantUML</h2>
+<div class="outline-text-2" id="text-7">
+
+<figure id="org740808d">
+<img src="images/principio-peter-origen.png" alt="principio-peter-origen.png">
+
+</figure>
+
+<p>
+<br>
+</p>
+
+
+
+<figure id="orgc8a56da">
+<img src="images/principio-peter-evolucion.png" alt="principio-peter-evolucion.png">
+
+</figure>
+
+<p>
+<br>
+</p>
+
+
+
+<figure id="orgf37cf45">
+<img src="images/principio-peter-consecuencias.png" alt="principio-peter-consecuencias.png">
+
+</figure>
+
+<p>
+<br>
+</p>
+</div>
+</div>
+<div id="outline-container-orgaf2cd15" class="outline-2">
+<h2 id="orgaf2cd15"><span class="section-number-2">8.</span> Referencias Documentales</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>Wikipedia: Principio de Peter, <a href="https://es.wikipedia.org/wiki/Principio_de_Peter">https://es.wikipedia.org/wiki/Principio_de_Peter</a>[3]</li>
+<li>Consuunt: Principio de Peter explicado con ejemplos, <a href="https://www.consuunt.es/principio-de-peter/">https://www.consuunt.es/principio-de-peter/</a>[1]</li>
+<li>ISEB: Principio de Peter, <a href="https://iseb.es/el-principio-de-peter/">https://iseb.es/el-principio-de-peter/</a>[2]</li>
+<li>MásMóvil Blog: El principio de Peter, <a href="https://blogempresas.masmovil.es/el-principio-de-peter-cuando-tu-jefe-no-deberia-serlo/">https://blogempresas.masmovil.es/el-principio-de-peter-cuando-tu-jefe-no-deberia-serlo/</a>[4]</li>
+<li>Juan de Mariana: El lenguaje económico XIX: El Principio de Peter, <a href="https://juandemariana.org/el-lenguaje-economico-xix-el-principio-de-peter/">https://juandemariana.org/el-lenguaje-economico-xix-el-principio-de-peter/</a>[5]</li>
+<li>UIC: El Principio de Peter, <a href="https://www.uic.mx/el-principio-de-peter/">https://www.uic.mx/el-principio-de-peter/</a>[6]</li>
+<li>Jeroni Calafell: El Principio de Peter y el Nivel de Incompetencia, <a href="https://jeronicalafell.com/principio-peter/">https://jeronicalafell.com/principio-peter/</a>[7]</li>
+<li>PandoraFMS: Principio de Peter y de Dilbert, <a href="https://pandorafms.com/blog/es/principio-de-peter/">https://pandorafms.com/blog/es/principio-de-peter/</a>[9]</li>
+<li>El Siete Formación: Cómo superar el desafío de crecer sin perder el rumbo, <a href="https://elsieteformacion.com/el-principio-de-peter/">https://elsieteformacion.com/el-principio-de-peter/</a>[10]</li>
+</ul>
+
+<p>
+<b>Conclusión</b>
+</p>
+
+<p>
+El Principio de Peter es un fenómeno organizacional que explica por qué muchas jerarquías terminan con puestos clave ocupados por personas incompetentes para sus funciones. Comprender este principio es fundamental para diseñar mejores sistemas de promoción, formación y gestión del talento, que permitan a las organizaciones crecer sin sacrificar eficiencia ni motivación.
+</p>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+Este post en formato org mode está preparado para ser publicado en un blog técnico o de gestión, con estructura clara, análisis profundo, tablas, diagramas y referencias para facilitar la comprensión y aplicación del Principio de Peter en el contexto profesional.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-principio_peter.html">principio_peter</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-jerarquias.html">jerarquias</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-incompetencia.html">incompetencia</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-gestion.html">gestion</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-organizacional.html">organizacional</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-desarrollo_carrera.html">desarrollo_carrera</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-psicologia_laboral.html">psicologia_laboral</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-liderazgo.html">liderazgo</a> </div>]]></description>
+  <category><![CDATA[principio_peter]]></category>
+  <category><![CDATA[jerarquias]]></category>
+  <category><![CDATA[incompetencia]]></category>
+  <category><![CDATA[gestion]]></category>
+  <category><![CDATA[organizacional]]></category>
+  <category><![CDATA[desarrollo_carrera]]></category>
+  <category><![CDATA[psicologia_laboral]]></category>
+  <category><![CDATA[liderazgo]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-15-el-principio-de-peter:-an%C3%A1lisis-profundo-de-su-origen,-evoluci%C3%B3n,-desarrollo-y-consecuencias.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-15-el-principio-de-peter:-an%C3%A1lisis-profundo-de-su-origen,-evoluci%C3%B3n,-desarrollo-y-consecuencias.html</guid>
+  <pubDate>Sun, 15 Jun 2025 14:38:00 +0200</pubDate>
+</item>
+</channel>
+</rss>
