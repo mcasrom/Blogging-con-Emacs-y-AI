@@ -4,7 +4,987 @@
 <title><![CDATA[Emacs con esteroides - tutoriales]]></title>
 <description><![CDATA[Emacs con esteroides - tutoriales]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-tutoriales.html</link>
-<lastBuildDate>Sun, 15 Jun 2025 14:52:44 +0200</lastBuildDate>
+<lastBuildDate>Tue, 17 Jun 2025 18:29:44 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Emacs para Presentaciones: Creando Presentaciones Profesionales con Org Mode]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org6cc0fe9">1. Introducción</a></li>
+<li><a href="#orgb6ff6db">2. Configuración Inicial</a>
+<ul>
+<li><a href="#org11666eb">2.1. Instalación de Paquetes Necesarios</a></li>
+<li><a href="#orgc00962a">2.2. Configuración Básica en tu init.el</a></li>
+</ul>
+</li>
+<li><a href="#org1883c7a">3. Métodos de Creación de Presentaciones</a>
+<ul>
+<li><a href="#orge2d418a">3.1. 1. Reveal.js - Presentaciones HTML Modernas</a>
+<ul>
+<li><a href="#org136c51f">3.1.1. Estructura Básica</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org3ab0ee6">4. Slide 1</a></li>
+<li><a href="#orgc7cb7b6">5. Slide 2</a>
+<ul>
+<li><a href="#org9c3e91c">5.1. Subsección</a></li>
+</ul>
+</li>
+<li><a href="#org33687e8">6. Slide 3</a>
+<ul>
+<li>
+<ul>
+<li><a href="#orgcacdc8a">6.0.1. Comandos de Exportación</a></li>
+</ul>
+</li>
+<li><a href="#orga1db395">6.1. 2. Beamer - Presentaciones PDF con LaTeX</a>
+<ul>
+<li><a href="#org2018899">6.1.1. Estructura Básica</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgccdf900">7. Introducción</a>
+<ul>
+<li><a href="#orga5e3bb9">7.1. Objetivos</a></li>
+</ul>
+</li>
+<li><a href="#org6e07053">8. Metodología</a>
+<ul>
+<li><a href="#orgd51dd55">8.1. Enfoque Cuantitativo</a></li>
+<li><a href="#orgbeb3f29">8.2. Herramientas Utilizadas</a>
+<ul>
+<li><a href="#org4740995">8.2.1. Comandos de Exportación</a></li>
+</ul>
+</li>
+<li><a href="#org65e2a97">8.3. 3. Exportación HTML Simple</a></li>
+</ul>
+</li>
+<li><a href="#org550b117">9. Ejemplos Prácticos</a>
+<ul>
+<li><a href="#org26697de">9.1. Ejemplo 1: Presentación Empresarial con Reveal.js</a></li>
+</ul>
+</li>
+<li><a href="#org826354c">10. Situación Actual</a>
+<ul>
+<li><a href="#org3592787">10.1. Métricas Clave</a></li>
+<li><a href="#org88a83ef">10.2. Desafíos Identificados</a></li>
+</ul>
+</li>
+<li><a href="#org32b223a">11. Estrategia Propuesta</a>
+<ul>
+<li><a href="#orgd2fab62">11.1. Pilares Estratégicos</a></li>
+<li><a href="#org747da9c">11.2. Cronograma</a></li>
+</ul>
+</li>
+<li><a href="#org6e9e8cf">12. Resultados Esperados</a>
+<ul>
+<li><a href="#orgf26692f">12.1. Ejemplo 2: Presentación Académica con Beamer</a></li>
+</ul>
+</li>
+<li><a href="#org68fa5d2">13. Introducción</a>
+<ul>
+<li><a href="#org43c95f2">13.1. Contexto del Problema</a></li>
+<li><a href="#org99687f0">13.2. Objetivos</a></li>
+</ul>
+</li>
+<li><a href="#org5f91c15">14. Metodología</a>
+<ul>
+<li><a href="#orgb96cbb6">14.1. Algoritmos Evaluados</a>
+<ul>
+<li><a href="#org28704a8">14.1.1. SVM (Support Vector Machines)</a></li>
+<li><a href="#org7df92d2">14.1.2. Random Forest</a></li>
+<li><a href="#org27d7c65">14.1.3. Redes Neuronales</a></li>
+</ul>
+</li>
+<li><a href="#org418bd1b">14.2. Dataset y Métricas</a>
+<ul>
+<li><a href="#orgdf0c417">14.2.1. Conjuntos de Datos</a></li>
+<li><a href="#orgdb879ba">14.2.2. Métricas de Evaluación</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org6446135">15. Resultados</a>
+<ul>
+<li><a href="#org65eb040">15.1. Comparación de Rendimiento</a></li>
+<li><a href="#orgb9e2981">15.2. Análisis Estadístico</a></li>
+</ul>
+</li>
+<li><a href="#orgac5c9c1">16. Conclusiones</a>
+<ul>
+<li><a href="#org7a6f909">16.1. Hallazgos Principales</a></li>
+<li><a href="#orge2b7459">16.2. Trabajo Futuro</a></li>
+</ul>
+</li>
+<li><a href="#org3019324">17. Características Avanzadas</a>
+<ul>
+<li><a href="#org9b4545f">17.1. Fragmentos y Animaciones</a></li>
+</ul>
+</li>
+<li><a href="#orgf028033">18. Slide con Fragmentos</a>
+<ul>
+<li><a href="#org00a1b60">18.1. Código con Sintaxis Destacada</a></li>
+<li><a href="#orgb7d8322">18.2. Multimedia y Gráficos</a></li>
+</ul>
+</li>
+<li><a href="#orgff4e034">19. Slide con Multimedia</a></li>
+<li><a href="#org5c587bc">20. Consejos y Mejores Prácticas</a>
+<ul>
+<li><a href="#org09e1012">20.1. Estructura y Organización</a></li>
+<li><a href="#org31d319c">20.2. Diseño Visual</a></li>
+<li><a href="#orge1f2972">20.3. Interactividad</a></li>
+<li><a href="#org852e185">20.4. Optimización de Rendimiento</a></li>
+</ul>
+</li>
+<li><a href="#orgc98d2bb">21. Comandos Útiles y Atajos</a>
+<ul>
+<li><a href="#orgc783715">21.1. Atajos de Teclado Esenciales</a></li>
+<li><a href="#org0a26bc1">21.2. Comandos de Exportación Específicos</a></li>
+</ul>
+</li>
+<li><a href="#org927379b">22. Troubleshooting Común</a>
+<ul>
+<li><a href="#orgd7e9601">22.1. Problemas con Reveal.js</a></li>
+<li><a href="#org28fd1f1">22.2. Problemas con Beamer</a></li>
+<li><a href="#org75561b5">22.3. Problemas Generales</a></li>
+</ul>
+</li>
+<li><a href="#orgb34ef99">23. Referencias y Recursos</a>
+<ul>
+<li><a href="#org04ee894">23.1. Documentación Oficial</a></li>
+<li><a href="#orgfeff13b">23.2. Tutoriales y Guías</a></li>
+<li><a href="#org05a3175">23.3. Temas y Plantillas</a></li>
+<li><a href="#org8a96ba9">23.4. Herramientas Complementarias</a></li>
+</ul>
+</li>
+<li><a href="#org9096e3d">24. Conclusión</a>
+<ul>
+<li><a href="#orgc700cae">24.1. Próximos Pasos</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-org6cc0fe9" class="outline-2">
+<h2 id="org6cc0fe9"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Emacs Org Mode es una herramienta potente que va más allá de la simple toma de notas. Una de sus características más destacadas es la capacidad de crear presentaciones profesionales directamente desde archivos de texto plano, exportándolas a múltiples formatos como HTML con reveal.js, PDF con Beamer, o incluso presentaciones interactivas.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb6ff6db" class="outline-2">
+<h2 id="orgb6ff6db"><span class="section-number-2">2.</span> Configuración Inicial</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org11666eb" class="outline-3">
+<h3 id="org11666eb"><span class="section-number-3">2.1.</span> Instalación de Paquetes Necesarios</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Para comenzar a crear presentaciones, necesitarás instalar algunos paquetes adicionales:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Instalar ox-reveal para exportar a reveal.js</span>
+(<span style="color: #D70000;">use-package</span> <span style="color: #AF005F;">ox-reveal</span>
+  <span style="color: #1F55A0;">:ensure</span> t
+  <span style="color: #1F55A0;">:config</span>
+  (<span style="color: #D70000;">setq</span> org-reveal-root <span style="color: #005F00;">"https://cdn.jsdelivr.net/npm/reveal.js"</span>)
+  (<span style="color: #D70000;">setq</span> org-reveal-mathjax t))
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n adicional para Beamer</span>
+(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">ox-beamer</span>)
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Configuraci&#243;n para exportar a HTML5</span>
+(<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">ox-html</span>)
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc00962a" class="outline-3">
+<h3 id="orgc00962a"><span class="section-number-3">2.2.</span> Configuración Básica en tu init.el</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(<span style="color: #D70000;">with-eval-after-load</span> 'org
+  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Habilitar exportadores adicionales</span>
+  (<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">ox-reveal</span>)
+  (<span style="color: #D70000;">require</span> '<span style="color: #AF005F;">ox-beamer</span>)
+
+  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Configurar clases de LaTeX para Beamer</span>
+  (add-to-list 'org-latex-classes
+               '(<span style="color: #005F00;">"beamer"</span>
+                 <span style="color: #005F00;">"\\documentclass</span><span style="color: #D75F00;">\</span><span style="color: #005F00;">[presentation</span><span style="color: #D75F00;">\</span><span style="color: #005F00;">]</span><span style="color: #D75F00;">\</span><span style="color: #005F00;">{beamer</span><span style="color: #D75F00;">\</span><span style="color: #005F00;">}"</span>
+                 (<span style="color: #005F00;">"\\section</span><span style="color: #D75F00;">\</span><span style="color: #005F00;">{%s</span><span style="color: #D75F00;">\</span><span style="color: #005F00;">}"</span> . <span style="color: #005F00;">"\\section*</span><span style="color: #D75F00;">\</span><span style="color: #005F00;">{%s</span><span style="color: #D75F00;">\</span><span style="color: #005F00;">}"</span>)
+                 (<span style="color: #005F00;">"\\subsection</span><span style="color: #D75F00;">\</span><span style="color: #005F00;">{%s</span><span style="color: #D75F00;">\</span><span style="color: #005F00;">}"</span> . <span style="color: #005F00;">"\\subsection*</span><span style="color: #D75F00;">\</span><span style="color: #005F00;">{%s</span><span style="color: #D75F00;">\</span><span style="color: #005F00;">}"</span>)
+                 (<span style="color: #005F00;">"\\subsubsection</span><span style="color: #D75F00;">\</span><span style="color: #005F00;">{%s</span><span style="color: #D75F00;">\</span><span style="color: #005F00;">}"</span> . <span style="color: #005F00;">"\\subsubsection*</span><span style="color: #D75F00;">\</span><span style="color: #005F00;">{%s</span><span style="color: #D75F00;">\</span><span style="color: #005F00;">}"</span>)))
+
+  <span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Configurar temas por defecto</span>
+  (<span style="color: #D70000;">setq</span> org-beamer-theme <span style="color: #005F00;">"Madrid"</span>)
+  (<span style="color: #D70000;">setq</span> org-beamer-color-theme <span style="color: #005F00;">"default"</span>))
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1883c7a" class="outline-2">
+<h2 id="org1883c7a"><span class="section-number-2">3.</span> Métodos de Creación de Presentaciones</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orge2d418a" class="outline-3">
+<h3 id="orge2d418a"><span class="section-number-3">3.1.</span> 1. Reveal.js - Presentaciones HTML Modernas</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Reveal.js es ideal para presentaciones web interactivas con transiciones elegantes y soporte multimedia completo.
+</p>
+</div>
+<div id="outline-container-org136c51f" class="outline-4">
+<h4 id="org136c51f"><span class="section-number-4">3.1.1.</span> Estructura Básica</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+#+BEGIN<sub>EXAMPLE</sub>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org3ab0ee6" class="outline-2">
+<h2 id="org3ab0ee6"><span class="section-number-2">4.</span> Slide 1</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Contenido del primer slide
+</p>
+</div>
+</div>
+<div id="outline-container-orgc7cb7b6" class="outline-2">
+<h2 id="orgc7cb7b6"><span class="section-number-2">5.</span> Slide 2</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org9c3e91c" class="outline-3">
+<h3 id="org9c3e91c"><span class="section-number-3">5.1.</span> Subsección</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Contenido anidado
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org33687e8" class="outline-2">
+<h2 id="org33687e8"><span class="section-number-2">6.</span> Slide 3</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Punto 1</li>
+<li>Punto 2</li>
+<li>Punto 3</li>
+</ul>
+<p>
+#+END<sub>EXAMPLE</sub>
+</p>
+</div>
+<div id="outline-container-orgcacdc8a" class="outline-4">
+<h4 id="orgcacdc8a"><span class="section-number-4">6.0.1.</span> Comandos de Exportación</h4>
+<div class="outline-text-4" id="text-6-0-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Exportar a reveal.js</span>
+C-c C-e R R  <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Exportar a reveal.js HTML</span>
+C-c C-e R B  <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Exportar y abrir en navegador</span>
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orga1db395" class="outline-3">
+<h3 id="orga1db395"><span class="section-number-3">6.1.</span> 2. Beamer - Presentaciones PDF con LaTeX</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Beamer es perfecto para presentaciones académicas y científicas con fórmulas matemáticas y referencias bibliográficas.
+</p>
+</div>
+<div id="outline-container-org2018899" class="outline-4">
+<h4 id="org2018899"><span class="section-number-4">6.1.1.</span> Estructura Básica</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<p>
+#+BEGIN<sub>EXAMPLE</sub>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgccdf900" class="outline-2">
+<h2 id="orgccdf900"><span class="section-number-2">7.</span> Introducción</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-orga5e3bb9" class="outline-3">
+<h3 id="orga5e3bb9"><span class="section-number-3">7.1.</span> Objetivos</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li>Objetivo 1</li>
+<li>Objetivo 2</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6e07053" class="outline-2">
+<h2 id="org6e07053"><span class="section-number-2">8.</span> Metodología</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-orgd51dd55" class="outline-3">
+<h3 id="orgd51dd55"><span class="section-number-3">8.1.</span> Enfoque Cuantitativo</h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+Descripción de la metodología&#x2026;
+</p>
+</div>
+</div>
+<div id="outline-container-orgbeb3f29" class="outline-3">
+<h3 id="orgbeb3f29"><span class="section-number-3">8.2.</span> Herramientas Utilizadas</h3>
+<div class="outline-text-3" id="text-8-2">
+<ul class="org-ul">
+<li>Herramienta A</li>
+<li>Herramienta B</li>
+</ul>
+<p>
+#+END<sub>EXAMPLE</sub>
+</p>
+</div>
+<div id="outline-container-org4740995" class="outline-4">
+<h4 id="org4740995"><span class="section-number-4">8.2.1.</span> Comandos de Exportación</h4>
+<div class="outline-text-4" id="text-8-2-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Exportar a Beamer PDF</span>
+C-c C-e l P  <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Exportar a PDF con LaTeX</span>
+C-c C-e l O  <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Exportar PDF y abrir</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org65e2a97" class="outline-3">
+<h3 id="org65e2a97"><span class="section-number-3">8.3.</span> 3. Exportación HTML Simple</h3>
+<div class="outline-text-3" id="text-8-3">
+<p>
+Para presentaciones básicas sin dependencias externas:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Exportar a HTML simple</span>
+C-c C-e h h  <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Exportar a HTML</span>
+C-c C-e h o  <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Exportar HTML y abrir</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org550b117" class="outline-2">
+<h2 id="org550b117"><span class="section-number-2">9.</span> Ejemplos Prácticos</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-org26697de" class="outline-3">
+<h3 id="org26697de"><span class="section-number-3">9.1.</span> Ejemplo 1: Presentación Empresarial con Reveal.js</h3>
+<div class="outline-text-3" id="text-9-1">
+<p>
+#+BEGIN<sub>EXAMPLE</sub>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org826354c" class="outline-2">
+<h2 id="org826354c"><span class="section-number-2">10.</span> Situación Actual</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-org3592787" class="outline-3">
+<h3 id="org3592787"><span class="section-number-3">10.1.</span> Métricas Clave</h3>
+<div class="outline-text-3" id="text-10-1">
+<ul class="org-ul">
+<li>Visitantes: 250,000/mes</li>
+<li>Conversión: 2.5%</li>
+<li>ROI: 150%</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org88a83ef" class="outline-3">
+<h3 id="org88a83ef"><span class="section-number-3">10.2.</span> Desafíos Identificados</h3>
+<div class="outline-text-3" id="text-10-2">
+<ul class="org-ul">
+<li>Baja retención de usuarios</li>
+<li>Competencia creciente</li>
+<li>Necesidad de innovación</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org32b223a" class="outline-2">
+<h2 id="org32b223a"><span class="section-number-2">11.</span> Estrategia Propuesta</h2>
+<div class="outline-text-2" id="text-11">
+</div>
+<div id="outline-container-orgd2fab62" class="outline-3">
+<h3 id="orgd2fab62"><span class="section-number-3">11.1.</span> Pilares Estratégicos</h3>
+<div class="outline-text-3" id="text-11-1">
+<ol class="org-ol">
+<li>Experiencia de Usuario</li>
+<li>Contenido Personalizado</li>
+<li>Automatización de Marketing</li>
+<li>Análisis Predictivo</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org747da9c" class="outline-3">
+<h3 id="org747da9c"><span class="section-number-3">11.2.</span> Cronograma</h3>
+<div class="outline-text-3" id="text-11-2">
+<p>
+<br>
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Trimestre</th>
+<th scope="col" class="org-left">Actividad</th>
+<th scope="col" class="org-left">Responsable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Q1</td>
+<td class="org-left">UX Redesign</td>
+<td class="org-left">Diseño</td>
+</tr>
+
+<tr>
+<td class="org-left">Q2</td>
+<td class="org-left">IA Implementation</td>
+<td class="org-left">Tech</td>
+</tr>
+
+<tr>
+<td class="org-left">Q3</td>
+<td class="org-left">Campaign Launch</td>
+<td class="org-left">Marketing</td>
+</tr>
+
+<tr>
+<td class="org-left">Q4</td>
+<td class="org-left">Analysis &amp; Optimization</td>
+<td class="org-left">Analytics</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6e9e8cf" class="outline-2">
+<h2 id="org6e9e8cf"><span class="section-number-2">12.</span> Resultados Esperados</h2>
+<div class="outline-text-2" id="text-12">
+<ul class="org-ul">
+<li>Incremento del 40% en conversiones</li>
+<li>Reducción del 25% en costo de adquisición</li>
+<li>Mejora del 60% en retención de usuarios</li>
+</ul>
+<p>
+#+END<sub>EXAMPLE</sub>
+</p>
+</div>
+<div id="outline-container-orgf26692f" class="outline-3">
+<h3 id="orgf26692f"><span class="section-number-3">12.1.</span> Ejemplo 2: Presentación Académica con Beamer</h3>
+<div class="outline-text-3" id="text-12-1">
+<p>
+#+BEGIN<sub>EXAMPLE</sub>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org68fa5d2" class="outline-2">
+<h2 id="org68fa5d2"><span class="section-number-2">13.</span> Introducción</h2>
+<div class="outline-text-2" id="text-13">
+</div>
+<div id="outline-container-org43c95f2" class="outline-3">
+<h3 id="org43c95f2"><span class="section-number-3">13.1.</span> Contexto del Problema</h3>
+<div class="outline-text-3" id="text-13-1">
+<ul class="org-ul">
+<li>Crecimiento exponencial de datos</li>
+<li>Necesidad de clasificación automática</li>
+<li>Comparación de algoritmos existentes</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org99687f0" class="outline-3">
+<h3 id="org99687f0"><span class="section-number-3">13.2.</span> Objetivos</h3>
+<div class="outline-text-3" id="text-13-2">
+<ul class="org-ul">
+<li>Evaluar rendimiento de algoritmos ML</li>
+<li>Proponer mejoras en eficiencia</li>
+<li>Validar resultados experimentalmente</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5f91c15" class="outline-2">
+<h2 id="org5f91c15"><span class="section-number-2">14.</span> Metodología</h2>
+<div class="outline-text-2" id="text-14">
+</div>
+<div id="outline-container-orgb96cbb6" class="outline-3">
+<h3 id="orgb96cbb6"><span class="section-number-3">14.1.</span> Algoritmos Evaluados</h3>
+<div class="outline-text-3" id="text-14-1">
+</div>
+<div id="outline-container-org28704a8" class="outline-4">
+<h4 id="org28704a8"><span class="section-number-4">14.1.1.</span> SVM (Support Vector Machines)</h4>
+<div class="outline-text-4" id="text-14-1-1">
+<ul class="org-ul">
+<li>Kernel lineal y RBF</li>
+<li>Optimización de parámetros C y γ</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7df92d2" class="outline-4">
+<h4 id="org7df92d2"><span class="section-number-4">14.1.2.</span> Random Forest</h4>
+<div class="outline-text-4" id="text-14-1-2">
+<ul class="org-ul">
+<li>Número de árboles: 100-1000</li>
+<li>Profundidad máxima variable</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org27d7c65" class="outline-4">
+<h4 id="org27d7c65"><span class="section-number-4">14.1.3.</span> Redes Neuronales</h4>
+<div class="outline-text-4" id="text-14-1-3">
+<ul class="org-ul">
+<li>Arquitecturas feedforward</li>
+<li>Funciones de activación: ReLU, sigmoid</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org418bd1b" class="outline-3">
+<h3 id="org418bd1b"><span class="section-number-3">14.2.</span> Dataset y Métricas</h3>
+<div class="outline-text-3" id="text-14-2">
+</div>
+<div id="outline-container-orgdf0c417" class="outline-4">
+<h4 id="orgdf0c417"><span class="section-number-4">14.2.1.</span> Conjuntos de Datos</h4>
+<div class="outline-text-4" id="text-14-2-1">
+<ul class="org-ul">
+<li>UCI Machine Learning Repository</li>
+<li>10 datasets diferentes</li>
+<li>Validación cruzada k-fold (k=10)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdb879ba" class="outline-4">
+<h4 id="orgdb879ba"><span class="section-number-4">14.2.2.</span> Métricas de Evaluación</h4>
+<div class="outline-text-4" id="text-14-2-2">
+\begin{align}
+\text{Accuracy} &= \frac{TP + TN}{TP + TN + FP + FN} \\
+\text{Precision} &= \frac{TP}{TP + FP} \\
+\text{Recall} &= \frac{TP}{TP + FN}
+\end{align}
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org6446135" class="outline-2">
+<h2 id="org6446135"><span class="section-number-2">15.</span> Resultados</h2>
+<div class="outline-text-2" id="text-15">
+</div>
+<div id="outline-container-org65eb040" class="outline-3">
+<h3 id="org65eb040"><span class="section-number-3">15.1.</span> Comparación de Rendimiento</h3>
+<div class="outline-text-3" id="text-15-1">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Algoritmo</th>
+<th scope="col" class="org-right">Accuracy</th>
+<th scope="col" class="org-right">Precision</th>
+<th scope="col" class="org-right">Recall</th>
+<th scope="col" class="org-right">Tiempo (s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">SVM</td>
+<td class="org-right">0.87</td>
+<td class="org-right">0.85</td>
+<td class="org-right">0.89</td>
+<td class="org-right">12.3</td>
+</tr>
+
+<tr>
+<td class="org-left">R. Forest</td>
+<td class="org-right">0.91</td>
+<td class="org-right">0.89</td>
+<td class="org-right">0.92</td>
+<td class="org-right">8.7</td>
+</tr>
+
+<tr>
+<td class="org-left">Neural N.</td>
+<td class="org-right">0.94</td>
+<td class="org-right">0.92</td>
+<td class="org-right">0.95</td>
+<td class="org-right">45.2</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br>
+</p>
+</div>
+</div>
+<div id="outline-container-orgb9e2981" class="outline-3">
+<h3 id="orgb9e2981"><span class="section-number-3">15.2.</span> Análisis Estadístico</h3>
+<div class="outline-text-3" id="text-15-2">
+<ul class="org-ul">
+<li>Test ANOVA: p &lt; 0.001</li>
+<li>Diferencias significativas entre algoritmos</li>
+<li>Random Forest: mejor relación rendimiento/tiempo</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgac5c9c1" class="outline-2">
+<h2 id="orgac5c9c1"><span class="section-number-2">16.</span> Conclusiones</h2>
+<div class="outline-text-2" id="text-16">
+</div>
+<div id="outline-container-org7a6f909" class="outline-3">
+<h3 id="org7a6f909"><span class="section-number-3">16.1.</span> Hallazgos Principales</h3>
+<div class="outline-text-3" id="text-16-1">
+<ul class="org-ul">
+<li>Redes neuronales: mayor precisión</li>
+<li>Random Forest: mejor compromiso</li>
+<li>SVM: eficiente para datasets pequeños</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge2b7459" class="outline-3">
+<h3 id="orge2b7459"><span class="section-number-3">16.2.</span> Trabajo Futuro</h3>
+<div class="outline-text-3" id="text-16-2">
+<ul class="org-ul">
+<li>Implementación de ensemble methods</li>
+<li>Optimización de hiperparámetros automática</li>
+<li>Evaluación en datos no estructurados</li>
+</ul>
+<p>
+#+END<sub>EXAMPLE</sub>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org3019324" class="outline-2">
+<h2 id="org3019324"><span class="section-number-2">17.</span> Características Avanzadas</h2>
+<div class="outline-text-2" id="text-17">
+</div>
+<div id="outline-container-org9b4545f" class="outline-3">
+<h3 id="org9b4545f"><span class="section-number-3">17.1.</span> Fragmentos y Animaciones</h3>
+<div class="outline-text-3" id="text-17-1">
+<p>
+#+BEGIN<sub>EXAMPLE</sub>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf028033" class="outline-2">
+<h2 id="orgf028033"><span class="section-number-2">18.</span> Slide con Fragmentos</h2>
+<div class="outline-text-2" id="text-18">
+<ul class="org-ul">
+<li>Primer punto aparece</li>
+<li>Segundo punto aparece</li>
+<li>Tercer punto aparece</li>
+</ul>
+
+<p>
+Texto que se resalta en rojo
+</p>
+
+<p>
+Texto que desaparece gradualmente
+#+END<sub>EXAMPLE</sub>
+</p>
+</div>
+<div id="outline-container-org00a1b60" class="outline-3">
+<h3 id="org00a1b60"><span class="section-number-3">18.1.</span> Código con Sintaxis Destacada</h3>
+<div class="outline-text-3" id="text-18-1">
+<pre class="example" id="org6e930c7">
+#+BEGIN_SRC python :exports code
+def quick_sort(arr):
+    if len(arr) &lt;= 1:
+        return arr
+    
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x &lt; pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x &gt; pivot]
+    
+    return quick_sort(left) + middle + quick_sort(right)
+#+END_SRC
+</pre>
+</div>
+</div>
+<div id="outline-container-orgb7d8322" class="outline-3">
+<h3 id="orgb7d8322"><span class="section-number-3">18.2.</span> Multimedia y Gráficos</h3>
+<div class="outline-text-3" id="text-18-2">
+<p>
+#+BEGIN<sub>EXAMPLE</sub>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgff4e034" class="outline-2">
+<h2 id="orgff4e034"><span class="section-number-2">19.</span> Slide con Multimedia</h2>
+<div class="outline-text-2" id="text-19">
+
+<figure id="orgf016a6e">
+<img src="./images/grafico-ventas.png" alt="grafico-ventas.png" width="800" height="600">
+
+</figure>
+
+<video width="640" height="480" controls>
+  <source src="./videos/demo.mp4" type="video/mp4">
+</video>
+<p>
+#+END<sub>EXAMPLE</sub>
+</p>
+</div>
+</div>
+<div id="outline-container-org5c587bc" class="outline-2">
+<h2 id="org5c587bc"><span class="section-number-2">20.</span> Consejos y Mejores Prácticas</h2>
+<div class="outline-text-2" id="text-20">
+</div>
+<div id="outline-container-org09e1012" class="outline-3">
+<h3 id="org09e1012"><span class="section-number-3">20.1.</span> Estructura y Organización</h3>
+<div class="outline-text-3" id="text-20-1">
+<ul class="org-ul">
+<li>Utiliza encabezados jerárquicos consistentes</li>
+<li>Limita el contenido por slide (regla 6x6)</li>
+<li>Incluye transiciones suaves entre secciones</li>
+<li>Usa propiedades PROPERTIES para configuraciones específicas</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org31d319c" class="outline-3">
+<h3 id="org31d319c"><span class="section-number-3">20.2.</span> Diseño Visual</h3>
+<div class="outline-text-3" id="text-20-2">
+<ul class="org-ul">
+<li>Selecciona temas apropiados para la audiencia</li>
+<li>Mantén consistencia en colores y tipografía</li>
+<li>Utiliza espacios en blanco efectivamente</li>
+<li>Incluye elementos visuales relevantes</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge1f2972" class="outline-3">
+<h3 id="orge1f2972"><span class="section-number-3">20.3.</span> Interactividad</h3>
+<div class="outline-text-3" id="text-20-3">
+<ul class="org-ul">
+<li>Aprovecha los fragmentos para revelación progresiva</li>
+<li>Incluye notas del presentador con <code>#+BEGIN_NOTES</code></li>
+<li>Configura controles de navegación apropiados</li>
+<li>Prueba la presentación en el entorno de destino</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org852e185" class="outline-3">
+<h3 id="org852e185"><span class="section-number-3">20.4.</span> Optimización de Rendimiento</h3>
+<div class="outline-text-3" id="text-20-4">
+<ul class="org-ul">
+<li>Optimiza imágenes para web (reveal.js)</li>
+<li>Usa CDN para librerías externas</li>
+<li>Minimiza dependencias innecesarias</li>
+<li>Prueba en diferentes navegadores/dispositivos</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc98d2bb" class="outline-2">
+<h2 id="orgc98d2bb"><span class="section-number-2">21.</span> Comandos Útiles y Atajos</h2>
+<div class="outline-text-2" id="text-21">
+</div>
+<div id="outline-container-orgc783715" class="outline-3">
+<h3 id="orgc783715"><span class="section-number-3">21.1.</span> Atajos de Teclado Esenciales</h3>
+<div class="outline-text-3" id="text-21-1">
+<ul class="org-ul">
+<li><code>C-c C-e</code>: Menú de exportación</li>
+<li><code>C-c C-x C-v</code>: Toggle inline images</li>
+<li><code>C-c C-t</code>: Cambiar estado TODO</li>
+<li><code>C-c C-l</code>: Insertar enlace</li>
+<li><code>C-c C-,</code>: Insertar template de estructura</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0a26bc1" class="outline-3">
+<h3 id="org0a26bc1"><span class="section-number-3">21.2.</span> Comandos de Exportación Específicos</h3>
+<div class="outline-text-3" id="text-21-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code><span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Reveal.js</span>
+C-c C-e R R    <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Exportar a reveal.js</span>
+C-c C-e R B    <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Exportar y abrir en navegador</span>
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">Beamer</span>
+C-c C-e l P    <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Exportar a PDF</span>
+C-c C-e l O    <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Exportar y abrir PDF</span>
+
+<span style="color: #4E4E4E; font-style: italic;">;; </span><span style="color: #4E4E4E; font-style: italic;">HTML</span>
+C-c C-e h h    <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Exportar a HTML</span>
+C-c C-e h o    <span style="color: #4E4E4E; font-style: italic;">; </span><span style="color: #4E4E4E; font-style: italic;">Exportar y abrir HTML</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org927379b" class="outline-2">
+<h2 id="org927379b"><span class="section-number-2">22.</span> Troubleshooting Común</h2>
+<div class="outline-text-2" id="text-22">
+</div>
+<div id="outline-container-orgd7e9601" class="outline-3">
+<h3 id="orgd7e9601"><span class="section-number-3">22.1.</span> Problemas con Reveal.js</h3>
+<div class="outline-text-3" id="text-22-1">
+<ul class="org-ul">
+<li><b>Error de carga de CSS</b>: Verificar conexión a internet y URL de CDN</li>
+<li><b>Fragmentos no funcionan</b>: Revisar sintaxis ATTR<sub>REVEAL</sub></li>
+<li><b>Imágenes no aparecen</b>: Verificar rutas relativas y permisos</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org28fd1f1" class="outline-3">
+<h3 id="org28fd1f1"><span class="section-number-3">22.2.</span> Problemas con Beamer</h3>
+<div class="outline-text-3" id="text-22-2">
+<ul class="org-ul">
+<li><b>Errores de compilación LaTeX</b>: Instalar paquetes faltantes</li>
+<li><b>Caracteres especiales</b>: Configurar codificación UTF-8</li>
+<li><b>Fórmulas matemáticas</b>: Verificar sintaxis LaTeX</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org75561b5" class="outline-3">
+<h3 id="org75561b5"><span class="section-number-3">22.3.</span> Problemas Generales</h3>
+<div class="outline-text-3" id="text-22-3">
+<ul class="org-ul">
+<li><b>Exportación lenta</b>: Optimizar imágenes y reducir contenido</li>
+<li><b>Formato inconsistente</b>: Revisar configuración de estilos</li>
+<li><b>Compatibilidad</b>: Probar en diferentes versiones de Emacs</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb34ef99" class="outline-2">
+<h2 id="orgb34ef99"><span class="section-number-2">23.</span> Referencias y Recursos</h2>
+<div class="outline-text-2" id="text-23">
+</div>
+<div id="outline-container-org04ee894" class="outline-3">
+<h3 id="org04ee894"><span class="section-number-3">23.1.</span> Documentación Oficial</h3>
+<div class="outline-text-3" id="text-23-1">
+<ul class="org-ul">
+<li><a href="https://orgmode.org/manual/Beamer-Export.html">Org Mode Beamer Export</a></li>
+<li><a href="https://github.com/yjwen/org-reveal">org-reveal GitHub Repository</a></li>
+<li><a href="https://revealjs.com/">Reveal.js Official Documentation</a></li>
+<li><a href="https://www.latex-project.org/">LaTeX Project</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfeff13b" class="outline-3">
+<h3 id="orgfeff13b"><span class="section-number-3">23.2.</span> Tutoriales y Guías</h3>
+<div class="outline-text-3" id="text-23-2">
+<ul class="org-ul">
+<li><a href="https://systemcrafters.net/org-mode-basics/">System Crafters - Org Mode Basics</a></li>
+<li><a href="https://writequit.org/denver-emacs/presentations/2017-05-24-org-mode-presentation.html">Org Mode Presentations Tutorial</a></li>
+<li><a href="https://orgmode.org/worg/exporters/beamer/tutorial.html">Beamer Presentations with Org Mode</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org05a3175" class="outline-3">
+<h3 id="org05a3175"><span class="section-number-3">23.3.</span> Temas y Plantillas</h3>
+<div class="outline-text-3" id="text-23-3">
+<ul class="org-ul">
+<li><a href="https://github.com/hakimel/reveal.js/tree/master/css/theme">Reveal.js Themes</a></li>
+<li><a href="https://deic.uab.cat/~iblanes/beamer_gallery/">Beamer Theme Gallery</a></li>
+<li><a href="https://github.com/fniessen/org-html-themes">Org HTML Themes</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8a96ba9" class="outline-3">
+<h3 id="org8a96ba9"><span class="section-number-3">23.4.</span> Herramientas Complementarias</h3>
+<div class="outline-text-3" id="text-23-4">
+<ul class="org-ul">
+<li><a href="https://pandoc.org/">Pandoc - Universal Document Converter</a></li>
+<li><a href="https://github.com/jgm/pandoc/wiki/Pandoc-Tricks">Pandoc Tricks</a></li>
+<li><a href="https://github.com/limist/org-mode-crate">Org Mode Crate - Configuration Examples</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9096e3d" class="outline-2">
+<h2 id="org9096e3d"><span class="section-number-2">24.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-24">
+<p>
+Emacs Org Mode ofrece una solución integral para la creación de presentaciones profesionales, combinando la simplicidad del texto plano con potentes capacidades de exportación. Desde presentaciones web interactivas con reveal.js hasta documentos académicos con Beamer, las posibilidades son prácticamente ilimitadas.
+</p>
+
+<p>
+La inversión inicial en aprender la configuración y sintaxis se ve compensada por la productividad a largo plazo, especialmente cuando se integra con el flujo de trabajo completo de Emacs para investigación, escritura y programación.
+</p>
+</div>
+<div id="outline-container-orgc700cae" class="outline-3">
+<h3 id="orgc700cae"><span class="section-number-3">24.1.</span> Próximos Pasos</h3>
+<div class="outline-text-3" id="text-24-1">
+<ul class="org-ul">
+<li>Experimenta con diferentes temas y estilos</li>
+<li>Integra presentaciones con tu sistema de notas</li>
+<li>Automatiza la generación de contenido repetitivo</li>
+<li>Contribuye a la comunidad compartiendo tus configuraciones</li>
+</ul>
+
+<p>
+&#x2014;
+</p>
+<div style="text-align: center; margin-top: 2em; padding: 1em; background-color: #f0f0f0; border-radius: 10px;">
+<p><strong>¿Te ha resultado útil esta guía?</strong></p>
+<p>Comparte tus experiencias y configuraciones con la comunidad de Emacs</p>
+</div>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-org-mode.html">org-mode</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-presentaciones.html">presentaciones</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-slides.html">slides</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-reveal.js.html">reveal.js</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-beamer.html">beamer</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-latex.html">latex</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-export.html">export</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-html.html">html</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[org-mode]]></category>
+  <category><![CDATA[presentaciones]]></category>
+  <category><![CDATA[slides]]></category>
+  <category><![CDATA[reveal.js]]></category>
+  <category><![CDATA[beamer]]></category>
+  <category><![CDATA[latex]]></category>
+  <category><![CDATA[export]]></category>
+  <category><![CDATA[html]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-17-emacs-para-presentaciones:-creando-presentaciones-con-org-mode.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-17-emacs-para-presentaciones:-creando-presentaciones-con-org-mode.html</guid>
+  <pubDate>Tue, 17 Jun 2025 18:26:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[Refuerzo Rápido de Ciberseguridad para tu Laptop Linux Semantica]]></title>
   <description><![CDATA[
