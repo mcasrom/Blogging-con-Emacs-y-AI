@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Guía para analizar los puertos abiertos en un equipo Linux y determinar el riesgo que suponen según criterios técnicos y de exposición.">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Análisis de riesgo en puertos abiertos y guía de mitigación</title>
+<meta property="og:title" content="Análisis de riesgo en puertos abiertos y guía de mitigación">
+<meta property="og:type" content="article" />
+<meta property="og:description" content="Guía para analizar los puertos abiertos en un equipo Linux y determinar el riesgo que suponen según criterios técnicos y de exposición.">
+<meta property="og:url" content="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-18-Análisis-de-riesgo-en-puertos-abiertos-y-guía-de-mitigación.html">
+<meta charset='UTF-8'>
+ <!-- ======= SEO y Redes Sociales ======= -->
+       <meta name='author' content='Mike'>
+       <meta name='description' content='Blog sobre Emacs, org-mode, automatización y herramientas avanzadas'>
+       <meta name='keywords' content='Emacs, Org Mode, Linux, Inteligencia Artificial, Automatización, Tutoriales'>
+       <meta property='og:title' content='Emacs con esteroides'>
+       <meta property='og:description' content='Poder y Simplicidad con Emacs, IA y Linux'>
+       <meta property='og:image' content='https://mcasrom.github.io/logo.png'>
+       <meta property='og:url' content='https://mcasrom.github.io/'>
+       <meta property='og:type' content='website'>
+       <meta name='twitter:card' content='summary_large_image'>
+       <meta name='twitter:title' content='Emacs con esteroides'>
+       <meta name='twitter:description' content='Blog sobre Emacs, IA y herramientas avanzadas'>
+       <meta name='twitter:image' content='https://tuusuario.github.io/logo.png'>
+       <link rel='alternate' type='application/rss+xml' href='rss.xml'>
+       <link rel='sitemap' type='application/xml' title='Sitemap' href='sitemap.xml'>
+
+ <!-- === Google Analytics === -->
+       <script async src='https://www.googletagmanager.com/gtag/js?id=G-7YJ0SNJXSJ'></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-7YJ0SNJXSJ');
+       </script>
+
+
+<!-- ======= Estilo y Fuentes ======= -->
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.8em; .85
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
+       </nav>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">18/06/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-18-Análisis-de-riesgo-en-puertos-abiertos-y-guía-de-mitigación.html">Análisis de riesgo en puertos abiertos y guía de mitigación</a></h1>
+<div id="outline-container-org6c05955" class="outline-2">
+<h2 id="org6c05955">Introducción</h2>
+<div class="outline-text-2" id="text-org6c05955">
+<p>
+Detectar y clasificar los puertos abiertos es una medida básica y vital en ciberseguridad. No todos los puertos suponen el mismo riesgo: algunos están cifrados, otros no; algunos están limitados a localhost, y otros expuestos a internet. Esta guía te permite identificar, clasificar y mitigar riesgos relacionados con puertos abiertos en tu equipo.
+</p>
+</div>
+</div>
+<div id="outline-container-orgde9df2b" class="outline-2">
+<h2 id="orgde9df2b">Paso 1: Escanear puertos abiertos</h2>
+<div class="outline-text-2" id="text-orgde9df2b">
+<p>
+Usamos Nmap para detectar puertos y servicios:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo nmap -sS -sV -T4 -p- localhost -oN puertos.txt
+</code></pre>
+</div>
+
+<p>
+Este comando escanea todos los puertos TCP (1–65535), detecta servicios y versiones y guarda la salida en `puertos.txt`.
+</p>
+</div>
+</div>
+<div id="outline-container-org9a158eb" class="outline-2">
+<h2 id="org9a158eb">Paso 2: Clasificar nivel de riesgo</h2>
+<div class="outline-text-2" id="text-org9a158eb">
+<p>
+Utiliza esta tabla para asignar un nivel de riesgo a cada puerto:
+</p>
+
+<p>
+<br>
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Puerto</th>
+<th scope="col" class="org-left">Servicio</th>
+<th scope="col" class="org-left">Riesgo</th>
+<th scope="col" class="org-left">Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">22</td>
+<td class="org-left">SSH</td>
+<td class="org-left">MEDIO</td>
+<td class="org-left">Común objetivo de fuerza bruta</td>
+</tr>
+
+<tr>
+<td class="org-right">23</td>
+<td class="org-left">Telnet</td>
+<td class="org-left">ALTO</td>
+<td class="org-left">Sin cifrado, protocolo obsoleto</td>
+</tr>
+
+<tr>
+<td class="org-right">80</td>
+<td class="org-left">HTTP</td>
+<td class="org-left">MEDIO</td>
+<td class="org-left">Texto plano, sin HTTPS</td>
+</tr>
+
+<tr>
+<td class="org-right">445</td>
+<td class="org-left">SMB</td>
+<td class="org-left">ALTO</td>
+<td class="org-left">Explotado por ransomware</td>
+</tr>
+
+<tr>
+<td class="org-right">3306</td>
+<td class="org-left">MySQL</td>
+<td class="org-left">ALTO</td>
+<td class="org-left">Acceso a base de datos</td>
+</tr>
+
+<tr>
+<td class="org-right">3389</td>
+<td class="org-left">RDP</td>
+<td class="org-left">ALTO</td>
+<td class="org-left">Objetivo frecuente de ataques</td>
+</tr>
+
+<tr>
+<td class="org-right">5900</td>
+<td class="org-left">VNC</td>
+<td class="org-left">ALTO</td>
+<td class="org-left">Control remoto sin cifrado</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br>
+</p>
+</div>
+</div>
+<div id="outline-container-org2c550e0" class="outline-2">
+<h2 id="org2c550e0">Paso 3: Verificar exposición de red</h2>
+<div class="outline-text-2" id="text-org2c550e0">
+<p>
+Usa `ss` para ver si el puerto escucha en interfaces externas:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo ss -tuln
+</code></pre>
+</div>
+
+<p>
+Filtra líneas con `0.0.0.0` o IPs públicas. Por ejemplo:
+</p>
+<pre class="example" id="org9215848">
+tcp   LISTEN  0  128 0.0.0.0:22     *:*
+tcp   LISTEN  0  100 127.0.0.1:3306 *:*
+</pre>
+</div>
+</div>
+<div id="outline-container-orgfb307a7" class="outline-2">
+<h2 id="orgfb307a7">Paso 4: Alertar sobre puertos peligrosos</h2>
+<div class="outline-text-2" id="text-orgfb307a7">
+<p>
+Clasifica en función de los criterios anteriores. Puedes usar este bloque para generar alertas en un informe:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><code><span style="color: #004651;">puertos_riesgo</span> = {
+    22: <span style="color: #005F00;">"MEDIO"</span>,
+    23: <span style="color: #005F00;">"ALTO"</span>,
+    80: <span style="color: #005F00;">"MEDIO"</span>,
+    445: <span style="color: #005F00;">"ALTO"</span>,
+    3306: <span style="color: #005F00;">"ALTO"</span>,
+    3389: <span style="color: #005F00;">"ALTO"</span>,
+    5900: <span style="color: #005F00;">"ALTO"</span>
+}
+
+<span style="color: #D70000;">for</span> puerto, nivel <span style="color: #D70000;">in</span> puertos_riesgo.items():
+    <span style="color: #D70000;">if</span> nivel == <span style="color: #005F00;">"ALTO"</span>:
+        <span style="color: #1F55A0;">print</span>(f<span style="color: #005F00;">"&#9888;&#65039; Puerto </span>{puerto}<span style="color: #005F00;"> abierto &#8212; RIESGO </span>{nivel}<span style="color: #005F00;">"</span>)
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf515c80" class="outline-2">
+<h2 id="orgf515c80">Paso 5: Mitigación recomendada</h2>
+<div class="outline-text-2" id="text-orgf515c80">
+<ul class="org-ul">
+<li><p>
+<b><b>Cerrar puertos innecesarios</b></b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo ufw deny 3306
+</code></pre>
+</div></li>
+
+<li><b><b>Limitar a localhost</b></b> en archivos de configuración:
+<ul class="org-ul">
+<li>MySQL: `bind-address = 127.0.0.1`</li>
+<li>SSH: `ListenAddress 127.0.0.1` (no recomendado si usas SSH remotamente)</li>
+</ul></li>
+
+<li><p>
+<b><b>Usar firewall activado y en modo restrictivo</b></b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><code>sudo ufw default deny incoming
+sudo ufw allow 22/tcp
+sudo ufw enable
+</code></pre>
+</div></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0667a0b" class="outline-2">
+<h2 id="org0667a0b">Paso 6: Exportar informe y publicar</h2>
+<div class="outline-text-2" id="text-org0667a0b">
+<p>
+Puedes integrar todo en un archivo `cyberreport-YYYYMMDD.html` con los niveles de riesgo resaltados con colores:
+</p>
+
+<ul class="org-ul">
+<li>Rojo para ALTO</li>
+<li>Amarillo para MEDIO</li>
+<li>Verde para BAJO</li>
+</ul>
+
+<p>
+Usa `org-publish` o `pandoc` para exportar el archivo `.org` a HTML y subirlo a tu blog estático.
+</p>
+</div>
+</div>
+<div id="outline-container-org3fba10b" class="outline-2">
+<h2 id="org3fba10b">Conclusión</h2>
+<div class="outline-text-2" id="text-org3fba10b">
+<p>
+Este análisis rápido ayuda a detectar y clasificar los puertos abiertos en tu sistema, asignándoles una criticidad realista. Puedes automatizar este análisis al inicio del sistema, y generar alertas en un panel HTML o en Emacs directamente usando `org-alert`.
+</p>
+</div>
+</div>
+<div id="outline-container-org84e463c" class="outline-2">
+<h2 id="org84e463c">Enlaces útiles</h2>
+<div class="outline-text-2" id="text-org84e463c">
+<ul class="org-ul">
+<li><a href="https://nmap.org/book/man-briefoptions.html">https://nmap.org/book/man-briefoptions.html</a></li>
+<li><a href="https://www.first.org/cvss/">https://www.first.org/cvss/</a></li>
+<li><a href="https://wiki.archlinux.org/title/Security">https://wiki.archlinux.org/title/Security</a></li>
+</ul>
+
+<p>
+<a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-18-ciberseguridad-al-arranque-informes-y-alertas-autom-ticas">2025-06-18-ciberseguridad-al-arranque-informes-y-alertas-autom-ticas</a>
+</p>
+</div>
+</div>
+<div class="taglist"></div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>
