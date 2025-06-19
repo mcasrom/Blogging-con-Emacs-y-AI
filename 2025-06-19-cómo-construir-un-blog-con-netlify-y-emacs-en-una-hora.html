@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Tutorial práctico para configurar un blog estático con Netlify usando Emacs como editor principal, ideal para bloggers técnicos que buscan un flujo de trabajo eficiente.">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Cómo Construir un Blog con Netlify y Emacs en Menos de una Hora</title>
+<meta property="og:title" content="Cómo Construir un Blog con Netlify y Emacs en Menos de una Hora">
+<meta property="og:type" content="article" />
+<meta property="og:description" content="Tutorial práctico para configurar un blog estático con Netlify usando Emacs como editor principal, ideal para bloggers técnicos que buscan un flujo de trabajo eficiente.">
+<meta property="og:url" content="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-19-cómo-construir-un-blog-con-netlify-y-emacs-en-una-hora.html">
+<meta charset='UTF-8'>
+ <!-- ======= SEO y Redes Sociales ======= -->
+       <meta name='author' content='Mike'>
+       <meta name='description' content='Blog sobre Emacs, org-mode, automatización y herramientas avanzadas'>
+       <meta name='keywords' content='Emacs, Org Mode, Linux, Inteligencia Artificial, Automatización, Tutoriales'>
+       <meta property='og:title' content='Emacs con esteroides'>
+       <meta property='og:description' content='Poder y Simplicidad con Emacs, IA y Linux'>
+       <meta property='og:image' content='https://mcasrom.github.io/logo.png'>
+       <meta property='og:url' content='https://mcasrom.github.io/'>
+       <meta property='og:type' content='website'>
+       <meta name='twitter:card' content='summary_large_image'>
+       <meta name='twitter:title' content='Emacs con esteroides'>
+       <meta name='twitter:description' content='Blog sobre Emacs, IA y herramientas avanzadas'>
+       <meta name='twitter:image' content='https://tuusuario.github.io/logo.png'>
+       <link rel='alternate' type='application/rss+xml' href='rss.xml'>
+       <link rel='sitemap' type='application/xml' title='Sitemap' href='sitemap.xml'>
+
+ <!-- === Google Analytics === -->
+       <script async src='https://www.googletagmanager.com/gtag/js?id=G-7YJ0SNJXSJ'></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-7YJ0SNJXSJ');
+       </script>
+
+
+<!-- ======= Estilo y Fuentes ======= -->
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.8em; .85
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
+       </nav>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">19/06/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-19-cómo-construir-un-blog-con-netlify-y-emacs-en-una-hora.html">Cómo Construir un Blog con Netlify y Emacs en Menos de una Hora</a></h1>
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org7413769">1. Introducción</a></li>
+<li><a href="#orgf78fec1">2. Por qué elegir Netlify y Emacs</a></li>
+<li><a href="#orgc3ee0d4">3. Requisitos previos</a></li>
+<li><a href="#org31e7a96">4. Configurando Emacs para blogging</a></li>
+<li><a href="#org1aae0bf">5. Paso a paso: Configurando tu blog</a>
+<ul>
+<li><a href="#org63648a1">5.1. Paso 1: Instalar Hugo</a></li>
+<li><a href="#orgbee9bb8">5.2. Paso 2: Crear un nuevo sitio con Hugo</a></li>
+<li><a href="#org7ec448b">5.3. Paso 3: Crear tu primer post en Emacs</a></li>
+<li><a href="#org055bb69">5.4. Paso 4: Conectar tu blog a GitHub</a></li>
+<li><a href="#org915ec36">5.5. Paso 5: Desplegar en Netlify</a></li>
+<li><a href="#org55efe8e">5.6. Paso 6: Publicar nuevos posts desde Emacs</a></li>
+</ul>
+</li>
+<li><a href="#orgc03bd52">6. Personalización adicional</a></li>
+<li><a href="#org676166b">7. Solución de problemas</a></li>
+<li><a href="#org673aff4">8. Conclusión</a></li>
+<li><a href="#orgd673c4d">9. Recursos adicionales</a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-org7413769" class="outline-2">
+<h2 id="org7413769"><span class="section-number-2">1.</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Crear un blog moderno y eficiente no requiere herramientas complicadas. Con <b><b>Netlify</b></b> para alojamiento y <b><b>Emacs</b></b> como editor, puedes configurar un blog estático en menos de una hora. Este tutorial está diseñado para bloggers técnicos que prefieren un entorno potente como Emacs para escribir y gestionar contenido. Usaremos Hugo como generador de sitios estáticos, Emacs con Org-mode o Markdown para escribir, y Netlify para despliegues automáticos. ¡Vamos a ello!
+</p>
+</div>
+</div>
+<div id="outline-container-orgf78fec1" class="outline-2">
+<h2 id="orgf78fec1"><span class="section-number-2">2.</span> Por qué elegir Netlify y Emacs</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Esta combinación es ideal por varias razones:
+</p>
+<ul class="org-ul">
+<li><b><b>Emacs</b></b>: Un editor altamente personalizable con soporte para Markdown y Org-mode, perfecto para escribir y organizar contenido.</li>
+<li><b><b>Netlify</b></b>: Ofrece alojamiento gratuito, despliegues automáticos vía Git y escalabilidad sin esfuerzo.</li>
+<li><b><b>Sitios estáticos</b></b>: Rápidos, seguros y fáciles de mantener, ideales para blogs técnicos.</li>
+<li><b><b>Eficiencia</b></b>: Todo el proceso, desde la configuración hasta el primer post, se puede completar en menos de 60 minutos.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc3ee0d4" class="outline-2">
+<h2 id="orgc3ee0d4"><span class="section-number-2">3.</span> Requisitos previos</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Para seguir este tutorial, necesitarás:
+</p>
+<ul class="org-ul">
+<li>Una cuenta de GitHub (gratis).</li>
+<li>Emacs instalado con paquetes como <code>org-mode</code> o <code>markdown-mode</code> (recomendamos <code>ox-hugo</code> para exportar Org-mode a Hugo).</li>
+<li>Conocimientos básicos de Git y la terminal.</li>
+<li>Node.js instalado (opcional, para previsualizar localmente).</li>
+<li>Hugo instalado (instrucciones a continuación).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org31e7a96" class="outline-2">
+<h2 id="org31e7a96"><span class="section-number-2">4.</span> Configurando Emacs para blogging</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Antes de empezar, asegúrate de que Emacs esté configurado:
+</p>
+<ol class="org-ol">
+<li><p>
+Instala <code>markdown-mode</code> para editar archivos Markdown:
+</p>
+<div class="org-src-container">
+<pre class="src src-elisp"><code>(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">markdown-mode</span>
+  <span style="color: #dc3eb7;">:ensure</span> t
+  <span style="color: #dc3eb7;">:mode</span> (<span style="color: #a44185;">"\\.md\\'"</span> . markdown-mode))
+</code></pre>
+</div></li>
+<li><p>
+Opcional: Instala <code>ox-hugo</code> para usar Org-mode con Hugo:
+</p>
+<div class="org-src-container">
+<pre class="src src-elisp"><code>(<span style="color: #219fd5; font-style: italic;">use-package</span> <span style="color: #2f86d2;">ox-hugo</span>
+  <span style="color: #dc3eb7;">:ensure</span> t
+  <span style="color: #dc3eb7;">:after</span> ox)
+</code></pre>
+</div></li>
+<li><p>
+Configura atajos útiles en <code>.emacs</code> o <code>init.el</code> para crear posts rápidamente:
+</p>
+<div class="org-src-container">
+<pre class="src src-elisp"><code>(global-set-key (kbd <span style="color: #a44185;">"C-c n"</span>) (<span style="color: #219fd5; font-style: italic;">lambda</span> () (<span style="color: #219fd5; font-style: italic;">interactive</span>) (find-file <span style="color: #a44185;">"~/mi-blog/content/posts/"</span>)))
+</code></pre>
+</div></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org1aae0bf" class="outline-2">
+<h2 id="org1aae0bf"><span class="section-number-2">5.</span> Paso a paso: Configurando tu blog</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org63648a1" class="outline-3">
+<h3 id="org63648a1"><span class="section-number-3">5.1.</span> Paso 1: Instalar Hugo</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Hugo es un generador de sitios estáticos rápido. Instálalo así:
+</p>
+<ol class="org-ol">
+<li><p>
+En macOS:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><code>brew install hugo
+</code></pre>
+</div></li>
+<li><p>
+En Windows (con Chocolatey):
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><code>choco install hugo-extended
+</code></pre>
+</div></li>
+<li>En Linux, descarga desde <a href="https://gohugo.io/getting-started/installing/">la página oficial de Hugo</a>.</li>
+<li><p>
+Verifica la instalación:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><code>hugo version
+</code></pre>
+</div></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgbee9bb8" class="outline-3">
+<h3 id="orgbee9bb8"><span class="section-number-3">5.2.</span> Paso 2: Crear un nuevo sitio con Hugo</h3>
+<div class="outline-text-3" id="text-5-2">
+<ol class="org-ol">
+<li><p>
+Crea un directorio para tu blog:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><code>hugo new site mi-blog
+<span style="color: #dc3eb7;">cd</span> mi-blog
+</code></pre>
+</div></li>
+<li><p>
+Inicializa un repositorio Git:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><code>git init
+</code></pre>
+</div></li>
+<li><p>
+Añade un tema de Hugo (por ejemplo, <code>Ananke</code>):
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><code>git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+</code></pre>
+</div></li>
+<li><p>
+Configura el tema en <code>config.toml</code>:
+</p>
+<div class="org-src-container">
+<pre class="src src-toml"><code><span style="color: #1857a4;">theme</span> = <span style="color: #a44185;">"ananke"</span>
+<span style="color: #1857a4;">baseURL</span> = <span style="color: #a44185;">"https://tu-sitio.netlify.app/"</span>
+<span style="color: #1857a4;">languageCode</span> = <span style="color: #a44185;">"es-ES"</span>
+<span style="color: #1857a4;">title</span> = <span style="color: #a44185;">"Mi Blog con Emacs"</span>
+</code></pre>
+</div></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org7ec448b" class="outline-3">
+<h3 id="org7ec448b"><span class="section-number-3">5.3.</span> Paso 3: Crear tu primer post en Emacs</h3>
+<div class="outline-text-3" id="text-5-3">
+<ol class="org-ol">
+<li><p>
+Genera un nuevo post con Hugo:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><code>hugo new posts/mi-primer-post.md
+</code></pre>
+</div></li>
+<li>Abre el archivo <code>content/posts/mi-primer-post.md</code> en Emacs (<code>C-x C-f content/posts/mi-primer-post.md</code>).</li>
+<li><p>
+Escribe tu post en Markdown o usa Org-mode con <code>ox-hugo</code>. Ejemplo en Markdown:
+</p>
+<div class="org-src-container">
+<pre class="src src-markdown"><code><span style="color: #637c9d;">---</span>
+<span style="color: #ef5350;">title</span><span style="color: #637c9d;">: </span><span style="color: #a44185;">"Mi Primer Post"</span>
+<span style="color: #ef5350;">date</span><span style="color: #637c9d;">: </span><span style="color: #a44185;">2025-06-19T15:00:00+02:00</span>
+<span style="color: #ef5350;">draft</span><span style="color: #637c9d;">: </span><span style="color: #a44185;">false</span>
+<span style="color: #637c9d;">---</span>
+&#161;Bienvenidos a mi blog! Este post fue escrito en Emacs y publicado con Netlify.
+</code></pre>
+</div></li>
+<li><p>
+Si usas Org-mode con <code>ox-hugo</code>, crea un archivo <code>blog.org</code>:
+</p>
+<div class="org-src-container">
+<pre class="src src-org"><code><span style="color: #60a8a1;">#+HUGO_BASE_DIR: ~/mi-blog</span>
+<span style="color: #60a8a1;">#+HUGO_SECTION: posts</span>
+
+<span style="color: #2f86d2; font-weight: bold;">* Mi Primer Post</span>
+<span style="color: #8195b0;">:PROPERTIES:</span>
+<span style="color: #60a8a1;">:EXPORT_FILE_NAME:</span> <span style="color: #60a8a1;">mi-primer-post</span>
+<span style="color: #60a8a1;">:EXPORT_DATE:</span> <span style="color: #60a8a1;">2025-06-19</span>
+<span style="color: #8195b0;">:END:</span>
+&#161;Bienvenidos a mi blog! Este post fue escrito en Org-mode y exportado con ox-hugo.
+</code></pre>
+</div>
+<p>
+Exporta con <code>C-c C-e H A</code> (para todos los posts) o <code>C-c C-e H h</code> (para un solo post).
+</p></li>
+<li><p>
+Previsualiza localmente:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><code>hugo server
+</code></pre>
+</div>
+<p>
+Abre <a href="http://localhost:1313">http://localhost:1313</a> en tu navegador.
+</p></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org055bb69" class="outline-3">
+<h3 id="org055bb69"><span class="section-number-3">5.4.</span> Paso 4: Conectar tu blog a GitHub</h3>
+<div class="outline-text-3" id="text-5-4">
+<ol class="org-ol">
+<li>Crea un repositorio en GitHub (<code>mi-blog</code>).</li>
+<li><p>
+Sube tu proyecto:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><code>git add .
+git commit -m <span style="color: #a44185;">"Inicializa blog con Hugo y Emacs"</span>
+git remote add origin https://github.com/tu-usuario/mi-blog.git
+git push -u origin main
+</code></pre>
+</div></li>
+<li>En Emacs, usa <code>magit</code> para gestionar Git:
+<ul class="org-ul">
+<li><code>C-x g</code> para abrir Magit.</li>
+<li><code>c c</code> para crear un commit.</li>
+<li><code>P p</code> para empujar al repositorio remoto.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org915ec36" class="outline-3">
+<h3 id="org915ec36"><span class="section-number-3">5.5.</span> Paso 5: Desplegar en Netlify</h3>
+<div class="outline-text-3" id="text-5-5">
+<ol class="org-ol">
+<li>Inicia sesión en <a href="https://app.netlify.com/">Netlify</a>.</li>
+<li>Selecciona <b>New site from Git</b> y conecta tu repositorio de GitHub (<code>mi-blog</code>).</li>
+<li>Configura el despliegue:
+<ul class="org-ul">
+<li><b><b>Build command</b></b>: <code>hugo</code></li>
+<li><b><b>Publish directory</b></b>: <code>public</code></li>
+<li>Deja la versión de Hugo en blanco.</li>
+</ul></li>
+<li>Haz clic en <b>Deploy site</b>. Netlify asignará una URL (por ejemplo, <code>https://tu-sitio.netlify.app</code>).</li>
+<li>Opcional: Configura un dominio personalizado en <b>Domain settings</b>.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org55efe8e" class="outline-3">
+<h3 id="org55efe8e"><span class="section-number-3">5.6.</span> Paso 6: Publicar nuevos posts desde Emacs</h3>
+<div class="outline-text-3" id="text-5-6">
+<ol class="org-ol">
+<li>Crea un nuevo post (<code>hugo new posts/nuevo-post.md</code> o usa Org-mode).</li>
+<li>Edita en Emacs y guarda los cambios.</li>
+<li><p>
+Sube a GitHub con Magit o la terminal:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><code>git add .
+git commit -m <span style="color: #a44185;">"A&#241;ade nuevo post"</span>
+git push
+</code></pre>
+</div>
+<p>
+Netlify desplegará los cambios automáticamente.
+</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc03bd52" class="outline-2">
+<h2 id="orgc03bd52"><span class="section-number-2">6.</span> Personalización adicional</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li><b><b>Temas</b></b>: Explora <a href="https://themes.gohugo.io/">Hugo Themes</a> para cambiar el diseño.</li>
+<li><b><b>SEO</b></b>: Añade <code>description</code> y <code>keywords</code> en el front-matter de los posts.</li>
+<li><b><b>Netlify CMS</b></b>: Integra <a href="https://www.netlifycms.org/">Netlify CMS</a> para gestionar contenido sin Emacs.</li>
+<li><b><b>Org-mode avanzado</b></b>: Usa <code>org-publish</code> para exportar múltiples posts a Hugo.</li>
+<li><b><b>Analytics</b></b>: Conecta Google Analytics desde Netlify.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org676166b" class="outline-2">
+<h2 id="org676166b"><span class="section-number-2">7.</span> Solución de problemas</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li><b><b>Despliegue falla en Netlify</b></b>: Verifica que <code>public</code> se genere (<code>hugo</code>) y que el comando de build sea correcto.</li>
+<li><b><b>Tema no carga</b></b>: Ejecuta <code>git submodule update --init --recursive</code>.</li>
+<li><b><b>Errores en Org-mode</b></b>: Asegúrate de que <code>ox-hugo</code> esté configurado correctamente (<code>:HUGO_BASE_DIR</code> apunta a tu proyecto).</li>
+<li><b><b>Imágenes no se muestran</b></b>: Usa rutas relativas en <code>static/</code> (por ejemplo, <code>/images/mi-imagen.jpg</code>).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org673aff4" class="outline-2">
+<h2 id="org673aff4"><span class="section-number-2">8.</span> Conclusión</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+¡Listo! Ahora tienes un blog estático en Netlify, gestionado desde Emacs con Markdown o Org-mode. Este flujo combina la potencia de Emacs con la simplicidad de Netlify, ideal para bloggers técnicos. Comparte tu blog o tus preguntas en <a href="https://x.com">X</a> o en los comentarios.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd673c4d" class="outline-2">
+<h2 id="orgd673c4d"><span class="section-number-2">9.</span> Recursos adicionales</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li><a href="https://gohugo.io/documentation/">Documentación de Hugo</a></li>
+<li><a href="https://docs.netlify.com/">Guías de Netlify</a></li>
+<li><a href="https://ox-hugo.scripter.co/">Documentación de ox-hugo</a></li>
+<li><a href="https://www.emacswiki.org/">Recursos de Emacs</a></li>
+<li><a href="https://bloggingconemacsyai.netlify.app/">Vuelve al blog para más tutoriales</a></li>
+</ul>
+
+<div class="call-to-action">
+  <p>¿Listo para lanzar tu blog con Emacs y Netlify? ¡Sigue este tutorial y comparte tu sitio!</p>
+  <a href="https://app.netlify.com/start" class="btn">Comienza con Netlify</a>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-blogging.html">blogging</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-netlify.html">netlify</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-emacs.html">emacs</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutorial.html">tutorial</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-desarrollo-web.html">desarrollo-web</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-blog-estático.html">blog-estático</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-markdown.html">markdown</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-org-mode.html">org-mode</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>
