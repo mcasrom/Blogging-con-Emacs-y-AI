@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Guía detallada para verificar y monitorizar el uso de una VPN en tu equipo, incluyendo herramientas y métodos para confirmar la conexión.">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/rss.xml"
+      title="RSS feed for https://mcasrom.github.io/Blogging-con-Emacs-y-AI/">
+<title>Cómo Monitorizar si tu Equipo Está Usando una VPN para Acceder a Internet</title>
+<meta property="og:title" content="Cómo Monitorizar si tu Equipo Está Usando una VPN para Acceder a Internet">
+<meta property="og:type" content="article" />
+<meta property="og:description" content="Guía detallada para verificar y monitorizar el uso de una VPN en tu equipo, incluyendo herramientas y métodos para confirmar la conexión.">
+<meta property="og:url" content="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-20-cómo-monitorizar-si-tu-equipo-está-usando-una-vpn-para-acceder-a-internet.html">
+<meta charset='UTF-8'>
+ <!-- ======= SEO y Redes Sociales ======= -->
+       <meta name='author' content='Mike'>
+       <meta name='description' content='Blog sobre Emacs, org-mode, automatización y herramientas avanzadas'>
+       <meta name='keywords' content='Emacs, Org Mode, Linux, Inteligencia Artificial, Automatización, Tutoriales'>
+       <meta property='og:title' content='Emacs con esteroides'>
+       <meta property='og:description' content='Poder y Simplicidad con Emacs, IA y Linux'>
+       <meta property='og:image' content='https://mcasrom.github.io/logo.png'>
+       <meta property='og:url' content='https://mcasrom.github.io/'>
+       <meta property='og:type' content='website'>
+       <meta name='twitter:card' content='summary_large_image'>
+       <meta name='twitter:title' content='Emacs con esteroides'>
+       <meta name='twitter:description' content='Blog sobre Emacs, IA y herramientas avanzadas'>
+       <meta name='twitter:image' content='https://tuusuario.github.io/logo.png'>
+       <link rel='alternate' type='application/rss+xml' href='rss.xml'>
+       <link rel='sitemap' type='application/xml' title='Sitemap' href='sitemap.xml'>
+
+ <!-- === Google Analytics === -->
+       <script async src='https://www.googletagmanager.com/gtag/js?id=G-7YJ0SNJXSJ'></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-7YJ0SNJXSJ');
+       </script>
+
+
+<!-- ======= Estilo y Fuentes ======= -->
+       <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap' rel='stylesheet'>
+       <script src='/pagefind/pagefind.js'></script>
+       <style>
+         body {
+           font-family: 'Inter', sans-serif;
+           line-height: 1.8;
+           color: #333;
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #f9f9f9;
+         }
+         h1, h2, h3 { 
+           color: #2c3e50; 
+           font-family: 'Roboto', sans-serif; 
+           font-weight: 700;
+         }
+         .blog-header {
+           display: flex;
+           align-items: center;
+           justify-content: center; /* Centrar todo */
+           text-align: center;
+           padding: 15px 0;
+           border-bottom: 2px solid #ddd;
+           flex-direction: column; /* Para que el logo y el contenido estén en columna */
+         }
+         .blog-header img {
+           max-width: 90px; /* Aumentar un poco el tamaño del logo si es necesario */
+           height: auto;
+           margin-bottom: 10px; /* Espacio debajo del logo */
+           border-radius: 5px; /* Suaviza el logo */
+         }
+         .blog-header-content {
+           display: flex;
+           flex-direction: column;
+           text-align: center; /* Asegurar que el texto esté centrado */
+         }
+         .blog-title {
+
+           color: #2980b9;
+           text-decoration: none;
+         }
+         .blog-email a:hover {
+           text-decoration: underline;
+         }
+         nav {
+           text-align: center;
+           font-size: 1em;
+           margin-top: 20px;
+           padding: 10px;
+           background-color: #2c3e50;
+           border-radius: 8px;
+         }
+         nav a {
+           color: white;
+           margin: 0 15px;
+           text-decoration: none;
+           font-weight: 400;
+           transition: color 0.3s ease;
+         }
+         nav a:hover {
+           color: #f1c40f;
+         }
+         .footer-hr {
+           border: 0;
+           height: 2px;
+           background: #ddd;
+           margin: 40px 0 20px 0;
+	 }
+         .postamble {
+           text-align: center;
+           font-size: 0.8em; .85
+           color: #666;
+         }
+	 /* Estilos para imágenes agregados aquí */
+         img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 10px auto;
+           border-radius: 5px;
+         }
+          /* ===> AQUÍ ES DONDE MODIFICAS LOS ENLACES DEL CONTENIDO <=== */
+         a {
+           font-size: 1em;          /* Tamaño más grande */
+           color: #1a73e8;           /* Color más visible */
+           text-decoration: underline; /* Subrayado para destacar */
+           font-weight: bold;         /* Negritas para resaltar */
+         }
+         a:hover {
+           color: #ff4500;           /* Color al pasar el ratón */
+           background-color: #f0f0f0; /* Fondo claro al pasar el ratón */
+         }
+	 /* Estilos específicos para el índice de posts */
+.post-index-entry {
+  margin-bottom: 10px;
+  font-size: .5em; modified .8
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.post-index-date {
+  color: #888;
+  font-size: 0.5em;
+  margin-right: 10px;
+  min-width: 6em;
+}
+
+.post-index-title a {
+  font-size: .5em;  /* Más pequeño que el global */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.post-index-title a:hover {
+  color: #ff4500;
+  text-decoration: underline;
+}
+       </style>    
+       <div class='blog-header'>
+         <img src='logo.png' alt='Logo'>
+         <div class='blog-header-content'>
+           <h1 class='blog-title'>Mi Blog con Emacs y Esteroides</h1>
+           <div class='blog-subtitle'>Emacs, IA y Linux: Poder y Simplicidad en tu Flujo de Trabajo</div>
+           <p class='blog-email'><a href='mailto:mybloggingnotes@gmail.com'>mybloggingnotes@gmail.com</a></p>
+         </div>
+       </div>       
+       <nav>
+         <a href='index.html'>Inicio</a> |
+         <a href='viajes.html'>Viajes</a> |
+         <a href='archive.html'>Archivo</a> |
+         <a href='contacto.html'>Contacto</a> |
+         <a href='nosotros.html'>Nosotros</a> |
+         <a href='proyectos.html'>Proyectos</a> |
+         <a href='tag-tutoriales.html'>Tutoriales</a> |
+         <a href='tag-opiniones.html'>Opiniones</a> |
+	 <a href='geopolitica.html'>Último en Geopolítica</a>)
+       </nav>
+        <hr>
+	<script data-goatcounter='https://8000.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">20/06/2025</div><h1 class="post-title"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-20-cómo-monitorizar-si-tu-equipo-está-usando-una-vpn-para-acceder-a-internet.html">Cómo Monitorizar si tu Equipo Está Usando una VPN para Acceder a Internet</a></h1>
+<div id="outline-container-org4476653" class="outline-2">
+<h2 id="org4476653">Introducción</h2>
+<div class="outline-text-2" id="text-org4476653">
+<p>
+En la era digital actual, las VPN (Redes Privadas Virtuales) son herramientas esenciales para proteger la privacidad y seguridad en línea. Sin embargo, es importante asegurarse de que tu equipo esté utilizando correctamente la VPN para acceder a internet. Este documento detalla los pasos y herramientas para monitorizar si tu equipo está conectado a través de una VPN, garantizando que tu tráfico de red esté protegido.
+</p>
+</div>
+</div>
+<div id="outline-container-orgeb7c331" class="outline-2">
+<h2 id="orgeb7c331">¿Por qué monitorizar el uso de una VPN?</h2>
+<div class="outline-text-2" id="text-orgeb7c331">
+<p>
+Monitorizar el uso de una VPN es crucial para:
+</p>
+<ul class="org-ul">
+<li><b><b>Seguridad</b></b>: Asegurar que todo el tráfico de red esté cifrado y protegido.</li>
+<li><b><b>Privacidad</b></b>: Confirmar que tu dirección IP real esté oculta.</li>
+<li><b><b>Cumplimiento</b></b>: Verificar que se cumplan las políticas de red en entornos corporativos.</li>
+<li><b><b>Solución de problemas</b></b>: Identificar problemas de conexión o fugas de datos (data leaks).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org94a560f" class="outline-2">
+<h2 id="org94a560f">Pasos para monitorizar el uso de una VPN</h2>
+<div class="outline-text-2" id="text-org94a560f">
+<p>
+A continuación, se describen los métodos para verificar si tu equipo está utilizando una VPN para acceder a internet.
+</p>
+</div>
+<div id="outline-container-org9674ca2" class="outline-3">
+<h3 id="org9674ca2">1. Verificar la configuración de la VPN</h3>
+<div class="outline-text-3" id="text-org9674ca2">
+<ul class="org-ul">
+<li><b><b>Windows</b></b>:
+<ol class="org-ol">
+<li>Ve a <b>Configuración &gt; Red e Internet &gt; VPN</b>.</li>
+<li>Comprueba si hay una conexión VPN activa en la lista de conexiones.</li>
+<li>Haz clic en la VPN activa para ver detalles como el servidor conectado y el estado.</li>
+</ol></li>
+<li><b><b>MacOS</b></b>:
+<ol class="org-ol">
+<li>Abre <b>Preferencias del Sistema &gt; Red</b>.</li>
+<li>Busca una conexión VPN en la lista de interfaces de red (por ejemplo, L2TP, OpenVPN, etc.).</li>
+<li>Verifica si está marcada como "Conectada".</li>
+</ol></li>
+<li><b><b>Linux</b></b>:
+<ol class="org-ol">
+<li>Usa el comando `nmcli connection show` para listar las conexiones activas.</li>
+<li>Busca una conexión VPN (por ejemplo, `tun0` o `vpn0`).</li>
+<li>También puedes verificar con `ip addr` para ver si hay una interfaz VPN activa.</li>
+</ol></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org10e7d49" class="outline-3">
+<h3 id="org10e7d49">2. Comprobar la dirección IP pública</h3>
+<div class="outline-text-3" id="text-org10e7d49">
+<ul class="org-ul">
+<li>Una VPN cambia tu dirección IP pública a la del servidor VPN. Para verificar:
+<ol class="org-ol">
+<li>Visita sitios web como `<a href="https://www.whatismyipaddress.com">https://www.whatismyipaddress.com</a>` o `<a href="https://iplocation.net">https://iplocation.net</a>`.</li>
+<li>Compara la IP mostrada con la IP de tu proveedor de VPN. Si coincide con la de tu ISP, la VPN no está activa.</li>
+<li>También puedes usar el comando `curl ifconfig.me` en la terminal para obtener tu IP pública.</li>
+</ol></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org27151e1" class="outline-3">
+<h3 id="org27151e1">3. Inspeccionar el tráfico de red</h3>
+<div class="outline-text-3" id="text-org27151e1">
+<ul class="org-ul">
+<li>Usa herramientas de análisis de red para confirmar que el tráfico está pasando por la VPN:
+<ul class="org-ul">
+<li><b><b>Wireshark</b></b>:
+<ol class="org-ol">
+<li>Instala Wireshark (`<a href="https://www.wireshark.org">https://www.wireshark.org</a>`).</li>
+<li>Captura el tráfico de red y filtra por la interfaz de la VPN (por ejemplo, `tun0`).</li>
+<li>Verifica que el tráfico saliente esté cifrado y dirigido al servidor VPN.</li>
+</ol></li>
+<li><b><b>tcpdump</b></b> (Linux):
+<ol class="org-ol">
+<li>Ejecuta `sudo tcpdump -i tun0` para capturar el tráfico en la interfaz VPN.</li>
+<li>Asegúrate de que el tráfico esté cifrado (por ejemplo, protocolos como OpenVPN o WireGuard).</li>
+</ol></li>
+<li><b><b>Command-line en Windows</b></b>:
+<ol class="org-ol">
+<li>Usa `netstat -r` para verificar la tabla de enrutamiento y confirmar que el tráfico pasa por la VPN.</li>
+<li>Busca rutas predeterminadas que apunten a la interfaz de la VPN.</li>
+</ol></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga4ab4b7" class="outline-3">
+<h3 id="orga4ab4b7">4. Comprobar fugas de DNS</h3>
+<div class="outline-text-3" id="text-orga4ab4b7">
+<ul class="org-ul">
+<li>Las fugas de DNS pueden exponer tus solicitudes de DNS incluso si usas una VPN. Para verificarlo:
+<ol class="org-ol">
+<li>Visita `<a href="https://dnsleaktest.com">https://dnsleaktest.com</a>` y realiza una prueba estándar o extendida.</li>
+<li>Asegúrate de que los servidores DNS mostrados pertenezcan a tu proveedor de VPN y no a tu ISP.</li>
+<li>En Linux, usa `dig` o `nslookup` para verificar qué servidores DNS estás usando.</li>
+</ol></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org796dae7" class="outline-3">
+<h3 id="org796dae7">5. Configurar monitorización automática</h3>
+<div class="outline-text-3" id="text-org796dae7">
+<ul class="org-ul">
+<li>Puedes configurar scripts o herramientas para monitorizar continuamente el estado de la VPN:
+<ul class="org-ul">
+<li><p>
+<b><b>Script en Bash (Linux)</b></b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #219fd5; font-style: italic;">while</span> true; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> ip addr show tun0 &amp;&gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"VPN activa en tun0"</span>
+    <span style="color: #219fd5; font-style: italic;">else</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"VPN no activa"</span>
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Opcional: enviar notificaci&#243;n por correo o mensaje</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+    sleep 60
+<span style="color: #219fd5; font-style: italic;">done</span>
+</code></pre>
+</div></li>
+<li><p>
+<b><b>PowerShell (Windows)</b></b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-powershell"><code>while ($true) {
+    $vpn = Get-VpnConnection
+    if ($vpn.ConnectionStatus -eq "Connected") {
+        Write-Output "VPN activa: $($vpn.Name)"
+    } else {
+        Write-Output "VPN no activa"
+    }
+    Start-Sleep -Seconds 60
+}
+</code></pre>
+</div></li>
+<li>Guarda estos scripts y configúralos para ejecutarse automáticamente (por ejemplo, con `cron` en Linux o el Programador de Tareas en Windows).</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org56e0b97" class="outline-3">
+<h3 id="org56e0b97">6. Usar herramientas de monitorización de red</h3>
+<div class="outline-text-3" id="text-org56e0b97">
+<ul class="org-ul">
+<li>Herramientas como <b><b>Nagios</b></b>, <b><b>Zabbix</b></b> o <b><b>Prometheus</b></b> pueden configurarse para monitorizar interfaces de red y conexiones VPN.</li>
+<li>Configura alertas para notificar si la VPN se desconecta o si el tráfico no pasa por la interfaz esperada.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org73a769c" class="outline-2">
+<h2 id="org73a769c">Buenas prácticas</h2>
+<div class="outline-text-2" id="text-org73a769c">
+<ul class="org-ul">
+<li><b><b>Usa un interruptor de apagado (Kill Switch)</b></b>: La mayoría de los clientes VPN ofrecen esta función para bloquear el tráfico si la VPN se desconecta.</li>
+<li><b><b>Actualiza tu software VPN</b></b>: Mantén el cliente VPN actualizado para evitar vulnerabilidades.</li>
+<li><b><b>Verifica regularmente</b></b>: Configura revisiones periódicas para asegurarte de que la VPN funciona correctamente.</li>
+<li><b><b>Prueba en diferentes redes</b></b>: Verifica el comportamiento de la VPN en redes Wi-Fi públicas y privadas.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org927880a" class="outline-2">
+<h2 id="org927880a">Conclusión</h2>
+<div class="outline-text-2" id="text-org927880a">
+<p>
+Monitorizar el uso de una VPN es un proceso sencillo pero esencial para garantizar la seguridad y privacidad en línea. Con las herramientas y pasos descritos, puedes confirmar que tu equipo está utilizando la VPN correctamente, detectar posibles problemas y automatizar la monitorización para una mayor tranquilidad.
+</p>
+</div>
+</div>
+<div id="outline-container-org5774106" class="outline-2">
+<h2 id="org5774106">Recursos adicionales</h2>
+<div class="outline-text-2" id="text-org5774106">
+<ul class="org-ul">
+<li>Documentación de Wireshark: `<a href="https://www.wireshark.org/docs/">https://www.wireshark.org/docs/</a>`</li>
+<li>Guía de OpenVPN: `<a href="https://openvpn.net/community-resources/">https://openvpn.net/community-resources/</a>`</li>
+<li>DNS Leak Test: `<a href="https://dnsleaktest.com">https://dnsleaktest.com</a>`</li>
+</ul>
+
+<p>
+#+END<sub>SRC</sub>
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-vpn.html">VPN</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-monitorización.html">monitorización</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-red.html">red</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-internet.html">internet</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div></div>
+<div id="postamble" class="status"><div class='postamble'>
+         <hr class='footer-hr'>
+         <p style="display: flex; align-items: center;">
+           <a href="rss.xml" style="flex-grow: 1;">
+             Suscribirse al Feed RSS
+           </a>
+           <span style="margin: 0 20px;">|</span>
+           <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/sitemap.html">
+             Mapa del Sitio
+           </a>
+         </p>
+         <p>© 2025 M.Castillo | Hecho con ❤️ en Emacs y org-static-blog</p>
+	  <a href="https://8000.goatcounter.com/" style="color:#888;text-decoration:none;" target="_blank">📊 Estadísticas</a>
+         <!-- hitwebcounter Code START -->
+         <a href="https://www.hitwebcounter.com" target="_blank">
+           <img src="https://hitwebcounter.com/counter/counter.php?page=19807931&style=0001&nbdigits=4&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+         </a>
+       </div></div>
+</body>
+</html>

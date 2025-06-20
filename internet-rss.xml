@@ -4,7 +4,212 @@
 <title><![CDATA[Emacs con esteroides - internet]]></title>
 <description><![CDATA[Emacs con esteroides - internet]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-internet.html</link>
-<lastBuildDate>Thu, 19 Jun 2025 15:17:12 +0200</lastBuildDate>
+<lastBuildDate>Fri, 20 Jun 2025 17:41:33 +0200</lastBuildDate>
+<item>
+  <title><![CDATA[Cómo Monitorizar si tu Equipo Está Usando una VPN para Acceder a Internet]]></title>
+  <description><![CDATA[
+<div id="outline-container-org4476653" class="outline-2">
+<h2 id="org4476653">Introducción</h2>
+<div class="outline-text-2" id="text-org4476653">
+<p>
+En la era digital actual, las VPN (Redes Privadas Virtuales) son herramientas esenciales para proteger la privacidad y seguridad en línea. Sin embargo, es importante asegurarse de que tu equipo esté utilizando correctamente la VPN para acceder a internet. Este documento detalla los pasos y herramientas para monitorizar si tu equipo está conectado a través de una VPN, garantizando que tu tráfico de red esté protegido.
+</p>
+</div>
+</div>
+<div id="outline-container-orgeb7c331" class="outline-2">
+<h2 id="orgeb7c331">¿Por qué monitorizar el uso de una VPN?</h2>
+<div class="outline-text-2" id="text-orgeb7c331">
+<p>
+Monitorizar el uso de una VPN es crucial para:
+</p>
+<ul class="org-ul">
+<li><b><b>Seguridad</b></b>: Asegurar que todo el tráfico de red esté cifrado y protegido.</li>
+<li><b><b>Privacidad</b></b>: Confirmar que tu dirección IP real esté oculta.</li>
+<li><b><b>Cumplimiento</b></b>: Verificar que se cumplan las políticas de red en entornos corporativos.</li>
+<li><b><b>Solución de problemas</b></b>: Identificar problemas de conexión o fugas de datos (data leaks).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org94a560f" class="outline-2">
+<h2 id="org94a560f">Pasos para monitorizar el uso de una VPN</h2>
+<div class="outline-text-2" id="text-org94a560f">
+<p>
+A continuación, se describen los métodos para verificar si tu equipo está utilizando una VPN para acceder a internet.
+</p>
+</div>
+<div id="outline-container-org9674ca2" class="outline-3">
+<h3 id="org9674ca2">1. Verificar la configuración de la VPN</h3>
+<div class="outline-text-3" id="text-org9674ca2">
+<ul class="org-ul">
+<li><b><b>Windows</b></b>:
+<ol class="org-ol">
+<li>Ve a <b>Configuración &gt; Red e Internet &gt; VPN</b>.</li>
+<li>Comprueba si hay una conexión VPN activa en la lista de conexiones.</li>
+<li>Haz clic en la VPN activa para ver detalles como el servidor conectado y el estado.</li>
+</ol></li>
+<li><b><b>MacOS</b></b>:
+<ol class="org-ol">
+<li>Abre <b>Preferencias del Sistema &gt; Red</b>.</li>
+<li>Busca una conexión VPN en la lista de interfaces de red (por ejemplo, L2TP, OpenVPN, etc.).</li>
+<li>Verifica si está marcada como "Conectada".</li>
+</ol></li>
+<li><b><b>Linux</b></b>:
+<ol class="org-ol">
+<li>Usa el comando `nmcli connection show` para listar las conexiones activas.</li>
+<li>Busca una conexión VPN (por ejemplo, `tun0` o `vpn0`).</li>
+<li>También puedes verificar con `ip addr` para ver si hay una interfaz VPN activa.</li>
+</ol></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org10e7d49" class="outline-3">
+<h3 id="org10e7d49">2. Comprobar la dirección IP pública</h3>
+<div class="outline-text-3" id="text-org10e7d49">
+<ul class="org-ul">
+<li>Una VPN cambia tu dirección IP pública a la del servidor VPN. Para verificar:
+<ol class="org-ol">
+<li>Visita sitios web como `<a href="https://www.whatismyipaddress.com">https://www.whatismyipaddress.com</a>` o `<a href="https://iplocation.net">https://iplocation.net</a>`.</li>
+<li>Compara la IP mostrada con la IP de tu proveedor de VPN. Si coincide con la de tu ISP, la VPN no está activa.</li>
+<li>También puedes usar el comando `curl ifconfig.me` en la terminal para obtener tu IP pública.</li>
+</ol></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org27151e1" class="outline-3">
+<h3 id="org27151e1">3. Inspeccionar el tráfico de red</h3>
+<div class="outline-text-3" id="text-org27151e1">
+<ul class="org-ul">
+<li>Usa herramientas de análisis de red para confirmar que el tráfico está pasando por la VPN:
+<ul class="org-ul">
+<li><b><b>Wireshark</b></b>:
+<ol class="org-ol">
+<li>Instala Wireshark (`<a href="https://www.wireshark.org">https://www.wireshark.org</a>`).</li>
+<li>Captura el tráfico de red y filtra por la interfaz de la VPN (por ejemplo, `tun0`).</li>
+<li>Verifica que el tráfico saliente esté cifrado y dirigido al servidor VPN.</li>
+</ol></li>
+<li><b><b>tcpdump</b></b> (Linux):
+<ol class="org-ol">
+<li>Ejecuta `sudo tcpdump -i tun0` para capturar el tráfico en la interfaz VPN.</li>
+<li>Asegúrate de que el tráfico esté cifrado (por ejemplo, protocolos como OpenVPN o WireGuard).</li>
+</ol></li>
+<li><b><b>Command-line en Windows</b></b>:
+<ol class="org-ol">
+<li>Usa `netstat -r` para verificar la tabla de enrutamiento y confirmar que el tráfico pasa por la VPN.</li>
+<li>Busca rutas predeterminadas que apunten a la interfaz de la VPN.</li>
+</ol></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga4ab4b7" class="outline-3">
+<h3 id="orga4ab4b7">4. Comprobar fugas de DNS</h3>
+<div class="outline-text-3" id="text-orga4ab4b7">
+<ul class="org-ul">
+<li>Las fugas de DNS pueden exponer tus solicitudes de DNS incluso si usas una VPN. Para verificarlo:
+<ol class="org-ol">
+<li>Visita `<a href="https://dnsleaktest.com">https://dnsleaktest.com</a>` y realiza una prueba estándar o extendida.</li>
+<li>Asegúrate de que los servidores DNS mostrados pertenezcan a tu proveedor de VPN y no a tu ISP.</li>
+<li>En Linux, usa `dig` o `nslookup` para verificar qué servidores DNS estás usando.</li>
+</ol></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org796dae7" class="outline-3">
+<h3 id="org796dae7">5. Configurar monitorización automática</h3>
+<div class="outline-text-3" id="text-org796dae7">
+<ul class="org-ul">
+<li>Puedes configurar scripts o herramientas para monitorizar continuamente el estado de la VPN:
+<ul class="org-ul">
+<li><p>
+<b><b>Script en Bash (Linux)</b></b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><code><span style="color: #8195b0; font-style: italic;">#</span><span style="color: #8195b0; font-style: italic;">!/bin/</span><span style="color: #219fd5; font-style: italic;">bash</span>
+<span style="color: #219fd5; font-style: italic;">while</span> true; <span style="color: #219fd5; font-style: italic;">do</span>
+    <span style="color: #219fd5; font-style: italic;">if</span> ip addr show tun0 &amp;&gt; /dev/null; <span style="color: #219fd5; font-style: italic;">then</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"VPN activa en tun0"</span>
+    <span style="color: #219fd5; font-style: italic;">else</span>
+        <span style="color: #dc3eb7;">echo</span> <span style="color: #a44185;">"VPN no activa"</span>
+        <span style="color: #8195b0; font-style: italic;"># </span><span style="color: #8195b0; font-style: italic;">Opcional: enviar notificaci&#243;n por correo o mensaje</span>
+    <span style="color: #219fd5; font-style: italic;">fi</span>
+    sleep 60
+<span style="color: #219fd5; font-style: italic;">done</span>
+</code></pre>
+</div></li>
+<li><p>
+<b><b>PowerShell (Windows)</b></b>:
+</p>
+<div class="org-src-container">
+<pre class="src src-powershell"><code>while ($true) {
+    $vpn = Get-VpnConnection
+    if ($vpn.ConnectionStatus -eq "Connected") {
+        Write-Output "VPN activa: $($vpn.Name)"
+    } else {
+        Write-Output "VPN no activa"
+    }
+    Start-Sleep -Seconds 60
+}
+</code></pre>
+</div></li>
+<li>Guarda estos scripts y configúralos para ejecutarse automáticamente (por ejemplo, con `cron` en Linux o el Programador de Tareas en Windows).</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org56e0b97" class="outline-3">
+<h3 id="org56e0b97">6. Usar herramientas de monitorización de red</h3>
+<div class="outline-text-3" id="text-org56e0b97">
+<ul class="org-ul">
+<li>Herramientas como <b><b>Nagios</b></b>, <b><b>Zabbix</b></b> o <b><b>Prometheus</b></b> pueden configurarse para monitorizar interfaces de red y conexiones VPN.</li>
+<li>Configura alertas para notificar si la VPN se desconecta o si el tráfico no pasa por la interfaz esperada.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org73a769c" class="outline-2">
+<h2 id="org73a769c">Buenas prácticas</h2>
+<div class="outline-text-2" id="text-org73a769c">
+<ul class="org-ul">
+<li><b><b>Usa un interruptor de apagado (Kill Switch)</b></b>: La mayoría de los clientes VPN ofrecen esta función para bloquear el tráfico si la VPN se desconecta.</li>
+<li><b><b>Actualiza tu software VPN</b></b>: Mantén el cliente VPN actualizado para evitar vulnerabilidades.</li>
+<li><b><b>Verifica regularmente</b></b>: Configura revisiones periódicas para asegurarte de que la VPN funciona correctamente.</li>
+<li><b><b>Prueba en diferentes redes</b></b>: Verifica el comportamiento de la VPN en redes Wi-Fi públicas y privadas.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org927880a" class="outline-2">
+<h2 id="org927880a">Conclusión</h2>
+<div class="outline-text-2" id="text-org927880a">
+<p>
+Monitorizar el uso de una VPN es un proceso sencillo pero esencial para garantizar la seguridad y privacidad en línea. Con las herramientas y pasos descritos, puedes confirmar que tu equipo está utilizando la VPN correctamente, detectar posibles problemas y automatizar la monitorización para una mayor tranquilidad.
+</p>
+</div>
+</div>
+<div id="outline-container-org5774106" class="outline-2">
+<h2 id="org5774106">Recursos adicionales</h2>
+<div class="outline-text-2" id="text-org5774106">
+<ul class="org-ul">
+<li>Documentación de Wireshark: `<a href="https://www.wireshark.org/docs/">https://www.wireshark.org/docs/</a>`</li>
+<li>Guía de OpenVPN: `<a href="https://openvpn.net/community-resources/">https://openvpn.net/community-resources/</a>`</li>
+<li>DNS Leak Test: `<a href="https://dnsleaktest.com">https://dnsleaktest.com</a>`</li>
+</ul>
+
+<p>
+#+END<sub>SRC</sub>
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tags.html">Categoría</a>: <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-vpn.html">VPN</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-monitorización.html">monitorización</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-red.html">red</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-seguridad.html">seguridad</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-internet.html">internet</a> <a href="https://mcasrom.github.io/Blogging-con-Emacs-y-AI/tag-tutoriales.html">tutoriales</a> </div>]]></description>
+  <category><![CDATA[VPN]]></category>
+  <category><![CDATA[monitorización]]></category>
+  <category><![CDATA[red]]></category>
+  <category><![CDATA[seguridad]]></category>
+  <category><![CDATA[internet]]></category>
+  <category><![CDATA[tutoriales]]></category>
+  <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-20-c%C3%B3mo-monitorizar-si-tu-equipo-est%C3%A1-usando-una-vpn-para-acceder-a-internet.html</link>
+  <guid>https://mcasrom.github.io/Blogging-con-Emacs-y-AI/2025-06-20-c%C3%B3mo-monitorizar-si-tu-equipo-est%C3%A1-usando-una-vpn-para-acceder-a-internet.html</guid>
+  <pubDate>Fri, 20 Jun 2025 17:35:00 +0200</pubDate>
+</item>
 <item>
   <title><![CDATA[Configuración Mínima de Seguridad con Scripts Bash y Python]]></title>
   <description><![CDATA[

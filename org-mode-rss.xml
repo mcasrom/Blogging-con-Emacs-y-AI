@@ -4,46 +4,21 @@
 <title><![CDATA[Emacs con esteroides - org-mode]]></title>
 <description><![CDATA[Emacs con esteroides - org-mode]]></description>
 <link>https://mcasrom.github.io/Blogging-con-Emacs-y-AI//tag-org-mode.html</link>
-<lastBuildDate>Thu, 19 Jun 2025 15:17:07 +0200</lastBuildDate>
+<lastBuildDate>Fri, 20 Jun 2025 17:41:30 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Cómo Construir un Blog con Netlify y Emacs en Menos de una Hora]]></title>
   <description><![CDATA[
-<nav id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#org7413769">1. Introducción</a></li>
-<li><a href="#orgf78fec1">2. Por qué elegir Netlify y Emacs</a></li>
-<li><a href="#orgc3ee0d4">3. Requisitos previos</a></li>
-<li><a href="#org31e7a96">4. Configurando Emacs para blogging</a></li>
-<li><a href="#org1aae0bf">5. Paso a paso: Configurando tu blog</a>
-<ul>
-<li><a href="#org63648a1">5.1. Paso 1: Instalar Hugo</a></li>
-<li><a href="#orgbee9bb8">5.2. Paso 2: Crear un nuevo sitio con Hugo</a></li>
-<li><a href="#org7ec448b">5.3. Paso 3: Crear tu primer post en Emacs</a></li>
-<li><a href="#org055bb69">5.4. Paso 4: Conectar tu blog a GitHub</a></li>
-<li><a href="#org915ec36">5.5. Paso 5: Desplegar en Netlify</a></li>
-<li><a href="#org55efe8e">5.6. Paso 6: Publicar nuevos posts desde Emacs</a></li>
-</ul>
-</li>
-<li><a href="#orgc03bd52">6. Personalización adicional</a></li>
-<li><a href="#org676166b">7. Solución de problemas</a></li>
-<li><a href="#org673aff4">8. Conclusión</a></li>
-<li><a href="#orgd673c4d">9. Recursos adicionales</a></li>
-</ul>
-</div>
-</nav>
-<div id="outline-container-org7413769" class="outline-2">
-<h2 id="org7413769"><span class="section-number-2">1.</span> Introducción</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orgd6ae07a" class="outline-2">
+<h2 id="orgd6ae07a">Introducción</h2>
+<div class="outline-text-2" id="text-orgd6ae07a">
 <p>
 Crear un blog moderno y eficiente no requiere herramientas complicadas. Con <b><b>Netlify</b></b> para alojamiento y <b><b>Emacs</b></b> como editor, puedes configurar un blog estático en menos de una hora. Este tutorial está diseñado para bloggers técnicos que prefieren un entorno potente como Emacs para escribir y gestionar contenido. Usaremos Hugo como generador de sitios estáticos, Emacs con Org-mode o Markdown para escribir, y Netlify para despliegues automáticos. ¡Vamos a ello!
 </p>
 </div>
 </div>
-<div id="outline-container-orgf78fec1" class="outline-2">
-<h2 id="orgf78fec1"><span class="section-number-2">2.</span> Por qué elegir Netlify y Emacs</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org77bb69d" class="outline-2">
+<h2 id="org77bb69d">Por qué elegir Netlify y Emacs</h2>
+<div class="outline-text-2" id="text-org77bb69d">
 <p>
 Esta combinación es ideal por varias razones:
 </p>
@@ -55,9 +30,9 @@ Esta combinación es ideal por varias razones:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc3ee0d4" class="outline-2">
-<h2 id="orgc3ee0d4"><span class="section-number-2">3.</span> Requisitos previos</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-orga0964d0" class="outline-2">
+<h2 id="orga0964d0">Requisitos previos</h2>
+<div class="outline-text-2" id="text-orga0964d0">
 <p>
 Para seguir este tutorial, necesitarás:
 </p>
@@ -70,9 +45,9 @@ Para seguir este tutorial, necesitarás:
 </ul>
 </div>
 </div>
-<div id="outline-container-org31e7a96" class="outline-2">
-<h2 id="org31e7a96"><span class="section-number-2">4.</span> Configurando Emacs para blogging</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org2370824" class="outline-2">
+<h2 id="org2370824">Configurando Emacs para blogging</h2>
+<div class="outline-text-2" id="text-org2370824">
 <p>
 Antes de empezar, asegúrate de que Emacs esté configurado:
 </p>
@@ -105,13 +80,13 @@ Configura atajos útiles en <code>.emacs</code> o <code>init.el</code> para crea
 </ol>
 </div>
 </div>
-<div id="outline-container-org1aae0bf" class="outline-2">
-<h2 id="org1aae0bf"><span class="section-number-2">5.</span> Paso a paso: Configurando tu blog</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-orgcef991b" class="outline-2">
+<h2 id="orgcef991b">Paso a paso: Configurando tu blog</h2>
+<div class="outline-text-2" id="text-orgcef991b">
 </div>
-<div id="outline-container-org63648a1" class="outline-3">
-<h3 id="org63648a1"><span class="section-number-3">5.1.</span> Paso 1: Instalar Hugo</h3>
-<div class="outline-text-3" id="text-5-1">
+<div id="outline-container-org8afb511" class="outline-3">
+<h3 id="org8afb511">Paso 1: Instalar Hugo</h3>
+<div class="outline-text-3" id="text-org8afb511">
 <p>
 Hugo es un generador de sitios estáticos rápido. Instálalo así:
 </p>
@@ -141,9 +116,9 @@ Verifica la instalación:
 </ol>
 </div>
 </div>
-<div id="outline-container-orgbee9bb8" class="outline-3">
-<h3 id="orgbee9bb8"><span class="section-number-3">5.2.</span> Paso 2: Crear un nuevo sitio con Hugo</h3>
-<div class="outline-text-3" id="text-5-2">
+<div id="outline-container-orge80275a" class="outline-3">
+<h3 id="orge80275a">Paso 2: Crear un nuevo sitio con Hugo</h3>
+<div class="outline-text-3" id="text-orge80275a">
 <ol class="org-ol">
 <li><p>
 Crea un directorio para tu blog:
@@ -180,9 +155,9 @@ Configura el tema en <code>config.toml</code>:
 </ol>
 </div>
 </div>
-<div id="outline-container-org7ec448b" class="outline-3">
-<h3 id="org7ec448b"><span class="section-number-3">5.3.</span> Paso 3: Crear tu primer post en Emacs</h3>
-<div class="outline-text-3" id="text-5-3">
+<div id="outline-container-orgcb5b359" class="outline-3">
+<h3 id="orgcb5b359">Paso 3: Crear tu primer post en Emacs</h3>
+<div class="outline-text-3" id="text-orgcb5b359">
 <ol class="org-ol">
 <li><p>
 Genera un nuevo post con Hugo:
@@ -235,9 +210,9 @@ Abre <a href="http://localhost:1313">http://localhost:1313</a> en tu navegador.
 </ol>
 </div>
 </div>
-<div id="outline-container-org055bb69" class="outline-3">
-<h3 id="org055bb69"><span class="section-number-3">5.4.</span> Paso 4: Conectar tu blog a GitHub</h3>
-<div class="outline-text-3" id="text-5-4">
+<div id="outline-container-orgb261c1e" class="outline-3">
+<h3 id="orgb261c1e">Paso 4: Conectar tu blog a GitHub</h3>
+<div class="outline-text-3" id="text-orgb261c1e">
 <ol class="org-ol">
 <li>Crea un repositorio en GitHub (<code>mi-blog</code>).</li>
 <li><p>
@@ -259,9 +234,9 @@ git push -u origin main
 </ol>
 </div>
 </div>
-<div id="outline-container-org915ec36" class="outline-3">
-<h3 id="org915ec36"><span class="section-number-3">5.5.</span> Paso 5: Desplegar en Netlify</h3>
-<div class="outline-text-3" id="text-5-5">
+<div id="outline-container-org993927b" class="outline-3">
+<h3 id="org993927b">Paso 5: Desplegar en Netlify</h3>
+<div class="outline-text-3" id="text-org993927b">
 <ol class="org-ol">
 <li>Inicia sesión en <a href="https://app.netlify.com/">Netlify</a>.</li>
 <li>Selecciona <b>New site from Git</b> y conecta tu repositorio de GitHub (<code>mi-blog</code>).</li>
@@ -276,9 +251,9 @@ git push -u origin main
 </ol>
 </div>
 </div>
-<div id="outline-container-org55efe8e" class="outline-3">
-<h3 id="org55efe8e"><span class="section-number-3">5.6.</span> Paso 6: Publicar nuevos posts desde Emacs</h3>
-<div class="outline-text-3" id="text-5-6">
+<div id="outline-container-org86f822c" class="outline-3">
+<h3 id="org86f822c">Paso 6: Publicar nuevos posts desde Emacs</h3>
+<div class="outline-text-3" id="text-org86f822c">
 <ol class="org-ol">
 <li>Crea un nuevo post (<code>hugo new posts/nuevo-post.md</code> o usa Org-mode).</li>
 <li>Edita en Emacs y guarda los cambios.</li>
@@ -298,9 +273,9 @@ Netlify desplegará los cambios automáticamente.
 </div>
 </div>
 </div>
-<div id="outline-container-orgc03bd52" class="outline-2">
-<h2 id="orgc03bd52"><span class="section-number-2">6.</span> Personalización adicional</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-orga6be983" class="outline-2">
+<h2 id="orga6be983">Personalización adicional</h2>
+<div class="outline-text-2" id="text-orga6be983">
 <ul class="org-ul">
 <li><b><b>Temas</b></b>: Explora <a href="https://themes.gohugo.io/">Hugo Themes</a> para cambiar el diseño.</li>
 <li><b><b>SEO</b></b>: Añade <code>description</code> y <code>keywords</code> en el front-matter de los posts.</li>
@@ -310,9 +285,9 @@ Netlify desplegará los cambios automáticamente.
 </ul>
 </div>
 </div>
-<div id="outline-container-org676166b" class="outline-2">
-<h2 id="org676166b"><span class="section-number-2">7.</span> Solución de problemas</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-org4d3a553" class="outline-2">
+<h2 id="org4d3a553">Solución de problemas</h2>
+<div class="outline-text-2" id="text-org4d3a553">
 <ul class="org-ul">
 <li><b><b>Despliegue falla en Netlify</b></b>: Verifica que <code>public</code> se genere (<code>hugo</code>) y que el comando de build sea correcto.</li>
 <li><b><b>Tema no carga</b></b>: Ejecuta <code>git submodule update --init --recursive</code>.</li>
@@ -321,17 +296,17 @@ Netlify desplegará los cambios automáticamente.
 </ul>
 </div>
 </div>
-<div id="outline-container-org673aff4" class="outline-2">
-<h2 id="org673aff4"><span class="section-number-2">8.</span> Conclusión</h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-org05384aa" class="outline-2">
+<h2 id="org05384aa">Conclusión</h2>
+<div class="outline-text-2" id="text-org05384aa">
 <p>
 ¡Listo! Ahora tienes un blog estático en Netlify, gestionado desde Emacs con Markdown o Org-mode. Este flujo combina la potencia de Emacs con la simplicidad de Netlify, ideal para bloggers técnicos. Comparte tu blog o tus preguntas en <a href="https://x.com">X</a> o en los comentarios.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd673c4d" class="outline-2">
-<h2 id="orgd673c4d"><span class="section-number-2">9.</span> Recursos adicionales</h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-orgba7e057" class="outline-2">
+<h2 id="orgba7e057">Recursos adicionales</h2>
+<div class="outline-text-2" id="text-orgba7e057">
 <ul class="org-ul">
 <li><a href="https://gohugo.io/documentation/">Documentación de Hugo</a></li>
 <li><a href="https://docs.netlify.com/">Guías de Netlify</a></li>
